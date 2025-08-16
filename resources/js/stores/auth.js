@@ -1,12 +1,15 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { User } from '../models/User.js'
+import { UserService } from '../services/UserService.js'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     user: null,
     token: null,
     isAuthenticated: false,
-    isInitialized: false
+    isInitialized: false,
+    userService: new UserService()
   }),
 
   getters: {
@@ -24,7 +27,7 @@ export const useAuthStore = defineStore('auth', {
 
         const { user, token } = response.data
         
-        this.user = user
+        this.user = new User(user)
         this.token = token
         this.isAuthenticated = true
         
@@ -47,7 +50,7 @@ export const useAuthStore = defineStore('auth', {
         
         const { user, token } = response.data
         
-        this.user = user
+        this.user = new User(user)
         this.token = token
         this.isAuthenticated = true
         
@@ -79,11 +82,11 @@ export const useAuthStore = defineStore('auth', {
           throw new Error('No token available')
         }
         
-        const response = await axios.get('/api/me')
-        this.user = response.data.user
+        const user = await this.userService.fetchCurrentUser()
+        this.user = user
         this.isAuthenticated = true
         
-        return response.data.user
+        return user
       } catch (error) {
         this.clearAuth()
         throw error

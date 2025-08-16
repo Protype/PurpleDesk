@@ -28,17 +28,11 @@
               class="flex items-center space-x-2 p-1 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               <!-- 使用者頭像 -->
-              <div class="h-8 w-8 rounded-full bg-primary-500 flex items-center justify-center overflow-hidden">
-                <img
-                  v-if="user?.avatar_url"
-                  :src="user.avatar_url"
-                  :alt="user.name"
-                  class="h-full w-full object-cover"
-                />
-                <span v-else class="text-white text-sm font-medium">
-                  {{ getUserInitials(user) }}
-                </span>
-              </div>
+              <IconDisplay 
+                :iconData="user?.getAvatarData?.()" 
+                size="8"
+                :title="user?.getDisplayName?.()"
+              />
               
               <!-- 下拉箭頭 -->
               <ChevronDownIcon class="h-4 w-4 text-gray-500" :class="{ 'rotate-180': showUserMenu }" />
@@ -53,20 +47,14 @@
               <!-- 使用者資訊 -->
               <div class="px-4 py-3 border-b border-gray-200">
                 <div class="flex items-center space-x-3">
-                  <div class="h-10 w-10 rounded-full bg-primary-500 flex items-center justify-center overflow-hidden">
-                    <img
-                      v-if="user?.avatar_url"
-                      :src="user.avatar_url"
-                      :alt="user.name"
-                      class="h-full w-full object-cover"
-                    />
-                    <span v-else class="text-white font-medium">
-                      {{ getUserInitials(user) }}
-                    </span>
-                  </div>
+                  <IconDisplay 
+                    :iconData="user?.getAvatarData?.()" 
+                    size="10"
+                    :title="user?.getDisplayName?.()"
+                  />
                   <div class="flex-1 min-w-0">
                     <p class="text-sm font-medium text-gray-900 truncate">
-                      {{ user?.display_name || user?.name }}
+                      {{ user?.getDisplayName?.() || '' }}
                     </p>
                     <p class="text-sm text-gray-500 truncate">
                       {{ user?.email }}
@@ -154,76 +142,57 @@
   </nav>
 </template>
 
-<script>
+<script setup>
 import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 import { BellIcon, ChevronDownIcon, CogIcon, OfficeBuildingIcon, LogoutIcon } from '@heroicons/vue/outline'
+import IconDisplay from './common/IconDisplay.vue'
 
-export default {
-  name: 'AppNavbar',
-  components: {
-    BellIcon,
-    ChevronDownIcon, 
-    CogIcon,
-    OfficeBuildingIcon,
-    LogoutIcon
-  },
-  setup() {
-    const router = useRouter()
-    const authStore = useAuthStore()
-    const showUserMenu = ref(false)
-    
-    const user = computed(() => authStore.user)
-    
-    // 判斷是否為管理員
-    const isAdmin = computed(() => {
-      return user.value?.is_admin === true
-    })
-    
-    const getUserInitials = (user) => {
-      if (!user) return ''
-      const name = user.display_name || user.name
-      return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
-    }
-    
-    const toggleUserMenu = () => {
-      showUserMenu.value = !showUserMenu.value
-    }
-    
-    const handleLogout = async () => {
-      try {
-        showUserMenu.value = false
-        await authStore.logout()
-        router.push('/login')
-      } catch (error) {
-        console.error('登出錯誤:', error)
-      }
-    }
-    
-    // 點擊外部關閉選單
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.relative')) {
-        showUserMenu.value = false
-      }
-    }
-    
-    onMounted(() => {
-      document.addEventListener('click', handleClickOutside)
-    })
-    
-    onUnmounted(() => {
-      document.removeEventListener('click', handleClickOutside)
-    })
-    
-    return {
-      user,
-      isAdmin,
-      showUserMenu,
-      getUserInitials,
-      toggleUserMenu,
-      handleLogout
-    }
+// Composables
+const router = useRouter()
+const authStore = useAuthStore()
+
+// Reactive state
+const showUserMenu = ref(false)
+
+// Computed properties
+const user = computed(() => authStore.user)
+
+const isAdmin = computed(() => {
+  return user.value?.isAdmin?.() === true
+})
+
+// Helper functions
+// getUserInitials function moved to User model
+
+// Event handlers
+const toggleUserMenu = () => {
+  showUserMenu.value = !showUserMenu.value
+}
+
+const handleLogout = async () => {
+  try {
+    showUserMenu.value = false
+    await authStore.logout()
+    router.push('/login')
+  } catch (error) {
+    console.error('登出錯誤:', error)
   }
 }
+
+const handleClickOutside = (event) => {
+  if (!event.target.closest('.relative')) {
+    showUserMenu.value = false
+  }
+}
+
+// Lifecycle hooks
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>
