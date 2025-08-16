@@ -28,17 +28,11 @@
               class="flex items-center space-x-2 p-1 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               <!-- 使用者頭像 -->
-              <div class="h-8 w-8 rounded-full bg-primary-500 flex items-center justify-center overflow-hidden">
-                <img
-                  v-if="user?.avatar_url"
-                  :src="user.avatar_url"
-                  :alt="user.display_name || user.full_name"
-                  class="h-full w-full object-cover"
-                />
-                <span v-else class="text-white text-sm font-medium">
-                  {{ getUserInitials(user) }}
-                </span>
-              </div>
+              <IconDisplay 
+                :iconData="user?.getAvatarData?.()" 
+                size="8"
+                :title="user?.getDisplayName?.()"
+              />
               
               <!-- 下拉箭頭 -->
               <ChevronDownIcon class="h-4 w-4 text-gray-500" :class="{ 'rotate-180': showUserMenu }" />
@@ -53,20 +47,14 @@
               <!-- 使用者資訊 -->
               <div class="px-4 py-3 border-b border-gray-200">
                 <div class="flex items-center space-x-3">
-                  <div class="h-10 w-10 rounded-full bg-primary-500 flex items-center justify-center overflow-hidden">
-                    <img
-                      v-if="user?.avatar_url"
-                      :src="user.avatar_url"
-                      :alt="user.display_name || user.full_name"
-                      class="h-full w-full object-cover"
-                    />
-                    <span v-else class="text-white font-medium">
-                      {{ getUserInitials(user) }}
-                    </span>
-                  </div>
+                  <IconDisplay 
+                    :iconData="user?.getAvatarData?.()" 
+                    size="10"
+                    :title="user?.getDisplayName?.()"
+                  />
                   <div class="flex-1 min-w-0">
                     <p class="text-sm font-medium text-gray-900 truncate">
-                      {{ user?.display_name || user?.name }}
+                      {{ user?.getDisplayName?.() || '' }}
                     </p>
                     <p class="text-sm text-gray-500 truncate">
                       {{ user?.email }}
@@ -159,6 +147,7 @@ import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
 import { BellIcon, ChevronDownIcon, CogIcon, OfficeBuildingIcon, LogoutIcon } from '@heroicons/vue/outline'
+import IconDisplay from './common/IconDisplay.vue'
 
 // Composables
 const router = useRouter()
@@ -171,23 +160,11 @@ const showUserMenu = ref(false)
 const user = computed(() => authStore.user)
 
 const isAdmin = computed(() => {
-  return user.value?.is_admin === true
+  return user.value?.isAdmin?.() === true
 })
 
 // Helper functions
-const getUserInitials = (user) => {
-  if (!user) return ''
-  const name = user.display_name || user.full_name
-  if (!name) return ''
-  
-  // 對於中文名稱，取前2個字符
-  if (/[\u4e00-\u9fa5]/.test(name)) {
-    return name.slice(0, 2)
-  }
-  
-  // 對於英文名稱，取每個單詞的首字母
-  return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
-}
+// getUserInitials function moved to User model
 
 // Event handlers
 const toggleUserMenu = () => {

@@ -13,7 +13,7 @@
         :style="{ zIndex: index }"
       >
         <IconDisplay 
-          :icon-data="user.avatar_data" 
+          :icon-data="getUserAvatarData(user)" 
           size="6" 
           :title="getUserDisplayName(user)"
         />
@@ -111,7 +111,57 @@ export default {
     })
     
     const getUserDisplayName = (user) => {
-      return user.display_name || user.full_name || user.name || '未知用戶'
+      // 如果是 User Model 實例，使用其方法
+      if (user.getDisplayName && typeof user.getDisplayName === 'function') {
+        return user.getDisplayName() || '未知用戶'
+      }
+      // 回退邏輯：display_name → full_name → account → 未知用戶
+      return user.display_name || user.full_name || user.account || '未知用戶'
+    }
+    
+    const getUserAvatarData = (user) => {
+      // 如果是 User Model 實例，使用其方法
+      if (user.getAvatarData && typeof user.getAvatarData === 'function') {
+        return user.getAvatarData()
+      }
+      // 回退邏輯：直接使用 avatar_data 或生成預設值
+      if (user.avatar_data) {
+        return user.avatar_data
+      }
+      
+      // 生成預設文字頭像
+      const displayName = getUserDisplayName(user)
+      let text = ''
+      
+      if (displayName && displayName !== '未知用戶') {
+        // 檢查是否含有中文字符
+        if (/[\u4e00-\u9fa5]/.test(displayName)) {
+          text = displayName.slice(0, 2)
+        } else {
+          // 英文名稱處理
+          const words = displayName.split(' ').filter(word => word.length > 0)
+          if (words.length > 1) {
+            // 多個單字取首字母
+            text = words
+              .map(n => n[0])
+              .join('')
+              .toUpperCase()
+              .slice(0, 2)
+          } else {
+            // 單一單字取前兩個字母
+            text = displayName.slice(0, 2).toUpperCase()
+          }
+        }
+      } else {
+        text = '?'
+      }
+
+      return {
+        type: 'text',
+        text: text,
+        backgroundColor: '#6366f1', // indigo-500
+        textColor: '#ffffff'
+      }
     }
     
     // 視窗大小變化監聽
@@ -131,7 +181,8 @@ export default {
       visibleUsers,
       remainingCount,
       shadowClass,
-      getUserDisplayName
+      getUserDisplayName,
+      getUserAvatarData
     }
   }
 }

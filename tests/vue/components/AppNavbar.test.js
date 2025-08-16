@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import AppNavbar from '../../../resources/js/components/AppNavbar.vue';
 import { useAuthStore } from '../../../resources/js/stores/auth.js';
+import { User } from '../../../resources/js/models/User.js';
 import { 
   createMountOptions, 
   mockAuthState, 
@@ -34,7 +35,34 @@ describe('AppNavbar.vue', () => {
         { path: '/admin/organizations', name: 'admin.organizations', component: { template: '<div>Admin Organizations</div>' } },
         { path: '/admin/system', name: 'admin.system', component: { template: '<div>Admin System</div>' } },
         { path: '/login', name: 'login', component: { template: '<div>Login</div>' } }
-      ]
+      ],
+      stubs: {
+        IconDisplay: {
+          template: `
+            <div class="inline-flex items-center justify-center rounded-full">
+              <img v-if="iconData?.type === 'image'" :src="'/storage/' + iconData.path" :alt="title" />
+              <span v-else-if="iconData?.type === 'text'" class="font-semibold">{{ iconData.text }}</span>
+              <span v-else class="font-semibold">{{ getDefaultText() }}</span>
+            </div>
+          `,
+          props: ['iconData', 'size', 'title'],
+          methods: {
+            getDefaultText() {
+              if (!this.title) return 'U';
+              // 模擬 User Model 的 getInitials 邏輯
+              if (/[\u4e00-\u9fa5]/.test(this.title)) {
+                return this.title.slice(0, 2);
+              }
+              const words = this.title.split(' ').filter(word => word.length > 0);
+              if (words.length > 1) {
+                return words.map(n => n[0]).join('').toUpperCase().slice(0, 2);
+              } else {
+                return this.title.slice(0, 2).toUpperCase();
+              }
+            }
+          }
+        }
+      }
     });
     
     wrapper = mount(AppNavbar, mountOptions);
@@ -86,15 +114,20 @@ describe('AppNavbar.vue', () => {
     });
 
     it('當使用者有頭像時應該顯示頭像圖片', async () => {
-      const mockUser = {
+      const mockUserData = {
         id: 1,
         account: 'testuser',
         email: 'test@example.com',
         full_name: '測試用戶',
         display_name: '測試用戶',
         is_admin: false,
-        avatar_url: 'https://example.com/avatar.jpg'
+        avatar_data: {
+          type: 'image',
+          path: 'avatars/user123.jpg'
+        }
       };
+      
+      const mockUser = new User(mockUserData);
       
       mockAuthState(authStore, {
         user: mockUser,
@@ -104,21 +137,24 @@ describe('AppNavbar.vue', () => {
 
       await nextTick();
 
+      // 在 IconDisplay 組件中，圖片的 alt 是 title 屬性
       const avatarImg = wrapper.find('img[alt="測試用戶"]');
       expect(avatarImg.exists()).toBe(true);
-      expect(avatarImg.attributes('src')).toBe('https://example.com/avatar.jpg');
+      expect(avatarImg.attributes('src')).toBe('/storage/avatars/user123.jpg');
     });
 
     it('當使用者無頭像時應該顯示姓名縮寫', async () => {
-      const mockUser = {
+      const mockUserData = {
         id: 1,
         account: 'testuser',
         email: 'test@example.com',
         full_name: '測試用戶',
         display_name: '測試用戶',
         is_admin: false,
-        avatar_url: null
+        avatar_data: null // 無頭像，會自動生成文字頭像
       };
+      
+      const mockUser = new User(mockUserData);
       
       mockAuthState(authStore, {
         user: mockUser,
@@ -128,21 +164,24 @@ describe('AppNavbar.vue', () => {
 
       await nextTick();
 
-      const avatarText = wrapper.find('.text-white.text-sm.font-medium');
+      // 在 IconDisplay 組件中，文字顯示在 span.font-semibold 內
+      const avatarText = wrapper.find('span.font-semibold');
       expect(avatarText.exists()).toBe(true);
       expect(avatarText.text()).toBe('測試');
     });
 
     it('當使用者是管理員時應該顯示管理員標籤', async () => {
-      const mockUser = {
+      const mockUserData = {
         id: 1,
         account: 'admin',
         email: 'admin@example.com',
         full_name: '管理員',
         display_name: '管理員',
         is_admin: true,
-        avatar_url: null
+        avatar_data: null
       };
+      
+      const mockUser = new User(mockUserData);
       
       mockAuthState(authStore, {
         user: mockUser,
@@ -156,11 +195,77 @@ describe('AppNavbar.vue', () => {
       expect(adminBadge.exists()).toBe(true);
       expect(adminBadge.text()).toBe('管理員');
     });
+
+    it('應該正確顯示使用者的 avatar_data', async () => {
+      const mockUserData = {
+        id: 1,
+        account: 'testuser',
+        email: 'test@example.com',
+        full_name: '測試用戶',
+        display_name: '測試用戶',
+        is_admin: false,
+        avatar_data: {
+          type: 'text',
+          text: '測試',
+          backgroundColor: '#6366f1',
+          textColor: '#ffffff'
+        }
+      };
+      
+      const mockUser = new User(mockUserData);
+      
+      mockAuthState(authStore, {
+        user: mockUser,
+        isAuthenticated: true,
+        isInitialized: true
+      });
+
+      await nextTick();
+
+      // 應該顯示文字頭像而不是圖片
+      const avatarImgs = wrapper.findAll('img');
+      const hasUserAvatar = avatarImgs.some(img => 
+        img.attributes('alt')?.includes('測試用戶')
+      );
+      expect(hasUserAvatar).toBe(false); // 不應該有圖片
+      
+      // 應該顯示文字縮寫
+      const avatarText = wrapper.find('span.font-semibold');
+      expect(avatarText.exists()).toBe(true);
+      expect(avatarText.text()).toBe('測試');
+    });
+
+    it('應該從 avatar_data 生成預設頭像', async () => {
+      const mockUserData = {
+        id: 1,
+        account: 'johndoe',
+        email: 'john@example.com',
+        full_name: 'John Doe',
+        display_name: null,
+        is_admin: false,
+        avatar_data: null // 無 avatar_data，應該使用預設
+      };
+      
+      const mockUser = new User(mockUserData);
+      
+      mockAuthState(authStore, {
+        user: mockUser,
+        isAuthenticated: true,
+        isInitialized: true
+      });
+
+      await nextTick();
+      
+      // 應該顯示預設的縮寫（取自 full_name）
+      const avatarText = wrapper.find('span.font-semibold');
+      expect(avatarText.exists()).toBe(true);
+      expect(avatarText.text()).toBe('JD');
+    });
   });
 
   describe('下拉選單互動', () => {
     beforeEach(async () => {
-      const mockUser = {
+      const mockUserData = {
         id: 1,
         account: 'testuser',
         email: 'test@example.com',
@@ -171,6 +276,8 @@ describe('AppNavbar.vue', () => {
           { id: 1, name: '測試組織' }
         ]
       };
+      
+      const mockUser = new User(mockUserData);
       
       mockAuthState(authStore, {
         user: mockUser,
@@ -238,7 +345,7 @@ describe('AppNavbar.vue', () => {
     });
 
     it('管理員應該看到額外的管理選項', async () => {
-      const mockAdminUser = {
+      const mockAdminUserData = {
         id: 1,
         account: 'admin',
         email: 'admin@example.com',
@@ -247,6 +354,8 @@ describe('AppNavbar.vue', () => {
         is_admin: true,
         organizations: []
       };
+      
+      const mockAdminUser = new User(mockAdminUserData);
       
       mockAuthState(authStore, {
         user: mockAdminUser,

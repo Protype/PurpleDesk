@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { createPinia, setActivePinia } from 'pinia';
 import axios from 'axios';
 import { useAuthStore } from '../../../resources/js/stores/auth.js';
+import { User } from '../../../resources/js/models/User.js';
 
 // Mock axios
 vi.mock('axios', () => ({
@@ -86,7 +87,9 @@ describe('AuthStore', () => {
         password: 'password'
       });
 
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
       expect(authStore.token).toBe(mockToken);
       expect(authStore.isAuthenticated).toBe(true);
       
@@ -136,7 +139,9 @@ describe('AuthStore', () => {
 
       expect(axios.post).toHaveBeenCalledWith('/api/register', userData);
 
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
       expect(authStore.token).toBe(mockToken);
       expect(authStore.isAuthenticated).toBe(true);
       
@@ -237,9 +242,11 @@ describe('AuthStore', () => {
       const result = await authStore.fetchUser();
 
       expect(axios.get).toHaveBeenCalledWith('/api/me');
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
       expect(authStore.isAuthenticated).toBe(true);
-      expect(result).toEqual(mockUser);
+      expect(result).toBeInstanceOf(User);
     });
 
     it('沒有 token 時應該拋出錯誤', async () => {
@@ -255,7 +262,7 @@ describe('AuthStore', () => {
     it('API 失敗應該清除認證資訊', async () => {
       axios.get.mockRejectedValue(new Error('API failed'));
 
-      await expect(authStore.fetchUser()).rejects.toThrow('API failed');
+      await expect(authStore.fetchUser()).rejects.toThrow('Failed to fetch current user');
 
       expect(authStore.user).toBeNull();
       expect(authStore.token).toBeNull();
@@ -303,7 +310,9 @@ describe('AuthStore', () => {
       expect(axios.defaults.headers.common['Authorization']).toBe(`Bearer ${mockToken}`);
       
       expect(axios.get).toHaveBeenCalledWith('/api/me');
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
       expect(authStore.isAuthenticated).toBe(true);
       expect(authStore.isInitialized).toBe(true);
     });
@@ -328,7 +337,7 @@ describe('AuthStore', () => {
 
       await authStore.initializeAuth();
 
-      expect(consoleWarnSpy).toHaveBeenCalledWith('Failed to initialize auth:', 'Token expired');
+      expect(consoleWarnSpy).toHaveBeenCalledWith('Failed to initialize auth:', 'Failed to fetch current user');
       
       expect(authStore.user).toBeNull();
       expect(authStore.token).toBeNull();

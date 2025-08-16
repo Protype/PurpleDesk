@@ -19,7 +19,7 @@
               ref="imageField"
               label="頭像"
               :current-image-url="user?.avatar_url"
-              :image-alt="user?.display_name || user?.name"
+              :image-alt="user?.display_name || user?.full_name || user?.account"
               :initials="getUserInitials(user)"
               size="large"
               shape="circle"
@@ -233,8 +233,32 @@ export default {
     
     const getUserInitials = (user) => {
       if (!user) return ''
-      const name = user.display_name || user.name
-      return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
+      // 使用 User Model 的 getInitials 方法
+      if (user.getInitials && typeof user.getInitials === 'function') {
+        return user.getInitials()
+      }
+      // 回退邏輯：display_name → full_name → account → 空字串
+      const name = user.display_name || user.full_name || user.account
+      if (!name) return ''
+      
+      // 檢查是否含有中文字符
+      if (/[\u4e00-\u9fa5]/.test(name)) {
+        return name.slice(0, 2);
+      }
+      
+      // 英文名稱處理
+      const words = name.split(' ').filter(word => word.length > 0);
+      if (words.length > 1) {
+        // 多個單字取首字母
+        return words
+          .map(n => n[0])
+          .join('')
+          .toUpperCase()
+          .slice(0, 2);
+      } else {
+        // 單一單字取前兩個字母
+        return name.slice(0, 2).toUpperCase();
+      }
     }
     
     const fetchOrganizations = async () => {
@@ -529,7 +553,7 @@ export default {
       await fetchOrganizations()
       
       if (user.value) {
-        form.name = user.value.name || ''
+        form.name = user.value.full_name || ''
         form.display_name = user.value.display_name || ''
         form.email = user.value.email || ''
       }

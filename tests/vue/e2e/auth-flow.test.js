@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { createPinia, setActivePinia } from 'pinia';
 import axios from 'axios';
 import { useAuthStore } from '../../../resources/js/stores/auth.js';
+import { User } from '../../../resources/js/models/User.js';
 import LoginPage from '../../../resources/js/pages/LoginPage.vue';
 import Dashboard from '../../../resources/js/pages/Dashboard.vue';
 
@@ -152,7 +153,10 @@ describe('端對端登入流程測試', () => {
       // 8. 驗證認證狀態
       const authStore = useAuthStore();
       expect(authStore.isAuthenticated).toBe(true);
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
+      expect(authStore.user.email).toBe(mockUser.email);
       expect(authStore.token).toBe(mockToken);
 
       // 9. 驗證 localStorage 儲存
@@ -249,7 +253,10 @@ describe('端對端登入流程測試', () => {
 
       // 5. 驗證狀態恢復
       expect(authStore.token).toBe(mockToken);
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
+      expect(authStore.user.email).toBe(mockUser.email);
       expect(authStore.isAuthenticated).toBe(true);
       expect(authStore.isInitialized).toBe(true);
 
@@ -289,7 +296,7 @@ describe('端對端登入流程測試', () => {
       expect(localStorageMock.removeItem).toHaveBeenCalledWith('auth_token');
 
       // 8. 驗證警告訊息
-      expect(consoleWarnSpy).toHaveBeenCalledWith('Failed to initialize auth:', 'Token expired');
+      expect(consoleWarnSpy).toHaveBeenCalledWith('Failed to initialize auth:', 'Failed to fetch current user');
 
       // 9. 嘗試存取受保護頁面，應該重導向至登入頁
       await router.push('/dashboard');
@@ -383,7 +390,9 @@ describe('端對端登入流程測試', () => {
       // 注意：當前的 AuthStore 實作沒有併發控制，所以會呼叫多次
       // 這個測試展示了需要改進的地方
       expect(authStore.isInitialized).toBe(true);
-      expect(authStore.user).toEqual(mockUser);
+      expect(authStore.user).toBeInstanceOf(User);
+      expect(authStore.user.id).toBe(mockUser.id);
+      expect(authStore.user.account).toBe(mockUser.account);
     });
   });
 });
