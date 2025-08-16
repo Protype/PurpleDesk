@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Heroicons - Interface Category
+ * 介面相關圖標
+ */
+
+return [
+    'actions' => [
+        'name' => 'Actions',
+        'icons' => [
+            ['icon' => 'adjustments', 'name' => 'Adjustments'],
+            ['icon' => 'cog', 'name' => 'Cog'],
+            ['icon' => 'cursor-click', 'name' => 'Cursor Click'],
+            ['icon' => 'download', 'name' => 'Download'],
+            ['icon' => 'duplicate', 'name' => 'Duplicate'],
+            ['icon' => 'filter', 'name' => 'Filter'],
+            ['icon' => 'pencil', 'name' => 'Pencil'],
+            ['icon' => 'pencil-alt', 'name' => 'Pencil Alt'],
+            ['icon' => 'plus', 'name' => 'Plus'],
+            ['icon' => 'plus-circle', 'name' => 'Plus Circle'],
+            ['icon' => 'plus-sm', 'name' => 'Plus Sm'],
+            ['icon' => 'minus', 'name' => 'Minus'],
+            ['icon' => 'minus-circle', 'name' => 'Minus Circle'],
+            ['icon' => 'minus-sm', 'name' => 'Minus Sm'],
+            ['icon' => 'save', 'name' => 'Save'],
+            ['icon' => 'save-as', 'name' => 'Save As'],
+            ['icon' => 'search', 'name' => 'Search'],
+            ['icon' => 'search-circle', 'name' => 'Search Circle'],
+            ['icon' => 'selector', 'name' => 'Selector'],
+            ['icon' => 'sort-ascending', 'name' => 'Sort Ascending'],
+            ['icon' => 'sort-descending', 'name' => 'Sort Descending'],
+            ['icon' => 'trash', 'name' => 'Trash'],
+            ['icon' => 'upload', 'name' => 'Upload'],
+            ['icon' => 'zoom-in', 'name' => 'Zoom In'],
+            ['icon' => 'zoom-out', 'name' => 'Zoom Out'],
+        ],
+    ],
+    'status' => [
+        'name' => 'Status',
+        'icons' => [
+            ['icon' => 'badge-check', 'name' => 'Badge Check'],
+            ['icon' => 'ban', 'name' => 'Ban'],
+            ['icon' => 'check', 'name' => 'Check'],
+            ['icon' => 'check-circle', 'name' => 'Check Circle'],
+            ['icon' => 'clock', 'name' => 'Clock'],
+            ['icon' => 'eye', 'name' => 'Eye'],
+            ['icon' => 'eye-off', 'name' => 'Eye Off'],
+            ['icon' => 'flag', 'name' => 'Flag'],
+            ['icon' => 'hand', 'name' => 'Hand'],
+            ['icon' => 'heart', 'name' => 'Heart'],
+            ['icon' => 'light-bulb', 'name' => 'Light Bulb'],
+            ['icon' => 'lightning-bolt', 'name' => 'Lightning Bolt'],
+            ['icon' => 'lock-closed', 'name' => 'Lock Closed'],
+            ['icon' => 'lock-open', 'name' => 'Lock Open'],
+            ['icon' => 'shield-check', 'name' => 'Shield Check'],
+            ['icon' => 'shield-exclamation', 'name' => 'Shield Exclamation'],
+            ['icon' => 'star', 'name' => 'Star'],
+            ['icon' => 'stop', 'name' => 'Stop'],
+            ['icon' => 'thumb-down', 'name' => 'Thumb Down'],
+            ['icon' => 'thumb-up', 'name' => 'Thumb Up'],
+            ['icon' => 'trending-down', 'name' => 'Trending Down'],
+            ['icon' => 'trending-up', 'name' => 'Trending Up'],
+            ['icon' => 'x', 'name' => 'X'],
+            ['icon' => 'x-circle', 'name' => 'X Circle'],
+        ],
+    ],
+    'layout' => [
+        'name' => 'Layout',
+        'icons' => [
+            ['icon' => 'collection', 'name' => 'Collection'],
+            ['icon' => 'color-swatch', 'name' => 'Color Swatch'],
+            ['icon' => 'template', 'name' => 'Template'],
+            ['icon' => 'view-boards', 'name' => 'View Boards'],
+            ['icon' => 'view-grid', 'name' => 'View Grid'],
+            ['icon' => 'view-grid-add', 'name' => 'View Grid Add'],
+            ['icon' => 'view-list', 'name' => 'View List'],
+        ],
+    ],
+];

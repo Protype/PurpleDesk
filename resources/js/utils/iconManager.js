@@ -1,9 +1,11 @@
 // 整合的圖標管理系統
-// 統一管理 Bootstrap Icons 和 Emoji 的載入、搜尋、快取
+// 統一管理 Bootstrap Icons、Heroicons 和 Emoji 的載入、搜尋、快取
 
 import bsIconsManager from './icons/index.js'
 // 使用 API 版本的 emoji manager
 import emojiManager from './emojis/api-manager.js'
+// 使用 API 版本的 heroicon manager
+import heroiconManager from './heroicons/api-manager.js'
 
 // 整合的管理器類
 class IconManager {
@@ -11,6 +13,7 @@ class IconManager {
     this.initialized = false
     this.loadingStats = {
       icons: { total: 0, loaded: 0, loading: 0 },
+      heroicons: { total: 0, loaded: 0, loading: 0 },
       emojis: { total: 0, loaded: 0, loading: 0 }
     }
   }
@@ -24,26 +27,33 @@ class IconManager {
     // }
     
     try {
-      // 先初始化 emoji API manager
-      await emojiManager.initialize()
+      // 先初始化 emoji 和 heroicon API manager
+      await Promise.all([
+        emojiManager.initialize(),
+        heroiconManager.initialize()
+      ])
       
       // 使用 allSettled 來避免單一失敗導致全部失敗
       const results = await Promise.allSettled([
-        bsIconsManager.preloadPopularCategories(),
-        emojiManager.preloadPopularEmojiCategories()
+        bsIconsManager.preloadCategories(),
+        heroiconManager.preloadHeroiconCategories(),
+        emojiManager.preloadEmojiCategories()
       ])
       
       // 檢查結果
       results.forEach((result, index) => {
         if (result.status === 'rejected') {
-          const systemName = index === 0 ? 'Bootstrap Icons' : 'Emojis'
-          console.error(`⚠️ IconManager: ${systemName} 初始化失敗:`, result.reason)
+          const systemNames = ['Bootstrap Icons', 'Heroicons', 'Emojis']
+          console.error(`⚠️ IconManager: ${systemNames[index]} 初始化失敗:`, result.reason)
         }
       })
       
       // 開始漸進式載入（即使部分初始化失敗）
       if (typeof bsIconsManager.loadIconsByPriority === 'function') {
         bsIconsManager.loadIconsByPriority()
+      }
+      if (typeof heroiconManager.loadHeroiconsByPriority === 'function') {
+        heroiconManager.loadHeroiconsByPriority()
       }
       if (typeof emojiManager.loadEmojisByPriority === 'function') {
         emojiManager.loadEmojisByPriority()
@@ -71,13 +81,17 @@ class IconManager {
         if (typeof bsIconsManager.getLoadingStatus === 'function') {
           this.loadingStats.icons = bsIconsManager.getLoadingStatus()
         }
+        if (typeof heroiconManager.getHeroiconLoadingStatus === 'function') {
+          this.loadingStats.heroicons = heroiconManager.getHeroiconLoadingStatus()
+        }
         if (typeof emojiManager.getEmojiLoadingStatus === 'function') {
           this.loadingStats.emojis = emojiManager.getEmojiLoadingStatus()
         }
         
         const iconProgress = this.loadingStats.icons.progress || 0
+        const heroiconProgress = this.loadingStats.heroicons.progress || 0
         const emojiProgress = this.loadingStats.emojis.progress || 0
-        const totalProgress = Math.round((iconProgress + emojiProgress) / 2)
+        const totalProgress = Math.round((iconProgress + heroiconProgress + emojiProgress) / 3)
         
         if (totalProgress < 100) {
           setTimeout(updateStats, 1000) // 每秒更新一次
@@ -95,27 +109,29 @@ class IconManager {
     updateStats()
   }
 
-  // 搜尋圖標（同時搜尋 BS Icons 和 Emoji）
+  // 搜尋圖標（同時搜尋 BS Icons、Heroicons 和 Emoji）
   async searchIcons(query) {
     if (!query || query.trim().length === 0) {
-      return { icons: [], emojis: [], total: 0 }
+      return { icons: [], heroicons: [], emojis: [], total: 0 }
     }
 
     try {
-      const [icons, emojis] = await Promise.all([
+      const [icons, heroicons, emojis] = await Promise.all([
         bsIconsManager.searchIcons(query),
+        heroiconManager.searchHeroicons(query),
         emojiManager.searchEmojis(query)
       ])
 
       return {
         icons,
+        heroicons,
         emojis,
-        total: icons.length + emojis.length,
+        total: icons.length + heroicons.length + emojis.length,
         query: query.trim()
       }
     } catch (error) {
       console.error('搜尋圖標失敗:', error)
-      return { icons: [], emojis: [], total: 0, error: error.message }
+      return { icons: [], heroicons: [], emojis: [], total: 0, error: error.message }
     }
   }
 
@@ -124,6 +140,8 @@ class IconManager {
     try {
       if (type === 'icons') {
         return await bsIconsManager.getIconsByCategory(categoryId)
+      } else if (type === 'heroicons') {
+        return await heroiconManager.getHeroiconsByCategory(categoryId)
       } else if (type === 'emojis') {
         return await emojiManager.getEmojisByCategory(categoryId)
       } else {
@@ -139,45 +157,22 @@ class IconManager {
   getAllLoadedIcons() {
     return {
       icons: bsIconsManager.getAllLoadedIcons(),
-      emojis: emojiManager.getAllLoadedEmojis()
+      heroicons: heroiconManager.getAllLoadedHeroicons(),
+      emojis: [] // Emoji 使用獨立的 allEmojis.js 系統
     }
   }
 
-  // 取得熱門圖標
-  getPopularIcons(limit = 20) {
-    return {
-      emojis: emojiManager.getPopularEmojis(limit),
-      icons: this.getPopularBSIcons(limit)
-    }
-  }
-
-  // 取得熱門 BS Icons (基於常用程度)
-  getPopularBSIcons(limit = 20) {
-    const popularClasses = [
-      'bi-house', 'bi-person', 'bi-gear', 'bi-search', 'bi-bell', 'bi-heart',
-      'bi-star', 'bi-check', 'bi-x', 'bi-plus', 'bi-dash', 'bi-arrow-right',
-      'bi-arrow-left', 'bi-arrow-up', 'bi-arrow-down', 'bi-envelope',
-      'bi-chat', 'bi-phone', 'bi-camera', 'bi-file'
-    ]
-
-    const allIcons = bsIconsManager.getAllLoadedIcons()
-    const popular = allIcons.filter(icon => 
-      popularClasses.some(cls => icon.class.includes(cls))
-    )
-
-    return popular.slice(0, limit)
-  }
 
   // 取得載入狀態
   getLoadingStatus() {
     return {
       ...this.loadingStats,
       overall: {
-        total: this.loadingStats.icons.total + this.loadingStats.emojis.total,
-        loaded: this.loadingStats.icons.loaded + this.loadingStats.emojis.loaded,
-        loading: this.loadingStats.icons.loading + this.loadingStats.emojis.loading,
+        total: this.loadingStats.icons.total + this.loadingStats.heroicons.total + this.loadingStats.emojis.total,
+        loaded: this.loadingStats.icons.loaded + this.loadingStats.heroicons.loaded + this.loadingStats.emojis.loaded,
+        loading: this.loadingStats.icons.loading + this.loadingStats.heroicons.loading + this.loadingStats.emojis.loading,
         progress: Math.round(
-          (this.loadingStats.icons.progress + this.loadingStats.emojis.progress) / 2
+          (this.loadingStats.icons.progress + this.loadingStats.heroicons.progress + this.loadingStats.emojis.progress) / 3
         )
       }
     }
@@ -186,6 +181,18 @@ class IconManager {
   // 取得記憶體使用統計
   getMemoryStats() {
     const iconStats = bsIconsManager.getMemoryStats()
+    
+    // HeroiconManager 記憶體統計
+    let heroiconStats = {
+      loadedCategories: 0,
+      totalIcons: 0,
+      searchIndexSize: 0,
+      estimatedMemoryKB: 0
+    }
+    
+    if (typeof heroiconManager.getMemoryStats === 'function') {
+      heroiconStats = heroiconManager.getMemoryStats()
+    }
     
     // EmojiManager 可能還沒有實作 getMemoryStats，使用預設值
     let emojiStats = {
@@ -210,12 +217,13 @@ class IconManager {
 
     return {
       icons: iconStats,
+      heroicons: heroiconStats,
       emojis: emojiStats,
       total: {
-        loadedCategories: iconStats.loadedCategories + emojiStats.loadedCategories,
-        totalIcons: iconStats.totalIcons + (emojiStats.totalEmojis || 0),
-        searchIndexSize: iconStats.searchIndexSize + (emojiStats.searchIndexSize || 0),
-        estimatedMemoryKB: iconStats.estimatedMemoryKB + (emojiStats.estimatedMemoryKB || 0)
+        loadedCategories: iconStats.loadedCategories + heroiconStats.loadedCategories + emojiStats.loadedCategories,
+        totalIcons: iconStats.totalIcons + heroiconStats.totalIcons + (emojiStats.totalEmojis || 0),
+        searchIndexSize: iconStats.searchIndexSize + heroiconStats.searchIndexSize + (emojiStats.searchIndexSize || 0),
+        estimatedMemoryKB: iconStats.estimatedMemoryKB + heroiconStats.estimatedMemoryKB + (emojiStats.estimatedMemoryKB || 0)
       }
     }
   }
@@ -224,6 +232,11 @@ class IconManager {
   getCategoryMaps() {
     return {
       icons: bsIconsManager.categoryMap,
+      heroicons: heroiconManager.getCategoriesInfo ? 
+        heroiconManager.getCategoriesInfo().reduce((map, cat) => {
+          map[cat.id] = { name: cat.name, icon: cat.icon, count: cat.count };
+          return map;
+        }, {}) : {},
       emojis: emojiManager.getCategoriesInfo ? 
         emojiManager.getCategoriesInfo().reduce((map, cat) => {
           map[cat.id] = { name: cat.name, icon: cat.icon, count: cat.count };
@@ -235,7 +248,8 @@ class IconManager {
   // 清除所有快取
   clearAllCache() {
     bsIconsManager.clearCache()
-    emojiManager.clearEmojiCache()
+    heroiconManager.clearHeroiconCache()
+    // Emoji 使用獨立的 allEmojis.js 系統，不需要清除快取
     this.initialized = false
     if (process.env.NODE_ENV === 'development') {
       console.log('🧹 IconManager: 已清除所有快取')
@@ -251,7 +265,8 @@ class IconManager {
     try {
       await Promise.all([
         bsIconsManager.loadAllIcons(),
-        emojiManager.loadAllEmojis()
+        heroiconManager.loadAllHeroicons()
+        // Emoji 使用獨立的 allEmojis.js 系統
       ])
       
       if (process.env.NODE_ENV === 'development') {
@@ -274,6 +289,7 @@ class IconManager {
     // console.log('📊 IconManager 最終統計:')
     // console.log(`   • 總圖標數: ${memStats.total.totalIcons.toLocaleString()} 個`)
     // console.log(`   • BS Icons: ${memStats.icons.totalIcons.toLocaleString()} 個 (${memStats.icons.loadedCategories} 分類)`)
+    // console.log(`   • Heroicons: ${memStats.heroicons.totalIcons.toLocaleString()} 個 (${memStats.heroicons.loadedCategories} 分類)`)
     // console.log(`   • Emojis: ${memStats.emojis.totalEmojis.toLocaleString()} 個 (${memStats.emojis.loadedCategories} 分類)`)
     // console.log(`   • 搜尋索引大小: ${memStats.total.searchIndexSize.toLocaleString()} 項`)
     // console.log(`   • 預估記憶體使用: ${memStats.total.estimatedMemoryKB.toLocaleString()} KB`)

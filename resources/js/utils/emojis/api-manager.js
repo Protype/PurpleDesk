@@ -116,8 +116,8 @@ class EmojiApiManager {
     };
   }
 
-  // 預載入（實際上是載入全部）
-  async preloadPopularEmojiCategories() {
+  // 預載入全部
+  async preloadEmojiCategories() {
     return this.initialize();
   }
 

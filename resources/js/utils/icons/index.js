@@ -217,7 +217,7 @@ export function getLoadingStatus() {
 }
 
 // 預載入熱門分類
-export async function preloadPopularCategories() {
+export async function preloadCategories() {
   const popular = ['general', 'ui', 'communications']
   
   try {
@@ -291,7 +291,7 @@ export default {
   searchIcons,
   isCategoryLoaded,
   getLoadingStatus,
-  preloadPopularCategories,
+  preloadCategories,
   clearCache,
   getMemoryStats,
   categoryMap,
