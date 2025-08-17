@@ -34,10 +34,13 @@ class EmojiService
      */
     private function filterEmojis(array $emojis): array
     {
-        return array_filter($emojis, function ($emoji) {
+        $filtered = array_filter($emojis, function ($emoji) {
             $emojiChar = is_array($emoji) ? ($emoji['emoji'] ?? '') : $emoji;
             return !$this->isProblematicEmoji($emojiChar);
         });
+        
+        // 重新索引陣列，確保 JSON 序列化為陣列而非物件
+        return array_values($filtered);
     }
     /**
      * 取得所有 emoji 資料（一次性載入）
@@ -78,12 +81,15 @@ class EmojiService
                     // 過濾有問題的 emoji
                     $filteredEmojis = $this->filterEmojis($subgroupData['emojis']);
                     
-                    $categoryEmojis[$subgroupKey] = [
-                        'name' => $subgroupData['name'],
-                        'emojis' => $filteredEmojis
-                    ];
-                    
-                    $result['stats']['total_emojis'] += count($filteredEmojis);
+                    // 只有當過濾後還有 emoji 時才加入子群組
+                    if (!empty($filteredEmojis)) {
+                        $categoryEmojis[$subgroupKey] = [
+                            'name' => $subgroupData['name'],
+                            'emojis' => $filteredEmojis
+                        ];
+                        
+                        $result['stats']['total_emojis'] += count($filteredEmojis);
+                    }
                 }
                 
                 $result['categories'][$categoryId] = [

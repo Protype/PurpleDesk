@@ -114,4 +114,36 @@ class EmojiServiceBlacklistTest extends TestCase
         // 驗證快取存在
         $this->assertTrue(Cache::has('all_emojis'));
     }
+
+    /** @test */
+    public function it_ensures_emojis_arrays_are_json_serializable()
+    {
+        $allEmojis = $this->emojiService->getAllEmojis();
+        
+        // 測試 JSON 序列化
+        $json = json_encode($allEmojis);
+        $this->assertNotFalse($json, 'Failed to JSON encode emoji data');
+        
+        // 測試反序列化
+        $decoded = json_decode($json, true);
+        $this->assertNotNull($decoded, 'Failed to JSON decode emoji data');
+        
+        // 驗證所有 emojis 在 JSON 中都是陣列（不是物件）
+        foreach ($decoded['categories'] as $categoryId => $category) {
+            foreach ($category['subgroups'] as $subgroupKey => $subgroup) {
+                $this->assertIsArray($subgroup['emojis'], 
+                    "Emojis in {$categoryId}/{$subgroupKey} should be array after JSON serialization"
+                );
+                // 檢查 JSON 中的索引是否從 0 開始的連續數字
+                $emojis = $subgroup['emojis'];
+                if (!empty($emojis)) {
+                    $this->assertEquals(
+                        array_keys($emojis), 
+                        range(0, count($emojis) - 1),
+                        "Emojis array in {$categoryId}/{$subgroupKey} should have sequential numeric keys"
+                    );
+                }
+            }
+        }
+    }
 }
