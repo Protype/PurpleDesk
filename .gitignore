@@ -22,3 +22,19 @@ yarn-error.log
 /.vscode
 /.zed
 coverage/
+
+# Playwright 測試相關檔案
+test-results/
+playwright-report/
+.playwright-artifacts-*/
+
+# Vitest 測試相關檔案
+.vitest-cache/
+
+# 其他測試產生的檔案
+*.png
+*.webm
+*.mp4
+!docs/**/*.png
+!resources/**/*.png
+!public/**/*.png
