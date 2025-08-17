@@ -3,24 +3,24 @@
 **專案**：IconPicker 元件重構  
 **Epic 參考**：[ICON-PICKER-EPICS.md](./ICON-PICKER-EPICS.md)  
 **建立日期**：2025-08-17  
-**狀態**：規劃中  
+**狀態**：Phase 0-1 已完成，進行中 (Phase 2)  
 
 ## 📋 Stories 總覽
 
 | Story ID | Epic | Story 名稱 | 優先級 | 預估工時 | 狀態 |
 |----------|------|------------|--------|----------|------|
 | **EP-001: 建立安全網和基礎架構** |
-| ST-001 | EP-001 | 建立 IconPickerOri 備份 | P0 | 2小時 | 待開始 |
-| ST-002 | EP-001 | 建立 features 目錄結構 | P0 | 1小時 | 待開始 |
-| ST-003 | EP-001 | 配置測試框架 | P0 | 4小時 | 待開始 |
-| ST-004 | EP-001 | 建立版本切換機制 | P1 | 3小時 | 待開始 |
+| ST-001 | EP-001 | 建立 IconPickerOri 備份 | P0 | 2小時 | ✅ 已完成 |
+| ST-002 | EP-001 | 建立 features 目錄結構 | P0 | 1小時 | ✅ 已完成 |
+| ST-003 | EP-001 | 配置測試框架 | P0 | 4小時 | ✅ 已完成 |
+| ST-004 | EP-001 | 建立版本切換機制 | P1 | 3小時 | ✅ 已完成 |
 | **EP-002: 服務層重構** |
-| ST-005 | EP-002 | 實作 IconDataLoader 基礎架構 | P0 | 4小時 | 待開始 |
-| ST-006 | EP-002 | 實作 getEmojiData API 載入 | P0 | 6小時 | 待開始 |
-| ST-007 | EP-002 | 實作 getIconLibraryData 合併載入 | P0 | 6小時 | 待開始 |
-| ST-008 | EP-002 | 建立 IconPickerSearch 元件 | P0 | 4小時 | 待開始 |
+| ST-005 | EP-002 | 實作 IconDataLoader 基礎架構 | P0 | 4小時 | ✅ 已完成 |
+| ST-006 | EP-002 | 實作 getEmojiData API 載入 | P0 | 6小時 | ✅ 已完成 |
+| ST-007 | EP-002 | 實作 getIconLibraryData 合併載入 | P0 | 6小時 | ✅ 已完成 |
+| ST-008 | EP-002 | 建立 IconPickerSearch 元件 | P0 | 4小時 | ✅ 已完成 |
 | **EP-003: 共用元件開發** |
-| ST-009 | EP-003 | 實作 VirtualScrollGrid 核心邏輯 | P1 | 8小時 | 待開始 |
+| ST-009 | EP-003 | 實作 VirtualScrollGrid 核心邏輯 | P1 | 8小時 | ✅ 已完成 |
 | ST-010 | EP-003 | 實作 VirtualScrollGrid slots 機制 | P1 | 4小時 | 待開始 |
 | ST-011 | EP-003 | VirtualScrollGrid 效能優化 | P1 | 4小時 | 待開始 |
 | **EP-004: 面板元件拆分** |
