@@ -6,8 +6,8 @@
       <input
         v-model="customInitials"
         type="text"
-        maxlength="3"
-        placeholder="最多3個字元 (如: AB)"
+        maxlength="2"
+        placeholder="最多2個字元 (如: AB)"
         class="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         @input="handleInitialsInput"
       />
@@ -62,10 +62,10 @@ export default {
       }
     }, { immediate: true })
     
-    // 處理文字輸入 - 限制3字元並自動大寫
+    // 處理文字輸入 - 限制2字元並自動大寫
     const handleInitialsInput = () => {
       if (customInitials.value) {
-        customInitials.value = customInitials.value.toUpperCase().slice(0, 3)
+        customInitials.value = customInitials.value.toUpperCase().slice(0, 2)
       }
       // 即時更新 modelValue
       emit('update:modelValue', customInitials.value)
