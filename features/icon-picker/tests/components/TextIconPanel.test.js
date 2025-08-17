@@ -12,16 +12,16 @@ describe('TextIconPanel', () => {
     expect(wrapper.find('.w-24.h-24').exists()).toBe(true) // 預覽區域
   })
 
-  it('應該限制輸入為3個字元', async () => {
+  it('應該限制輸入為2個字元', async () => {
     const wrapper = mount(TextIconPanel)
     const input = wrapper.find('input')
     
-    // 輸入超過3個字元
+    // 輸入超過2個字元
     await input.setValue('ABCDE')
     await input.trigger('input')
     
-    // 應該只保留前3個字元
-    expect(wrapper.vm.customInitials).toBe('ABC')
+    // 應該只保留前2個字元
+    expect(wrapper.vm.customInitials).toBe('AB')
   })
 
   it('應該自動轉換為大寫', async () => {
@@ -29,11 +29,11 @@ describe('TextIconPanel', () => {
     const input = wrapper.find('input')
     
     // 輸入小寫字母
-    await input.setValue('abc')
+    await input.setValue('ab')
     await input.trigger('input')
     
     // 應該轉換為大寫
-    expect(wrapper.vm.customInitials).toBe('ABC')
+    expect(wrapper.vm.customInitials).toBe('AB')
   })
 
   it('應該在有輸入時啟用應用按鈕', async () => {
