@@ -20,12 +20,13 @@
         :row-height="36"
         :container-height="176"
         :buffer="2"
+        ref="virtualGrid"
       >
         <template #item="{ item, index }">
           <div
             v-if="item"
             @click="selectEmoji(item)"
-            class="emoji-item cursor-pointer hover:bg-gray-100 rounded p-1 transition-colors flex items-center justify-center"
+            class="emoji-item flex items-center justify-center"
             :class="{ 
               'category-header': item.isCategory,
               'emoji-entry': !item.isCategory 
@@ -33,12 +34,12 @@
             :title="item.isCategory ? item.categoryName : `${item.emoji} ${item.name}`"
           >
             <!-- 分類標題 -->
-            <div v-if="item.isCategory" class="category-title text-xs font-medium text-gray-600 w-full text-left px-2">
+            <div v-if="item.isCategory" class="category-title">
               {{ item.categoryName }}
             </div>
             
             <!-- Emoji 項目 -->
-            <div v-else class="emoji-content text-lg">
+            <div v-else class="emoji-content">
               {{ item.displayEmoji }}
             </div>
           </div>
@@ -77,6 +78,7 @@ export default {
     const hasError = ref(false)
     const errorMessage = ref('')
     const rawEmojiData = ref([])
+    const virtualGrid = ref(null)
     
     // IconDataLoader 實例
     const iconDataLoader = new IconDataLoader()
@@ -172,17 +174,27 @@ export default {
     const applyModifier = (emoji, skinTone) => {
       if (!skinTone || skinTone === '') return emoji
       
-      // 支援膚色的 emoji 清單（部分）
+      // 移除現有膚色修飾符
+      const baseEmoji = emoji.replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '')
+      
+      // 簡化的膚色支援檢查 - 基於已知的支援膚色 emoji
       const supportsSkinTone = [
-        '👋', '🤚', '🖐', '✋', '🖖', '👌', '🤌', '🤏', '✌', '🤞', '🤟', '🤘', '🤙', '👈', '👉', '👆', '🖕', '👇', '☝', '👍', '👎', '👊', '✊', '🤛', '🤜', '👏', '🙌', '👐', '🤲', '🤝', '🙏',
-        '✍', '💅', '🤳', '💪', '🦾', '🦿', '🦵', '🦶', '👂', '🦻', '👃', '🫁', '🫀', '🧠', '🦷', '🦴', '👀', '👁', '👅', '👄', '💋',
-        '🧑', '👨', '👩', '🧒', '👶', '👧', '🧓', '👴', '👵', '🙍', '🙎', '🙅', '🙆', '💁', '🙋', '🧏', '🙇', '🤦', '🤷', '👮', '🕵', '💂', '🥷', '👷', '🤴', '👸', '👳', '👲', '🧕', '🤵', '👰', '🤰', '🤱', '👼', '🎅', '🤶', '🦸', '🦹', '🧙', '🧚', '🧛', '🧜', '🧝', '🧞', '🧟', '💆', '💇', '🚶', '🧍', '🧎', '🏃', '💃', '🕺', '🕴', '👯', '🧖', '🧗', '🤺', '🏇', '⛷', '🏂', '🏌', '🏄', '🚣', '🏊', '⛹', '🏋', '🚴', '🚵', '🤸', '🤼', '🤽', '🤾', '🤹', '🧘', '🛀', '🛌'
+        '👋', '🤚', '🖐', '✋', '🖖', '👌', '🤌', '🤏', '✌', '🤞', '🤟', '🤘', '🤙', 
+        '👈', '👉', '👆', '🖕', '👇', '☝', '👍', '👎', '👊', '✊', '🤛', '🤜', 
+        '👏', '🙌', '👐', '🤲', '🤝', '🙏', '✍', '💅', '🤳', '💪',
+        '🧑', '👨', '👩', '🧒', '👶', '👧', '🧓', '👴', '👵', '🙍', '🙎', 
+        '🙅', '🙆', '💁', '🙋', '🧏', '🙇', '🤦', '🤷', '👮', '🕵', '💂', 
+        '🥷', '👷', '🤴', '👸', '👳', '👲', '🧕', '🤵', '👰', '🤰', '🤱', 
+        '👼', '🎅', '🤶', '🧙', '🧚', '🧛', '🧜', '🧝', '🧞', '🧟', 
+        '💆', '💇', '🚶', '🧍', '🧎', '🏃', '💃', '🕺', '🕴', '👯', 
+        '🧗', '🤺', '🏇', '⛷', '🏂', '🏌', '🏄', '🚣', '🏊', '⛹', 
+        '🏋', '🚴', '🚵', '🤸', '🤼', '🤽', '🤾', '🤹', '🧘', '🛀', '🛌'
       ]
       
-      // 檢查 emoji 是否支援膚色
-      const baseEmoji = emoji.replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '') // 移除現有膚色修飾符
+      // 檢查是否支援膚色
+      const isHumanEmoji = supportsSkinTone.includes(baseEmoji)
       
-      if (supportsSkinTone.includes(baseEmoji)) {
+      if (isHumanEmoji) {
         return baseEmoji + skinTone
       }
       
@@ -211,6 +223,7 @@ export default {
     // 監聽膚色變化
     watch(() => props.selectedSkinTone, () => {
       // 膚色變化時，computed 會自動重新計算
+      // 不重置捲軸位置，保持當前瀏覽位置
     })
 
     // 元件掛載時載入資料
@@ -219,6 +232,9 @@ export default {
     })
 
     return {
+      // Refs
+      virtualGrid,
+      
       // 狀態
       isLoading,
       hasError,
@@ -247,28 +263,33 @@ export default {
 }
 
 .emoji-item {
-  @apply w-8 h-8 flex items-center justify-center;
+  @apply w-8 h-8;
 }
 
 .emoji-item.category-header {
-  @apply w-full bg-gray-200 cursor-default;
+  @apply w-full bg-gray-300 cursor-default;
   height: 24px;
+  grid-column: 1 / -1; /* 佔滿整行 */
 }
 
 .emoji-item.category-header:hover {
-  @apply bg-gray-200;
+  @apply bg-gray-300;
 }
 
-.category-title {
-  @apply truncate;
-}
-
-.emoji-content {
-  @apply select-none;
+.emoji-item.emoji-entry {
+  @apply cursor-pointer hover:bg-gray-100 rounded p-1 transition-colors;
 }
 
 .emoji-item.emoji-entry:hover {
   @apply bg-gray-200 scale-110;
+}
+
+.category-title {
+  @apply text-xs font-medium text-gray-600 w-full text-left px-2 truncate;
+}
+
+.emoji-content {
+  @apply text-lg select-none;
 }
 
 .loading, .error {

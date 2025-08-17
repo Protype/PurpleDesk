@@ -46,6 +46,15 @@ vi.mock('../../services/IconDataLoader.js', () => ({
         ]
       },
       {
+        categoryId: 'people',
+        categoryName: '人物',
+        emojis: [
+          { emoji: '👋', name: 'waving hand', category: 'people', keywords: ['hello', 'goodbye'] },
+          { emoji: '👍', name: 'thumbs up', category: 'people', keywords: ['good', 'yes'] },
+          { emoji: '🧑', name: 'person', category: 'people', keywords: ['person', 'human'] }
+        ]
+      },
+      {
         categoryId: 'animals',
         categoryName: '動物與自然',
         emojis: [
@@ -74,6 +83,15 @@ describe('EmojiPanel', () => {
           emojis: [
             { emoji: '😀', name: 'grinning face', category: 'smileys', keywords: ['happy', 'smile'] },
             { emoji: '😃', name: 'grinning face with big eyes', category: 'smileys', keywords: ['happy', 'joy'] }
+          ]
+        },
+        {
+          categoryId: 'people',
+          categoryName: '人物',
+          emojis: [
+            { emoji: '👋', name: 'waving hand', category: 'people', keywords: ['hello', 'goodbye'] },
+            { emoji: '👍', name: 'thumbs up', category: 'people', keywords: ['good', 'yes'] },
+            { emoji: '🧑', name: 'person', category: 'people', keywords: ['person', 'human'] }
           ]
         }
       ])
@@ -311,6 +329,157 @@ describe('EmojiPanel', () => {
         category: 'smileys',
         type: 'emoji'
       })
+    })
+  })
+
+  describe('分類排版功能', () => {
+    it('應該正確顯示分類標題樣式', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      // 檢查分類標題是否有正確的樣式
+      const categoryItems = wrapper.vm.flattenedEmojis.filter(item => item.isCategory)
+      expect(categoryItems.length).toBeGreaterThan(0)
+      
+      // 檢查分類標題格式
+      categoryItems.forEach(item => {
+        expect(item).toHaveProperty('isCategory', true)
+        expect(item).toHaveProperty('categoryName')
+        expect(item).toHaveProperty('categoryId')
+      })
+    })
+
+    it('應該在分類標題後面顯示該分類的 emoji', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      const flattenedItems = wrapper.vm.flattenedEmojis
+      let foundCategoryFollowedByEmojis = false
+
+      for (let i = 0; i < flattenedItems.length - 1; i++) {
+        const currentItem = flattenedItems[i]
+        const nextItem = flattenedItems[i + 1]
+        
+        if (currentItem.isCategory && !nextItem.isCategory) {
+          foundCategoryFollowedByEmojis = true
+          break
+        }
+      }
+
+      expect(foundCategoryFollowedByEmojis).toBe(true)
+    })
+  })
+
+  describe('emoji 過濾與處理', () => {
+    it('應該過濾掉複合 emoji 和膚色變體', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      const emojiItems = wrapper.vm.flattenedEmojis.filter(item => !item.isCategory)
+      
+      // 檢查 emoji 不應該包含複合字符或膚色修飾符
+      emojiItems.forEach(item => {
+        // 檢查不包含膚色修飾符
+        expect(item.displayEmoji).not.toMatch(/[\u{1F3FB}-\u{1F3FF}]/u)
+        // 檢查不包含 ZWJ (零寬連接符)
+        expect(item.displayEmoji).not.toMatch(/\u200D/)
+      })
+    })
+
+    it('應該顯示基礎 emoji 而非所有膚色變體', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      const emojiItems = wrapper.vm.flattenedEmojis.filter(item => !item.isCategory)
+      
+      // 檢查同一個基礎 emoji 不會重複出現多個膚色版本
+      const baseEmojis = new Set()
+      const duplicates = []
+      
+      emojiItems.forEach(item => {
+        const baseEmoji = item.emoji?.replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '')
+        if (baseEmojis.has(baseEmoji)) {
+          duplicates.push(baseEmoji)
+        }
+        baseEmojis.add(baseEmoji)
+      })
+
+      expect(duplicates.length).toBe(0)
+    })
+  })
+
+  describe('膚色套用功能', () => {
+    it('膚色變更時應該維持原有的捲軸位置', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      // 記錄初始資料長度
+      const initialLength = wrapper.vm.flattenedEmojis.length
+
+      // 變更膚色
+      await wrapper.setProps({ selectedSkinTone: '🏻' })
+
+      // 檢查資料長度應該保持相同（不應該重新載入或重置）
+      expect(wrapper.vm.flattenedEmojis.length).toBe(initialLength)
+    })
+
+    it('應該只對支援膚色的 emoji 套用膚色修飾符', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: '🏻'
+        }
+      })
+
+      await flushPromises()
+
+      // 檢查是否有正確套用膚色
+      const emojiItems = wrapper.vm.flattenedEmojis.filter(item => !item.isCategory)
+      
+      let foundSkinTonedEmoji = false
+      let foundNonSkinTonedEmoji = false
+
+      emojiItems.forEach(item => {
+        if (item.displayEmoji?.includes('🏻')) {
+          foundSkinTonedEmoji = true
+        } else if (item.displayEmoji && !item.displayEmoji.includes('🏻')) {
+          foundNonSkinTonedEmoji = true
+        }
+      })
+
+      // 應該同時有套用膚色的和未套用的 emoji
+      expect(foundSkinTonedEmoji).toBe(true)
+      expect(foundNonSkinTonedEmoji).toBe(true)
     })
   })
 })

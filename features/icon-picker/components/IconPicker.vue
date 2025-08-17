@@ -234,6 +234,7 @@ export default {
   emits: [
     'update:modelValue',
     'update:iconType',
+    'update:isOpen',
     'background-color-change',
     'file-selected',
     'close'
