@@ -12,7 +12,7 @@
 
 <script>
 import { computed } from 'vue'
-import IconPicker from '../../../resources/js/components/common/IconPicker.vue'
+import IconPicker from './IconPicker.vue'
 import IconPickerOri from '../../../resources/js/components/common/IconPickerOri.vue'
 
 export default {
