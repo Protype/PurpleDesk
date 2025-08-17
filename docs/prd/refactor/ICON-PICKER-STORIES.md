@@ -29,7 +29,7 @@
 | **EP-004: 面板元件拆分** |
 | ST-012 | EP-004 | 實作 TextIconPanel | P1 | 6小時 | ✅ 已完成 |
 | ST-012-I | EP-004 | TextIconPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
-| ST-013 | EP-004 | 實作 EmojiPanel | P1 | 8小時 | 待開始 |
+| ST-013 | EP-004 | 實作 EmojiPanel（含完整解決方案） | P1 | 8小時 | 進行中 |
 | ST-013-I | EP-004 | EmojiPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-014 | EP-004 | 實作 IconLibraryPanel | P1 | 10小時 | 待開始 |
 | ST-014-I | EP-004 | IconLibraryPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
@@ -563,31 +563,79 @@ class IconDataLoader {
 
 ---
 
-#### ST-013: 實作 EmojiPanel
+#### ST-013: 實作 EmojiPanel（含完整解決方案）
 
 **作為**：使用者  
-**我想要**：emoji 選擇功能使用新的架構  
-**所以**：載入速度更快且程式碼更清晰  
+**我想要**：emoji 選擇功能使用標準化架構且無權宜處理  
+**所以**：載入速度更快、程式碼更清晰且符合最佳實務  
+
+**背景說明**：
+此 Story 整合了 emoji 重構的所有必要改進，避免技術債累積，確保交付完整可用的功能。
 
 **驗收條件**：
 - [ ] 使用 VirtualScrollGrid 顯示 emoji
 - [ ] 使用 IconDataLoader 載入資料
-- [ ] 保持膚色選擇功能
-- [ ] 保持分類顯示
-- [ ] 保持搜尋過濾功能
+- [ ] **後端過濾實作**（解決權宜處理）
+  - [ ] 建立 EmojiFilterService 進行相容性和膚色變體過濾
+  - [ ] API 只回傳基礎 emoji，不含膚色變體
+  - [ ] 根據客戶端平台進行相容性過濾
+- [ ] **前端膚色處理**（標準化實作）
+  - [ ] 使用 emojiSkinTone.js 的 Unicode 標準判斷膚色支援
+  - [ ] 移除所有硬編碼的膚色支援列表
+  - [ ] 動態生成膚色選項和變體
+- [ ] **功能完整性**
+  - [ ] 膚色切換時保持滾動位置
+  - [ ] 分類顯示樣式一致性
+  - [ ] 保持搜尋過濾功能
 
 **技術要求**：
-- 整合 VirtualScrollGrid
-- 整合 IconDataLoader.getEmojiData()
-- 保持原有的 emoji 渲染邏輯
-- 支援搜尋過濾
+**後端改進**：
+```php
+// 新增 EmojiFilterService
+class EmojiFilterService {
+    public function filterForPlatform($emojis, $userAgent)
+    public function removeSkintoneVariants($emojis)
+    public function ensureBaseEmojisOnly($emojis)
+}
+```
+
+**前端改進**：
+```javascript
+// 移除硬編碼，使用 Unicode 標準
+import { supportsSkinTone, applySkinTone, removeSkinTone } from '@/utils/emojiSkinTone.js'
+
+// 動態判斷膚色支援
+const canApplySkinTone = (emoji) => supportsSkinTone(emoji)
+```
+
+**責任劃分**：
+- **後端職責**：相容性過濾、提供基礎 emoji
+- **前端職責**：膚色變體生成、UI 互動邏輯
 
 **測試要求**：
-- 測試 emoji 載入
-- 測試虛擬滾動
-- 測試膚色選擇
-- 測試搜尋功能
-- 整合測試
+**後端測試**：
+- 測試 EmojiFilterService 單元測試
+- 測試 API 回應格式和內容正確性
+- 測試平台相容性過濾邏輯
+
+**前端測試**：
+- 測試 Unicode 膚色支援判斷
+- 測試膚色變體動態生成
+- 測試滾動位置保持
+- 測試虛擬滾動效能
+- 更新 mock 資料符合實際 API 格式
+
+**整合測試**：
+- 測試完整的 emoji 選擇流程
+- 測試與其他 IconPicker 元件整合
+- 效能基準測試（與原版對比）
+
+**DoD 補充**：
+- 無任何硬編碼的 emoji 列表或分類對應
+- 所有 emoji 判斷基於 Unicode 標準
+- API 回應結構清晰且符合前端期望
+- 測試覆蓋率 > 90%
+- 滾動和互動體驗與原版一致
 
 ---
 
@@ -1060,6 +1108,38 @@ tests/e2e/text-icon-panel.spec.js
 - ✅ 保留重要靜態資源的 git 追蹤
 
 **狀態**：✅ 已完成
+
+---
+
+## 📝 重要架構決策記錄 (ADR)
+
+### ADR-001: Emoji Panel 完整解決方案整合 (2025-08-17)
+
+**背景**：
+在 ST-013 (實作 EmojiPanel) 開發過程中，發現了多個權宜處理問題：
+- 硬編碼的分類名稱對應
+- 硬編碼的膚色支援列表
+- 測試資料與實際 API 格式不符
+- 前後端責任劃分不清
+
+**決策**：
+將所有 emoji 相關改進整合到 ST-013 中，而非拆分為獨立的 PRD/Epic。
+
+**理由**：
+1. **TDD 原則**：這些問題是 ST-013 完成的必要條件，不是額外功能
+2. **敏捷原則**：一個 Story 應該交付完整可用的功能
+3. **技術債避免**：避免累積權宜處理，確保架構品質
+4. **責任清晰**：明確定義前後端職責劃分
+
+**影響**：
+- ST-013 工時維持 8 小時（這些是必要的完成工作）
+- 交付品質更高，無技術債
+- 符合「完成的定義」(Definition of Done)
+
+**後果**：
+- ✅ 交付真正可用且高品質的 EmojiPanel
+- ✅ 建立清晰的前後端架構模式
+- ✅ 為後續面板開發提供標準範本
 
 ---
 
