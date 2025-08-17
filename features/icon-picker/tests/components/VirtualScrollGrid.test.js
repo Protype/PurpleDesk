@@ -193,6 +193,217 @@ describe('VirtualScrollGrid', () => {
     })
   })
 
+  describe('Slots 機制測試', () => {
+    it('應該正確渲染 #item slot', () => {
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: mockItems.slice(0, 10),
+          itemsPerRow: 5,
+          rowHeight: 36,
+          containerHeight: 176
+        },
+        slots: {
+          item: '<div class="custom-item">{{ item.name }}</div>'
+        }
+      })
+
+      // 檢查是否有自訂的 slot 內容
+      const customItems = wrapper.findAll('.custom-item')
+      expect(customItems.length).toBeGreaterThan(0)
+    })
+
+    it('應該傳遞正確的 slot props', () => {
+      const TestComponent = {
+        template: `
+          <VirtualScrollGrid
+            :items="items"
+            :items-per-row="5"
+            :row-height="36"
+            :container-height="176"
+          >
+            <template #item="{ item, index, row, col }">
+              <div 
+                class="test-item" 
+                :data-item="item.name"
+                :data-index="index"
+                :data-row="row"
+                :data-col="col"
+              >
+                {{ item.name }}
+              </div>
+            </template>
+          </VirtualScrollGrid>
+        `,
+        components: { VirtualScrollGrid },
+        data() {
+          return {
+            items: mockItems.slice(0, 10)
+          }
+        }
+      }
+
+      wrapper = mount(TestComponent)
+      
+      const testItems = wrapper.findAll('.test-item')
+      expect(testItems.length).toBeGreaterThan(0)
+      
+      // 檢查第一個項目的 props
+      const firstItem = testItems[0]
+      expect(firstItem.attributes('data-item')).toBe('Item 0')
+      expect(firstItem.attributes('data-index')).toBe('0')
+      expect(firstItem.attributes('data-row')).toBe('0')
+      expect(firstItem.attributes('data-col')).toBe('0')
+    })
+
+    it('應該支援分類標題渲染', () => {
+      const itemsWithHeaders = [
+        { type: 'header', title: '分類 A', id: 'header-a' },
+        { type: 'item', name: 'Item 1', id: 1 },
+        { type: 'item', name: 'Item 2', id: 2 },
+        { type: 'header', title: '分類 B', id: 'header-b' },
+        { type: 'item', name: 'Item 3', id: 3 }
+      ]
+
+      const TestComponent = {
+        template: `
+          <VirtualScrollGrid
+            :items="items"
+            :items-per-row="3"
+            :row-height="36"
+            :container-height="176"
+          >
+            <template #item="{ item, index, row, col }">
+              <div v-if="item.type === 'header'" class="category-header">
+                {{ item.title }}
+              </div>
+              <div v-else class="category-item">
+                {{ item.name }}
+              </div>
+            </template>
+          </VirtualScrollGrid>
+        `,
+        components: { VirtualScrollGrid },
+        data() {
+          return {
+            items: itemsWithHeaders
+          }
+        }
+      }
+
+      wrapper = mount(TestComponent)
+      
+      const headers = wrapper.findAll('.category-header')
+      const items = wrapper.findAll('.category-item')
+      
+      expect(headers.length).toBeGreaterThan(0)
+      expect(items.length).toBeGreaterThan(0)
+      expect(headers[0].text()).toBe('分類 A')
+    })
+
+    it('應該支援空白佔位符', () => {
+      const sparseItems = [
+        { type: 'item', name: 'Item 1', id: 1 },
+        { type: 'placeholder', id: 'placeholder-1' },
+        { type: 'placeholder', id: 'placeholder-2' },
+        { type: 'item', name: 'Item 2', id: 2 }
+      ]
+
+      const TestComponent = {
+        template: `
+          <VirtualScrollGrid
+            :items="items"
+            :items-per-row="4"
+            :row-height="36"
+            :container-height="176"
+          >
+            <template #item="{ item, index, row, col }">
+              <div v-if="item.type === 'placeholder'" class="placeholder">
+                <!-- 空白佔位 -->
+              </div>
+              <div v-else class="real-item">
+                {{ item.name }}
+              </div>
+            </template>
+          </VirtualScrollGrid>
+        `,
+        components: { VirtualScrollGrid },
+        data() {
+          return {
+            items: sparseItems
+          }
+        }
+      }
+
+      wrapper = mount(TestComponent)
+      
+      const placeholders = wrapper.findAll('.placeholder')
+      const realItems = wrapper.findAll('.real-item')
+      
+      expect(placeholders.length).toBe(2)
+      expect(realItems.length).toBe(2)
+    })
+
+    it('應該保持原有的預設渲染邏輯', () => {
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: [{ name: 'Test Item' }],
+          itemsPerRow: 1,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+        // 不提供 slots，使用預設渲染
+      })
+
+      // 應該顯示預設的項目名稱
+      expect(wrapper.text()).toContain('Test Item')
+    })
+
+    it('應該正確處理網格對齊', () => {
+      const TestComponent = {
+        template: `
+          <VirtualScrollGrid
+            :items="items"
+            :items-per-row="3"
+            :row-height="36"
+            :container-height="176"
+          >
+            <template #item="{ item, index, row, col }">
+              <div 
+                class="grid-item" 
+                :data-row="row"
+                :data-col="col"
+              >
+                {{ item.name }}
+              </div>
+            </template>
+          </VirtualScrollGrid>
+        `,
+        components: { VirtualScrollGrid },
+        data() {
+          return {
+            items: Array.from({ length: 9 }, (_, i) => ({
+              id: i,
+              name: `Item ${i}`
+            }))
+          }
+        }
+      }
+
+      wrapper = mount(TestComponent)
+      
+      const gridItems = wrapper.findAll('.grid-item')
+      
+      // 檢查網格位置
+      const item0 = gridItems.find(item => item.text() === 'Item 0')
+      const item3 = gridItems.find(item => item.text() === 'Item 3')
+      
+      expect(item0.attributes('data-row')).toBe('0')
+      expect(item0.attributes('data-col')).toBe('0')
+      expect(item3.attributes('data-row')).toBe('1')
+      expect(item3.attributes('data-col')).toBe('0')
+    })
+  })
+
   describe('響應式更新', () => {
     it('當 items 改變時應該重新計算', async () => {
       wrapper = mount(VirtualScrollGrid, {
