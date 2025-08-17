@@ -350,19 +350,19 @@ export default {
 
     // 生命週期
     onMounted(() => {
-      if (typeof document !== 'undefined') {
+      if (typeof document !== 'undefined' && document.addEventListener) {
         document.addEventListener('keydown', handleKeyDown)
       }
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && window.addEventListener) {
         window.addEventListener('resize', handleResize)
       }
     })
 
     onUnmounted(() => {
-      if (typeof document !== 'undefined') {
+      if (typeof document !== 'undefined' && document.removeEventListener) {
         document.removeEventListener('keydown', handleKeyDown)
       }
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && window.removeEventListener) {
         window.removeEventListener('resize', handleResize)
       }
     })
