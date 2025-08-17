@@ -628,6 +628,150 @@ Coverage Summary:
 
 ---
 
+## 🌐 測試頁面驗證
+
+### ST-022: Icon Picker 測試頁面驗證
+
+**測試目標**：確保測試頁面能有效支援各 Phase/Story 的功能驗證
+
+#### 測試環境設置
+```javascript
+// tests/e2e/test-page.e2e.test.js
+describe('Icon Picker Test Page', () => {
+  beforeEach(async () => {
+    await page.goto('/test/icon-picker')
+  })
+  
+  it('should load test page without errors', async () => {
+    // 驗證頁面載入
+    await expect(page).toHaveTitle(/Icon Picker Test/)
+    
+    // 檢查控制台無錯誤
+    const logs = await page.evaluate(() => console.logs)
+    expect(logs.filter(log => log.level === 'error')).toHaveLength(0)
+  })
+})
+```
+
+#### Phase 進度驗證檢查表
+```javascript
+// 每個 Phase 完成後，使用測試頁面驗證的檢查項目
+
+// Phase 0 驗證
+describe('Phase 0 Verification', () => {
+  it('should show version switching works', async () => {
+    // 測試版本切換功能
+    await page.click('[data-testid="switch-to-new"]')
+    await expect(page.locator('[data-testid="current-version"]')).toContainText('IconPicker')
+    
+    await page.click('[data-testid="switch-to-original"]')
+    await expect(page.locator('[data-testid="current-version"]')).toContainText('IconPickerOri')
+  })
+})
+
+// Phase 1 驗證
+describe('Phase 1 Verification', () => {
+  it('should test IconDataLoader integration', async () => {
+    // 測試資料載入功能
+    await page.click('[data-testid="test-data-loading"]')
+    await expect(page.locator('[data-testid="emoji-data-status"]')).toContainText('✅ Loaded')
+    await expect(page.locator('[data-testid="icon-library-status"]')).toContainText('✅ Loaded')
+  })
+})
+
+// Phase 2 驗證
+describe('Phase 2 Verification', () => {
+  it('should test VirtualScrollGrid performance', async () => {
+    // 測試虛擬滾動效能
+    await page.click('[data-testid="open-icon-picker"]')
+    await page.click('[data-testid="emoji-tab"]')
+    
+    // 測試滾動流暢度
+    const scrollContainer = page.locator('[data-testid="virtual-scroll-container"]')
+    await scrollContainer.hover()
+    
+    // 模擬快速滾動
+    for (let i = 0; i < 10; i++) {
+      await page.mouse.wheel(0, 100)
+      await page.waitForTimeout(50)
+    }
+    
+    // 驗證沒有卡頓
+    const fps = await page.evaluate(() => window.scrollPerformance?.averageFPS)
+    expect(fps).toBeGreaterThan(50)
+  })
+})
+```
+
+#### 測試頁面功能驗證
+```javascript
+describe('Test Page Functionality', () => {
+  it('should display current phase progress', async () => {
+    // 驗證 Phase 進度顯示
+    const progressPanel = page.locator('[data-testid="phase-progress"]')
+    await expect(progressPanel).toBeVisible()
+    
+    // 檢查進度資訊
+    await expect(progressPanel.locator('[data-testid="current-phase"]')).toContainText('Phase')
+    await expect(progressPanel.locator('[data-testid="completed-stories"]')).toBeVisible()
+    await expect(progressPanel.locator('[data-testid="pending-stories"]')).toBeVisible()
+  })
+  
+  it('should preview selected icon correctly', async () => {
+    // 測試圖標預覽功能
+    await page.click('[data-testid="open-icon-picker"]')
+    await page.click('[data-testid="emoji-tab"]')
+    await page.click('[data-testid="emoji-item"]:first-child')
+    
+    // 驗證預覽區域更新
+    const preview = page.locator('[data-testid="icon-preview"]')
+    await expect(preview).not.toBeEmpty()
+    
+    // 驗證圖標類型顯示
+    const iconType = page.locator('[data-testid="icon-type"]')
+    await expect(iconType).toContainText('emoji')
+  })
+  
+  it('should support all icon picker functions', async () => {
+    // 測試所有圖標選擇功能
+    await page.click('[data-testid="open-icon-picker"]')
+    
+    // 測試各個頁籤
+    const tabs = ['text', 'emoji', 'icons', 'upload', 'color']
+    for (const tab of tabs) {
+      await page.click(`[data-testid="${tab}-tab"]`)
+      await expect(page.locator(`[data-testid="${tab}-panel"]`)).toBeVisible()
+    }
+  })
+})
+```
+
+#### 版本對比測試
+```javascript
+describe('Version Comparison Tests', () => {
+  it('should maintain identical behavior between versions', async () => {
+    // 測試新舊版本行為一致性
+    const testScenarios = [
+      { action: 'select-emoji', expected: 'emoji-selected' },
+      { action: 'search-icon', expected: 'search-results' },
+      { action: 'upload-image', expected: 'image-uploaded' },
+      { action: 'pick-color', expected: 'color-selected' }
+    ]
+    
+    for (const version of ['original', 'new']) {
+      await page.click(`[data-testid="switch-to-${version}"]`)
+      
+      for (const scenario of testScenarios) {
+        await page.click(`[data-testid="${scenario.action}"]`)
+        await expect(page.locator(`[data-testid="${scenario.expected}"]`)).toBeVisible()
+      }
+    }
+  })
+})
+```
+
+---
+
 ## ⚠️ 測試注意事項
 
 ### 1. 測試隔離

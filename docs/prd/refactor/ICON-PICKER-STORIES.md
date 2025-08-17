@@ -14,6 +14,7 @@
 | ST-002 | EP-001 | 建立 features 目錄結構 | P0 | 1小時 | ✅ 已完成 |
 | ST-003 | EP-001 | 配置測試框架 | P0 | 4小時 | ✅ 已完成 |
 | ST-004 | EP-001 | 建立版本切換機制 | P1 | 3小時 | ✅ 已完成 |
+| ST-022 | EP-001 | Icon Picker 測試頁面 | P0 | 3小時 | 待開始 |
 | **EP-002: 服務層重構** |
 | ST-005 | EP-002 | 實作 IconDataLoader 基礎架構 | P0 | 4小時 | ✅ 已完成 |
 | ST-006 | EP-002 | 實作 getEmojiData API 載入 | P0 | 6小時 | ✅ 已完成 |
@@ -147,6 +148,71 @@ features/icon-picker/
 - 使用環境變數或開發者工具
 - 不影響生產環境
 - 切換邏輯簡單可靠
+
+---
+
+#### ST-022: Icon Picker 測試頁面
+
+**作為**：開發者和產品經理  
+**我想要**：一個獨立的測試頁面來驗證 Icon Picker 功能  
+**所以**：可以根據 phase/story 進度實時測試和驗證開發成果  
+
+**驗收條件**：
+- [ ] 建立測試路由 `/test/icon-picker`
+- [ ] 頁面包含預覽區域顯示選中的圖標
+- [ ] 頁面包含按鈕觸發 Icon Picker 彈窗
+- [ ] 支援版本切換（整合 IconPickerProxy）
+- [ ] 顯示當前 Phase/Story 進度資訊
+- [ ] 整合開發者工具控制項
+
+**技術要求**：
+```php
+// 路由
+Route::get('/test/icon-picker', function () {
+    return view('test.icon-picker');
+});
+```
+
+```vue
+// 測試頁面主要元件
+<template>
+  <div class="test-container">
+    <!-- Phase 進度面板 -->
+    <PhaseProgressPanel />
+    
+    <!-- 圖標預覽區域 -->
+    <IconPreviewArea :selected-icon="selectedIcon" />
+    
+    <!-- 觸發按鈕 -->
+    <TriggerButton @click="openIconPicker" />
+    
+    <!-- Icon Picker -->
+    <IconPickerProxy v-model="selectedIcon" />
+    
+    <!-- 開發者工具 -->
+    <IconPickerDevTool />
+  </div>
+</template>
+```
+
+**整合要求**：
+- 使用現有的 IconPickerProxy 元件
+- 整合現有的 IconPickerDevTool 元件
+- 遵循 Laravel Blade + Vue 3 架構模式
+- 不影響主應用路由
+
+**測試要求**：
+- 測試 Icon Picker 所有功能正常
+- 測試版本切換機制
+- 測試預覽顯示正確
+- 驗證 Phase 進度資訊準確
+
+**DoD (Definition of Done)**：
+- 測試路由可正常訪問
+- Icon Picker 功能完整可用
+- 版本切換正常運作
+- 無 console 錯誤
+- Phase 進度顯示準確
 
 ---
 
@@ -665,7 +731,7 @@ export function useIconPickerState() {
 
 ### Phase 0 (第1週)
 ```
-ST-001 → ST-002 → ST-003 → ST-004
+ST-001 → ST-002 → ST-003 → ST-004 → ST-022
 ```
 
 ### Phase 1 (第2週)
@@ -696,12 +762,12 @@ ST-019 → ST-020 → ST-021
 
 | Phase | 總工時 | 說明 |
 |-------|--------|------|
-| Phase 0 | 10小時 | 基礎建設 |
+| Phase 0 | 13小時 | 基礎建設 + 測試頁面 |
 | Phase 1 | 20小時 | 服務層重構 |
 | Phase 2 | 52小時 | 共用元件 + 面板拆分 |
 | Phase 3 | 16小時 | 邏輯整合 |
 | Phase 4 | 20小時 | 測試優化 |
-| **總計** | **118小時** | **約 3 個月（兼職）** |
+| **總計** | **121小時** | **約 3 個月（兼職）** |
 
 ## 🎯 下一步行動
 
