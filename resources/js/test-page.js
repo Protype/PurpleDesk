@@ -8,6 +8,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const app = createApp();
 
 // 註冊測試頁面元件
-app.component('IconPickerTestPage', IconPickerTestPage);
+app.component('icon-picker-test-page', IconPickerTestPage);
 
 app.mount('#app');
