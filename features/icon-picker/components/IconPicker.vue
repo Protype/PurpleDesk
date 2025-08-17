@@ -41,7 +41,7 @@
         :style="panelPosition"
       >
         <!-- IconPicker 面板 -->
-        <div class="absolute top-0 left-0 bg-white border border-gray-200 rounded-lg shadow-xl px-4 py-2 w-96">
+        <div class="absolute top-0 left-0 bg-white border border-gray-200 rounded-lg shadow-xl px-4 py-2 w-96 max-h-[80vh] overflow-hidden flex flex-col">
           <!-- 頂部標籤切換 -->
           <div class="flex border-b border-gray-200 mb-4">
             <button
@@ -103,7 +103,7 @@
           </div>
 
           <!-- 內容區域 -->
-          <div>
+          <div class="flex-1 overflow-y-auto min-h-0">
             <!-- 文字圖標標籤頁 - 使用 TextIconPanel -->
             <div v-if="activeTab === 'initials'" class="space-y-4">
               <TextIconPanel
@@ -258,20 +258,36 @@ export default {
 
       let top = buttonRect.bottom + 8
       let left = buttonRect.left
+      
+      // 面板預設高度（如果無法取得實際高度）
+      const panelHeight = panelRect.height || 400
+
+      // 檢查面板是否會超出下方邊界
+      const wouldOverflowBottom = top + panelHeight > viewportHeight - 16
+      
+      // 檢查上方是否有足夠空間
+      const topSpace = buttonRect.top - 16
+      const hasEnoughTopSpace = topSpace >= panelHeight + 8
+
+      // 如果下方空間不足且上方有足夠空間，則顯示在上方
+      if (wouldOverflowBottom && hasEnoughTopSpace) {
+        top = buttonRect.top - panelHeight - 8
+      } else if (wouldOverflowBottom) {
+        // 如果上下都沒有足夠空間，則置中顯示並確保不超出邊界
+        const centerY = (viewportHeight - panelHeight) / 2
+        top = Math.max(16, Math.min(centerY, viewportHeight - panelHeight - 16))
+      }
 
       // 如果面板超出右側邊界，向左調整
       if (left + panelRect.width > viewportWidth) {
         left = viewportWidth - panelRect.width - 16
       }
 
-      // 如果面板超出下方邊界，顯示在按鈕上方
-      if (top + panelRect.height > viewportHeight) {
-        top = buttonRect.top - panelRect.height - 8
-      }
-
-      // 確保不超出邊界
+      // 確保不超出左側邊界
       left = Math.max(16, left)
-      top = Math.max(16, top)
+
+      // 最終確保 top 不超出邊界
+      top = Math.max(16, Math.min(top, viewportHeight - panelHeight - 16))
 
       panelPosition.top = `${top}px`
       panelPosition.left = `${left}px`
@@ -296,7 +312,10 @@ export default {
       isOpen.value = true
       emit('update:isOpen', true)
       nextTick(() => {
-        calculatePanelPosition()
+        // 延遲一小段時間確保面板完全渲染
+        setTimeout(() => {
+          calculatePanelPosition()
+        }, 10)
       })
     }
 
