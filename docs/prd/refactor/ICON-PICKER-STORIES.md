@@ -22,7 +22,7 @@
 | **EP-003: 共用元件開發** |
 | ST-009 | EP-003 | 實作 VirtualScrollGrid 核心邏輯 | P1 | 8小時 | ✅ 已完成 |
 | ST-010 | EP-003 | 實作 VirtualScrollGrid slots 機制 | P1 | 4小時 | ✅ 已完成 |
-| ST-011 | EP-003 | VirtualScrollGrid 效能優化 | P1 | 4小時 | 待開始 |
+| ST-011 | EP-003 | VirtualScrollGrid 效能優化 | P1 | 4小時 | ✅ 已完成 |
 | **EP-004: 面板元件拆分** |
 | ST-012 | EP-004 | 實作 TextIconPanel | P1 | 6小時 | 待開始 |
 | ST-013 | EP-004 | 實作 EmojiPanel | P1 | 8小時 | 待開始 |

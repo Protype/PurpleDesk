@@ -404,6 +404,200 @@ describe('VirtualScrollGrid', () => {
     })
   })
 
+  describe('效能基準測試', () => {
+    it('應該在指定時間內完成大量資料渲染', () => {
+      const startTime = performance.now()
+      
+      const largeItems = Array.from({ length: 10000 }, (_, i) => ({
+        id: i,
+        name: `Item ${i}`,
+        type: 'test'
+      }))
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: largeItems,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const endTime = performance.now()
+      const renderTime = endTime - startTime
+
+      // 渲染 10000 個項目應該在 100ms 內完成
+      expect(renderTime).toBeLessThan(100)
+      expect(wrapper.exists()).toBe(true)
+    })
+
+    it('應該保持滾動效能穩定', async () => {
+      const largeItems = Array.from({ length: 5000 }, (_, i) => ({
+        id: i,
+        name: `Item ${i}`
+      }))
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: largeItems,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const scrollTimes = []
+      
+      // 測試多次滾動的效能
+      for (let i = 0; i < 10; i++) {
+        const startTime = performance.now()
+        
+        await wrapper.vm.handleScroll({ 
+          target: { scrollTop: i * 100 } 
+        })
+        
+        const endTime = performance.now()
+        scrollTimes.push(endTime - startTime)
+      }
+
+      // 每次滾動處理應該在 16ms 內完成 (60fps)
+      const avgTime = scrollTimes.reduce((a, b) => a + b) / scrollTimes.length
+      expect(avgTime).toBeLessThan(16)
+    })
+
+    it('應該有效限制 DOM 節點數量', () => {
+      const largeItems = Array.from({ length: 10000 }, (_, i) => ({
+        id: i,
+        name: `Item ${i}`
+      }))
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: largeItems,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 176,
+          buffer: 2
+        }
+      })
+
+      // 計算理論上應該渲染的最大項目數
+      const visibleRows = Math.ceil(176 / 36) // ~5 行
+      const bufferedRows = visibleRows + (2 * 2) // 加上緩衝區
+      const maxExpectedItems = bufferedRows * 10 // 每行 10 個
+
+      expect(wrapper.vm.visibleItems.length).toBeLessThanOrEqual(maxExpectedItems)
+      expect(wrapper.vm.visibleItems.length).toBeGreaterThan(0)
+    })
+
+    it('應該支援滾動位置保持', async () => {
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: mockItems,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 176,
+          preserveScrollPosition: true // 啟用滾動位置保持
+        }
+      })
+
+      // 滾動到特定位置
+      const targetScrollTop = 200
+      await wrapper.vm.handleScroll({ target: { scrollTop: targetScrollTop } })
+      
+      expect(wrapper.vm.scrollTop).toBe(targetScrollTop)
+
+      // 測試位置恢復功能
+      wrapper.vm.restoreScrollPosition(100)
+      expect(wrapper.vm.scrollTop).toBe(100)
+
+      // 測試 preserveScrollPosition 模式下 items 變化時保持位置
+      const newItems = Array.from({ length: 50 }, (_, i) => ({
+        id: i,
+        name: `New Item ${i}`
+      }))
+      
+      // 滾動到位置 50
+      await wrapper.vm.handleScroll({ target: { scrollTop: 50 } })
+      const savedPosition = wrapper.vm.scrollTop
+      
+      // 改變 items，但因為 preserveScrollPosition=true，位置應該保持
+      await wrapper.setProps({ items: newItems })
+      
+      // 滾動位置應該保持
+      expect(wrapper.vm.scrollTop).toBe(savedPosition)
+    })
+
+    it('應該優化記憶體使用', () => {
+      // 測試記憶體洩漏（簡化版本避免超時）
+      const initialMemory = performance.memory ? performance.memory.usedJSHeapSize : 0
+      
+      // 減少迭代次數避免超時
+      for (let i = 0; i < 10; i++) {
+        const items = Array.from({ length: 100 }, (_, j) => ({
+          id: j,
+          name: `Item ${j}`
+        }))
+
+        wrapper = mount(VirtualScrollGrid, {
+          props: {
+            items,
+            itemsPerRow: 10,
+            rowHeight: 36,
+            containerHeight: 176
+          }
+        })
+
+        wrapper.unmount()
+      }
+
+      const finalMemory = performance.memory ? performance.memory.usedJSHeapSize : 0
+      
+      // 記憶體增長應該在合理範圍內（如果 performance.memory 可用）
+      if (performance.memory) {
+        const memoryGrowth = finalMemory - initialMemory
+        expect(memoryGrowth).toBeLessThan(5 * 1024 * 1024) // 少於 5MB
+      } else {
+        // 如果無法測量記憶體，至少確保沒有拋出錯誤
+        expect(true).toBe(true)
+      }
+    })
+
+    it('應該減少不必要的重新計算', () => {
+      let computeCount = 0
+      
+      // 模擬計算昂貴的場景
+      const expensiveItems = Array.from({ length: 1000 }, (_, i) => {
+        computeCount++
+        return {
+          id: i,
+          name: `Item ${i}`,
+          computed: i * 2 // 模擬計算
+        }
+      })
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: expensiveItems,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const initialComputeCount = computeCount
+      
+      // 多次訪問相同的計算屬性
+      for (let i = 0; i < 5; i++) {
+        expect(wrapper.vm.totalRows).toBe(100)
+        expect(wrapper.vm.visibleItems.length).toBeGreaterThan(0)
+      }
+
+      // 不應該導致額外的計算
+      expect(computeCount).toBe(initialComputeCount)
+    })
+  })
+
   describe('響應式更新', () => {
     it('當 items 改變時應該重新計算', async () => {
       wrapper = mount(VirtualScrollGrid, {

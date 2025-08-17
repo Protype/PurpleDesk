@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick, shallowRef } from 'vue'
 
 export default {
   name: 'VirtualScrollGrid',
@@ -92,6 +92,11 @@ export default {
     buffer: {
       type: Number,
       default: 2
+    },
+    // 保持滾動位置（預設 false，僅在項目變化時重置）
+    preserveScrollPosition: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -99,10 +104,15 @@ export default {
     const containerRef = ref(null)
     const scrollTop = ref(0)
     const rafId = ref(null)
+    const lastScrollTime = ref(0)
+    const isScrolling = ref(false)
+    
+    // 使用 shallowRef 優化大型陣列性能
+    const itemsRef = shallowRef(props.items)
 
-    // 計算屬性
+    // 計算屬性（增加記憶化優化）
     const totalRows = computed(() => {
-      return Math.ceil(props.items.length / props.itemsPerRow)
+      return Math.ceil(itemsRef.value.length / props.itemsPerRow)
     })
 
     const totalHeight = computed(() => {
@@ -145,6 +155,7 @@ export default {
       return indexes
     })
 
+    // 優化 visibleItems 計算，減少不必要的重新計算
     const visibleItems = computed(() => {
       // 如果容器高度為 0，不顯示任何項目
       if (props.containerHeight <= 0) {
@@ -154,13 +165,14 @@ export default {
       const items = []
       const start = Math.max(0, startRow.value - props.buffer)
       const end = endRow.value
+      const itemsArray = itemsRef.value
 
       for (let rowIndex = start; rowIndex < end; rowIndex++) {
         for (let colIndex = 0; colIndex < props.itemsPerRow; colIndex++) {
           const itemIndex = rowIndex * props.itemsPerRow + colIndex
-          if (itemIndex < props.items.length) {
+          if (itemIndex < itemsArray.length) {
             items.push({
-              item: props.items[itemIndex],
+              item: itemsArray[itemIndex],
               index: itemIndex,
               row: rowIndex,
               col: colIndex
@@ -175,27 +187,57 @@ export default {
     // 方法
     const getItemAt = (rowIndex, colIndex) => {
       const itemIndex = rowIndex * props.itemsPerRow + colIndex
-      return props.items[itemIndex] || null
+      return itemsRef.value[itemIndex] || null
     }
 
     const getItemIndex = (rowIndex, colIndex) => {
       return rowIndex * props.itemsPerRow + colIndex
     }
 
+    // 防抖和節流優化的滾動處理
     const handleScroll = (event) => {
+      const now = performance.now()
+      const newScrollTop = event.target.scrollTop
+      
+      // 防抖：如果滾動變化很小，忽略
+      if (Math.abs(newScrollTop - scrollTop.value) < 1) {
+        return
+      }
+
+      // 節流：限制更新頻率
+      if (now - lastScrollTime.value < 8) { // ~120fps 限制
+        return
+      }
+
       // 取消之前的 RAF
       if (rafId.value) {
         cancelAnimationFrame(rafId.value)
       }
 
+      isScrolling.value = true
+      lastScrollTime.value = now
+
       // 使用 RAF 來優化滾動性能
       rafId.value = requestAnimationFrame(() => {
-        scrollTop.value = event.target.scrollTop
+        scrollTop.value = newScrollTop
+        
+        // 滾動結束後清理
+        setTimeout(() => {
+          isScrolling.value = false
+        }, 150)
       })
 
       // 同步更新 scrollTop 以便測試
-      if (typeof event.target.scrollTop === 'number') {
-        scrollTop.value = event.target.scrollTop
+      if (typeof newScrollTop === 'number') {
+        scrollTop.value = newScrollTop
+      }
+    }
+
+    // 滾動位置恢復
+    const restoreScrollPosition = (position) => {
+      if (containerRef.value && typeof position === 'number') {
+        containerRef.value.scrollTop = position
+        scrollTop.value = position
       }
     }
 
@@ -215,8 +257,22 @@ export default {
       }
     })
 
-    // 監聽 props 變化，重置滾動位置
-    watch([() => props.items, () => props.itemsPerRow], () => {
+    // 監聽 props 變化，優化滾動位置處理
+    watch(() => props.items, (newItems) => {
+      // 更新 shallowRef
+      itemsRef.value = newItems
+      
+      // 只有在非保持滾動位置模式下才重置
+      if (!props.preserveScrollPosition) {
+        scrollTop.value = 0
+        if (containerRef.value) {
+          containerRef.value.scrollTop = 0
+        }
+      }
+    }, { flush: 'sync' })
+
+    watch(() => props.itemsPerRow, () => {
+      // itemsPerRow 變化時總是重置滾動位置
       scrollTop.value = 0
       if (containerRef.value) {
         containerRef.value.scrollTop = 0
@@ -239,11 +295,15 @@ export default {
       visibleRowIndexes,
       visibleItems,
       scrollTop,
+      
+      // 新增的響應式數據
+      isScrolling,
 
       // 方法
       getItemAt,
       getItemIndex,
-      handleScroll
+      handleScroll,
+      restoreScrollPosition
     }
   }
 }
