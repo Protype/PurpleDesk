@@ -7,7 +7,7 @@ import { IconDataLoader } from '../../services/IconDataLoader.js'
 vi.mock('../../components/shared/VirtualScrollGrid.vue', () => ({
   default: {
     name: 'VirtualScrollGrid',
-    props: ['items', 'itemsPerRow', 'rowHeight', 'containerHeight', 'buffer'],
+    props: ['items', 'itemsPerRow', 'rowHeight', 'containerHeight', 'buffer', 'preserveScrollPosition'],
     template: `
       <div class="virtual-scroll-grid-mock">
         <div v-for="(item, index) in items" :key="index" class="mock-item">
@@ -480,6 +480,22 @@ describe('EmojiPanel', () => {
       // 應該同時有套用膚色的和未套用的 emoji
       expect(foundSkinTonedEmoji).toBe(true)
       expect(foundNonSkinTonedEmoji).toBe(true)
+    })
+
+    it('VirtualScrollGrid 應該啟用 preserveScrollPosition', async () => {
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      // 檢查 VirtualScrollGrid 元件的 preserveScrollPosition 屬性
+      const virtualScrollGrid = wrapper.findComponent({ name: 'VirtualScrollGrid' })
+      expect(virtualScrollGrid.exists()).toBe(true)
+      expect(virtualScrollGrid.props('preserveScrollPosition')).toBe(true)
     })
   })
 })

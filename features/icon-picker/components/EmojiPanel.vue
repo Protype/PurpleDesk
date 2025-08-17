@@ -20,6 +20,7 @@
         :row-height="36"
         :container-height="176"
         :buffer="2"
+        :preserve-scroll-position="true"
         ref="virtualGrid"
       >
         <template #item="{ item, index }">
