@@ -27,11 +27,16 @@
 | ST-010 | EP-003 | 實作 VirtualScrollGrid slots 機制 | P1 | 4小時 | ✅ 已完成 |
 | ST-011 | EP-003 | VirtualScrollGrid 效能優化 | P1 | 4小時 | ✅ 已完成 |
 | **EP-004: 面板元件拆分** |
-| ST-012 | EP-004 | 實作 TextIconPanel | P1 | 6小時 | 待開始 |
+| ST-012 | EP-004 | 實作 TextIconPanel | P1 | 6小時 | ✅ 已完成 |
+| ST-012-I | EP-004 | TextIconPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-013 | EP-004 | 實作 EmojiPanel | P1 | 8小時 | 待開始 |
+| ST-013-I | EP-004 | EmojiPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-014 | EP-004 | 實作 IconLibraryPanel | P1 | 10小時 | 待開始 |
+| ST-014-I | EP-004 | IconLibraryPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-015 | EP-004 | 實作 ImageUploadPanel | P1 | 6小時 | 待開始 |
+| ST-015-I | EP-004 | ImageUploadPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-016 | EP-004 | 實作 ColorPickerPanel | P1 | 6小時 | 待開始 |
+| ST-016-I | EP-004 | ColorPickerPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | **EP-005: 邏輯抽離和整合** |
 | ST-017 | EP-005 | 建立 composables | P2 | 8小時 | 待開始 |
 | ST-018 | EP-005 | 重構主 IconPicker 整合 | P2 | 8小時 | 待開始 |
@@ -245,6 +250,64 @@ Route::get('/test/icon-picker', function () {
 - 版本切換正常運作
 - 無 console 錯誤
 - Phase 進度顯示準確
+
+---
+
+#### ST-012-I: TextIconPanel 測試頁面整合
+
+**作為**：開發者和產品經理  
+**我想要**：TextIconPanel 立即整合到測試頁面的新版 IconPicker  
+**所以**：可以即時驗證開發成果並確保功能正確性  
+
+**驗收條件**：
+- [ ] 修改新版 IconPicker.vue 引入 TextIconPanel 元件
+- [ ] 替換 `initials` 標籤頁的內嵌邏輯使用 TextIconPanel
+- [ ] 移除舊版內嵌邏輯，使用純新架構
+- [ ] 未完成功能顯示「開發中」狀態或適當錯誤提示
+- [ ] 測試頁面切換到新版後文字圖標功能正常
+- [ ] TextIconPanel 功能與原版一致（其他功能可不完整）
+- [ ] 新版架構獨立運作，不依賴舊版邏輯
+
+**技術要求**：
+```vue
+<!-- 在 IconPicker.vue 中替換內嵌邏輯 -->
+<TextIconPanel
+  v-if="activeTab === 'initials'"
+  v-model="customInitials"
+  :background-color="backgroundColor"
+  @text-selected="handleTextSelection"
+/>
+```
+
+**整合流程**：
+1. 在 `feat/text-icon-panel` 分支進行整合
+2. 修改 IconPicker.vue 的 initials 標籤頁
+3. 調整事件處理邏輯
+4. 本地測試驗證
+5. 更新 PR #28 包含整合內容
+
+**測試要求**：
+- 測試頁面 `/test/icon-picker?iconpicker=new` 功能驗證
+- **已實作功能（TextIconPanel）**：
+  - 文字輸入限制（3字元）正常
+  - 大寫轉換正常
+  - 預覽顯示正確
+  - 顏色計算準確
+  - 應用按鈕邏輯正確
+- **未實作功能**：
+  - Emoji 標籤頁顯示開發中狀態
+  - Icons 標籤頁顯示開發中狀態
+  - Upload 標籤頁顯示開發中狀態
+  - 確認不會意外觸發舊版邏輯
+
+**DoD (Definition of Done)**：
+- 新版 IconPicker 使用 TextIconPanel 元件
+- 已實作功能在測試頁面正常運作
+- TextIconPanel 功能與原版一致
+- 未實作功能顯示適當的開發中狀態
+- 新版架構獨立運作，無舊版依賴
+- 程式碼結構清晰，遵循新架構原則
+- PR 包含完整整合內容
 
 ---
 
@@ -792,23 +855,59 @@ ST-019 → ST-020 → ST-021
 
 ## ⏱️ 預估工時總結
 
-| Phase | 總工時 | 說明 |
-|-------|--------|------|
-| Phase 0 | 13小時 | 基礎建設 + 測試頁面 |
-| Phase 1 | 20小時 | 服務層重構 |
-| Phase 2 | 52小時 | 共用元件 + 面板拆分 |
-| Phase 3 | 16小時 | 邏輯整合 |
-| Phase 4 | 20小時 | 測試優化 |
-| **總計** | **121小時** | **約 3 個月（兼職）** |
+| Phase | 原工時 | 整合工時 | 總工時 | 說明 |
+|-------|--------|----------|--------|------|
+| Phase 0 | 13小時 | +0小時 | 13小時 | 基礎建設 + 測試頁面 |
+| Phase 1 | 20小時 | +0小時 | 20小時 | 服務層重構 |
+| Phase 2 | 52小時 | +5小時 | 57小時 | 共用元件 + 面板拆分 + 測試頁面整合 |
+| Phase 3 | 16小時 | +2小時 | 18小時 | 邏輯整合 + 最終整合測試 |
+| Phase 4 | 20小時 | +0小時 | 20小時 | 測試優化 |
+| **總計** | **121小時** | **+7小時** | **128小時** | **約 3.2 個月（兼職）** |
+
+### 新增整合任務明細
+
+| 整合任務 | 工時 | 說明 |
+|----------|------|------|
+| ST-012-I | 1小時 | TextIconPanel 測試頁面整合 |
+| ST-013-I | 1小時 | EmojiPanel 測試頁面整合 |
+| ST-014-I | 1小時 | IconLibraryPanel 測試頁面整合 |
+| ST-015-I | 1小時 | ImageUploadPanel 測試頁面整合 |
+| ST-016-I | 1小時 | ColorPickerPanel 測試頁面整合 |
+| ST-018-I | 2小時 | 完整整合測試 |
+| **小計** | **7小時** | **測試頁面整合總工時** |
 
 ## 🎯 下一步行動
 
-1. **確認 Stories 範圍和優先級**
-2. **選擇第一個 Story 開始實作** (建議從 ST-001 開始)
-3. **建立詳細的測試計劃** (如需要)
+### 立即執行項目
+
+1. **ST-012-I: TextIconPanel 測試頁面整合** (優先級 P0)
+   - TextIconPanel 已開發完成，需立即整合到測試頁面
+   - 預估工時：1小時
+   - 執行分支：`feat/text-icon-panel`
+
+2. **ST-013: 實作 EmojiPanel** (優先級 P1)
+   - 下一個面板元件開發
+   - 預估工時：8小時 + 1小時整合
+
+### 後續執行順序
+
+3. **ST-014: 實作 IconLibraryPanel** → **ST-014-I: 整合**
+4. **ST-015: 實作 ImageUploadPanel** → **ST-015-I: 整合**
+5. **ST-016: 實作 ColorPickerPanel** → **ST-016-I: 整合**
+6. **ST-017: 建立 composables**
+7. **ST-018: 重構主 IconPicker 整合** → **ST-018-I: 完整整合測試**
+
+### 建議工作流程
+
+每個面板元件的開發流程：
+1. **開發階段**：實作元件功能和測試
+2. **整合階段**：立即整合到測試頁面
+3. **驗證階段**：測試頁面功能驗證
+4. **提交階段**：PR 包含開發+整合內容
 
 ---
 
 **相關文件**：
 - [PRD 文件](./ICON-PICKER-BROWNFIELD-PRD.md)
 - [Epic 定義](./ICON-PICKER-EPICS.md)
+- [測試頁面整合工作流程](./ICON-PICKER-INTEGRATION-WORKFLOW.md)
