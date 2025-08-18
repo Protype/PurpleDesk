@@ -780,4 +780,140 @@ describe('VirtualScrollGrid', () => {
       expect(wrapper.vm.visibleRows).toBe(Math.ceil(360 / 36))
     })
   })
+
+  describe('動態行高功能', () => {
+    it('應該支援項目指定自定義高度', async () => {
+      const itemsWithCustomHeight = [
+        { id: 1, name: 'Category 1', fullRow: true, itemHeight: 40 },
+        { id: 2, name: 'Item 1' },
+        { id: 3, name: 'Item 2' },
+        { id: 4, name: 'Category 2', fullRow: true, itemHeight: 50 },
+        { id: 5, name: 'Item 3' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithCustomHeight,
+          itemsPerRow: 3,
+          rowHeight: 36 // 預設高度
+        }
+      })
+
+      // 檢查 getItemHeight 方法是否存在並正常工作
+      expect(wrapper.vm.getItemHeight(itemsWithCustomHeight[0])).toBe(40)
+      expect(wrapper.vm.getItemHeight(itemsWithCustomHeight[1])).toBe(36) // 使用預設高度
+      expect(wrapper.vm.getItemHeight(itemsWithCustomHeight[3])).toBe(50)
+    })
+
+    it('應該正確計算包含動態高度項目的總高度', async () => {
+      const itemsWithMixedHeight = [
+        { id: 1, name: 'Header 1', fullRow: true, itemHeight: 40 },
+        { id: 2, name: 'Item 1' }, // 預設 36px
+        { id: 3, name: 'Item 2' }, // 預設 36px
+        { id: 4, name: 'Item 3' }, // 預設 36px (這三個組成一行)
+        { id: 5, name: 'Header 2', fullRow: true, itemHeight: 50 }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithMixedHeight,
+          itemsPerRow: 3,
+          rowHeight: 36 // 預設高度
+        }
+      })
+
+      // 預期總高度: 40 (header1) + 36 (一般項目行) + 50 (header2) = 126
+      expect(wrapper.vm.totalHeight).toBe(126)
+    })
+
+    it('應該在渲染時使用正確的行高', async () => {
+      const itemsWithDynamicHeight = [
+        { id: 1, name: 'Big Header', fullRow: true, itemHeight: 60 },
+        { id: 2, name: 'Item 1' },
+        { id: 3, name: 'Item 2' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithDynamicHeight,
+          itemsPerRow: 2,
+          rowHeight: 30,
+          containerHeight: 200
+        }
+      })
+
+      const visibleRows = wrapper.vm.visibleRowsData
+      
+      // 第一行應該使用自定義高度
+      if (visibleRows.length > 0) {
+        expect(visibleRows[0].height).toBe(60)
+      }
+      
+      // 第二行應該使用預設高度
+      if (visibleRows.length > 1) {
+        expect(visibleRows[1].height).toBe(30)
+      }
+    })
+
+    it('應該支援混合行高的虛擬滾動', async () => {
+      const mixedHeightItems = []
+      
+      // 建立測試資料：交替的分類標題(高度40)和一般項目(高度30)
+      for (let i = 0; i < 50; i++) {
+        if (i % 10 === 0) {
+          mixedHeightItems.push({
+            id: i,
+            name: `Category ${i}`,
+            fullRow: true,
+            itemHeight: 40
+          })
+        } else {
+          mixedHeightItems.push({
+            id: i,
+            name: `Item ${i}`
+          })
+        }
+      }
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: mixedHeightItems,
+          itemsPerRow: 5,
+          rowHeight: 30,
+          containerHeight: 150
+        }
+      })
+
+      // 確保虛擬滾動能正常運作
+      expect(wrapper.vm.totalHeight).toBeGreaterThan(0)
+      expect(wrapper.vm.visibleRowsData.length).toBeGreaterThan(0)
+      
+      // 確保分類行使用了正確的高度
+      const categoryRows = wrapper.vm.visibleRowsData.filter(row => 
+        row.items.some(item => item.type === 'item' && item.data?.itemHeight === 40)
+      )
+      
+      if (categoryRows.length > 0) {
+        expect(categoryRows[0].height).toBe(40)
+      }
+    })
+
+    it('當沒有指定 itemHeight 時應該使用預設 rowHeight', async () => {
+      const standardItems = [
+        { id: 1, name: 'Standard Item 1' },
+        { id: 2, name: 'Standard Item 2' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: standardItems,
+          itemsPerRow: 2,
+          rowHeight: 35
+        }
+      })
+
+      expect(wrapper.vm.getItemHeight(standardItems[0])).toBe(35)
+      expect(wrapper.vm.getItemHeight(standardItems[1])).toBe(35)
+    })
+  })
 })

@@ -109,7 +109,7 @@
               <div class="flex-1">
                 <IconPickerSearch
                   v-model="searchQuery"
-                  :placeholder="activeTab === 'emoji' ? '搜尋 Emoji...' : '搜尋圖標...'"
+                  :placeholder="activeTab === 'emoji' ? 'Filter...' : 'Filter...'"
                 />
               </div>
               <!-- 功能按鈕組 -->
@@ -124,7 +124,7 @@
           </div>
 
           <!-- 內容區域 -->
-          <div class="flex-1 overflow-y-auto min-h-0">
+          <div class="flex-1 min-h-0">
             <!-- 文字圖標標籤頁 - 使用 TextIconPanel -->
             <div v-if="activeTab === 'initials'" class="space-y-4">
               <TextIconPanel

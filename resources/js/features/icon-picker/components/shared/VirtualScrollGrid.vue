@@ -26,7 +26,7 @@
             { 'first-row': rowData.isFirstRow }
           ]"
           :style="{ 
-            height: `${rowHeight}px`,
+            height: `${rowData.height}px`,
             display: 'grid',
             gridTemplateColumns: `repeat(${itemsPerRow}, 1fr)`,
             alignItems: 'center',
@@ -113,6 +113,16 @@ export default {
     // 使用 shallowRef 優化大型陣列性能
     const itemsRef = shallowRef(props.items)
     
+    // 取得項目高度的方法
+    const getItemHeight = (item) => {
+      // 如果項目指定了高度，使用指定高度
+      if (item?.itemHeight && typeof item.itemHeight === 'number') {
+        return item.itemHeight
+      }
+      // 否則使用預設行高
+      return props.rowHeight
+    }
+    
     // 處理 fullRow 項目，自動補位
     const processedItems = computed(() => {
       const result = []
@@ -148,7 +158,35 @@ export default {
     })
 
     const totalHeight = computed(() => {
-      return totalRows.value * props.rowHeight
+      let height = 0
+      let currentRow = []
+      
+      // 遍歷所有處理後的項目，計算實際高度
+      processedItems.value.forEach(item => {
+        if (item?.fullRow === true) {
+          // 先完成當前行（如果有項目的話）
+          if (currentRow.length > 0) {
+            height += Math.max(...currentRow.map(getItemHeight))
+            currentRow = []
+          }
+          // fullRow 項目獨佔一行，使用其指定高度
+          height += getItemHeight(item)
+        } else {
+          currentRow.push(item)
+          if (currentRow.length === props.itemsPerRow) {
+            // 一行滿了，使用該行最高的項目高度
+            height += Math.max(...currentRow.map(getItemHeight))
+            currentRow = []
+          }
+        }
+      })
+      
+      // 處理最後一行（如果有未完成的行）
+      if (currentRow.length > 0) {
+        height += Math.max(...currentRow.map(getItemHeight))
+      }
+      
+      return height
     })
 
     const visibleRows = computed(() => {
@@ -187,7 +225,7 @@ export default {
       return indexes
     })
     
-    // 計算每行的實際數據（簡單按行分組）
+    // 計算每行的實際數據（包含動態高度）
     const visibleRowsData = computed(() => {
       const rows = []
       const items = processedItems.value
@@ -196,6 +234,7 @@ export default {
       
       for (let rowIndex = start; rowIndex < end; rowIndex++) {
         const rowItems = []
+        let rowHeight = props.rowHeight // 預設行高
         
         for (let colIndex = 0; colIndex < props.itemsPerRow; colIndex++) {
           const itemIndex = rowIndex * props.itemsPerRow + colIndex
@@ -203,6 +242,10 @@ export default {
           if (itemIndex < items.length) {
             const item = items[itemIndex]
             const isFullRow = item.fullRow === true
+            const itemHeight = getItemHeight(item)
+            
+            // 更新行高（使用該行中最高的項目）
+            rowHeight = Math.max(rowHeight, itemHeight)
             
             rowItems.push({
               key: `${rowIndex}-${colIndex}`,
@@ -224,6 +267,7 @@ export default {
         rows.push({
           rowIndex,
           items: rowItems,
+          height: rowHeight, // 加入行高資訊
           isFirstRow: rowIndex === 0
         })
       }
@@ -380,6 +424,7 @@ export default {
       // 方法
       getItemAt,
       getItemIndex,
+      getItemHeight,
       handleScroll,
       restoreScrollPosition
     }

@@ -17,7 +17,7 @@
       <VirtualScrollGrid
         :items="flattenedEmojis"
         :items-per-row="10"
-        :row-height="36"
+        :row-height="34"
         :container-height="176"
         :buffer="2"
         :preserve-scroll-position="true"
@@ -28,7 +28,7 @@
           <!-- 分類標題 -->
           <div 
             v-if="item && item.type === 'category-header'"
-            class="category-header w-full flex items-center space-x-2 pt-3 pb-1 text-sm font-bold text-gray-400"
+            class="category-header w-full flex items-center space-x-2 text-sm font-bold text-gray-400"
           >
             <span>{{ item.categoryName }}</span>
             <div class="flex-1 h-px me-2 ml-2 bg-gray-200"></div>
@@ -151,27 +151,29 @@ export default {
       }).filter(category => category.emojis.length > 0) // 只保留有結果的分類
     })
 
-    // 扁平化 emoji 資料用於 VirtualScrollGrid（使用新的 fullRow 屬性）
+    // 扁平化 emoji 資料用於 VirtualScrollGrid（使用動態高度）
     const flattenedEmojis = computed(() => {
       const result = []
       
       filteredEmojis.value.forEach(category => {
         if (category.emojis && category.emojis.length > 0) {
-          // 添加分類標題，使用 fullRow 屬性讓它獨佔一行
+          // 添加分類標題，使用 fullRow 和 itemHeight 屬性
           result.push({
             type: 'category-header',
             isCategory: true,
             fullRow: true,
+            itemHeight: 40, // 分類標題使用 40px 高度
             categoryId: category.categoryId,
             categoryName: category.categoryName
           })
           
-          // 添加該分類的 emoji
+          // 添加該分類的 emoji（使用預設高度 34px）
           category.emojis.forEach(emoji => {
             result.push({
               ...emoji,
               type: 'emoji-item',
               isCategory: false
+              // 不指定 itemHeight，使用 VirtualScrollGrid 的預設 rowHeight (34px)
             })
           })
         }
@@ -246,12 +248,7 @@ export default {
 /* 分類標題行樣式 */
 .category-header {
   grid-column: 1 / -1; /* 佔滿整行 */
-}
-
-/* 第一行的特殊樣式 */
-:deep(.virtual-grid-row.first-row .category-header) {
-  /* 針對第一行中的分類標題 */
-  @apply pt-1;
+  /* 移除額外的 padding，因為現在有 40px 高度了 */
 }
 
 /* Emoji 按鈕樣式 */
