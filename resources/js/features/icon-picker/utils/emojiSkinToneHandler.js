@@ -40,6 +40,19 @@ export function applySkinTone(emojiData, skinTone) {
   const toneKey = parseInt(skinTone, 10)
   const variation = variations[toneKey]
   
+  // DEBUG: 顯示膚色處理細節
+  if (emojiData.emoji === '👋' && skinTone) {
+    console.log('applySkinTone DEBUG:', {
+      emoji: emojiData.emoji,
+      skinTone,
+      skinToneType: typeof skinTone,
+      toneKey,
+      variations,
+      variation,
+      result: variation || emojiData.emoji
+    })
+  }
+  
   // 如果找到變體就返回，否則 fallback 到基礎 emoji
   return variation || emojiData.emoji || ''
 }

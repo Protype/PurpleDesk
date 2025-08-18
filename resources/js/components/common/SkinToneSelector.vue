@@ -27,7 +27,7 @@
             @click="selectTone(tone.value)"
             :title="tone.name"
             class="skin-tone-option"
-            :class="{ 'selected': modelValue === tone.value }"
+            :class="{ 'selected': modelValue == tone.value || parseInt(modelValue, 10) === tone.value }"
           >
             <span class="tone-preview" :style="{ backgroundColor: tone.color }"></span>
             <span class="tone-emoji">{{ tone.emoji }}</span>
@@ -56,19 +56,21 @@ export default {
     const dropdownRef = ref(null)
     const dropdownPosition = ref({ top: '0px', left: '0px' })
 
-    // 膚色選項
+    // 膚色選項 - 使用數字格式配合新架構
     const skinTones = [
       { value: '', name: '預設', color: '#FFC83D', emoji: '👋' },
-      { value: '🏻', name: '淺膚色', color: '#F7DECE', emoji: '👋🏻' },
-      { value: '🏼', name: '中淺膚色', color: '#F3D2A2', emoji: '👋🏼' },
-      { value: '🏽', name: '中膚色', color: '#D5AB88', emoji: '👋🏽' },
-      { value: '🏾', name: '中深膚色', color: '#AF7E57', emoji: '👋🏾' },
-      { value: '🏿', name: '深膚色', color: '#7C533E', emoji: '👋🏿' }
+      { value: 1, name: '淺膚色', color: '#F7DECE', emoji: '👋🏻' },
+      { value: 2, name: '中淺膚色', color: '#F3D2A2', emoji: '👋🏼' },
+      { value: 3, name: '中膚色', color: '#D5AB88', emoji: '👋🏽' },
+      { value: 4, name: '中深膚色', color: '#AF7E57', emoji: '👋🏾' },
+      { value: 5, name: '深膚色', color: '#7C533E', emoji: '👋🏿' }
     ]
 
     // 當前選中的膚色
     const currentTone = computed(() => {
-      return skinTones.find(t => t.value === props.modelValue) || skinTones[0]
+      // 支援數字和字串的比較
+      const modelValueNum = props.modelValue === '' ? '' : parseInt(props.modelValue, 10) || props.modelValue
+      return skinTones.find(t => t.value === modelValueNum || t.value === props.modelValue) || skinTones[0]
     })
 
     const currentToneName = computed(() => currentTone.value.name)
@@ -127,6 +129,7 @@ export default {
 
     // 選擇膚色
     const selectTone = (tone) => {
+      console.log('SkinToneSelector: selecting tone', tone, typeof tone)
       emit('update:modelValue', tone)
       closeSelector()
     }
