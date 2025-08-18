@@ -69,8 +69,8 @@ export default {
     },
     // 選中的膚色
     selectedSkinTone: {
-      type: String,
-      default: ''
+      type: [String, Number],
+      default: 0
     },
     // 選中的 emoji
     selectedEmoji: {

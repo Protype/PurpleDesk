@@ -27,7 +27,7 @@
             @click="selectTone(tone.value)"
             :title="tone.name"
             class="skin-tone-option"
-            :class="{ 'selected': modelValue == tone.value || parseInt(modelValue, 10) === tone.value }"
+            :class="{ 'selected': (typeof modelValue === 'number' ? modelValue : parseInt(modelValue, 10) || 0) === tone.value }"
           >
             <span class="tone-preview" :style="{ backgroundColor: tone.color }"></span>
             <span class="tone-emoji">{{ tone.emoji }}</span>
@@ -45,8 +45,8 @@ export default {
   name: 'SkinToneSelector',
   props: {
     modelValue: {
-      type: String,
-      default: '' // 空字串表示預設（黃色）膚色
+      type: [String, Number],
+      default: 0 // 0 表示預設膚色
     }
   },
   emits: ['update:modelValue'],
@@ -68,9 +68,11 @@ export default {
 
     // 當前選中的膚色
     const currentTone = computed(() => {
-      // 支援數字和字串的比較
-      const modelValueNum = props.modelValue === '' ? '' : parseInt(props.modelValue, 10) || props.modelValue
-      return skinTones.find(t => t.value === modelValueNum || t.value === props.modelValue) || skinTones[0]
+      // 將 modelValue 轉換為數字進行比較
+      const toneValue = typeof props.modelValue === 'number' 
+        ? props.modelValue 
+        : parseInt(props.modelValue, 10) || 0
+      return skinTones.find(t => t.value === toneValue) || skinTones[0]
     })
 
     const currentToneName = computed(() => currentTone.value.name)
