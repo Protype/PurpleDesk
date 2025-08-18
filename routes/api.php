@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Api\EmojiController;
+use App\Http\Controllers\Api\HeroIconController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\TeamController;
@@ -57,4 +58,8 @@ Route::get('/user', function (Request $request) {
 // Icon 配置 API 路由（公開訪問）
 Route::prefix('config/icon')->group(function () {
     Route::get('/emoji', [EmojiController::class, 'all']);
+    Route::get('/heroicons', [HeroIconController::class, 'index']);
+    Route::get('/heroicons/categories', [HeroIconController::class, 'categories']);
+    Route::get('/heroicons/search', [HeroIconController::class, 'search']);
+    Route::get('/heroicons/by-category', [HeroIconController::class, 'byCategory']);
 });
