@@ -454,10 +454,44 @@ describe('EmojiPanel', () => {
     })
 
     it('應該只對支援膚色的 emoji 套用膚色修飾符', async () => {
+      // 使用包含膚色資訊的 mock 資料
+      const mockDataWithSkinTone = [
+        {
+          categoryId: 'people',
+          categoryName: '人物',
+          emojis: [
+            {
+              emoji: '👋',
+              name: 'waving hand',
+              category: 'people',
+              has_skin_tone: true,
+              skin_variations: {
+                1: '👋🏻',
+                2: '👋🏼',
+                3: '👋🏽',
+                4: '👋🏾',
+                5: '👋🏿'
+              }
+            },
+            {
+              emoji: '😀',
+              name: 'grinning face',
+              category: 'people',
+              has_skin_tone: false
+            }
+          ]
+        }
+      ]
+
+      // Mock IconDataLoader 返回包含膚色資料的結構
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(mockDataWithSkinTone)
+      }))
+
       wrapper = mount(EmojiPanel, {
         props: {
           searchQuery: '',
-          selectedSkinTone: '🏻'
+          selectedSkinTone: '1'  // 使用數字而非 emoji 字符
         }
       })
 
