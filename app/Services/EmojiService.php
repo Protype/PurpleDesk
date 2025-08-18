@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\File;
 
 class EmojiService
 {
+    private EmojiSkinToneService $skinToneService;
+
+    public function __construct(EmojiSkinToneService $skinToneService)
+    {
+        $this->skinToneService = $skinToneService;
+    }
     /**
      * 確認有問題的 emoji 黑名單
      * 基於前端 emojiFilter.js 的 PROBLEMATIC_EMOJIS (57 個)
@@ -81,14 +87,17 @@ class EmojiService
                     // 過濾有問題的 emoji
                     $filteredEmojis = $this->filterEmojis($subgroupData['emojis']);
                     
-                    // 只有當過濾後還有 emoji 時才加入子群組
-                    if (!empty($filteredEmojis)) {
+                    // 使用 EmojiSkinToneService 處理膚色變體分組
+                    $groupedEmojis = $this->skinToneService->groupVariations($filteredEmojis);
+                    
+                    // 只有當處理後還有 emoji 時才加入子群組
+                    if (!empty($groupedEmojis)) {
                         $categoryEmojis[$subgroupKey] = [
                             'name' => $subgroupData['name'],
-                            'emojis' => $filteredEmojis
+                            'emojis' => $groupedEmojis
                         ];
                         
-                        $result['stats']['total_emojis'] += count($filteredEmojis);
+                        $result['stats']['total_emojis'] += count($groupedEmojis);
                     }
                 }
                 

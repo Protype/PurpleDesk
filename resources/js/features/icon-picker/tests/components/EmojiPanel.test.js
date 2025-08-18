@@ -498,4 +498,234 @@ describe('EmojiPanel', () => {
       expect(virtualScrollGrid.props('preserveScrollPosition')).toBe(true)
     })
   })
+
+  describe('膚色變體結構化支援', () => {
+    const mockStructuredEmojiData = [
+      {
+        categoryId: 'people',
+        categoryName: '人物',
+        emojis: [
+          {
+            emoji: '👋',
+            name: 'waving hand',
+            category: 'people',
+            has_skin_tone: true,
+            skin_variations: {
+              1: '👋🏻',
+              2: '👋🏼',
+              3: '👋🏽',
+              4: '👋🏾',
+              5: '👋🏿'
+            }
+          },
+          {
+            emoji: '😀',
+            name: 'grinning face',
+            category: 'people',
+            has_skin_tone: false
+          }
+        ]
+      }
+    ]
+
+    it('should use backend skin tone flags instead of hardcoded list', async () => {
+      // Mock IconDataLoader 返回結構化資料
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(mockStructuredEmojiData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      // 檢查不應該有硬編碼的膚色支援列表
+      expect(wrapper.vm.supportsSkinTone).toBeUndefined()
+
+      // 檢查應該使用後端資料判斷膚色支援
+      const processedEmojis = wrapper.vm.processedEmojis
+      const wavingHandEmoji = processedEmojis[0].emojis.find(e => e.emoji === '👋')
+      const grinningFaceEmoji = processedEmojis[0].emojis.find(e => e.emoji === '😀')
+
+      expect(wavingHandEmoji.has_skin_tone).toBe(true)
+      expect(grinningFaceEmoji.has_skin_tone).toBe(false)
+    })
+
+    it('should apply skin tone from backend variations object', async () => {
+      // Mock IconDataLoader 返回結構化資料
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(mockStructuredEmojiData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: '3' // 選擇中等膚色
+        }
+      })
+
+      await flushPromises()
+
+      const processedEmojis = wrapper.vm.processedEmojis
+      const wavingHandEmoji = processedEmojis[0].emojis.find(e => e.emoji === '👋')
+
+      // 應該顯示對應的膚色變體
+      expect(wavingHandEmoji.displayEmoji).toBe('👋🏽')
+    })
+
+    it('should fallback to base emoji when skin tone variation not available', async () => {
+      const incompleteVariationsData = [
+        {
+          categoryId: 'people',
+          categoryName: '人物',
+          emojis: [
+            {
+              emoji: '👋',
+              name: 'waving hand',
+              category: 'people',
+              has_skin_tone: true,
+              skin_variations: {
+                1: '👋🏻',
+                3: '👋🏽'
+                // 缺少膚色 2, 4, 5
+              }
+            }
+          ]
+        }
+      ]
+
+      // Mock IconDataLoader
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(incompleteVariationsData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: '4' // 選擇不存在的膚色
+        }
+      })
+
+      await flushPromises()
+
+      const processedEmojis = wrapper.vm.processedEmojis
+      const wavingHandEmoji = processedEmojis[0].emojis.find(e => e.emoji === '👋')
+
+      // 應該 fallback 到基礎 emoji
+      expect(wavingHandEmoji.displayEmoji).toBe('👋')
+    })
+
+    it('should maintain scroll position when skin tone changes', async () => {
+      // Mock IconDataLoader
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(mockStructuredEmojiData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      // 記錄初始的 flattened emojis 長度
+      const initialLength = wrapper.vm.flattenedEmojis.length
+
+      // 模擬膚色變更
+      await wrapper.setProps({ selectedSkinTone: '2' })
+
+      // 長度應該保持相同（因為只是變更顯示的 emoji，不改變結構）
+      expect(wrapper.vm.flattenedEmojis.length).toBe(initialLength)
+
+      // VirtualScrollGrid 的 preserveScrollPosition 應該為 true
+      const virtualScrollGrid = wrapper.findComponent({ name: 'VirtualScrollGrid' })
+      expect(virtualScrollGrid.props('preserveScrollPosition')).toBe(true)
+    })
+
+    it('should handle missing has_skin_tone property gracefully', async () => {
+      const legacyFormatData = [
+        {
+          categoryId: 'people',
+          categoryName: '人物',
+          emojis: [
+            {
+              emoji: '👋',
+              name: 'waving hand',
+              category: 'people'
+              // 缺少 has_skin_tone 屬性（舊格式資料）
+            }
+          ]
+        }
+      ]
+
+      // Mock IconDataLoader
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(legacyFormatData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: '2'
+        }
+      })
+
+      await flushPromises()
+
+      const processedEmojis = wrapper.vm.processedEmojis
+      const wavingHandEmoji = processedEmojis[0].emojis.find(e => e.emoji === '👋')
+
+      // 應該顯示原始 emoji（因為沒有膚色支援資訊）
+      expect(wavingHandEmoji.displayEmoji).toBe('👋')
+    })
+
+    it('should reduce total emoji count with structured data', async () => {
+      // Mock IconDataLoader
+      vi.mocked(IconDataLoader).mockImplementation(() => ({
+        getEmojiData: vi.fn().mockResolvedValue(mockStructuredEmojiData)
+      }))
+
+      wrapper = mount(EmojiPanel, {
+        props: {
+          searchQuery: '',
+          selectedSkinTone: ''
+        }
+      })
+
+      await flushPromises()
+
+      const flattenedItems = wrapper.vm.flattenedEmojis
+      const emojiItems = flattenedItems.filter(item => !item.isCategory)
+
+      // 應該只有 2 個基礎 emoji（👋 和 😀），而不是 6 個（👋 + 5個膚色變體 + 😀）
+      expect(emojiItems.length).toBe(2)
+
+      // 確保沒有重複的膚色變體
+      const emojis = emojiItems.map(item => item.emoji)
+      const uniqueEmojis = [...new Set(emojis)]
+      expect(emojis.length).toBe(uniqueEmojis.length)
+    })
+
+    it('should not contain hardcoded skin tone support list', () => {
+      wrapper = mount(EmojiPanel)
+
+      // 檢查元件內不應該有硬編碼的膚色支援列表
+      const componentSource = wrapper.vm.$options.__vccOpts || wrapper.vm.$options
+      const setupFunction = componentSource.setup?.toString() || ''
+
+      // 這些是硬編碼的膚色支援列表中的 emoji，不應該出現在新版本中
+      const hardcodedEmojis = ['👋', '🤚', '🖐', '✋', '🖖', '👌']
+      const hardcodedPatternsFound = hardcodedEmojis.some(emoji => 
+        setupFunction.includes(`'${emoji}'`) || setupFunction.includes(`"${emoji}"`)
+      )
+
+      expect(hardcodedPatternsFound).toBe(false)
+    })
+  })
 })
