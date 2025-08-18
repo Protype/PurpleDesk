@@ -90,6 +90,13 @@ class EmojiService
                     // 使用 EmojiSkinToneService 處理膚色變體分組
                     $groupedEmojis = $this->skinToneService->groupVariations($filteredEmojis);
                     
+                    // 確保 skin_variations 被序列化為物件而非陣列
+                    foreach ($groupedEmojis as &$emoji) {
+                        if (isset($emoji['skin_variations'])) {
+                            $emoji['skin_variations'] = (object) $emoji['skin_variations'];
+                        }
+                    }
+                    
                     // 只有當處理後還有 emoji 時才加入子群組
                     if (!empty($groupedEmojis)) {
                         $categoryEmojis[$subgroupKey] = [

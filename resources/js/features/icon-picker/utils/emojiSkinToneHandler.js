@@ -25,8 +25,8 @@ export function canApplySkinTone(emojiData) {
 export function applySkinTone(emojiData, skinTone) {
   if (!emojiData) return ''
   
-  // 如果不支援膚色或沒有指定膚色，返回基礎 emoji
-  if (!canApplySkinTone(emojiData) || !skinTone) {
+  // 如果不支援膚色，返回基礎 emoji
+  if (!canApplySkinTone(emojiData)) {
     return emojiData.emoji || ''
   }
   
@@ -36,11 +36,9 @@ export function applySkinTone(emojiData, skinTone) {
     return emojiData.emoji || ''
   }
   
-  // 支援數字和字串類型的 skinTone
-  const toneKey = parseInt(skinTone, 10)
+  // 支援數字和字串類型的 skinTone，預設使用 0 (基礎)
+  const toneKey = skinTone === null || skinTone === undefined ? 0 : parseInt(skinTone, 10)
   const variation = variations[toneKey]
-  
-  // 膚色處理邏輯已驗證正常
   
   // 如果找到變體就返回，否則 fallback 到基礎 emoji
   return variation || emojiData.emoji || ''
@@ -67,7 +65,7 @@ export function applyBulkSkinTone(emojiList, skinTone) {
  */
 export function getSkinToneOptions() {
   return [
-    { tone: '', name: '預設', emoji: '✋' },
+    { tone: 0, name: '預設', emoji: '✋' },
     { tone: 1, name: '淺膚色', emoji: '✋🏻' },
     { tone: 2, name: '中淺膚色', emoji: '✋🏼' },
     { tone: 3, name: '中膚色', emoji: '✋🏽' },

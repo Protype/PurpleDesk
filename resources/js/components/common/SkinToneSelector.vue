@@ -56,9 +56,9 @@ export default {
     const dropdownRef = ref(null)
     const dropdownPosition = ref({ top: '0px', left: '0px' })
 
-    // 膚色選項 - 使用數字格式配合新架構
+    // 膚色選項 - 使用 0-5 統一數字格式
     const skinTones = [
-      { value: '', name: '預設', color: '#FFC83D', emoji: '👋' },
+      { value: 0, name: '預設', color: '#FFC83D', emoji: '👋' },
       { value: 1, name: '淺膚色', color: '#F7DECE', emoji: '👋🏻' },
       { value: 2, name: '中淺膚色', color: '#F3D2A2', emoji: '👋🏼' },
       { value: 3, name: '中膚色', color: '#D5AB88', emoji: '👋🏽' },

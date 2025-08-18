@@ -68,6 +68,8 @@ class EmojiSkinToneService
                 // 添加膚色變體到基礎 emoji
                 if (!isset($grouped[$baseIndex]['skin_variations'])) {
                     $grouped[$baseIndex]['skin_variations'] = [];
+                    // 添加基礎 emoji 作為索引 0
+                    $grouped[$baseIndex]['skin_variations'][0] = $baseEmoji;
                 }
                 
                 $grouped[$baseIndex]['skin_variations'][$skinTone] = $emojiChar;
@@ -82,6 +84,8 @@ class EmojiSkinToneService
                 
                 if ($hasVariations) {
                     $processedEmoji['skin_variations'] = [];
+                    // 添加基礎 emoji 作為索引 0
+                    $processedEmoji['skin_variations'][0] = $emojiChar;
                 }
                 
                 $grouped[] = $processedEmoji;
@@ -168,13 +172,16 @@ class EmojiSkinToneService
     {
         $variations = [];
         
-        // 直接使用 Unicode 膚色字符
+        // 使用 0-5 索引：0=基礎, 1-5=膚色修飾符
+        $variations[0] = $baseEmoji; // 基礎 emoji
+        
+        // 膚色修飾符 1-5 對應 Unicode U+1F3FB-U+1F3FF
         $skinToneChars = [
-            1 => '🏻',
-            2 => '🏼', 
-            3 => '🏽',
-            4 => '🏾',
-            5 => '🏿'
+            1 => '🏻', // U+1F3FB
+            2 => '🏼', // U+1F3FC
+            3 => '🏽', // U+1F3FD
+            4 => '🏾', // U+1F3FE
+            5 => '🏿'  // U+1F3FF
         ];
         
         foreach ($skinToneChars as $tone => $skinToneChar) {
