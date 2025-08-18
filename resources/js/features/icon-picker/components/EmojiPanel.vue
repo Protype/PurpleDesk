@@ -202,8 +202,7 @@ export default {
     })
 
     // 監聽膚色變化
-    watch(() => props.selectedSkinTone, (newTone) => {
-      console.log('EmojiPanel: skin tone changed to', newTone, typeof newTone)
+    watch(() => props.selectedSkinTone, () => {
       // 膚色變化時，computed 會自動重新計算
       // 不重置捲軸位置，保持當前瀏覽位置
     })

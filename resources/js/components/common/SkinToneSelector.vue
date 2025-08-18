@@ -129,7 +129,6 @@ export default {
 
     // 選擇膚色
     const selectTone = (tone) => {
-      console.log('SkinToneSelector: selecting tone', tone, typeof tone)
       emit('update:modelValue', tone)
       closeSelector()
     }
