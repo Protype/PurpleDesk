@@ -17,7 +17,7 @@
       <VirtualScrollGrid
         :items="flattenedEmojis"
         :items-per-row="10"
-        :row-height="36"
+        :row-height="34"
         :container-height="176"
         :buffer="2"
         :preserve-scroll-position="true"
@@ -157,11 +157,12 @@ export default {
       
       filteredEmojis.value.forEach(category => {
         if (category.emojis && category.emojis.length > 0) {
-          // 添加分類標題，使用 fullRow 屬性讓它獨佔一行
+          // 添加分類標題，使用 fullRow 和 itemHeight 屬性
           result.push({
             type: 'category-header',
             isCategory: true,
             fullRow: true,
+            itemHeight: 40, // 分類標題使用 40px 高度
             categoryId: category.categoryId,
             categoryName: category.categoryName
           })

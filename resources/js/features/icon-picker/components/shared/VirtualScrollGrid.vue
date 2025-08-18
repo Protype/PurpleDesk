@@ -26,7 +26,7 @@
             { 'first-row': rowData.isFirstRow }
           ]"
           :style="{ 
-            height: `${rowHeight}px`,
+            height: `${rowData.height}px`,
             display: 'grid',
             gridTemplateColumns: `repeat(${itemsPerRow}, 1fr)`,
             alignItems: 'center',
@@ -35,7 +35,9 @@
         >
           <!-- 渲染該行的項目 -->
           <template v-for="item in rowData.items" :key="item.key">
+            <!-- 🐛 修復：跳過 filler 類型的項目，不渲染 DOM -->
             <div
+              v-if="item.type !== 'filler'"
               class="virtual-grid-item"
               :style="{ 
                 gridColumn: item.fullRow ? '1 / -1' : 'span 1',
@@ -56,7 +58,6 @@
                 <!-- 預設渲染 -->
                 <div>{{ item.data?.name || '' }}</div>
               </slot>
-              <!-- 填充項目不渲染內容 -->
             </div>
           </template>
         </div>
@@ -84,7 +85,7 @@ export default {
     // 每行高度
     rowHeight: {
       type: Number,
-      default: 36
+      default: 34
     },
     // 容器高度
     containerHeight: {
@@ -113,6 +114,16 @@ export default {
     // 使用 shallowRef 優化大型陣列性能
     const itemsRef = shallowRef(props.items)
     
+    // 取得項目高度的方法
+    const getItemHeight = (item) => {
+      // 如果項目指定了高度，使用指定高度
+      if (item?.itemHeight && typeof item.itemHeight === 'number') {
+        return item.itemHeight
+      }
+      // 否則使用預設行高
+      return props.rowHeight
+    }
+    
     // 處理 fullRow 項目，自動補位
     const processedItems = computed(() => {
       const result = []
@@ -139,6 +150,15 @@ export default {
         }
       }
       
+      // 🐛 修復：處理最後一行的填充
+      // 如果最後一行沒有填滿，添加必要的 filler
+      if (currentRowItems > 0) {
+        const finalFillersNeeded = props.itemsPerRow - currentRowItems
+        for (let j = 0; j < finalFillersNeeded; j++) {
+          result.push({ type: 'auto-filler', data: null })
+        }
+      }
+      
       return result
     })
 
@@ -148,7 +168,35 @@ export default {
     })
 
     const totalHeight = computed(() => {
-      return totalRows.value * props.rowHeight
+      let height = 0
+      let currentRow = []
+      
+      // 遍歷所有處理後的項目，計算實際高度
+      processedItems.value.forEach(item => {
+        if (item?.fullRow === true) {
+          // 先完成當前行（如果有項目的話）
+          if (currentRow.length > 0) {
+            height += Math.max(...currentRow.map(getItemHeight))
+            currentRow = []
+          }
+          // fullRow 項目獨佔一行，使用其指定高度
+          height += getItemHeight(item)
+        } else {
+          currentRow.push(item)
+          if (currentRow.length === props.itemsPerRow) {
+            // 一行滿了，使用該行最高的項目高度
+            height += Math.max(...currentRow.map(getItemHeight))
+            currentRow = []
+          }
+        }
+      })
+      
+      // 處理最後一行（如果有未完成的行）
+      if (currentRow.length > 0) {
+        height += Math.max(...currentRow.map(getItemHeight))
+      }
+      
+      return height
     })
 
     const visibleRows = computed(() => {
@@ -187,45 +235,80 @@ export default {
       return indexes
     })
     
-    // 計算每行的實際數據（簡單按行分組）
+    // 計算每行的實際數據（🐛 修復：正確處理 processedItems 的不規則排列）
     const visibleRowsData = computed(() => {
       const rows = []
       const items = processedItems.value
       const start = Math.max(0, startRow.value - props.buffer)
       const end = endRow.value
       
-      for (let rowIndex = start; rowIndex < end; rowIndex++) {
-        const rowItems = []
+      if (items.length === 0) return rows
+      
+      // 🐛 修復：先將所有 processedItems 按行分組，再取可見行
+      const allRows = []
+      let currentRowItems = []
+      let currentRowIndex = 0
+      
+      // 將所有項目按行分組
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i]
+        const isFullRow = item?.fullRow === true
         
-        for (let colIndex = 0; colIndex < props.itemsPerRow; colIndex++) {
-          const itemIndex = rowIndex * props.itemsPerRow + colIndex
-          
-          if (itemIndex < items.length) {
-            const item = items[itemIndex]
-            const isFullRow = item.fullRow === true
-            
-            rowItems.push({
-              key: `${rowIndex}-${colIndex}`,
-              type: item.type === 'auto-filler' ? 'filler' : 'item',
-              fullRow: isFullRow,
-              data: item,
-              index: itemIndex,
-              row: rowIndex,
-              col: colIndex
-            })
-            
-            // 如果是 fullRow 項目，這行就結束了
-            if (isFullRow) {
-              break
-            }
-          }
-        }
-        
-        rows.push({
-          rowIndex,
-          items: rowItems,
-          isFirstRow: rowIndex === 0
+        currentRowItems.push({
+          key: `${currentRowIndex}-${currentRowItems.length}`,
+          type: item?.type === 'auto-filler' ? 'filler' : 'item',
+          fullRow: isFullRow,
+          data: item,
+          index: i,
+          row: currentRowIndex,
+          col: currentRowItems.length
         })
+        
+        // 行結束條件：滿行或遇到 fullRow 項目
+        if (isFullRow || currentRowItems.length >= props.itemsPerRow) {
+          // 計算該行的高度
+          let rowHeight = props.rowHeight // 預設行高
+          currentRowItems.forEach(rowItem => {
+            if (rowItem.data) {
+              const itemHeight = getItemHeight(rowItem.data)
+              rowHeight = Math.max(rowHeight, itemHeight)
+            }
+          })
+          
+          allRows.push({
+            rowIndex: currentRowIndex,
+            items: [...currentRowItems], // 複製陣列
+            height: rowHeight, // 加入行高資訊
+            isFirstRow: currentRowIndex === 0
+          })
+          
+          currentRowItems = []
+          currentRowIndex++
+        }
+      }
+      
+      // 處理最後一行（如果有未完成的行）
+      if (currentRowItems.length > 0) {
+        // 計算該行的高度
+        let rowHeight = props.rowHeight // 預設行高
+        currentRowItems.forEach(rowItem => {
+          if (rowItem.data) {
+            const itemHeight = getItemHeight(rowItem.data)
+            rowHeight = Math.max(rowHeight, itemHeight)
+          }
+        })
+        
+        allRows.push({
+          rowIndex: currentRowIndex,
+          items: [...currentRowItems],
+          height: rowHeight, // 加入行高資訊
+          isFirstRow: currentRowIndex === 0
+        })
+      }
+      
+      // 取出可見範圍的行
+      for (let rowIndex = start; rowIndex < end && rowIndex < allRows.length; rowIndex++) {
+        rows.push(allRows[rowIndex])
       }
       
       return rows
@@ -380,6 +463,7 @@ export default {
       // 方法
       getItemAt,
       getItemIndex,
+      getItemHeight,
       handleScroll,
       restoreScrollPosition
     }
