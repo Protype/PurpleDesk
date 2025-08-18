@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import IconPicker from '../../components/IconPicker.vue'
+import IconPicker from '../../IconPicker.vue'
 
 describe('IconPicker 面板定位測試', () => {
   let wrapper

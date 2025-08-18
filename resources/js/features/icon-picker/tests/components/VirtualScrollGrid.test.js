@@ -622,8 +622,8 @@ describe('VirtualScrollGrid', () => {
       // 應該有自動填充項目
       expect(processed.some(item => item.type === 'auto-filler')).toBe(true)
       
-      // fullRow 項目應該被標記為 fullrow-item
-      const fullRowItem = processed.find(item => item.type === 'fullrow-item')
+      // fullRow 項目應該保持原有類型
+      const fullRowItem = processed.find(item => item.fullRow === true)
       expect(fullRowItem).toBeDefined()
       expect(fullRowItem.name).toBe('Category A')
     })
@@ -657,8 +657,9 @@ describe('VirtualScrollGrid', () => {
       expect(processed[4].type).toBe('auto-filler')
       
       // 然後是 fullRow 項目
-      expect(processed[5].type).toBe('fullrow-item')
+      expect(processed[5].type).toBe('category-header')
       expect(processed[5].name).toBe('Category A')
+      expect(processed[5].fullRow).toBe(true)
       
       // 最後是第三個正常項目
       expect(processed[6].name).toBe('Item 3')
@@ -690,8 +691,9 @@ describe('VirtualScrollGrid', () => {
       expect(processed[2].name).toBe('Item 3')
       
       // 不需要自動填充，直接是 fullRow 項目
-      expect(processed[3].type).toBe('fullrow-item')
+      expect(processed[3].type).toBe('category-header')
       expect(processed[3].name).toBe('Category A')
+      expect(processed[3].fullRow).toBe(true)
       
       // 最後是第四個正常項目
       expect(processed[4].name).toBe('Item 4')
