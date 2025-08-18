@@ -273,7 +273,7 @@ describe('EmojiPanel', () => {
 
       // 檢查重要的 props
       expect(virtualScrollGrid.props('itemsPerRow')).toBe(10)
-      expect(virtualScrollGrid.props('rowHeight')).toBe(36)
+      expect(virtualScrollGrid.props('rowHeight')).toBe(34)
       expect(virtualScrollGrid.props('containerHeight')).toBe(176)
     })
   })

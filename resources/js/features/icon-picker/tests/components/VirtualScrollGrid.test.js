@@ -22,7 +22,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -30,7 +30,7 @@ describe('VirtualScrollGrid', () => {
       expect(wrapper.exists()).toBe(true)
       expect(wrapper.props('items')).toHaveLength(100)
       expect(wrapper.props('itemsPerRow')).toBe(10)
-      expect(wrapper.props('rowHeight')).toBe(36)
+      expect(wrapper.props('rowHeight')).toBe(34)
       expect(wrapper.props('containerHeight')).toBe(176)
     })
 
@@ -39,7 +39,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -54,13 +54,13 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
 
-      // 176px 容器高度 / 36px 行高 ≈ 4.89 ≈ 5 行
-      const expectedVisibleRows = Math.ceil(176 / 36)
+      // 176px 容器高度 / 34px 行高 ≈ 5.18 ≈ 6 行
+      const expectedVisibleRows = Math.ceil(176 / 34)
       expect(wrapper.vm.visibleRows).toBe(expectedVisibleRows)
     })
 
@@ -69,13 +69,13 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
 
       // 模擬滾動到第 3 行
-      const scrollTop = 3 * 36
+      const scrollTop = 3 * 34
       await wrapper.vm.handleScroll({ target: { scrollTop } })
 
       expect(wrapper.vm.scrollTop).toBe(scrollTop)
@@ -87,14 +87,14 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176,
           buffer: 2
         }
       })
 
       // 有緩衝區應該多渲染額外的行
-      const visibleRows = Math.ceil(176 / 36)
+      const visibleRows = Math.ceil(176 / 34)
       const expectedBufferedRows = visibleRows + (2 * 2) // 上下各 2 行緩衝
       expect(wrapper.vm.bufferedRows).toBe(expectedBufferedRows)
     })
@@ -112,7 +112,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: largeItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -126,7 +126,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -135,7 +135,7 @@ describe('VirtualScrollGrid', () => {
       
       // 快速連續滾動
       for (let i = 0; i < 5; i++) {
-        await wrapper.vm.handleScroll({ target: { scrollTop: i * 36 } })
+        await wrapper.vm.handleScroll({ target: { scrollTop: i * 34 } })
       }
 
       // 應該有防抖或節流機制
@@ -149,7 +149,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: [],
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -169,7 +169,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: fewItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -183,7 +183,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 0
         }
       })
@@ -199,7 +199,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems.slice(0, 10),
           itemsPerRow: 5,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         },
         slots: {
@@ -348,7 +348,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: [{ name: 'Test Item' }],
           itemsPerRow: 1,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
         // 不提供 slots，使用預設渲染
@@ -418,7 +418,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: largeItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -441,7 +441,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: largeItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -475,14 +475,14 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: largeItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176,
           buffer: 2
         }
       })
 
       // 計算理論上應該渲染的最大項目數
-      const visibleRows = Math.ceil(176 / 36) // ~5 行
+      const visibleRows = Math.ceil(176 / 34) // ~6 行
       const bufferedRows = visibleRows + (2 * 2) // 加上緩衝區
       const maxExpectedItems = bufferedRows * 10 // 每行 10 個
 
@@ -495,7 +495,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176,
           preserveScrollPosition: true // 啟用滾動位置保持
         }
@@ -543,7 +543,7 @@ describe('VirtualScrollGrid', () => {
           props: {
             items,
             itemsPerRow: 10,
-            rowHeight: 36,
+            rowHeight: 34,
             containerHeight: 176
           }
         })
@@ -580,7 +580,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: expensiveItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -612,7 +612,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: itemsWithFullRow,
           itemsPerRow: 3,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -640,7 +640,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: itemsWithFullRow,
           itemsPerRow: 5, // 每行 5 個
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -678,7 +678,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: itemsWithFullRow,
           itemsPerRow: 3, // 每行 3 個
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -710,7 +710,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: itemsWithFullRow,
           itemsPerRow: 3,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -743,7 +743,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -767,7 +767,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: mockItems,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -777,7 +777,7 @@ describe('VirtualScrollGrid', () => {
       await wrapper.setProps({ containerHeight: 360 })
 
       expect(wrapper.vm.visibleRows).not.toBe(originalVisibleRows)
-      expect(wrapper.vm.visibleRows).toBe(Math.ceil(360 / 36))
+      expect(wrapper.vm.visibleRows).toBe(Math.ceil(360 / 34))
     })
   })
 
@@ -804,7 +804,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: emojiPanelData,
           itemsPerRow: 5, // 每行5個便於計算
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 200
         }
       })
@@ -851,7 +851,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: itemsWithFullRows,
           itemsPerRow: 3, // 每行3個
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 200
         }
       })
@@ -907,7 +907,7 @@ describe('VirtualScrollGrid', () => {
           props: {
             items: testCase.items,
             itemsPerRow: testCase.itemsPerRow,
-            rowHeight: 36,
+            rowHeight: 34,
             containerHeight: 200
           }
         })
@@ -938,7 +938,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: complexItems,
           itemsPerRow: 3,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 200
         }
       })
@@ -1001,7 +1001,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: realEmojiData,
           itemsPerRow: 10, // 與 EmojiPanel 相同
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 176
         }
       })
@@ -1090,7 +1090,7 @@ describe('VirtualScrollGrid', () => {
         props: {
           items: complexMultiGroupData,
           itemsPerRow: 10,
-          rowHeight: 36,
+          rowHeight: 34,
           containerHeight: 400
         }
       })

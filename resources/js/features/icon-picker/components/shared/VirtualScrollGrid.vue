@@ -85,7 +85,7 @@ export default {
     // 每行高度
     rowHeight: {
       type: Number,
-      default: 36
+      default: 34
     },
     // 容器高度
     containerHeight: {
