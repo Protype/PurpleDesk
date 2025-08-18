@@ -17,18 +17,32 @@ class BootstrapIconService
             $config = config('icon.bootstrap-icons');
             $icons = $config['icons'] ?? [];
             $categories = $config['categories'] ?? [];
+            $variantMapping = $config['variant_mapping'] ?? [];
+            $supportedVariants = $config['supported_variants'] ?? [];
             
-            // 計算總圖標數量
+            // 為每個分類的圖標添加變體資訊
+            $iconsWithVariants = [];
             $totalCount = 0;
-            foreach ($icons as $categoryIcons) {
+            
+            foreach ($icons as $categoryName => $categoryIcons) {
+                $iconsWithVariants[$categoryName] = array_map(function ($icon) use ($variantMapping) {
+                    return array_merge($icon, [
+                        'base' => $this->extractBaseIconName($icon['class']),
+                        'variants' => $this->buildIconVariants($icon['class'], $variantMapping),
+                        'defaultVariant' => 'outline'
+                    ]);
+                }, $categoryIcons);
+                
                 $totalCount += count($categoryIcons);
             }
             
             $result = [
-                'data' => $icons,
+                'data' => $iconsWithVariants,
                 'meta' => [
                     'total' => $totalCount,
-                    'categories' => $categories
+                    'categories' => $categories,
+                    'supportedVariants' => $supportedVariants,
+                    'variantMapping' => $variantMapping
                 ]
             ];
             
@@ -302,5 +316,244 @@ class BootstrapIconService
         }
         
         return $validCategories;
+    }
+    
+    /**
+     * 提取基礎圖標名稱（移除 -fill 後綴）
+     * 
+     * @param string $className
+     * @return string
+     */
+    private function extractBaseIconName(string $className): string
+    {
+        return preg_replace('/-fill$/', '', $className);
+    }
+    
+    /**
+     * 建立圖標變體資訊
+     * 
+     * @param string $className
+     * @param array $variantMapping
+     * @return array
+     */
+    private function buildIconVariants(string $className, array $variantMapping): array
+    {
+        $baseClassName = $this->extractBaseIconName($className);
+        $variants = [];
+        
+        foreach ($variantMapping as $style => $mapping) {
+            if ($style === 'outline') {
+                $variants[$style] = [
+                    'class' => $baseClassName,
+                    'description' => $mapping['description']
+                ];
+            } elseif ($style === 'solid') {
+                $variants[$style] = [
+                    'class' => $baseClassName . $mapping['suffix'],
+                    'description' => $mapping['description']
+                ];
+            }
+        }
+        
+        return $variants;
+    }
+    
+    /**
+     * 取得變體映射資訊
+     * 
+     * @return array
+     */
+    public function getVariantMapping(): array
+    {
+        $config = config('icon.bootstrap-icons');
+        return $config['variant_mapping'] ?? [];
+    }
+    
+    /**
+     * 取得支援的變體類型
+     * 
+     * @return array
+     */
+    public function getSupportedVariants(): array
+    {
+        $config = config('icon.bootstrap-icons');
+        return $config['supported_variants'] ?? [];
+    }
+    
+    /**
+     * 取得特定樣式的圖標資料
+     * 
+     * @param string $style
+     * @return array
+     */
+    public function getIconsByStyle(string $style): array
+    {
+        $allIcons = $this->getAllBootstrapIcons();
+        $variantMapping = $this->getVariantMapping();
+        
+        if (!isset($variantMapping[$style])) {
+            throw new \InvalidArgumentException("Unsupported style: {$style}");
+        }
+        
+        // 根據樣式過濾和轉換圖標
+        $styledIcons = [];
+        $totalCount = 0;
+        
+        foreach ($allIcons['data'] as $categoryName => $categoryIcons) {
+            $filteredIcons = [];
+            
+            foreach ($categoryIcons as $icon) {
+                if ($this->shouldIncludeIconForStyle($icon, $style)) {
+                    $styledIcon = array_merge($icon, [
+                        'currentStyle' => $style,
+                        'class' => $this->getIconClassForStyle($icon, $style)
+                    ]);
+                    $filteredIcons[] = $styledIcon;
+                }
+            }
+            
+            if (!empty($filteredIcons)) {
+                $styledIcons[$categoryName] = $filteredIcons;
+                $totalCount += count($filteredIcons);
+            }
+        }
+        
+        return [
+            'data' => $styledIcons,
+            'meta' => array_merge($allIcons['meta'], [
+                'total' => $totalCount,
+                'currentStyle' => $style,
+                'description' => $variantMapping[$style]['description'] ?? $style
+            ])
+        ];
+    }
+    
+    /**
+     * 判斷圖標是否應該包含在特定樣式中
+     * 
+     * @param array $icon
+     * @param string $style
+     * @return bool
+     */
+    private function shouldIncludeIconForStyle(array $icon, string $style): bool
+    {
+        $className = $icon['class'];
+        $isFillIcon = str_contains($className, '-fill');
+        
+        if ($style === 'outline') {
+            // outline 樣式：排除 -fill 圖標
+            return !$isFillIcon;
+        } elseif ($style === 'solid') {
+            if ($isFillIcon) {
+                // 如果是 -fill 圖標，直接包含
+                return true;
+            } else {
+                // 基礎圖標：檢查是否有對應的 -fill 版本
+                // 如果沒有 -fill 版本，也包含基礎版本
+                return !$this->hasFilledVariant($className);
+            }
+        }
+        
+        return true;
+    }
+    
+    /**
+     * 取得圖標在特定樣式下的 class 名稱
+     * 
+     * @param array $icon
+     * @param string $style
+     * @return string
+     */
+    private function getIconClassForStyle(array $icon, string $style): string
+    {
+        $baseClassName = $this->extractBaseIconName($icon['class']);
+        
+        if ($style === 'outline') {
+            return $baseClassName;
+        } elseif ($style === 'solid') {
+            // 如果原本就是 -fill 圖標，保持原樣
+            if (str_contains($icon['class'], '-fill')) {
+                return $icon['class'];
+            }
+            // 否則添加 -fill 後綴
+            return $baseClassName . '-fill';
+        }
+        
+        return $icon['class'];
+    }
+    
+    /**
+     * 檢查圖標是否有填充變體
+     * 
+     * @param string $baseClassName
+     * @return bool
+     */
+    private function hasFilledVariant(string $baseClassName): bool
+    {
+        $allIcons = $this->getAllBootstrapIcons();
+        $filledClassName = $baseClassName . '-fill';
+        
+        foreach ($allIcons['data'] as $categoryIcons) {
+            foreach ($categoryIcons as $icon) {
+                if ($icon['class'] === $filledClassName) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
+     * 取得單一圖標的變體資訊
+     * 
+     * @param string $className
+     * @return array|null
+     */
+    public function getIconVariants(string $className): ?array
+    {
+        $allIcons = $this->getAllBootstrapIcons();
+        
+        foreach ($allIcons['data'] as $categoryIcons) {
+            foreach ($categoryIcons as $icon) {
+                if ($icon['class'] === $className || $icon['base'] === $this->extractBaseIconName($className)) {
+                    return $icon['variants'] ?? null;
+                }
+            }
+        }
+        
+        return null;
+    }
+    
+    /**
+     * 檢查圖標是否支援特定樣式
+     * 
+     * @param string $className
+     * @param string $style
+     * @return bool
+     */
+    public function hasStyleVariant(string $className, string $style): bool
+    {
+        $variants = $this->getIconVariants($className);
+        
+        return $variants && isset($variants[$style]);
+    }
+    
+    /**
+     * 取得圖標的特定樣式 class 名稱
+     * 
+     * @param string $className
+     * @param string $style
+     * @return string|null
+     */
+    public function getIconClass(string $className, string $style): ?string
+    {
+        $variants = $this->getIconVariants($className);
+        
+        if ($variants && isset($variants[$style])) {
+            return $variants[$style]['class'];
+        }
+        
+        return null;
     }
 }

@@ -87,7 +87,7 @@ export class IconService {
     }
 
     try {
-      const response = await axios.get(`${this.apiBaseUrl}/bootstrap_icons`);
+      const response = await axios.get(`${this.apiBaseUrl}/bootstrap-icons`);
       
       // 驗證回應資料
       this._validateResponseData(response.data);
@@ -102,6 +102,124 @@ export class IconService {
   }
 
   /**
+   * 取得 hero icons 變體資訊
+   * 
+   * @returns {Promise<Object>} hero icons 變體資訊
+   * @throws {Error} API 請求失敗時拋出錯誤
+   */
+  async fetchHeroIconVariants() {
+    const cacheKey = 'heroicons_variants';
+    
+    // 檢查快取
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await axios.get(`${this.apiBaseUrl}/heroicons/variants`);
+      
+      // 驗證回應資料
+      this._validateResponseData(response.data);
+      
+      // 儲存到快取
+      this.cache.set(cacheKey, response.data);
+      
+      return response.data;
+    } catch (error) {
+      throw this._handleError('Failed to fetch hero icons variants', error);
+    }
+  }
+
+  /**
+   * 取得 bootstrap icons 變體資訊
+   * 
+   * @returns {Promise<Object>} bootstrap icons 變體資訊
+   * @throws {Error} API 請求失敗時拋出錯誤
+   */
+  async fetchBootstrapIconVariants() {
+    const cacheKey = 'bootstrap_icons_variants';
+    
+    // 檢查快取
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await axios.get(`${this.apiBaseUrl}/bootstrap-icons/variants`);
+      
+      // 驗證回應資料
+      this._validateResponseData(response.data);
+      
+      // 儲存到快取
+      this.cache.set(cacheKey, response.data);
+      
+      return response.data;
+    } catch (error) {
+      throw this._handleError('Failed to fetch bootstrap icons variants', error);
+    }
+  }
+
+  /**
+   * 取得特定樣式的 hero icons
+   * 
+   * @param {string} style - 圖標樣式 ('outline' | 'solid')
+   * @returns {Promise<Object>} 特定樣式的 hero icons 資料
+   * @throws {Error} API 請求失敗時拋出錯誤
+   */
+  async fetchHeroIconsByStyle(style) {
+    const cacheKey = `heroicons_style_${style}`;
+    
+    // 檢查快取
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await axios.get(`${this.apiBaseUrl}/heroicons/style/${style}`);
+      
+      // 驗證回應資料
+      this._validateResponseData(response.data);
+      
+      // 儲存到快取
+      this.cache.set(cacheKey, response.data);
+      
+      return response.data;
+    } catch (error) {
+      throw this._handleError(`Failed to fetch hero icons with style ${style}`, error);
+    }
+  }
+
+  /**
+   * 取得特定樣式的 bootstrap icons
+   * 
+   * @param {string} style - 圖標樣式 ('outline' | 'solid')
+   * @returns {Promise<Object>} 特定樣式的 bootstrap icons 資料
+   * @throws {Error} API 請求失敗時拋出錯誤
+   */
+  async fetchBootstrapIconsByStyle(style) {
+    const cacheKey = `bootstrap_icons_style_${style}`;
+    
+    // 檢查快取
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await axios.get(`${this.apiBaseUrl}/bootstrap-icons/style/${style}`);
+      
+      // 驗證回應資料
+      this._validateResponseData(response.data);
+      
+      // 儲存到快取
+      this.cache.set(cacheKey, response.data);
+      
+      return response.data;
+    } catch (error) {
+      throw this._handleError(`Failed to fetch bootstrap icons with style ${style}`, error);
+    }
+  }
+
+  /**
    * 清除快取
    * 
    * @param {string} [type] - 要清除的快取類型，如果不指定則清除所有快取
@@ -112,12 +230,25 @@ export class IconService {
       const cacheKeyMap = {
         'emojis': 'emojis',
         'heroicons': 'heroicons',
-        'bootstrap_icons': 'bootstrap_icons'
+        'bootstrap_icons': 'bootstrap_icons',
+        'heroicons_variants': 'heroicons_variants',
+        'bootstrap_icons_variants': 'bootstrap_icons_variants'
       };
       
       const cacheKey = cacheKeyMap[type];
       if (cacheKey && this.cache.has(cacheKey)) {
         this.cache.delete(cacheKey);
+      }
+      
+      // 清除樣式相關的快取
+      if (type === 'heroicons' || type === 'bootstrap_icons') {
+        const stylesToClear = ['outline', 'solid'];
+        stylesToClear.forEach(style => {
+          const styleKey = `${type}_style_${style}`;
+          if (this.cache.has(styleKey)) {
+            this.cache.delete(styleKey);
+          }
+        });
       }
     } else {
       // 清除所有快取
