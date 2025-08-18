@@ -13,9 +13,10 @@ return [
      * 
      * 每個圖標包含：
      * - name: 顯示名稱
-     * - component: Vue 組件名稱
+     * - component: Vue 組件名稱（outline 版本）
      * - category: 分類
      * - keywords: 搜尋關鍵字陣列
+     * - base: 基礎名稱（用於變體映射）
      */
     'icons' => [
         ['name' => 'Academic Cap', 'component' => 'AcademicCapIcon', 'category' => 'general', 'keywords' => ['education', 'graduation', 'school', 'university', 'learning']],
@@ -263,6 +264,38 @@ return [
      * 預設樣式
      */
     'default_style' => 'outline',
+    
+    /**
+     * 變體映射設定
+     * 
+     * HeroIcons 的 outline 和 solid 版本使用相同的組件名稱
+     * 區別在於導入路徑：
+     * - outline: @heroicons/vue/outline/ComponentName
+     * - solid: @heroicons/vue/solid/ComponentName
+     */
+    'variant_mapping' => [
+        'outline' => [
+            'path' => '@heroicons/vue/outline',
+            'suffix' => '',
+            'description' => '線條樣式'
+        ],
+        'solid' => [
+            'path' => '@heroicons/vue/solid', 
+            'suffix' => '',
+            'description' => '實心樣式'
+        ]
+    ],
+    
+    /**
+     * 支援的變體類型
+     */
+    'supported_variants' => [
+        'style' => [
+            'type' => 'exclusive',  // 互斥選擇
+            'options' => ['outline', 'solid'],
+            'default' => 'outline'
+        ]
+    ],
     
     /**
      * 分類定義

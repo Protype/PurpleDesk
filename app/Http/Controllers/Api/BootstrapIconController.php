@@ -160,4 +160,89 @@ class BootstrapIconController extends Controller
             'message' => 'Bootstrap Icons cache cleared successfully'
         ]);
     }
+    
+    /**
+     * 取得變體映射資訊
+     * 
+     * @return JsonResponse
+     */
+    public function variants(): JsonResponse
+    {
+        return response()->json([
+            'data' => [
+                'mapping' => $this->bootstrapIconService->getVariantMapping(),
+                'supported' => $this->bootstrapIconService->getSupportedVariants()
+            ]
+        ]);
+    }
+    
+    /**
+     * 取得特定樣式的圖標資料
+     * 
+     * @param Request $request
+     * @param string $style
+     * @return JsonResponse
+     */
+    public function byStyle(Request $request, string $style): JsonResponse
+    {
+        try {
+            return response()->json($this->bootstrapIconService->getIconsByStyle($style));
+        } catch (\InvalidArgumentException $e) {
+            return response()->json([
+                'error' => $e->getMessage()
+            ], 400);
+        }
+    }
+    
+    /**
+     * 取得單一圖標的變體資訊
+     * 
+     * @param Request $request
+     * @param string $className
+     * @return JsonResponse
+     */
+    public function iconVariants(Request $request, string $className): JsonResponse
+    {
+        $variants = $this->bootstrapIconService->getIconVariants($className);
+        
+        if (!$variants) {
+            return response()->json([
+                'error' => 'Icon not found'
+            ], 404);
+        }
+        
+        return response()->json([
+            'data' => [
+                'class' => $className,
+                'variants' => $variants
+            ]
+        ]);
+    }
+    
+    /**
+     * 檢查圖標是否支援特定樣式
+     * 
+     * @param Request $request
+     * @param string $className
+     * @param string $style
+     * @return JsonResponse
+     */
+    public function hasVariant(Request $request, string $className, string $style): JsonResponse
+    {
+        $hasVariant = $this->bootstrapIconService->hasStyleVariant($className, $style);
+        $variantClassName = null;
+        
+        if ($hasVariant) {
+            $variantClassName = $this->bootstrapIconService->getIconClass($className, $style);
+        }
+        
+        return response()->json([
+            'data' => [
+                'class' => $className,
+                'style' => $style,
+                'hasVariant' => $hasVariant,
+                'variantClass' => $variantClassName
+            ]
+        ]);
+    }
 }

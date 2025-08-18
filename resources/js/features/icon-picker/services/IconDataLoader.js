@@ -1,4 +1,5 @@
 import { IconService } from '@/services/IconService.js'
+import { useIconVariants } from '../composables/useIconVariants.js'
 
 /**
  * IconDataLoader - 統一的圖標資料載入服務
@@ -13,6 +14,7 @@ export class IconDataLoader {
     this.cache = new Map()
     this.cacheExpiry = new Map()
     this.iconService = new IconService()
+    this.iconVariants = useIconVariants()
     this.defaultCacheDuration = 24 * 60 * 60 * 1000 // 24小時
   }
 
@@ -52,11 +54,13 @@ export class IconDataLoader {
   /**
    * 取得圖標庫資料 (HeroIcon + Bootstrap Icon 合併)
    * 
-   * @returns {Promise<Array>} 合併的圖標資料陣列
+   * @param {string} [style] - 指定圖標樣式 ('outline' | 'solid')，預設使用當前樣式
+   * @returns {Promise<Object>} 合併的圖標資料物件
    * @throws {Error} 載入失敗時拋出錯誤
    */
-  async getIconLibraryData() {
-    const cacheKey = 'icon-library-data'
+  async getIconLibraryData(style = null) {
+    const targetStyle = style || this.iconVariants.currentIconStyle.value
+    const cacheKey = `icon-library-data-${targetStyle}`
     
     // 檢查快取
     if (this._hasValidCache(cacheKey)) {
@@ -64,14 +68,22 @@ export class IconDataLoader {
     }
 
     try {
-      // 並行載入兩種圖標資料
-      const [heroIconsData, bootstrapIconsData] = await Promise.all([
-        this._loadHeroIcons(),
-        this._loadBootstrapIcons()
+      // 並行載入圖標資料和變體資訊
+      const [heroIconsData, bootstrapIconsData, heroVariants, bootstrapVariants] = await Promise.all([
+        this._loadHeroIcons(targetStyle),
+        this._loadBootstrapIcons(targetStyle),
+        this._loadHeroIconVariants(),
+        this._loadBootstrapIconVariants()
       ])
       
       // 合併資料
-      const mergedData = this._mergeIconLibraryData(heroIconsData, bootstrapIconsData)
+      const mergedData = this._mergeIconLibraryData(
+        heroIconsData, 
+        bootstrapIconsData, 
+        heroVariants, 
+        bootstrapVariants,
+        targetStyle
+      )
       
       // 儲存到快取
       this._setCache(cacheKey, mergedData)
@@ -95,6 +107,11 @@ export class IconDataLoader {
       // 同時清除 IconService 的快取
       if (key === 'emoji-data') {
         this.iconService.clearCache('emojis')
+      } else if (key.startsWith('icon-library-data')) {
+        this.iconService.clearCache('heroicons')
+        this.iconService.clearCache('bootstrap_icons')
+        this.iconService.clearCache('heroicons_variants')
+        this.iconService.clearCache('bootstrap_icons_variants')
       }
     } else {
       this.cache.clear()
@@ -109,17 +126,21 @@ export class IconDataLoader {
    * 載入 HeroIcons 資料
    * 
    * @private
-   * @returns {Promise<Array>} HeroIcons 資料
+   * @param {string} [style] - 指定圖標樣式
+   * @returns {Promise<Object>} HeroIcons 資料物件
    */
-  async _loadHeroIcons() {
+  async _loadHeroIcons(style = null) {
     try {
-      // 從前端檔案載入 HeroIcons
-      const heroIconsModule = await import('@/utils/heroicons/allHeroicons.js')
-      const heroIcons = heroIconsModule.default || heroIconsModule
-      return Array.isArray(heroIcons) ? heroIcons : []
+      if (style) {
+        // 載入特定樣式的圖標
+        return await this.iconService.fetchHeroIconsByStyle(style)
+      } else {
+        // 載入所有圖標
+        return await this.iconService.fetchHeroIcons()
+      }
     } catch (error) {
       console.warn('Failed to load HeroIcons:', error.message)
-      return []
+      return { data: [], meta: { total: 0 } }
     }
   }
 
@@ -127,21 +148,51 @@ export class IconDataLoader {
    * 載入 Bootstrap Icons 資料
    * 
    * @private
-   * @returns {Promise<Array>} Bootstrap Icons 資料
+   * @param {string} [style] - 指定圖標樣式
+   * @returns {Promise<Object>} Bootstrap Icons 資料物件
    */
-  async _loadBootstrapIcons() {
+  async _loadBootstrapIcons(style = null) {
     try {
-      // 從前端檔案載入 Bootstrap Icons
-      const bootstrapIconsModule = await import('@/utils/icons/index.js')
-      const bootstrapIconsIndex = bootstrapIconsModule.default || bootstrapIconsModule
-      
-      // 載入所有圖標
-      await bootstrapIconsIndex.loadAllIcons()
-      const icons = bootstrapIconsIndex.getAllLoadedIcons()
-      return Array.isArray(icons) ? icons : []
+      if (style) {
+        // 載入特定樣式的圖標
+        return await this.iconService.fetchBootstrapIconsByStyle(style)
+      } else {
+        // 載入所有圖標
+        return await this.iconService.fetchBootstrapIcons()
+      }
     } catch (error) {
       console.warn('Failed to load Bootstrap Icons:', error.message)
-      return []
+      return { data: {}, meta: { total: 0 } }
+    }
+  }
+
+  /**
+   * 載入 HeroIcons 變體資訊
+   * 
+   * @private
+   * @returns {Promise<Object>} HeroIcons 變體資訊
+   */
+  async _loadHeroIconVariants() {
+    try {
+      return await this.iconService.fetchHeroIconVariants()
+    } catch (error) {
+      console.warn('Failed to load HeroIcons variants:', error.message)
+      return { data: {} }
+    }
+  }
+
+  /**
+   * 載入 Bootstrap Icons 變體資訊
+   * 
+   * @private
+   * @returns {Promise<Object>} Bootstrap Icons 變體資訊
+   */
+  async _loadBootstrapIconVariants() {
+    try {
+      return await this.iconService.fetchBootstrapIconVariants()
+    } catch (error) {
+      console.warn('Failed to load Bootstrap Icons variants:', error.message)
+      return { data: {} }
     }
   }
 
@@ -149,36 +200,116 @@ export class IconDataLoader {
    * 合併 HeroIcons 和 Bootstrap Icons 資料
    * 
    * @private
-   * @param {Array} heroIcons - HeroIcons 資料
-   * @param {Array} bootstrapIcons - Bootstrap Icons 資料
-   * @returns {Array} 合併後的資料
+   * @param {Object} heroIconsData - HeroIcons 資料物件
+   * @param {Object} bootstrapIconsData - Bootstrap Icons 資料物件
+   * @param {Object} heroVariants - HeroIcons 變體資訊
+   * @param {Object} bootstrapVariants - Bootstrap Icons 變體資訊
+   * @param {string} currentStyle - 當前選擇的樣式
+   * @returns {Object} 合併後的資料物件
    */
-  _mergeIconLibraryData(heroIcons, bootstrapIcons) {
-    const result = []
-    
-    // 添加 HeroIcons
-    if (Array.isArray(heroIcons)) {
-      heroIcons.forEach(icon => {
-        result.push({
-          ...icon,
-          type: 'heroicons',
-          source: 'heroicons'
-        })
-      })
+  _mergeIconLibraryData(heroIconsData, bootstrapIconsData, heroVariants, bootstrapVariants, currentStyle) {
+    const result = {
+      data: {
+        heroicons: [],
+        bootstrap: {}
+      },
+      meta: {
+        total: 0,
+        currentStyle: currentStyle,
+        variants: {
+          heroicons: heroVariants?.data || {},
+          bootstrap: bootstrapVariants?.data || {}
+        },
+        libraries: {
+          heroicons: heroIconsData?.meta || {},
+          bootstrap: bootstrapIconsData?.meta || {}
+        }
+      }
     }
     
-    // 添加 Bootstrap Icons
-    if (Array.isArray(bootstrapIcons)) {
-      bootstrapIcons.forEach(icon => {
-        result.push({
-          ...icon,
-          type: 'bootstrap',
-          source: 'bootstrap-icons'
-        })
+    // 處理 HeroIcons 資料
+    if (heroIconsData?.data && Array.isArray(heroIconsData.data)) {
+      result.data.heroicons = heroIconsData.data.map(icon => ({
+        ...icon,
+        type: 'heroicons',
+        source: 'heroicons',
+        currentStyle: currentStyle,
+        hasVariants: true,
+        variantInfo: this._buildHeroIconVariantInfo(icon, heroVariants?.data)
+      }))
+      result.meta.total += heroIconsData.data.length
+    }
+    
+    // 處理 Bootstrap Icons 資料
+    if (bootstrapIconsData?.data && typeof bootstrapIconsData.data === 'object') {
+      let bootstrapTotal = 0
+      
+      Object.entries(bootstrapIconsData.data).forEach(([categoryName, categoryIcons]) => {
+        if (Array.isArray(categoryIcons)) {
+          result.data.bootstrap[categoryName] = categoryIcons.map(icon => ({
+            ...icon,
+            type: 'bootstrap',
+            source: 'bootstrap-icons',
+            currentStyle: currentStyle,
+            hasVariants: icon.variants && Object.keys(icon.variants).length > 0,
+            variantInfo: this._buildBootstrapIconVariantInfo(icon, bootstrapVariants?.data)
+          }))
+          bootstrapTotal += categoryIcons.length
+        }
       })
+      
+      result.meta.total += bootstrapTotal
     }
     
     return result
+  }
+
+  /**
+   * 建立 HeroIcon 變體資訊
+   * 
+   * @private
+   * @param {Object} icon - 圖標物件
+   * @param {Object} variantData - 變體資料
+   * @returns {Object} 變體資訊物件
+   */
+  _buildHeroIconVariantInfo(icon, variantData) {
+    if (!variantData || !variantData.mapping) {
+      return {
+        available: ['outline', 'solid'],
+        current: icon.currentStyle || 'outline',
+        mapping: {}
+      }
+    }
+    
+    return {
+      available: Object.keys(variantData.mapping),
+      current: icon.currentStyle || 'outline',
+      mapping: variantData.mapping
+    }
+  }
+
+  /**
+   * 建立 Bootstrap Icon 變體資訊
+   * 
+   * @private
+   * @param {Object} icon - 圖標物件
+   * @param {Object} variantData - 變體資料
+   * @returns {Object} 變體資訊物件
+   */
+  _buildBootstrapIconVariantInfo(icon, variantData) {
+    if (!variantData || !variantData.mapping) {
+      return {
+        available: icon.variants ? Object.keys(icon.variants) : ['outline'],
+        current: icon.currentStyle || 'outline',
+        mapping: icon.variants || {}
+      }
+    }
+    
+    return {
+      available: icon.variants ? Object.keys(icon.variants) : Object.keys(variantData.mapping),
+      current: icon.currentStyle || 'outline',
+      mapping: icon.variants || variantData.mapping
+    }
   }
 
   /**

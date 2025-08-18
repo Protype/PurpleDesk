@@ -359,4 +359,67 @@ return [
         'medium' => ['files', 'media', 'people'],
         'low' => ['alphanumeric', 'others']
     ],
+    
+    /**
+     * 支援的圖標樣式
+     */
+    'styles' => ['outline', 'solid'],
+    
+    /**
+     * 預設樣式
+     */
+    'default_style' => 'outline',
+    
+    /**
+     * 變體映射設定
+     * 
+     * Bootstrap Icons 的 outline 和 solid (filled) 版本有不同的處理方式：
+     * - outline: 基礎圖標名稱（如 bi-house）
+     * - solid: 帶有 -fill 後綴的圖標名稱（如 bi-house-fill）
+     */
+    'variant_mapping' => [
+        'outline' => [
+            'suffix' => '',
+            'description' => '線條樣式',
+            'rule' => 'remove_fill_suffix'
+        ],
+        'solid' => [
+            'suffix' => '-fill',
+            'description' => '實心樣式', 
+            'rule' => 'add_fill_suffix'
+        ]
+    ],
+    
+    /**
+     * 支援的變體類型
+     */
+    'supported_variants' => [
+        'style' => [
+            'type' => 'exclusive',  // 互斥選擇
+            'options' => ['outline', 'solid'],
+            'default' => 'outline'
+        ]
+    ],
+    
+    /**
+     * 變體過濾規則
+     * 
+     * 用於處理 Bootstrap Icons 的變體關係
+     */
+    'variant_rules' => [
+        'fill_detection' => [
+            'pattern' => '/-fill$/',
+            'base_extraction' => function($className) {
+                return preg_replace('/-fill$/', '', $className);
+            }
+        ],
+        'variant_generation' => [
+            'outline_to_solid' => function($className) {
+                return $className . '-fill';
+            },
+            'solid_to_outline' => function($className) {
+                return preg_replace('/-fill$/', '', $className);
+            }
+        ]
+    ],
 ];

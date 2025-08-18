@@ -144,4 +144,196 @@ class HeroIconServiceTest extends TestCase
         $this->assertIsArray($result);
         $this->assertEquals(230, $result['meta']['total']);
     }
+    
+    // ===== 變體功能測試 =====
+    
+    /**
+     * 測試取得變體映射資訊
+     */
+    public function test_get_variant_mapping()
+    {
+        $mapping = $this->heroIconService->getVariantMapping();
+        
+        $this->assertIsArray($mapping);
+        $this->assertArrayHasKey('outline', $mapping);
+        $this->assertArrayHasKey('solid', $mapping);
+        
+        // 驗證 outline 變體配置
+        $this->assertArrayHasKey('path', $mapping['outline']);
+        $this->assertArrayHasKey('suffix', $mapping['outline']);
+        $this->assertArrayHasKey('description', $mapping['outline']);
+        $this->assertEquals('@heroicons/vue/outline', $mapping['outline']['path']);
+        
+        // 驗證 solid 變體配置
+        $this->assertArrayHasKey('path', $mapping['solid']);
+        $this->assertArrayHasKey('suffix', $mapping['solid']);
+        $this->assertArrayHasKey('description', $mapping['solid']);
+        $this->assertEquals('@heroicons/vue/solid', $mapping['solid']['path']);
+    }
+    
+    /**
+     * 測試取得支援的變體類型
+     */
+    public function test_get_supported_variants()
+    {
+        $variants = $this->heroIconService->getSupportedVariants();
+        
+        $this->assertIsArray($variants);
+        $this->assertContains('outline', $variants);
+        $this->assertContains('solid', $variants);
+        $this->assertCount(2, $variants);
+    }
+    
+    /**
+     * 測試根據樣式取得圖標 - outline 樣式
+     */
+    public function test_get_icons_by_style_outline()
+    {
+        $result = $this->heroIconService->getIconsByStyle('outline');
+        
+        $this->assertIsArray($result);
+        $this->assertArrayHasKey('data', $result);
+        $this->assertArrayHasKey('meta', $result);
+        
+        // 驗證資料總數
+        $this->assertEquals(230, $result['meta']['total']);
+        $this->assertEquals('outline', $result['meta']['currentStyle']);
+        $this->assertEquals('線條樣式', $result['meta']['description']);
+        
+        // 驗證每個圖標都有 currentStyle 屬性
+        foreach ($result['data'] as $icon) {
+            $this->assertArrayHasKey('currentStyle', $icon);
+            $this->assertEquals('outline', $icon['currentStyle']);
+        }
+    }
+    
+    /**
+     * 測試根據樣式取得圖標 - solid 樣式
+     */
+    public function test_get_icons_by_style_solid()
+    {
+        $result = $this->heroIconService->getIconsByStyle('solid');
+        
+        $this->assertIsArray($result);
+        $this->assertArrayHasKey('data', $result);
+        $this->assertArrayHasKey('meta', $result);
+        
+        // 驗證資料總數
+        $this->assertEquals(230, $result['meta']['total']);
+        $this->assertEquals('solid', $result['meta']['currentStyle']);
+        $this->assertEquals('實心樣式', $result['meta']['description']);
+        
+        // 驗證每個圖標都有 currentStyle 屬性
+        foreach ($result['data'] as $icon) {
+            $this->assertArrayHasKey('currentStyle', $icon);
+            $this->assertEquals('solid', $icon['currentStyle']);
+        }
+    }
+    
+    /**
+     * 測試不支援的樣式會拋出例外
+     */
+    public function test_get_icons_by_style_invalid_style()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Unsupported style: invalid');
+        
+        $this->heroIconService->getIconsByStyle('invalid');
+    }
+    
+    /**
+     * 測試取得單一圖標的變體資訊
+     */
+    public function test_get_icon_variants()
+    {
+        // 測試有效的圖標組件名稱
+        $variants = $this->heroIconService->getIconVariants('AcademicCapIcon');
+        
+        $this->assertIsArray($variants);
+        $this->assertArrayHasKey('outline', $variants);
+        $this->assertArrayHasKey('solid', $variants);
+        
+        // 驗證 outline 變體
+        $this->assertArrayHasKey('component', $variants['outline']);
+        $this->assertArrayHasKey('path', $variants['outline']);
+        $this->assertArrayHasKey('description', $variants['outline']);
+        $this->assertEquals('AcademicCapIcon', $variants['outline']['component']);
+        $this->assertEquals('@heroicons/vue/outline', $variants['outline']['path']);
+        
+        // 驗證 solid 變體
+        $this->assertArrayHasKey('component', $variants['solid']);
+        $this->assertArrayHasKey('path', $variants['solid']);
+        $this->assertArrayHasKey('description', $variants['solid']);
+        $this->assertEquals('AcademicCapIcon', $variants['solid']['component']);
+        $this->assertEquals('@heroicons/vue/solid', $variants['solid']['path']);
+    }
+    
+    /**
+     * 測試不存在的圖標組件返回 null
+     */
+    public function test_get_icon_variants_non_existent()
+    {
+        $variants = $this->heroIconService->getIconVariants('NonExistentIcon');
+        
+        $this->assertNull($variants);
+    }
+    
+    /**
+     * 測試檢查圖標是否支援特定樣式
+     */
+    public function test_has_style_variant()
+    {
+        // 測試有效的圖標和樣式
+        $this->assertTrue($this->heroIconService->hasStyleVariant('AcademicCapIcon', 'outline'));
+        $this->assertTrue($this->heroIconService->hasStyleVariant('AcademicCapIcon', 'solid'));
+        
+        // 測試無效的樣式
+        $this->assertFalse($this->heroIconService->hasStyleVariant('AcademicCapIcon', 'invalid'));
+        
+        // 測試不存在的圖標
+        $this->assertFalse($this->heroIconService->hasStyleVariant('NonExistentIcon', 'outline'));
+    }
+    
+    /**
+     * 測試變體映射的一致性
+     */
+    public function test_variant_mapping_consistency()
+    {
+        $mapping = $this->heroIconService->getVariantMapping();
+        $supportedVariants = $this->heroIconService->getSupportedVariants();
+        
+        // 變體映射的鍵應該與支援的變體一致
+        $this->assertEquals(array_keys($mapping), $supportedVariants);
+        
+        // 每個變體都應該有必要的配置
+        foreach ($mapping as $style => $config) {
+            $this->assertArrayHasKey('path', $config);
+            $this->assertArrayHasKey('suffix', $config);
+            $this->assertArrayHasKey('description', $config);
+            $this->assertIsString($config['path']);
+            $this->assertIsString($config['suffix']);
+            $this->assertIsString($config['description']);
+        }
+    }
+    
+    /**
+     * 測試所有圖標都支援所有樣式
+     */
+    public function test_all_icons_support_all_styles()
+    {
+        $allIcons = $this->heroIconService->getAllHeroIcons();
+        $supportedVariants = $this->heroIconService->getSupportedVariants();
+        
+        // 取前 10 個圖標進行測試（避免測試時間過長）
+        $testIcons = array_slice($allIcons['data'], 0, 10);
+        
+        foreach ($testIcons as $icon) {
+            foreach ($supportedVariants as $style) {
+                $this->assertTrue(
+                    $this->heroIconService->hasStyleVariant($icon['component'], $style),
+                    "Icon {$icon['component']} should support style {$style}"
+                );
+            }
+        }
+    }
 }
