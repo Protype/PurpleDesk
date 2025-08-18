@@ -92,7 +92,7 @@
 **所以**：所有重構程式碼都有組織化的存放位置  
 
 **驗收條件**：
-- [ ] 建立 `features/icon-picker/` 根目錄
+- [ ] 建立 `resources/js/features/icon-picker/` 根目錄
 - [ ] 建立 `components/` 子目錄
 - [ ] 建立 `shared/` 子目錄
 - [ ] 建立 `composables/` 子目錄
@@ -101,7 +101,7 @@
 
 **技術要求**：
 ```
-features/icon-picker/
+resources/js/features/icon-picker/
 ├── components/
 │   └── shared/
 ├── composables/
@@ -285,7 +285,7 @@ Route::get('/test/icon-picker', function () {
 
 **整合流程**：
 1. 在 `feat/text-icon-panel` 分支進行整合
-2. 修改 IconPicker.vue 的 initials 標籤頁
+2. 修改 resources/js/features/icon-picker/IconPicker.vue 的 initials 標籤頁
 3. 調整事件處理邏輯
 4. 本地測試驗證
 5. 更新 PR #28 包含整合內容
@@ -1004,7 +1004,7 @@ ST-019 → ST-020 → ST-021
 ```
 
 **影響範圍檢查**：
-- [ ] features/icon-picker/components/TextIconPanel.vue
+- [ ] resources/js/features/icon-picker/components/TextIconPanel.vue
 - [ ] 相關測試檔案的字元限制測試
 - [ ] 其他 IconPicker 相關檔案一致性檢查
 

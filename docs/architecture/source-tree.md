@@ -202,14 +202,14 @@ utils/
 └── 📄 iconSets.js             # 圖標集合定義
 ```
 
-## 新模組化架構 (`features/`)
+## 新模組化架構 (`resources/js/features/`)
 
 ### Features 目錄結構
 
 這是 PurpleDesk 引入的新模組化架構，專門用於 IconPicker 重構：
 
 ```text
-features/
+resources/js/features/
 └── 📁 icon-picker/            # 🆕 IconPicker 重構模組
     ├── 📄 README.md           # 模組說明文件
     ├── 📁 components/         # 模組專用元件
@@ -238,7 +238,7 @@ features/
 根據 IconPicker 重構 PRD，最終架構將會是：
 
 ```text
-features/icon-picker/
+resources/js/features/icon-picker/
 ├── 📁 components/
 │   ├── 📁 shared/
 │   │   └── 📄 VirtualScrollGrid.vue    # 虛擬滾動網格
@@ -477,7 +477,7 @@ storage/
 ```text
 IconPicker 模組依賴關係:
 
-features/icon-picker/
+resources/js/features/icon-picker/
 ├── services/IconDataLoader.js
 │   ├── → resources/js/services/IconService.js
 │   ├── → resources/js/utils/heroicons/allHeroicons.js
@@ -528,11 +528,11 @@ app/Services/EmojiService.php
    ```
 
 2. **模組化開發**
-   - 在 `features/` 下建立新模組
+   - 在 `resources/js/features/` 下建立新模組
    - 或在現有模組下新增功能
 
 3. **測試驅動開發**
-   - 先寫測試 (`tests/` 或 `features/{module}/tests/`)
+   - 先寫測試 (`tests/` 或 `resources/js/features/{module}/tests/`)
    - 再實作功能
 
 4. **程式碼審查**
@@ -559,7 +559,7 @@ app/Services/EmojiService.php
    - 避免過大的檔案 (如當前的 IconPicker.vue)
 
 2. **模組化設計**
-   - 使用 `features/` 目錄進行功能分組
+   - 使用 `resources/js/features/` 目錄進行功能分組
    - 相關檔案放在同一模組下
 
 3. **測試覆蓋**
