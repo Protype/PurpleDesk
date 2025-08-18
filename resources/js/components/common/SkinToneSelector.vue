@@ -27,7 +27,7 @@
             @click="selectTone(tone.value)"
             :title="tone.name"
             class="skin-tone-option"
-            :class="{ 'selected': modelValue === tone.value }"
+            :class="{ 'selected': (typeof modelValue === 'number' ? modelValue : parseInt(modelValue, 10) || 0) === tone.value }"
           >
             <span class="tone-preview" :style="{ backgroundColor: tone.color }"></span>
             <span class="tone-emoji">{{ tone.emoji }}</span>
@@ -45,8 +45,8 @@ export default {
   name: 'SkinToneSelector',
   props: {
     modelValue: {
-      type: String,
-      default: '' // 空字串表示預設（黃色）膚色
+      type: [String, Number],
+      default: 0 // 0 表示預設膚色
     }
   },
   emits: ['update:modelValue'],
@@ -56,19 +56,23 @@ export default {
     const dropdownRef = ref(null)
     const dropdownPosition = ref({ top: '0px', left: '0px' })
 
-    // 膚色選項
+    // 膚色選項 - 使用 0-5 統一數字格式
     const skinTones = [
-      { value: '', name: '預設', color: '#FFC83D', emoji: '👋' },
-      { value: '🏻', name: '淺膚色', color: '#F7DECE', emoji: '👋🏻' },
-      { value: '🏼', name: '中淺膚色', color: '#F3D2A2', emoji: '👋🏼' },
-      { value: '🏽', name: '中膚色', color: '#D5AB88', emoji: '👋🏽' },
-      { value: '🏾', name: '中深膚色', color: '#AF7E57', emoji: '👋🏾' },
-      { value: '🏿', name: '深膚色', color: '#7C533E', emoji: '👋🏿' }
+      { value: 0, name: '預設', color: '#FFC83D', emoji: '👋' },
+      { value: 1, name: '淺膚色', color: '#F7DECE', emoji: '👋🏻' },
+      { value: 2, name: '中淺膚色', color: '#F3D2A2', emoji: '👋🏼' },
+      { value: 3, name: '中膚色', color: '#D5AB88', emoji: '👋🏽' },
+      { value: 4, name: '中深膚色', color: '#AF7E57', emoji: '👋🏾' },
+      { value: 5, name: '深膚色', color: '#7C533E', emoji: '👋🏿' }
     ]
 
     // 當前選中的膚色
     const currentTone = computed(() => {
-      return skinTones.find(t => t.value === props.modelValue) || skinTones[0]
+      // 將 modelValue 轉換為數字進行比較
+      const toneValue = typeof props.modelValue === 'number' 
+        ? props.modelValue 
+        : parseInt(props.modelValue, 10) || 0
+      return skinTones.find(t => t.value === toneValue) || skinTones[0]
     })
 
     const currentToneName = computed(() => currentTone.value.name)

@@ -54,6 +54,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import VirtualScrollGrid from './shared/VirtualScrollGrid.vue'
 import { IconDataLoader } from '../services/IconDataLoader.js'
+import { applySkinTone } from '../utils/emojiSkinToneHandler.js'
 
 export default {
   name: 'EmojiPanel',
@@ -68,8 +69,8 @@ export default {
     },
     // 選中的膚色
     selectedSkinTone: {
-      type: String,
-      default: ''
+      type: [String, Number],
+      default: 0
     },
     // 選中的 emoji
     selectedEmoji: {
@@ -116,7 +117,7 @@ export default {
         ...category,
         emojis: category.emojis?.map(emoji => ({
           ...emoji,
-          displayEmoji: applyModifier(emoji.emoji, props.selectedSkinTone)
+          displayEmoji: applySkinTone(emoji, props.selectedSkinTone)
         })) || []
       }))
     })
@@ -179,36 +180,7 @@ export default {
       return result
     })
 
-    // 套用膚色修飾符到 emoji
-    const applyModifier = (emoji, skinTone) => {
-      if (!skinTone || skinTone === '') return emoji
-      
-      // 移除現有膚色修飾符
-      const baseEmoji = emoji.replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '')
-      
-      // 簡化的膚色支援檢查 - 基於已知的支援膚色 emoji
-      const supportsSkinTone = [
-        '👋', '🤚', '🖐', '✋', '🖖', '👌', '🤌', '🤏', '✌', '🤞', '🤟', '🤘', '🤙', 
-        '👈', '👉', '👆', '🖕', '👇', '☝', '👍', '👎', '👊', '✊', '🤛', '🤜', 
-        '👏', '🙌', '👐', '🤲', '🤝', '🙏', '✍', '💅', '🤳', '💪',
-        '🧑', '👨', '👩', '🧒', '👶', '👧', '🧓', '👴', '👵', '🙍', '🙎', 
-        '🙅', '🙆', '💁', '🙋', '🧏', '🙇', '🤦', '🤷', '👮', '🕵', '💂', 
-        '🥷', '👷', '🤴', '👸', '👳', '👲', '🧕', '🤵', '👰', '🤰', '🤱', 
-        '👼', '🎅', '🤶', '🧙', '🧚', '🧛', '🧜', '🧝', '🧞', '🧟', 
-        '💆', '💇', '🚶', '🧍', '🧎', '🏃', '💃', '🕺', '🕴', '👯', 
-        '🧗', '🤺', '🏇', '⛷', '🏂', '🏌', '🏄', '🚣', '🏊', '⛹', 
-        '🏋', '🚴', '🚵', '🤸', '🤼', '🤽', '🤾', '🤹', '🧘', '🛀', '🛌'
-      ]
-      
-      // 檢查是否支援膚色
-      const isHumanEmoji = supportsSkinTone.includes(baseEmoji)
-      
-      if (isHumanEmoji) {
-        return baseEmoji + skinTone
-      }
-      
-      return emoji
-    }
+    // 移除舊的 applyModifier 方法，現在使用 applySkinTone 工具函數
 
     // 選擇 emoji
     const selectEmoji = (item) => {

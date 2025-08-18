@@ -253,7 +253,7 @@ export default {
     const customInitials = ref('')
     const localBackgroundColor = ref(props.backgroundColor)
     const searchQuery = ref('')
-    const selectedSkinTone = ref('')
+    const selectedSkinTone = ref(0)
 
     // 面板位置計算
     const panelPosition = reactive({
