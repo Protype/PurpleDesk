@@ -12,8 +12,8 @@
 
 <script>
 import { computed } from 'vue'
-import IconPicker from './IconPicker.vue'
-import IconPickerOri from '../../../resources/js/components/common/IconPickerOri.vue'
+import IconPicker from '../IconPicker.vue'
+import IconPickerOri from '@/components/common/IconPickerOri.vue'
 
 export default {
   name: 'IconPickerProxy',

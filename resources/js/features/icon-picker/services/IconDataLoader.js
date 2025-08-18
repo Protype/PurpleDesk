@@ -1,4 +1,4 @@
-import { IconService } from '../../../resources/js/services/IconService.js'
+import { IconService } from '@/services/IconService.js'
 
 /**
  * IconDataLoader - 統一的圖標資料載入服務
@@ -114,7 +114,7 @@ export class IconDataLoader {
   async _loadHeroIcons() {
     try {
       // 從前端檔案載入 HeroIcons
-      const heroIconsModule = await import('../../../resources/js/utils/heroicons/allHeroicons.js')
+      const heroIconsModule = await import('@/utils/heroicons/allHeroicons.js')
       const heroIcons = heroIconsModule.default || heroIconsModule
       return Array.isArray(heroIcons) ? heroIcons : []
     } catch (error) {
@@ -132,7 +132,7 @@ export class IconDataLoader {
   async _loadBootstrapIcons() {
     try {
       // 從前端檔案載入 Bootstrap Icons
-      const bootstrapIconsModule = await import('../../../resources/js/utils/icons/index.js')
+      const bootstrapIconsModule = await import('@/utils/icons/index.js')
       const bootstrapIconsIndex = bootstrapIconsModule.default || bootstrapIconsModule
       
       // 載入所有圖標
@@ -196,6 +196,11 @@ export class IconDataLoader {
     
     // 如果是物件，嘗試提取陣列
     if (rawData && typeof rawData === 'object') {
+      // 處理新的 API 格式：{ categories: { categoryId: { subgroups: { subgroupId: { emojis: [...] } } } } }
+      if (rawData.categories && typeof rawData.categories === 'object') {
+        return this._processCategoriesFormat(rawData.categories)
+      }
+      
       // 檢查常見的資料結構
       if (rawData.data && Array.isArray(rawData.data)) {
         return rawData.data
@@ -211,6 +216,105 @@ export class IconDataLoader {
     // 如果無法識別格式，返回空陣列
     console.warn('Unknown emoji data format, returning empty array')
     return []
+  }
+
+  /**
+   * 處理 categories 格式的 emoji 資料
+   * 
+   * @private
+   * @param {Object} categories - 分類資料物件
+   * @returns {Array} 轉換後的陣列格式
+   */
+  _processCategoriesFormat(categories) {
+    const result = []
+    
+    // 分類名稱對應表
+    const categoryNameMap = {
+      'smileys_emotion': '表情符號與人物',
+      'people_body': '人物與身體',
+      'animals_nature': '動物與自然',
+      'food_drink': '食物與飲料',
+      'travel_places': '旅遊與地點',
+      'activities': '活動',
+      'objects': '物品',
+      'symbols': '符號',
+      'flags': '旗幟'
+    }
+    
+    Object.entries(categories).forEach(([categoryId, category]) => {
+      if (!category.subgroups || typeof category.subgroups !== 'object') {
+        return
+      }
+      
+      // 收集該分類下所有子群組的 emoji
+      const allEmojis = []
+      
+      Object.entries(category.subgroups).forEach(([subgroupId, subgroup]) => {
+        if (Array.isArray(subgroup.emojis)) {
+          allEmojis.push(...subgroup.emojis)
+        }
+      })
+      
+      // 過濾和清理 emoji
+      const cleanedEmojis = this._filterAndCleanEmojis(allEmojis)
+      
+      // 只有當有 emoji 時才新增分類
+      if (cleanedEmojis.length > 0) {
+        result.push({
+          categoryId,
+          categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
+          emojis: cleanedEmojis
+        })
+      }
+    })
+    
+    return result
+  }
+
+  /**
+   * 過濾和清理 emoji，移除複合 emoji 和膚色變體
+   * 
+   * @private
+   * @param {Array} emojis - 原始 emoji 陣列
+   * @returns {Array} 清理後的 emoji 陣列
+   */
+  _filterAndCleanEmojis(emojis) {
+    const seen = new Set()
+    const result = []
+    
+    emojis.forEach(emojiData => {
+      if (!emojiData.emoji) return
+      
+      // 移除膚色修飾符和變化選擇器
+      const baseEmoji = emojiData.emoji
+        .replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '') // 移除膚色修飾符
+        .replace(/\uFE0F/g, '') // 移除變化選擇器
+        .replace(/\u200D.*$/g, '') // 移除 ZWJ 序列（複合 emoji）
+        .trim()
+      
+      // 跳過空字符串或已經處理過的基礎 emoji
+      if (!baseEmoji || seen.has(baseEmoji)) {
+        return
+      }
+      
+      // 跳過複合 emoji（包含 ZWJ 的 emoji）
+      if (emojiData.emoji.includes('\u200D')) {
+        return
+      }
+      
+      // 跳過膚色變體（保留基礎版本）
+      if (/[\u{1F3FB}-\u{1F3FF}]/u.test(emojiData.emoji)) {
+        return
+      }
+      
+      seen.add(baseEmoji)
+      result.push({
+        ...emojiData,
+        emoji: baseEmoji
+      })
+    })
+    
+    return result
   }
 
   /**

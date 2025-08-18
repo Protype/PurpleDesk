@@ -10,7 +10,7 @@ vi.mock('../../components/IconPicker.vue', () => ({
   }
 }))
 
-vi.mock('../../../../resources/js/components/common/IconPickerOri.vue', () => ({
+vi.mock('@/components/common/IconPickerOri.vue', () => ({
   default: {
     name: 'IconPickerOri', 
     template: '<div data-testid="original-iconpicker">Original IconPicker</div>'

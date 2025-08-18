@@ -7,7 +7,7 @@ const mockHeroIcons = [
   { name: 'User', component: 'UserIcon', category: 'people' }
 ]
 
-vi.mock('../../../../resources/js/utils/heroicons/allHeroicons.js', () => ({
+vi.mock('@/utils/heroicons/allHeroicons.js', () => ({
   default: mockHeroIcons
 }))
 
@@ -22,7 +22,7 @@ const mockBootstrapIconsIndex = {
   getAllLoadedIcons: vi.fn().mockReturnValue(mockBootstrapIcons)
 }
 
-vi.mock('../../../../resources/js/utils/icons/index.js', () => ({
+vi.mock('@/utils/icons/index.js', () => ({
   default: mockBootstrapIconsIndex
 }))
 
@@ -79,7 +79,7 @@ describe('IconDataLoader - Icon Library Data Integration', () => {
       const newLoader = new IconDataLoader()
       
       // Mock 空的 HeroIcons 只對這個實例
-      vi.doMock('../../../../resources/js/utils/heroicons/allHeroicons.js', () => ({
+      vi.doMock('@/utils/heroicons/allHeroicons.js', () => ({
         default: []
       }))
       

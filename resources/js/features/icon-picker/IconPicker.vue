@@ -102,6 +102,27 @@
             </div>
           </div>
 
+          <!-- 搜尋與選擇器區域 -->
+          <div v-if="activeTab === 'emoji' || activeTab === 'icons'" class="mb-4">
+            <div class="flex space-x-2">
+              <!-- 搜尋欄位 -->
+              <div class="flex-1">
+                <IconPickerSearch
+                  v-model="searchQuery"
+                  :placeholder="activeTab === 'emoji' ? '搜尋 Emoji...' : '搜尋圖標...'"
+                />
+              </div>
+              <!-- 功能按鈕組 -->
+              <div class="flex space-x-1">
+                <!-- 膚色選擇器 -->
+                <SkinToneSelector
+                  v-if="activeTab === 'emoji'"
+                  v-model="selectedSkinTone"
+                />
+              </div>
+            </div>
+          </div>
+
           <!-- 內容區域 -->
           <div class="flex-1 overflow-y-auto min-h-0">
             <!-- 文字圖標標籤頁 - 使用 TextIconPanel -->
@@ -113,13 +134,14 @@
               />
             </div>
 
-            <!-- Emoji 標籤頁 - 開發中狀態 -->
-            <div v-else-if="activeTab === 'emoji'" class="text-center py-8">
-              <div class="text-4xl mb-4">🚧</div>
-              <div class="text-gray-600 text-sm">
-                <div class="font-medium mb-2">Emoji Panel 開發中</div>
-                <div class="text-xs text-gray-500">將使用新的 EmojiPanel 元件和 VirtualScrollGrid</div>
-              </div>
+            <!-- Emoji 標籤頁 - 使用 EmojiPanel -->
+            <div v-else-if="activeTab === 'emoji'">
+              <EmojiPanel
+                :search-query="searchQuery"
+                :selected-skin-tone="selectedSkinTone"
+                :selected-emoji="iconType === 'emoji' ? selectedIcon : ''"
+                @emoji-selected="handleEmojiSelection"
+              />
             </div>
 
             <!-- Icons 標籤頁 - 開發中狀態 -->
@@ -175,12 +197,18 @@
 
 <script>
 import { ref, reactive, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
-import TextIconPanel from './TextIconPanel.vue'
+import TextIconPanel from './components/TextIconPanel.vue'
+import EmojiPanel from './components/EmojiPanel.vue'
+import IconPickerSearch from './components/IconPickerSearch.vue'
+import SkinToneSelector from '@/components/common/SkinToneSelector.vue'
 
 export default {
   name: 'IconPicker',
   components: {
-    TextIconPanel
+    TextIconPanel,
+    EmojiPanel,
+    IconPickerSearch,
+    SkinToneSelector
   },
   props: {
     modelValue: {
@@ -207,6 +235,7 @@ export default {
   emits: [
     'update:modelValue',
     'update:iconType',
+    'update:isOpen',
     'background-color-change',
     'file-selected',
     'close'
@@ -220,8 +249,11 @@ export default {
     const activeTab = ref('initials')
     const isColorPickerOpen = ref(false)
     const selectedIcon = ref(props.modelValue)
+    const iconType = ref(props.iconType)
     const customInitials = ref('')
     const localBackgroundColor = ref(props.backgroundColor)
+    const searchQuery = ref('')
+    const selectedSkinTone = ref('')
 
     // 面板位置計算
     const panelPosition = reactive({
@@ -245,6 +277,10 @@ export default {
 
     watch(() => props.backgroundColor, (newValue) => {
       localBackgroundColor.value = newValue
+    })
+
+    watch(() => props.iconType, (newValue) => {
+      iconType.value = newValue
     })
 
     // 計算面板位置
@@ -353,6 +389,17 @@ export default {
       closePicker()
     }
 
+    // Emoji 選擇處理
+    const handleEmojiSelection = (data) => {
+      selectedIcon.value = data.emoji
+      iconType.value = 'emoji'
+      
+      emit('update:modelValue', data.emoji)
+      emit('update:iconType', 'emoji')
+      
+      closePicker()
+    }
+
     // 鍵盤事件處理
     const handleKeyDown = (event) => {
       if (event.key === 'Escape' && isOpen.value) {
@@ -397,8 +444,11 @@ export default {
       activeTab,
       isColorPickerOpen,
       selectedIcon,
+      iconType,
       customInitials,
       localBackgroundColor,
+      searchQuery,
+      selectedSkinTone,
       panelPosition,
       
       // Methods
@@ -409,6 +459,7 @@ export default {
       closeColorPicker,
       clearIcon,
       handleTextSelection,
+      handleEmojiSelection,
       getDisplayIcon
     }
   }

@@ -598,6 +598,145 @@ describe('VirtualScrollGrid', () => {
     })
   })
 
+  describe('fullRow 功能測試', () => {
+    it('應該正確處理 fullRow 項目', () => {
+      const itemsWithFullRow = [
+        { type: 'normal', name: 'Item 1' },
+        { type: 'normal', name: 'Item 2' },
+        { type: 'category-header', name: 'Category A', fullRow: true },
+        { type: 'normal', name: 'Item 3' },
+        { type: 'normal', name: 'Item 4' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithFullRow,
+          itemsPerRow: 3,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 應該有自動填充項目
+      expect(processed.some(item => item.type === 'auto-filler')).toBe(true)
+      
+      // fullRow 項目應該保持原有類型
+      const fullRowItem = processed.find(item => item.fullRow === true)
+      expect(fullRowItem).toBeDefined()
+      expect(fullRowItem.name).toBe('Category A')
+    })
+
+    it('應該在 fullRow 前自動補齊當前行', () => {
+      const itemsWithFullRow = [
+        { type: 'normal', name: 'Item 1' },
+        { type: 'normal', name: 'Item 2' },
+        { type: 'category-header', name: 'Category A', fullRow: true },
+        { type: 'normal', name: 'Item 3' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithFullRow,
+          itemsPerRow: 5, // 每行 5 個
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 前兩個是正常項目
+      expect(processed[0].name).toBe('Item 1')
+      expect(processed[1].name).toBe('Item 2')
+      
+      // 接下來應該是 3 個自動填充項（因為 5-2=3）
+      expect(processed[2].type).toBe('auto-filler')
+      expect(processed[3].type).toBe('auto-filler')
+      expect(processed[4].type).toBe('auto-filler')
+      
+      // 然後是 fullRow 項目
+      expect(processed[5].type).toBe('category-header')
+      expect(processed[5].name).toBe('Category A')
+      expect(processed[5].fullRow).toBe(true)
+      
+      // 最後是第三個正常項目
+      expect(processed[6].name).toBe('Item 3')
+    })
+
+    it('如果當前行已滿，fullRow 項目應該直接開始新行', () => {
+      const itemsWithFullRow = [
+        { type: 'normal', name: 'Item 1' },
+        { type: 'normal', name: 'Item 2' },
+        { type: 'normal', name: 'Item 3' },
+        { type: 'category-header', name: 'Category A', fullRow: true }, // 剛好第 3 個位置
+        { type: 'normal', name: 'Item 4' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithFullRow,
+          itemsPerRow: 3, // 每行 3 個
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 前三個是正常項目（剛好填滿一行）
+      expect(processed[0].name).toBe('Item 1')
+      expect(processed[1].name).toBe('Item 2')
+      expect(processed[2].name).toBe('Item 3')
+      
+      // 不需要自動填充，直接是 fullRow 項目
+      expect(processed[3].type).toBe('category-header')
+      expect(processed[3].name).toBe('Category A')
+      expect(processed[3].fullRow).toBe(true)
+      
+      // 最後是第四個正常項目
+      expect(processed[4].name).toBe('Item 4')
+    })
+
+    it('應該正確處理 visibleRowsData 中的 fullRow 項目', () => {
+      const itemsWithFullRow = [
+        { type: 'normal', name: 'Item 1' },
+        { type: 'category-header', name: 'Category A', fullRow: true },
+        { type: 'normal', name: 'Item 2' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithFullRow,
+          itemsPerRow: 3,
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      // 直接檢查 visibleRowsData
+      const rowsData = wrapper.vm.visibleRowsData
+      
+      // 應該有行數據
+      expect(rowsData.length).toBeGreaterThan(0)
+      
+      // 檢查是否有 fullRow 項目
+      let foundFullRow = false
+      for (const row of rowsData) {
+        for (const item of row.items) {
+          if (item.fullRow === true) {
+            foundFullRow = true
+            break
+          }
+        }
+        if (foundFullRow) break
+      }
+      
+      expect(foundFullRow).toBe(true)
+    })
+  })
+
   describe('響應式更新', () => {
     it('當 items 改變時應該重新計算', async () => {
       wrapper = mount(VirtualScrollGrid, {

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullRow 功能測試</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .virtual-grid-row {
+            border: 1px solid #e5e5e5;
+            margin-bottom: 2px;
+            padding: 4px;
+            background: #fafafa;
+        }
+        .virtual-grid-item {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            background: white;
+        }
+        .category-header {
+            background: #e3f2fd !important;
+            font-weight: bold;
+            color: #1976d2;
+        }
+        .emoji-button {
+            background: #fff3e0;
+            cursor: pointer;
+        }
+        .filler-item {
+            background: #f5f5f5;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>VirtualScrollGrid FullRow 功能測試</h1>
+        
+        <div class="test-container">
+            <h2>測試資料結構</h2>
+            <pre>{{ JSON.stringify(testItems, null, 2) }}</pre>
+        </div>
+        
+        <div class="test-container">
+            <h2>ProcessedItems 結果</h2>
+            <pre>{{ JSON.stringify(processedItems, null, 2) }}</pre>
+        </div>
+        
+        <div class="test-container">
+            <h2>VirtualScrollGrid 渲染結果</h2>
+            <div 
+                v-for="rowData in visibleRowsData" 
+                :key="rowData.rowIndex"
+                class="virtual-grid-row"
+                :style="{ 
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${itemsPerRow}, 1fr)`,
+                    gap: '2px'
+                }"
+            >
+                <div
+                    v-for="item in rowData.items"
+                    :key="item.key"
+                    class="virtual-grid-item"
+                    :class="{
+                        'category-header': item.data?.type === 'category-header',
+                        'emoji-button': item.data?.type === 'emoji-item',
+                        'filler-item': item.type === 'filler'
+                    }"
+                    :style="{ 
+                        gridColumn: item.fullRow ? '1 / -1' : 'span 1'
+                    }"
+                >
+                    <span v-if="item.data?.type === 'category-header'">
+                        📂 {{ item.data.categoryName }}
+                    </span>
+                    <span v-else-if="item.data?.type === 'emoji-item'">
+                        {{ item.data.displayEmoji }}
+                    </span>
+                    <span v-else-if="item.type === 'filler'" class="filler-item">
+                        [空]
+                    </span>
+                    <span v-else>
+                        {{ item.data?.name || 'Unknown' }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, computed } = Vue;
+        
+        createApp({
+            setup() {
+                const itemsPerRow = ref(5);
+                
+                const testItems = ref([
+                    { type: 'emoji-item', displayEmoji: '😀', name: 'grinning' },
+                    { type: 'emoji-item', displayEmoji: '😃', name: 'grinning big' },
+                    { type: 'category-header', categoryName: 'Smileys & Emotion', fullRow: true },
+                    { type: 'emoji-item', displayEmoji: '😄', name: 'grinning squinting' },
+                    { type: 'emoji-item', displayEmoji: '😁', name: 'beaming' },
+                    { type: 'emoji-item', displayEmoji: '😆', name: 'grinning squinting' },
+                    { type: 'emoji-item', displayEmoji: '😅', name: 'grinning sweat' },
+                    { type: 'category-header', categoryName: 'Animals & Nature', fullRow: true },
+                    { type: 'emoji-item', displayEmoji: '🐶', name: 'dog face' },
+                    { type: 'emoji-item', displayEmoji: '🐱', name: 'cat face' }
+                ]);
+                
+                // 模擬 processedItems 邏輯
+                const processedItems = computed(() => {
+                    const result = [];
+                    let currentRowItems = 0;
+                    
+                    for (let i = 0; i < testItems.value.length; i++) {
+                        const item = testItems.value[i];
+                        
+                        if (item?.fullRow === true) {
+                            // 填充當前行
+                            const fillersNeeded = currentRowItems > 0 ? itemsPerRow.value - currentRowItems : 0;
+                            for (let j = 0; j < fillersNeeded; j++) {
+                                result.push({ type: 'auto-filler', data: null });
+                            }
+                            
+                            // 添加 fullRow 項目
+                            result.push({ ...item, type: 'fullrow-item' });
+                            currentRowItems = 0;
+                        } else {
+                            result.push({ ...item, type: 'normal-item' });
+                            currentRowItems = (currentRowItems + 1) % itemsPerRow.value;
+                        }
+                    }
+                    
+                    return result;
+                });
+                
+                // 模擬 visibleRowsData 邏輯
+                const visibleRowsData = computed(() => {
+                    const rows = [];
+                    const items = processedItems.value;
+                    const totalRows = Math.ceil(items.length / itemsPerRow.value);
+                    
+                    for (let rowIndex = 0; rowIndex < totalRows; rowIndex++) {
+                        const rowItems = [];
+                        
+                        for (let colIndex = 0; colIndex < itemsPerRow.value; colIndex++) {
+                            const itemIndex = rowIndex * itemsPerRow.value + colIndex;
+                            
+                            if (itemIndex < items.length) {
+                                const item = items[itemIndex];
+                                const isFullRow = item.type === 'fullrow-item';
+                                
+                                rowItems.push({
+                                    key: `${rowIndex}-${colIndex}`,
+                                    type: item.type === 'auto-filler' ? 'filler' : 'item',
+                                    fullRow: isFullRow,
+                                    data: item,
+                                    index: itemIndex,
+                                    row: rowIndex,
+                                    col: colIndex
+                                });
+                                
+                                if (isFullRow) {
+                                    break;
+                                }
+                            }
+                        }
+                        
+                        rows.push({
+                            rowIndex,
+                            items: rowItems
+                        });
+                    }
+                    
+                    return rows;
+                });
+                
+                return {
+                    testItems,
+                    processedItems,
+                    visibleRowsData,
+                    itemsPerRow
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

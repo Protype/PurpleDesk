@@ -9,7 +9,7 @@ vi.mock('axios', () => ({
 }))
 
 // Mock IconService
-vi.mock('../../../../resources/js/services/IconService.js', () => ({
+vi.mock('@/services/IconService.js', () => ({
   IconService: vi.fn().mockImplementation(() => ({
     fetchEmojis: vi.fn(),
     clearCache: vi.fn()
