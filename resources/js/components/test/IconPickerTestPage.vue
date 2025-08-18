@@ -130,9 +130,9 @@
 
 <script>
 import { ref, computed } from 'vue'
-import IconPickerProxy from '../../../../features/icon-picker/components/IconPickerProxy.vue'
-import IconPickerDevTool from '../../../../features/icon-picker/components/IconPickerDevTool.vue'
-import IconDisplay from '../common/IconDisplay.vue'
+import IconPickerProxy from '@/features/icon-picker/components/IconPickerProxy.vue'
+import IconPickerDevTool from '@/features/icon-picker/components/IconPickerDevTool.vue'
+import IconDisplay from '@/components/common/IconDisplay.vue'
 
 export default {
   name: 'IconPickerTestPage',

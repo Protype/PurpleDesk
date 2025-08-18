@@ -19,7 +19,7 @@ vi.mock('../../components/shared/VirtualScrollGrid.vue', () => ({
 }))
 
 // Mock SkinToneSelector
-vi.mock('../../../resources/js/components/common/SkinToneSelector.vue', () => ({
+vi.mock('@/components/common/SkinToneSelector.vue', () => ({
   default: {
     name: 'SkinToneSelector',
     props: ['modelValue'],

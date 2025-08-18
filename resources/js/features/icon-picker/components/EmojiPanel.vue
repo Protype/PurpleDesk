@@ -21,29 +21,29 @@
         :container-height="176"
         :buffer="2"
         :preserve-scroll-position="true"
+        class="px-2 py-1"
         ref="virtualGrid"
       >
         <template #item="{ item, index }">
-          <div
-            v-if="item"
-            @click="selectEmoji(item)"
-            class="emoji-item flex items-center justify-center"
-            :class="{ 
-              'category-header': item.isCategory,
-              'emoji-entry': !item.isCategory 
-            }"
-            :title="item.isCategory ? item.categoryName : `${item.emoji} ${item.name}`"
+          <!-- 分類標題 -->
+          <div 
+            v-if="item && item.type === 'category-header'"
+            class="category-header w-full flex items-center space-x-2 pt-3 pb-1 text-sm font-bold text-gray-400"
           >
-            <!-- 分類標題 -->
-            <div v-if="item.isCategory" class="category-title">
-              {{ item.categoryName }}
-            </div>
-            
-            <!-- Emoji 項目 -->
-            <div v-else class="emoji-content">
-              {{ item.displayEmoji }}
-            </div>
+            <span>{{ item.categoryName }}</span>
+            <div class="flex-1 h-px me-2 ml-2 bg-gray-200"></div>
           </div>
+          
+          <!-- Emoji 按鈕 -->
+          <button
+            v-else-if="item && item.type === 'emoji-item'"
+            @click="selectEmoji(item)"
+            :class="selectedEmoji === item.displayEmoji ? 'ring-2 ring-primary-500 bg-primary-50' : 'hover:bg-gray-100'"
+            class="emoji-button p-1 rounded focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
+            :title="`${item.displayEmoji} ${item.name}`"
+          >
+            <span class="text-xl">{{ item.displayEmoji }}</span>
+          </button>
         </template>
       </VirtualScrollGrid>
     </div>
@@ -68,6 +68,11 @@ export default {
     },
     // 選中的膚色
     selectedSkinTone: {
+      type: String,
+      default: ''
+    },
+    // 選中的 emoji
+    selectedEmoji: {
       type: String,
       default: ''
     }
@@ -145,23 +150,26 @@ export default {
       }).filter(category => category.emojis.length > 0) // 只保留有結果的分類
     })
 
-    // 扁平化 emoji 資料用於 VirtualScrollGrid
+    // 扁平化 emoji 資料用於 VirtualScrollGrid（使用新的 fullRow 屬性）
     const flattenedEmojis = computed(() => {
       const result = []
       
       filteredEmojis.value.forEach(category => {
-        // 新增分類標題
-        if (category.emojis.length > 0) {
+        if (category.emojis && category.emojis.length > 0) {
+          // 添加分類標題，使用 fullRow 屬性讓它獨佔一行
           result.push({
+            type: 'category-header',
             isCategory: true,
+            fullRow: true,
             categoryId: category.categoryId,
             categoryName: category.categoryName
           })
           
-          // 新增該分類的 emoji
+          // 添加該分類的 emoji
           category.emojis.forEach(emoji => {
             result.push({
               ...emoji,
+              type: 'emoji-item',
               isCategory: false
             })
           })
@@ -260,37 +268,25 @@ export default {
 }
 
 .emoji-grid-container {
-  @apply border border-gray-100 rounded-md bg-gray-50 p-2;
+  @apply border border-gray-100 rounded-md bg-gray-50 p-2 px-0.5;
 }
 
-.emoji-item {
-  @apply w-8 h-8;
-}
-
-.emoji-item.category-header {
-  @apply w-full bg-gray-300 cursor-default;
-  height: 24px;
+/* 分類標題行樣式 */
+.category-header {
   grid-column: 1 / -1; /* 佔滿整行 */
 }
 
-.emoji-item.category-header:hover {
-  @apply bg-gray-300;
+/* 第一行的特殊樣式 */
+:deep(.virtual-grid-row.first-row .category-header) {
+  /* 針對第一行中的分類標題 */
+  @apply pt-1;
 }
 
-.emoji-item.emoji-entry {
-  @apply cursor-pointer hover:bg-gray-100 rounded p-1 transition-colors;
-}
-
-.emoji-item.emoji-entry:hover {
-  @apply bg-gray-200 scale-110;
-}
-
-.category-title {
-  @apply text-xs font-medium text-gray-600 w-full text-left px-2 truncate;
-}
-
-.emoji-content {
-  @apply text-lg select-none;
+/* Emoji 按鈕樣式 */
+.emoji-button {
+  width: 30px;
+  height: 30px;
+  @apply flex items-center justify-center;
 }
 
 .loading, .error {

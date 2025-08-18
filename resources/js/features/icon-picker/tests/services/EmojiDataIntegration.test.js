@@ -7,7 +7,7 @@ const mockIconService = {
   clearCache: vi.fn()
 }
 
-vi.mock('../../../../resources/js/services/IconService.js', () => ({
+vi.mock('@/services/IconService.js', () => ({
   IconService: vi.fn().mockImplementation(() => mockIconService)
 }))
 

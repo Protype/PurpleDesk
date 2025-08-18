@@ -139,6 +139,7 @@
               <EmojiPanel
                 :search-query="searchQuery"
                 :selected-skin-tone="selectedSkinTone"
+                :selected-emoji="iconType === 'emoji' ? selectedIcon : ''"
                 @emoji-selected="handleEmojiSelection"
               />
             </div>
@@ -196,10 +197,10 @@
 
 <script>
 import { ref, reactive, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
-import TextIconPanel from './TextIconPanel.vue'
-import EmojiPanel from './EmojiPanel.vue'
-import IconPickerSearch from './IconPickerSearch.vue'
-import SkinToneSelector from '../../../resources/js/components/common/SkinToneSelector.vue'
+import TextIconPanel from './components/TextIconPanel.vue'
+import EmojiPanel from './components/EmojiPanel.vue'
+import IconPickerSearch from './components/IconPickerSearch.vue'
+import SkinToneSelector from '@/components/common/SkinToneSelector.vue'
 
 export default {
   name: 'IconPicker',
@@ -248,6 +249,7 @@ export default {
     const activeTab = ref('initials')
     const isColorPickerOpen = ref(false)
     const selectedIcon = ref(props.modelValue)
+    const iconType = ref(props.iconType)
     const customInitials = ref('')
     const localBackgroundColor = ref(props.backgroundColor)
     const searchQuery = ref('')
@@ -275,6 +277,10 @@ export default {
 
     watch(() => props.backgroundColor, (newValue) => {
       localBackgroundColor.value = newValue
+    })
+
+    watch(() => props.iconType, (newValue) => {
+      iconType.value = newValue
     })
 
     // 計算面板位置
@@ -386,6 +392,7 @@ export default {
     // Emoji 選擇處理
     const handleEmojiSelection = (data) => {
       selectedIcon.value = data.emoji
+      iconType.value = 'emoji'
       
       emit('update:modelValue', data.emoji)
       emit('update:iconType', 'emoji')
@@ -437,6 +444,7 @@ export default {
       activeTab,
       isColorPickerOpen,
       selectedIcon,
+      iconType,
       customInitials,
       localBackgroundColor,
       searchQuery,

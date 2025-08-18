@@ -1,4 +1,4 @@
-import { IconService } from '../../../resources/js/services/IconService.js'
+import { IconService } from '@/services/IconService.js'
 
 /**
  * IconDataLoader - 統一的圖標資料載入服務
@@ -114,7 +114,7 @@ export class IconDataLoader {
   async _loadHeroIcons() {
     try {
       // 從前端檔案載入 HeroIcons
-      const heroIconsModule = await import('../../../resources/js/utils/heroicons/allHeroicons.js')
+      const heroIconsModule = await import('@/utils/heroicons/allHeroicons.js')
       const heroIcons = heroIconsModule.default || heroIconsModule
       return Array.isArray(heroIcons) ? heroIcons : []
     } catch (error) {
@@ -132,7 +132,7 @@ export class IconDataLoader {
   async _loadBootstrapIcons() {
     try {
       // 從前端檔案載入 Bootstrap Icons
-      const bootstrapIconsModule = await import('../../../resources/js/utils/icons/index.js')
+      const bootstrapIconsModule = await import('@/utils/icons/index.js')
       const bootstrapIconsIndex = bootstrapIconsModule.default || bootstrapIconsModule
       
       // 載入所有圖標

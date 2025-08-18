@@ -19,25 +19,26 @@
       >
         <!-- 渲染可見的行 -->
         <div
-          v-for="rowIndex in visibleRowIndexes"
-          :key="rowIndex"
-          class="virtual-grid-row"
+          v-for="rowData in visibleRowsData"
+          :key="rowData.rowIndex"
+          :class="[
+            'virtual-grid-row',
+            { 'first-row': rowData.isFirstRow }
+          ]"
           :style="{ 
             height: `${rowHeight}px`,
-            display: 'flex',
-            alignItems: 'center'
+            display: 'grid',
+            gridTemplateColumns: `repeat(${itemsPerRow}, 1fr)`,
+            alignItems: 'center',
+            gap: '2px'
           }"
         >
           <!-- 渲染該行的項目 -->
-          <template
-            v-for="colIndex in itemsPerRow"
-            :key="`${rowIndex}-${colIndex}`"
-          >
+          <template v-for="item in rowData.items" :key="item.key">
             <div
-              v-if="getItemAt(rowIndex, colIndex - 1)"
               class="virtual-grid-item"
               :style="{ 
-                flex: `0 0 ${100 / itemsPerRow}%`,
+                gridColumn: item.fullRow ? '1 / -1' : 'span 1',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
@@ -45,15 +46,17 @@
             >
               <!-- 使用 slot 渲染項目內容 -->
               <slot 
+                v-if="item.type === 'item'"
                 name="item" 
-                :item="getItemAt(rowIndex, colIndex - 1)"
-                :index="getItemIndex(rowIndex, colIndex - 1)"
-                :row="rowIndex"
-                :col="colIndex - 1"
+                :item="item.data"
+                :index="item.index"
+                :row="item.row"
+                :col="item.col"
               >
                 <!-- 預設渲染 -->
-                <div>{{ getItemAt(rowIndex, colIndex - 1)?.name || '' }}</div>
+                <div>{{ item.data?.name || '' }}</div>
               </slot>
+              <!-- 填充項目不渲染內容 -->
             </div>
           </template>
         </div>
@@ -109,10 +112,39 @@ export default {
     
     // 使用 shallowRef 優化大型陣列性能
     const itemsRef = shallowRef(props.items)
+    
+    // 處理 fullRow 項目，自動補位
+    const processedItems = computed(() => {
+      const result = []
+      let currentRowItems = 0
+      
+      for (let i = 0; i < itemsRef.value.length; i++) {
+        const item = itemsRef.value[i]
+        
+        if (item?.fullRow === true) {
+          // 處理獨立行項目
+          // 1. 先填充當前行剩餘空位
+          const fillersNeeded = currentRowItems > 0 ? props.itemsPerRow - currentRowItems : 0
+          for (let j = 0; j < fillersNeeded; j++) {
+            result.push({ type: 'auto-filler', data: null })
+          }
+          
+          // 2. 添加 fullRow 項目，保持原有 type
+          result.push(item)
+          currentRowItems = 0 // 重置行計數
+        } else {
+          // 一般項目，保持原有的 type
+          result.push(item)
+          currentRowItems = (currentRowItems + 1) % props.itemsPerRow
+        }
+      }
+      
+      return result
+    })
 
     // 計算屬性（增加記憶化優化）
     const totalRows = computed(() => {
-      return Math.ceil(itemsRef.value.length / props.itemsPerRow)
+      return Math.ceil(processedItems.value.length / props.itemsPerRow)
     })
 
     const totalHeight = computed(() => {
@@ -154,6 +186,50 @@ export default {
       
       return indexes
     })
+    
+    // 計算每行的實際數據（簡單按行分組）
+    const visibleRowsData = computed(() => {
+      const rows = []
+      const items = processedItems.value
+      const start = Math.max(0, startRow.value - props.buffer)
+      const end = endRow.value
+      
+      for (let rowIndex = start; rowIndex < end; rowIndex++) {
+        const rowItems = []
+        
+        for (let colIndex = 0; colIndex < props.itemsPerRow; colIndex++) {
+          const itemIndex = rowIndex * props.itemsPerRow + colIndex
+          
+          if (itemIndex < items.length) {
+            const item = items[itemIndex]
+            const isFullRow = item.fullRow === true
+            
+            rowItems.push({
+              key: `${rowIndex}-${colIndex}`,
+              type: item.type === 'auto-filler' ? 'filler' : 'item',
+              fullRow: isFullRow,
+              data: item,
+              index: itemIndex,
+              row: rowIndex,
+              col: colIndex
+            })
+            
+            // 如果是 fullRow 項目，這行就結束了
+            if (isFullRow) {
+              break
+            }
+          }
+        }
+        
+        rows.push({
+          rowIndex,
+          items: rowItems,
+          isFirstRow: rowIndex === 0
+        })
+      }
+      
+      return rows
+    })
 
     // 優化 visibleItems 計算，減少不必要的重新計算
     const visibleItems = computed(() => {
@@ -165,7 +241,7 @@ export default {
       const items = []
       const start = Math.max(0, startRow.value - props.buffer)
       const end = endRow.value
-      const itemsArray = itemsRef.value
+      const itemsArray = processedItems.value
 
       for (let rowIndex = start; rowIndex < end; rowIndex++) {
         for (let colIndex = 0; colIndex < props.itemsPerRow; colIndex++) {
@@ -187,7 +263,7 @@ export default {
     // 方法
     const getItemAt = (rowIndex, colIndex) => {
       const itemIndex = rowIndex * props.itemsPerRow + colIndex
-      return itemsRef.value[itemIndex] || null
+      return processedItems.value[itemIndex] || null
     }
 
     const getItemIndex = (rowIndex, colIndex) => {
@@ -293,8 +369,10 @@ export default {
       endRow,
       offsetY,
       visibleRowIndexes,
+      visibleRowsData,
       visibleItems,
       scrollTop,
+      processedItems,
       
       // 新增的響應式數據
       isScrolling,
@@ -312,7 +390,8 @@ export default {
 <style scoped>
 .virtual-scroll-grid {
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .virtual-grid-row {
@@ -323,22 +402,34 @@ export default {
   min-height: 100%;
 }
 
-/* 滾動條樣式優化 */
+/* Webkit 瀏覽器的滾動條樣式 (Chrome, Safari, Edge) */
 .virtual-scroll-grid::-webkit-scrollbar {
   width: 6px;
 }
 
 .virtual-scroll-grid::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
   border-radius: 3px;
+  margin: 2px 0; /* 上下留白 */
 }
 
 .virtual-scroll-grid::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #cbd5e1;
   border-radius: 3px;
+  border: 1px solid #f1f5f9; /* 細邊框 */
 }
 
 .virtual-scroll-grid::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #94a3b8;
+}
+
+.virtual-scroll-grid::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox 的滾動條樣式 */
+.virtual-scroll-grid {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
 }
 </style>
