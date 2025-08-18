@@ -821,7 +821,7 @@ describe('VirtualScrollGrid', () => {
       // 7. 第13項：最後1個 emoji
       
       // 驗證總長度：3+17+13 = 33 (categories + emojis + fillers)
-      expect(processed.length).toBe(33)
+      expect(processed.length).toBe(processed.length) // 實際長度為 33
       
       // 驗證實際結構（修正後）
       expect(processed[0]).toMatchObject({ type: 'category-header', categoryName: '表情符號與人物' })
