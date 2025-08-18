@@ -35,7 +35,9 @@
         >
           <!-- 渲染該行的項目 -->
           <template v-for="item in rowData.items" :key="item.key">
+            <!-- 🐛 修復：跳過 filler 類型的項目，不渲染 DOM -->
             <div
+              v-if="item.type !== 'filler'"
               class="virtual-grid-item"
               :style="{ 
                 gridColumn: item.fullRow ? '1 / -1' : 'span 1',
@@ -56,7 +58,6 @@
                 <!-- 預設渲染 -->
                 <div>{{ item.data?.name || '' }}</div>
               </slot>
-              <!-- 填充項目不渲染內容 -->
             </div>
           </template>
         </div>
@@ -136,6 +137,15 @@ export default {
           // 一般項目，保持原有的 type
           result.push(item)
           currentRowItems = (currentRowItems + 1) % props.itemsPerRow
+        }
+      }
+      
+      // 🐛 修復：處理最後一行的填充
+      // 如果最後一行沒有填滿，添加必要的 filler
+      if (currentRowItems > 0) {
+        const finalFillersNeeded = props.itemsPerRow - currentRowItems
+        for (let j = 0; j < finalFillersNeeded; j++) {
+          result.push({ type: 'auto-filler', data: null })
         }
       }
       

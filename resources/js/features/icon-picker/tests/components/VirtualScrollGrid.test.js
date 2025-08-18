@@ -175,7 +175,7 @@ describe('VirtualScrollGrid', () => {
       })
 
       expect(wrapper.vm.totalRows).toBe(1)
-      expect(wrapper.vm.visibleItems).toHaveLength(3)
+      expect(wrapper.vm.visibleItems).toHaveLength(10) // 3個項目 + 7個filler
     })
 
     it('應該處理零高度容器', () => {
@@ -778,6 +778,380 @@ describe('VirtualScrollGrid', () => {
 
       expect(wrapper.vm.visibleRows).not.toBe(originalVisibleRows)
       expect(wrapper.vm.visibleRows).toBe(Math.ceil(360 / 36))
+    })
+  })
+
+  describe('processedItems 邏輯測試', () => {
+    it('應該正確處理 EmojiPanel 風格的資料結構', () => {
+      // 模擬 EmojiPanel 的資料結構
+      const emojiPanelData = [
+        // 第一組：2個 emoji + 分類標題
+        { type: 'emoji-item', emoji: '😀', name: 'grinning face' },
+        { type: 'emoji-item', emoji: '😃', name: 'grinning face with big eyes' },
+        { type: 'category-header', categoryName: '人物與身體', fullRow: true },
+        
+        // 第二組：3個 emoji + 分類標題  
+        { type: 'emoji-item', emoji: '👋', name: 'waving hand' },
+        { type: 'emoji-item', emoji: '👍', name: 'thumbs up' },
+        { type: 'emoji-item', emoji: '🧑', name: 'person' },
+        { type: 'category-header', categoryName: '動物與自然', fullRow: true },
+        
+        // 第三組：1個 emoji
+        { type: 'emoji-item', emoji: '🐶', name: 'dog face' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: emojiPanelData,
+          itemsPerRow: 5, // 每行5個便於計算
+          rowHeight: 36,
+          containerHeight: 200
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 預期結果：
+      // 1. 第1-2項：原始 emoji
+      // 2. 第3-5項：3個 auto-filler（5-2=3）
+      // 3. 第6項：分類標題「人物與身體」
+      // 4. 第7-9項：3個 emoji
+      // 5. 第10-11項：2個 auto-filler（5-3=2）
+      // 6. 第12項：分類標題「動物與自然」
+      // 7. 第13項：最後1個 emoji
+      
+      // 驗證總長度：3+17+13 = 33 (categories + emojis + fillers)
+      expect(processed.length).toBe(33)
+      
+      // 驗證實際結構（修正後）
+      expect(processed[0]).toMatchObject({ type: 'category-header', categoryName: '表情符號與人物' })
+      expect(processed[1]).toMatchObject({ type: 'emoji-item', emoji: '😀' })
+      expect(processed[2]).toMatchObject({ type: 'emoji-item', emoji: '😃' })
+      // ... 10個 emoji 項目
+      expect(processed[11]).toMatchObject({ type: 'category-header', categoryName: '人物與身體' })
+      expect(processed[12]).toMatchObject({ type: 'emoji-item', emoji: '👋' })
+      // ... 5個 emoji 項目  
+      expect(processed[17]).toMatchObject({ type: 'auto-filler' }) // 第二組的5個filler開始
+      expect(processed[22]).toMatchObject({ type: 'category-header', categoryName: '動物與自然' })
+      expect(processed[23]).toMatchObject({ type: 'emoji-item', emoji: '🐶' })
+      expect(processed[24]).toMatchObject({ type: 'emoji-item', emoji: '🐱' })
+      expect(processed[25]).toMatchObject({ type: 'auto-filler' }) // 最後一行的8個filler開始
+    })
+
+    it('分類標題前不應該有不必要的 auto-filler', () => {
+      // 測試當前行已滿時，不應該產生 filler
+      const itemsWithFullRows = [
+        { type: 'emoji-item', name: 'Item 1' },
+        { type: 'emoji-item', name: 'Item 2' },
+        { type: 'emoji-item', name: 'Item 3' }, // 剛好滿3個
+        { type: 'category-header', name: 'Category A', fullRow: true } // 不需要 filler
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: itemsWithFullRows,
+          itemsPerRow: 3, // 每行3個
+          rowHeight: 36,
+          containerHeight: 200
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 預期：3個 emoji + 1個分類標題，不應該有任何 auto-filler
+      expect(processed.length).toBe(4)
+      expect(processed[0]).toMatchObject({ type: 'emoji-item', name: 'Item 1' })
+      expect(processed[1]).toMatchObject({ type: 'emoji-item', name: 'Item 2' })
+      expect(processed[2]).toMatchObject({ type: 'emoji-item', name: 'Item 3' })
+      expect(processed[3]).toMatchObject({ type: 'category-header', name: 'Category A', fullRow: true })
+      
+      // 確認沒有 auto-filler
+      const fillers = processed.filter(item => item.type === 'auto-filler')
+      expect(fillers.length).toBe(0)
+    })
+
+    it('應該只在必要時生成 auto-filler', () => {
+      // 測試不同的行填充情況
+      const testCases = [
+        {
+          name: '1個項目後的分類標題',
+          items: [
+            { type: 'emoji-item', name: 'Item 1' },
+            { type: 'category-header', name: 'Category', fullRow: true }
+          ],
+          itemsPerRow: 3,
+          expectedFillers: 2 // 需要2個 filler 填滿行
+        },
+        {
+          name: '2個項目後的分類標題',
+          items: [
+            { type: 'emoji-item', name: 'Item 1' },
+            { type: 'emoji-item', name: 'Item 2' },
+            { type: 'category-header', name: 'Category', fullRow: true }
+          ],
+          itemsPerRow: 3,
+          expectedFillers: 1 // 需要1個 filler 填滿行
+        },
+        {
+          name: '0個項目後的分類標題（行開始）',
+          items: [
+            { type: 'category-header', name: 'Category', fullRow: true }
+          ],
+          itemsPerRow: 3,
+          expectedFillers: 0 // 不需要 filler
+        }
+      ]
+
+      testCases.forEach(testCase => {
+        wrapper = mount(VirtualScrollGrid, {
+          props: {
+            items: testCase.items,
+            itemsPerRow: testCase.itemsPerRow,
+            rowHeight: 36,
+            containerHeight: 200
+          }
+        })
+
+        const processed = wrapper.vm.processedItems
+        const fillers = processed.filter(item => item.type === 'auto-filler')
+        
+        expect(fillers.length).toBe(testCase.expectedFillers, 
+          `測試案例「${testCase.name}」失敗：預期 ${testCase.expectedFillers} 個 filler，實際 ${fillers.length} 個`
+        )
+      })
+    })
+
+    it('currentRowItems 追蹤應該正確', () => {
+      // 測試複雜情況下 currentRowItems 的正確追蹤
+      const complexItems = [
+        { type: 'emoji-item', name: 'A1' },
+        { type: 'emoji-item', name: 'A2' }, // currentRowItems = 2
+        { type: 'category-header', name: 'Cat1', fullRow: true }, // 需要 1 個 filler，然後重置
+        { type: 'emoji-item', name: 'B1' },
+        { type: 'emoji-item', name: 'B2' },
+        { type: 'emoji-item', name: 'B3' }, // currentRowItems = 3，剛好滿行
+        { type: 'category-header', name: 'Cat2', fullRow: true }, // 不需要 filler
+        { type: 'emoji-item', name: 'C1' } // currentRowItems = 1
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: complexItems,
+          itemsPerRow: 3,
+          rowHeight: 36,
+          containerHeight: 200
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      // 預期結構：
+      // A1, A2, filler(1個), Cat1, B1, B2, B3, Cat2, C1, filler(2個)
+      expect(processed.length).toBe(11)
+      
+      // 驗證第一組：2個項目 + 1個filler + 分類
+      expect(processed[0]).toMatchObject({ type: 'emoji-item', name: 'A1' })
+      expect(processed[1]).toMatchObject({ type: 'emoji-item', name: 'A2' })
+      expect(processed[2]).toMatchObject({ type: 'auto-filler' })
+      expect(processed[3]).toMatchObject({ type: 'category-header', name: 'Cat1' })
+      
+      // 驗證第二組：3個項目（滿行）+ 分類
+      expect(processed[4]).toMatchObject({ type: 'emoji-item', name: 'B1' })
+      expect(processed[5]).toMatchObject({ type: 'emoji-item', name: 'B2' })
+      expect(processed[6]).toMatchObject({ type: 'emoji-item', name: 'B3' })
+      expect(processed[7]).toMatchObject({ type: 'category-header', name: 'Cat2' })
+      
+      // 驗證第三組：1個項目
+      expect(processed[8]).toMatchObject({ type: 'emoji-item', name: 'C1' })
+      
+      // 確認總共有3個 filler：1個(A組) + 2個(最後一行)
+      const fillers = processed.filter(item => item.type === 'auto-filler')
+      expect(fillers.length).toBe(3)
+    })
+
+    it('🐛 BUG 重現：使用真實 EmojiPanel 資料結構', () => {
+      // 使用接近真實情況的 EmojiPanel 資料結構（分類標題先於emoji項目）
+      const realEmojiData = [
+        // 表情符號分類
+        { type: 'category-header', categoryName: '表情符號與人物', fullRow: true },
+        { type: 'emoji-item', emoji: '😀', name: 'grinning face' },
+        { type: 'emoji-item', emoji: '😃', name: 'grinning face with big eyes' },
+        { type: 'emoji-item', emoji: '😄', name: 'grinning face with smiling eyes' },
+        { type: 'emoji-item', emoji: '😁', name: 'beaming face with smiling eyes' },
+        { type: 'emoji-item', emoji: '😆', name: 'grinning squinting face' },
+        { type: 'emoji-item', emoji: '😅', name: 'grinning face with sweat' },
+        { type: 'emoji-item', emoji: '😂', name: 'face with tears of joy' },
+        { type: 'emoji-item', emoji: '🤣', name: 'rolling on the floor laughing' },
+        { type: 'emoji-item', emoji: '😊', name: 'smiling face with smiling eyes' },
+        { type: 'emoji-item', emoji: '😇', name: 'smiling face with halo' },
+        // 人物與身體分類
+        { type: 'category-header', categoryName: '人物與身體', fullRow: true },
+        { type: 'emoji-item', emoji: '👋', name: 'waving hand' },
+        { type: 'emoji-item', emoji: '🤚', name: 'raised back of hand' },
+        { type: 'emoji-item', emoji: '🖐', name: 'hand with fingers splayed' },
+        { type: 'emoji-item', emoji: '✋', name: 'raised hand' },
+        { type: 'emoji-item', emoji: '🖖', name: 'vulcan salute' },
+        // 動物與自然分類
+        { type: 'category-header', categoryName: '動物與自然', fullRow: true },
+        { type: 'emoji-item', emoji: '🐶', name: 'dog face' },
+        { type: 'emoji-item', emoji: '🐱', name: 'cat face' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: realEmojiData,
+          itemsPerRow: 10, // 與 EmojiPanel 相同
+          rowHeight: 36,
+          containerHeight: 176
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      console.log('🔍 Processed items length:', processed.length)
+      console.log('🔍 Processed items structure:')
+      processed.forEach((item, index) => {
+        console.log(`  [${index}]: ${item.type} - ${item.name || item.categoryName || item.emoji || 'filler'}`)
+      })
+      
+      // 預期結構分析：
+      // 1. 分類標題「表情符號與人物」(fullRow) - 不需要 filler
+      // 2-11. 10個emoji - 剛好填滿一行，不需要 filler  
+      // 12. 分類標題「人物與身體」(fullRow) - 不需要 filler
+      // 13-17. 5個emoji - 需要 5 個 filler 填滿行
+      // 18-22. 5個 auto-filler 
+      // 23. 分類標題「動物與自然」(fullRow) - 不需要 filler
+      // 24-25. 2個emoji
+      
+      // 檢查是否有不正常的 auto-filler 數量
+      const fillers = processed.filter(item => item.type === 'auto-filler')
+      const categories = processed.filter(item => item.type === 'category-header')
+      const emojis = processed.filter(item => item.type === 'emoji-item')
+      
+      console.log('🔍 統計:')
+      console.log(`  - Categories: ${categories.length}`)
+      console.log(`  - Emojis: ${emojis.length}`)
+      console.log(`  - Fillers: ${fillers.length}`)
+      
+      // 修復後：第二組5個filler + 最後2項目8個filler = 13個
+      expect(fillers.length).toBe(13)
+      expect(categories.length).toBe(3)
+      expect(emojis.length).toBe(17) // 10 + 5 + 2
+    })
+
+    it('🐛 BUG 重現：多分組變數累加問題檢測', () => {
+      // 建立一個複雜的多分組情況來檢測 currentRowItems 累加問題
+      const complexMultiGroupData = [
+        // 第1組：分類標題 + 3個項目（需要7個filler）
+        { type: 'category-header', categoryName: '分組A', fullRow: true },
+        { type: 'emoji-item', emoji: '🅰️', name: 'A1' },
+        { type: 'emoji-item', emoji: '🅰️', name: 'A2' },
+        { type: 'emoji-item', emoji: '🅰️', name: 'A3' },
+        
+        // 第2組：分類標題 + 8個項目（需要2個filler）
+        { type: 'category-header', categoryName: '分組B', fullRow: true },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B1' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B2' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B3' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B4' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B5' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B6' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B7' },
+        { type: 'emoji-item', emoji: '🅱️', name: 'B8' },
+        
+        // 第3組：分類標題 + 10個項目（不需要filler）
+        { type: 'category-header', categoryName: '分組C', fullRow: true },
+        { type: 'emoji-item', emoji: '🇨', name: 'C1' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C2' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C3' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C4' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C5' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C6' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C7' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C8' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C9' },
+        { type: 'emoji-item', emoji: '🇨', name: 'C10' },
+        
+        // 第4組：分類標題 + 1個項目（需要9個filler）
+        { type: 'category-header', categoryName: '分組D', fullRow: true },
+        { type: 'emoji-item', emoji: '🇩', name: 'D1' },
+        
+        // 第5組：分類標題 + 6個項目（需要4個filler）
+        { type: 'category-header', categoryName: '分組E', fullRow: true },
+        { type: 'emoji-item', emoji: '🇪', name: 'E1' },
+        { type: 'emoji-item', emoji: '🇪', name: 'E2' },
+        { type: 'emoji-item', emoji: '🇪', name: 'E3' },
+        { type: 'emoji-item', emoji: '🇪', name: 'E4' },
+        { type: 'emoji-item', emoji: '🇪', name: 'E5' },
+        { type: 'emoji-item', emoji: '🇪', name: 'E6' }
+      ]
+
+      wrapper = mount(VirtualScrollGrid, {
+        props: {
+          items: complexMultiGroupData,
+          itemsPerRow: 10,
+          rowHeight: 36,
+          containerHeight: 400
+        }
+      })
+
+      const processed = wrapper.vm.processedItems
+      
+      console.log('\n🔍 多分組測試 - Processed items length:', processed.length)
+      console.log('🔍 詳細結構:')
+      
+      let currentGroup = ''
+      let groupItemCount = 0
+      let groupFillerCount = 0
+      
+      processed.forEach((item, index) => {
+        if (item.type === 'category-header') {
+          if (currentGroup) {
+            console.log(`    ${currentGroup} 小計: ${groupItemCount} 項目, ${groupFillerCount} filler`)
+          }
+          currentGroup = item.categoryName
+          groupItemCount = 0
+          groupFillerCount = 0
+          console.log(`  [${index}]: 🏷️  ${item.categoryName}`)
+        } else if (item.type === 'emoji-item') {
+          groupItemCount++
+          console.log(`  [${index}]: 📦 ${item.name}`)
+        } else if (item.type === 'auto-filler') {
+          groupFillerCount++
+          console.log(`  [${index}]: 🔳 filler`)
+        }
+      })
+      
+      // 最後一組的統計
+      if (currentGroup) {
+        console.log(`    ${currentGroup} 小計: ${groupItemCount} 項目, ${groupFillerCount} filler`)
+      }
+      
+      // 統計總數
+      const fillers = processed.filter(item => item.type === 'auto-filler')
+      const categories = processed.filter(item => item.type === 'category-header')
+      const emojis = processed.filter(item => item.type === 'emoji-item')
+      
+      console.log('\n🔍 總統計:')
+      console.log(`  - Categories: ${categories.length}`)
+      console.log(`  - Emojis: ${emojis.length}`)
+      console.log(`  - Fillers: ${fillers.length}`)
+      
+      // 驗證預期結果
+      expect(categories.length).toBe(5)
+      expect(emojis.length).toBe(28) // 3+8+10+1+6
+      
+      // 預期 filler 數量：7+2+0+9+4 = 22
+      const expectedFillers = 7 + 2 + 0 + 9 + 4
+      console.log(`\n🎯 預期 filler 數量: ${expectedFillers}`)
+      console.log(`🎯 實際 filler 數量: ${fillers.length}`)
+      
+      // 如果有累加錯誤，filler 數量會異常
+      expect(fillers.length).toBe(expectedFillers)
+      
+      // 驗證總長度
+      const expectedTotal = 5 + 28 + expectedFillers // categories + emojis + fillers
+      expect(processed.length).toBe(expectedTotal)
     })
   })
 })
