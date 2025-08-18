@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Api\EmojiController;
 use App\Http\Controllers\Api\HeroIconController;
+use App\Http\Controllers\Api\BootstrapIconController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\TeamController;
@@ -62,4 +63,13 @@ Route::prefix('config/icon')->group(function () {
     Route::get('/heroicons/categories', [HeroIconController::class, 'categories']);
     Route::get('/heroicons/search', [HeroIconController::class, 'search']);
     Route::get('/heroicons/by-category', [HeroIconController::class, 'byCategory']);
+    
+    // Bootstrap Icons API 路由
+    Route::get('/bootstrap-icons', [BootstrapIconController::class, 'index']);
+    Route::get('/bootstrap-icons/search', [BootstrapIconController::class, 'search']);
+    Route::get('/bootstrap-icons/categories', [BootstrapIconController::class, 'categories']);
+    Route::get('/bootstrap-icons/priority', [BootstrapIconController::class, 'priority']);
+    Route::get('/bootstrap-icons/priority/{priority}', [BootstrapIconController::class, 'byPriority']);
+    Route::get('/bootstrap-icons/stats', [BootstrapIconController::class, 'stats']);
+    Route::post('/bootstrap-icons/cache/clear', [BootstrapIconController::class, 'clearCache']);
 });
