@@ -115,11 +115,16 @@ class EmojiSkinToneService
         if (preg_match(self::SKIN_TONE_REGEX, $emoji, $matches)) {
             $skinToneChar = $matches[0];
             
-            foreach (self::SKIN_TONE_MODIFIERS as $tone => $unicode) {
-                if ($skinToneChar === mb_convert_encoding($unicode, 'UTF-8', 'UTF-8')) {
-                    return $tone;
-                }
-            }
+            // 直接使用 Unicode 字符比較
+            $skinToneMap = [
+                '🏻' => 1,
+                '🏼' => 2,
+                '🏽' => 3,
+                '🏾' => 4,
+                '🏿' => 5,
+            ];
+            
+            return $skinToneMap[$skinToneChar] ?? null;
         }
         
         return null;
@@ -163,8 +168,16 @@ class EmojiSkinToneService
     {
         $variations = [];
         
-        foreach (self::SKIN_TONE_MODIFIERS as $tone => $unicode) {
-            $skinToneChar = mb_convert_encoding($unicode, 'UTF-8', 'UTF-8');
+        // 直接使用 Unicode 膚色字符
+        $skinToneChars = [
+            1 => '🏻',
+            2 => '🏼', 
+            3 => '🏽',
+            4 => '🏾',
+            5 => '🏿'
+        ];
+        
+        foreach ($skinToneChars as $tone => $skinToneChar) {
             $variations[$tone] = $baseEmoji . $skinToneChar;
         }
         

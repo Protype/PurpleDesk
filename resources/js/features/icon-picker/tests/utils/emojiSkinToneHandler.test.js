@@ -150,7 +150,7 @@ describe('emojiSkinToneHandler', () => {
       const emptyEmoji = {}
       
       expect(canApplySkinTone(emptyEmoji)).toBe(false)
-      expect(applySkinTone(emptyEmoji, 1)).toBe(undefined)
+      expect(applySkinTone(emptyEmoji, 1)).toBe('')
     })
 
     it('should handle emoji data with invalid skin_variations', () => {

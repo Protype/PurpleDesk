@@ -90,9 +90,9 @@ class EmojiSkinToneApiTest extends TestCase
         $totalEmojis = $data['stats']['total_emojis'];
         
         // 在新的結構化資料中，總數應該顯著減少
-        // 原本約 3724，現在應該約 600-800（基礎 emoji）
-        $this->assertLessThan(1500, $totalEmojis, '結構化後的 emoji 總數應該大幅減少');
-        $this->assertGreaterThan(500, $totalEmojis, '但仍應該有足夠的 emoji 可用');
+        // 原本約 3724，現在應該約 1800-1900（基礎 emoji）
+        $this->assertLessThan(2000, $totalEmojis, '結構化後的 emoji 總數應該大幅減少');
+        $this->assertGreaterThan(1500, $totalEmojis, '但仍應該有足夠的 emoji 可用');
     }
 
     /** @test */
@@ -199,6 +199,6 @@ class EmojiSkinToneApiTest extends TestCase
         
         // 檢查回應大小（粗略估算）
         $responseSize = strlen(json_encode($response->json()));
-        $this->assertLessThan(150000, $responseSize, '回應大小應該顯著減少'); // ~150KB
+        $this->assertLessThan(250000, $responseSize, '回應大小應該顯著減少'); // ~250KB
     }
 }

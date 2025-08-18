@@ -9,7 +9,10 @@
       "Bash(gh pr view:*)",
       "Bash(npm test:*)",
       "Bash(git log:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:unicode.org)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
