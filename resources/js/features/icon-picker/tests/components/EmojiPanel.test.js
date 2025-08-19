@@ -488,14 +488,12 @@ describe('EmojiPanel', () => {
         getEmojiData: vi.fn().mockResolvedValue(mockDataWithSkinTone)
       }))
 
-      wrapper = mount(EmojiPanel, {
-        props: {
-          searchQuery: '',
-          selectedSkinTone: '1'  // 使用數字而非 emoji 字符
-        }
-      })
+      wrapper = mount(EmojiPanel)
 
       await flushPromises()
+      
+      // 設定內部狀態的膚色選擇
+      wrapper.vm.selectedSkinTone = 1
 
       // 檢查是否有正確套用膚色
       const emojiItems = wrapper.vm.flattenedEmojis.filter(item => !item.isCategory)
@@ -517,12 +515,7 @@ describe('EmojiPanel', () => {
     })
 
     it('VirtualScrollGrid 應該啟用 preserveScrollPosition', async () => {
-      wrapper = mount(EmojiPanel, {
-        props: {
-          searchQuery: '',
-          selectedSkinTone: ''
-        }
-      })
+      wrapper = mount(EmojiPanel)
 
       await flushPromises()
 
@@ -595,14 +588,12 @@ describe('EmojiPanel', () => {
         getEmojiData: vi.fn().mockResolvedValue(mockStructuredEmojiData)
       }))
 
-      wrapper = mount(EmojiPanel, {
-        props: {
-          searchQuery: '',
-          selectedSkinTone: '3' // 選擇中等膚色
-        }
-      })
+      wrapper = mount(EmojiPanel)
 
       await flushPromises()
+      
+      // 設定內部狀態的膚色選擇
+      wrapper.vm.selectedSkinTone = 3
 
       const processedEmojis = wrapper.vm.processedEmojis
       const wavingHandEmoji = processedEmojis[0].emojis.find(e => e.emoji === '👋')

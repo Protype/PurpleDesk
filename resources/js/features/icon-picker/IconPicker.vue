@@ -102,25 +102,12 @@
             </div>
           </div>
 
-          <!-- 搜尋與選擇器區域 -->
-          <div v-if="activeTab === 'emoji' || activeTab === 'icons'" class="mb-4">
-            <div class="flex space-x-2">
-              <!-- 搜尋欄位 -->
-              <div class="flex-1">
-                <IconPickerSearch
-                  v-model="searchQuery"
-                  :placeholder="activeTab === 'emoji' ? '搜尋 Emoji...' : '搜尋圖標...'"
-                />
-              </div>
-              <!-- 功能按鈕組 -->
-              <div class="flex space-x-1">
-                <!-- 膚色選擇器 -->
-                <SkinToneSelector
-                  v-if="activeTab === 'emoji'"
-                  v-model="selectedSkinTone"
-                />
-              </div>
-            </div>
+          <!-- 搜尋區域（僅限 Icons 標籤頁） -->
+          <div v-if="activeTab === 'icons'" class="mb-4">
+            <IconPickerSearch
+              v-model="searchQuery"
+              placeholder="搜尋圖標..."
+            />
           </div>
 
           <!-- 內容區域 -->
@@ -137,8 +124,6 @@
             <!-- Emoji 標籤頁 - 使用 EmojiPanel -->
             <div v-else-if="activeTab === 'emoji'">
               <EmojiPanel
-                :search-query="searchQuery"
-                :selected-skin-tone="selectedSkinTone"
                 :selected-emoji="iconType === 'emoji' ? selectedIcon : ''"
                 @emoji-selected="handleEmojiSelection"
               />
