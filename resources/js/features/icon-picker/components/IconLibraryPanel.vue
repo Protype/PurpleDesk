@@ -1,7 +1,7 @@
 <template>
   <div class="icon-library-panel">
     <!-- 頂部工具欄 -->
-    <div class="panel-toolbar flex items-center space-x-3 mb-4">
+    <div class="panel-toolbar flex items-center space-x-3 mb-3">
       <!-- 搜尋欄 -->
       <IconPickerSearch
         v-model="searchQuery"
@@ -155,17 +155,55 @@ const processedIconsData = computed(() => {
     ...Object.values(allIcons.value.data.bootstrap || {}).flat()
   ]
   
-  return allIconsList.map(icon => ({
-    ...icon,
-    // 標記是否為 solid 樣式
-    isSolid: icon.class?.endsWith('-fill') || 
-             icon.component?.includes('Solid') ||
-             false
-  })).sort((a, b) => {
-    const nameA = a.name || a.class || a.component || ''
-    const nameB = b.name || b.class || b.component || ''
+  // 展開 HeroIcons 變體，為每個圖標建立 outline 和 solid 版本
+  const expandedIcons = []
+  
+  allIconsList.forEach(icon => {
+    if (icon.type === 'heroicons' && icon.variants) {
+      // HeroIcons：為每個變體建立單獨的圖標項目
+      Object.entries(icon.variants).forEach(([variant, variantInfo]) => {
+        expandedIcons.push({
+          ...icon,
+          variant: variant,
+          isSolid: variant === 'solid',
+          component: variantInfo.component,
+          displayName: `${icon.name} (${variant})`
+        })
+      })
+    } else {
+      // Bootstrap Icons：保持原樣
+      expandedIcons.push({
+        ...icon,
+        isSolid: icon.class?.endsWith('-fill') || false,
+        displayName: icon.name || icon.class
+      })
+    }
+  })
+  
+  return expandedIcons.sort((a, b) => {
+    const nameA = a.displayName || a.name || a.class || a.component || ''
+    const nameB = b.displayName || b.name || b.class || b.component || ''
     return nameA.localeCompare(nameB)
   })
+})
+
+// 樣式篩選功能
+const styleFilteredIcons = computed(() => {
+  const style = selectedStyle.value
+  
+  if (style === 'all') {
+    return processedIconsData.value
+  }
+  
+  if (style === 'outline') {
+    return processedIconsData.value.filter(icon => !icon.isSolid)
+  }
+  
+  if (style === 'solid') {
+    return processedIconsData.value.filter(icon => icon.isSolid)
+  }
+  
+  return processedIconsData.value
 })
 
 // 搜尋過濾功能
@@ -174,11 +212,11 @@ const {
   filteredData: searchFilteredIcons,
   clearSearch
 } = useSearchFilter(computed(() => 
-  // 將圖標包裝為分類結構供搜尋使用
+  // 將樣式篩選後的圖標包裝為分類結構供搜尋使用
   [{
     categoryId: 'heroicons',
     categoryName: 'Heroicons',
-    icons: processedIconsData.value
+    icons: styleFilteredIcons.value
   }]
 ), {
   itemsKey: 'icons',
@@ -267,22 +305,21 @@ const bootstrapIconsCount = computed(() => {
 const iconComponentCache = new Map()
 
 const getHeroIconComponent = (icon) => {
-  // 根據當前樣式動態解析 HeroIcon 元件
-  const style = selectedStyle.value
   const componentName = icon.component
+  const variant = icon.variant || 'outline'  // 使用圖標項目中的變體資訊
   
   if (!componentName) return null
   
   // 使用快取鍵避免重複查找
-  const cacheKey = `${componentName}-${style}`
+  const cacheKey = `${componentName}-${variant}`
   if (iconComponentCache.has(cacheKey)) {
     return iconComponentCache.get(cacheKey)
   }
   
   try {
-    // 根據樣式選擇正確的元件集合
+    // 根據圖標的變體選擇正確的元件集合
     let component
-    if (style === 'solid') {
+    if (variant === 'solid') {
       component = HeroiconsSolid[componentName]
     } else {
       component = HeroiconsOutline[componentName]
@@ -352,6 +389,14 @@ onMounted(() => {
   // 同步變體狀態
   selectedStyle.value = iconVariants.currentIconStyle.value
 })
+
+// 公開屬性給測試使用
+defineExpose({
+  processedIcons: processedIconsData,
+  filteredIcons,
+  selectedStyle,
+  searchQuery
+})
 </script>
 
 <style scoped>
@@ -383,7 +428,13 @@ onMounted(() => {
 }
 
 .category-header {
-  @apply px-2;
+  grid-column: 1 / -1; /* 佔滿整行 */
+}
+
+/* 第一行的特殊樣式 */
+:deep(.virtual-grid-row.first-row .category-header) {
+  /* 針對第一行中的分類標題 */
+  @apply pt-1;
 }
 
 .empty-state {

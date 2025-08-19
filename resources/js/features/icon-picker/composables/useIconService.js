@@ -63,7 +63,7 @@ export function useIconService() {
     try {
       // 並行載入圖標資料和變體資訊
       const [heroIconsData, bootstrapIconsData, heroVariants, bootstrapVariants] = await Promise.all([
-        loadHeroIcons(style),
+        loadHeroIcons(),
         loadBootstrapIcons(style),
         loadHeroIconVariants(),
         loadBootstrapIconVariants()
@@ -140,9 +140,9 @@ export function useIconService() {
   /**
    * 載入 HeroIcons 資料
    */
-  const loadHeroIcons = async (style) => {
+  const loadHeroIcons = async () => {
     try {
-      const response = await axios.get(`${apiBaseUrl}/heroicons/style/${style}`)
+      const response = await axios.get(`${apiBaseUrl}/heroicons`)
       validateResponseData(response.data)
       return response.data
     } catch (error) {
