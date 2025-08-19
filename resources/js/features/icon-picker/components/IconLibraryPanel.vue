@@ -20,29 +20,14 @@
 
 
     <!-- 載入狀態 -->
-    <div v-if="isLoading" class="flex items-center justify-center py-8">
-      <div class="flex items-center space-x-2 text-gray-500">
-        <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
-        </svg>
-        <span>載入圖標...</span>
-      </div>
+    <div v-if="isLoading" class="loading flex items-center justify-center py-8">
+      <div class="text-sm text-gray-500">載入圖標資料中...</div>
     </div>
 
     <!-- 錯誤狀態 -->
-    <div v-else-if="error" class="flex items-center justify-center py-8">
-      <div class="text-center">
-        <div class="text-red-500 mb-2">
-          <i class="bi bi-exclamation-triangle text-2xl"></i>
-        </div>
-        <p class="text-red-600 text-sm">{{ error }}</p>
-        <button 
-          @click="reloadIcons"
-          class="mt-2 text-primary-600 hover:text-primary-700 text-sm underline"
-        >
-          重新載入
-        </button>
+    <div v-else-if="error" class="error flex items-center justify-center py-8">
+      <div class="text-sm text-red-500">
+        載入失敗：{{ error }}
       </div>
     </div>
 
@@ -50,17 +35,20 @@
     <div v-else-if="filteredIcons.length > 0" class="icon-grid-container">
       <VirtualScrollGrid
         :items="virtualGridItems"
-        :items-per-row="itemsPerRow"
-        :row-height="36"
-        :container-height="400"
+        :items-per-row="10"
+        :row-height="34"
+        :container-height="176"
+        :buffer="2"
+        :preserve-scroll-position="true"
+        class="px-2 py-1"
       >
         <template #item="{ item, itemIndex }">
-          <div
+          <button
             v-if="item.type === 'icon'"
             @click="selectIcon(item.data)"
             :title="getIconTitle(item.data)"
-            class="icon-item w-8 h-8 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors cursor-pointer flex items-center justify-center"
-            :class="{ 'bg-primary-50 ring-2 ring-primary-500': isSelected(item.data) }"
+            class="icon-button p-1 rounded focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
+            :class="isSelected(item.data) ? 'ring-2 ring-primary-500 bg-primary-50' : 'hover:bg-gray-100'"
           >
             <!-- HeroIcon 渲染 -->
             <component
@@ -74,7 +62,7 @@
               :class="['bi', getBootstrapIconClass(item.data)]"
               class="text-gray-700"
             />
-          </div>
+          </button>
           
           <!-- 分類標題 -->
           <div 
@@ -290,6 +278,9 @@ export default {
       return icon.name || icon.class || icon.component || '未知圖標'
     }
 
+    // 快取元件查找結果
+    const iconComponentCache = new Map()
+    
     const getHeroIconComponent = (icon) => {
       // 根據當前樣式動態解析 HeroIcon 元件
       const style = selectedStyle.value
@@ -297,15 +288,27 @@ export default {
       
       if (!componentName) return null
       
+      // 使用快取鍵避免重複查找
+      const cacheKey = `${componentName}-${style}`
+      if (iconComponentCache.has(cacheKey)) {
+        return iconComponentCache.get(cacheKey)
+      }
+      
       try {
         // 根據樣式選擇正確的元件集合
+        let component
         if (style === 'solid') {
-          return HeroiconsSolid[componentName]
+          component = HeroiconsSolid[componentName]
         } else {
-          return HeroiconsOutline[componentName]
+          component = HeroiconsOutline[componentName]
         }
+        
+        // 快取結果
+        iconComponentCache.set(cacheKey, component)
+        return component
       } catch (error) {
         console.warn(`Failed to resolve HeroIcon component: ${componentName}`, error)
+        iconComponentCache.set(cacheKey, null)
         return null
       }
     }
@@ -359,13 +362,14 @@ export default {
       await loadIcons()
     }
 
-    // 載入圖標資料
+    // 載入圖標資料（一次性載入所有樣式）
     const loadIcons = async () => {
       try {
         isLoading.value = true
         error.value = null
         
-        const data = await iconDataLoader.getIconLibraryData(selectedStyle.value)
+        // 載入所有樣式的資料，不依賴當前選擇的樣式
+        const data = await iconDataLoader.getIconLibraryData()
         allIcons.value = data
       } catch (err) {
         error.value = err.message || '載入圖標時發生錯誤'
@@ -374,11 +378,6 @@ export default {
         isLoading.value = false
       }
     }
-
-    // 監聽樣式變化重新載入圖標
-    watch(selectedStyle, async (newStyle) => {
-      await loadIcons()
-    })
 
     // 組件掛載時載入圖標
     onMounted(async () => {
@@ -454,12 +453,16 @@ export default {
   @apply flex-1 min-h-0;
 }
 
+.icon-grid-container {
+  @apply border border-gray-100 rounded-md bg-gray-50 p-2 px-0.5;
+}
+
 /* 確保圖標在不同狀態下的視覺一致性 */
-.icon-item .bi {
+.icon-button .bi {
   font-size: 1.25rem;
 }
 
-.icon-item:focus {
+.icon-button:focus {
   @apply outline-none ring-2 ring-primary-500;
 }
 </style>
