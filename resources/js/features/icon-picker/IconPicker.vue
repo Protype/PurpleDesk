@@ -102,13 +102,6 @@
             </div>
           </div>
 
-          <!-- 搜尋區域（僅限 Icons 標籤頁） -->
-          <div v-if="activeTab === 'icons'" class="mb-4">
-            <IconPickerSearch
-              v-model="searchQuery"
-              placeholder="搜尋圖標..."
-            />
-          </div>
 
           <!-- 內容區域 -->
           <div class="flex-1 overflow-y-auto min-h-0">

@@ -77,11 +77,12 @@
           </div>
           
           <!-- 分類標題 -->
-          <div
+          <div 
             v-else-if="item.type === 'category'"
-            class="category-header w-full text-xs font-medium text-gray-500 py-1"
+            class="category-header w-full flex items-center space-x-2 pt-3 pb-1 text-sm font-bold text-gray-400"
           >
-            {{ item.data.title }} ({{ item.data.count }})
+            <span>{{ item.data.title }}</span>
+            <div class="flex-1 h-px me-2 ml-2 bg-gray-200"></div>
           </div>
         </template>
       </VirtualScrollGrid>
@@ -113,6 +114,9 @@ import IconPickerSearch from './IconPickerSearch.vue'
 import IconStyleSelector from './IconStyleSelector.vue'
 import { IconDataLoader } from '../services/IconDataLoader.js'
 import { useIconVariants } from '../composables/useIconVariants.js'
+// 一次性匯入所有 HeroIcons
+import * as HeroiconsOutline from '@heroicons/vue/outline'
+import * as HeroiconsSolid from '@heroicons/vue/solid'
 
 export default {
   name: 'IconLibraryPanel',
@@ -198,20 +202,8 @@ export default {
 
     // 過濾後的圖標
     const filteredIcons = computed(() => {
-      const style = selectedStyle.value
-      
-      if (style === 'all' || !style) {
-        return processedIcons.value
-      }
-      
-      if (style === 'outline') {
-        return processedIcons.value.filter(icon => !icon.isSolid)
-      }
-      
-      if (style === 'solid') {
-        return processedIcons.value.filter(icon => icon.isSolid)
-      }
-      
+      // 對於 Heroicons，所有圖標都支持 outline 和 solid 樣式
+      // 不需要根據樣式篩選圖標，而是在渲染時根據樣式選擇對應元件
       return processedIcons.value
     })
 
@@ -234,33 +226,24 @@ export default {
         })
       }
       
-      // 正常顯示按分類分組
-      const categories = {}
-      filteredIcons.value.forEach(icon => {
-        const category = icon.category || (icon.type === 'heroicons' ? 'heroicons' : 'other')
-        if (!categories[category]) {
-          categories[category] = []
-        }
-        categories[category].push(icon)
-      })
+      // 正常顯示按分類分組 - 只顯示 Heroicons
+      const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
 
       const items = []
-      Object.entries(categories).forEach(([categoryName, categoryIcons]) => {
-        // 添加分類標題
+      
+      // 只添加 Heroicons 分類
+      if (heroIcons.length > 0) {
         items.push({
           type: 'category-header',
           fullRow: true,
           data: {
-            title: getCategoryDisplayName(categoryName),
-            count: categoryIcons.length
+            title: 'Heroicons'
           }
         })
-
-        // 添加該分類的圖標
-        categoryIcons.forEach(icon => {
+        heroIcons.forEach(icon => {
           items.push(icon)
         })
-      })
+      }
 
       return items
     })
@@ -275,6 +258,7 @@ export default {
             key: `category-${item.data.title}-${index}`,
             type: 'category',
             fullRow: true,
+            itemHeight: 40, // 分類標題使用 40px 高度
             data: item.data
           }
         } else {
@@ -307,13 +291,23 @@ export default {
     }
 
     const getHeroIconComponent = (icon) => {
-      // 根據當前樣式返回對應的 component
+      // 根據當前樣式動態解析 HeroIcon 元件
       const style = selectedStyle.value
-      if (style === 'solid') {
-        // 檢查是否有 solid 變體
-        return icon.variants?.solid?.component || icon.component
+      const componentName = icon.component
+      
+      if (!componentName) return null
+      
+      try {
+        // 根據樣式選擇正確的元件集合
+        if (style === 'solid') {
+          return HeroiconsSolid[componentName]
+        } else {
+          return HeroiconsOutline[componentName]
+        }
+      } catch (error) {
+        console.warn(`Failed to resolve HeroIcon component: ${componentName}`, error)
+        return null
       }
-      return icon.variants?.outline?.component || icon.component
     }
 
     const getBootstrapIconClass = (icon) => {
@@ -453,7 +447,7 @@ export default {
 }
 
 .category-header {
-  @apply border-b border-gray-200 bg-gray-50 px-2;
+  @apply px-2;
 }
 
 .empty-state {
