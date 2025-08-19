@@ -22,12 +22,12 @@ vi.mock('../../components/IconPickerSearch.vue', () => ({
   }
 }))
 
-vi.mock('../../components/VariantSelector.vue', () => ({
+vi.mock('../../../components/common/IconStyleSelector.vue', () => ({
   default: {
-    name: 'VariantSelector',
-    template: '<select class="mock-variant-selector" :value="modelValue" @change="$emit(\'variant-change\', { value: $event.target.value })"><option value="outline">Outline</option><option value="solid">Solid</option></select>',
-    props: ['modelValue', 'variantType', 'variants'],
-    emits: ['variant-change']
+    name: 'IconStyleSelector',
+    template: '<select class="mock-icon-style-selector" :value="modelValue" @change="$emit(\'update:modelValue\', $event.target.value)"><option value="outline">Outline</option><option value="solid">Solid</option></select>',
+    props: ['modelValue'],
+    emits: ['update:modelValue']
   }
 }))
 
@@ -87,7 +87,7 @@ describe('IconLibraryPanel', () => {
 
       expect(wrapper.find('.icon-library-panel').exists()).toBe(true)
       expect(wrapper.find('.panel-toolbar').exists()).toBe(true)
-      expect(wrapper.find('.library-tabs').exists()).toBe(true)
+      // 標籤已移除，不再測試
     })
 
     it('應該正確渲染搜尋欄和變體選擇器', async () => {
@@ -98,7 +98,9 @@ describe('IconLibraryPanel', () => {
       await nextTick()
 
       expect(wrapper.findComponent({ name: 'IconPickerSearch' }).exists()).toBe(true)
-      expect(wrapper.findComponent({ name: 'VariantSelector' }).exists()).toBe(true)
+      // IconStyleSelector 只在有圖標時顯示，需要等待資料載入
+      await new Promise(resolve => setTimeout(resolve, 100))
+      expect(wrapper.findComponent({ name: 'IconStyleSelector' }).exists()).toBe(true)
     })
 
     it('應該正確渲染圖標庫標籤', async () => {
@@ -204,9 +206,13 @@ describe('IconLibraryPanel', () => {
     })
 
     it('應該能切換樣式變體', async () => {
-      const variantSelector = wrapper.findComponent({ name: 'VariantSelector' })
+      // 等待資料載入以顯示 IconStyleSelector
+      await new Promise(resolve => setTimeout(resolve, 100))
       
-      await variantSelector.vm.$emit('variant-change', { value: 'solid' })
+      const styleSelector = wrapper.findComponent({ name: 'IconStyleSelector' })
+      expect(styleSelector.exists()).toBe(true)
+      
+      await styleSelector.vm.$emit('update:modelValue', 'solid')
       await nextTick()
       
       expect(wrapper.vm.selectedStyle).toBe('solid')
