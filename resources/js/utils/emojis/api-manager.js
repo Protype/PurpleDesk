@@ -30,26 +30,47 @@ class EmojiApiManager {
 
     this.loadingPromise = axios.get('/api/config/icon/emoji')
       .then(response => {
+        // 驗證 API 回應資料結構
+        if (!response.data) {
+          throw new Error('No data received from emoji API');
+        }
+        
+        if (!response.data.categories || typeof response.data.categories !== 'object') {
+          throw new Error('Invalid emoji data structure: categories missing or invalid');
+        }
+        
         this.allData = response.data;
         this.categoriesInfo = [];
         
         // 處理分類資料
-        Object.entries(this.allData.categories).forEach(([categoryId, categoryData]) => {
+        Object.entries(this.allData.categories || {}).forEach(([categoryId, categoryData]) => {
+          // 驗證分類資料結構
+          if (!categoryData || typeof categoryData !== 'object') {
+            console.warn(`Invalid category data for ${categoryId}, skipping`);
+            return;
+          }
+          
           this.categoriesInfo.push({
             id: categoryId,
-            name: categoryData.name,
-            icon: categoryData.icon,
-            priority: categoryData.priority
+            name: categoryData.name || 'Unknown Category',
+            icon: categoryData.icon || '❓',
+            priority: categoryData.priority || 'low'
           });
           
           // 建立分類快取
           const categoryEmojis = {};
-          Object.entries(categoryData.subgroups).forEach(([subgroupKey, subgroupData]) => {
+          Object.entries(categoryData.subgroups || {}).forEach(([subgroupKey, subgroupData]) => {
+            // 驗證子群組資料結構
+            if (!subgroupData || !Array.isArray(subgroupData.emojis)) {
+              console.warn(`Invalid subgroup data for ${categoryId}.${subgroupKey}, skipping`);
+              return;
+            }
+            
             categoryEmojis[subgroupKey] = subgroupData.emojis.map(emoji => ({
               ...emoji,
-              category: categoryData.name,
+              category: categoryData.name || 'Unknown Category',
               categoryId: categoryId,
-              subgroup: subgroupData.name
+              subgroup: subgroupData.name || 'Unknown Subgroup'
             }));
           });
           this.categoryCache.set(categoryId, categoryEmojis);

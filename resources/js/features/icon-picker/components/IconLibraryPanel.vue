@@ -12,31 +12,12 @@
       />
       
       <!-- 變體樣式選擇器 -->
-      <VariantSelector
+      <IconStyleSelector
         v-model="selectedStyle"
-        variant-type="iconStyle"
-        :variants="iconStyleOptions"
-        @variant-change="handleStyleChange"
+        @update:modelValue="handleStyleChange"
       />
     </div>
 
-    <!-- 圖標庫標籤 -->
-    <div class="library-tabs flex border-b border-gray-200 mb-4">
-      <button
-        @click="activeLibrary = 'heroicons'"
-        :class="activeLibrary === 'heroicons' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'"
-        class="px-3 py-2 text-sm font-medium transition-colors"
-      >
-        HeroIcons ({{ heroIconsCount }})
-      </button>
-      <button
-        @click="activeLibrary = 'bootstrap'"
-        :class="activeLibrary === 'bootstrap' ? 'text-primary-600 border-b-2 border-primary-600' : 'text-gray-500 hover:text-gray-700'"
-        class="px-3 py-2 text-sm font-medium transition-colors ml-4"
-      >
-        Bootstrap Icons ({{ bootstrapIconsCount }})
-      </button>
-    </div>
 
     <!-- 載入狀態 -->
     <div v-if="isLoading" class="flex items-center justify-center py-8">
@@ -129,7 +110,7 @@
 import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import VirtualScrollGrid from './shared/VirtualScrollGrid.vue'
 import IconPickerSearch from './IconPickerSearch.vue'
-import VariantSelector from './VariantSelector.vue'
+import IconStyleSelector from './IconStyleSelector.vue'
 import { IconDataLoader } from '../services/IconDataLoader.js'
 import { useIconVariants } from '../composables/useIconVariants.js'
 
@@ -139,7 +120,7 @@ export default {
   components: {
     VirtualScrollGrid,
     IconPickerSearch,
-    VariantSelector
+    IconStyleSelector
   },
 
   props: {
@@ -174,7 +155,6 @@ export default {
     // 響應式狀態
     const searchQuery = ref('')
     const selectedStyle = ref('outline')
-    const activeLibrary = ref('heroicons')
     const isLoading = ref(true)
     const error = ref(null)
     const allIcons = ref({ data: { heroicons: [], bootstrap: {} }, meta: {} })
@@ -183,8 +163,6 @@ export default {
     const iconDataLoader = new IconDataLoader()
     const iconVariants = useIconVariants()
 
-    // 圖標樣式選項
-    const iconStyleOptions = computed(() => iconVariants.getVariantOptions('iconStyle'))
 
     // 圖標數量統計
     const heroIconsCount = computed(() => {
@@ -198,24 +176,52 @@ export default {
       }, 0)
     })
 
+    // 處理過的圖標（統一來源，添加 isSolid 標記，排序）
+    const processedIcons = computed(() => {
+      const allIconsList = [
+        ...(allIcons.value.data?.heroicons || []), 
+        ...Object.values(allIcons.value.data?.bootstrap || {}).flat()
+      ]
+      
+      return allIconsList.map(icon => ({
+        ...icon,
+        isSolid: icon.class?.endsWith('-fill') || 
+                 icon.component?.includes('Solid') ||
+                 false
+      }))
+      .sort((a, b) => {
+        const nameA = a.name || a.class || a.component || ''
+        const nameB = b.name || b.class || b.component || ''
+        return nameA.localeCompare(nameB)
+      })
+    })
+
     // 過濾後的圖標
     const filteredIcons = computed(() => {
-      const query = searchQuery.value.toLowerCase().trim()
-      const library = activeLibrary.value
       const style = selectedStyle.value
-
-      let icons = []
-
-      if (library === 'heroicons') {
-        icons = allIcons.value.data?.heroicons || []
-      } else if (library === 'bootstrap') {
-        const bootstrapData = allIcons.value.data?.bootstrap || {}
-        icons = Object.values(bootstrapData).flat()
+      
+      if (style === 'all' || !style) {
+        return processedIcons.value
       }
+      
+      if (style === 'outline') {
+        return processedIcons.value.filter(icon => !icon.isSolid)
+      }
+      
+      if (style === 'solid') {
+        return processedIcons.value.filter(icon => icon.isSolid)
+      }
+      
+      return processedIcons.value
+    })
 
-      // 應用搜尋過濾
+    // 分組後的圖標（考慮搜尋狀態）
+    const groupedIcons = computed(() => {
+      const query = searchQuery.value.toLowerCase().trim()
+      
       if (query) {
-        icons = icons.filter(icon => {
+        // 搜尋時返回扁平化結果（無分類標題）
+        return filteredIcons.value.filter(icon => {
           const name = (icon.name || '').toLowerCase()
           const keywords = (icon.keywords || []).join(' ').toLowerCase()
           const className = (icon.class || '').toLowerCase()
@@ -227,80 +233,58 @@ export default {
                  component.includes(query)
         })
       }
+      
+      // 正常顯示按分類分組
+      const categories = {}
+      filteredIcons.value.forEach(icon => {
+        const category = icon.category || (icon.type === 'heroicons' ? 'heroicons' : 'other')
+        if (!categories[category]) {
+          categories[category] = []
+        }
+        categories[category].push(icon)
+      })
 
-      // 應用樣式過濾
-      if (library === 'bootstrap' && style === 'outline') {
-        icons = icons.filter(icon => !icon.class || !icon.class.includes('-fill'))
-      } else if (library === 'bootstrap' && style === 'solid') {
-        // 對於 solid 樣式，優先顯示 -fill 版本，如果沒有則顯示基礎版本
-        const processedIcons = new Map()
-        
-        icons.forEach(icon => {
-          const baseClass = icon.class?.replace(/-fill$/, '') || icon.class
-          const isFillIcon = icon.class?.includes('-fill')
-          
-          if (!processedIcons.has(baseClass)) {
-            processedIcons.set(baseClass, icon)
-          } else if (isFillIcon) {
-            // 如果遇到 -fill 版本，替換基礎版本
-            processedIcons.set(baseClass, icon)
+      const items = []
+      Object.entries(categories).forEach(([categoryName, categoryIcons]) => {
+        // 添加分類標題
+        items.push({
+          type: 'category-header',
+          fullRow: true,
+          data: {
+            title: getCategoryDisplayName(categoryName),
+            count: categoryIcons.length
           }
         })
-        
-        icons = Array.from(processedIcons.values())
-      }
 
-      return icons
+        // 添加該分類的圖標
+        categoryIcons.forEach(icon => {
+          items.push(icon)
+        })
+      })
+
+      return items
     })
 
     // 轉換為 VirtualScrollGrid 所需的格式
     const virtualGridItems = computed(() => {
-      const icons = filteredIcons.value
-      const itemsPerRow = props.itemsPerRow
+      const grouped = groupedIcons.value
 
-      if (activeLibrary.value === 'heroicons') {
-        // HeroIcons 直接轉換
-        return icons.map((icon, index) => ({
-          key: `hero-${icon.component}-${index}`,
-          type: 'icon',
-          data: icon
-        }))
-      } else {
-        // Bootstrap Icons 按分類分組
-        const categories = {}
-        icons.forEach(icon => {
-          const category = icon.category || 'other'
-          if (!categories[category]) {
-            categories[category] = []
-          }
-          categories[category].push(icon)
-        })
-
-        const items = []
-        Object.entries(categories).forEach(([categoryName, categoryIcons]) => {
-          // 添加分類標題
-          items.push({
-            key: `category-${categoryName}`,
+      return grouped.map((item, index) => {
+        if (item.type === 'category-header') {
+          return {
+            key: `category-${item.data.title}-${index}`,
             type: 'category',
             fullRow: true,
-            data: {
-              title: getCategoryDisplayName(categoryName),
-              count: categoryIcons.length
-            }
-          })
-
-          // 添加該分類的圖標
-          categoryIcons.forEach((icon, index) => {
-            items.push({
-              key: `bootstrap-${icon.class}-${index}`,
-              type: 'icon',
-              data: icon
-            })
-          })
-        })
-
-        return items
-      }
+            data: item.data
+          }
+        } else {
+          return {
+            key: `icon-${item.component || item.class}-${index}`,
+            type: 'icon',
+            data: item
+          }
+        }
+      })
     })
 
     // 工具方法
@@ -359,9 +343,9 @@ export default {
       searchQuery.value = ''
     }
 
-    const handleStyleChange = (event) => {
-      selectedStyle.value = event.value
-      iconVariants.setIconStyle(event.value)
+    const handleStyleChange = (value) => {
+      selectedStyle.value = value
+      iconVariants.setIconStyle(value)
     }
 
     const selectIcon = (icon) => {
@@ -413,15 +397,15 @@ export default {
       // 響應式狀態
       searchQuery,
       selectedStyle,
-      activeLibrary,
       isLoading,
       error,
       
       // 計算屬性
-      iconStyleOptions,
       heroIconsCount,
       bootstrapIconsCount,
+      processedIcons,
       filteredIcons,
+      groupedIcons,
       virtualGridItems,
       
       // 方法
@@ -449,9 +433,6 @@ export default {
   @apply flex-shrink-0;
 }
 
-.library-tabs {
-  @apply flex-shrink-0;
-}
 
 .icon-grid-container {
   @apply flex-1 min-h-0;

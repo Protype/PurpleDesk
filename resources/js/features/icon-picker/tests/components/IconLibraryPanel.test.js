@@ -73,6 +73,8 @@ describe('IconLibraryPanel', () => {
     itemsPerRow: 8
   }
 
+  const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0))
+
   beforeEach(() => {
     vi.clearAllMocks()
   })
@@ -383,6 +385,147 @@ describe('IconLibraryPanel', () => {
       expect(virtualGrid.props('itemsPerRow')).toBe(8)
       expect(virtualGrid.props('rowHeight')).toBe(36)
       expect(virtualGrid.props('containerHeight')).toBe(400)
+    })
+  })
+
+  // TDD 重構測試 - 架構簡化
+  describe('簡化架構重構', () => {
+    describe('移除標籤切換', () => {
+      it('不應該有 activeLibrary 響應式狀態', () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        expect(wrapper.vm.activeLibrary).toBeUndefined()
+      })
+
+      it('不應該渲染標籤切換 UI', () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        expect(wrapper.find('.library-tabs').exists()).toBe(false)
+      })
+
+      it('不應該有標籤切換按鈕', () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        const buttons = wrapper.findAll('button')
+        const hasLibraryButtons = buttons.some(btn => 
+          btn.text().includes('HeroIcons') || btn.text().includes('Bootstrap Icons')
+        )
+        expect(hasLibraryButtons).toBe(false)
+      })
+    })
+
+    describe('isSolid 標記系統', () => {
+      it('所有圖標都應該有 isSolid 屬性', async () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        await flushPromises()
+        
+        const icons = wrapper.vm.processedIcons || []
+        expect(icons.length).toBeGreaterThan(0)
+        icons.forEach(icon => {
+          expect(icon).toHaveProperty('isSolid')
+          expect(typeof icon.isSolid).toBe('boolean')
+        })
+      })
+
+      it('Bootstrap -fill 圖標應該標記為 isSolid: true', async () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        await flushPromises()
+        
+        const icons = wrapper.vm.processedIcons || []
+        const fillIcons = icons.filter(icon => icon.class?.endsWith('-fill'))
+        fillIcons.forEach(icon => {
+          expect(icon.isSolid).toBe(true)
+        })
+      })
+
+      it('HeroIcons Solid 圖標應該標記為 isSolid: true', async () => {
+        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
+        await flushPromises()
+        
+        const icons = wrapper.vm.processedIcons || []
+        const solidIcons = icons.filter(icon => icon.component?.includes('Solid'))
+        solidIcons.forEach(icon => {
+          expect(icon.isSolid).toBe(true)
+        })
+      })
+    })
+  })
+
+  // TDD 重構測試 - 篩選邏輯
+  describe('篩選邏輯', () => {
+    let wrapper
+
+    beforeEach(async () => {
+      wrapper = mount(IconLibraryPanel, { props: defaultProps })
+      await flushPromises()
+    })
+
+    it('all 模式應該顯示所有圖標', () => {
+      wrapper.vm.selectedStyle = 'all'
+      const filtered = wrapper.vm.filteredIcons
+      const processed = wrapper.vm.processedIcons
+      expect(filtered.length).toBe(processed.length)
+    })
+
+    it('outline 模式應該只顯示 isSolid: false 的圖標', () => {
+      wrapper.vm.selectedStyle = 'outline'
+      const filtered = wrapper.vm.filteredIcons
+      filtered.forEach(icon => {
+        expect(icon.isSolid).toBe(false)
+      })
+    })
+
+    it('solid 模式應該只顯示 isSolid: true 的圖標', () => {
+      wrapper.vm.selectedStyle = 'solid'
+      const filtered = wrapper.vm.filteredIcons
+      filtered.forEach(icon => {
+        expect(icon.isSolid).toBe(true)
+      })
+    })
+
+    it('篩選不應該修改原始圖標資料', () => {
+      const originalCount = wrapper.vm.processedIcons.length
+      wrapper.vm.selectedStyle = 'outline'
+      expect(wrapper.vm.processedIcons.length).toBe(originalCount)
+    })
+  })
+
+  // TDD 重構測試 - 排序和分類顯示
+  describe('排序和分類顯示', () => {
+    let wrapper
+
+    beforeEach(async () => {
+      wrapper = mount(IconLibraryPanel, { props: defaultProps })
+      await flushPromises()
+    })
+
+    it('圖標應該按名稱字母順序排序', () => {
+      const icons = wrapper.vm.processedIcons
+      for (let i = 1; i < icons.length; i++) {
+        const nameA = icons[i-1].name || icons[i-1].class || icons[i-1].component || ''
+        const nameB = icons[i].name || icons[i].class || icons[i].component || ''
+        expect(nameA.localeCompare(nameB)).toBeLessThanOrEqual(0)
+      }
+    })
+
+    it('搜尋時應該返回扁平化結果（無分類標題）', () => {
+      wrapper.vm.searchQuery = 'heart'
+      const grouped = wrapper.vm.groupedIcons
+      const hasCategoryHeader = grouped.some(item => item.type === 'category-header')
+      expect(hasCategoryHeader).toBe(false)
+    })
+
+    it('正常顯示應該包含分類標題', () => {
+      wrapper.vm.searchQuery = ''
+      const grouped = wrapper.vm.groupedIcons
+      const hasCategoryHeader = grouped.some(item => item.type === 'category-header')
+      expect(hasCategoryHeader).toBe(true)
+    })
+
+    it('分類標題應該有 fullRow 屬性', () => {
+      wrapper.vm.searchQuery = ''
+      const grouped = wrapper.vm.groupedIcons
+      const categoryHeaders = grouped.filter(item => item.type === 'category-header')
+      categoryHeaders.forEach(header => {
+        expect(header.fullRow).toBe(true)
+      })
     })
   })
 })
