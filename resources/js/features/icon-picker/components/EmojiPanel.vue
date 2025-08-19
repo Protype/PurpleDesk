@@ -1,5 +1,17 @@
 <template>
   <div class="emoji-panel">
+    <!-- 工具欄 -->
+    <div class="panel-toolbar flex items-center space-x-2 mb-3">
+      <IconPickerSearch
+        v-model="searchQuery"
+        placeholder="搜尋 Emoji..."
+        class="flex-1"
+      />
+      <SkinToneSelector
+        v-model="selectedSkinTone"
+      />
+    </div>
+
     <!-- 載入狀態 -->
     <div v-if="isLoading" class="loading flex items-center justify-center py-8">
       <div class="text-sm text-gray-500">載入 Emoji 資料中...</div>
@@ -53,25 +65,19 @@
 <script>
 import { ref, computed, onMounted, watch } from 'vue'
 import VirtualScrollGrid from './shared/VirtualScrollGrid.vue'
+import IconPickerSearch from './IconPickerSearch.vue'
+import SkinToneSelector from '../../../components/common/SkinToneSelector.vue'
 import { IconDataLoader } from '../services/IconDataLoader.js'
 import { applySkinTone } from '../utils/emojiSkinToneHandler.js'
 
 export default {
   name: 'EmojiPanel',
   components: {
-    VirtualScrollGrid
+    VirtualScrollGrid,
+    IconPickerSearch,
+    SkinToneSelector
   },
   props: {
-    // 搜尋條件
-    searchQuery: {
-      type: String,
-      default: ''
-    },
-    // 選中的膚色
-    selectedSkinTone: {
-      type: [String, Number],
-      default: 0
-    },
     // 選中的 emoji
     selectedEmoji: {
       type: String,
@@ -80,6 +86,10 @@ export default {
   },
   emits: ['emoji-selected'],
   setup(props, { emit }) {
+    // 內部狀態管理
+    const searchQuery = ref('')
+    const selectedSkinTone = ref(0)
+    
     // 狀態管理
     const isLoading = ref(true)
     const hasError = ref(false)
@@ -117,18 +127,18 @@ export default {
         ...category,
         emojis: category.emojis?.map(emoji => ({
           ...emoji,
-          displayEmoji: applySkinTone(emoji, props.selectedSkinTone)
+          displayEmoji: applySkinTone(emoji, selectedSkinTone.value)
         })) || []
       }))
     })
 
     // 過濾 emoji 資料（基於搜尋條件）
     const filteredEmojis = computed(() => {
-      if (!props.searchQuery.trim()) {
+      if (!searchQuery.value.trim()) {
         return processedEmojis.value
       }
 
-      const query = props.searchQuery.toLowerCase().trim()
+      const query = searchQuery.value.toLowerCase().trim()
       
       return processedEmojis.value.map(category => {
         const filteredCategoryEmojis = category.emojis?.filter(emoji => {
@@ -197,16 +207,7 @@ export default {
       emit('emoji-selected', emojiData)
     }
 
-    // 監聽搜尋條件變化
-    watch(() => props.searchQuery, () => {
-      // 搜尋條件變化時，VirtualScrollGrid 會自動重新渲染
-    })
-
-    // 監聽膚色變化
-    watch(() => props.selectedSkinTone, () => {
-      // 膚色變化時，computed 會自動重新計算
-      // 不重置捲軸位置，保持當前瀏覽位置
-    })
+    // 膚色變化時保持捲軸位置（不做任何處理，computed 自動重新計算）
 
     // 元件掛載時載入資料
     onMounted(() => {
@@ -216,6 +217,10 @@ export default {
     return {
       // Refs
       virtualGrid,
+      
+      // 內部狀態
+      searchQuery,
+      selectedSkinTone,
       
       // 狀態
       isLoading,
@@ -238,6 +243,10 @@ export default {
 <style scoped>
 .emoji-panel {
   @apply w-full;
+}
+
+.panel-toolbar {
+  @apply flex-shrink-0;
 }
 
 .emoji-grid-container {
