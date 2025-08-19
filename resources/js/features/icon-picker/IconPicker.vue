@@ -144,13 +144,13 @@
               />
             </div>
 
-            <!-- Icons 標籤頁 - 開發中狀態 -->
-            <div v-else-if="activeTab === 'icons'" class="text-center py-8">
-              <div class="text-4xl mb-4">🚧</div>
-              <div class="text-gray-600 text-sm">
-                <div class="font-medium mb-2">Icon Library Panel 開發中</div>
-                <div class="text-xs text-gray-500">將整合 HeroIcons 和 Bootstrap Icons</div>
-              </div>
+            <!-- Icons 標籤頁 - 使用 IconLibraryPanel -->
+            <div v-else-if="activeTab === 'icons'">
+              <IconLibraryPanel
+                :selected-icon="iconType === 'heroicons' || iconType === 'bootstrap' ? selectedIcon : null"
+                :items-per-row="8"
+                @icon-select="handleIconSelection"
+              />
             </div>
 
             <!-- Upload 標籤頁 - 開發中狀態 -->
@@ -199,6 +199,7 @@
 import { ref, reactive, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import TextIconPanel from './components/TextIconPanel.vue'
 import EmojiPanel from './components/EmojiPanel.vue'
+import IconLibraryPanel from './components/IconLibraryPanel.vue'
 import IconPickerSearch from './components/IconPickerSearch.vue'
 import SkinToneSelector from '@/components/common/SkinToneSelector.vue'
 
@@ -207,6 +208,7 @@ export default {
   components: {
     TextIconPanel,
     EmojiPanel,
+    IconLibraryPanel,
     IconPickerSearch,
     SkinToneSelector
   },
@@ -400,6 +402,20 @@ export default {
       closePicker()
     }
 
+    // 圖標選擇處理
+    const handleIconSelection = (icon) => {
+      const iconData = icon.component || icon.class || icon.name
+      const iconTypeValue = icon.type || 'heroicons'
+      
+      selectedIcon.value = iconData
+      iconType.value = iconTypeValue
+      
+      emit('update:modelValue', iconData)
+      emit('update:iconType', iconTypeValue)
+      
+      closePicker()
+    }
+
     // 鍵盤事件處理
     const handleKeyDown = (event) => {
       if (event.key === 'Escape' && isOpen.value) {
@@ -460,6 +476,7 @@ export default {
       clearIcon,
       handleTextSelection,
       handleEmojiSelection,
+      handleIconSelection,
       getDisplayIcon
     }
   }
