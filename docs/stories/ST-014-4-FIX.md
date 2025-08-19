@@ -1,145 +1,154 @@
-# ST-014-4-FIX: 修正 IconLibraryPanel 圖標顯示邏輯
+# ST-014-4-FIX: IconLibraryPanel 簡化架構重構
 
 **建立日期**：2025-08-19  
-**狀態**：Draft  
+**狀態**：In Progress  
 **優先級**：P0 (修正問題)  
-**預估工時**：4小時
+**預估工時**：6小時  
+**開發方法**：TDD
 
 ## 📋 Story 概述
 
 ### 問題背景
 
-ST-014-4 實作的 IconLibraryPanel 存在以下問題：
-1. 使用標籤切換 HeroIcons 和 Bootstrap Icons，不符合舊版設計
-2. 使用複雜的 VariantSelector，應該使用簡單的 IconStyleSelector
-3. 樣式過濾邏輯與舊版不一致
+ST-014-4 實作的 IconLibraryPanel 過度複雜化，基於架構師分析決定採用簡化方案：
+1. 標籤切換邏輯不符合圖標庫統一設計理念
+2. 複雜的變體系統實際上可以用簡單篩選替代
+3. 使用者不需要知道圖標來源，只需要選擇適合的圖標
+
+### 設計理念更新
+
+**核心原則**：圖標作為統一資源池，使用者無需關心來源
+- 圖標庫是統一的視覺語言系統
+- 按名稱排序讓相關圖標自然相鄰 (`bi-heart` 和 `bi-heart-fill`)
+- 簡單篩選：所有圖標/線條圖標/填充圖標
 
 ### Story 定義
 
 **作為**：使用者  
-**我想要**：在單一視圖中瀏覽所有圖標庫（先 HeroIcons，再 Bootstrap Icons 各分類）  
-**所以**：可以快速找到需要的圖標，體驗與舊版一致
+**我想要**：在統一的圖標瀏覽介面中快速篩選和選擇圖標  
+**所以**：可以專注於圖標的視覺效果和語意，而不用在意技術來源
 
 ## 🎯 驗收條件
 
-### 核心功能修正
-- [ ] 移除 HeroIcons/Bootstrap Icons 標籤切換
-- [ ] 實作連續顯示：先顯示 HeroIcons 分類，後顯示 Bootstrap Icons 各分類
+### 核心架構簡化
+- [ ] 移除所有標籤切換邏輯 (activeLibrary)
+- [ ] 實作 `isSolid` 標記系統
+- [ ] 使用簡單篩選邏輯替代複雜變體系統
+- [ ] 圖標按名稱統一排序
+- [ ] 保持分類結構顯示
+
+### 篩選功能
+- [ ] 實作三種顯示模式：全部/線條/填充
+- [ ] `outline` 模式篩選 `!isSolid` 圖標
+- [ ] `solid` 模式篩選 `isSolid` 圖標
+- [ ] 篩選時保持圖標相對位置穩定
+
+### 技術實作
 - [ ] 使用 IconStyleSelector 替代 VariantSelector
-- [ ] 實作正確的 outline/solid 篩選邏輯
-- [ ] 保持與舊版一致的視覺呈現和分類標題
+- [ ] 實作 `processedIcons` computed (標記 + 排序)
+- [ ] 實作 `filteredIcons` computed (簡單篩選)
+- [ ] 保持 VirtualScrollGrid fullRow 架構
+- [ ] 搜尋時返回扁平化結果
 
-### 技術要求
-- [ ] 參考舊版 `groupedIcons` computed 實作邏輯
-- [ ] 使用舊版 `filterBootstrapIconsByStyle` 篩選方法
-- [ ] 保持 VirtualScrollGrid 效能優化
-- [ ] 維持搜尋功能正常運作
-- [ ] 保持載入狀態、錯誤處理和空狀態
+### 介面保持
+- [ ] 搜尋欄位在頂部
+- [ ] IconStyleSelector 在搜尋欄旁邊
+- [ ] 分類標題使用 fullRow 顯示
+- [ ] 圖標選中狀態視覺反饋
+- [ ] 載入/錯誤/空狀態處理
 
-### 介面要求
-- [ ] 搜尋欄位保持在頂部
-- [ ] IconStyleSelector 在搜尋欄旁邊（僅在有圖標時顯示）
-- [ ] 分類標題樣式與舊版一致
-- [ ] 圖標按鈕樣式與舊版一致
-- [ ] 選中狀態樣式與舊版一致
+## 🔧 簡化架構技術規格
 
-## 🔧 技術實作規格
-
-### 1. 移除標籤邏輯
-
-移除原有的：
-```javascript
-const activeLibrary = ref('heroicons')
-```
-
-移除標籤 HTML：
-```html
-<!-- 移除整個 library-tabs 區塊 -->
-<div class="library-tabs">...</div>
-```
-
-### 2. 修正圖標資料組織
-
-參考舊版 `groupedIcons` 實作：
+### 1. 圖標資料處理 - 標記 + 排序
 
 ```javascript
-const groupedIcons = computed(() => {
-  // 如果有搜尋查詢，返回篩選後的扁平陣列（不分組）
-  if (searchQuery.value) {
-    const query = searchQuery.value.toLowerCase()
-    const filteredHeroIcons = heroIcons.filter(icon => 
-      icon.name.toLowerCase().includes(query) || icon.component.toLowerCase().includes(query)
-    )
-    const filteredBsIcons = bsIcons.filter(icon => 
-      icon.name.toLowerCase().includes(query) || icon.class.toLowerCase().includes(query)
-    )
-    return [...filteredHeroIcons, ...filteredBsIcons]
+// 處理所有圖標：標記 isSolid + 統一排序
+const processedIcons = computed(() => {
+  const allIcons = [...heroicons, ...bootstrapIcons]
+  
+  return allIcons.map(icon => ({
+    ...icon,
+    // 簡單標記：是否為 solid 樣式
+    isSolid: icon.class?.endsWith('-fill') || 
+              icon.component?.includes('Solid') ||
+              false
+  }))
+  .sort((a, b) => {
+    // 按名稱排序，相關圖標自然相鄰
+    const nameA = a.name || a.class || a.component || ''
+    const nameB = b.name || b.class || b.component || ''
+    return nameA.localeCompare(nameB)
+  })
+})
+```
+
+### 2. 簡單篩選邏輯
+
+```javascript
+// 純篩選，無複雜邏輯
+const filteredIcons = computed(() => {
+  const style = selectedStyle.value
+  
+  if (style === 'all') {
+    return processedIcons.value
   }
   
+  if (style === 'outline') {
+    return processedIcons.value.filter(icon => !icon.isSolid)
+  }
+  
+  if (style === 'solid') {
+    return processedIcons.value.filter(icon => icon.isSolid)
+  }
+  
+  return processedIcons.value
+})
+```
+
+### 3. 分類結構組織
+
+```javascript
+// 保持分類結構，使用 VirtualScrollGrid fullRow
+const groupedIcons = computed(() => {
+  const query = searchQuery.value.toLowerCase().trim()
+  
+  // 搜尋時返回扁平結果
+  if (query) {
+    return filteredIcons.value.filter(icon => {
+      const name = (icon.name || '').toLowerCase()
+      const keywords = (icon.keywords || []).join(' ').toLowerCase()
+      return name.includes(query) || keywords.includes(query)
+    })
+  }
+  
+  // 正常顯示：分類結構
   const result = []
   
-  // 1. 添加 Heroicons 分類標題和圖標
-  if (heroIcons.length > 0) {
-    // 確保當前位置是 10 的倍數
-    let currentLength = result.length
-    let remainderInRow = currentLength % 10
-    if (remainderInRow !== 0) {
-      const fillersNeeded = 10 - remainderInRow
-      for (let i = 0; i < fillersNeeded; i++) {
-        result.push({ type: 'row-filler' })
-      }
-    }
-    
-    // 添加 Heroicons 標題
+  // HeroIcons 區塊
+  const heroIconsFiltered = filteredIcons.value.filter(i => i.type === 'heroicons')
+  if (heroIconsFiltered.length > 0) {
     result.push({
       type: 'category-header',
-      categoryId: 'heroicons',
-      name: 'Hero Icons',
-      icon: '✨'
+      fullRow: true,
+      itemHeight: 40,
+      data: { title: 'Hero Icons', count: heroIconsFiltered.length }
     })
-    
-    // 添加 9 個空項目來填滿標題行
-    for (let i = 1; i < 10; i++) {
-      result.push({ type: 'category-header-filler' })
-    }
-    
-    // 添加 Heroicons
-    result.push(...heroIcons)
+    result.push(...heroIconsFiltered.map(icon => ({ type: 'icon', data: icon })))
   }
   
-  // 2. 按分類添加 Bootstrap Icons
-  const categoryOrder = ['general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others']
+  // Bootstrap Icons 各分類
+  const categories = ['general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others']
   
-  categoryOrder.forEach(categoryId => {
-    const categoryIcons = bsIcons.filter(icon => icon.category === categoryId)
-    
+  categories.forEach(category => {
+    const categoryIcons = filteredIcons.value.filter(i => i.category === category)
     if (categoryIcons.length > 0) {
-      // 確保當前位置是 10 的倍數
-      const currentLength = result.length
-      const remainderInRow = currentLength % 10
-      if (remainderInRow !== 0) {
-        const fillersNeeded = 10 - remainderInRow
-        for (let i = 0; i < fillersNeeded; i++) {
-          result.push({ type: 'row-filler' })
-        }
-      }
-      
-      // 添加分類標題
       result.push({
         type: 'category-header',
-        categoryId: categoryId,
-        name: getCategoryDisplayName(categoryId),
-        icon: getCategoryIcon(categoryId)
+        fullRow: true,
+        itemHeight: 40,
+        data: { title: getCategoryName(category), count: categoryIcons.length }
       })
-      
-      // 添加 9 個空項目來填滿標題行
-      for (let i = 1; i < 10; i++) {
-        result.push({ type: 'category-header-filler' })
-      }
-      
-      // 根據選擇的樣式過濾 Bootstrap Icons
-      const filteredCategoryIcons = filterBootstrapIconsByStyle(categoryIcons, selectedIconStyle.value)
-      result.push(...filteredCategoryIcons)
+      result.push(...categoryIcons.map(icon => ({ type: 'icon', data: icon })))
     }
   })
   
@@ -147,112 +156,317 @@ const groupedIcons = computed(() => {
 })
 ```
 
-### 3. 使用 IconStyleSelector
+### 4. IconStyleSelector 整合
 
-替換 VariantSelector：
-```html
-<!-- 替換原有的 VariantSelector -->
-<IconStyleSelector
-  v-model="selectedIconStyle"
-  @update:modelValue="handleIconStyleChange"
-/>
+```bash
+# 複製元件到正確位置
+cp resources/js/components/common/IconStyleSelector.vue \
+   resources/js/features/icon-picker/components/IconStyleSelector.vue
 ```
 
-### 4. 實作樣式篩選邏輯
+```html
+<!-- 在模板中替換 VariantSelector -->
+<div class="panel-toolbar flex items-center space-x-3 mb-4">
+  <IconPickerSearch
+    v-model="searchQuery"
+    placeholder="搜尋圖標..."
+    class="flex-1"
+  />
+  
+  <!-- 使用 IconStyleSelector 替代 VariantSelector -->
+  <IconStyleSelector
+    v-model="selectedStyle"
+    @update:modelValue="handleStyleChange"
+  />
+</div>
+```
 
 ```javascript
-// 根據樣式過濾 Bootstrap Icons（參考舊版）
-const filterBootstrapIconsByStyle = (icons, style) => {
-  if (!icons || icons.length === 0) return []
-  
-  // 建立圖標映射來分析變體關係
-  const iconMap = new Map()
-  icons.forEach(icon => {
-    const className = icon.class || ''
-    iconMap.set(className, icon)
-  })
-  
-  return icons.filter(icon => {
-    const className = icon.class || ''
-    const isFillIcon = className.includes('-fill')
+// 更新 import 和元件註冊
+import IconStyleSelector from './IconStyleSelector.vue'
+
+export default {
+  components: {
+    VirtualScrollGrid,
+    IconPickerSearch,
+    IconStyleSelector  // 替代 VariantSelector
+  },
+
+  setup(props, { emit }) {
+    // 移除 VariantSelector 相關邏輯
+    // const iconVariants = useIconVariants() // 移除
+    // const iconStyleOptions = computed(() => ...) // 移除
     
-    if (style === 'outline') {
-      if (isFillIcon) {
-        // 如果是 fill 圖標，不顯示
-        return false
-      } else {
-        // 基礎圖標或特殊變體，都顯示
-        return true
-      }
-    } else if (style === 'solid') {
-      if (isFillIcon) {
-        // 顯示所有 -fill 圖標
-        return true
-      } else {
-        // 基礎圖標：檢查是否有對應的 fill 版本
-        const fillVersion = className + '-fill'
-        const hasFillVersion = iconMap.has(fillVersion)
-        
-        if (hasFillVersion) {
-          // 如果有 fill 版本，不顯示基礎版本（優先顯示 fill）
-          return false
-        } else {
-          // 沒有 fill 版本的特殊變體，顯示
-          return true
-        }
-      }
+    // 簡化樣式狀態管理
+    const selectedStyle = ref('outline')
+    
+    // 簡化事件處理
+    const handleStyleChange = (newStyle) => {
+      selectedStyle.value = newStyle
+      // filteredIcons 會通過 computed 自動重新計算
     }
-    
-    return true // 預設顯示所有
-  })
+
+    return {
+      // 移除不需要的返回值
+      // iconStyleOptions, // 移除
+      // iconVariants,     // 移除
+      
+      // 保持簡潔的狀態
+      selectedStyle,
+      handleStyleChange,
+      // ... 其他必要的返回值
+    }
+  }
 }
 ```
 
-## 🧪 測試要求
+### 5. 移除複雜邏輯
 
-### 單元測試更新
-- [ ] 更新 IconLibraryPanel.test.js
-- [ ] 移除標籤切換相關測試
-- [ ] 添加連續顯示測試
-- [ ] 添加樣式篩選測試
-- [ ] 添加分類標題正確性測試
+```javascript
+// 移除的複雜功能（不再需要）
+// ❌ const activeLibrary = ref('heroicons')
+// ❌ const iconVariants = useIconVariants()
+// ❌ const filterBootstrapIconsByStyle = (icons, style) => { ... }
+// ❌ watch(selectedStyle, async (newStyle) => { await loadIcons() })
 
-### 整合測試
-- [ ] 測試與 IconPicker 主元件的整合
-- [ ] 測試搜尋功能與新顯示邏輯的配合
-- [ ] 測試樣式切換與圖標篩選的聯動
+// 保留的核心功能
+// ✅ const isLoading = ref(true)
+// ✅ const error = ref(null) 
+// ✅ const allIcons = ref({ data: { heroicons: [], bootstrap: {} }, meta: {} })
+// ✅ const iconDataLoader = new IconDataLoader()
+// ✅ const loadIcons = async () => { ... }
+```
 
-### 視覺測試
-- [ ] 對比舊版介面，確保視覺一致性
-- [ ] 測試分類標題的顯示效果
-- [ ] 測試圖標選中狀態的視覺反饋
+## 🧪 TDD 測試驅動開發
 
-## 📦 交付物
+### Phase 1: Red - 編寫失敗測試
 
-1. **更新的元件檔案**
-   - `IconLibraryPanel.vue` - 修正後的主元件
-   - `IconLibraryPanel.test.js` - 更新的測試檔案
+#### 1.1 架構簡化測試
+```javascript
+describe('架構簡化', () => {
+  test('不應該有 activeLibrary 狀態', () => {
+    expect(wrapper.vm.activeLibrary).toBeUndefined()
+  })
+  
+  test('不應該有標籤切換 UI', () => {
+    expect(wrapper.find('.library-tabs').exists()).toBe(false)
+  })
+  
+  test('所有圖標應該有 isSolid 標記', () => {
+    const icons = wrapper.vm.processedIcons
+    icons.forEach(icon => {
+      expect(icon).toHaveProperty('isSolid')
+      expect(typeof icon.isSolid).toBe('boolean')
+    })
+  })
+})
+```
 
-2. **新增元件**
-   - 需要引入 `IconStyleSelector.vue` 元件
+#### 1.2 篩選邏輯測試
+```javascript
+describe('篩選邏輯', () => {
+  test('outline 模式應該只顯示 !isSolid 圖標', () => {
+    wrapper.vm.selectedStyle = 'outline'
+    const filtered = wrapper.vm.filteredIcons
+    filtered.forEach(icon => expect(icon.isSolid).toBe(false))
+  })
+  
+  test('solid 模式應該只顯示 isSolid 圖標', () => {
+    wrapper.vm.selectedStyle = 'solid'
+    const filtered = wrapper.vm.filteredIcons
+    filtered.forEach(icon => expect(icon.isSolid).toBe(true))
+  })
+  
+  test('all 模式應該顯示所有圖標', () => {
+    wrapper.vm.selectedStyle = 'all'
+    const filtered = wrapper.vm.filteredIcons
+    const processed = wrapper.vm.processedIcons
+    expect(filtered.length).toBe(processed.length)
+  })
+})
+```
 
-3. **測試報告**
-   - 單元測試通過報告
-   - 視覺對比測試結果
+#### 1.3 排序和顯示測試
+```javascript
+describe('排序和顯示', () => {
+  test('圖標應該按名稱排序', () => {
+    const icons = wrapper.vm.processedIcons
+    for (let i = 1; i < icons.length; i++) {
+      const nameA = icons[i-1].name || icons[i-1].class || ''
+      const nameB = icons[i].name || icons[i].class || ''
+      expect(nameA.localeCompare(nameB)).toBeLessThanOrEqual(0)
+    }
+  })
+  
+  test('搜尋時應該返回扁平結果', () => {
+    wrapper.vm.searchQuery = 'heart'
+    const grouped = wrapper.vm.groupedIcons
+    const hasCategory = grouped.some(item => item.type === 'category-header')
+    expect(hasCategory).toBe(false)
+  })
+  
+  test('正常顯示應該包含分類標題', () => {
+    wrapper.vm.searchQuery = ''
+    const grouped = wrapper.vm.groupedIcons
+    const hasCategory = grouped.some(item => item.type === 'category-header')
+    expect(hasCategory).toBe(true)
+  })
+})
+```
+
+### Phase 2: Green - 實作最小功能
+
+#### 實作檢查點
+- [ ] processedIcons 計算屬性
+- [ ] filteredIcons 計算屬性  
+- [ ] groupedIcons 計算屬性
+- [ ] 移除 activeLibrary
+- [ ] 引入 IconStyleSelector
+- [ ] 更新 virtualGridItems
+
+### Phase 3: Blue - 重構優化
+
+#### 優化檢查點
+- [ ] 程式碼清理
+- [ ] 效能調優
+- [ ] 移除未使用程式碼
+- [ ] 更新文件註解
+
+## 📋 完整測試案例清單
+
+### A. 架構簡化驗證 (6 tests)
+1. ✅ `不應該有 activeLibrary 響應式狀態`
+2. ✅ `不應該渲染標籤切換 UI (.library-tabs)`
+3. ✅ `不應該有 HeroIcons/Bootstrap Icons 切換按鈕`
+4. ✅ `所有圖標都應該有 isSolid 布林屬性`
+5. ✅ `Bootstrap -fill 圖標應該標記為 isSolid: true`
+6. ✅ `HeroIcons Solid 圖標應該標記為 isSolid: true`
+
+### B. 篩選邏輯驗證 (8 tests)
+7. ✅ `all 模式應該顯示所有圖標`
+8. ✅ `outline 模式應該只顯示 isSolid: false 的圖標`
+9. ✅ `solid 模式應該只顯示 isSolid: true 的圖標`
+10. ✅ `篩選不應該修改原始圖標資料`
+11. ✅ `IconStyleSelector 改變時應該觸發篩選`
+12. ✅ `篩選後的圖標仍應保持排序`
+13. ✅ `空結果時篩選不應該拋錯`
+14. ✅ `無效樣式值應該 fallback 到 all 模式`
+
+### C. 排序和顯示驗證 (7 tests)
+15. ✅ `圖標應該按名稱字母順序排序`
+16. ✅ `相關圖標應該相鄰顯示 (bi-heart, bi-heart-fill)`
+17. ✅ `搜尋時應該返回扁平化結果（無分類標題）`
+18. ✅ `正常顯示應該包含分類標題`
+19. ✅ `分類標題應該有 fullRow: true 屬性`
+20. ✅ `分類標題應該顯示正確的圖標計數`
+21. ✅ `空分類不應該顯示分類標題`
+
+### D. 元件整合驗證 (5 tests)
+22. ✅ `IconStyleSelector 應該正確整合`
+23. ✅ `IconPickerSearch 功能應該正常`
+24. ✅ `VirtualScrollGrid 應該正確處理 fullRow`
+25. ✅ `圖標選擇事件應該正確觸發`
+26. ✅ `載入狀態應該正確顯示`
+
+### E. 效能和回歸驗證 (4 tests)
+27. ✅ `大量圖標下篩選性能應該 < 100ms`
+28. ✅ `搜尋響應時間應該 < 200ms`
+29. ✅ `記憶體使用不應該顯著增加`
+30. ✅ `現有的 icon-select 事件格式不變`
+
+**目標**：≥ 30 個測試案例，覆蓋率 ≥ 90%
+
+## 📦 交付物清單
+
+### 1. 程式碼檔案
+- [ ] `IconLibraryPanel.vue` - 簡化架構主元件
+- [ ] `IconStyleSelector.vue` - 複製到 icon-picker/components
+- [ ] `IconLibraryPanel.test.js` - 完整的 TDD 測試套件
+
+### 2. 文件更新
+- [x] `ST-014-4-FIX.md` - 本文件（架構決策記錄）
+- [ ] TDD 開發日誌 - 記錄每個階段的進度
+
+### 3. 測試報告
+- [ ] 單元測試覆蓋率報告（目標 >90%）
+- [ ] TDD 階段性報告（Red/Green/Blue）
+- [ ] 效能基準測試（與舊版對比）
 
 ## 🎯 Definition of Done
 
-- [ ] 所有驗收條件都已滿足
-- [ ] 元件外觀與舊版完全一致
-- [ ] 所有測試案例通過（至少 20 個測試）
-- [ ] 搜尋功能在新架構下正常運作
-- [ ] 樣式切換功能正常運作
-- [ ] 無任何現有功能回歸問題
-- [ ] 程式碼 review 通過
-- [ ] 效能表現不低於舊版
+### 功能完整性
+- [ ] 移除所有標籤切換邏輯
+- [ ] 篩選功能正常（全部/線條/填充）
+- [ ] 搜尋功能保持原有表現
+- [ ] 分類結構正確顯示
+
+### 程式碼品質
+- [ ] TDD 三階段完成（紅燈→綠燈→重構）
+- [ ] 所有新測試通過
+- [ ] 程式碼覆蓋率 ≥ 90%
+- [ ] ESLint 檢查通過
+- [ ] TypeScript 類型檢查通過
+
+### 效能與使用者體驗
+- [ ] VirtualScrollGrid 效能保持
+- [ ] 圖標載入時間不增加
+- [ ] 篩選切換響應時間 < 100ms
+- [ ] 搜尋響應時間保持 < 200ms
+
+### 整合驗證
+- [ ] 與 IconPicker 主元件整合正常
+- [ ] 現有功能無回歸問題
+- [ ] 視覺外觀保持一致
+- [ ] Code Review 通過
+
+## 🚀 開發階段檢查點
+
+### Phase 1: 準備階段 ⏱️ 30 分鐘
+- [ ] 建立開發分支 `feat/icon-library-panel-tdd-refactor`
+- [ ] 設置 TDD 環境和工具
+- [ ] 運行基線測試，記錄初始狀態
+- [ ] 閱讀技術規格，確認理解無誤
+
+### Phase 2: 紅燈階段 ⏱️ 60 分鐘  
+- [ ] 編寫 6 個架構簡化測試
+- [ ] 編寫 8 個篩選邏輯測試
+- [ ] 編寫 7 個排序和顯示測試
+- [ ] 編寫 5 個元件整合測試
+- [ ] 編寫 4 個效能回歸測試
+- [ ] 確認所有測試失敗（紅燈狀態）
+
+### Phase 3: 綠燈階段 ⏱️ 120 分鐘
+- [ ] 移除標籤切換邏輯 (20 分鐘)
+- [ ] 實作 processedIcons computed (30 分鐘)
+- [ ] 實作 filteredIcons computed (20 分鐘)
+- [ ] 更新 groupedIcons 和 virtualGridItems (40 分鐘)
+- [ ] 引入 IconStyleSelector (10 分鐘)
+- [ ] 確認所有測試通過（綠燈狀態）
+
+### Phase 4: 藍燈階段 ⏱️ 60 分鐘
+- [ ] 程式碼清理和優化 (30 分鐘)
+- [ ] 效能測試和調優 (20 分鐘)
+- [ ] 文件和註解更新 (10 分鐘)
+- [ ] 最終測試套件運行
+
+### Phase 5: 整合驗證 ⏱️ 30 分鐘
+- [ ] 與 IconPicker 整合測試
+- [ ] 視覺檢查和 UI 測試
+- [ ] 效能基準對比
+- [ ] 建立 PR 和 Code Review
+
+**總預估時間**：5 小時 (300 分鐘)
 
 ---
 
+## 📞 緊急聯絡和支援
+
+**技術支援**：架構師團隊  
+**產品決策**：Product Manager  
+**阻塞升級**：技術主管
+
+**開發方法**：TDD (Test-Driven Development)  
 **負責人**：開發團隊  
-**審查者**：產品經理 + 技術主管  
-**完成目標**：2025-08-19 當天完成
+**審查者**：架構師 + 產品經理  
+**完成目標**：2025-08-19 TDD 完整週期  
+**品質標準**：測試覆蓋率 ≥ 90%，效能不退化
