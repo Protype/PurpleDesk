@@ -62,9 +62,10 @@ export function useIconService() {
 
     try {
       // 並行載入圖標資料和變體資訊
-      const [heroIconsData, bootstrapIconsData, heroVariants, bootstrapVariants] = await Promise.all([
+      const [heroIconsData, bootstrapIconsData, bootstrapCategories, heroVariants, bootstrapVariants] = await Promise.all([
         loadHeroIcons(),
-        loadBootstrapIcons(style),
+        loadBootstrapIcons(),
+        loadBootstrapIconCategories(),
         loadHeroIconVariants(),
         loadBootstrapIconVariants()
       ])
@@ -73,6 +74,7 @@ export function useIconService() {
       const mergedData = mergeIconLibraryData(
         heroIconsData, 
         bootstrapIconsData, 
+        bootstrapCategories,
         heroVariants, 
         bootstrapVariants,
         style
@@ -154,14 +156,28 @@ export function useIconService() {
   /**
    * 載入 Bootstrap Icons 資料
    */
-  const loadBootstrapIcons = async (style) => {
+  const loadBootstrapIcons = async () => {
     try {
-      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons/style/${style}`)
+      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons`)
       validateResponseData(response.data)
       return response.data
     } catch (error) {
       console.warn('Failed to load Bootstrap Icons:', error.message)
       return { data: {}, meta: { total: 0 } }
+    }
+  }
+
+  /**
+   * 載入 Bootstrap Icons 分類資訊
+   */
+  const loadBootstrapIconCategories = async () => {
+    try {
+      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons/categories`)
+      validateResponseData(response.data)
+      return response.data
+    } catch (error) {
+      console.warn('Failed to load Bootstrap Icons categories:', error.message)
+      return { data: {} }
     }
   }
 
@@ -196,7 +212,7 @@ export function useIconService() {
   /**
    * 合併圖標庫資料
    */
-  const mergeIconLibraryData = (heroIconsData, bootstrapIconsData, heroVariants, bootstrapVariants, currentStyle) => {
+  const mergeIconLibraryData = (heroIconsData, bootstrapIconsData, bootstrapCategories, heroVariants, bootstrapVariants, currentStyle) => {
     const result = {
       data: {
         heroicons: [],
@@ -212,6 +228,9 @@ export function useIconService() {
         libraries: {
           heroicons: heroIconsData?.meta || {},
           bootstrap: bootstrapIconsData?.meta || {}
+        },
+        categories: {
+          bootstrap: bootstrapCategories?.data || {}
         }
       }
     }
@@ -229,11 +248,24 @@ export function useIconService() {
       result.meta.total += heroIconsData.data.length
     }
     
-    // 處理 Bootstrap Icons 資料
+    // 處理 Bootstrap Icons 資料 - 按分類優先級排序
     if (bootstrapIconsData?.data && typeof bootstrapIconsData.data === 'object') {
       let bootstrapTotal = 0
+      const categories = bootstrapCategories?.data || {}
       
-      Object.entries(bootstrapIconsData.data).forEach(([categoryName, categoryIcons]) => {
+      // 定義優先級排序
+      const priorityOrder = { immediate: 1, high: 2, medium: 3, low: 4 }
+      
+      // 按優先級排序分類
+      const sortedCategories = Object.entries(bootstrapIconsData.data)
+        .sort(([catA], [catB]) => {
+          const priorityA = categories[catA]?.priority || 'low'
+          const priorityB = categories[catB]?.priority || 'low'
+          return priorityOrder[priorityA] - priorityOrder[priorityB]
+        })
+      
+      // 按排序後的順序處理分類
+      sortedCategories.forEach(([categoryName, categoryIcons]) => {
         if (Array.isArray(categoryIcons)) {
           result.data.bootstrap[categoryName] = categoryIcons.map(icon => ({
             ...icon,
@@ -241,7 +273,8 @@ export function useIconService() {
             source: 'bootstrap-icons',
             currentStyle: currentStyle,
             hasVariants: icon.variants && Object.keys(icon.variants).length > 0,
-            variantInfo: buildBootstrapIconVariantInfo(icon, bootstrapVariants?.data)
+            variantInfo: buildBootstrapIconVariantInfo(icon, bootstrapVariants?.data),
+            categoryInfo: categories[categoryName] || {}
           }))
           bootstrapTotal += categoryIcons.length
         }

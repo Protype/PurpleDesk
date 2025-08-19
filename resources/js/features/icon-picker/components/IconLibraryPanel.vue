@@ -170,8 +170,19 @@ const processedIconsData = computed(() => {
           displayName: `${icon.name} (${variant})`
         })
       })
+    } else if (icon.type === 'bootstrap' && icon.variants) {
+      // Bootstrap Icons：為每個變體建立單獨的圖標項目
+      Object.entries(icon.variants).forEach(([variant, variantInfo]) => {
+        expandedIcons.push({
+          ...icon,
+          variant: variant,
+          isSolid: variant === 'solid',
+          class: variantInfo.class,
+          displayName: `${icon.name} (${variant})`
+        })
+      })
     } else {
-      // Bootstrap Icons：保持原樣
+      // 其他圖標類型：保持原樣
       expandedIcons.push({
         ...icon,
         isSolid: icon.class?.endsWith('-fill') || false,
@@ -181,6 +192,14 @@ const processedIconsData = computed(() => {
   })
   
   return expandedIcons.sort((a, b) => {
+    // 首先按類型排序：HeroIcons 在前，Bootstrap Icons 在後
+    if (a.type !== b.type) {
+      if (a.type === 'heroicons') return -1
+      if (b.type === 'heroicons') return 1
+      // 都是 Bootstrap Icons 的情況會繼續下面的排序
+    }
+    
+    // 相同類型內按名稱排序
     const nameA = a.displayName || a.name || a.class || a.component || ''
     const nameB = b.displayName || b.name || b.class || b.component || ''
     return nameA.localeCompare(nameB)
@@ -248,21 +267,54 @@ const groupedIcons = computed(() => {
     return filteredIcons.value
   }
   
-  // 正常顯示按分類分組 - 只顯示 Heroicons
+  // 正常顯示按分類分組
   const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
+  const bootstrapIcons = filteredIcons.value.filter(icon => icon.type === 'bootstrap')
 
   const items = []
   
-  // 只添加 Heroicons 分類
+  // 添加 Heroicons 分類
   if (heroIcons.length > 0) {
     items.push({
       type: 'category-header',
       fullRow: true,
       data: {
-        title: 'Heroicons'
+        title: 'Hero Icons',
+        count: heroIcons.length
       }
     })
     items.push(...heroIcons)
+  }
+
+  // 添加 Bootstrap Icons 分類
+  if (bootstrapIcons.length > 0) {
+    // 按分類分組 Bootstrap Icons
+    const categories = ['general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others']
+    const categoryNames = {
+      general: '通用圖標',
+      ui: 'UI 介面', 
+      communications: '通訊溝通',
+      files: '檔案文件',
+      media: '媒體播放',
+      people: '人物相關',
+      alphanumeric: '數字字母',
+      others: '其他圖標'
+    }
+    
+    categories.forEach(category => {
+      const categoryIcons = bootstrapIcons.filter(icon => icon.category === category)
+      if (categoryIcons.length > 0) {
+        items.push({
+          type: 'category-header',
+          fullRow: true,
+          data: {
+            title: categoryNames[category] || category,
+            count: categoryIcons.length
+          }
+        })
+        items.push(...categoryIcons)
+      }
+    })
   }
 
   return items
