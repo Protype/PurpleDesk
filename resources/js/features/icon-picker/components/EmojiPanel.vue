@@ -62,181 +62,108 @@
   </div>
 </template>
 
-<script>
-import { ref, computed, onMounted, watch } from 'vue'
+<script setup>
+import { ref, computed } from 'vue'
 import VirtualScrollGrid from './shared/VirtualScrollGrid.vue'
 import IconPickerSearch from './IconPickerSearch.vue'
 import SkinToneSelector from '../../../components/common/SkinToneSelector.vue'
-import { IconDataLoader } from '../services/IconDataLoader.js'
+import { useSearchFilter } from '../composables/useSearchFilter.js'
+import { usePreloadedEmojiData } from '../composables/usePreloadedData.js'
 import { applySkinTone } from '../utils/emojiSkinToneHandler.js'
 
-export default {
-  name: 'EmojiPanel',
-  components: {
-    VirtualScrollGrid,
-    IconPickerSearch,
-    SkinToneSelector
-  },
-  props: {
-    // 選中的 emoji
-    selectedEmoji: {
-      type: String,
-      default: ''
-    }
-  },
-  emits: ['emoji-selected'],
-  setup(props, { emit }) {
-    // 內部狀態管理
-    const searchQuery = ref('')
-    const selectedSkinTone = ref(0)
-    
-    // 狀態管理
-    const isLoading = ref(true)
-    const hasError = ref(false)
-    const errorMessage = ref('')
-    const rawEmojiData = ref([])
-    const virtualGrid = ref(null)
-    
-    // IconDataLoader 實例
-    const iconDataLoader = new IconDataLoader()
+// Props
+defineOptions({
+  name: 'EmojiPanel'
+})
 
-    // 載入 emoji 資料
-    const loadEmojiData = async () => {
-      try {
-        isLoading.value = true
-        hasError.value = false
-        errorMessage.value = ''
+const props = defineProps({
+  selectedEmoji: {
+    type: String,
+    default: ''
+  }
+})
 
-        const data = await iconDataLoader.getEmojiData()
-        rawEmojiData.value = data || []
-      } catch (error) {
-        console.error('Failed to load emoji data:', error)
-        hasError.value = true
-        errorMessage.value = error.message || '未知錯誤'
-        rawEmojiData.value = []
-      } finally {
-        isLoading.value = false
-      }
-    }
+// Emits
+const emit = defineEmits(['emoji-selected'])
 
-    // 處理膚色的 emoji 資料
-    const processedEmojis = computed(() => {
-      if (!rawEmojiData.value.length) return []
+// 內部狀態
+const selectedSkinTone = ref(0)
+const virtualGrid = ref(null)
 
-      return rawEmojiData.value.map(category => ({
-        ...category,
-        emojis: category.emojis?.map(emoji => ({
-          ...emoji,
-          displayEmoji: applySkinTone(emoji, selectedSkinTone.value)
-        })) || []
-      }))
-    })
+// 使用預載入的 emoji 資料
+const emojiProvider = usePreloadedEmojiData()
 
-    // 過濾 emoji 資料（基於搜尋條件）
-    const filteredEmojis = computed(() => {
-      if (!searchQuery.value.trim()) {
-        return processedEmojis.value
-      }
+// 狀態管理（從預載入提供者取得）
+const rawEmojiData = emojiProvider.data
+const isLoading = emojiProvider.loading
+const loadError = emojiProvider.error
 
-      const query = searchQuery.value.toLowerCase().trim()
-      
-      return processedEmojis.value.map(category => {
-        const filteredCategoryEmojis = category.emojis?.filter(emoji => {
-          // 搜尋 emoji 名稱
-          if (emoji.name?.toLowerCase().includes(query)) return true
-          
-          // 搜尋關鍵字
-          if (emoji.keywords?.some(keyword => keyword.toLowerCase().includes(query))) return true
-          
-          // 搜尋 emoji 本身
-          if (emoji.emoji?.includes(query)) return true
-          
-          return false
-        }) || []
+// 錯誤狀態計算
+const hasError = computed(() => !!loadError.value)
+const errorMessage = computed(() => loadError.value?.message || '未知錯誤')
 
-        return {
-          ...category,
-          emojis: filteredCategoryEmojis
-        }
-      }).filter(category => category.emojis.length > 0) // 只保留有結果的分類
-    })
+// 處理膚色的 emoji 資料
+const processedEmojis = computed(() => {
+  if (!rawEmojiData.value?.length) return []
 
-    // 扁平化 emoji 資料用於 VirtualScrollGrid（使用新的 fullRow 屬性）
-    const flattenedEmojis = computed(() => {
-      const result = []
-      
-      filteredEmojis.value.forEach(category => {
-        if (category.emojis && category.emojis.length > 0) {
-          // 添加分類標題，使用 fullRow 和 itemHeight 屬性
-          result.push({
-            type: 'category-header',
-            isCategory: true,
-            fullRow: true,
-            itemHeight: 40, // 分類標題使用 40px 高度
-            categoryId: category.categoryId,
-            categoryName: category.categoryName
-          })
-          
-          // 添加該分類的 emoji
-          category.emojis.forEach(emoji => {
-            result.push({
-              ...emoji,
-              type: 'emoji-item',
-              isCategory: false
-            })
-          })
-        }
+  return rawEmojiData.value.map(category => ({
+    ...category,
+    emojis: category.emojis?.map(emoji => ({
+      ...emoji,
+      displayEmoji: applySkinTone(emoji, selectedSkinTone.value)
+    })) || []
+  }))
+})
+
+// 搜尋過濾功能
+const {
+  searchQuery,
+  filteredData: filteredEmojis,
+  clearSearch
+} = useSearchFilter(processedEmojis)
+
+// 扁平化 emoji 資料用於 VirtualScrollGrid
+const flattenedEmojis = computed(() => {
+  const result = []
+  
+  filteredEmojis.value.forEach(category => {
+    if (category.emojis && category.emojis.length > 0) {
+      // 添加分類標題，使用 fullRow 和 itemHeight 屬性
+      result.push({
+        type: 'category-header',
+        isCategory: true,
+        fullRow: true,
+        itemHeight: 40, // 分類標題使用 40px 高度
+        categoryId: category.categoryId,
+        categoryName: category.categoryName
       })
       
-      return result
-    })
-
-    // 移除舊的 applyModifier 方法，現在使用 applySkinTone 工具函數
-
-    // 選擇 emoji
-    const selectEmoji = (item) => {
-      if (item.isCategory) return // 分類標題不可選擇
-      
-      const emojiData = {
-        emoji: item.displayEmoji,
-        name: item.name,
-        category: item.category,
-        type: 'emoji'
-      }
-      
-      emit('emoji-selected', emojiData)
+      // 添加該分類的 emoji
+      category.emojis.forEach(emoji => {
+        result.push({
+          ...emoji,
+          type: 'emoji-item',
+          isCategory: false
+        })
+      })
     }
+  })
+  
+  return result
+})
 
-    // 膚色變化時保持捲軸位置（不做任何處理，computed 自動重新計算）
-
-    // 元件掛載時載入資料
-    onMounted(() => {
-      loadEmojiData()
-    })
-
-    return {
-      // Refs
-      virtualGrid,
-      
-      // 內部狀態
-      searchQuery,
-      selectedSkinTone,
-      
-      // 狀態
-      isLoading,
-      hasError,
-      errorMessage,
-      
-      // 計算屬性
-      processedEmojis,
-      filteredEmojis,
-      flattenedEmojis,
-      
-      // 方法
-      selectEmoji,
-      loadEmojiData
-    }
+// 選擇 emoji
+const selectEmoji = (item) => {
+  if (item.isCategory) return // 分類標題不可選擇
+  
+  const emojiData = {
+    emoji: item.displayEmoji,
+    name: item.name,
+    category: item.category,
+    type: 'emoji'
   }
+  
+  emit('emoji-selected', emojiData)
 }
 </script>
 

@@ -95,326 +95,263 @@
   </div>
 </template>
 
-<script>
-import { ref, computed, onMounted, watch, nextTick } from 'vue'
+<script setup>
+import { ref, computed, onMounted } from 'vue'
 import VirtualScrollGrid from './shared/VirtualScrollGrid.vue'
 import IconPickerSearch from './IconPickerSearch.vue'
 import IconStyleSelector from './IconStyleSelector.vue'
-import { IconDataLoader } from '../services/IconDataLoader.js'
+import { useSearchFilter } from '../composables/useSearchFilter.js'
+import { usePreloadedIconData } from '../composables/usePreloadedData.js'
 import { useIconVariants } from '../composables/useIconVariants.js'
 // 一次性匯入所有 HeroIcons
 import * as HeroiconsOutline from '@heroicons/vue/outline'
 import * as HeroiconsSolid from '@heroicons/vue/solid'
 
-export default {
-  name: 'IconLibraryPanel',
+// Props 和 Emits
+defineOptions({
+  name: 'IconLibraryPanel'
+})
+
+const props = defineProps({
+  selectedIcon: {
+    type: [String, Object],
+    default: null
+  },
+  iconType: {
+    type: String,
+    default: 'heroicons'
+  },
+  itemsPerRow: {
+    type: Number,
+    default: 10
+  }
+})
+
+const emit = defineEmits(['icon-select', 'icon-change'])
+
+// 服務層
+const iconVariants = useIconVariants()
+
+// 內部狀態
+const selectedStyle = ref('outline')
+
+// 使用預載入的圖標資料
+const iconProvider = usePreloadedIconData()
+
+// 狀態管理（從預載入提供者取得）
+const allIcons = iconProvider.data
+const isLoading = iconProvider.loading
+const loadError = iconProvider.error
+
+// 錯誤狀態
+const error = computed(() => loadError.value?.message || null)
+
+// 處理過的圖標資料
+const processedIconsData = computed(() => {
+  if (!allIcons.value?.data) return []
   
-  components: {
-    VirtualScrollGrid,
-    IconPickerSearch,
-    IconStyleSelector
-  },
+  const allIconsList = [
+    ...(allIcons.value.data.heroicons || []), 
+    ...Object.values(allIcons.value.data.bootstrap || {}).flat()
+  ]
+  
+  return allIconsList.map(icon => ({
+    ...icon,
+    // 標記是否為 solid 樣式
+    isSolid: icon.class?.endsWith('-fill') || 
+             icon.component?.includes('Solid') ||
+             false
+  })).sort((a, b) => {
+    const nameA = a.name || a.class || a.component || ''
+    const nameB = b.name || b.class || b.component || ''
+    return nameA.localeCompare(nameB)
+  })
+})
 
-  props: {
-    /**
-     * 當前選中的圖標
-     */
-    selectedIcon: {
-      type: [String, Object],
-      default: null
-    },
+// 搜尋過濾功能
+const {
+  searchQuery,
+  filteredData: searchFilteredIcons,
+  clearSearch
+} = useSearchFilter(computed(() => 
+  // 將圖標包裝為分類結構供搜尋使用
+  [{
+    categoryId: 'heroicons',
+    categoryName: 'Heroicons',
+    icons: processedIconsData.value
+  }]
+), {
+  itemsKey: 'icons',
+  searchFunction: (icon, query) => {
+    const lowerQuery = query.toLowerCase()
+    const name = (icon.name || '').toLowerCase()
+    const keywords = (icon.keywords || []).join(' ').toLowerCase()
+    const className = (icon.class || '').toLowerCase()
+    const component = (icon.component || '').toLowerCase()
     
-    /**
-     * 圖標類型
-     */
-    iconType: {
-      type: String,
-      default: 'heroicons'
-    },
+    return name.includes(lowerQuery) || 
+           keywords.includes(lowerQuery) || 
+           className.includes(lowerQuery) ||
+           component.includes(lowerQuery)
+  }
+})
 
-    /**
-     * 每行顯示的圖標數量
-     */
-    itemsPerRow: {
-      type: Number,
-      default: 10
-    }
-  },
+// 過濾後的圖標（扁平化）
+const filteredIcons = computed(() => {
+  return searchFilteredIcons.value.flatMap(category => category.icons || [])
+})
 
-  emits: ['icon-select', 'icon-change'],
+// 分組後的圖標（考慮搜尋狀態）
+const groupedIcons = computed(() => {
+  const query = searchQuery.value.trim()
+  
+  if (query) {
+    // 搜尋時返回扁平化結果（無分類標題）
+    return filteredIcons.value
+  }
+  
+  // 正常顯示按分類分組 - 只顯示 Heroicons
+  const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
 
-  setup(props, { emit }) {
-    // 響應式狀態
-    const searchQuery = ref('')
-    const selectedStyle = ref('outline')
-    const isLoading = ref(true)
-    const error = ref(null)
-    const allIcons = ref({ data: { heroicons: [], bootstrap: {} }, meta: {} })
-
-    // 服務實例
-    const iconDataLoader = new IconDataLoader()
-    const iconVariants = useIconVariants()
-
-
-    // 圖標數量統計
-    const heroIconsCount = computed(() => {
-      return allIcons.value.data?.heroicons?.length || 0
-    })
-
-    const bootstrapIconsCount = computed(() => {
-      const bootstrapData = allIcons.value.data?.bootstrap || {}
-      return Object.values(bootstrapData).reduce((total, categoryIcons) => {
-        return total + (Array.isArray(categoryIcons) ? categoryIcons.length : 0)
-      }, 0)
-    })
-
-    // 處理過的圖標（統一來源，添加 isSolid 標記，排序）
-    const processedIcons = computed(() => {
-      const allIconsList = [
-        ...(allIcons.value.data?.heroicons || []), 
-        ...Object.values(allIcons.value.data?.bootstrap || {}).flat()
-      ]
-      
-      return allIconsList.map(icon => ({
-        ...icon,
-        isSolid: icon.class?.endsWith('-fill') || 
-                 icon.component?.includes('Solid') ||
-                 false
-      }))
-      .sort((a, b) => {
-        const nameA = a.name || a.class || a.component || ''
-        const nameB = b.name || b.class || b.component || ''
-        return nameA.localeCompare(nameB)
-      })
-    })
-
-    // 過濾後的圖標
-    const filteredIcons = computed(() => {
-      // 對於 Heroicons，所有圖標都支持 outline 和 solid 樣式
-      // 不需要根據樣式篩選圖標，而是在渲染時根據樣式選擇對應元件
-      return processedIcons.value
-    })
-
-    // 分組後的圖標（考慮搜尋狀態）
-    const groupedIcons = computed(() => {
-      const query = searchQuery.value.toLowerCase().trim()
-      
-      if (query) {
-        // 搜尋時返回扁平化結果（無分類標題）
-        return filteredIcons.value.filter(icon => {
-          const name = (icon.name || '').toLowerCase()
-          const keywords = (icon.keywords || []).join(' ').toLowerCase()
-          const className = (icon.class || '').toLowerCase()
-          const component = (icon.component || '').toLowerCase()
-          
-          return name.includes(query) || 
-                 keywords.includes(query) || 
-                 className.includes(query) ||
-                 component.includes(query)
-        })
+  const items = []
+  
+  // 只添加 Heroicons 分類
+  if (heroIcons.length > 0) {
+    items.push({
+      type: 'category-header',
+      fullRow: true,
+      data: {
+        title: 'Heroicons'
       }
-      
-      // 正常顯示按分類分組 - 只顯示 Heroicons
-      const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
-
-      const items = []
-      
-      // 只添加 Heroicons 分類
-      if (heroIcons.length > 0) {
-        items.push({
-          type: 'category-header',
-          fullRow: true,
-          data: {
-            title: 'Heroicons'
-          }
-        })
-        heroIcons.forEach(icon => {
-          items.push(icon)
-        })
-      }
-
-      return items
     })
+    items.push(...heroIcons)
+  }
 
-    // 轉換為 VirtualScrollGrid 所需的格式
-    const virtualGridItems = computed(() => {
-      const grouped = groupedIcons.value
+  return items
+})
 
-      return grouped.map((item, index) => {
-        if (item.type === 'category-header') {
-          return {
-            key: `category-${item.data.title}-${index}`,
-            type: 'category',
-            fullRow: true,
-            itemHeight: 40, // 分類標題使用 40px 高度
-            data: item.data
-          }
-        } else {
-          return {
-            key: `icon-${item.component || item.class}-${index}`,
-            type: 'icon',
-            data: item
-          }
-        }
-      })
-    })
-
-    // 工具方法
-    const getCategoryDisplayName = (categoryName) => {
-      const categoryNames = {
-        general: '一般',
-        ui: '介面',
-        communications: '通訊',
-        files: '檔案',
-        media: '媒體',
-        people: '人物',
-        alphanumeric: '字母數字',
-        others: '其他'
+// 轉換為 VirtualScrollGrid 所需的格式
+const virtualGridItems = computed(() => {
+  return groupedIcons.value.map((item, index) => {
+    if (item.type === 'category-header') {
+      return {
+        key: `category-${item.data.title}-${index}`,
+        type: 'category',
+        fullRow: true,
+        itemHeight: 40, // 分類標題使用 40px 高度
+        data: item.data
       }
-      return categoryNames[categoryName] || categoryName
+    } else {
+      return {
+        key: `icon-${item.component || item.class}-${index}`,
+        type: 'icon',
+        data: item
+      }
     }
+  })
+})
 
-    const getIconTitle = (icon) => {
-      return icon.name || icon.class || icon.component || '未知圖標'
+// 圖標數量統計
+const heroIconsCount = computed(() => {
+  return allIcons.value?.data?.heroicons?.length || 0
+})
+
+const bootstrapIconsCount = computed(() => {
+  const bootstrapData = allIcons.value?.data?.bootstrap || {}
+  return Object.values(bootstrapData).reduce((total, categoryIcons) => {
+    return total + (Array.isArray(categoryIcons) ? categoryIcons.length : 0)
+  }, 0)
+})
+
+// 快取元件查找結果
+const iconComponentCache = new Map()
+
+const getHeroIconComponent = (icon) => {
+  // 根據當前樣式動態解析 HeroIcon 元件
+  const style = selectedStyle.value
+  const componentName = icon.component
+  
+  if (!componentName) return null
+  
+  // 使用快取鍵避免重複查找
+  const cacheKey = `${componentName}-${style}`
+  if (iconComponentCache.has(cacheKey)) {
+    return iconComponentCache.get(cacheKey)
+  }
+  
+  try {
+    // 根據樣式選擇正確的元件集合
+    let component
+    if (style === 'solid') {
+      component = HeroiconsSolid[componentName]
+    } else {
+      component = HeroiconsOutline[componentName]
     }
-
-    // 快取元件查找結果
-    const iconComponentCache = new Map()
     
-    const getHeroIconComponent = (icon) => {
-      // 根據當前樣式動態解析 HeroIcon 元件
-      const style = selectedStyle.value
-      const componentName = icon.component
-      
-      if (!componentName) return null
-      
-      // 使用快取鍵避免重複查找
-      const cacheKey = `${componentName}-${style}`
-      if (iconComponentCache.has(cacheKey)) {
-        return iconComponentCache.get(cacheKey)
-      }
-      
-      try {
-        // 根據樣式選擇正確的元件集合
-        let component
-        if (style === 'solid') {
-          component = HeroiconsSolid[componentName]
-        } else {
-          component = HeroiconsOutline[componentName]
-        }
-        
-        // 快取結果
-        iconComponentCache.set(cacheKey, component)
-        return component
-      } catch (error) {
-        console.warn(`Failed to resolve HeroIcon component: ${componentName}`, error)
-        iconComponentCache.set(cacheKey, null)
-        return null
-      }
-    }
-
-    const getBootstrapIconClass = (icon) => {
-      const style = selectedStyle.value
-      if (style === 'solid' && icon.variants?.solid?.class) {
-        return icon.variants.solid.class
-      }
-      return icon.class
-    }
-
-    const isSelected = (icon) => {
-      if (!props.selectedIcon) return false
-      
-      if (typeof props.selectedIcon === 'string') {
-        return props.selectedIcon === (icon.component || icon.class)
-      }
-      
-      return props.selectedIcon === icon
-    }
-
-    // 事件處理方法
-    const handleSearch = (query) => {
-      // 搜尋事件已由 v-model 處理
-    }
-
-    const handleSearchClear = () => {
-      searchQuery.value = ''
-    }
-
-    const handleStyleChange = (value) => {
-      selectedStyle.value = value
-      iconVariants.setIconStyle(value)
-    }
-
-    const selectIcon = (icon) => {
-      emit('icon-select', icon)
-      emit('icon-change', {
-        icon: icon,
-        type: icon.type,
-        style: selectedStyle.value
-      })
-    }
-
-    const clearSearch = () => {
-      searchQuery.value = ''
-    }
-
-    const reloadIcons = async () => {
-      await loadIcons()
-    }
-
-    // 載入圖標資料（一次性載入所有樣式）
-    const loadIcons = async () => {
-      try {
-        isLoading.value = true
-        error.value = null
-        
-        // 載入所有樣式的資料，不依賴當前選擇的樣式
-        const data = await iconDataLoader.getIconLibraryData()
-        allIcons.value = data
-      } catch (err) {
-        error.value = err.message || '載入圖標時發生錯誤'
-        console.error('Failed to load icons:', err)
-      } finally {
-        isLoading.value = false
-      }
-    }
-
-    // 組件掛載時載入圖標
-    onMounted(async () => {
-      // 初始化變體狀態
-      selectedStyle.value = iconVariants.currentIconStyle.value
-      await loadIcons()
-    })
-
-    return {
-      // 響應式狀態
-      searchQuery,
-      selectedStyle,
-      isLoading,
-      error,
-      
-      // 計算屬性
-      heroIconsCount,
-      bootstrapIconsCount,
-      processedIcons,
-      filteredIcons,
-      groupedIcons,
-      virtualGridItems,
-      
-      // 方法
-      handleSearch,
-      handleSearchClear,
-      handleStyleChange,
-      selectIcon,
-      clearSearch,
-      reloadIcons,
-      getIconTitle,
-      getHeroIconComponent,
-      getBootstrapIconClass,
-      isSelected
-    }
+    // 快取結果
+    iconComponentCache.set(cacheKey, component)
+    return component
+  } catch (error) {
+    console.warn(`Failed to resolve HeroIcon component: ${componentName}`, error)
+    iconComponentCache.set(cacheKey, null)
+    return null
   }
 }
+
+const getBootstrapIconClass = (icon) => {
+  const style = selectedStyle.value
+  if (style === 'solid' && icon.variants?.solid?.class) {
+    return icon.variants.solid.class
+  }
+  return icon.class
+}
+
+const getIconTitle = (icon) => {
+  return icon.name || icon.class || icon.component || '未知圖標'
+}
+
+const isSelected = (icon) => {
+  if (!props.selectedIcon) return false
+  
+  if (typeof props.selectedIcon === 'string') {
+    return props.selectedIcon === (icon.component || icon.class)
+  }
+  
+  return props.selectedIcon === icon
+}
+
+// 事件處理方法
+const handleSearch = (query) => {
+  // 搜尋事件已由 v-model 處理
+}
+
+const handleSearchClear = () => {
+  clearSearch()
+}
+
+const handleStyleChange = (value) => {
+  selectedStyle.value = value
+  iconVariants.setIconStyle(value)
+}
+
+const selectIcon = (icon) => {
+  emit('icon-select', icon)
+  emit('icon-change', {
+    icon: icon,
+    type: icon.type,
+    style: selectedStyle.value
+  })
+}
+
+const reloadIcons = () => {
+  iconProvider.reload()
+}
+
+// 組件掛載時初始化
+onMounted(() => {
+  // 同步變體狀態
+  selectedStyle.value = iconVariants.currentIconStyle.value
+})
 </script>
 
 <style scoped>
