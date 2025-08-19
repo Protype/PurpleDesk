@@ -31,7 +31,8 @@
 | ST-012-I | EP-004 | TextIconPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-013 | EP-004 | 實作 EmojiPanel（含完整解決方案） | P1 | 8小時 | 進行中 |
 | ST-013-I | EP-004 | EmojiPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
-| ST-014 | EP-004 | 實作 IconLibraryPanel | P1 | 10小時 | 待開始 |
+| ST-014 | EP-004 | 實作 IconLibraryPanel | P1 | 10小時 | ✅ 已完成 |
+| ST-014-4-FIX | EP-004 | 修正 IconLibraryPanel 圖標顯示邏輯 | P0 | 4小時 | 待開始 |
 | ST-014-I | EP-004 | IconLibraryPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
 | ST-015 | EP-004 | 實作 ImageUploadPanel | P1 | 6小時 | 待開始 |
 | ST-015-I | EP-004 | ImageUploadPanel 測試頁面整合 | P0 | 1小時 | 待開始 |
@@ -664,6 +665,33 @@ const canApplySkinTone = (emoji) => supportsSkinTone(emoji)
 - 測試樣式切換
 - 測試搜尋功能
 - 效能測試
+
+---
+
+#### ST-014-4-FIX: 修正 IconLibraryPanel 圖標顯示邏輯
+
+**作為**：使用者  
+**我想要**：在單一視圖中瀏覽所有圖標庫（先 HeroIcons，再 Bootstrap Icons 各分類）  
+**所以**：可以快速找到需要的圖標，體驗與舊版一致
+
+**驗收條件**：
+- [ ] 移除 HeroIcons/Bootstrap Icons 標籤切換
+- [ ] 實作連續顯示：先顯示 HeroIcons 分類，後顯示 Bootstrap Icons 各分類
+- [ ] 使用 IconStyleSelector 替代 VariantSelector
+- [ ] 實作正確的 outline/solid 篩選邏輯
+- [ ] 保持與舊版一致的視覺呈現和分類標題
+
+**技術要求**：
+- 參考舊版 `groupedIcons` computed 實作邏輯
+- 使用舊版 `filterBootstrapIconsByStyle` 篩選方法
+- 保持 VirtualScrollGrid 效能優化
+- 維持搜尋功能正常運作
+
+**測試要求**：
+- 測試連續顯示邏輯
+- 測試樣式篩選功能
+- 測試與舊版的視覺一致性
+- 測試搜尋功能在新架構下的運作
 
 ---
 
