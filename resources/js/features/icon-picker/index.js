@@ -9,7 +9,7 @@ export { default } from './IconPicker.vue'
 export { default as IconPicker } from './IconPicker.vue'
 
 // 代理組件（用於版本切換）
-export { default as IconPickerProxy } from './components/IconPickerProxy.vue'
+export { default as IconPickerProxy } from './demo/IconPickerProxy.vue'
 
 // 子面板組件（可選，用於進階使用）
 export { default as EmojiPanel } from './components/EmojiPanel.vue'
@@ -24,5 +24,5 @@ export { IconDataLoader } from './services/IconDataLoader.js'
 
 // 開發工具（開發環境）
 if (import.meta.env.DEV) {
-  export { default as IconPickerDevTool } from './components/IconPickerDevTool.vue'
+  export { default as IconPickerDevTool } from './demo/IconPickerDevTool.vue'
 }

@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import IconPickerProxy from '../../components/IconPickerProxy.vue'
+import IconPickerProxy from '../../demo/IconPickerProxy.vue'
 
 // Mock the IconPicker components
-vi.mock('../../components/IconPicker.vue', () => ({
+vi.mock('../../IconPicker.vue', () => ({
   default: {
     name: 'IconPicker',
     template: '<div data-testid="new-iconpicker">New IconPicker</div>'
