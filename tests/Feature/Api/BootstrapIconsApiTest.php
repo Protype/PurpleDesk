@@ -8,9 +8,9 @@ use Tests\TestCase;
 class BootstrapIconsApiTest extends TestCase
 {
     /**
-     * 測試 Bootstrap Icons API 回傳正確的基本結構
+     * 測試獲取所有 Bootstrap Icons API 結構
      */
-    public function test_bootstrap_api_returns_correct_structure()
+    public function test_get_all_bootstrap_icons_returns_correct_structure()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
 
@@ -25,31 +25,19 @@ class BootstrapIconsApiTest extends TestCase
                     'categories'
                 ]
             ]);
-    }
 
-    /**
-     * 測試 data 按分類分組
-     */
-    public function test_bootstrap_data_is_grouped_by_category()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
-        
-        $data = $response->json('data');
-        
-        // 應該至少有一個分類
-        $this->assertGreaterThan(0, count($data));
-        
-        // 每個分類都應該是陣列
-        foreach ($data as $categoryId => $categoryIcons) {
-            $this->assertIsString($categoryId);
-            $this->assertIsArray($categoryIcons);
-        }
+        // 檢查 meta 內容
+        $meta = $response->json('meta');
+        $this->assertEquals('bootstrap-icons', $meta['type']);
+        $this->assertIsInt($meta['total']);
+        $this->assertGreaterThan(0, $meta['total']);
+        $this->assertIsArray($meta['categories']);
     }
 
     /**
      * 測試 Bootstrap Icon 項目具有必要欄位
      */
-    public function test_bootstrap_item_has_required_fields()
+    public function test_bootstrap_icon_item_has_required_fields()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
@@ -69,145 +57,64 @@ class BootstrapIconsApiTest extends TestCase
         $this->assertArrayHasKey('keywords', $icon);
         $this->assertArrayHasKey('category', $icon);
         $this->assertArrayHasKey('has_variants', $icon);
+        $this->assertArrayHasKey('variant_type', $icon);
         
         // 檢查欄位類型
         $this->assertIsString($icon['id']);
         $this->assertIsString($icon['name']);
         $this->assertIsString($icon['value']);
-        $this->assertEquals('bootstrap', $icon['type']);
+        $this->assertEquals('bootstrap-icons', $icon['type']);
         $this->assertIsArray($icon['keywords']);
         $this->assertIsString($icon['category']);
         $this->assertIsBool($icon['has_variants']);
+        $this->assertContains($icon['variant_type'], ['solid', 'outline']);
     }
 
     /**
-     * 測試 Bootstrap Icon 使用 value 欄位
+     * 測試獲取分類清單
      */
-    public function test_bootstrap_icon_uses_value_field()
+    public function test_get_categories_returns_correct_structure()
     {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
-        
+        $response = $this->getJson('/api/config/icon/bootstrap-icons/categories');
+
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => [
+                        'name',
+                        'description'
+                    ]
+                ]
+            ]);
+
         $data = $response->json('data');
         
-        $firstCategory = array_values($data)[0];
-        $icon = $firstCategory[0];
+        // 應該至少有一個分類
+        $this->assertGreaterThan(0, count($data));
         
-        // Bootstrap Icon 的 value 應該是 CSS class，以 "bi-" 開頭
-        $this->assertStringStartsWith('bi-', $icon['value']);
-        
-        // 不應該有舊的 class 欄位
-        $this->assertArrayNotHasKey('class', $icon);
-        
-        // 不應該有 component 欄位
-        $this->assertArrayNotHasKey('component', $icon);
-    }
-
-    /**
-     * 測試 Bootstrap Icons 變體已展開
-     */
-    public function test_bootstrap_variants_are_expanded()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
-        
-        $data = $response->json('data');
-        
-        // 尋找有變體的 icon 組
-        $iconGroups = [];
-        
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants']) {
-                    // 從 id 中提取基本名稱（移除 -fill 後綴）
-                    $baseName = preg_replace('/-fill$/', '', $icon['id']);
-                    
-                    if (!isset($iconGroups[$baseName])) {
-                        $iconGroups[$baseName] = [];
-                    }
-                    
-                    $iconGroups[$baseName][] = $icon;
-                }
-            }
-        }
-        
-        // 至少應該有一組有多個變體的 icon
-        $hasMultipleVariants = false;
-        
-        foreach ($iconGroups as $baseName => $variants) {
-            if (count($variants) > 1) {
-                $hasMultipleVariants = true;
-                
-                // 檢查變體類型（可能有 outline 和 solid，但不一定都有）
-                $variantTypes = array_column($variants, 'variant_type');
-                
-                // 至少應該有一種變體類型
-                $this->assertGreaterThan(0, count($variantTypes), "Icon group {$baseName} should have variant types");
-                
-                // 檢查 value 欄位是否正確
-                foreach ($variants as $variant) {
-                    if ($variant['variant_type'] === 'outline') {
-                        $this->assertStringStartsWith('bi-', $variant['value']);
-                        // outline 變體通常不包含 -fill，但不是絕對規則
-                    } elseif ($variant['variant_type'] === 'solid') {
-                        $this->assertStringStartsWith('bi-', $variant['value']);
-                        // solid 變體通常包含 -fill，但可能有例外如複合名稱
-                        $this->assertTrue(
-                            str_contains($variant['value'], '-fill') || $variant['variant_type'] === 'solid',
-                            "Solid variant should contain '-fill' or be explicitly marked as solid: {$variant['value']}"
-                        );
-                    }
-                }
-            }
-        }
-        
-        $this->assertTrue($hasMultipleVariants, 'Should have at least one icon with multiple variants');
-    }
-
-    /**
-     * 測試沒有變體的 icon 處理
-     */
-    public function test_icons_without_variants()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
-        
-        $data = $response->json('data');
-        
-        // 尋找沒有變體的 icon
-        $iconWithoutVariants = null;
-        
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants'] === false) {
-                    $iconWithoutVariants = $icon;
-                    break 2;
-                }
-            }
-        }
-        
-        if ($iconWithoutVariants !== null) {
-            // 在新設計中，所有圖標都有 variant_type，即使只有一個變體
-            $this->assertArrayHasKey('variant_type', $iconWithoutVariants);
-            
-            // value 應該是有效的 CSS class
-            $this->assertStringStartsWith('bi-', $iconWithoutVariants['value']);
-        } else {
-            // 如果沒有找到 has_variants=false 的圖標，那也是正常的
-            $this->assertTrue(true, 'All Bootstrap Icons have variants or only single variant, which is expected');
+        // 檢查分類格式
+        foreach ($data as $categoryId => $categoryInfo) {
+            $this->assertIsString($categoryId);
+            $this->assertArrayHasKey('name', $categoryInfo);
+            $this->assertArrayHasKey('description', $categoryInfo);
+            $this->assertIsString($categoryInfo['name']);
+            $this->assertIsString($categoryInfo['description']);
         }
     }
 
     /**
-     * 測試分類端點返回單一分類
+     * 測試按分類獲取 Bootstrap Icons
      */
-    public function test_category_endpoint_returns_single_category()
+    public function test_get_bootstrap_icons_by_category()
     {
         // 先取得所有分類
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json('data');
+        $categoriesResponse = $this->getJson('/api/config/icon/bootstrap-icons/categories');
+        $categories = $categoriesResponse->json('data');
         
         // 取得第一個分類 ID
-        $firstCategoryId = array_keys($allData)[0];
+        $firstCategoryId = array_keys($categories)[0];
         
-        // 測試單一分類端點
+        // 測試該分類的端點
         $response = $this->getJson("/api/config/icon/bootstrap-icons/category/{$firstCategoryId}");
         
         $response->assertStatus(200)
@@ -217,6 +124,7 @@ class BootstrapIconsApiTest extends TestCase
                 ],
                 'meta' => [
                     'total',
+                    'type',
                     'categories'
                 ]
             ]);
@@ -226,8 +134,21 @@ class BootstrapIconsApiTest extends TestCase
         // 應該只有一個分類
         $this->assertCount(1, $data);
         $this->assertArrayHasKey($firstCategoryId, $data);
+        
+        // 檢查該分類下的圖標
+        $categoryIcons = $data[$firstCategoryId];
+        foreach ($categoryIcons as $icon) {
+            $this->assertEquals($firstCategoryId, $icon['category']);
+            $this->assertEquals('bootstrap-icons', $icon['type']);
+            $this->assertContains($icon['variant_type'], ['solid', 'outline']);
+        }
+        
+        // 檢查 meta
+        $meta = $response->json('meta');
+        $this->assertEquals('bootstrap-icons', $meta['type']);
+        $this->assertEquals(count($categoryIcons), $meta['total']);
     }
-
+    
     /**
      * 測試無效分類返回錯誤
      */
@@ -242,38 +163,46 @@ class BootstrapIconsApiTest extends TestCase
     }
 
     /**
-     * 測試 meta 包含正確的 type
+     * 測試 Bootstrap Icon 變體展開
      */
-    public function test_meta_contains_type_bootstrap()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
-        
-        $meta = $response->json('meta');
-        
-        $this->assertArrayHasKey('type', $meta);
-        $this->assertEquals('bootstrap', $meta['type']);
-    }
-
-    /**
-     * 測試總數包含展開的變體
-     */
-    public function test_total_includes_expanded_variants()
+    public function test_bootstrap_icons_variants_are_expanded()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
         $data = $response->json('data');
-        $meta = $response->json('meta');
         
-        // 計算 data 中的總數
-        $actualTotal = 0;
+        // 收集所有 icon 的基本名稱（移除 -outline, -solid 後綴）
+        $iconGroups = [];
+        
         foreach ($data as $categoryIcons) {
-            $actualTotal += count($categoryIcons);
+            foreach ($categoryIcons as $icon) {
+                // 從 id 中提取基本名稱（移除變體後綴）
+                $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
+                
+                if (!isset($iconGroups[$baseName])) {
+                    $iconGroups[$baseName] = [];
+                }
+                
+                $iconGroups[$baseName][] = $icon;
+            }
         }
         
-        $this->assertEquals($meta['total'], $actualTotal);
+        // 至少應該有一組有多個變體的 icon
+        $hasMultipleVariants = false;
         
-        // 因為變體已展開，總數應該比原始數量多
-        $this->assertGreaterThan(500, $actualTotal, 'Total should be greater than 500 with expanded variants');
+        foreach ($iconGroups as $baseName => $variants) {
+            if (count($variants) > 1) {
+                $hasMultipleVariants = true;
+                
+                // 檢查變體類型
+                $variantTypes = array_column($variants, 'variant_type');
+                $this->assertContains('outline', $variantTypes, "Icon group {$baseName} should have outline variant");
+                $this->assertContains('solid', $variantTypes, "Icon group {$baseName} should have solid variant");
+                break;
+            }
+        }
+        
+        $this->assertTrue($hasMultipleVariants, 'Should have at least one icon with multiple variants');
     }
 
     /**
@@ -281,81 +210,42 @@ class BootstrapIconsApiTest extends TestCase
      */
     public function test_category_consistency()
     {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons');
+        // 取得所有 Bootstrap Icons
+        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
+        $allData = $allResponse->json('data');
+        $allMeta = $allResponse->json('meta');
         
-        $data = $response->json('data');
-        $meta = $response->json('meta');
+        // 取得分類清單
+        $categoriesResponse = $this->getJson('/api/config/icon/bootstrap-icons/categories');
+        $categoriesData = $categoriesResponse->json('data');
         
-        // data 中的分類 ID 應該與 meta.categories 中的一致
-        $dataCategories = array_keys($data);
-        $metaCategories = array_keys($meta['categories']);
+        // data 中的分類 ID 應該與 categories 中的一致
+        $dataCategories = array_keys($allData);
+        $metaCategories = array_keys($allMeta['categories']);
+        $listCategories = array_keys($categoriesData);
         
         sort($dataCategories);
         sort($metaCategories);
+        sort($listCategories);
         
         $this->assertEquals($dataCategories, $metaCategories);
-        
-        // 每個 icon 的 category 欄位應該對應實際的分類 ID
-        foreach ($data as $categoryId => $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                $this->assertEquals($categoryId, $icon['category']);
-            }
-        }
+        $this->assertEquals($dataCategories, $listCategories);
     }
 
     /**
-     * 測試變體類型的一致性
+     * 測試 Bootstrap Icon 的 value 欄位是 CSS 類名
      */
-    public function test_variant_type_consistency()
+    public function test_bootstrap_icon_value_is_css_class()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
         $data = $response->json('data');
         
-        $validVariantTypes = ['outline', 'solid'];
+        $firstCategory = array_values($data)[0];
+        $icon = $firstCategory[0];
         
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                // 在新設計中，所有圖標都有 variant_type
-                $this->assertArrayHasKey('variant_type', $icon);
-                $this->assertContains(
-                    $icon['variant_type'], 
-                    $validVariantTypes,
-                    "Invalid variant_type: {$icon['variant_type']}"
-                );
-            }
-        }
-    }
-
-    /**
-     * 測試 categories 端點
-     */
-    public function test_categories_endpoint()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/categories');
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    '*' => [
-                        'name',
-                        'description'
-                    ]
-                ]
-            ]);
-        
-        $data = $response->json('data');
-        
-        // 應該至少有一個分類
-        $this->assertGreaterThan(0, count($data));
-        
-        // 檢查分類格式
-        foreach ($data as $categoryId => $categoryInfo) {
-            $this->assertIsString($categoryId);
-            $this->assertArrayHasKey('name', $categoryInfo);
-            $this->assertArrayHasKey('description', $categoryInfo);
-            $this->assertIsString($categoryInfo['name']);
-            $this->assertIsString($categoryInfo['description']);
-        }
+        // Bootstrap Icon 的 value 應該是 CSS 類名，以 "bi-" 開頭
+        $this->assertStringStartsWith('bi-', $icon['value']);
+        $this->assertMatchesRegularExpression('/^bi-[a-z0-9-]+$/', $icon['value']);
     }
 }

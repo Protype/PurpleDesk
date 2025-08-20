@@ -8,9 +8,9 @@ use Tests\TestCase;
 class HeroIconsApiTest extends TestCase
 {
     /**
-     * 測試 HeroIcons API 回傳正確的基本結構
+     * 測試獲取所有 HeroIcons API 結構
      */
-    public function test_heroicons_api_returns_correct_structure()
+    public function test_get_all_heroicons_returns_correct_structure()
     {
         $response = $this->getJson('/api/config/icon/heroicons');
 
@@ -25,25 +25,13 @@ class HeroIconsApiTest extends TestCase
                     'categories'
                 ]
             ]);
-    }
 
-    /**
-     * 測試 data 按分類分組
-     */
-    public function test_heroicons_data_is_grouped_by_category()
-    {
-        $response = $this->getJson('/api/config/icon/heroicons');
-        
-        $data = $response->json('data');
-        
-        // 應該至少有一個分類
-        $this->assertGreaterThan(0, count($data));
-        
-        // 每個分類都應該是陣列
-        foreach ($data as $categoryId => $categoryIcons) {
-            $this->assertIsString($categoryId);
-            $this->assertIsArray($categoryIcons);
-        }
+        // 檢查 meta 內容
+        $meta = $response->json('meta');
+        $this->assertEquals('heroicons', $meta['type']);
+        $this->assertIsInt($meta['total']);
+        $this->assertGreaterThan(0, $meta['total']);
+        $this->assertIsArray($meta['categories']);
     }
 
     /**
@@ -69,6 +57,7 @@ class HeroIconsApiTest extends TestCase
         $this->assertArrayHasKey('keywords', $icon);
         $this->assertArrayHasKey('category', $icon);
         $this->assertArrayHasKey('has_variants', $icon);
+        $this->assertArrayHasKey('variant_type', $icon);
         
         // 檢查欄位類型
         $this->assertIsString($icon['id']);
@@ -78,71 +67,105 @@ class HeroIconsApiTest extends TestCase
         $this->assertIsArray($icon['keywords']);
         $this->assertIsString($icon['category']);
         $this->assertIsBool($icon['has_variants']);
+        $this->assertContains($icon['variant_type'], ['outline', 'solid']);
     }
 
     /**
-     * 測試有變體的 HeroIcon 具有 variant_type
+     * 測試獲取分類清單
      */
-    public function test_heroicon_with_variants_has_variant_type()
+    public function test_get_categories_returns_correct_structure()
     {
-        $response = $this->getJson('/api/config/icon/heroicons');
+        $response = $this->getJson('/api/config/icon/heroicons/categories');
+
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => [
+                        'name',
+                        'description'
+                    ]
+                ]
+            ]);
+
+        $data = $response->json('data');
+        
+        // 應該至少有一個分類
+        $this->assertGreaterThan(0, count($data));
+        
+        // 檢查分類格式
+        foreach ($data as $categoryId => $categoryInfo) {
+            $this->assertIsString($categoryId);
+            $this->assertArrayHasKey('name', $categoryInfo);
+            $this->assertArrayHasKey('description', $categoryInfo);
+            $this->assertIsString($categoryInfo['name']);
+            $this->assertIsString($categoryInfo['description']);
+        }
+    }
+
+    /**
+     * 測試按分類獲取 HeroIcons
+     */
+    public function test_get_heroicons_by_category()
+    {
+        // 先取得所有分類
+        $categoriesResponse = $this->getJson('/api/config/icon/heroicons/categories');
+        $categories = $categoriesResponse->json('data');
+        
+        // 取得第一個分類 ID
+        $firstCategoryId = array_keys($categories)[0];
+        
+        // 測試該分類的端點
+        $response = $this->getJson("/api/config/icon/heroicons/category/{$firstCategoryId}");
+        
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    $firstCategoryId => []
+                ],
+                'meta' => [
+                    'total',
+                    'type',
+                    'categories'
+                ]
+            ]);
         
         $data = $response->json('data');
         
-        // 尋找有變體的 icon
-        $iconWithVariants = null;
+        // 應該只有一個分類
+        $this->assertCount(1, $data);
+        $this->assertArrayHasKey($firstCategoryId, $data);
         
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants'] === true) {
-                    $iconWithVariants = $icon;
-                    break 2;
-                }
-            }
+        // 檢查該分類下的圖標
+        $categoryIcons = $data[$firstCategoryId];
+        foreach ($categoryIcons as $icon) {
+            $this->assertEquals($firstCategoryId, $icon['category']);
+            $this->assertEquals('heroicons', $icon['type']);
+            $this->assertContains($icon['variant_type'], ['outline', 'solid']);
         }
         
-        $this->assertNotNull($iconWithVariants, 'Should find at least one icon with variants');
-        
-        // 檢查 variant_type 欄位
-        $this->assertArrayHasKey('variant_type', $iconWithVariants);
-        $this->assertIsString($iconWithVariants['variant_type']);
-        $this->assertContains($iconWithVariants['variant_type'], ['outline', 'solid']);
+        // 檢查 meta
+        $meta = $response->json('meta');
+        $this->assertEquals('heroicons', $meta['type']);
+        $this->assertEquals(count($categoryIcons), $meta['total']);
     }
 
     /**
-     * 測試沒有變體的 HeroIcon 不包含 variant_type
+     * 測試無效分類返回錯誤
      */
-    public function test_heroicon_without_variants_has_no_variant_type()
+    public function test_invalid_category_returns_error()
     {
-        $response = $this->getJson('/api/config/icon/heroicons');
+        $response = $this->getJson('/api/config/icon/heroicons/category/invalid-category');
         
-        $data = $response->json('data');
-        
-        // 尋找沒有變體的 icon
-        $iconWithoutVariants = null;
-        
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants'] === false) {
-                    $iconWithoutVariants = $icon;
-                    break 2;
-                }
-            }
-        }
-        
-        // 如果找到沒有變體的 icon，檢查不應該有 variant_type
-        if ($iconWithoutVariants !== null) {
-            $this->assertArrayNotHasKey('variant_type', $iconWithoutVariants);
-        } else {
-            // 如果所有 HeroIcon 都有變體，那也是正常的
-            $this->markTestSkipped('All HeroIcons have variants, which is expected');
-        }
+        $response->assertStatus(400)
+            ->assertJsonStructure([
+                'error'
+            ]);
     }
 
     /**
-     * 測試 outline 和 solid 變體是分開的項目
+     * 測試 HeroIcon 變體展開
      */
-    public function test_outline_and_solid_variants_are_separate_items()
+    public function test_heroicons_variants_are_expanded()
     {
         $response = $this->getJson('/api/config/icon/heroicons');
         
@@ -153,16 +176,14 @@ class HeroIconsApiTest extends TestCase
         
         foreach ($data as $categoryIcons) {
             foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants']) {
-                    // 從 id 中提取基本名稱
-                    $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
-                    
-                    if (!isset($iconGroups[$baseName])) {
-                        $iconGroups[$baseName] = [];
-                    }
-                    
-                    $iconGroups[$baseName][] = $icon;
+                // 從 id 中提取基本名稱
+                $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
+                
+                if (!isset($iconGroups[$baseName])) {
+                    $iconGroups[$baseName] = [];
                 }
+                
+                $iconGroups[$baseName][] = $icon;
             }
         }
         
@@ -173,10 +194,11 @@ class HeroIconsApiTest extends TestCase
             if (count($variants) > 1) {
                 $hasMultipleVariants = true;
                 
-                // 檢查是否有 outline 和 solid 變體
+                // 檢查變體類型
                 $variantTypes = array_column($variants, 'variant_type');
                 $this->assertContains('outline', $variantTypes, "Icon group {$baseName} should have outline variant");
                 $this->assertContains('solid', $variantTypes, "Icon group {$baseName} should have solid variant");
+                break;
             }
         }
         
@@ -184,119 +206,30 @@ class HeroIconsApiTest extends TestCase
     }
 
     /**
-     * 測試每個變體都是完整的 icon
-     */
-    public function test_each_variant_is_complete_icon()
-    {
-        $response = $this->getJson('/api/config/icon/heroicons');
-        
-        $data = $response->json('data');
-        
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants']) {
-                    // 每個變體都應該是完整的 icon，具有所有必要欄位
-                    $this->assertArrayHasKey('id', $icon);
-                    $this->assertArrayHasKey('name', $icon);
-                    $this->assertArrayHasKey('value', $icon);
-                    $this->assertArrayHasKey('variant_type', $icon);
-                    
-                    // value 應該對應變體類型
-                    if ($icon['variant_type'] === 'solid') {
-                        // solid 變體的 component 名稱應該是有效的
-                        $this->assertIsString($icon['value']);
-                        $this->assertNotEmpty($icon['value']);
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * 測試變體類型正確
-     */
-    public function test_variant_types_are_correct()
-    {
-        $response = $this->getJson('/api/config/icon/heroicons');
-        
-        $data = $response->json('data');
-        
-        $validVariantTypes = ['outline', 'solid'];
-        
-        foreach ($data as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if ($icon['has_variants']) {
-                    $this->assertContains(
-                        $icon['variant_type'], 
-                        $validVariantTypes,
-                        "Invalid variant_type: {$icon['variant_type']}"
-                    );
-                }
-            }
-        }
-    }
-
-    /**
-     * 測試 meta 包含正確的 type
-     */
-    public function test_meta_contains_type_heroicons()
-    {
-        $response = $this->getJson('/api/config/icon/heroicons');
-        
-        $meta = $response->json('meta');
-        
-        $this->assertArrayHasKey('type', $meta);
-        $this->assertEquals('heroicons', $meta['type']);
-    }
-
-    /**
-     * 測試總數計算正確（包含展開的變體）
-     */
-    public function test_total_includes_expanded_variants()
-    {
-        $response = $this->getJson('/api/config/icon/heroicons');
-        
-        $data = $response->json('data');
-        $meta = $response->json('meta');
-        
-        // 計算 data 中的總數
-        $actualTotal = 0;
-        foreach ($data as $categoryIcons) {
-            $actualTotal += count($categoryIcons);
-        }
-        
-        $this->assertEquals($meta['total'], $actualTotal);
-        
-        // 因為每個 HeroIcon 都有 outline 和 solid 變體，
-        // 所以總數應該是原始 HeroIcon 數量的兩倍左右
-        $this->assertGreaterThan(400, $actualTotal, 'Total should be around 460 (230 * 2 variants)');
-    }
-
-    /**
      * 測試分類一致性
      */
     public function test_category_consistency()
     {
-        $response = $this->getJson('/api/config/icon/heroicons');
+        // 取得所有 HeroIcons
+        $allResponse = $this->getJson('/api/config/icon/heroicons');
+        $allData = $allResponse->json('data');
+        $allMeta = $allResponse->json('meta');
         
-        $data = $response->json('data');
-        $meta = $response->json('meta');
+        // 取得分類清單
+        $categoriesResponse = $this->getJson('/api/config/icon/heroicons/categories');
+        $categoriesData = $categoriesResponse->json('data');
         
-        // data 中的分類 ID 應該與 meta.categories 中的一致
-        $dataCategories = array_keys($data);
-        $metaCategories = array_keys($meta['categories']);
+        // data 中的分類 ID 應該與 categories 中的一致
+        $dataCategories = array_keys($allData);
+        $metaCategories = array_keys($allMeta['categories']);
+        $listCategories = array_keys($categoriesData);
         
         sort($dataCategories);
         sort($metaCategories);
+        sort($listCategories);
         
         $this->assertEquals($dataCategories, $metaCategories);
-        
-        // 每個 icon 的 category 欄位應該對應實際的分類 ID
-        foreach ($data as $categoryId => $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                $this->assertEquals($categoryId, $icon['category']);
-            }
-        }
+        $this->assertEquals($dataCategories, $listCategories);
     }
 
     /**

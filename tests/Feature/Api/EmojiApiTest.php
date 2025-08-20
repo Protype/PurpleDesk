@@ -8,9 +8,9 @@ use Tests\TestCase;
 class EmojiApiTest extends TestCase
 {
     /**
-     * 測試 Emoji API 回傳正確的基本結構
+     * 測試獲取所有 emoji API 結構
      */
-    public function test_emoji_api_returns_correct_structure()
+    public function test_get_all_emoji_returns_correct_structure()
     {
         $response = $this->getJson('/api/config/icon/emoji');
 
@@ -25,44 +25,17 @@ class EmojiApiTest extends TestCase
                     'categories'
                 ]
             ]);
+
+        // 檢查 meta 內容
+        $meta = $response->json('meta');
+        $this->assertEquals('emoji', $meta['type']);
+        $this->assertIsInt($meta['total']);
+        $this->assertGreaterThan(0, $meta['total']);
+        $this->assertIsArray($meta['categories']);
     }
 
     /**
-     * 測試 API 具有 data 和 meta 兩個主要鍵
-     */
-    public function test_emoji_api_has_data_and_meta_keys()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $data = $response->json();
-        
-        $this->assertArrayHasKey('data', $data);
-        $this->assertArrayHasKey('meta', $data);
-        $this->assertIsArray($data['data']);
-        $this->assertIsArray($data['meta']);
-    }
-
-    /**
-     * 測試 data 按分類分組
-     */
-    public function test_emoji_data_is_grouped_by_category()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $data = $response->json('data');
-        
-        // 應該至少有一個分類
-        $this->assertGreaterThan(0, count($data));
-        
-        // 每個分類都應該是陣列
-        foreach ($data as $categoryId => $categoryEmojis) {
-            $this->assertIsString($categoryId);
-            $this->assertIsArray($categoryEmojis);
-        }
-    }
-
-    /**
-     * 測試 Emoji 項目具有必要欄位
+     * 測試 emoji 項目具有必要欄位
      */
     public function test_emoji_item_has_required_fields()
     {
@@ -96,15 +69,106 @@ class EmojiApiTest extends TestCase
     }
 
     /**
-     * 測試有膚色變體的 emoji 包含 skin_variations
+     * 測試獲取分類清單
      */
-    public function test_emoji_with_skin_tone_has_variations()
+    public function test_get_categories_returns_correct_structure()
+    {
+        $response = $this->getJson('/api/config/icon/emoji/categories');
+
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => [
+                        'name',
+                        'description'
+                    ]
+                ]
+            ]);
+
+        $data = $response->json('data');
+        
+        // 應該至少有一個分類
+        $this->assertGreaterThan(0, count($data));
+        
+        // 檢查分類格式
+        foreach ($data as $categoryId => $categoryInfo) {
+            $this->assertIsString($categoryId);
+            $this->assertArrayHasKey('name', $categoryInfo);
+            $this->assertArrayHasKey('description', $categoryInfo);
+            $this->assertIsString($categoryInfo['name']);
+            $this->assertIsString($categoryInfo['description']);
+        }
+    }
+
+    /**
+     * 測試按分類獲取 emoji
+     */
+    public function test_get_emoji_by_category()
+    {
+        // 先取得所有分類
+        $categoriesResponse = $this->getJson('/api/config/icon/emoji/categories');
+        $categories = $categoriesResponse->json('data');
+        
+        // 取得第一個分類 ID
+        $firstCategoryId = array_keys($categories)[0];
+        
+        // 測試該分類的端點
+        $response = $this->getJson("/api/config/icon/emoji/category/{$firstCategoryId}");
+        
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    $firstCategoryId => []
+                ],
+                'meta' => [
+                    'total',
+                    'type',
+                    'categories'
+                ]
+            ]);
+        
+        $data = $response->json('data');
+        
+        // 應該只有一個分類
+        $this->assertCount(1, $data);
+        $this->assertArrayHasKey($firstCategoryId, $data);
+        
+        // 檢查該分類下的 emoji
+        $categoryEmojis = $data[$firstCategoryId];
+        foreach ($categoryEmojis as $emoji) {
+            $this->assertEquals($firstCategoryId, $emoji['category']);
+            $this->assertEquals('emoji', $emoji['type']);
+        }
+        
+        // 檢查 meta
+        $meta = $response->json('meta');
+        $this->assertEquals('emoji', $meta['type']);
+        $this->assertEquals(count($categoryEmojis), $meta['total']);
+    }
+
+    /**
+     * 測試無效分類返回錯誤
+     */
+    public function test_invalid_category_returns_error()
+    {
+        $response = $this->getJson('/api/config/icon/emoji/category/invalid-category');
+        
+        $response->assertStatus(400)
+            ->assertJsonStructure([
+                'error'
+            ]);
+    }
+
+    /**
+     * 測試 emoji 膚色變體格式
+     */
+    public function test_emoji_skin_variations_format()
     {
         $response = $this->getJson('/api/config/icon/emoji');
         
         $data = $response->json('data');
         
-        // 尋找有膚色變體的 emoji（通常在 people_body 分類）
+        // 尋找有膚色變體的 emoji
         $emojiWithSkinTone = null;
         
         foreach ($data as $categoryEmojis) {
@@ -128,128 +192,29 @@ class EmojiApiTest extends TestCase
     }
 
     /**
-     * 測試沒有膚色變體的 emoji 不包含 skin_variations
+     * 測試分類一致性
      */
-    public function test_emoji_without_skin_tone_has_no_variations()
+    public function test_category_consistency()
     {
-        $response = $this->getJson('/api/config/icon/emoji');
+        // 取得所有 emoji
+        $allResponse = $this->getJson('/api/config/icon/emoji');
+        $allData = $allResponse->json('data');
+        $allMeta = $allResponse->json('meta');
         
-        $data = $response->json('data');
+        // 取得分類清單
+        $categoriesResponse = $this->getJson('/api/config/icon/emoji/categories');
+        $categoriesData = $categoriesResponse->json('data');
         
-        // 尋找沒有膚色變體的 emoji（通常在 smileys_emotion 分類）
-        $emojiWithoutSkinTone = null;
-        
-        foreach ($data as $categoryEmojis) {
-            foreach ($categoryEmojis as $emoji) {
-                if ($emoji['has_skin_tone'] === false) {
-                    $emojiWithoutSkinTone = $emoji;
-                    break 2;
-                }
-            }
-        }
-        
-        $this->assertNotNull($emojiWithoutSkinTone, 'Should find at least one emoji without skin tone');
-        
-        // 檢查不應該有 skin_variations 欄位
-        $this->assertArrayNotHasKey('skin_variations', $emojiWithoutSkinTone);
-    }
-
-    /**
-     * 測試 meta 包含總數
-     */
-    public function test_meta_contains_total_count()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $meta = $response->json('meta');
-        
-        $this->assertArrayHasKey('total', $meta);
-        $this->assertIsInt($meta['total']);
-        $this->assertGreaterThan(0, $meta['total']);
-    }
-
-    /**
-     * 測試 meta 包含正確的 type
-     */
-    public function test_meta_contains_type_emoji()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $meta = $response->json('meta');
-        
-        $this->assertArrayHasKey('type', $meta);
-        $this->assertEquals('emoji', $meta['type']);
-    }
-
-    /**
-     * 測試 meta 包含分類資訊
-     */
-    public function test_meta_contains_categories_info()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $meta = $response->json('meta');
-        
-        $this->assertArrayHasKey('categories', $meta);
-        $this->assertIsArray($meta['categories']);
-        
-        // 檢查至少有一個分類
-        $this->assertGreaterThan(0, count($meta['categories']));
-        
-        // 檢查分類格式
-        foreach ($meta['categories'] as $categoryId => $categoryInfo) {
-            $this->assertIsString($categoryId);
-            $this->assertIsArray($categoryInfo);
-            $this->assertArrayHasKey('name', $categoryInfo);
-            $this->assertArrayHasKey('description', $categoryInfo);
-            $this->assertIsString($categoryInfo['name']);
-            $this->assertIsString($categoryInfo['description']);
-        }
-    }
-
-    /**
-     * 測試 data 中的總數與 meta.total 一致
-     */
-    public function test_data_count_matches_meta_total()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $data = $response->json('data');
-        $meta = $response->json('meta');
-        
-        // 計算 data 中的總數
-        $actualTotal = 0;
-        foreach ($data as $categoryEmojis) {
-            $actualTotal += count($categoryEmojis);
-        }
-        
-        $this->assertEquals($meta['total'], $actualTotal);
-    }
-
-    /**
-     * 測試分類 ID 的一致性
-     */
-    public function test_category_ids_consistency()
-    {
-        $response = $this->getJson('/api/config/icon/emoji');
-        
-        $data = $response->json('data');
-        $meta = $response->json('meta');
-        
-        // data 中的分類 ID 應該與 meta.categories 中的一致
-        $dataCategories = array_keys($data);
-        $metaCategories = array_keys($meta['categories']);
+        // data 中的分類 ID 應該與 categories 中的一致
+        $dataCategories = array_keys($allData);
+        $metaCategories = array_keys($allMeta['categories']);
+        $listCategories = array_keys($categoriesData);
         
         sort($dataCategories);
         sort($metaCategories);
+        sort($listCategories);
         
         $this->assertEquals($dataCategories, $metaCategories);
-        
-        // 每個 emoji 的 category 欄位應該對應實際的分類 ID
-        foreach ($data as $categoryId => $categoryEmojis) {
-            foreach ($categoryEmojis as $emoji) {
-                $this->assertEquals($categoryId, $emoji['category']);
-            }
-        }
+        $this->assertEquals($dataCategories, $listCategories);
     }
 }

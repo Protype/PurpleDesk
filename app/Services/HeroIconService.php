@@ -154,35 +154,39 @@ class HeroIconService
     
     /**
      * 取得分類清單
-     * 
-     * @return array
      */
     public function getCategories(): array
     {
-        $config = config('icon.heroicons');
-        return $config['categories'] ?? [];
+        $allData = $this->getAllHeroIcons();
+        return $allData['meta']['categories'] ?? [];
     }
     
     /**
-     * 取得指定分類的圖標
-     * 
-     * @param string $category
-     * @return array
+     * 根據分類取得 HeroIcons
      */
-    public function getIconsByCategory(string $category): array
+    public function getHeroIconsByCategory(string $categoryId): array
     {
-        $allIcons = $this->getAllHeroIcons();
+        $allData = $this->getAllHeroIcons();
+        $categories = $allData['meta']['categories'];
         
-        $filteredIcons = array_filter($allIcons['data'], function ($icon) use ($category) {
-            return $icon['category'] === $category;
-        });
+        // 驗證分類是否存在
+        if (!isset($categories[$categoryId])) {
+            throw new \InvalidArgumentException("Invalid category: {$categoryId}");
+        }
+        
+        // 取得該分類的 HeroIcons
+        $categoryIcons = $allData['data'][$categoryId] ?? [];
         
         return [
-            'data' => array_values($filteredIcons),
+            'data' => [
+                $categoryId => $categoryIcons
+            ],
             'meta' => [
-                'total' => count($filteredIcons),
-                'category' => $category,
-                'categories' => $allIcons['meta']['categories']
+                'total' => count($categoryIcons),
+                'type' => 'heroicons',
+                'categories' => [
+                    $categoryId => $categories[$categoryId]
+                ]
             ]
         ];
     }

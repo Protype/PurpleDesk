@@ -201,6 +201,45 @@ class EmojiService
     }
 
     /**
+     * 取得分類清單
+     */
+    public function getCategories(): array
+    {
+        $allData = $this->getAllEmojis();
+        return $allData['meta']['categories'] ?? [];
+    }
+    
+    /**
+     * 根據分類取得 emoji
+     */
+    public function getEmojisByCategory(string $categoryId): array
+    {
+        $allData = $this->getAllEmojis();
+        $categories = $allData['meta']['categories'];
+        
+        // 驗證分類是否存在
+        if (!isset($categories[$categoryId])) {
+            throw new \InvalidArgumentException("Invalid category: {$categoryId}");
+        }
+        
+        // 取得該分類的 emoji
+        $categoryEmojis = $allData['data'][$categoryId] ?? [];
+        
+        return [
+            'data' => [
+                $categoryId => $categoryEmojis
+            ],
+            'meta' => [
+                'total' => count($categoryEmojis),
+                'type' => 'emoji',
+                'categories' => [
+                    $categoryId => $categories[$categoryId]
+                ]
+            ]
+        ];
+    }
+    
+    /**
      * 取得黑名單統計資訊
      */
     public function getBlacklistStats(): array

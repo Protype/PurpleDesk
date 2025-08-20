@@ -21,7 +21,7 @@ class BootstrapIconService
                 'data' => [],
                 'meta' => [
                     'total' => 0,
-                    'type' => 'bootstrap',
+                    'type' => 'bootstrap-icons',
                     'categories' => []
                 ]
             ];
@@ -54,7 +54,7 @@ class BootstrapIconService
                             'id' => $iconId,
                             'name' => $baseName,
                             'value' => $variantClass, // Bootstrap Icon 使用 CSS class 作為 value
-                            'type' => 'bootstrap',
+                            'type' => 'bootstrap-icons',
                             'keywords' => $this->generateKeywords($baseName, $keywords),
                             'category' => $categoryId,
                             'has_variants' => count($variants) > 1,
@@ -240,13 +240,41 @@ class BootstrapIconService
     
     /**
      * 取得分類清單
-     * 
-     * @return array
      */
     public function getCategories(): array
     {
         $allData = $this->getAllBootstrapIcons();
         return $allData['meta']['categories'] ?? [];
+    }
+    
+    /**
+     * 根據分類取得 Bootstrap Icons
+     */
+    public function getBootstrapIconsByCategory(string $categoryId): array
+    {
+        $allData = $this->getAllBootstrapIcons();
+        $categories = $allData['meta']['categories'];
+        
+        // 驗證分類是否存在
+        if (!isset($categories[$categoryId])) {
+            throw new \InvalidArgumentException("Invalid category: {$categoryId}");
+        }
+        
+        // 取得該分類的 Bootstrap Icons
+        $categoryIcons = $allData['data'][$categoryId] ?? [];
+        
+        return [
+            'data' => [
+                $categoryId => $categoryIcons
+            ],
+            'meta' => [
+                'total' => count($categoryIcons),
+                'type' => 'bootstrap-icons',
+                'categories' => [
+                    $categoryId => $categories[$categoryId]
+                ]
+            ]
+        ];
     }
     
     /**
