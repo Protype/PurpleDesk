@@ -84,7 +84,7 @@ return array (
         1 => 'bottom',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -104,7 +104,7 @@ return array (
         1 => 'center',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -124,7 +124,7 @@ return array (
         1 => 'end',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -144,7 +144,7 @@ return array (
         1 => 'middle',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -164,7 +164,7 @@ return array (
         1 => 'start',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -188,7 +188,7 @@ return array (
         1 => 'top',
       ),
       'type' => 'bootstrap',
-      'category' => 'alphanumeric',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -207,7 +207,7 @@ return array (
         0 => 'alt',
       ),
       'type' => 'bootstrap',
-      'category' => 'others',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -227,7 +227,7 @@ return array (
         1 => 'indicator',
       ),
       'type' => 'bootstrap',
-      'category' => 'others',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -246,7 +246,7 @@ return array (
         0 => 'app',
       ),
       'type' => 'bootstrap',
-      'category' => 'others',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -13352,7 +13352,7 @@ return array (
         0 => 'facebook',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -13802,7 +13802,7 @@ return array (
         4 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -13828,7 +13828,7 @@ return array (
         3 => 'up',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -13855,7 +13855,7 @@ return array (
         4 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -13881,7 +13881,7 @@ return array (
         3 => 'graph',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -13903,7 +13903,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -13928,7 +13928,7 @@ return array (
         2 => 'binary',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -13950,7 +13950,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -13975,7 +13975,7 @@ return array (
         2 => 'break',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -13997,7 +13997,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14022,7 +14022,7 @@ return array (
         2 => 'check',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14044,7 +14044,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14069,7 +14069,7 @@ return array (
         2 => 'code',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14091,7 +14091,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14116,7 +14116,7 @@ return array (
         2 => 'diff',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14138,7 +14138,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14163,7 +14163,7 @@ return array (
         2 => 'easel',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14185,7 +14185,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14210,7 +14210,7 @@ return array (
         2 => 'excel',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14231,7 +14231,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14257,7 +14257,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14282,7 +14282,7 @@ return array (
         2 => 'font',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14304,7 +14304,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14329,7 +14329,7 @@ return array (
         2 => 'image',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14351,7 +14351,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14376,7 +14376,7 @@ return array (
         2 => 'lock',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14398,7 +14398,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14423,7 +14423,7 @@ return array (
         2 => 'lock2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14445,7 +14445,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14470,7 +14470,7 @@ return array (
         2 => 'medical',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14492,7 +14492,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14517,7 +14517,7 @@ return array (
         2 => 'minus',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14539,7 +14539,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14564,7 +14564,7 @@ return array (
         2 => 'music',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14586,7 +14586,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14611,7 +14611,7 @@ return array (
         2 => 'person',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14637,7 +14637,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14662,7 +14662,7 @@ return array (
         2 => 'play',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14684,7 +14684,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14709,7 +14709,7 @@ return array (
         2 => 'plus',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14731,7 +14731,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14756,7 +14756,7 @@ return array (
         2 => 'post',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14778,7 +14778,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14803,7 +14803,7 @@ return array (
         2 => 'ppt',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14825,7 +14825,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14850,7 +14850,7 @@ return array (
         2 => 'richtext',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14872,7 +14872,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14897,7 +14897,7 @@ return array (
         2 => 'ruled',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14919,7 +14919,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14944,7 +14944,7 @@ return array (
         2 => 'slides',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -14966,7 +14966,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -14991,7 +14991,7 @@ return array (
         2 => 'spreadsheet',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -15013,7 +15013,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -15038,7 +15038,7 @@ return array (
         2 => 'text',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -15060,7 +15060,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -15085,7 +15085,7 @@ return array (
         2 => 'word',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -15107,7 +15107,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -15132,7 +15132,7 @@ return array (
         2 => 'x',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -15154,7 +15154,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -15179,7 +15179,7 @@ return array (
         2 => 'zip',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -15199,7 +15199,7 @@ return array (
         1 => 'earmark',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16294,7 +16294,7 @@ return array (
         0 => 'film',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'media',
       'variants' => 
       array (
         'outline' => 
@@ -16315,7 +16315,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -16339,7 +16339,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -16363,7 +16363,7 @@ return array (
         1 => 'left',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -16383,7 +16383,7 @@ return array (
         1 => 'right',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -16404,7 +16404,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -16428,7 +16428,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -16451,7 +16451,7 @@ return array (
         0 => 'filter',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -16471,7 +16471,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -16494,7 +16494,7 @@ return array (
         0 => 'flag',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -16513,7 +16513,7 @@ return array (
         0 => 'flower1',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -16532,7 +16532,7 @@ return array (
         0 => 'flower2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -16551,7 +16551,7 @@ return array (
         0 => 'flower3',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -16571,7 +16571,7 @@ return array (
         1 => 'check',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16595,7 +16595,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -16619,7 +16619,7 @@ return array (
         1 => 'minus',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16643,7 +16643,7 @@ return array (
         1 => 'plus',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16668,7 +16668,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -16692,7 +16692,7 @@ return array (
         1 => 'symlink',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16716,7 +16716,7 @@ return array (
         1 => 'x',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16739,7 +16739,7 @@ return array (
         0 => 'folder',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16763,7 +16763,7 @@ return array (
         1 => 'open',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -16786,7 +16786,7 @@ return array (
         0 => 'folder2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -44239,7 +44239,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -44262,7 +44262,7 @@ return array (
         0 => 'floppy',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -44282,7 +44282,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'solid' => 
@@ -44305,7 +44305,7 @@ return array (
         0 => 'floppy2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
