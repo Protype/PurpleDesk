@@ -1,16 +1,24 @@
 <?php
 
+/**
+ * Bootstrap Icons - 通用基礎圖標分類
+ * 包含：最常用的基礎圖標，如首頁、搜尋、設定等
+ * 
+ * 依據前端 bs-general.js 更新 (569 個圖標)
+ */
+
 return [
     'category' => 'general',
     'name' => '通用圖標',
     'description' => '最常用的基礎圖標',
     'priority' => 'immediate',
     'icons' => [
+        // 基本操作
         [
             'name' => 'house',
             'displayName' => 'House',
             'class' => 'bi-house',
-            'keywords' => ['home', 'house', 'building'],
+            'keywords' => ['house', 'home', 'building', 'main', 'dashboard'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -22,7 +30,7 @@ return [
             'name' => 'house-door',
             'displayName' => 'House Door',
             'class' => 'bi-house-door',
-            'keywords' => ['home', 'door', 'entrance'],
+            'keywords' => ['house', 'door', 'home', 'entrance', 'entry'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -34,7 +42,7 @@ return [
             'name' => 'search',
             'displayName' => 'Search',
             'class' => 'bi-search',
-            'keywords' => ['search', 'find', 'magnify'],
+            'keywords' => ['search', 'find', 'look', 'magnify', 'query'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -45,7 +53,7 @@ return [
             'name' => 'search-heart',
             'displayName' => 'Search Heart',
             'class' => 'bi-search-heart',
-            'keywords' => ['search', 'heart', 'love', 'find'],
+            'keywords' => ['search', 'heart', 'love', 'find', 'favorite'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -57,7 +65,7 @@ return [
             'name' => 'gear',
             'displayName' => 'Gear',
             'class' => 'bi-gear',
-            'keywords' => ['settings', 'gear', 'configure'],
+            'keywords' => ['gear', 'settings', 'configuration', 'options', 'preferences'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -69,7 +77,7 @@ return [
             'name' => 'gear-wide',
             'displayName' => 'Gear Wide',
             'class' => 'bi-gear-wide',
-            'keywords' => ['settings', 'gear', 'wide'],
+            'keywords' => ['gear', 'wide', 'settings', 'configuration'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -80,18 +88,20 @@ return [
             'name' => 'gear-wide-connected',
             'displayName' => 'Gear Wide Connected',
             'class' => 'bi-gear-wide-connected',
-            'keywords' => ['settings', 'gear', 'connected'],
+            'keywords' => ['gear', 'wide', 'connected', 'settings'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
                 'outline' => ['class' => 'bi-gear-wide-connected']
             ]
         ],
+
+        // 導航與箭頭
         [
             'name' => 'arrow-up',
             'displayName' => 'Arrow Up',
             'class' => 'bi-arrow-up',
-            'keywords' => ['arrow', 'up', 'direction'],
+            'keywords' => ['arrow', 'up', 'direction', 'navigation', 'top'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -102,7 +112,7 @@ return [
             'name' => 'arrow-down',
             'displayName' => 'Arrow Down',
             'class' => 'bi-arrow-down',
-            'keywords' => ['arrow', 'down', 'direction'],
+            'keywords' => ['arrow', 'down', 'direction', 'navigation', 'bottom'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -113,7 +123,7 @@ return [
             'name' => 'arrow-left',
             'displayName' => 'Arrow Left',
             'class' => 'bi-arrow-left',
-            'keywords' => ['arrow', 'left', 'direction'],
+            'keywords' => ['arrow', 'left', 'direction', 'navigation', 'back'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -124,158 +134,20 @@ return [
             'name' => 'arrow-right',
             'displayName' => 'Arrow Right',
             'class' => 'bi-arrow-right',
-            'keywords' => ['arrow', 'right', 'direction'],
+            'keywords' => ['arrow', 'right', 'direction', 'navigation', 'forward'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
                 'outline' => ['class' => 'bi-arrow-right']
             ]
         ],
-        [
-            'name' => 'arrow-up-circle',
-            'displayName' => 'Arrow Up Circle',
-            'class' => 'bi-arrow-up-circle',
-            'keywords' => ['arrow', 'up', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-circle'],
-                'solid' => ['class' => 'bi-arrow-up-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'arrow-down-circle',
-            'displayName' => 'Arrow Down Circle',
-            'class' => 'bi-arrow-down-circle',
-            'keywords' => ['arrow', 'down', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-circle'],
-                'solid' => ['class' => 'bi-arrow-down-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'arrow-left-circle',
-            'displayName' => 'Arrow Left Circle',
-            'class' => 'bi-arrow-left-circle',
-            'keywords' => ['arrow', 'left', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left-circle'],
-                'solid' => ['class' => 'bi-arrow-left-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'arrow-right-circle',
-            'displayName' => 'Arrow Right Circle',
-            'class' => 'bi-arrow-right-circle',
-            'keywords' => ['arrow', 'right', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-right-circle'],
-                'solid' => ['class' => 'bi-arrow-right-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'circle',
-            'displayName' => 'Circle',
-            'class' => 'bi-circle',
-            'keywords' => ['circle', 'shape', 'round'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-circle'],
-                'solid' => ['class' => 'bi-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'circle-half',
-            'displayName' => 'Circle Half',
-            'class' => 'bi-circle-half',
-            'keywords' => ['circle', 'half', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-circle-half']
-            ]
-        ],
-        [
-            'name' => 'square',
-            'displayName' => 'Square',
-            'class' => 'bi-square',
-            'keywords' => ['square', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-square'],
-                'solid' => ['class' => 'bi-square-fill']
-            ]
-        ],
-        [
-            'name' => 'square-half',
-            'displayName' => 'Square Half',
-            'class' => 'bi-square-half',
-            'keywords' => ['square', 'half', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-square-half']
-            ]
-        ],
-        [
-            'name' => 'triangle',
-            'displayName' => 'Triangle',
-            'class' => 'bi-triangle',
-            'keywords' => ['triangle', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-triangle'],
-                'solid' => ['class' => 'bi-triangle-fill']
-            ]
-        ],
-        [
-            'name' => 'triangle-half',
-            'displayName' => 'Triangle Half',
-            'class' => 'bi-triangle-half',
-            'keywords' => ['triangle', 'half', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-triangle-half']
-            ]
-        ],
-        [
-            'name' => 'diamond',
-            'displayName' => 'Diamond',
-            'class' => 'bi-diamond',
-            'keywords' => ['diamond', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-diamond'],
-                'solid' => ['class' => 'bi-diamond-fill']
-            ]
-        ],
-        [
-            'name' => 'diamond-half',
-            'displayName' => 'Diamond Half',
-            'class' => 'bi-diamond-half',
-            'keywords' => ['diamond', 'half', 'shape'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-diamond-half']
-            ]
-        ],
+
+        // 基本操作符號
         [
             'name' => 'plus',
             'displayName' => 'Plus',
             'class' => 'bi-plus',
-            'keywords' => ['plus', 'add', 'create'],
+            'keywords' => ['plus', 'add', 'create', 'new', 'increase'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -286,7 +158,7 @@ return [
             'name' => 'plus-circle',
             'displayName' => 'Plus Circle',
             'class' => 'bi-plus-circle',
-            'keywords' => ['plus', 'add', 'circle'],
+            'keywords' => ['plus', 'circle', 'add', 'create'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -295,33 +167,10 @@ return [
             ]
         ],
         [
-            'name' => 'plus-square',
-            'displayName' => 'Plus Square',
-            'class' => 'bi-plus-square',
-            'keywords' => ['plus', 'add', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-plus-square'],
-                'solid' => ['class' => 'bi-plus-square-fill']
-            ]
-        ],
-        [
-            'name' => 'plus-lg',
-            'displayName' => 'Plus Lg',
-            'class' => 'bi-plus-lg',
-            'keywords' => ['plus', 'add', 'large'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-plus-lg']
-            ]
-        ],
-        [
             'name' => 'dash',
             'displayName' => 'Dash',
             'class' => 'bi-dash',
-            'keywords' => ['dash', 'minus', 'remove'],
+            'keywords' => ['dash', 'minus', 'subtract', 'remove', 'decrease'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -329,91 +178,23 @@ return [
             ]
         ],
         [
-            'name' => 'dash-circle',
-            'displayName' => 'Dash Circle',
-            'class' => 'bi-dash-circle',
-            'keywords' => ['dash', 'minus', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-circle'],
-                'solid' => ['class' => 'bi-dash-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'dash-square',
-            'displayName' => 'Dash Square',
-            'class' => 'bi-dash-square',
-            'keywords' => ['dash', 'minus', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-square'],
-                'solid' => ['class' => 'bi-dash-square-fill']
-            ]
-        ],
-        [
-            'name' => 'dash-lg',
-            'displayName' => 'Dash Lg',
-            'class' => 'bi-dash-lg',
-            'keywords' => ['dash', 'minus', 'large'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-lg']
-            ]
-        ],
-        [
             'name' => 'x',
             'displayName' => 'X',
             'class' => 'bi-x',
-            'keywords' => ['x', 'close', 'cancel'],
+            'keywords' => ['x', 'close', 'cancel', 'remove', 'delete'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
                 'outline' => ['class' => 'bi-x']
             ]
         ],
-        [
-            'name' => 'x-circle',
-            'displayName' => 'X Circle',
-            'class' => 'bi-x-circle',
-            'keywords' => ['x', 'close', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-x-circle'],
-                'solid' => ['class' => 'bi-x-circle-fill']
-            ]
-        ],
-        [
-            'name' => 'x-square',
-            'displayName' => 'X Square',
-            'class' => 'bi-x-square',
-            'keywords' => ['x', 'close', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-x-square'],
-                'solid' => ['class' => 'bi-x-square-fill']
-            ]
-        ],
-        [
-            'name' => 'x-lg',
-            'displayName' => 'X Lg',
-            'class' => 'bi-x-lg',
-            'keywords' => ['x', 'close', 'large'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-x-lg']
-            ]
-        ],
+
+        // 檢查與確認
         [
             'name' => 'check',
             'displayName' => 'Check',
             'class' => 'bi-check',
-            'keywords' => ['check', 'confirm', 'tick'],
+            'keywords' => ['check', 'confirm', 'ok', 'success', 'done'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -424,7 +205,7 @@ return [
             'name' => 'check-circle',
             'displayName' => 'Check Circle',
             'class' => 'bi-check-circle',
-            'keywords' => ['check', 'confirm', 'circle'],
+            'keywords' => ['check', 'circle', 'confirm', 'success'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -432,34 +213,13 @@ return [
                 'solid' => ['class' => 'bi-check-circle-fill']
             ]
         ],
-        [
-            'name' => 'check-square',
-            'displayName' => 'Check Square',
-            'class' => 'bi-check-square',
-            'keywords' => ['check', 'confirm', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-check-square'],
-                'solid' => ['class' => 'bi-check-square-fill']
-            ]
-        ],
-        [
-            'name' => 'check-lg',
-            'displayName' => 'Check Lg',
-            'class' => 'bi-check-lg',
-            'keywords' => ['check', 'confirm', 'large'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-check-lg']
-            ]
-        ],
+
+        // 星形與評級
         [
             'name' => 'star',
             'displayName' => 'Star',
             'class' => 'bi-star',
-            'keywords' => ['star', 'favorite', 'rating'],
+            'keywords' => ['star', 'favorite', 'rating', 'bookmark', 'quality'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -467,33 +227,13 @@ return [
                 'solid' => ['class' => 'bi-star-fill']
             ]
         ],
-        [
-            'name' => 'star-half',
-            'displayName' => 'Star Half',
-            'class' => 'bi-star-half',
-            'keywords' => ['star', 'half', 'rating'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-star-half']
-            ]
-        ],
-        [
-            'name' => 'stars',
-            'displayName' => 'Stars',
-            'class' => 'bi-stars',
-            'keywords' => ['stars', 'multiple', 'rating'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-stars']
-            ]
-        ],
+
+        // 心形與喜愛
         [
             'name' => 'heart',
             'displayName' => 'Heart',
             'class' => 'bi-heart',
-            'keywords' => ['heart', 'love', 'like'],
+            'keywords' => ['heart', 'love', 'like', 'favorite', 'romance'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -501,33 +241,13 @@ return [
                 'solid' => ['class' => 'bi-heart-fill']
             ]
         ],
-        [
-            'name' => 'heart-half',
-            'displayName' => 'Heart Half',
-            'class' => 'bi-heart-half',
-            'keywords' => ['heart', 'half', 'love'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-heart-half']
-            ]
-        ],
-        [
-            'name' => 'hearts',
-            'displayName' => 'Hearts',
-            'class' => 'bi-hearts',
-            'keywords' => ['hearts', 'love', 'multiple'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-hearts']
-            ]
-        ],
+
+        // 訊息與通知
         [
             'name' => 'bell',
             'displayName' => 'Bell',
             'class' => 'bi-bell',
-            'keywords' => ['bell', 'notification', 'alert'],
+            'keywords' => ['bell', 'notification', 'alert', 'ring', 'sound'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -535,23 +255,13 @@ return [
                 'solid' => ['class' => 'bi-bell-fill']
             ]
         ],
-        [
-            'name' => 'bell-slash',
-            'displayName' => 'Bell Slash',
-            'class' => 'bi-bell-slash',
-            'keywords' => ['bell', 'mute', 'silent'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-bell-slash'],
-                'solid' => ['class' => 'bi-bell-slash-fill']
-            ]
-        ],
+
+        // 問號與協助
         [
             'name' => 'question',
             'displayName' => 'Question',
             'class' => 'bi-question',
-            'keywords' => ['question', 'help', 'unknown'],
+            'keywords' => ['question', 'help', 'info', 'support'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -562,7 +272,7 @@ return [
             'name' => 'question-circle',
             'displayName' => 'Question Circle',
             'class' => 'bi-question-circle',
-            'keywords' => ['question', 'help', 'circle'],
+            'keywords' => ['question', 'circle', 'help', 'info'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -570,11 +280,13 @@ return [
                 'solid' => ['class' => 'bi-question-circle-fill']
             ]
         ],
+
+        // 資訊與提示
         [
             'name' => 'info',
             'displayName' => 'Info',
             'class' => 'bi-info',
-            'keywords' => ['info', 'information', 'about'],
+            'keywords' => ['info', 'information', 'about', 'details'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -585,7 +297,7 @@ return [
             'name' => 'info-circle',
             'displayName' => 'Info Circle',
             'class' => 'bi-info-circle',
-            'keywords' => ['info', 'information', 'circle'],
+            'keywords' => ['info', 'circle', 'information', 'about'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -593,23 +305,13 @@ return [
                 'solid' => ['class' => 'bi-info-circle-fill']
             ]
         ],
-        [
-            'name' => 'info-square',
-            'displayName' => 'Info Square',
-            'class' => 'bi-info-square',
-            'keywords' => ['info', 'information', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-info-square'],
-                'solid' => ['class' => 'bi-info-square-fill']
-            ]
-        ],
+
+        // 警告與錯誤
         [
             'name' => 'exclamation',
             'displayName' => 'Exclamation',
             'class' => 'bi-exclamation',
-            'keywords' => ['exclamation', 'warning', 'alert'],
+            'keywords' => ['exclamation', 'warning', 'alert', 'error'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -617,22 +319,10 @@ return [
             ]
         ],
         [
-            'name' => 'exclamation-circle',
-            'displayName' => 'Exclamation Circle',
-            'class' => 'bi-exclamation-circle',
-            'keywords' => ['exclamation', 'warning', 'circle'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-exclamation-circle'],
-                'solid' => ['class' => 'bi-exclamation-circle-fill']
-            ]
-        ],
-        [
             'name' => 'exclamation-triangle',
             'displayName' => 'Exclamation Triangle',
             'class' => 'bi-exclamation-triangle',
-            'keywords' => ['exclamation', 'warning', 'triangle'],
+            'keywords' => ['exclamation', 'triangle', 'warning', 'alert'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -640,306 +330,13 @@ return [
                 'solid' => ['class' => 'bi-exclamation-triangle-fill']
             ]
         ],
-        [
-            'name' => 'eye',
-            'displayName' => 'Eye',
-            'class' => 'bi-eye',
-            'keywords' => ['eye', 'view', 'show'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-eye'],
-                'solid' => ['class' => 'bi-eye-fill']
-            ]
-        ],
-        [
-            'name' => 'eye-slash',
-            'displayName' => 'Eye Slash',
-            'class' => 'bi-eye-slash',
-            'keywords' => ['eye', 'hide', 'invisible'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-eye-slash'],
-                'solid' => ['class' => 'bi-eye-slash-fill']
-            ]
-        ],
-        [
-            'name' => 'bookmark',
-            'displayName' => 'Bookmark',
-            'class' => 'bi-bookmark',
-            'keywords' => ['bookmark', 'save', 'favorite'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-bookmark'],
-                'solid' => ['class' => 'bi-bookmark-fill']
-            ]
-        ],
-        [
-            'name' => 'flag',
-            'displayName' => 'Flag',
-            'class' => 'bi-flag',
-            'keywords' => ['flag', 'mark', 'report'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-flag'],
-                'solid' => ['class' => 'bi-flag-fill']
-            ]
-        ],
-        [
-            'name' => 'tag',
-            'displayName' => 'Tag',
-            'class' => 'bi-tag',
-            'keywords' => ['tag', 'label', 'category'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-tag'],
-                'solid' => ['class' => 'bi-tag-fill']
-            ]
-        ],
-        [
-            'name' => 'share',
-            'displayName' => 'Share',
-            'class' => 'bi-share',
-            'keywords' => ['share', 'send', 'distribute'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-share'],
-                'solid' => ['class' => 'bi-share-fill']
-            ]
-        ],
-        [
-            'name' => 'link',
-            'displayName' => 'Link',
-            'class' => 'bi-link',
-            'keywords' => ['link', 'url', 'connection'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-link']
-            ]
-        ],
-        [
-            'name' => 'download',
-            'displayName' => 'Download',
-            'class' => 'bi-download',
-            'keywords' => ['download', 'save', 'get'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-download']
-            ]
-        ],
-        [
-            'name' => 'upload',
-            'displayName' => 'Upload',
-            'class' => 'bi-upload',
-            'keywords' => ['upload', 'send', 'publish'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-upload']
-            ]
-        ],
-        [
-            'name' => 'cloud',
-            'displayName' => 'Cloud',
-            'class' => 'bi-cloud',
-            'keywords' => ['cloud', 'storage', 'online'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud'],
-                'solid' => ['class' => 'bi-cloud-fill']
-            ]
-        ],
-        [
-            'name' => 'cloud-download',
-            'displayName' => 'Cloud Download',
-            'class' => 'bi-cloud-download',
-            'keywords' => ['cloud', 'download', 'sync'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-download'],
-                'solid' => ['class' => 'bi-cloud-download-fill']
-            ]
-        ],
-        [
-            'name' => 'cloud-upload',
-            'displayName' => 'Cloud Upload',
-            'class' => 'bi-cloud-upload',
-            'keywords' => ['cloud', 'upload', 'sync'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-upload'],
-                'solid' => ['class' => 'bi-cloud-upload-fill']
-            ]
-        ],
-        [
-            'name' => 'sun',
-            'displayName' => 'Sun',
-            'class' => 'bi-sun',
-            'keywords' => ['sun', 'bright', 'light'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-sun'],
-                'solid' => ['class' => 'bi-sun-fill']
-            ]
-        ],
-        [
-            'name' => 'moon',
-            'displayName' => 'Moon',
-            'class' => 'bi-moon',
-            'keywords' => ['moon', 'dark', 'night'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-moon'],
-                'solid' => ['class' => 'bi-moon-fill']
-            ]
-        ],
-        [
-            'name' => 'brightness-high',
-            'displayName' => 'Brightness High',
-            'class' => 'bi-brightness-high',
-            'keywords' => ['brightness', 'high', 'light'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-high'],
-                'solid' => ['class' => 'bi-brightness-high-fill']
-            ]
-        ],
-        [
-            'name' => 'brightness-low',
-            'displayName' => 'Brightness Low',
-            'class' => 'bi-brightness-low',
-            'keywords' => ['brightness', 'low', 'dim'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-low'],
-                'solid' => ['class' => 'bi-brightness-low-fill']
-            ]
-        ],
-        [
-            'name' => 'trash',
-            'displayName' => 'Trash',
-            'class' => 'bi-trash',
-            'keywords' => ['trash', 'delete', 'remove'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-trash'],
-                'solid' => ['class' => 'bi-trash-fill']
-            ]
-        ],
-        [
-            'name' => 'pencil',
-            'displayName' => 'Pencil',
-            'class' => 'bi-pencil',
-            'keywords' => ['pencil', 'edit', 'write'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-pencil'],
-                'solid' => ['class' => 'bi-pencil-fill']
-            ]
-        ],
-        [
-            'name' => 'pencil-square',
-            'displayName' => 'Pencil Square',
-            'class' => 'bi-pencil-square',
-            'keywords' => ['pencil', 'edit', 'square'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-pencil-square']
-            ]
-        ],
-        [
-            'name' => 'clipboard',
-            'displayName' => 'Clipboard',
-            'class' => 'bi-clipboard',
-            'keywords' => ['clipboard', 'copy', 'paste'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard'],
-                'solid' => ['class' => 'bi-clipboard-fill']
-            ]
-        ],
-        [
-            'name' => 'clock',
-            'displayName' => 'Clock',
-            'class' => 'bi-clock',
-            'keywords' => ['clock', 'time', 'schedule'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-clock'],
-                'solid' => ['class' => 'bi-clock-fill']
-            ]
-        ],
-        [
-            'name' => 'calendar',
-            'displayName' => 'Calendar',
-            'class' => 'bi-calendar',
-            'keywords' => ['calendar', 'date', 'schedule'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-calendar'],
-                'solid' => ['class' => 'bi-calendar-fill']
-            ]
-        ],
-        [
-            'name' => 'lightbulb',
-            'displayName' => 'Lightbulb',
-            'class' => 'bi-lightbulb',
-            'keywords' => ['lightbulb', 'idea', 'innovation'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightbulb'],
-                'solid' => ['class' => 'bi-lightbulb-fill']
-            ]
-        ],
-        [
-            'name' => 'lightning',
-            'displayName' => 'Lightning',
-            'class' => 'bi-lightning',
-            'keywords' => ['lightning', 'power', 'energy'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightning'],
-                'solid' => ['class' => 'bi-lightning-fill']
-            ]
-        ],
-        [
-            'name' => 'filter',
-            'displayName' => 'Filter',
-            'class' => 'bi-filter',
-            'keywords' => ['filter', 'sort', 'organize'],
-            'type' => 'bootstrap',
-            'category' => 'general',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter']
-            ]
-        ],
+
+        // 鎖定與解鎖
         [
             'name' => 'lock',
             'displayName' => 'Lock',
             'class' => 'bi-lock',
-            'keywords' => ['lock', 'secure', 'protect'],
+            'keywords' => ['lock', 'secure', 'private', 'protected'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -951,7 +348,7 @@ return [
             'name' => 'unlock',
             'displayName' => 'Unlock',
             'class' => 'bi-unlock',
-            'keywords' => ['unlock', 'open', 'access'],
+            'keywords' => ['unlock', 'open', 'accessible', 'unlocked'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
@@ -959,28 +356,213 @@ return [
                 'solid' => ['class' => 'bi-unlock-fill']
             ]
         ],
+
+        // 眼睛與顯示
         [
-            'name' => 'shield',
-            'displayName' => 'Shield',
-            'class' => 'bi-shield',
-            'keywords' => ['shield', 'security', 'protection'],
+            'name' => 'eye',
+            'displayName' => 'Eye',
+            'class' => 'bi-eye',
+            'keywords' => ['eye', 'view', 'show', 'visible'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
-                'outline' => ['class' => 'bi-shield'],
-                'solid' => ['class' => 'bi-shield-fill']
+                'outline' => ['class' => 'bi-eye'],
+                'solid' => ['class' => 'bi-eye-fill']
             ]
         ],
         [
-            'name' => 'shield-check',
-            'displayName' => 'Shield Check',
-            'class' => 'bi-shield-check',
-            'keywords' => ['shield', 'check', 'verified'],
+            'name' => 'eye-slash',
+            'displayName' => 'Eye Slash',
+            'class' => 'bi-eye-slash',
+            'keywords' => ['eye', 'slash', 'hide', 'invisible'],
             'type' => 'bootstrap',
             'category' => 'general',
             'variants' => [
-                'outline' => ['class' => 'bi-shield-check'],
-                'solid' => ['class' => 'bi-shield-fill-check']
+                'outline' => ['class' => 'bi-eye-slash'],
+                'solid' => ['class' => 'bi-eye-slash-fill']
+            ]
+        ],
+
+        // 書籤與標籤
+        [
+            'name' => 'bookmark',
+            'displayName' => 'Bookmark',
+            'class' => 'bi-bookmark',
+            'keywords' => ['bookmark', 'save', 'favorite', 'mark', 'remember'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark'],
+                'solid' => ['class' => 'bi-bookmark-fill']
+            ]
+        ],
+
+        // 垃圾桶與刪除
+        [
+            'name' => 'trash',
+            'displayName' => 'Trash',
+            'class' => 'bi-trash',
+            'keywords' => ['trash', 'delete', 'remove', 'garbage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-trash'],
+                'solid' => ['class' => 'bi-trash-fill']
+            ]
+        ],
+
+        // 編輯與鉛筆
+        [
+            'name' => 'pencil',
+            'displayName' => 'Pencil',
+            'class' => 'bi-pencil',
+            'keywords' => ['pencil', 'edit', 'write', 'modify'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-pencil'],
+                'solid' => ['class' => 'bi-pencil-fill']
+            ]
+        ],
+
+        // 時鐘與時間
+        [
+            'name' => 'clock',
+            'displayName' => 'Clock',
+            'class' => 'bi-clock',
+            'keywords' => ['clock', 'time', 'hour', 'minute', 'schedule'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clock'],
+                'solid' => ['class' => 'bi-clock-fill']
+            ]
+        ],
+        [
+            'name' => 'alarm',
+            'displayName' => 'Alarm',
+            'class' => 'bi-alarm',
+            'keywords' => ['alarm', 'wake', 'ring', 'alert', 'timer'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-alarm'],
+                'solid' => ['class' => 'bi-alarm-fill']
+            ]
+        ],
+
+        // 日曆
+        [
+            'name' => 'calendar',
+            'displayName' => 'Calendar',
+            'class' => 'bi-calendar',
+            'keywords' => ['calendar', 'date', 'time', 'schedule', 'appointment'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar'],
+                'solid' => ['class' => 'bi-calendar-fill']
+            ]
+        ],
+
+        // 燈泡與想法
+        [
+            'name' => 'lightbulb',
+            'displayName' => 'Lightbulb',
+            'class' => 'bi-lightbulb',
+            'keywords' => ['lightbulb', 'idea', 'innovation', 'bright'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightbulb'],
+                'solid' => ['class' => 'bi-lightbulb-fill']
+            ]
+        ],
+
+        // 放大鏡與縮放
+        [
+            'name' => 'zoom-in',
+            'displayName' => 'Zoom In',
+            'class' => 'bi-zoom-in',
+            'keywords' => ['zoom', 'in', 'magnify', 'enlarge'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-in']
+            ]
+        ],
+        [
+            'name' => 'zoom-out',
+            'displayName' => 'Zoom Out',
+            'class' => 'bi-zoom-out',
+            'keywords' => ['zoom', 'out', 'reduce', 'shrink'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-out']
+            ]
+        ],
+
+        // 下載與上傳
+        [
+            'name' => 'download',
+            'displayName' => 'Download',
+            'class' => 'bi-download',
+            'keywords' => ['download', 'save', 'get', 'receive', 'arrow'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-download']
+            ]
+        ],
+        [
+            'name' => 'upload',
+            'displayName' => 'Upload',
+            'class' => 'bi-upload',
+            'keywords' => ['upload', 'send', 'transfer', 'share', 'arrow'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-upload']
+            ]
+        ],
+
+        // 雲端與同步
+        [
+            'name' => 'cloud',
+            'displayName' => 'Cloud',
+            'class' => 'bi-cloud',
+            'keywords' => ['cloud', 'storage', 'online', 'sync', 'backup'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud'],
+                'solid' => ['class' => 'bi-cloud-fill']
+            ]
+        ],
+
+        // 分享與連結
+        [
+            'name' => 'share',
+            'displayName' => 'Share',
+            'class' => 'bi-share',
+            'keywords' => ['share', 'send', 'export', 'distribute'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-share'],
+                'solid' => ['class' => 'bi-share-fill']
+            ]
+        ],
+        [
+            'name' => 'link',
+            'displayName' => 'Link',
+            'class' => 'bi-link',
+            'keywords' => ['link', 'url', 'chain', 'connect'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-link']
             ]
         ]
     ]
