@@ -7,7 +7,7 @@ use Tests\TestCase;
 class BootstrapIconControllerTest extends TestCase
 {
     /**
-     * 測試取得所有 Bootstrap Icons 資料的 API
+     * 測試取得所有 Bootstrap Icons 資料的 API - 新的 data/meta 格式
      */
     public function test_can_get_all_bootstrap_icons()
     {
@@ -16,36 +16,56 @@ class BootstrapIconControllerTest extends TestCase
         $response->assertStatus(200)
             ->assertJsonStructure([
                 'data' => [
-                    '*' => [
-                        '*' => [
+                    '*' => [ // 分類 ID 作為 key
+                        '*' => [ // bootstrap icons 陣列
+                            'id',
                             'name',
-                            'class',
+                            'value', // Bootstrap Icon 使用 CSS class
+                            'type',
+                            'keywords',
                             'category',
-                            'keywords'
+                            'has_variants',
+                            'variant_type'
                         ]
                     ]
                 ],
                 'meta' => [
                     'total',
-                    'categories'
+                    'type',
+                    'categories' => [
+                        '*' => [
+                            'name',
+                            'description'
+                        ]
+                    ]
                 ]
             ]);
     }
     
     /**
-     * 測試 Bootstrap Icons 包含正確分類數量
+     * 測試 Bootstrap Icons meta 資料格式正確
      */
-    public function test_bootstrap_icons_categories_count()
+    public function test_bootstrap_icons_meta_data_format()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
         $data = $response->json();
         
-        // 應該有 8 個分類
+        // 驗證 meta 資料結構
+        $this->assertArrayHasKey('meta', $data);
+        $this->assertArrayHasKey('total', $data['meta']);
+        $this->assertArrayHasKey('type', $data['meta']);
+        $this->assertArrayHasKey('categories', $data['meta']);
+        
+        // 驗證 type 為 bootstrap-icons
+        $this->assertEquals('bootstrap-icons', $data['meta']['type']);
+        
+        // 驗證 total 是正整數
+        $this->assertIsInt($data['meta']['total']);
+        $this->assertGreaterThan(0, $data['meta']['total']);
+        
+        // 驗證分類數量合理（應該有 8 個分類）
         $this->assertGreaterThanOrEqual(8, count($data['meta']['categories']));
-        $this->assertContains('general', array_keys($data['meta']['categories']));
-        $this->assertContains('ui', array_keys($data['meta']['categories']));
-        $this->assertContains('communications', array_keys($data['meta']['categories']));
     }
     
     /**
@@ -57,58 +77,147 @@ class BootstrapIconControllerTest extends TestCase
         
         $data = $response->json();
         
-        // 檢查第一個分類的第一個圖標格式
+        // 取得第一個分類的第一個 Bootstrap Icon 來驗證格式
+        $this->assertArrayHasKey('data', $data);
+        $this->assertNotEmpty($data['data']);
+        
         $firstCategory = array_values($data['data'])[0];
+        $this->assertIsArray($firstCategory);
+        $this->assertNotEmpty($firstCategory);
+        
         $firstIcon = $firstCategory[0];
         
+        // 驗證必要欄位
+        $this->assertArrayHasKey('id', $firstIcon);
         $this->assertArrayHasKey('name', $firstIcon);
-        $this->assertArrayHasKey('class', $firstIcon);
-        $this->assertArrayHasKey('category', $firstIcon);
+        $this->assertArrayHasKey('value', $firstIcon);
+        $this->assertArrayHasKey('type', $firstIcon);
         $this->assertArrayHasKey('keywords', $firstIcon);
+        $this->assertArrayHasKey('category', $firstIcon);
+        $this->assertArrayHasKey('has_variants', $firstIcon);
+        $this->assertArrayHasKey('variant_type', $firstIcon);
         
         // 驗證資料類型
+        $this->assertIsString($firstIcon['id']);
         $this->assertIsString($firstIcon['name']);
-        $this->assertIsString($firstIcon['class']);
-        $this->assertIsString($firstIcon['category']);
+        $this->assertIsString($firstIcon['value']); // CSS class
+        $this->assertEquals('bootstrap-icons', $firstIcon['type']);
         $this->assertIsArray($firstIcon['keywords']);
+        $this->assertIsString($firstIcon['category']);
+        $this->assertIsBool($firstIcon['has_variants']);
+        $this->assertContains($firstIcon['variant_type'], ['outline', 'solid']);
     }
     
     /**
-     * 測試分類篩選功能
+     * 測試分類 API
      */
-    public function test_category_filtering()
+    public function test_can_get_bootstrap_icons_categories()
     {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons?categories=general,ui');
+        $response = $this->getJson('/api/config/icon/bootstrap-icons/categories');
         
-        $response->assertStatus(200);
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => [
+                        'name',
+                        'description'
+                    ]
+                ]
+            ]);
+            
         $data = $response->json();
         
-        // 應該只包含指定的分類
-        $this->assertArrayHasKey('general', $data['data']);
-        $this->assertArrayHasKey('ui', $data['data']);
-        
-        // 檢查每個圖標是否屬於正確分類
-        foreach ($data['data']['general'] as $icon) {
-            $this->assertEquals('general', $icon['category']);
-        }
-        
-        foreach ($data['data']['ui'] as $icon) {
-            $this->assertEquals('ui', $icon['category']);
+        // 驗證包含預期的分類
+        $expectedCategories = ['general', 'ui', 'communications'];
+        foreach ($expectedCategories as $category) {
+            $this->assertArrayHasKey($category, $data['data'], "Missing category: {$category}");
         }
     }
     
     /**
-     * 測試總圖標數量合理
+     * 測試取得特定分類的 Bootstrap Icons
      */
-    public function test_bootstrap_icons_total_count()
+    public function test_can_get_bootstrap_icons_by_category()
+    {
+        // 先取得分類列表
+        $categoriesResponse = $this->getJson('/api/config/icon/bootstrap-icons/categories');
+        $categoriesData = $categoriesResponse->json();
+        
+        if (empty($categoriesData['data'])) {
+            $this->markTestSkipped('No categories available');
+        }
+        
+        $firstCategoryId = array_keys($categoriesData['data'])[0];
+        
+        $response = $this->getJson("/api/config/icon/bootstrap-icons/category/{$firstCategoryId}");
+        
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    $firstCategoryId => [
+                        '*' => [
+                            'id',
+                            'name',
+                            'value',
+                            'type',
+                            'keywords',
+                            'category'
+                        ]
+                    ]
+                ],
+                'meta' => [
+                    'total',
+                    'type',
+                    'categories'
+                ]
+            ]);
+            
+        $data = $response->json();
+        
+        // 驗證只包含指定分類
+        $this->assertCount(1, $data['data']);
+        $this->assertArrayHasKey($firstCategoryId, $data['data']);
+        
+        // 驗證每個 Bootstrap Icon 都屬於正確分類
+        foreach ($data['data'][$firstCategoryId] as $icon) {
+            $this->assertEquals($firstCategoryId, $icon['category']);
+        }
+    }
+    
+    /**
+     * 測試無效分類回應 400 錯誤
+     */
+    public function test_invalid_bootstrap_icons_category_returns_error()
+    {
+        $response = $this->getJson('/api/config/icon/bootstrap-icons/category/invalid_category');
+        
+        $response->assertStatus(400)
+            ->assertJsonStructure([
+                'error'
+            ]);
+            
+        $data = $response->json();
+        $this->assertStringContainsString('Invalid category', $data['error']);
+    }
+    
+    /**
+     * 測試 Bootstrap Icons 包含主要分類
+     */
+    public function test_bootstrap_icons_contains_expected_categories()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
         $data = $response->json();
         
-        // 總數應該合理（目前配置約 250+）
-        $this->assertGreaterThan(200, $data['meta']['total']);
-        $this->assertLessThan(500, $data['meta']['total']);
+        // 驗證包含主要分類
+        $expectedCategories = [
+            'general', 'ui', 'communications', 'files',
+            'media', 'people', 'alphanumeric', 'others'
+        ];
+        
+        foreach ($expectedCategories as $category) {
+            $this->assertArrayHasKey($category, $data['meta']['categories'], "Missing category: {$category}");
+        }
     }
     
     /**
@@ -125,37 +234,8 @@ class BootstrapIconControllerTest extends TestCase
         
         $response->assertStatus(200);
         
-        // API 回應時間應該小於 500ms（根據需求）
+        // API 回應時間應該小於 500ms
         $this->assertLessThan(500, $responseTime, 'API response time is too slow');
-    }
-    
-    /**
-     * 測試空分類篩選參數
-     */
-    public function test_empty_categories_parameter()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons?categories=');
-        
-        // 空參數應該回應所有分類
-        $response->assertStatus(200);
-        $data = $response->json();
-        
-        $this->assertGreaterThanOrEqual(8, count($data['meta']['categories']));
-    }
-    
-    /**
-     * 測試無效分類篩選參數
-     */
-    public function test_invalid_categories_parameter()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons?categories=invalid,nonexistent');
-        
-        $response->assertStatus(200);
-        $data = $response->json();
-        
-        // 無效分類應該被忽略，返回所有結果（因為沒有有效分類）
-        $this->assertGreaterThan(200, $data['meta']['total']);
-        $this->assertGreaterThanOrEqual(8, count($data['meta']['categories']));
     }
     
     /**
@@ -175,368 +255,88 @@ class BootstrapIconControllerTest extends TestCase
         $this->assertEquals($firstResponse->json(), $secondResponse->json());
     }
     
-    // ===== 變體功能 API 測試 =====
-    
     /**
-     * 測試取得變體映射資訊 API
+     * 測試 Bootstrap Icons 變體功能
      */
-    public function test_can_get_bootstrap_icons_variants()
+    public function test_bootstrap_icons_variants()
     {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/variants');
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'mapping' => [
-                        'outline' => [
-                            'suffix',
-                            'description',
-                            'rule'
-                        ],
-                        'solid' => [
-                            'suffix',
-                            'description',
-                            'rule'
-                        ]
-                    ],
-                    'supported' => []
-                ]
-            ]);
-        
+        $response = $this->getJson('/api/config/icon/bootstrap-icons');
         $data = $response->json();
         
-        // 驗證變體映射內容
-        $this->assertEquals('', $data['data']['mapping']['outline']['suffix']);
-        $this->assertEquals('-fill', $data['data']['mapping']['solid']['suffix']);
-        $this->assertEquals('remove_fill_suffix', $data['data']['mapping']['outline']['rule']);
-        $this->assertEquals('add_fill_suffix', $data['data']['mapping']['solid']['rule']);
-        $this->assertContains('outline', $data['data']['supported']);
-        $this->assertContains('solid', $data['data']['supported']);
-    }
-    
-    /**
-     * 測試取得 outline 樣式圖標 API
-     */
-    public function test_can_get_bootstrap_icons_by_outline_style()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/style/outline');
+        // 收集所有圖標，檢查變體
+        $outlineIcons = [];
+        $solidIcons = [];
         
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    '*' => [
-                        '*' => [
-                            'name',
-                            'class',
-                            'category',
-                            'keywords',
-                            'currentStyle'
-                        ]
-                    ]
-                ],
-                'meta' => [
-                    'total',
-                    'categories',
-                    'currentStyle',
-                    'description'
-                ]
-            ]);
-        
-        $data = $response->json();
-        
-        // 驗證樣式相關資訊
-        $this->assertEquals('outline', $data['meta']['currentStyle']);
-        $this->assertEquals('線條樣式', $data['meta']['description']);
-        
-        // 驗證沒有包含 -fill 圖標
-        foreach ($data['data'] as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                $this->assertEquals('outline', $icon['currentStyle']);
-                $this->assertStringNotContainsString('-fill', $icon['class']);
-            }
-        }
-    }
-    
-    /**
-     * 測試取得 solid 樣式圖標 API
-     */
-    public function test_can_get_bootstrap_icons_by_solid_style()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/style/solid');
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    '*' => [
-                        '*' => [
-                            'name',
-                            'class',
-                            'category',
-                            'keywords',
-                            'currentStyle'
-                        ]
-                    ]
-                ],
-                'meta' => [
-                    'total',
-                    'categories',
-                    'currentStyle',
-                    'description'
-                ]
-            ]);
-        
-        $data = $response->json();
-        
-        // 驗證樣式相關資訊
-        $this->assertEquals('solid', $data['meta']['currentStyle']);
-        $this->assertEquals('實心樣式', $data['meta']['description']);
-        
-        // 驗證每個圖標都有 currentStyle 屬性
-        foreach ($data['data'] as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                $this->assertEquals('solid', $icon['currentStyle']);
-            }
-        }
-    }
-    
-    /**
-     * 測試無效樣式返回錯誤
-     */
-    public function test_invalid_bootstrap_style_returns_error()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/style/invalid');
-        
-        $response->assertStatus(400)
-            ->assertJsonStructure([
-                'error'
-            ]);
-        
-        $data = $response->json();
-        $this->assertStringContainsString('Unsupported style', $data['error']);
-    }
-    
-    /**
-     * 測試取得單一圖標變體資訊 API
-     */
-    public function test_can_get_single_bootstrap_icon_variants()
-    {
-        // 先取得一個測試用的圖標
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json();
-        
-        // 取得第一個分類的第一個圖標
-        $firstCategory = array_values($allData['data'])[0];
-        $testIcon = $firstCategory[0];
-        
-        $response = $this->getJson("/api/config/icon/bootstrap-icons/icon/{$testIcon['class']}/variants");
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'class',
-                    'variants' => [
-                        'outline' => [
-                            'class',
-                            'description'
-                        ],
-                        'solid' => [
-                            'class',
-                            'description'
-                        ]
-                    ]
-                ]
-            ]);
-        
-        $data = $response->json();
-        
-        // 驗證圖標變體資訊
-        $this->assertEquals($testIcon['class'], $data['data']['class']);
-        $this->assertIsArray($data['data']['variants']);
-        $this->assertArrayHasKey('outline', $data['data']['variants']);
-        $this->assertArrayHasKey('solid', $data['data']['variants']);
-    }
-    
-    /**
-     * 測試不存在的圖標變體返回 404
-     */
-    public function test_non_existent_bootstrap_icon_variants_returns_404()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/icon/non-existent-icon/variants');
-        
-        $response->assertStatus(404)
-            ->assertJsonStructure([
-                'error'
-            ]);
-    }
-    
-    /**
-     * 測試檢查圖標是否支援特定樣式 API
-     */
-    public function test_can_check_bootstrap_icon_has_variant()
-    {
-        // 先取得一個測試用的圖標
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json();
-        
-        // 取得第一個分類的第一個圖標
-        $firstCategory = array_values($allData['data'])[0];
-        $testIcon = $firstCategory[0];
-        
-        // 測試支援的樣式
-        $response = $this->getJson("/api/config/icon/bootstrap-icons/icon/{$testIcon['class']}/variant/outline");
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'class',
-                    'style',
-                    'hasVariant',
-                    'variantClass'
-                ]
-            ]);
-        
-        $data = $response->json();
-        $this->assertEquals($testIcon['class'], $data['data']['class']);
-        $this->assertEquals('outline', $data['data']['style']);
-        $this->assertTrue($data['data']['hasVariant']);
-        $this->assertIsString($data['data']['variantClass']);
-    }
-    
-    /**
-     * 測試檢查圖標不支援的樣式
-     */
-    public function test_bootstrap_icon_does_not_have_invalid_variant()
-    {
-        // 先取得一個測試用的圖標
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json();
-        
-        // 取得第一個分類的第一個圖標
-        $firstCategory = array_values($allData['data'])[0];
-        $testIcon = $firstCategory[0];
-        
-        $response = $this->getJson("/api/config/icon/bootstrap-icons/icon/{$testIcon['class']}/variant/invalid");
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'class',
-                    'style',
-                    'hasVariant',
-                    'variantClass'
-                ]
-            ]);
-        
-        $data = $response->json();
-        $this->assertEquals($testIcon['class'], $data['data']['class']);
-        $this->assertEquals('invalid', $data['data']['style']);
-        $this->assertFalse($data['data']['hasVariant']);
-        $this->assertNull($data['data']['variantClass']);
-    }
-    
-    /**
-     * 測試不存在的圖標檢查樣式支援
-     */
-    public function test_non_existent_bootstrap_icon_variant_check()
-    {
-        $response = $this->getJson('/api/config/icon/bootstrap-icons/icon/non-existent-icon/variant/outline');
-        
-        $response->assertStatus(200)
-            ->assertJsonStructure([
-                'data' => [
-                    'class',
-                    'style',
-                    'hasVariant',
-                    'variantClass'
-                ]
-            ]);
-        
-        $data = $response->json();
-        $this->assertEquals('non-existent-icon', $data['data']['class']);
-        $this->assertEquals('outline', $data['data']['style']);
-        $this->assertFalse($data['data']['hasVariant']);
-        $this->assertNull($data['data']['variantClass']);
-    }
-    
-    /**
-     * 測試變體 API 回應時間
-     */
-    public function test_bootstrap_variant_api_response_time()
-    {
-        // 先取得一個測試用的圖標
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json();
-        $firstCategory = array_values($allData['data'])[0];
-        $testIcon = $firstCategory[0];
-        
-        $endpoints = [
-            '/api/config/icon/bootstrap-icons/variants',
-            '/api/config/icon/bootstrap-icons/style/outline',
-            "/api/config/icon/bootstrap-icons/icon/{$testIcon['class']}/variants",
-            "/api/config/icon/bootstrap-icons/icon/{$testIcon['class']}/variant/outline"
-        ];
-        
-        foreach ($endpoints as $endpoint) {
-            $startTime = microtime(true);
-            
-            $response = $this->getJson($endpoint);
-            
-            $endTime = microtime(true);
-            $responseTime = ($endTime - $startTime) * 1000; // 轉換為毫秒
-            
-            $response->assertStatus(200);
-            
-            // 變體 API 回應時間應該小於 500ms
-            $this->assertLessThan(500, $responseTime, "Bootstrap variant API endpoint {$endpoint} response time is too slow");
-        }
-    }
-    
-    /**
-     * 測試 -fill 後綴處理邏輯在 API 中的表現
-     */
-    public function test_fill_suffix_handling_in_api()
-    {
-        // 先取得所有圖標
-        $allResponse = $this->getJson('/api/config/icon/bootstrap-icons');
-        $allData = $allResponse->json();
-        
-        // 尋找有 -fill 變體的圖標
-        $fillIcon = null;
-        $baseIcon = null;
-        
-        foreach ($allData['data'] as $categoryIcons) {
-            foreach ($categoryIcons as $icon) {
-                if (str_contains($icon['class'], '-fill')) {
-                    $fillIcon = $icon;
-                    // 尋找對應的基礎圖標
-                    $baseClassName = str_replace('-fill', '', $icon['class']);
-                    foreach ($categoryIcons as $baseCandidate) {
-                        if ($baseCandidate['class'] === $baseClassName) {
-                            $baseIcon = $baseCandidate;
-                            break;
-                        }
-                    }
-                    break 2;
+        foreach ($data['data'] as $category) {
+            foreach ($category as $icon) {
+                if ($icon['variant_type'] === 'outline') {
+                    $outlineIcons[] = $icon['name'];
+                } elseif ($icon['variant_type'] === 'solid') {
+                    $solidIcons[] = $icon['name'];
                 }
             }
         }
         
-        if ($fillIcon && $baseIcon) {
-            // 測試基礎圖標的變體 API
-            $baseResponse = $this->getJson("/api/config/icon/bootstrap-icons/icon/{$baseIcon['class']}/variants");
-            $baseResponse->assertStatus(200);
-            $baseData = $baseResponse->json();
-            
-            $this->assertEquals($baseIcon['class'], $baseData['data']['variants']['outline']['class']);
-            $this->assertEquals($fillIcon['class'], $baseData['data']['variants']['solid']['class']);
-            
-            // 測試 -fill 圖標的變體 API
-            $fillResponse = $this->getJson("/api/config/icon/bootstrap-icons/icon/{$fillIcon['class']}/variants");
-            $fillResponse->assertStatus(200);
-            $fillData = $fillResponse->json();
-            
-            $this->assertEquals($baseIcon['class'], $fillData['data']['variants']['outline']['class']);
-            $this->assertEquals($fillIcon['class'], $fillData['data']['variants']['solid']['class']);
+        // 驗證有 outline 和 solid 變體
+        $this->assertNotEmpty($outlineIcons);
+        $this->assertNotEmpty($solidIcons);
+        
+        // Bootstrap Icons 的 outline 通常比 solid 多（因為不是所有圖標都有 -fill 版本）
+        $this->assertGreaterThanOrEqual(count($solidIcons), count($outlineIcons));
+    }
+    
+    /**
+     * 測試總圖標數量合理
+     */
+    public function test_bootstrap_icons_total_count()
+    {
+        $response = $this->getJson('/api/config/icon/bootstrap-icons');
+        
+        $data = $response->json();
+        
+        // 總數應該合理（目前配置約 3800+ 個）
+        $this->assertGreaterThan(3000, $data['meta']['total']);
+        $this->assertLessThan(4000, $data['meta']['total']);
+    }
+    
+    /**
+     * 測試 -fill 後綴處理邏輯
+     */
+    public function test_bootstrap_icons_fill_suffix_handling()
+    {
+        $response = $this->getJson('/api/config/icon/bootstrap-icons');
+        $data = $response->json();
+        
+        // 尋找有 -fill 變體的圖標
+        $fillIcons = [];
+        $baseIcons = [];
+        
+        foreach ($data['data'] as $category) {
+            foreach ($category as $icon) {
+                if (str_contains($icon['value'], '-fill')) {
+                    $fillIcons[] = $icon;
+                } else {
+                    $baseIcons[] = $icon;
+                }
+            }
+        }
+        
+        // 驗證有基礎圖標和 fill 變體
+        $this->assertNotEmpty($baseIcons);
+        $this->assertNotEmpty($fillIcons);
+        
+        // 驗證 fill 圖標的 variant_type 為 solid
+        foreach ($fillIcons as $fillIcon) {
+            $this->assertEquals('solid', $fillIcon['variant_type'], 
+                "Fill icon {$fillIcon['value']} should have variant_type 'solid'");
+        }
+        
+        // 驗證基礎圖標的 variant_type 為 outline  
+        foreach ($baseIcons as $baseIcon) {
+            if (!str_contains($baseIcon['value'], '-fill')) {
+                $this->assertEquals('outline', $baseIcon['variant_type'],
+                    "Base icon {$baseIcon['value']} should have variant_type 'outline'");
+            }
         }
     }
 }

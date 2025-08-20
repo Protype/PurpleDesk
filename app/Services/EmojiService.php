@@ -160,7 +160,8 @@ class EmojiService
      */
     public function clearCache()
     {
-        Cache::forget('all_emojis');
+        Cache::forget('all_emojis_v2');
+        Cache::forget('all_emojis'); // 清理舊快取鍵以防萬一
     }
 
     /**
