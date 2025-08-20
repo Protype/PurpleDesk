@@ -17056,7 +17056,7 @@ return array (
         0 => 'gem',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17077,7 +17077,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'solid' => 
@@ -17101,7 +17101,7 @@ return array (
         1 => 'alt',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -17121,7 +17121,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'solid' => 
@@ -17144,7 +17144,7 @@ return array (
         0 => 'geo',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -17164,7 +17164,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17187,7 +17187,7 @@ return array (
         0 => 'gift',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17206,7 +17206,7 @@ return array (
         0 => 'github',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -17225,7 +17225,7 @@ return array (
         0 => 'globe',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -17244,7 +17244,7 @@ return array (
         0 => 'globe2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -17263,7 +17263,7 @@ return array (
         0 => 'google',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -17283,7 +17283,7 @@ return array (
         1 => 'down',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17303,7 +17303,7 @@ return array (
         1 => 'up',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17324,7 +17324,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -17348,7 +17348,7 @@ return array (
         1 => '1x2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17370,7 +17370,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -17395,7 +17395,7 @@ return array (
         2 => 'gap',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17415,7 +17415,7 @@ return array (
         1 => '3x2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17437,7 +17437,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -17462,7 +17462,7 @@ return array (
         2 => 'gap',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17482,7 +17482,7 @@ return array (
         1 => '3x3',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17502,7 +17502,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -17525,7 +17525,7 @@ return array (
         0 => 'grid',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17545,7 +17545,7 @@ return array (
         1 => 'horizontal',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17565,7 +17565,7 @@ return array (
         1 => 'vertical',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -17584,7 +17584,7 @@ return array (
         0 => 'hammer',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17605,7 +17605,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'solid' => 
@@ -17631,7 +17631,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'solid' => 
@@ -17656,7 +17656,7 @@ return array (
         2 => 'thumb',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'outline' => 
@@ -17676,7 +17676,7 @@ return array (
         1 => 'index',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'outline' => 
@@ -17698,7 +17698,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'solid' => 
@@ -17723,7 +17723,7 @@ return array (
         2 => 'down',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'outline' => 
@@ -17745,7 +17745,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'solid' => 
@@ -17770,7 +17770,7 @@ return array (
         2 => 'up',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'people',
       'variants' => 
       array (
         'outline' => 
@@ -17790,7 +17790,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17813,7 +17813,7 @@ return array (
         0 => 'handbag',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17832,7 +17832,7 @@ return array (
         0 => 'hash',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -17852,7 +17852,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17877,7 +17877,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17901,7 +17901,7 @@ return array (
         1 => 'network',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17922,7 +17922,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17946,7 +17946,7 @@ return array (
         1 => 'rack',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -17967,7 +17967,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -17991,7 +17991,7 @@ return array (
         1 => 'stack',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -18010,7 +18010,7 @@ return array (
         0 => 'hdd',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -18029,7 +18029,7 @@ return array (
         0 => 'headphones',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'media',
       'variants' => 
       array (
         'outline' => 
@@ -18048,7 +18048,7 @@ return array (
         0 => 'headset',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'media',
       'variants' => 
       array (
         'outline' => 
@@ -18068,7 +18068,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'solid' => 
@@ -18092,7 +18092,7 @@ return array (
         1 => 'half',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -18115,7 +18115,7 @@ return array (
         0 => 'heart',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -18139,7 +18139,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -18163,7 +18163,7 @@ return array (
         1 => 'half',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -18182,7 +18182,7 @@ return array (
         0 => 'heptagon',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -18202,7 +18202,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'solid' => 
@@ -18226,7 +18226,7 @@ return array (
         1 => 'half',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -18245,7 +18245,7 @@ return array (
         0 => 'hexagon',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -18265,7 +18265,7 @@ return array (
         1 => 'bottom',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -18285,7 +18285,7 @@ return array (
         1 => 'split',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -18305,7 +18305,7 @@ return array (
         1 => 'top',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -18324,7 +18324,7 @@ return array (
         0 => 'hourglass',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
