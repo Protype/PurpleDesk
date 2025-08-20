@@ -1,16 +1,24 @@
 <?php
 
+/**
+ * Bootstrap Icons - 通訊溝通分類
+ * 包含：郵件、電話、聊天、社交媒體等通訊相關圖標
+ * 
+ * 依據前端 bs-communications.js 更新 (335 個圖標)
+ */
+
 return [
     'category' => 'communications',
     'name' => '通訊溝通',
     'description' => '郵件、電話、聊天等通訊圖標',
     'priority' => 'high',
     'icons' => [
+        // 郵件相關
         [
             'name' => 'envelope',
             'displayName' => 'Envelope',
             'class' => 'bi-envelope',
-            'keywords' => ['envelope', 'email', 'mail'],
+            'keywords' => ['envelope', 'email', 'mail', 'message', 'letter'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -22,7 +30,7 @@ return [
             'name' => 'envelope-open',
             'displayName' => 'Envelope Open',
             'class' => 'bi-envelope-open',
-            'keywords' => ['envelope', 'open', 'email'],
+            'keywords' => ['envelope', 'open', 'email', 'read', 'mail'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -34,7 +42,7 @@ return [
             'name' => 'envelope-check',
             'displayName' => 'Envelope Check',
             'class' => 'bi-envelope-check',
-            'keywords' => ['envelope', 'check', 'verified'],
+            'keywords' => ['envelope', 'check', 'verified', 'confirmed', 'success'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -46,7 +54,7 @@ return [
             'name' => 'envelope-dash',
             'displayName' => 'Envelope Dash',
             'class' => 'bi-envelope-dash',
-            'keywords' => ['envelope', 'dash', 'remove'],
+            'keywords' => ['envelope', 'dash', 'remove', 'delete', 'minus'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -58,7 +66,7 @@ return [
             'name' => 'envelope-exclamation',
             'displayName' => 'Envelope Exclamation',
             'class' => 'bi-envelope-exclamation',
-            'keywords' => ['envelope', 'exclamation', 'urgent'],
+            'keywords' => ['envelope', 'exclamation', 'warning', 'alert', 'important'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -70,7 +78,7 @@ return [
             'name' => 'envelope-heart',
             'displayName' => 'Envelope Heart',
             'class' => 'bi-envelope-heart',
-            'keywords' => ['envelope', 'heart', 'love'],
+            'keywords' => ['envelope', 'heart', 'love', 'favorite', 'like'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -79,22 +87,10 @@ return [
             ]
         ],
         [
-            'name' => 'envelope-paper',
-            'displayName' => 'Envelope Paper',
-            'class' => 'bi-envelope-paper',
-            'keywords' => ['envelope', 'paper', 'letter'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-paper'],
-                'solid' => ['class' => 'bi-envelope-paper-fill']
-            ]
-        ],
-        [
             'name' => 'envelope-plus',
             'displayName' => 'Envelope Plus',
             'class' => 'bi-envelope-plus',
-            'keywords' => ['envelope', 'plus', 'add'],
+            'keywords' => ['envelope', 'plus', 'add', 'new', 'create'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -103,34 +99,10 @@ return [
             ]
         ],
         [
-            'name' => 'envelope-slash',
-            'displayName' => 'Envelope Slash',
-            'class' => 'bi-envelope-slash',
-            'keywords' => ['envelope', 'slash', 'block'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-slash'],
-                'solid' => ['class' => 'bi-envelope-slash-fill']
-            ]
-        ],
-        [
-            'name' => 'envelope-x',
-            'displayName' => 'Envelope X',
-            'class' => 'bi-envelope-x',
-            'keywords' => ['envelope', 'x', 'close'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-x'],
-                'solid' => ['class' => 'bi-envelope-x-fill']
-            ]
-        ],
-        [
             'name' => 'envelope-at',
             'displayName' => 'Envelope At',
             'class' => 'bi-envelope-at',
-            'keywords' => ['envelope', 'at', 'email'],
+            'keywords' => ['envelope', 'at', 'email', 'address', 'symbol'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -142,29 +114,20 @@ return [
             'name' => 'mailbox',
             'displayName' => 'Mailbox',
             'class' => 'bi-mailbox',
-            'keywords' => ['mailbox', 'mail', 'post'],
+            'keywords' => ['mailbox', 'post', 'delivery', 'inbox'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
                 'outline' => ['class' => 'bi-mailbox']
             ]
         ],
-        [
-            'name' => 'mailbox2',
-            'displayName' => 'Mailbox2',
-            'class' => 'bi-mailbox2',
-            'keywords' => ['mailbox', 'mail', 'post'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mailbox2']
-            ]
-        ],
+
+        // 電話相關
         [
             'name' => 'telephone',
             'displayName' => 'Telephone',
             'class' => 'bi-telephone',
-            'keywords' => ['telephone', 'phone', 'call'],
+            'keywords' => ['telephone', 'phone', 'call', 'contact', 'landline'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -176,7 +139,7 @@ return [
             'name' => 'telephone-forward',
             'displayName' => 'Telephone Forward',
             'class' => 'bi-telephone-forward',
-            'keywords' => ['telephone', 'forward', 'transfer'],
+            'keywords' => ['telephone', 'forward', 'transfer', 'redirect'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -188,7 +151,7 @@ return [
             'name' => 'telephone-inbound',
             'displayName' => 'Telephone Inbound',
             'class' => 'bi-telephone-inbound',
-            'keywords' => ['telephone', 'inbound', 'incoming'],
+            'keywords' => ['telephone', 'inbound', 'incoming', 'receive'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -200,7 +163,7 @@ return [
             'name' => 'telephone-outbound',
             'displayName' => 'Telephone Outbound',
             'class' => 'bi-telephone-outbound',
-            'keywords' => ['telephone', 'outbound', 'outgoing'],
+            'keywords' => ['telephone', 'outbound', 'outgoing', 'call'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -209,34 +172,10 @@ return [
             ]
         ],
         [
-            'name' => 'telephone-plus',
-            'displayName' => 'Telephone Plus',
-            'class' => 'bi-telephone-plus',
-            'keywords' => ['telephone', 'plus', 'add'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-plus'],
-                'solid' => ['class' => 'bi-telephone-plus-fill']
-            ]
-        ],
-        [
-            'name' => 'telephone-x',
-            'displayName' => 'Telephone X',
-            'class' => 'bi-telephone-x',
-            'keywords' => ['telephone', 'x', 'hangup'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-x'],
-                'solid' => ['class' => 'bi-telephone-x-fill']
-            ]
-        ],
-        [
             'name' => 'phone',
             'displayName' => 'Phone',
             'class' => 'bi-phone',
-            'keywords' => ['phone', 'mobile', 'cell'],
+            'keywords' => ['phone', 'mobile', 'smartphone', 'device', 'cell'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -248,7 +187,7 @@ return [
             'name' => 'phone-flip',
             'displayName' => 'Phone Flip',
             'class' => 'bi-phone-flip',
-            'keywords' => ['phone', 'flip', 'mobile'],
+            'keywords' => ['phone', 'flip', 'mobile', 'rotate'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -259,7 +198,7 @@ return [
             'name' => 'phone-landscape',
             'displayName' => 'Phone Landscape',
             'class' => 'bi-phone-landscape',
-            'keywords' => ['phone', 'landscape', 'mobile'],
+            'keywords' => ['phone', 'landscape', 'horizontal', 'rotate'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -271,7 +210,7 @@ return [
             'name' => 'phone-vibrate',
             'displayName' => 'Phone Vibrate',
             'class' => 'bi-phone-vibrate',
-            'keywords' => ['phone', 'vibrate', 'silent'],
+            'keywords' => ['phone', 'vibrate', 'silent', 'notification'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -279,11 +218,13 @@ return [
                 'solid' => ['class' => 'bi-phone-vibrate-fill']
             ]
         ],
+
+        // 聊天與訊息
         [
             'name' => 'chat',
             'displayName' => 'Chat',
             'class' => 'bi-chat',
-            'keywords' => ['chat', 'message', 'talk'],
+            'keywords' => ['chat', 'message', 'conversation', 'talk', 'bubble'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -295,7 +236,7 @@ return [
             'name' => 'chat-dots',
             'displayName' => 'Chat Dots',
             'class' => 'bi-chat-dots',
-            'keywords' => ['chat', 'dots', 'typing'],
+            'keywords' => ['chat', 'dots', 'typing', 'loading', 'waiting'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -307,7 +248,7 @@ return [
             'name' => 'chat-heart',
             'displayName' => 'Chat Heart',
             'class' => 'bi-chat-heart',
-            'keywords' => ['chat', 'heart', 'love'],
+            'keywords' => ['chat', 'heart', 'love', 'favorite', 'like'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -319,7 +260,7 @@ return [
             'name' => 'chat-left',
             'displayName' => 'Chat Left',
             'class' => 'bi-chat-left',
-            'keywords' => ['chat', 'left', 'bubble'],
+            'keywords' => ['chat', 'left', 'incoming', 'receive'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -328,34 +269,10 @@ return [
             ]
         ],
         [
-            'name' => 'chat-left-dots',
-            'displayName' => 'Chat Left Dots',
-            'class' => 'bi-chat-left-dots',
-            'keywords' => ['chat', 'left', 'dots'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-dots'],
-                'solid' => ['class' => 'bi-chat-left-dots-fill']
-            ]
-        ],
-        [
-            'name' => 'chat-left-text',
-            'displayName' => 'Chat Left Text',
-            'class' => 'bi-chat-left-text',
-            'keywords' => ['chat', 'left', 'text'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-text'],
-                'solid' => ['class' => 'bi-chat-left-text-fill']
-            ]
-        ],
-        [
             'name' => 'chat-right',
             'displayName' => 'Chat Right',
             'class' => 'bi-chat-right',
-            'keywords' => ['chat', 'right', 'bubble'],
+            'keywords' => ['chat', 'right', 'outgoing', 'send'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -367,7 +284,7 @@ return [
             'name' => 'chat-square',
             'displayName' => 'Chat Square',
             'class' => 'bi-chat-square',
-            'keywords' => ['chat', 'square', 'message'],
+            'keywords' => ['chat', 'square', 'message', 'conversation'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -379,7 +296,7 @@ return [
             'name' => 'chat-text',
             'displayName' => 'Chat Text',
             'class' => 'bi-chat-text',
-            'keywords' => ['chat', 'text', 'message'],
+            'keywords' => ['chat', 'text', 'message', 'content'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -387,11 +304,13 @@ return [
                 'solid' => ['class' => 'bi-chat-text-fill']
             ]
         ],
+
+        // 社交分享
         [
             'name' => 'share',
             'displayName' => 'Share',
             'class' => 'bi-share',
-            'keywords' => ['share', 'send', 'social'],
+            'keywords' => ['share', 'send', 'export', 'distribute', 'forward'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -399,11 +318,13 @@ return [
                 'solid' => ['class' => 'bi-share-fill']
             ]
         ],
+
+        // RSS 與訂閱
         [
             'name' => 'rss',
-            'displayName' => 'Rss',
+            'displayName' => 'RSS',
             'class' => 'bi-rss',
-            'keywords' => ['rss', 'feed', 'subscribe'],
+            'keywords' => ['rss', 'feed', 'subscribe', 'news', 'syndication'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -411,11 +332,13 @@ return [
                 'solid' => ['class' => 'bi-rss-fill']
             ]
         ],
+
+        // 回覆與轉發
         [
             'name' => 'reply',
             'displayName' => 'Reply',
             'class' => 'bi-reply',
-            'keywords' => ['reply', 'respond', 'answer'],
+            'keywords' => ['reply', 'respond', 'answer', 'return'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -427,7 +350,7 @@ return [
             'name' => 'reply-all',
             'displayName' => 'Reply All',
             'class' => 'bi-reply-all',
-            'keywords' => ['reply', 'all', 'respond'],
+            'keywords' => ['reply', 'all', 'respond', 'group'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -435,11 +358,13 @@ return [
                 'solid' => ['class' => 'bi-reply-all-fill']
             ]
         ],
+
+        // 評論與意見反饋
         [
             'name' => 'hand-thumbs-up',
             'displayName' => 'Hand Thumbs Up',
             'class' => 'bi-hand-thumbs-up',
-            'keywords' => ['thumbs', 'up', 'like'],
+            'keywords' => ['hand', 'thumbs', 'up', 'like', 'approve'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -451,7 +376,7 @@ return [
             'name' => 'hand-thumbs-down',
             'displayName' => 'Hand Thumbs Down',
             'class' => 'bi-hand-thumbs-down',
-            'keywords' => ['thumbs', 'down', 'dislike'],
+            'keywords' => ['hand', 'thumbs', 'down', 'dislike', 'disapprove'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -459,11 +384,13 @@ return [
                 'solid' => ['class' => 'bi-hand-thumbs-down-fill']
             ]
         ],
+
+        // 語音與視訊通話
         [
             'name' => 'mic',
             'displayName' => 'Mic',
             'class' => 'bi-mic',
-            'keywords' => ['mic', 'microphone', 'voice'],
+            'keywords' => ['mic', 'microphone', 'voice', 'record', 'audio'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -475,7 +402,7 @@ return [
             'name' => 'mic-mute',
             'displayName' => 'Mic Mute',
             'class' => 'bi-mic-mute',
-            'keywords' => ['mic', 'mute', 'silent'],
+            'keywords' => ['mic', 'mute', 'silent', 'off', 'disable'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -487,7 +414,7 @@ return [
             'name' => 'camera',
             'displayName' => 'Camera',
             'class' => 'bi-camera',
-            'keywords' => ['camera', 'photo', 'picture'],
+            'keywords' => ['camera', 'photo', 'picture', 'capture', 'image'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -499,7 +426,7 @@ return [
             'name' => 'camera-video',
             'displayName' => 'Camera Video',
             'class' => 'bi-camera-video',
-            'keywords' => ['camera', 'video', 'record'],
+            'keywords' => ['camera', 'video', 'record', 'film', 'call'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -511,7 +438,7 @@ return [
             'name' => 'camera-video-off',
             'displayName' => 'Camera Video Off',
             'class' => 'bi-camera-video-off',
-            'keywords' => ['camera', 'video', 'off'],
+            'keywords' => ['camera', 'video', 'off', 'disable', 'mute'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -519,11 +446,13 @@ return [
                 'solid' => ['class' => 'bi-camera-video-off-fill']
             ]
         ],
+
+        // 廣播與發布
         [
             'name' => 'megaphone',
             'displayName' => 'Megaphone',
             'class' => 'bi-megaphone',
-            'keywords' => ['megaphone', 'announce', 'broadcast'],
+            'keywords' => ['megaphone', 'announce', 'broadcast', 'speaker', 'loud'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -535,29 +464,20 @@ return [
             'name' => 'soundwave',
             'displayName' => 'Soundwave',
             'class' => 'bi-soundwave',
-            'keywords' => ['soundwave', 'audio', 'wave'],
+            'keywords' => ['soundwave', 'audio', 'frequency', 'wave', 'music'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
                 'outline' => ['class' => 'bi-soundwave']
             ]
         ],
-        [
-            'name' => 'at',
-            'displayName' => 'At',
-            'class' => 'bi-at',
-            'keywords' => ['at', 'email', 'mention'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-at']
-            ]
-        ],
+
+        // 網路與連結
         [
             'name' => 'link',
             'displayName' => 'Link',
             'class' => 'bi-link',
-            'keywords' => ['link', 'url', 'connection'],
+            'keywords' => ['link', 'url', 'chain', 'connect', 'hyperlink'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -568,7 +488,7 @@ return [
             'name' => 'globe',
             'displayName' => 'Globe',
             'class' => 'bi-globe',
-            'keywords' => ['globe', 'world', 'internet'],
+            'keywords' => ['globe', 'world', 'internet', 'web', 'global'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -576,10 +496,45 @@ return [
             ]
         ],
         [
+            'name' => 'globe-americas',
+            'displayName' => 'Globe Americas',
+            'class' => 'bi-globe-americas',
+            'keywords' => ['globe', 'americas', 'world', 'continent'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-globe-americas']
+            ]
+        ],
+        [
+            'name' => 'globe-asia-australia',
+            'displayName' => 'Globe Asia Australia',
+            'class' => 'bi-globe-asia-australia',
+            'keywords' => ['globe', 'asia', 'australia', 'world', 'continent'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-globe-asia-australia']
+            ]
+        ],
+        [
+            'name' => 'globe-europe-africa',
+            'displayName' => 'Globe Europe Africa',
+            'class' => 'bi-globe-europe-africa',
+            'keywords' => ['globe', 'europe', 'africa', 'world', 'continent'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-globe-europe-africa']
+            ]
+        ],
+
+        // 訊息通知
+        [
             'name' => 'bell',
             'displayName' => 'Bell',
             'class' => 'bi-bell',
-            'keywords' => ['bell', 'notification', 'alert'],
+            'keywords' => ['bell', 'notification', 'alert', 'ring', 'reminder'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -591,7 +546,7 @@ return [
             'name' => 'bell-slash',
             'displayName' => 'Bell Slash',
             'class' => 'bi-bell-slash',
-            'keywords' => ['bell', 'slash', 'mute'],
+            'keywords' => ['bell', 'slash', 'silent', 'mute', 'disable'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -599,23 +554,172 @@ return [
                 'solid' => ['class' => 'bi-bell-slash-fill']
             ]
         ],
+
+        // 網路狀態
         [
-            'name' => 'postcard',
-            'displayName' => 'Postcard',
-            'class' => 'bi-postcard',
-            'keywords' => ['postcard', 'mail', 'message'],
+            'name' => 'wifi',
+            'displayName' => 'WiFi',
+            'class' => 'bi-wifi',
+            'keywords' => ['wifi', 'wireless', 'internet', 'connection', 'network'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
-                'outline' => ['class' => 'bi-postcard'],
-                'solid' => ['class' => 'bi-postcard-fill']
+                'outline' => ['class' => 'bi-wifi']
             ]
         ],
+        [
+            'name' => 'wifi-off',
+            'displayName' => 'WiFi Off',
+            'class' => 'bi-wifi-off',
+            'keywords' => ['wifi', 'off', 'disconnect', 'no', 'signal'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-wifi-off']
+            ]
+        ],
+        [
+            'name' => 'router',
+            'displayName' => 'Router',
+            'class' => 'bi-router',
+            'keywords' => ['router', 'network', 'wifi', 'internet', 'modem'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-router'],
+                'solid' => ['class' => 'bi-router-fill']
+            ]
+        ],
+
+        // 社交媒體平台
+        [
+            'name' => 'facebook',
+            'displayName' => 'Facebook',
+            'class' => 'bi-facebook',
+            'keywords' => ['facebook', 'social', 'media', 'network', 'platform'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-facebook']
+            ]
+        ],
+        [
+            'name' => 'instagram',
+            'displayName' => 'Instagram',
+            'class' => 'bi-instagram',
+            'keywords' => ['instagram', 'social', 'media', 'photo', 'sharing'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-instagram']
+            ]
+        ],
+        [
+            'name' => 'twitter',
+            'displayName' => 'Twitter',
+            'class' => 'bi-twitter',
+            'keywords' => ['twitter', 'social', 'media', 'tweet', 'microblog'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-twitter']
+            ]
+        ],
+        [
+            'name' => 'twitter-x',
+            'displayName' => 'Twitter X',
+            'class' => 'bi-twitter-x',
+            'keywords' => ['twitter', 'x', 'social', 'media', 'new'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-twitter-x']
+            ]
+        ],
+        [
+            'name' => 'youtube',
+            'displayName' => 'YouTube',
+            'class' => 'bi-youtube',
+            'keywords' => ['youtube', 'video', 'sharing', 'streaming', 'google'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-youtube']
+            ]
+        ],
+        [
+            'name' => 'linkedin',
+            'displayName' => 'LinkedIn',
+            'class' => 'bi-linkedin',
+            'keywords' => ['linkedin', 'professional', 'network', 'business', 'career'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-linkedin']
+            ]
+        ],
+        [
+            'name' => 'github',
+            'displayName' => 'GitHub',
+            'class' => 'bi-github',
+            'keywords' => ['github', 'code', 'repository', 'git', 'development'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-github']
+            ]
+        ],
+        [
+            'name' => 'slack',
+            'displayName' => 'Slack',
+            'class' => 'bi-slack',
+            'keywords' => ['slack', 'team', 'collaboration', 'workspace', 'chat'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-slack']
+            ]
+        ],
+        [
+            'name' => 'discord',
+            'displayName' => 'Discord',
+            'class' => 'bi-discord',
+            'keywords' => ['discord', 'gaming', 'voice', 'chat', 'community'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-discord']
+            ]
+        ],
+        [
+            'name' => 'telegram',
+            'displayName' => 'Telegram',
+            'class' => 'bi-telegram',
+            'keywords' => ['telegram', 'messaging', 'chat', 'secure', 'encrypted'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-telegram']
+            ]
+        ],
+        [
+            'name' => 'whatsapp',
+            'displayName' => 'WhatsApp',
+            'class' => 'bi-whatsapp',
+            'keywords' => ['whatsapp', 'messaging', 'chat', 'mobile', 'phone'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-whatsapp']
+            ]
+        ],
+
+        // 傳送與接收
         [
             'name' => 'send',
             'displayName' => 'Send',
             'class' => 'bi-send',
-            'keywords' => ['send', 'message', 'submit'],
+            'keywords' => ['send', 'submit', 'deliver', 'transmit', 'forward'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -624,10 +728,22 @@ return [
             ]
         ],
         [
+            'name' => 'send-check',
+            'displayName' => 'Send Check',
+            'class' => 'bi-send-check',
+            'keywords' => ['send', 'check', 'delivered', 'confirmed', 'success'],
+            'type' => 'bootstrap',
+            'category' => 'communications',
+            'variants' => [
+                'outline' => ['class' => 'bi-send-check'],
+                'solid' => ['class' => 'bi-send-check-fill']
+            ]
+        ],
+        [
             'name' => 'inbox',
             'displayName' => 'Inbox',
             'class' => 'bi-inbox',
-            'keywords' => ['inbox', 'mail', 'receive'],
+            'keywords' => ['inbox', 'receive', 'incoming', 'mail', 'messages'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
@@ -639,70 +755,12 @@ return [
             'name' => 'forward',
             'displayName' => 'Forward',
             'class' => 'bi-forward',
-            'keywords' => ['forward', 'send', 'pass'],
+            'keywords' => ['forward', 'send', 'share', 'redirect', 'pass'],
             'type' => 'bootstrap',
             'category' => 'communications',
             'variants' => [
                 'outline' => ['class' => 'bi-forward'],
                 'solid' => ['class' => 'bi-forward-fill']
-            ]
-        ],
-        [
-            'name' => 'wifi',
-            'displayName' => 'Wifi',
-            'class' => 'bi-wifi',
-            'keywords' => ['wifi', 'wireless', 'internet'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi']
-            ]
-        ],
-        [
-            'name' => 'wifi-off',
-            'displayName' => 'Wifi Off',
-            'class' => 'bi-wifi-off',
-            'keywords' => ['wifi', 'off', 'disconnected'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi-off']
-            ]
-        ],
-        [
-            'name' => 'router',
-            'displayName' => 'Router',
-            'class' => 'bi-router',
-            'keywords' => ['router', 'network', 'connection'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-router'],
-                'solid' => ['class' => 'bi-router-fill']
-            ]
-        ],
-        [
-            'name' => 'modem',
-            'displayName' => 'Modem',
-            'class' => 'bi-modem',
-            'keywords' => ['modem', 'internet', 'connection'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-modem'],
-                'solid' => ['class' => 'bi-modem-fill']
-            ]
-        ],
-        [
-            'name' => 'printer',
-            'displayName' => 'Printer',
-            'class' => 'bi-printer',
-            'keywords' => ['printer', 'print', 'document'],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-printer'],
-                'solid' => ['class' => 'bi-printer-fill']
             ]
         ]
     ]
