@@ -47,4 +47,5 @@ class EmojiController extends Controller
             ], 400);
         }
     }
+    
 }

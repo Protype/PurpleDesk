@@ -13,41 +13,7 @@ class EmojiService
     {
         $this->skinToneService = $skinToneService;
     }
-    /**
-     * 確認有問題的 emoji 黑名單
-     * 基於前端 emojiFilter.js 的 PROBLEMATIC_EMOJIS (57 個)
-     */
-    private const PROBLEMATIC_EMOJIS = [
-        "🇨🇶", "🫩", "🫆", "🪾", "🫜", "🪉", "🪏", "🫟", "🚶‍♀️‍➡️", "🚶‍♂️‍➡️",
-        "🧎‍♀️‍➡️", "🧎‍♂️‍➡️", "🏃‍♀️‍➡️", "🏃‍♂️‍➡️", "🧑‍🦯‍➡️", "👨‍🦯‍➡️", "👩‍🦯‍➡️",
-        "🧑‍🦼‍➡️", "👨‍🦼‍➡️", "👩‍🦼‍➡️", "🧑‍🦽‍➡️", "👨‍🦽‍➡️", "👩‍🦽‍➡️", "🧑‍🧑‍🧒‍🧒",
-        "🙂‍↔️", "🙂‍↕️", "🚶‍➡️", "🧎‍➡️", "🏃‍➡️", "🧑‍🧑‍🧒", "🧑‍🧒‍🧒", "⛓️‍💥",
-        "🧑‍🧒", "🐦‍🔥", "🍋‍🟩", "🍄‍🟫", "🐦‍⬛", "🫨", "🩷", "🩵", "🩶", "🫷",
-        "🫸", "🫎", "🫏", "🪽", "🪿", "🪼", "🪻", "🫚", "🫛", "🪭", "🪮", "🪇",
-        "🪈", "🪯", "🛜"
-    ];
 
-    /**
-     * 檢查 emoji 是否在黑名單中
-     */
-    private function isProblematicEmoji(string $emoji): bool
-    {
-        return in_array($emoji, self::PROBLEMATIC_EMOJIS);
-    }
-
-    /**
-     * 過濾 emoji 陣列，移除有問題的 emoji
-     */
-    private function filterEmojis(array $emojis): array
-    {
-        $filtered = array_filter($emojis, function ($emoji) {
-            $emojiChar = is_array($emoji) ? ($emoji['emoji'] ?? '') : $emoji;
-            return !$this->isProblematicEmoji($emojiChar);
-        });
-        
-        // 重新索引陣列，確保 JSON 序列化為陣列而非物件
-        return array_values($filtered);
-    }
     /**
      * 取得所有 emoji 資料（新格式：data/meta 結構）
      */
@@ -86,11 +52,8 @@ class EmojiService
                 $categoryEmojis = [];
                 
                 foreach ($data as $subgroupKey => $subgroupData) {
-                    // 過濾有問題的 emoji
-                    $filteredEmojis = $this->filterEmojis($subgroupData['emojis']);
-                    
                     // 使用 EmojiSkinToneService 處理膚色變體分組
-                    $groupedEmojis = $this->skinToneService->groupVariations($filteredEmojis);
+                    $groupedEmojis = $this->skinToneService->groupVariations($subgroupData['emojis']);
                     
                     // 轉換為新格式
                     foreach ($groupedEmojis as $emoji) {
@@ -238,4 +201,5 @@ class EmojiService
             ]
         ];
     }
+    
 }
