@@ -36702,7 +36702,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'solid' => 
@@ -36727,7 +36727,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'solid' => 
@@ -36751,7 +36751,7 @@ return array (
         1 => 'heart',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -36774,7 +36774,7 @@ return array (
         0 => 'postcard',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -36795,7 +36795,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'solid' => 
@@ -36819,7 +36819,7 @@ return array (
         1 => 'heart',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -36843,7 +36843,7 @@ return array (
         1 => 'vertical',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -36862,7 +36862,7 @@ return array (
         0 => 'sliders2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'ui',
       'variants' => 
       array (
         'outline' => 
@@ -36882,7 +36882,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'solid' => 
@@ -36905,7 +36905,7 @@ return array (
         0 => 'trash3',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'general',
       'variants' => 
       array (
         'outline' => 
@@ -36924,7 +36924,7 @@ return array (
         0 => 'valentine',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -36943,7 +36943,7 @@ return array (
         0 => 'valentine2',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -36965,7 +36965,7 @@ return array (
         3 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -36990,7 +36990,7 @@ return array (
         2 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -37014,7 +37014,7 @@ return array (
         1 => 'adjustable',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -37034,7 +37034,7 @@ return array (
         1 => 'json',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -37054,7 +37054,7 @@ return array (
         1 => 'pptx',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -37074,7 +37074,7 @@ return array (
         1 => 'xlsx',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'files',
       'variants' => 
       array (
         'outline' => 
@@ -37095,7 +37095,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37119,7 +37119,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37144,7 +37144,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37168,7 +37168,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37193,7 +37193,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37217,7 +37217,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37242,7 +37242,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37266,7 +37266,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37291,7 +37291,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37315,7 +37315,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37340,7 +37340,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37364,7 +37364,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37389,7 +37389,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37413,7 +37413,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37438,7 +37438,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37462,7 +37462,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37487,7 +37487,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37511,7 +37511,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37536,7 +37536,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37560,7 +37560,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37585,7 +37585,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37609,7 +37609,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37634,7 +37634,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37658,7 +37658,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37683,7 +37683,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37707,7 +37707,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37732,7 +37732,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37756,7 +37756,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37781,7 +37781,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37805,7 +37805,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37830,7 +37830,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37854,7 +37854,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37879,7 +37879,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37903,7 +37903,7 @@ return array (
         1 => 'circle',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37928,7 +37928,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'solid' => 
@@ -37952,7 +37952,7 @@ return array (
         1 => 'square',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'alphanumeric',
       'variants' => 
       array (
         'outline' => 
@@ -37977,7 +37977,7 @@ return array (
         2 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -38001,7 +38001,7 @@ return array (
         1 => 'engines',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -38021,7 +38021,7 @@ return array (
         1 => 'fill',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'solid' => 
@@ -38044,7 +38044,7 @@ return array (
         0 => 'airplane',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'others',
       'variants' => 
       array (
         'outline' => 
@@ -38063,7 +38063,7 @@ return array (
         0 => 'alexa',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
@@ -38082,7 +38082,7 @@ return array (
         0 => 'alipay',
       ),
       'type' => 'bootstrap',
-      'category' => 'all',
+      'category' => 'communications',
       'variants' => 
       array (
         'outline' => 
