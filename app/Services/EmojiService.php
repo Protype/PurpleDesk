@@ -238,17 +238,4 @@ class EmojiService
             ]
         ];
     }
-    
-    /**
-     * 取得黑名單統計資訊
-     */
-    public function getBlacklistStats(): array
-    {
-        return [
-            'total_blacklisted' => count(self::PROBLEMATIC_EMOJIS),
-            'blacklisted_emojis' => self::PROBLEMATIC_EMOJIS,
-            'filter_version' => '1.0.0', // 基於前端 emojiFilter.js
-            'accuracy' => '100%' // 基於 383 個 emoji 測試
-        ];
-    }
 }
