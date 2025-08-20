@@ -7,47 +7,106 @@ use Illuminate\Support\Facades\Cache;
 class BootstrapIconService
 {
     /**
-     * 取得所有 Bootstrap Icons 資料
+     * 取得所有 Bootstrap Icons 資料（新格式：data/meta 結構）
      * 
      * @return array
      */
     public function getAllBootstrapIcons(): array
     {
-        return Cache::remember('bootstrap_icons_data', 86400, function () {
-            $config = config('icon.bootstrap-icons');
-            $icons = $config['icons'] ?? [];
-            $categories = $config['categories'] ?? [];
-            $variantMapping = $config['variant_mapping'] ?? [];
-            $supportedVariants = $config['supported_variants'] ?? [];
-            
-            // 為每個分類的圖標添加變體資訊
-            $iconsWithVariants = [];
-            $totalCount = 0;
-            
-            foreach ($icons as $categoryName => $categoryIcons) {
-                $iconsWithVariants[$categoryName] = array_map(function ($icon) use ($variantMapping) {
-                    return array_merge($icon, [
-                        'base' => $this->extractBaseIconName($icon['class']),
-                        'variants' => $this->buildIconVariants($icon['class'], $variantMapping),
-                        'defaultVariant' => 'outline'
-                    ]);
-                }, $categoryIcons);
-                
-                $totalCount += count($categoryIcons);
-            }
+        return Cache::remember('bootstrap_icons_data_v2', 86400, function () {
+            // 從新的分類檔案結構載入資料
+            $categoriesData = $this->loadCategoriesFromFiles();
             
             $result = [
-                'data' => $iconsWithVariants,
+                'data' => [],
                 'meta' => [
-                    'total' => $totalCount,
-                    'categories' => $categories,
-                    'supportedVariants' => $supportedVariants,
-                    'variantMapping' => $variantMapping
+                    'total' => 0,
+                    'type' => 'bootstrap',
+                    'categories' => []
                 ]
             ];
             
+            // 展開每個 icon 的變體為獨立項目
+            $expandedIcons = [];
+            
+            foreach ($categoriesData as $categoryData) {
+                $categoryId = $categoryData['category'];
+                
+                // 添加分類資訊到 meta
+                $result['meta']['categories'][$categoryId] = [
+                    'name' => $categoryData['name'],
+                    'description' => $categoryData['description']
+                ];
+                
+                // 處理該分類下的每個 icon
+                foreach ($categoryData['icons'] as $icon) {
+                    $baseName = $icon['displayName'] ?? $icon['name'];
+                    $baseClass = $icon['class'];
+                    $keywords = $icon['keywords'] ?? [];
+                    $variants = $icon['variants'] ?? [];
+                    
+                    // 為每個變體創建獨立的項目
+                    foreach ($variants as $variantType => $variantData) {
+                        $variantClass = $variantData['class'];
+                        $iconId = str_replace('bi-', '', $icon['name']) . '-' . $variantType;
+                        
+                        $expandedIcon = [
+                            'id' => $iconId,
+                            'name' => $baseName,
+                            'value' => $variantClass, // Bootstrap Icon 使用 CSS class 作為 value
+                            'type' => 'bootstrap',
+                            'keywords' => $this->generateKeywords($baseName, $keywords),
+                            'category' => $categoryId,
+                            'has_variants' => count($variants) > 1,
+                            'variant_type' => $variantType
+                        ];
+                        
+                        $expandedIcons[] = $expandedIcon;
+                    }
+                }
+            }
+            
+            // 按分類分組
+            foreach ($expandedIcons as $icon) {
+                $categoryId = $icon['category'];
+                
+                if (!isset($result['data'][$categoryId])) {
+                    $result['data'][$categoryId] = [];
+                }
+                
+                $result['data'][$categoryId][] = $icon;
+            }
+            
+            // 計算總數
+            $result['meta']['total'] = count($expandedIcons);
+            
             return $result;
         });
+    }
+
+    /**
+     * 從分類檔案載入資料
+     * 
+     * @return array
+     */
+    private function loadCategoriesFromFiles(): array
+    {
+        $categoriesData = [];
+        $categoryFiles = [
+            'general', 'ui', 'communications', 'files', 
+            'media', 'people', 'alphanumeric', 'others'
+        ];
+        
+        foreach ($categoryFiles as $categoryFile) {
+            $configKey = "icon.bootstrap-icons.{$categoryFile}";
+            $categoryData = config($configKey);
+            
+            if ($categoryData && isset($categoryData['icons'])) {
+                $categoriesData[] = $categoryData;
+            }
+        }
+        
+        return $categoriesData;
     }
     
     /**
@@ -65,9 +124,9 @@ class BootstrapIconService
         $cacheKey = 'bootstrap_icons_filtered_' . md5(implode(',', $categoryNames));
         
         return Cache::remember($cacheKey, 3600, function () use ($categoryNames) {
-            $config = config('icon.bootstrap-icons');
-            $allIcons = $config['icons'] ?? [];
-            $categories = $config['categories'] ?? [];
+            $allData = $this->getAllBootstrapIcons();
+            $allIcons = $allData['data'];
+            $categories = $allData['meta']['categories'];
             
             $filteredIcons = [];
             $filteredCategories = [];
@@ -117,8 +176,8 @@ class BootstrapIconService
         $cacheKey = 'bootstrap_icons_search_' . md5($query . implode(',', $categories));
         
         return Cache::remember($cacheKey, 1800, function () use ($query, $categories) {
-            $config = config('icon.bootstrap-icons');
-            $allIcons = $config['icons'] ?? [];
+            $allData = $this->getAllBootstrapIcons();
+            $allIcons = $allData['data'];
             
             $results = [];
             $totalCount = 0;
@@ -186,8 +245,8 @@ class BootstrapIconService
      */
     public function getCategories(): array
     {
-        $config = config('icon.bootstrap-icons');
-        return $config['categories'] ?? [];
+        $allData = $this->getAllBootstrapIcons();
+        return $allData['meta']['categories'] ?? [];
     }
     
     /**
@@ -197,8 +256,20 @@ class BootstrapIconService
      */
     public function getLoadingPriority(): array
     {
-        $config = config('icon.bootstrap-icons');
-        return $config['loading_priority'] ?? [];
+        $categories = $this->getCategories();
+        $priorityGroups = [
+            'immediate' => [],
+            'high' => [],
+            'medium' => [],
+            'low' => []
+        ];
+        
+        foreach ($categories as $categoryId => $categoryData) {
+            $priority = $categoryData['priority'] ?? 'low';
+            $priorityGroups[$priority][] = $categoryId;
+        }
+        
+        return $priorityGroups;
     }
     
     /**
@@ -222,9 +293,9 @@ class BootstrapIconService
      */
     public function getIconStats(): array
     {
-        $config = config('icon.bootstrap-icons');
-        $icons = $config['icons'] ?? [];
-        $categories = $config['categories'] ?? [];
+        $allData = $this->getAllBootstrapIcons();
+        $icons = $allData['data'];
+        $categories = $allData['meta']['categories'];
         
         $stats = [
             'total_categories' => count($categories),
@@ -246,6 +317,29 @@ class BootstrapIconService
     }
     
     /**
+     * 生成關鍵字
+     */
+    private function generateKeywords(string $name, array $originalKeywords): array
+    {
+        // 合併原有關鍵字和從名稱產生的關鍵字
+        $keywords = $originalKeywords;
+        
+        // 從名稱中提取關鍵字
+        $nameKeywords = [];
+        $cleanName = strtolower($name);
+        $words = preg_split('/[\s\-_]+/', $cleanName);
+        
+        foreach ($words as $word) {
+            $word = trim($word);
+            if (strlen($word) > 1) {
+                $nameKeywords[] = $word;
+            }
+        }
+        
+        return array_unique(array_merge($keywords, $nameKeywords));
+    }
+    
+    /**
      * 清除快取
      * 
      * @return void
@@ -254,6 +348,7 @@ class BootstrapIconService
     {
         // 清除主快取
         Cache::forget('bootstrap_icons_data');
+        Cache::forget('bootstrap_icons_data_v2');
         
         // 清除搜尋相關快取（使用標籤清除）
         $cacheKeys = [

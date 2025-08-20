@@ -102,6 +102,29 @@ class BootstrapIconController extends Controller
     }
     
     /**
+     * 取得特定分類的圖標
+     * 
+     * @param Request $request
+     * @param string $category
+     * @return JsonResponse
+     */
+    public function category(Request $request, string $category): JsonResponse
+    {
+        // 驗證分類名稱
+        $validCategories = $this->bootstrapIconService->validateCategories([$category]);
+        
+        if (empty($validCategories)) {
+            return response()->json([
+                'error' => "Invalid category: {$category}"
+            ], 400);
+        }
+        
+        return response()->json(
+            $this->bootstrapIconService->getIconsByCategories([$category])
+        );
+    }
+    
+    /**
      * 取得載入優先級設定
      * 
      * @return JsonResponse

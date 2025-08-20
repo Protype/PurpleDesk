@@ -206,7 +206,7 @@ const processedIconsData = computed(() => {
   })
 })
 
-// 樣式篩選功能
+// 樣式篩選功能 - 轉換圖標到指定樣式而不是篩選掉圖標
 const styleFilteredIcons = computed(() => {
   const style = selectedStyle.value
   
@@ -214,16 +214,49 @@ const styleFilteredIcons = computed(() => {
     return processedIconsData.value
   }
   
-  if (style === 'outline') {
-    return processedIconsData.value.filter(icon => !icon.isSolid)
-  }
-  
-  if (style === 'solid') {
-    return processedIconsData.value.filter(icon => icon.isSolid)
-  }
-  
-  return processedIconsData.value
+  // 為每個圖標選擇正確的變體，而不是篩選掉圖標
+  return processedIconsData.value.map(icon => {
+    // 如果圖標有變體資訊，根據選擇的樣式來決定使用哪個變體
+    if (icon.variants && typeof icon.variants === 'object') {
+      const selectedVariant = icon.variants[style] || icon.variants['outline'] || icon.variants[Object.keys(icon.variants)[0]]
+      
+      return {
+        ...icon,
+        // 更新當前使用的變體資訊
+        currentVariant: style,
+        actualVariant: selectedVariant ? Object.keys(icon.variants).find(v => icon.variants[v] === selectedVariant) : style,
+        isSolid: style === 'solid',
+        // 保持顯示名稱一致
+        displayName: icon.displayName || icon.name,
+        // 更新 class 或 component（取決於圖標類型）
+        class: selectedVariant?.class || icon.class,
+        component: selectedVariant?.component || icon.component
+      }
+    }
+    
+    // 對於沒有變體資訊的圖標，基於 class 或 component 名稱判斷
+    return {
+      ...icon,
+      currentVariant: style,
+      isSolid: style === 'solid',
+      // 對於 Bootstrap Icons，嘗試根據樣式調整 class
+      class: icon.type === 'bootstrap' ? adjustBootstrapIconClass(icon.class, style) : icon.class
+    }
+  })
 })
+
+// 調整 Bootstrap Icon class 名稱以匹配指定樣式
+const adjustBootstrapIconClass = (originalClass, targetStyle) => {
+  if (!originalClass) return originalClass
+  
+  const baseClass = originalClass.replace(/-fill$/, '')
+  
+  if (targetStyle === 'solid') {
+    return baseClass + '-fill'
+  } else {
+    return baseClass
+  }
+}
 
 // 搜尋過濾功能
 const {
@@ -279,7 +312,7 @@ const groupedIcons = computed(() => {
       type: 'category-header',
       fullRow: true,
       data: {
-        title: 'Hero Icons',
+        title: 'Heroicons',
         count: heroIcons.length
       }
     })
