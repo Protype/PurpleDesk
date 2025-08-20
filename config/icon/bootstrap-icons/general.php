@@ -2434,6 +2434,1458 @@ return [
             'variants' => [
                 'outline' => ['class' => 'bi-watch']
             ]
+        ],
+
+        // 日曆系列
+        [
+            'name' => 'calendar',
+            'displayName' => 'Calendar',
+            'class' => 'bi-calendar',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar'],
+                'solid' => ['class' => 'bi-calendar-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-check',
+            'displayName' => 'Calendar Check',
+            'class' => 'bi-calendar-check',
+            'keywords' => ['calendar', 'check', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-check'],
+                'solid' => ['class' => 'bi-calendar-check-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-date',
+            'displayName' => 'Calendar Date',
+            'class' => 'bi-calendar-date',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-date'],
+                'solid' => ['class' => 'bi-calendar-date-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-day',
+            'displayName' => 'Calendar Day',
+            'class' => 'bi-calendar-day',
+            'keywords' => ['calendar', 'day', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-day'],
+                'solid' => ['class' => 'bi-calendar-day-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-event',
+            'displayName' => 'Calendar Event',
+            'class' => 'bi-calendar-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-event'],
+                'solid' => ['class' => 'bi-calendar-event-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-heart',
+            'displayName' => 'Calendar Heart',
+            'class' => 'bi-calendar-heart',
+            'keywords' => ['calendar', 'heart', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-heart'],
+                'solid' => ['class' => 'bi-calendar-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-minus',
+            'displayName' => 'Calendar Minus',
+            'class' => 'bi-calendar-minus',
+            'keywords' => ['calendar', 'minus', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-minus'],
+                'solid' => ['class' => 'bi-calendar-minus-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-month',
+            'displayName' => 'Calendar Month',
+            'class' => 'bi-calendar-month',
+            'keywords' => ['calendar', 'month', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-month'],
+                'solid' => ['class' => 'bi-calendar-month-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-plus',
+            'displayName' => 'Calendar Plus',
+            'class' => 'bi-calendar-plus',
+            'keywords' => ['calendar', 'plus', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-plus'],
+                'solid' => ['class' => 'bi-calendar-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-range',
+            'displayName' => 'Calendar Range',
+            'class' => 'bi-calendar-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-range'],
+                'solid' => ['class' => 'bi-calendar-range-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-week',
+            'displayName' => 'Calendar Week',
+            'class' => 'bi-calendar-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-week'],
+                'solid' => ['class' => 'bi-calendar-week-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar-x',
+            'displayName' => 'Calendar X',
+            'class' => 'bi-calendar-x',
+            'keywords' => ['calendar', 'x', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar-x'],
+                'solid' => ['class' => 'bi-calendar-x-fill']
+            ]
+        ],
+
+        // 日曆2系列 
+        [
+            'name' => 'calendar2',
+            'displayName' => 'Calendar2',
+            'class' => 'bi-calendar2',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2'],
+                'solid' => ['class' => 'bi-calendar2-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-check',
+            'displayName' => 'Calendar2 Check',
+            'class' => 'bi-calendar2-check',
+            'keywords' => ['calendar', 'check', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-check'],
+                'solid' => ['class' => 'bi-calendar2-check-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-date',
+            'displayName' => 'Calendar2 Date',
+            'class' => 'bi-calendar2-date',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-date'],
+                'solid' => ['class' => 'bi-calendar2-date-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-day',
+            'displayName' => 'Calendar2 Day',
+            'class' => 'bi-calendar2-day',
+            'keywords' => ['calendar', 'day', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-day'],
+                'solid' => ['class' => 'bi-calendar2-day-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-event',
+            'displayName' => 'Calendar2 Event',
+            'class' => 'bi-calendar2-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-event'],
+                'solid' => ['class' => 'bi-calendar2-event-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-heart',
+            'displayName' => 'Calendar2 Heart',
+            'class' => 'bi-calendar2-heart',
+            'keywords' => ['calendar', 'heart', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-heart'],
+                'solid' => ['class' => 'bi-calendar2-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-minus',
+            'displayName' => 'Calendar2 Minus',
+            'class' => 'bi-calendar2-minus',
+            'keywords' => ['calendar', 'minus', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-minus'],
+                'solid' => ['class' => 'bi-calendar2-minus-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-month',
+            'displayName' => 'Calendar2 Month',
+            'class' => 'bi-calendar2-month',
+            'keywords' => ['calendar', 'month', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-month'],
+                'solid' => ['class' => 'bi-calendar2-month-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-plus',
+            'displayName' => 'Calendar2 Plus',
+            'class' => 'bi-calendar2-plus',
+            'keywords' => ['calendar', 'plus', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-plus'],
+                'solid' => ['class' => 'bi-calendar2-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-range',
+            'displayName' => 'Calendar2 Range',
+            'class' => 'bi-calendar2-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-range'],
+                'solid' => ['class' => 'bi-calendar2-range-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-week',
+            'displayName' => 'Calendar2 Week',
+            'class' => 'bi-calendar2-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-week'],
+                'solid' => ['class' => 'bi-calendar2-week-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-x',
+            'displayName' => 'Calendar2 X',
+            'class' => 'bi-calendar2-x',
+            'keywords' => ['calendar', 'x', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-x'],
+                'solid' => ['class' => 'bi-calendar2-x-fill']
+            ]
+        ],
+
+        // 日曆3系列
+        [
+            'name' => 'calendar3',
+            'displayName' => 'Calendar3',
+            'class' => 'bi-calendar3',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3'],
+                'solid' => ['class' => 'bi-calendar3-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-event',
+            'displayName' => 'Calendar3 Event',
+            'class' => 'bi-calendar3-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-event'],
+                'solid' => ['class' => 'bi-calendar3-event-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-range',
+            'displayName' => 'Calendar3 Range',
+            'class' => 'bi-calendar3-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-range'],
+                'solid' => ['class' => 'bi-calendar3-range-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-week',
+            'displayName' => 'Calendar3 Week',
+            'class' => 'bi-calendar3-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-week'],
+                'solid' => ['class' => 'bi-calendar3-week-fill']
+            ]
+        ],
+
+        // 日曆4系列
+        [
+            'name' => 'calendar4',
+            'displayName' => 'Calendar4',
+            'class' => 'bi-calendar4',
+            'keywords' => ['calendar', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4']
+            ]
+        ],
+        [
+            'name' => 'calendar4-event',
+            'displayName' => 'Calendar4 Event',
+            'class' => 'bi-calendar4-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-event']
+            ]
+        ],
+        [
+            'name' => 'calendar4-range',
+            'displayName' => 'Calendar4 Range',
+            'class' => 'bi-calendar4-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-range']
+            ]
+        ],
+        [
+            'name' => 'calendar4-week',
+            'displayName' => 'Calendar4 Week',
+            'class' => 'bi-calendar4-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-week']
+            ]
+        ],
+
+        // 鑰匙
+        [
+            'name' => 'key',
+            'displayName' => 'Key',
+            'class' => 'bi-key',
+            'keywords' => ['key', 'security'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-key'],
+                'solid' => ['class' => 'bi-key-fill']
+            ]
+        ],
+
+        // 燈泡與想法
+        [
+            'name' => 'lightbulb',
+            'displayName' => 'Lightbulb',
+            'class' => 'bi-lightbulb',
+            'keywords' => ['lightbulb', 'idea'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightbulb'],
+                'solid' => ['class' => 'bi-lightbulb-fill']
+            ]
+        ],
+        [
+            'name' => 'lightbulb-off',
+            'displayName' => 'Lightbulb Off',
+            'class' => 'bi-lightbulb-off',
+            'keywords' => ['lightbulb', 'off', 'idea'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightbulb-off'],
+                'solid' => ['class' => 'bi-lightbulb-off-fill']
+            ]
+        ],
+
+        // 閃電
+        [
+            'name' => 'lightning',
+            'displayName' => 'Lightning',
+            'class' => 'bi-lightning',
+            'keywords' => ['lightning', 'power'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightning'],
+                'solid' => ['class' => 'bi-lightning-fill']
+            ]
+        ],
+        [
+            'name' => 'lightning-charge',
+            'displayName' => 'Lightning Charge',
+            'class' => 'bi-lightning-charge',
+            'keywords' => ['lightning', 'charge', 'power'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightning-charge'],
+                'solid' => ['class' => 'bi-lightning-charge-fill']
+            ]
+        ],
+
+        // 放大鏡與縮放
+        [
+            'name' => 'zoom-in',
+            'displayName' => 'Zoom In',
+            'class' => 'bi-zoom-in',
+            'keywords' => ['zoom', 'in', 'magnify'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-in']
+            ]
+        ],
+        [
+            'name' => 'zoom-out',
+            'displayName' => 'Zoom Out',
+            'class' => 'bi-zoom-out',
+            'keywords' => ['zoom', 'out', 'magnify'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-out']
+            ]
+        ],
+
+        // 濾鏡與篩選
+        [
+            'name' => 'filter',
+            'displayName' => 'Filter',
+            'class' => 'bi-filter',
+            'keywords' => ['filter', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter']
+            ]
+        ],
+        [
+            'name' => 'filter-circle',
+            'displayName' => 'Filter Circle',
+            'class' => 'bi-filter-circle',
+            'keywords' => ['filter', 'circle', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-circle'],
+                'solid' => ['class' => 'bi-filter-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'filter-left',
+            'displayName' => 'Filter Left',
+            'class' => 'bi-filter-left',
+            'keywords' => ['filter', 'left', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-left']
+            ]
+        ],
+        [
+            'name' => 'filter-right',
+            'displayName' => 'Filter Right',
+            'class' => 'bi-filter-right',
+            'keywords' => ['filter', 'right', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-right']
+            ]
+        ],
+        [
+            'name' => 'filter-square',
+            'displayName' => 'Filter Square',
+            'class' => 'bi-filter-square',
+            'keywords' => ['filter', 'square', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-square'],
+                'solid' => ['class' => 'bi-filter-square-fill']
+            ]
+        ],
+        [
+            'name' => 'funnel',
+            'displayName' => 'Funnel',
+            'class' => 'bi-funnel',
+            'keywords' => ['funnel', 'filter', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-funnel'],
+                'solid' => ['class' => 'bi-funnel-fill']
+            ]
+        ],
+
+        // 排序
+        [
+            'name' => 'sort-alpha-down',
+            'displayName' => 'Sort Alpha Down',
+            'class' => 'bi-sort-alpha-down',
+            'keywords' => ['sort', 'alpha', 'down'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-alpha-down']
+            ]
+        ],
+        [
+            'name' => 'sort-alpha-down-alt',
+            'displayName' => 'Sort Alpha Down Alt',
+            'class' => 'bi-sort-alpha-down-alt',
+            'keywords' => ['sort', 'alpha', 'down', 'alt'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-alpha-down-alt']
+            ]
+        ],
+        [
+            'name' => 'sort-alpha-up',
+            'displayName' => 'Sort Alpha Up',
+            'class' => 'bi-sort-alpha-up',
+            'keywords' => ['sort', 'alpha', 'up'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-alpha-up']
+            ]
+        ],
+        [
+            'name' => 'sort-alpha-up-alt',
+            'displayName' => 'Sort Alpha Up Alt',
+            'class' => 'bi-sort-alpha-up-alt',
+            'keywords' => ['sort', 'alpha', 'up', 'alt'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-alpha-up-alt']
+            ]
+        ],
+        [
+            'name' => 'sort-down',
+            'displayName' => 'Sort Down',
+            'class' => 'bi-sort-down',
+            'keywords' => ['sort', 'down'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-down']
+            ]
+        ],
+        [
+            'name' => 'sort-down-alt',
+            'displayName' => 'Sort Down Alt',
+            'class' => 'bi-sort-down-alt',
+            'keywords' => ['sort', 'down', 'alt'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-down-alt']
+            ]
+        ],
+        [
+            'name' => 'sort-numeric-down',
+            'displayName' => 'Sort Numeric Down',
+            'class' => 'bi-sort-numeric-down',
+            'keywords' => ['sort', 'numeric', 'down'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-numeric-down']
+            ]
+        ],
+        [
+            'name' => 'sort-numeric-down-alt',
+            'displayName' => 'Sort Numeric Down Alt',
+            'class' => 'bi-sort-numeric-down-alt',
+            'keywords' => ['sort', 'numeric', 'down', 'alt'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-numeric-down-alt']
+            ]
+        ],
+        [
+            'name' => 'sort-numeric-up',
+            'displayName' => 'Sort Numeric Up',
+            'class' => 'bi-sort-numeric-up',
+            'keywords' => ['sort', 'numeric', 'up'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-numeric-up']
+            ]
+        ],
+        [
+            'name' => 'sort-numeric-up-alt',
+            'displayName' => 'Sort Numeric Up Alt',
+            'class' => 'bi-sort-numeric-up-alt',
+            'keywords' => ['sort', 'numeric', 'up', 'alt'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-numeric-up-alt']
+            ]
+        ],
+        [
+            'name' => 'sort-up',
+            'displayName' => 'Sort Up',
+            'class' => 'bi-sort-up',
+            'keywords' => ['sort', 'up'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-up']
+            ]
+        ],
+        [
+            'name' => 'sort-up-alt',
+            'displayName' => 'Sort Up Alt',
+            'class' => 'bi-sort-up-alt',
+            'keywords' => ['sort', 'up', 'ascending'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sort-up-alt']
+            ]
+        ],
+        
+        // Calendar2 系列續
+        [
+            'name' => 'calendar2-range',
+            'displayName' => 'Calendar2 Range',
+            'class' => 'bi-calendar2-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-range'],
+                'solid' => ['class' => 'bi-calendar2-range-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-week',
+            'displayName' => 'Calendar2 Week',
+            'class' => 'bi-calendar2-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-week'],
+                'solid' => ['class' => 'bi-calendar2-week-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar2-x',
+            'displayName' => 'Calendar2 X',
+            'class' => 'bi-calendar2-x',
+            'keywords' => ['calendar', 'x', 'cancel'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar2-x'],
+                'solid' => ['class' => 'bi-calendar2-x-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3',
+            'displayName' => 'Calendar3',
+            'class' => 'bi-calendar3',
+            'keywords' => ['calendar', 'date', 'schedule'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3'],
+                'solid' => ['class' => 'bi-calendar3-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-event',
+            'displayName' => 'Calendar3 Event',
+            'class' => 'bi-calendar3-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-event'],
+                'solid' => ['class' => 'bi-calendar3-event-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-range',
+            'displayName' => 'Calendar3 Range',
+            'class' => 'bi-calendar3-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-range'],
+                'solid' => ['class' => 'bi-calendar3-range-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar3-week',
+            'displayName' => 'Calendar3 Week',
+            'class' => 'bi-calendar3-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar3-week'],
+                'solid' => ['class' => 'bi-calendar3-week-fill']
+            ]
+        ],
+        [
+            'name' => 'calendar4',
+            'displayName' => 'Calendar4',
+            'class' => 'bi-calendar4',
+            'keywords' => ['calendar', 'date', 'schedule'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4']
+            ]
+        ],
+        [
+            'name' => 'calendar4-event',
+            'displayName' => 'Calendar4 Event',
+            'class' => 'bi-calendar4-event',
+            'keywords' => ['calendar', 'event', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-event']
+            ]
+        ],
+        [
+            'name' => 'calendar4-range',
+            'displayName' => 'Calendar4 Range',
+            'class' => 'bi-calendar4-range',
+            'keywords' => ['calendar', 'range', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-range']
+            ]
+        ],
+        [
+            'name' => 'calendar4-week',
+            'displayName' => 'Calendar4 Week',
+            'class' => 'bi-calendar4-week',
+            'keywords' => ['calendar', 'week', 'date'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-calendar4-week']
+            ]
+        ],
+        
+        // 鑰匙
+        [
+            'name' => 'key',
+            'displayName' => 'Key',
+            'class' => 'bi-key',
+            'keywords' => ['key', 'security', 'access'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-key'],
+                'solid' => ['class' => 'bi-key-fill']
+            ]
+        ],
+        
+        // 燈泡與想法
+        [
+            'name' => 'lightbulb',
+            'displayName' => 'Lightbulb',
+            'class' => 'bi-lightbulb',
+            'keywords' => ['lightbulb', 'idea', 'innovation'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightbulb'],
+                'solid' => ['class' => 'bi-lightbulb-fill']
+            ]
+        ],
+        [
+            'name' => 'lightbulb-off',
+            'displayName' => 'Lightbulb Off',
+            'class' => 'bi-lightbulb-off',
+            'keywords' => ['lightbulb', 'off', 'disabled'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightbulb-off'],
+                'solid' => ['class' => 'bi-lightbulb-off-fill']
+            ]
+        ],
+        
+        // 閃電
+        [
+            'name' => 'lightning',
+            'displayName' => 'Lightning',
+            'class' => 'bi-lightning',
+            'keywords' => ['lightning', 'power', 'energy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightning'],
+                'solid' => ['class' => 'bi-lightning-fill']
+            ]
+        ],
+        [
+            'name' => 'lightning-charge',
+            'displayName' => 'Lightning Charge',
+            'class' => 'bi-lightning-charge',
+            'keywords' => ['lightning', 'charge', 'battery'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-lightning-charge'],
+                'solid' => ['class' => 'bi-lightning-charge-fill']
+            ]
+        ],
+        
+        // 放大鏡與縮放
+        [
+            'name' => 'zoom-in',
+            'displayName' => 'Zoom In',
+            'class' => 'bi-zoom-in',
+            'keywords' => ['zoom', 'in', 'magnify'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-in']
+            ]
+        ],
+        [
+            'name' => 'zoom-out',
+            'displayName' => 'Zoom Out',
+            'class' => 'bi-zoom-out',
+            'keywords' => ['zoom', 'out', 'minimize'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-zoom-out']
+            ]
+        ],
+        
+        // 濾鏡與篩選
+        [
+            'name' => 'filter',
+            'displayName' => 'Filter',
+            'class' => 'bi-filter',
+            'keywords' => ['filter', 'funnel', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter']
+            ]
+        ],
+        [
+            'name' => 'filter-circle',
+            'displayName' => 'Filter Circle',
+            'class' => 'bi-filter-circle',
+            'keywords' => ['filter', 'circle', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-circle'],
+                'solid' => ['class' => 'bi-filter-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'filter-left',
+            'displayName' => 'Filter Left',
+            'class' => 'bi-filter-left',
+            'keywords' => ['filter', 'left', 'direction'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-left']
+            ]
+        ],
+        [
+            'name' => 'filter-right',
+            'displayName' => 'Filter Right',
+            'class' => 'bi-filter-right',
+            'keywords' => ['filter', 'right', 'direction'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-right']
+            ]
+        ],
+        [
+            'name' => 'filter-square',
+            'displayName' => 'Filter Square',
+            'class' => 'bi-filter-square',
+            'keywords' => ['filter', 'square', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-filter-square'],
+                'solid' => ['class' => 'bi-filter-square-fill']
+            ]
+        ],
+        [
+            'name' => 'funnel',
+            'displayName' => 'Funnel',
+            'class' => 'bi-funnel',
+            'keywords' => ['funnel', 'filter', 'sort'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-funnel'],
+                'solid' => ['class' => 'bi-funnel-fill']
+            ]
+        ],
+        
+        // 箭頭更多變化
+        [
+            'name' => 'arrow-90deg-down',
+            'displayName' => 'Arrow 90deg Down',
+            'class' => 'bi-arrow-90deg-down',
+            'keywords' => ['arrow', '90deg', 'down', 'turn'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-90deg-down']
+            ]
+        ],
+        [
+            'name' => 'arrow-90deg-left',
+            'displayName' => 'Arrow 90deg Left',
+            'class' => 'bi-arrow-90deg-left',
+            'keywords' => ['arrow', '90deg', 'left', 'turn'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-90deg-left']
+            ]
+        ],
+        [
+            'name' => 'arrow-90deg-right',
+            'displayName' => 'Arrow 90deg Right',
+            'class' => 'bi-arrow-90deg-right',
+            'keywords' => ['arrow', '90deg', 'right', 'turn'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-90deg-right']
+            ]
+        ],
+        [
+            'name' => 'arrow-90deg-up',
+            'displayName' => 'Arrow 90deg Up',
+            'class' => 'bi-arrow-90deg-up',
+            'keywords' => ['arrow', '90deg', 'up', 'turn'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-90deg-up']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-left',
+            'displayName' => 'Arrow Down Left',
+            'class' => 'bi-arrow-down-left',
+            'keywords' => ['arrow', 'down', 'left', 'diagonal'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-left']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-left-circle',
+            'displayName' => 'Arrow Down Left Circle',
+            'class' => 'bi-arrow-down-left-circle',
+            'keywords' => ['arrow', 'down', 'left', 'circle'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-left-circle'],
+                'solid' => ['class' => 'bi-arrow-down-left-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-left-square',
+            'displayName' => 'Arrow Down Left Square',
+            'class' => 'bi-arrow-down-left-square',
+            'keywords' => ['arrow', 'down', 'left', 'square'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-left-square'],
+                'solid' => ['class' => 'bi-arrow-down-left-square-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-right',
+            'displayName' => 'Arrow Down Right',
+            'class' => 'bi-arrow-down-right',
+            'keywords' => ['arrow', 'down', 'right', 'diagonal'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-right']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-right-circle',
+            'displayName' => 'Arrow Down Right Circle',
+            'class' => 'bi-arrow-down-right-circle',
+            'keywords' => ['arrow', 'down', 'right', 'circle'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-right-circle'],
+                'solid' => ['class' => 'bi-arrow-down-right-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-down-right-square',
+            'displayName' => 'Arrow Down Right Square',
+            'class' => 'bi-arrow-down-right-square',
+            'keywords' => ['arrow', 'down', 'right', 'square'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-down-right-square'],
+                'solid' => ['class' => 'bi-arrow-down-right-square-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-left-right',
+            'displayName' => 'Arrow Left Right',
+            'class' => 'bi-arrow-left-right',
+            'keywords' => ['arrow', 'left', 'right', 'horizontal'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-left-right']
+            ]
+        ],
+        [
+            'name' => 'arrow-through-heart',
+            'displayName' => 'Arrow Through Heart',
+            'class' => 'bi-arrow-through-heart',
+            'keywords' => ['arrow', 'through', 'heart', 'love'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-through-heart'],
+                'solid' => ['class' => 'bi-arrow-through-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-left',
+            'displayName' => 'Arrow Up Left',
+            'class' => 'bi-arrow-up-left',
+            'keywords' => ['arrow', 'up', 'left', 'diagonal'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-left']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-left-circle',
+            'displayName' => 'Arrow Up Left Circle',
+            'class' => 'bi-arrow-up-left-circle',
+            'keywords' => ['arrow', 'up', 'left', 'circle'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-left-circle'],
+                'solid' => ['class' => 'bi-arrow-up-left-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-left-square',
+            'displayName' => 'Arrow Up Left Square',
+            'class' => 'bi-arrow-up-left-square',
+            'keywords' => ['arrow', 'up', 'left', 'square'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-left-square'],
+                'solid' => ['class' => 'bi-arrow-up-left-square-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-right',
+            'displayName' => 'Arrow Up Right',
+            'class' => 'bi-arrow-up-right',
+            'keywords' => ['arrow', 'up', 'right', 'diagonal'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-right']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-right-circle',
+            'displayName' => 'Arrow Up Right Circle',
+            'class' => 'bi-arrow-up-right-circle',
+            'keywords' => ['arrow', 'up', 'right', 'circle'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-right-circle'],
+                'solid' => ['class' => 'bi-arrow-up-right-circle-fill']
+            ]
+        ],
+        [
+            'name' => 'arrow-up-right-square',
+            'displayName' => 'Arrow Up Right Square',
+            'class' => 'bi-arrow-up-right-square',
+            'keywords' => ['arrow', 'up', 'right', 'square'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrow-up-right-square'],
+                'solid' => ['class' => 'bi-arrow-up-right-square-fill']
+            ]
+        ],
+        [
+            'name' => 'arrows',
+            'displayName' => 'Arrows',
+            'class' => 'bi-arrows',
+            'keywords' => ['arrows', 'multiple', 'direction'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrows']
+            ]
+        ],
+        [
+            'name' => 'arrows-collapse-vertical',
+            'displayName' => 'Arrows Collapse Vertical',
+            'class' => 'bi-arrows-collapse-vertical',
+            'keywords' => ['arrows', 'collapse', 'vertical'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrows-collapse-vertical']
+            ]
+        ],
+        [
+            'name' => 'arrows-expand-vertical',
+            'displayName' => 'Arrows Expand Vertical',
+            'class' => 'bi-arrows-expand-vertical',
+            'keywords' => ['arrows', 'expand', 'vertical'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrows-expand-vertical']
+            ]
+        ],
+        [
+            'name' => 'arrows-vertical',
+            'displayName' => 'Arrows Vertical',
+            'class' => 'bi-arrows-vertical',
+            'keywords' => ['arrows', 'vertical', 'direction'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-arrows-vertical']
+            ]
+        ],
+        
+        // 購物車與商店
+        [
+            'name' => 'cart',
+            'displayName' => 'Cart',
+            'class' => 'bi-cart',
+            'keywords' => ['cart', 'shopping', 'ecommerce'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart'],
+                'solid' => ['class' => 'bi-cart-fill']
+            ]
+        ],
+        [
+            'name' => 'cart-check',
+            'displayName' => 'Cart Check',
+            'class' => 'bi-cart-check',
+            'keywords' => ['cart', 'check', 'shopping'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart-check'],
+                'solid' => ['class' => 'bi-cart-check-fill']
+            ]
+        ],
+        [
+            'name' => 'cart-dash',
+            'displayName' => 'Cart Dash',
+            'class' => 'bi-cart-dash',
+            'keywords' => ['cart', 'dash', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart-dash'],
+                'solid' => ['class' => 'bi-cart-dash-fill']
+            ]
+        ],
+        [
+            'name' => 'cart-plus',
+            'displayName' => 'Cart Plus',
+            'class' => 'bi-cart-plus',
+            'keywords' => ['cart', 'plus', 'add'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart-plus'],
+                'solid' => ['class' => 'bi-cart-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'cart-x',
+            'displayName' => 'Cart X',
+            'class' => 'bi-cart-x',
+            'keywords' => ['cart', 'x', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart-x'],
+                'solid' => ['class' => 'bi-cart-x-fill']
+            ]
+        ],
+        [
+            'name' => 'cart2',
+            'displayName' => 'Cart2',
+            'class' => 'bi-cart2',
+            'keywords' => ['cart', 'shopping', 'ecommerce'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart2']
+            ]
+        ],
+        [
+            'name' => 'cart3',
+            'displayName' => 'Cart3',
+            'class' => 'bi-cart3',
+            'keywords' => ['cart', 'shopping', 'ecommerce'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart3']
+            ]
+        ],
+        [
+            'name' => 'cart4',
+            'displayName' => 'Cart4',
+            'class' => 'bi-cart4',
+            'keywords' => ['cart', 'shopping', 'ecommerce'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cart4']
+            ]
+        ],
+        [
+            'name' => 'shop',
+            'displayName' => 'Shop',
+            'class' => 'bi-shop',
+            'keywords' => ['shop', 'store', 'business'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-shop']
+            ]
+        ],
+        [
+            'name' => 'shop-window',
+            'displayName' => 'Shop Window',
+            'class' => 'bi-shop-window',
+            'keywords' => ['shop', 'window', 'store'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-shop-window']
+            ]
+        ],
+        [
+            'name' => 'bag',
+            'displayName' => 'Bag',
+            'class' => 'bi-bag',
+            'keywords' => ['bag', 'shopping', 'carrier'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag'],
+                'solid' => ['class' => 'bi-bag-fill']
+            ]
+        ],
+        [
+            'name' => 'bag-check',
+            'displayName' => 'Bag Check',
+            'class' => 'bi-bag-check',
+            'keywords' => ['bag', 'check', 'shopping'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag-check'],
+                'solid' => ['class' => 'bi-bag-check-fill']
+            ]
+        ],
+        [
+            'name' => 'bag-dash',
+            'displayName' => 'Bag Dash',
+            'class' => 'bi-bag-dash',
+            'keywords' => ['bag', 'dash', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag-dash'],
+                'solid' => ['class' => 'bi-bag-dash-fill']
+            ]
+        ],
+        [
+            'name' => 'bag-heart',
+            'displayName' => 'Bag Heart',
+            'class' => 'bi-bag-heart',
+            'keywords' => ['bag', 'heart', 'wishlist'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag-heart'],
+                'solid' => ['class' => 'bi-bag-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'bag-plus',
+            'displayName' => 'Bag Plus',
+            'class' => 'bi-bag-plus',
+            'keywords' => ['bag', 'plus', 'add'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag-plus'],
+                'solid' => ['class' => 'bi-bag-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'bag-x',
+            'displayName' => 'Bag X',
+            'class' => 'bi-bag-x',
+            'keywords' => ['bag', 'x', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bag-x'],
+                'solid' => ['class' => 'bi-bag-x-fill']
+            ]
+        ],
+        [
+            'name' => 'basket',
+            'displayName' => 'Basket',
+            'class' => 'bi-basket',
+            'keywords' => ['basket', 'shopping', 'container'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-basket'],
+                'solid' => ['class' => 'bi-basket-fill']
+            ]
+        ],
+        [
+            'name' => 'basket2',
+            'displayName' => 'Basket2',
+            'class' => 'bi-basket2',
+            'keywords' => ['basket', 'shopping', 'container'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-basket2'],
+                'solid' => ['class' => 'bi-basket2-fill']
+            ]
+        ],
+        [
+            'name' => 'basket3',
+            'displayName' => 'Basket3',
+            'class' => 'bi-basket3',
+            'keywords' => ['basket', 'shopping', 'container'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-basket3'],
+                'solid' => ['class' => 'bi-basket3-fill']
+            ]
         ]
     ]
 ];
