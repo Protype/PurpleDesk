@@ -1375,6 +1375,1065 @@ return [
                 'outline' => ['class' => 'bi-shield-x'],
                 'solid' => ['class' => 'bi-shield-fill-x']
             ]
+        ],
+
+        // 眼睛與顯示
+        [
+            'name' => 'eye',
+            'displayName' => 'Eye',
+            'class' => 'bi-eye',
+            'keywords' => ['eye', 'view', 'show'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-eye'],
+                'solid' => ['class' => 'bi-eye-fill']
+            ]
+        ],
+        [
+            'name' => 'eye-slash',
+            'displayName' => 'Eye Slash',
+            'class' => 'bi-eye-slash',
+            'keywords' => ['eye', 'slash', 'hide'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-eye-slash'],
+                'solid' => ['class' => 'bi-eye-slash-fill']
+            ]
+        ],
+        [
+            'name' => 'eyeglasses',
+            'displayName' => 'Eyeglasses',
+            'class' => 'bi-eyeglasses',
+            'keywords' => ['eyeglasses', 'glasses'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-eyeglasses']
+            ]
+        ],
+
+        // 書籤與標籤
+        [
+            'name' => 'bookmark',
+            'displayName' => 'Bookmark',
+            'class' => 'bi-bookmark',
+            'keywords' => ['bookmark', 'save'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark'],
+                'solid' => ['class' => 'bi-bookmark-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-check',
+            'displayName' => 'Bookmark Check',
+            'class' => 'bi-bookmark-check',
+            'keywords' => ['bookmark', 'check', 'save'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-check'],
+                'solid' => ['class' => 'bi-bookmark-check-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-dash',
+            'displayName' => 'Bookmark Dash',
+            'class' => 'bi-bookmark-dash',
+            'keywords' => ['bookmark', 'dash', 'save'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-dash'],
+                'solid' => ['class' => 'bi-bookmark-dash-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-heart',
+            'displayName' => 'Bookmark Heart',
+            'class' => 'bi-bookmark-heart',
+            'keywords' => ['bookmark', 'heart', 'save', 'favorite'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-heart'],
+                'solid' => ['class' => 'bi-bookmark-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-plus',
+            'displayName' => 'Bookmark Plus',
+            'class' => 'bi-bookmark-plus',
+            'keywords' => ['bookmark', 'plus', 'save', 'add'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-plus'],
+                'solid' => ['class' => 'bi-bookmark-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-star',
+            'displayName' => 'Bookmark Star',
+            'class' => 'bi-bookmark-star',
+            'keywords' => ['bookmark', 'star', 'save', 'favorite'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-star'],
+                'solid' => ['class' => 'bi-bookmark-star-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmark-x',
+            'displayName' => 'Bookmark X',
+            'class' => 'bi-bookmark-x',
+            'keywords' => ['bookmark', 'x', 'remove', 'delete'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmark-x'],
+                'solid' => ['class' => 'bi-bookmark-x-fill']
+            ]
+        ],
+        [
+            'name' => 'bookmarks',
+            'displayName' => 'Bookmarks',
+            'class' => 'bi-bookmarks',
+            'keywords' => ['bookmarks', 'save', 'multiple'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-bookmarks'],
+                'solid' => ['class' => 'bi-bookmarks-fill']
+            ]
+        ],
+
+        // 旗標與標籤
+        [
+            'name' => 'flag',
+            'displayName' => 'Flag',
+            'class' => 'bi-flag',
+            'keywords' => ['flag', 'mark'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-flag'],
+                'solid' => ['class' => 'bi-flag-fill']
+            ]
+        ],
+        [
+            'name' => 'tag',
+            'displayName' => 'Tag',
+            'class' => 'bi-tag',
+            'keywords' => ['tag', 'label'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-tag'],
+                'solid' => ['class' => 'bi-tag-fill']
+            ]
+        ],
+        [
+            'name' => 'tags',
+            'displayName' => 'Tags',
+            'class' => 'bi-tags',
+            'keywords' => ['tags', 'labels', 'multiple'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-tags'],
+                'solid' => ['class' => 'bi-tags-fill']
+            ]
+        ],
+
+        // 分享與連結
+        [
+            'name' => 'share',
+            'displayName' => 'Share',
+            'class' => 'bi-share',
+            'keywords' => ['share', 'export'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-share'],
+                'solid' => ['class' => 'bi-share-fill']
+            ]
+        ],
+        [
+            'name' => 'link',
+            'displayName' => 'Link',
+            'class' => 'bi-link',
+            'keywords' => ['link', 'url', 'connection'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-link']
+            ]
+        ],
+        [
+            'name' => 'link-45deg',
+            'displayName' => 'Link 45deg',
+            'class' => 'bi-link-45deg',
+            'keywords' => ['link', 'url', 'connection', '45deg'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-link-45deg']
+            ]
+        ],
+
+        // 下載與上傳
+        [
+            'name' => 'download',
+            'displayName' => 'Download',
+            'class' => 'bi-download',
+            'keywords' => ['download', 'save', 'get'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-download']
+            ]
+        ],
+        [
+            'name' => 'upload',
+            'displayName' => 'Upload',
+            'class' => 'bi-upload',
+            'keywords' => ['upload', 'send', 'put'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-upload']
+            ]
+        ],
+
+        // 雲端與同步
+        [
+            'name' => 'cloud',
+            'displayName' => 'Cloud',
+            'class' => 'bi-cloud',
+            'keywords' => ['cloud', 'storage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud'],
+                'solid' => ['class' => 'bi-cloud-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-download',
+            'displayName' => 'Cloud Download',
+            'class' => 'bi-cloud-download',
+            'keywords' => ['cloud', 'download', 'storage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-download'],
+                'solid' => ['class' => 'bi-cloud-download-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-upload',
+            'displayName' => 'Cloud Upload',
+            'class' => 'bi-cloud-upload',
+            'keywords' => ['cloud', 'upload', 'storage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-upload'],
+                'solid' => ['class' => 'bi-cloud-upload-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-arrow-down',
+            'displayName' => 'Cloud Arrow Down',
+            'class' => 'bi-cloud-arrow-down',
+            'keywords' => ['cloud', 'arrow', 'down', 'storage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-arrow-down'],
+                'solid' => ['class' => 'bi-cloud-arrow-down-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-arrow-up',
+            'displayName' => 'Cloud Arrow Up',
+            'class' => 'bi-cloud-arrow-up',
+            'keywords' => ['cloud', 'arrow', 'up', 'storage'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-arrow-up'],
+                'solid' => ['class' => 'bi-cloud-arrow-up-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-check',
+            'displayName' => 'Cloud Check',
+            'class' => 'bi-cloud-check',
+            'keywords' => ['cloud', 'check', 'storage', 'verified'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-check'],
+                'solid' => ['class' => 'bi-cloud-check-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-drizzle',
+            'displayName' => 'Cloud Drizzle',
+            'class' => 'bi-cloud-drizzle',
+            'keywords' => ['cloud', 'drizzle', 'weather', 'rain'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-drizzle'],
+                'solid' => ['class' => 'bi-cloud-drizzle-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-fog',
+            'displayName' => 'Cloud Fog',
+            'class' => 'bi-cloud-fog',
+            'keywords' => ['cloud', 'fog', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-fog'],
+                'solid' => ['class' => 'bi-cloud-fog-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-fog2',
+            'displayName' => 'Cloud Fog2',
+            'class' => 'bi-cloud-fog2',
+            'keywords' => ['cloud', 'fog', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-fog2'],
+                'solid' => ['class' => 'bi-cloud-fog2-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-hail',
+            'displayName' => 'Cloud Hail',
+            'class' => 'bi-cloud-hail',
+            'keywords' => ['cloud', 'hail', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-hail'],
+                'solid' => ['class' => 'bi-cloud-hail-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-haze',
+            'displayName' => 'Cloud Haze',
+            'class' => 'bi-cloud-haze',
+            'keywords' => ['cloud', 'haze', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-haze'],
+                'solid' => ['class' => 'bi-cloud-haze-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-haze2',
+            'displayName' => 'Cloud Haze2',
+            'class' => 'bi-cloud-haze2',
+            'keywords' => ['cloud', 'haze', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-haze2'],
+                'solid' => ['class' => 'bi-cloud-haze2-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-lightning',
+            'displayName' => 'Cloud Lightning',
+            'class' => 'bi-cloud-lightning',
+            'keywords' => ['cloud', 'lightning', 'weather', 'storm'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-lightning'],
+                'solid' => ['class' => 'bi-cloud-lightning-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-lightning-rain',
+            'displayName' => 'Cloud Lightning Rain',
+            'class' => 'bi-cloud-lightning-rain',
+            'keywords' => ['cloud', 'lightning', 'rain', 'weather', 'storm'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-lightning-rain'],
+                'solid' => ['class' => 'bi-cloud-lightning-rain-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-minus',
+            'displayName' => 'Cloud Minus',
+            'class' => 'bi-cloud-minus',
+            'keywords' => ['cloud', 'minus', 'storage', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-minus'],
+                'solid' => ['class' => 'bi-cloud-minus-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-moon',
+            'displayName' => 'Cloud Moon',
+            'class' => 'bi-cloud-moon',
+            'keywords' => ['cloud', 'moon', 'weather', 'night'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-moon'],
+                'solid' => ['class' => 'bi-cloud-moon-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-plus',
+            'displayName' => 'Cloud Plus',
+            'class' => 'bi-cloud-plus',
+            'keywords' => ['cloud', 'plus', 'storage', 'add'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-plus'],
+                'solid' => ['class' => 'bi-cloud-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-rain',
+            'displayName' => 'Cloud Rain',
+            'class' => 'bi-cloud-rain',
+            'keywords' => ['cloud', 'rain', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-rain'],
+                'solid' => ['class' => 'bi-cloud-rain-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-rain-heavy',
+            'displayName' => 'Cloud Rain Heavy',
+            'class' => 'bi-cloud-rain-heavy',
+            'keywords' => ['cloud', 'rain', 'heavy', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-rain-heavy'],
+                'solid' => ['class' => 'bi-cloud-rain-heavy-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-slash',
+            'displayName' => 'Cloud Slash',
+            'class' => 'bi-cloud-slash',
+            'keywords' => ['cloud', 'slash', 'storage', 'offline'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-slash'],
+                'solid' => ['class' => 'bi-cloud-slash-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-snow',
+            'displayName' => 'Cloud Snow',
+            'class' => 'bi-cloud-snow',
+            'keywords' => ['cloud', 'snow', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-snow'],
+                'solid' => ['class' => 'bi-cloud-snow-fill']
+            ]
+        ],
+        [
+            'name' => 'cloud-sun',
+            'displayName' => 'Cloud Sun',
+            'class' => 'bi-cloud-sun',
+            'keywords' => ['cloud', 'sun', 'weather', 'partly'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloud-sun'],
+                'solid' => ['class' => 'bi-cloud-sun-fill']
+            ]
+        ],
+        [
+            'name' => 'clouds',
+            'displayName' => 'Clouds',
+            'class' => 'bi-clouds',
+            'keywords' => ['clouds', 'weather', 'multiple'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clouds'],
+                'solid' => ['class' => 'bi-clouds-fill']
+            ]
+        ],
+        [
+            'name' => 'cloudy',
+            'displayName' => 'Cloudy',
+            'class' => 'bi-cloudy',
+            'keywords' => ['cloudy', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-cloudy'],
+                'solid' => ['class' => 'bi-cloudy-fill']
+            ]
+        ],
+
+        // 太陽與月亮
+        [
+            'name' => 'sun',
+            'displayName' => 'Sun',
+            'class' => 'bi-sun',
+            'keywords' => ['sun', 'weather', 'bright'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sun'],
+                'solid' => ['class' => 'bi-sun-fill']
+            ]
+        ],
+        [
+            'name' => 'sunrise',
+            'displayName' => 'Sunrise',
+            'class' => 'bi-sunrise',
+            'keywords' => ['sunrise', 'weather', 'morning'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sunrise'],
+                'solid' => ['class' => 'bi-sunrise-fill']
+            ]
+        ],
+        [
+            'name' => 'sunset',
+            'displayName' => 'Sunset',
+            'class' => 'bi-sunset',
+            'keywords' => ['sunset', 'weather', 'evening'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-sunset'],
+                'solid' => ['class' => 'bi-sunset-fill']
+            ]
+        ],
+        [
+            'name' => 'moon',
+            'displayName' => 'Moon',
+            'class' => 'bi-moon',
+            'keywords' => ['moon', 'weather', 'night'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-moon'],
+                'solid' => ['class' => 'bi-moon-fill']
+            ]
+        ],
+        [
+            'name' => 'moon-stars',
+            'displayName' => 'Moon Stars',
+            'class' => 'bi-moon-stars',
+            'keywords' => ['moon', 'stars', 'night', 'weather'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-moon-stars'],
+                'solid' => ['class' => 'bi-moon-stars-fill']
+            ]
+        ],
+        [
+            'name' => 'brightness-alt-high',
+            'displayName' => 'Brightness Alt High',
+            'class' => 'bi-brightness-alt-high',
+            'keywords' => ['brightness', 'high', 'display'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-brightness-alt-high'],
+                'solid' => ['class' => 'bi-brightness-alt-high-fill']
+            ]
+        ],
+        [
+            'name' => 'brightness-alt-low',
+            'displayName' => 'Brightness Alt Low',
+            'class' => 'bi-brightness-alt-low',
+            'keywords' => ['brightness', 'low', 'display'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-brightness-alt-low'],
+                'solid' => ['class' => 'bi-brightness-alt-low-fill']
+            ]
+        ],
+        [
+            'name' => 'brightness-high',
+            'displayName' => 'Brightness High',
+            'class' => 'bi-brightness-high',
+            'keywords' => ['brightness', 'high', 'display'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-brightness-high'],
+                'solid' => ['class' => 'bi-brightness-high-fill']
+            ]
+        ],
+        [
+            'name' => 'brightness-low',
+            'displayName' => 'Brightness Low',
+            'class' => 'bi-brightness-low',
+            'keywords' => ['brightness', 'low', 'display'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-brightness-low'],
+                'solid' => ['class' => 'bi-brightness-low-fill']
+            ]
+        ],
+
+        // 垃圾桶與刪除
+        [
+            'name' => 'trash',
+            'displayName' => 'Trash',
+            'class' => 'bi-trash',
+            'keywords' => ['trash', 'delete', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-trash'],
+                'solid' => ['class' => 'bi-trash-fill']
+            ]
+        ],
+        [
+            'name' => 'trash2',
+            'displayName' => 'Trash2',
+            'class' => 'bi-trash2',
+            'keywords' => ['trash', 'delete', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-trash2'],
+                'solid' => ['class' => 'bi-trash2-fill']
+            ]
+        ],
+        [
+            'name' => 'trash3',
+            'displayName' => 'Trash3',
+            'class' => 'bi-trash3',
+            'keywords' => ['trash', 'delete', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-trash3'],
+                'solid' => ['class' => 'bi-trash3-fill']
+            ]
+        ],
+
+        // 編輯與鉛筆
+        [
+            'name' => 'pencil',
+            'displayName' => 'Pencil',
+            'class' => 'bi-pencil',
+            'keywords' => ['pencil', 'edit', 'write'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-pencil'],
+                'solid' => ['class' => 'bi-pencil-fill']
+            ]
+        ],
+        [
+            'name' => 'pencil-square',
+            'displayName' => 'Pencil Square',
+            'class' => 'bi-pencil-square',
+            'keywords' => ['pencil', 'square', 'edit'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-pencil-square']
+            ]
+        ],
+        [
+            'name' => 'pen',
+            'displayName' => 'Pen',
+            'class' => 'bi-pen',
+            'keywords' => ['pen', 'write'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-pen'],
+                'solid' => ['class' => 'bi-pen-fill']
+            ]
+        ],
+        [
+            'name' => 'brush',
+            'displayName' => 'Brush',
+            'class' => 'bi-brush',
+            'keywords' => ['brush', 'paint'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-brush'],
+                'solid' => ['class' => 'bi-brush-fill']
+            ]
+        ],
+        [
+            'name' => 'eraser',
+            'displayName' => 'Eraser',
+            'class' => 'bi-eraser',
+            'keywords' => ['eraser', 'delete', 'remove'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-eraser'],
+                'solid' => ['class' => 'bi-eraser-fill']
+            ]
+        ],
+
+        // 剪貼簿
+        [
+            'name' => 'clipboard',
+            'displayName' => 'Clipboard',
+            'class' => 'bi-clipboard',
+            'keywords' => ['clipboard', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard'],
+                'solid' => ['class' => 'bi-clipboard-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-check',
+            'displayName' => 'Clipboard Check',
+            'class' => 'bi-clipboard-check',
+            'keywords' => ['clipboard', 'check', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-check'],
+                'solid' => ['class' => 'bi-clipboard-check-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-data',
+            'displayName' => 'Clipboard Data',
+            'class' => 'bi-clipboard-data',
+            'keywords' => ['clipboard', 'data', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-data'],
+                'solid' => ['class' => 'bi-clipboard-data-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-heart',
+            'displayName' => 'Clipboard Heart',
+            'class' => 'bi-clipboard-heart',
+            'keywords' => ['clipboard', 'heart', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-heart'],
+                'solid' => ['class' => 'bi-clipboard-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-minus',
+            'displayName' => 'Clipboard Minus',
+            'class' => 'bi-clipboard-minus',
+            'keywords' => ['clipboard', 'minus', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-minus'],
+                'solid' => ['class' => 'bi-clipboard-minus-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-plus',
+            'displayName' => 'Clipboard Plus',
+            'class' => 'bi-clipboard-plus',
+            'keywords' => ['clipboard', 'plus', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-plus'],
+                'solid' => ['class' => 'bi-clipboard-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard-pulse',
+            'displayName' => 'Clipboard Pulse',
+            'class' => 'bi-clipboard-pulse',
+            'keywords' => ['clipboard', 'pulse', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-pulse']
+            ]
+        ],
+        [
+            'name' => 'clipboard-x',
+            'displayName' => 'Clipboard X',
+            'class' => 'bi-clipboard-x',
+            'keywords' => ['clipboard', 'x', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard-x'],
+                'solid' => ['class' => 'bi-clipboard-x-fill']
+            ]
+        ],
+
+        // 剪貼簿 2 系列
+        [
+            'name' => 'clipboard2',
+            'displayName' => 'Clipboard2',
+            'class' => 'bi-clipboard2',
+            'keywords' => ['clipboard', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2'],
+                'solid' => ['class' => 'bi-clipboard2-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-check',
+            'displayName' => 'Clipboard2 Check',
+            'class' => 'bi-clipboard2-check',
+            'keywords' => ['clipboard', 'check', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-check'],
+                'solid' => ['class' => 'bi-clipboard2-check-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-data',
+            'displayName' => 'Clipboard2 Data',
+            'class' => 'bi-clipboard2-data',
+            'keywords' => ['clipboard', 'data', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-data'],
+                'solid' => ['class' => 'bi-clipboard2-data-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-heart',
+            'displayName' => 'Clipboard2 Heart',
+            'class' => 'bi-clipboard2-heart',
+            'keywords' => ['clipboard', 'heart', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-heart'],
+                'solid' => ['class' => 'bi-clipboard2-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-minus',
+            'displayName' => 'Clipboard2 Minus',
+            'class' => 'bi-clipboard2-minus',
+            'keywords' => ['clipboard', 'minus', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-minus'],
+                'solid' => ['class' => 'bi-clipboard2-minus-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-plus',
+            'displayName' => 'Clipboard2 Plus',
+            'class' => 'bi-clipboard2-plus',
+            'keywords' => ['clipboard', 'plus', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-plus'],
+                'solid' => ['class' => 'bi-clipboard2-plus-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-pulse',
+            'displayName' => 'Clipboard2 Pulse',
+            'class' => 'bi-clipboard2-pulse',
+            'keywords' => ['clipboard', 'pulse', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-pulse'],
+                'solid' => ['class' => 'bi-clipboard2-pulse-fill']
+            ]
+        ],
+        [
+            'name' => 'clipboard2-x',
+            'displayName' => 'Clipboard2 X',
+            'class' => 'bi-clipboard2-x',
+            'keywords' => ['clipboard', 'x', 'copy'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clipboard2-x'],
+                'solid' => ['class' => 'bi-clipboard2-x-fill']
+            ]
+        ],
+
+        // 箱子與封包
+        [
+            'name' => 'box',
+            'displayName' => 'Box',
+            'class' => 'bi-box',
+            'keywords' => ['box', 'package'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-box'],
+                'solid' => ['class' => 'bi-box-fill']
+            ]
+        ],
+        [
+            'name' => 'box-seam',
+            'displayName' => 'Box Seam',
+            'class' => 'bi-box-seam',
+            'keywords' => ['box', 'seam', 'package'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-box-seam'],
+                'solid' => ['class' => 'bi-box-seam-fill']
+            ]
+        ],
+        [
+            'name' => 'box2',
+            'displayName' => 'Box2',
+            'class' => 'bi-box2',
+            'keywords' => ['box', 'package'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-box2'],
+                'solid' => ['class' => 'bi-box2-fill']
+            ]
+        ],
+        [
+            'name' => 'box2-heart',
+            'displayName' => 'Box2 Heart',
+            'class' => 'bi-box2-heart',
+            'keywords' => ['box', 'heart', 'package'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-box2-heart'],
+                'solid' => ['class' => 'bi-box2-heart-fill']
+            ]
+        ],
+        [
+            'name' => 'boxes',
+            'displayName' => 'Boxes',
+            'class' => 'bi-boxes',
+            'keywords' => ['boxes', 'packages', 'multiple'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-boxes']
+            ]
+        ],
+
+        // 時鐘與時間
+        [
+            'name' => 'clock',
+            'displayName' => 'Clock',
+            'class' => 'bi-clock',
+            'keywords' => ['clock', 'time'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clock'],
+                'solid' => ['class' => 'bi-clock-fill']
+            ]
+        ],
+        [
+            'name' => 'clock-history',
+            'displayName' => 'Clock History',
+            'class' => 'bi-clock-history',
+            'keywords' => ['clock', 'history', 'time'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-clock-history']
+            ]
+        ],
+        [
+            'name' => 'alarm',
+            'displayName' => 'Alarm',
+            'class' => 'bi-alarm',
+            'keywords' => ['alarm', 'time'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-alarm'],
+                'solid' => ['class' => 'bi-alarm-fill']
+            ]
+        ],
+        [
+            'name' => 'stopwatch',
+            'displayName' => 'Stopwatch',
+            'class' => 'bi-stopwatch',
+            'keywords' => ['stopwatch', 'time', 'timer'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-stopwatch'],
+                'solid' => ['class' => 'bi-stopwatch-fill']
+            ]
+        ],
+        [
+            'name' => 'smartwatch',
+            'displayName' => 'Smartwatch',
+            'class' => 'bi-smartwatch',
+            'keywords' => ['smartwatch', 'time', 'device'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-smartwatch']
+            ]
+        ],
+        [
+            'name' => 'watch',
+            'displayName' => 'Watch',
+            'class' => 'bi-watch',
+            'keywords' => ['watch', 'time'],
+            'type' => 'bootstrap',
+            'category' => 'general',
+            'variants' => [
+                'outline' => ['class' => 'bi-watch']
+            ]
         ]
     ]
 ];
