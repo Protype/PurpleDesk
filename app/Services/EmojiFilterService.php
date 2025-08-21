@@ -4,7 +4,7 @@ namespace App\Services;
 
 /**
  * Emoji 相容性過濾服務
- * 使用 config/emoji-filter.php 進行設定管理
+ * 使用 config/icon/emoji-filter.php 進行設定管理
  */
 class EmojiFilterService
 {
@@ -14,7 +14,7 @@ class EmojiFilterService
      */
     public function isFilteringEnabled(): bool
     {
-        return config('emoji-filter.enabled', true);
+        return config('icon.emoji-filter.enabled', true);
     }
 
     /**
@@ -37,7 +37,7 @@ class EmojiFilterService
         $emoji = $emojiData['emoji'] ?? '';
         
         // 檢查黑名單
-        $blacklist = config('emoji-filter.blacklist', []);
+        $blacklist = config('icon.emoji-filter.blacklist', []);
         if (in_array($emoji, $blacklist)) {
             return [
                 'shouldFilter' => true,
@@ -47,7 +47,7 @@ class EmojiFilterService
         }
         
         // 檢查版本規則
-        $versionRules = config('emoji-filter.version_rules', []);
+        $versionRules = config('icon.emoji-filter.version_rules', []);
         if (isset($emojiData['version']) && isset($versionRules[$emojiData['version']])) {
             $rule = $versionRules[$emojiData['version']];
             if ($rule === 'block') {
@@ -66,7 +66,7 @@ class EmojiFilterService
         }
         
         // 檢查因子規則
-        $factorRules = config('emoji-filter.factor_rules', []);
+        $factorRules = config('icon.emoji-filter.factor_rules', []);
         if (isset($emojiData['factors']) && is_array($emojiData['factors'])) {
             foreach ($emojiData['factors'] as $factor) {
                 if (isset($factorRules[$factor]) && $factorRules[$factor] === 'high_risk') {
@@ -98,7 +98,7 @@ class EmojiFilterService
             return $emojis;
         }
 
-        $blacklist = config('emoji-filter.blacklist', []);
+        $blacklist = config('icon.emoji-filter.blacklist', []);
         
         return array_filter($emojis, function ($emoji) use ($blacklist) {
             $emojiStr = is_string($emoji) ? $emoji : ($emoji['emoji'] ?? '');
@@ -122,10 +122,10 @@ class EmojiFilterService
         $result = [];
         
         // 取得設定
-        $filterCompound = config('emoji-filter.filter_compound_emojis', true);
-        $filterSkinTones = config('emoji-filter.filter_skin_tone_variants', true);
-        $filterDuplicates = config('emoji-filter.filter_duplicates', true);
-        $logFiltering = config('emoji-filter.log_filtering', true) && config('app.debug');
+        $filterCompound = config('icon.emoji-filter.filter_compound_emojis', true);
+        $filterSkinTones = config('icon.emoji-filter.filter_skin_tone_variants', true);
+        $filterDuplicates = config('icon.emoji-filter.filter_duplicates', true);
+        $logFiltering = config('icon.emoji-filter.log_filtering', true) && config('app.debug');
         
         foreach ($emojis as $emojiData) {
             if (!isset($emojiData['emoji']) || empty($emojiData['emoji'])) {
@@ -196,8 +196,8 @@ class EmojiFilterService
      */
     public function getFilterStats(): array
     {
-        $stats = config('emoji-filter.stats', []);
-        $blacklist = config('emoji-filter.blacklist', []);
+        $stats = config('icon.emoji-filter.stats', []);
+        $blacklist = config('icon.emoji-filter.blacklist', []);
         
         return array_merge($stats, [
             'current_blacklist_count' => count($blacklist),
@@ -212,13 +212,13 @@ class EmojiFilterService
     {
         return [
             'enabled' => $this->isFilteringEnabled(),
-            'blacklist_count' => count(config('emoji-filter.blacklist', [])),
-            'version_rules' => config('emoji-filter.version_rules', []),
-            'factor_rules' => config('emoji-filter.factor_rules', []),
-            'filter_compound_emojis' => config('emoji-filter.filter_compound_emojis', true),
-            'filter_skin_tone_variants' => config('emoji-filter.filter_skin_tone_variants', true),
-            'filter_duplicates' => config('emoji-filter.filter_duplicates', true),
-            'log_filtering' => config('emoji-filter.log_filtering', true),
+            'blacklist_count' => count(config('icon.emoji-filter.blacklist', [])),
+            'version_rules' => config('icon.emoji-filter.version_rules', []),
+            'factor_rules' => config('icon.emoji-filter.factor_rules', []),
+            'filter_compound_emojis' => config('icon.emoji-filter.filter_compound_emojis', true),
+            'filter_skin_tone_variants' => config('icon.emoji-filter.filter_skin_tone_variants', true),
+            'filter_duplicates' => config('icon.emoji-filter.filter_duplicates', true),
+            'log_filtering' => config('icon.emoji-filter.log_filtering', true),
         ];
     }
 }

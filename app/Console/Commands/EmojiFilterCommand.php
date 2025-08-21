@@ -75,15 +75,15 @@ class EmojiFilterCommand extends Command
         $this->line("Status: {$status}");
         
         if ($enabled) {
-            $blacklistCount = count(config('emoji-filter.blacklist', []));
+            $blacklistCount = count(config('icon.emoji-filter.blacklist', []));
             $this->line("Blacklisted emojis: <fg=yellow>{$blacklistCount}</fg=yellow>");
             
             $this->line('');
             $this->info('Active filters:');
-            $this->line('  • Compound emojis: ' . (config('emoji-filter.filter_compound_emojis') ? '✅' : '❌'));
-            $this->line('  • Skin tone variants: ' . (config('emoji-filter.filter_skin_tone_variants') ? '✅' : '❌'));
-            $this->line('  • Duplicates: ' . (config('emoji-filter.filter_duplicates') ? '✅' : '❌'));
-            $this->line('  • Debug logging: ' . (config('emoji-filter.log_filtering') ? '✅' : '❌'));
+            $this->line('  • Compound emojis: ' . (config('icon.emoji-filter.filter_compound_emojis') ? '✅' : '❌'));
+            $this->line('  • Skin tone variants: ' . (config('icon.emoji-filter.filter_skin_tone_variants') ? '✅' : '❌'));
+            $this->line('  • Duplicates: ' . (config('icon.emoji-filter.filter_duplicates') ? '✅' : '❌'));
+            $this->line('  • Debug logging: ' . (config('icon.emoji-filter.log_filtering') ? '✅' : '❌'));
         } else {
             $this->warn('Filtering is disabled. All emojis will be shown including problematic ones.');
         }
@@ -143,7 +143,7 @@ class EmojiFilterCommand extends Command
         $this->line("  Debug logging: " . ($config['log_filtering'] ? '<fg=green>Yes</fg=green>' : '<fg=red>No</fg=red>'));
 
         $this->line('');
-        $this->comment('💡 Tip: Modify config/emoji-filter.php or use .env variables to change settings');
+        $this->comment('💡 Tip: Modify config/icon/emoji-filter.php or use .env variables to change settings');
         $this->comment('💡 Environment variables: EMOJI_FILTER_ENABLED, EMOJI_FILTER_COMPOUND, etc.');
     }
 }
