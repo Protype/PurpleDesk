@@ -50,7 +50,6 @@ class HeroIconsApiTest extends TestCase
         $icon = $firstCategory[0];
         
         // 檢查必要欄位
-        $this->assertArrayHasKey('id', $icon);
         $this->assertArrayHasKey('name', $icon);
         $this->assertArrayHasKey('value', $icon);
         $this->assertArrayHasKey('type', $icon);
@@ -60,7 +59,6 @@ class HeroIconsApiTest extends TestCase
         $this->assertArrayHasKey('variant_type', $icon);
         
         // 檢查欄位類型
-        $this->assertIsString($icon['id']);
         $this->assertIsString($icon['name']);
         $this->assertIsString($icon['value']);
         $this->assertEquals('heroicons', $icon['type']);
@@ -177,7 +175,8 @@ class HeroIconsApiTest extends TestCase
         foreach ($data as $categoryIcons) {
             foreach ($categoryIcons as $icon) {
                 // 從 id 中提取基本名稱
-                $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
+                // 從 value (組件名) 中提取基本名稱（移除 Icon 後綴）
+                $baseName = preg_replace('/Icon$/', '', $icon['value']);
                 
                 if (!isset($iconGroups[$baseName])) {
                     $iconGroups[$baseName] = [];
