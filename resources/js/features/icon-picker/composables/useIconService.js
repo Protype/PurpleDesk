@@ -276,11 +276,17 @@ export function useIconService() {
     
     Object.entries(data).forEach(([categoryId, emojis]) => {
       if (Array.isArray(emojis) && emojis.length > 0) {
-        result.push({
-          categoryId,
-          categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
-          emojis: emojis
-        })
+        // 對每個分類的 emoji 進行過濾和清理
+        const filteredEmojis = filterAndCleanEmojis(emojis)
+        
+        // 只有當還有 emoji 時才添加分類
+        if (filteredEmojis.length > 0) {
+          result.push({
+            categoryId,
+            categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
+            emojis: filteredEmojis
+          })
+        }
       }
     })
     
@@ -349,6 +355,7 @@ export function useIconService() {
       // 檢查黑名單過濾
       const filterResult = shouldFilterEmoji(emojiData)
       if (filterResult.shouldFilter) {
+        console.log(`過濾黑名單 emoji: ${emojiData.emoji} - ${filterResult.reason}`)
         return // 跳過黑名單中的 emoji
       }
       
