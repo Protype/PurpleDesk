@@ -56,28 +56,23 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-// Icon 配置 API 路由（公開訪問）
+// Icon 配置 API 路由（公開訪問）- 簡化版本
 Route::prefix('config/icon')->group(function () {
-    Route::get('/emoji', [EmojiController::class, 'all']);
+    // Emoji API
+    Route::get('/emoji', [EmojiController::class, 'index']);
+    Route::get('/emoji/categories', [EmojiController::class, 'categories']);
+    Route::get('/emoji/category/{category}', [EmojiController::class, 'category']);
+    
+    // HeroIcons API  
     Route::get('/heroicons', [HeroIconController::class, 'index']);
     Route::get('/heroicons/categories', [HeroIconController::class, 'categories']);
-    Route::get('/heroicons/search', [HeroIconController::class, 'search']);
-    Route::get('/heroicons/by-category', [HeroIconController::class, 'byCategory']);
-    Route::get('/heroicons/variants', [HeroIconController::class, 'variants']);
-    Route::get('/heroicons/style/{style}', [HeroIconController::class, 'byStyle']);
-    Route::get('/heroicons/icon/{component}/variants', [HeroIconController::class, 'iconVariants']);
-    Route::get('/heroicons/icon/{component}/variant/{style}', [HeroIconController::class, 'hasVariant']);
+    Route::get('/heroicons/category/{category}', [HeroIconController::class, 'category']);
     
-    // Bootstrap Icons API 路由
+    // Bootstrap Icons API
     Route::get('/bootstrap-icons', [BootstrapIconController::class, 'index']);
-    Route::get('/bootstrap-icons/search', [BootstrapIconController::class, 'search']);
     Route::get('/bootstrap-icons/categories', [BootstrapIconController::class, 'categories']);
-    Route::get('/bootstrap-icons/priority', [BootstrapIconController::class, 'priority']);
-    Route::get('/bootstrap-icons/priority/{priority}', [BootstrapIconController::class, 'byPriority']);
-    Route::get('/bootstrap-icons/stats', [BootstrapIconController::class, 'stats']);
-    Route::get('/bootstrap-icons/variants', [BootstrapIconController::class, 'variants']);
-    Route::get('/bootstrap-icons/style/{style}', [BootstrapIconController::class, 'byStyle']);
-    Route::get('/bootstrap-icons/icon/{className}/variants', [BootstrapIconController::class, 'iconVariants']);
-    Route::get('/bootstrap-icons/icon/{className}/variant/{style}', [BootstrapIconController::class, 'hasVariant']);
-    Route::post('/bootstrap-icons/cache/clear', [BootstrapIconController::class, 'clearCache']);
+    Route::get('/bootstrap-icons/category/{category}', [BootstrapIconController::class, 'category']);
+    
+    // 獨立的 all-filtered API 端點
+    Route::get('/bootstrap-icons/all-filtered', [BootstrapIconController::class, 'allFilteredIndependent']);
 });

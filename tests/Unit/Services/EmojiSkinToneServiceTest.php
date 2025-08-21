@@ -15,29 +15,6 @@ class EmojiSkinToneServiceTest extends TestCase
         $this->service = new EmojiSkinToneService();
     }
 
-    /** @test */
-    public function it_identifies_skin_tone_capable_emojis()
-    {
-        $emoji = ['emoji' => '👋', 'name' => 'waving hand'];
-        
-        $result = $this->service->processEmoji($emoji);
-        
-        $this->assertTrue($result['has_skin_tone']);
-        $this->assertArrayHasKey('skin_variations', $result);
-        $this->assertIsArray($result['skin_variations']);
-        $this->assertCount(6, $result['skin_variations']); // 0-5 = 6 個項目
-    }
-
-    /** @test */
-    public function it_marks_non_skin_tone_emojis_correctly()
-    {
-        $emoji = ['emoji' => '😀', 'name' => 'grinning face'];
-        
-        $result = $this->service->processEmoji($emoji);
-        
-        $this->assertFalse($result['has_skin_tone']);
-        $this->assertArrayNotHasKey('skin_variations', $result);
-    }
 
     /** @test */
     public function it_groups_skin_tone_variations_correctly()

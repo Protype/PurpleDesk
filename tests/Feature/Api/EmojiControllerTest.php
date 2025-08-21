@@ -7,7 +7,7 @@ use Tests\TestCase;
 class EmojiControllerTest extends TestCase
 {
     /**
-     * 測試取得所有 emoji 資料的 API
+     * 測試取得所有 emoji 資料的 API - 新的 data/meta 格式
      */
     public function test_can_get_all_emojis()
     {
@@ -15,28 +15,28 @@ class EmojiControllerTest extends TestCase
         
         $response->assertStatus(200)
             ->assertJsonStructure([
-                'categories' => [
-                    '*' => [
-                        'id',
-                        'name',
-                        'icon',
-                        'priority',
-                        'subgroups' => [
-                            '*' => [
-                                'name',
-                                'emojis' => [
-                                    '*' => [
-                                        'emoji',
-                                        'name'
-                                    ]
-                                ]
-                            ]
+                'data' => [
+                    '*' => [ // 分類 ID 作為 key
+                        '*' => [ // emoji 陣列
+                            'id',
+                            'name', 
+                            'emoji',
+                            'type',
+                            'keywords',
+                            'category',
+                            'has_skin_tone'
                         ]
                     ]
                 ],
-                'stats' => [
-                    'total_categories',
-                    'total_emojis'
+                'meta' => [
+                    'total',
+                    'type',
+                    'categories' => [
+                        '*' => [
+                            'name',
+                            'description'
+                        ]
+                    ]
                 ]
             ]);
     }
@@ -53,7 +53,7 @@ class EmojiControllerTest extends TestCase
         // 驗證包含所有主要分類
         $expectedCategories = [
             'smileys_emotion',
-            'people_body',
+            'people_body', 
             'animals_nature',
             'food_drink',
             'travel_places',
@@ -64,30 +64,34 @@ class EmojiControllerTest extends TestCase
         ];
         
         foreach ($expectedCategories as $category) {
-            $this->assertArrayHasKey($category, $data['categories']);
+            $this->assertArrayHasKey($category, $data['meta']['categories'], "Missing category: {$category}");
         }
     }
     
     /**
-     * 測試 emoji 統計資料
+     * 測試 emoji meta 資料格式正確
      */
-    public function test_emoji_statistics()
+    public function test_emoji_meta_data_format()
     {
         $response = $this->getJson('/api/config/icon/emoji');
         
         $data = $response->json();
         
-        // 驗證統計資料
-        $this->assertArrayHasKey('stats', $data);
-        $this->assertArrayHasKey('total_categories', $data['stats']);
-        $this->assertArrayHasKey('total_emojis', $data['stats']);
+        // 驗證 meta 資料結構
+        $this->assertArrayHasKey('meta', $data);
+        $this->assertArrayHasKey('total', $data['meta']);
+        $this->assertArrayHasKey('type', $data['meta']);
+        $this->assertArrayHasKey('categories', $data['meta']);
         
-        // 驗證分類數量（應該是 9 個）
-        $this->assertEquals(9, $data['stats']['total_categories']);
+        // 驗證 type 為 emoji
+        $this->assertEquals('emoji', $data['meta']['type']);
         
-        // 驗證總 emoji 數量合理（已過濾不相容的）
-        $this->assertGreaterThan(3000, $data['stats']['total_emojis']);
-        $this->assertLessThan(4000, $data['stats']['total_emojis']);
+        // 驗證 total 是正整數
+        $this->assertIsInt($data['meta']['total']);
+        $this->assertGreaterThan(0, $data['meta']['total']);
+        
+        // 驗證分類數量合理（應該是 9 個）
+        $this->assertEquals(9, count($data['meta']['categories']));
     }
     
     /**
@@ -99,23 +103,113 @@ class EmojiControllerTest extends TestCase
         
         $data = $response->json();
         
-        // 取得第一個分類的第一個子群組的第一個 emoji 來驗證格式
-        $firstCategory = array_values($data['categories'])[0];
-        $this->assertIsArray($firstCategory['subgroups']);
+        // 取得第一個分類的第一個 emoji 來驗證格式
+        $this->assertArrayHasKey('data', $data);
+        $this->assertNotEmpty($data['data']);
         
-        if (!empty($firstCategory['subgroups'])) {
-            $firstSubgroup = array_values($firstCategory['subgroups'])[0];
-            $this->assertArrayHasKey('name', $firstSubgroup);
-            $this->assertArrayHasKey('emojis', $firstSubgroup);
-            
-            if (!empty($firstSubgroup['emojis'])) {
-                $firstEmoji = $firstSubgroup['emojis'][0];
-                $this->assertArrayHasKey('emoji', $firstEmoji);
-                $this->assertArrayHasKey('name', $firstEmoji);
-                $this->assertIsString($firstEmoji['emoji']);
-                $this->assertIsString($firstEmoji['name']);
-            }
+        $firstCategory = array_values($data['data'])[0];
+        $this->assertIsArray($firstCategory);
+        $this->assertNotEmpty($firstCategory);
+        
+        $firstEmoji = $firstCategory[0];
+        
+        // 驗證必要欄位
+        $this->assertArrayHasKey('id', $firstEmoji);
+        $this->assertArrayHasKey('name', $firstEmoji);
+        $this->assertArrayHasKey('emoji', $firstEmoji); 
+        $this->assertArrayHasKey('type', $firstEmoji);
+        $this->assertArrayHasKey('keywords', $firstEmoji);
+        $this->assertArrayHasKey('category', $firstEmoji);
+        $this->assertArrayHasKey('has_skin_tone', $firstEmoji);
+        
+        // 驗證資料類型
+        $this->assertIsString($firstEmoji['id']);
+        $this->assertIsString($firstEmoji['name']);
+        $this->assertIsString($firstEmoji['emoji']);
+        $this->assertEquals('emoji', $firstEmoji['type']);
+        $this->assertIsArray($firstEmoji['keywords']);
+        $this->assertIsString($firstEmoji['category']);
+        $this->assertIsBool($firstEmoji['has_skin_tone']);
+        
+        // 如果有膚色變體，驗證 skin_variations 欄位
+        if ($firstEmoji['has_skin_tone']) {
+            $this->assertArrayHasKey('skin_variations', $firstEmoji);
+            $this->assertIsArray($firstEmoji['skin_variations']);
         }
+    }
+    
+    /**
+     * 測試分類 API
+     */
+    public function test_can_get_emoji_categories()
+    {
+        $response = $this->getJson('/api/config/icon/emoji/categories');
+        
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    '*' => [
+                        'name',
+                        'description'
+                    ]
+                ]
+            ]);
+    }
+    
+    /**
+     * 測試取得特定分類的 emoji
+     */
+    public function test_can_get_emoji_by_category()
+    {
+        $response = $this->getJson('/api/config/icon/emoji/category/smileys_emotion');
+        
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                'data' => [
+                    'smileys_emotion' => [
+                        '*' => [
+                            'id',
+                            'name',
+                            'emoji', 
+                            'type',
+                            'keywords',
+                            'category'
+                        ]
+                    ]
+                ],
+                'meta' => [
+                    'total',
+                    'type',
+                    'categories'
+                ]
+            ]);
+            
+        $data = $response->json();
+        
+        // 驗證只包含指定分類
+        $this->assertCount(1, $data['data']);
+        $this->assertArrayHasKey('smileys_emotion', $data['data']);
+        
+        // 驗證每個 emoji 都屬於正確分類
+        foreach ($data['data']['smileys_emotion'] as $emoji) {
+            $this->assertEquals('smileys_emotion', $emoji['category']);
+        }
+    }
+    
+    /**
+     * 測試無效分類回應 400 錯誤
+     */
+    public function test_invalid_category_returns_error()
+    {
+        $response = $this->getJson('/api/config/icon/emoji/category/invalid_category');
+        
+        $response->assertStatus(400)
+            ->assertJsonStructure([
+                'error'
+            ]);
+            
+        $data = $response->json();
+        $this->assertStringContainsString('Invalid category', $data['error']);
     }
     
     /**
@@ -137,22 +231,33 @@ class EmojiControllerTest extends TestCase
     }
     
     /**
-     * 測試優先級設定正確
+     * 測試快取功能
      */
-    public function test_emoji_priority_settings()
+    public function test_emoji_caching()
+    {
+        // 第一次請求
+        $firstResponse = $this->getJson('/api/config/icon/emoji');
+        $firstResponse->assertStatus(200);
+        
+        // 第二次請求應該使用快取
+        $secondResponse = $this->getJson('/api/config/icon/emoji');
+        $secondResponse->assertStatus(200);
+        
+        // 資料應該完全相同
+        $this->assertEquals($firstResponse->json(), $secondResponse->json());
+    }
+    
+    /**
+     * 測試總 emoji 數量合理
+     */
+    public function test_emoji_total_count()
     {
         $response = $this->getJson('/api/config/icon/emoji');
         
         $data = $response->json();
         
-        // 驗證優先級值
-        $validPriorities = ['immediate', 'high', 'medium', 'low'];
-        
-        foreach ($data['categories'] as $category) {
-            $this->assertContains($category['priority'], $validPriorities);
-        }
-        
-        // 驗證 smileys_emotion 應該是 immediate 優先級
-        $this->assertEquals('immediate', $data['categories']['smileys_emotion']['priority']);
+        // 驗證總 emoji 數量合理（約 1900 個）
+        $this->assertGreaterThan(1800, $data['meta']['total']);
+        $this->assertLessThan(2200, $data['meta']['total']);
     }
 }

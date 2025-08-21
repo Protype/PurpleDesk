@@ -21,27 +21,6 @@ class EmojiSkinToneService
     private const SKIN_TONE_REGEX = '/[\x{1F3FB}-\x{1F3FF}]/u';
 
     /**
-     * 處理單個 emoji，添加膚色支援資訊
-     */
-    public function processEmoji(array $emoji): array
-    {
-        $emojiChar = $emoji['emoji'] ?? '';
-        
-        // 檢查這個 emoji 是否支援膚色
-        $hasSkinTone = $this->canHaveSkinTone($emojiChar);
-        
-        $result = $emoji;
-        $result['has_skin_tone'] = $hasSkinTone;
-        
-        if ($hasSkinTone) {
-            // 生成所有膚色變體
-            $result['skin_variations'] = $this->generateSkinToneVariations($emojiChar);
-        }
-        
-        return $result;
-    }
-
-    /**
      * 將扁平的 emoji 列表分組，合併膚色變體
      */
     public function groupVariations(array $emojis): array

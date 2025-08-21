@@ -102,18 +102,11 @@
             </div>
           </div>
 
-          <!-- 搜尋區域（僅限 Icons 標籤頁） -->
-          <div v-if="activeTab === 'icons'" class="mb-4">
-            <IconPickerSearch
-              v-model="searchQuery"
-              placeholder="搜尋圖標..."
-            />
-          </div>
 
           <!-- 內容區域 -->
           <div class="flex-1 overflow-y-auto min-h-0">
             <!-- 文字圖標標籤頁 - 使用 TextIconPanel -->
-            <div v-if="activeTab === 'initials'" class="space-y-4">
+            <div v-show="activeTab === 'initials'" class="space-y-4">
               <TextIconPanel
                 v-model="customInitials"
                 :background-color="localBackgroundColor"
@@ -122,7 +115,7 @@
             </div>
 
             <!-- Emoji 標籤頁 - 使用 EmojiPanel -->
-            <div v-else-if="activeTab === 'emoji'">
+            <div v-show="activeTab === 'emoji'">
               <EmojiPanel
                 :selected-emoji="iconType === 'emoji' ? selectedIcon : ''"
                 @emoji-selected="handleEmojiSelection"
@@ -130,7 +123,7 @@
             </div>
 
             <!-- Icons 標籤頁 - 使用 IconLibraryPanel -->
-            <div v-else-if="activeTab === 'icons'">
+            <div v-show="activeTab === 'icons'">
               <IconLibraryPanel
                 :selected-icon="iconType === 'heroicons' || iconType === 'bootstrap' ? selectedIcon : null"
                 :items-per-row="8"
@@ -139,7 +132,7 @@
             </div>
 
             <!-- Upload 標籤頁 - 開發中狀態 -->
-            <div v-else-if="activeTab === 'upload'" class="text-center py-8">
+            <div v-show="activeTab === 'upload'" class="text-center py-8">
               <div class="text-4xl mb-4">🚧</div>
               <div class="text-gray-600 text-sm">
                 <div class="font-medium mb-2">Image Upload Panel 開發中</div>
@@ -180,292 +173,260 @@
   </div>
 </template>
 
-<script>
-import { ref, reactive, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
+<script setup>
+import { ref, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import TextIconPanel from './components/TextIconPanel.vue'
 import EmojiPanel from './components/EmojiPanel.vue'
 import IconLibraryPanel from './components/IconLibraryPanel.vue'
 import IconPickerSearch from './components/IconPickerSearch.vue'
 import SkinToneSelector from '@/components/common/SkinToneSelector.vue'
+import { usePreloadedDataProvider } from './composables/usePreloadedData.js'
 
-export default {
-  name: 'IconPicker',
-  components: {
-    TextIconPanel,
-    EmojiPanel,
-    IconLibraryPanel,
-    IconPickerSearch,
-    SkinToneSelector
+// Props 和 Emits
+defineOptions({
+  name: 'IconPicker'
+})
+
+const props = defineProps({
+  modelValue: {
+    type: String,
+    default: ''
   },
-  props: {
-    modelValue: {
-      type: String,
-      default: ''
-    },
-    iconType: {
-      type: String,
-      default: 'emoji'
-    },
-    backgroundColor: {
-      type: String,
-      default: '#6366f1'
-    },
-    hidePreview: {
-      type: Boolean,
-      default: false
-    },
-    isOpen: {
-      type: Boolean,
-      default: false
-    }
+  iconType: {
+    type: String,
+    default: 'emoji'
   },
-  emits: [
-    'update:modelValue',
-    'update:iconType',
-    'update:isOpen',
-    'background-color-change',
-    'file-selected',
-    'close'
-  ],
-  setup(props, { emit }) {
-    // 響應式狀態
-    const iconPickerRef = ref(null)
-    const iconPanel = ref(null)
-    const eyedropperButton = ref(null)
-    const isOpen = ref(props.isOpen)
-    const activeTab = ref('initials')
-    const isColorPickerOpen = ref(false)
-    const selectedIcon = ref(props.modelValue)
-    const iconType = ref(props.iconType)
-    const customInitials = ref('')
-    const localBackgroundColor = ref(props.backgroundColor)
-    const searchQuery = ref('')
-    const selectedSkinTone = ref(0)
+  backgroundColor: {
+    type: String,
+    default: '#6366f1'
+  },
+  hidePreview: {
+    type: Boolean,
+    default: false
+  },
+  isOpen: {
+    type: Boolean,
+    default: false
+  }
+})
 
-    // 面板位置計算
-    const panelPosition = reactive({
-      top: '0px',
-      left: '0px'
+const emit = defineEmits([
+  'update:modelValue',
+  'update:iconType',
+  'update:isOpen',
+  'background-color-change',
+  'file-selected',
+  'close'
+])
+
+// 預載入資料提供者
+const preloadedData = usePreloadedDataProvider()
+
+// 響應式狀態
+const iconPickerRef = ref(null)
+const iconPanel = ref(null)
+const eyedropperButton = ref(null)
+const isOpen = ref(props.isOpen)
+const activeTab = ref('initials')
+const isColorPickerOpen = ref(false)
+const selectedIcon = ref(props.modelValue)
+const iconType = ref(props.iconType)
+const customInitials = ref('')
+const localBackgroundColor = ref(props.backgroundColor)
+const searchQuery = ref('')
+const selectedSkinTone = ref(0)
+
+// 面板位置計算
+const panelPosition = reactive({
+  top: '0px',
+  left: '0px'
+})
+
+// 監聽 props 變化
+watch(() => props.modelValue, (newValue) => {
+  selectedIcon.value = newValue
+})
+
+watch(() => props.isOpen, (newValue) => {
+  isOpen.value = newValue
+  if (newValue) {
+    nextTick(() => {
+      calculatePanelPosition()
     })
+  }
+})
 
-    // 監聽 props 變化
-    watch(() => props.modelValue, (newValue) => {
-      selectedIcon.value = newValue
-    })
+watch(() => props.backgroundColor, (newValue) => {
+  localBackgroundColor.value = newValue
+})
 
-    watch(() => props.isOpen, (newValue) => {
-      isOpen.value = newValue
-      if (newValue) {
-        nextTick(() => {
-          calculatePanelPosition()
-        })
-      }
-    })
+watch(() => props.iconType, (newValue) => {
+  iconType.value = newValue
+})
 
-    watch(() => props.backgroundColor, (newValue) => {
-      localBackgroundColor.value = newValue
-    })
+// 計算面板位置
+const calculatePanelPosition = () => {
+  if (!iconPickerRef.value || !iconPanel.value) return
 
-    watch(() => props.iconType, (newValue) => {
-      iconType.value = newValue
-    })
+  const buttonRect = iconPickerRef.value.getBoundingClientRect()
+  const panelRect = iconPanel.value.getBoundingClientRect()
+  const viewportWidth = window.innerWidth
+  const viewportHeight = window.innerHeight
 
-    // 計算面板位置
-    const calculatePanelPosition = () => {
-      if (!iconPickerRef.value || !iconPanel.value) return
+  let top = buttonRect.bottom + 8
+  let left = buttonRect.left
+  
+  // 面板預設高度（如果無法取得實際高度）
+  const panelHeight = panelRect.height || 400
 
-      const buttonRect = iconPickerRef.value.getBoundingClientRect()
-      const panelRect = iconPanel.value.getBoundingClientRect()
-      const viewportWidth = window.innerWidth
-      const viewportHeight = window.innerHeight
+  // 檢查面板是否會超出下方邊界
+  const wouldOverflowBottom = top + panelHeight > viewportHeight - 16
+  
+  // 檢查上方是否有足夠空間
+  const topSpace = buttonRect.top - 16
+  const hasEnoughTopSpace = topSpace >= panelHeight + 8
 
-      let top = buttonRect.bottom + 8
-      let left = buttonRect.left
-      
-      // 面板預設高度（如果無法取得實際高度）
-      const panelHeight = panelRect.height || 400
+  // 如果下方空間不足且上方有足夠空間，則顯示在上方
+  if (wouldOverflowBottom && hasEnoughTopSpace) {
+    top = buttonRect.top - panelHeight - 8
+  } else if (wouldOverflowBottom) {
+    // 如果上下都沒有足夠空間，則置中顯示並確保不超出邊界
+    const centerY = (viewportHeight - panelHeight) / 2
+    top = Math.max(16, Math.min(centerY, viewportHeight - panelHeight - 16))
+  }
 
-      // 檢查面板是否會超出下方邊界
-      const wouldOverflowBottom = top + panelHeight > viewportHeight - 16
-      
-      // 檢查上方是否有足夠空間
-      const topSpace = buttonRect.top - 16
-      const hasEnoughTopSpace = topSpace >= panelHeight + 8
+  // 如果面板超出右側邊界，向左調整
+  if (left + panelRect.width > viewportWidth) {
+    left = viewportWidth - panelRect.width - 16
+  }
 
-      // 如果下方空間不足且上方有足夠空間，則顯示在上方
-      if (wouldOverflowBottom && hasEnoughTopSpace) {
-        top = buttonRect.top - panelHeight - 8
-      } else if (wouldOverflowBottom) {
-        // 如果上下都沒有足夠空間，則置中顯示並確保不超出邊界
-        const centerY = (viewportHeight - panelHeight) / 2
-        top = Math.max(16, Math.min(centerY, viewportHeight - panelHeight - 16))
-      }
+  // 確保不超出左側邊界
+  left = Math.max(16, left)
 
-      // 如果面板超出右側邊界，向左調整
-      if (left + panelRect.width > viewportWidth) {
-        left = viewportWidth - panelRect.width - 16
-      }
+  // 最終確保 top 不超出邊界
+  top = Math.max(16, Math.min(top, viewportHeight - panelHeight - 16))
 
-      // 確保不超出左側邊界
-      left = Math.max(16, left)
+  panelPosition.top = `${top}px`
+  panelPosition.left = `${left}px`
+}
 
-      // 最終確保 top 不超出邊界
-      top = Math.max(16, Math.min(top, viewportHeight - panelHeight - 16))
+// 顯示圖標工具
+const getDisplayIcon = (iconName) => {
+  // 這裡需要實作圖標顯示邏輯
+  return 'div'
+}
 
-      panelPosition.top = `${top}px`
-      panelPosition.left = `${left}px`
-    }
-
-    // 顯示圖標工具
-    const getDisplayIcon = (iconName) => {
-      // 這裡需要實作圖標顯示邏輯
-      return 'div'
-    }
-
-    // 面板控制
-    const togglePicker = () => {
-      if (isOpen.value) {
-        closePicker()
-      } else {
-        openPicker()
-      }
-    }
-
-    const openPicker = () => {
-      isOpen.value = true
-      emit('update:isOpen', true)
-      nextTick(() => {
-        // 延遲一小段時間確保面板完全渲染
-        setTimeout(() => {
-          calculatePanelPosition()
-        }, 10)
-      })
-    }
-
-    const closePicker = () => {
-      isOpen.value = false
-      isColorPickerOpen.value = false
-      emit('close')
-    }
-
-    // 顏色選擇器
-    const openColorPicker = () => {
-      isColorPickerOpen.value = !isColorPickerOpen.value
-    }
-
-    const closeColorPicker = () => {
-      isColorPickerOpen.value = false
-    }
-
-    // 清除圖標
-    const clearIcon = () => {
-      selectedIcon.value = ''
-      emit('update:modelValue', '')
-      emit('update:iconType', '')
-    }
-
-    // 文字圖標選擇處理
-    const handleTextSelection = (data) => {
-      selectedIcon.value = data.text
-      localBackgroundColor.value = data.backgroundColor
-      
-      emit('update:modelValue', data.text)
-      emit('update:iconType', 'initials')
-      emit('background-color-change', data.backgroundColor)
-      
-      closePicker()
-    }
-
-    // Emoji 選擇處理
-    const handleEmojiSelection = (data) => {
-      selectedIcon.value = data.emoji
-      iconType.value = 'emoji'
-      
-      emit('update:modelValue', data.emoji)
-      emit('update:iconType', 'emoji')
-      
-      closePicker()
-    }
-
-    // 圖標選擇處理
-    const handleIconSelection = (icon) => {
-      const iconData = icon.component || icon.class || icon.name
-      const iconTypeValue = icon.type || 'heroicons'
-      
-      selectedIcon.value = iconData
-      iconType.value = iconTypeValue
-      
-      emit('update:modelValue', iconData)
-      emit('update:iconType', iconTypeValue)
-      
-      closePicker()
-    }
-
-    // 鍵盤事件處理
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape' && isOpen.value) {
-        closePicker()
-      }
-    }
-
-    // 窗口大小變化處理
-    const handleResize = () => {
-      if (isOpen.value) {
-        calculatePanelPosition()
-      }
-    }
-
-    // 生命週期
-    onMounted(() => {
-      if (typeof document !== 'undefined' && document.addEventListener) {
-        document.addEventListener('keydown', handleKeyDown)
-      }
-      if (typeof window !== 'undefined' && window.addEventListener) {
-        window.addEventListener('resize', handleResize)
-      }
-    })
-
-    onUnmounted(() => {
-      if (typeof document !== 'undefined' && document.removeEventListener) {
-        document.removeEventListener('keydown', handleKeyDown)
-      }
-      if (typeof window !== 'undefined' && window.removeEventListener) {
-        window.removeEventListener('resize', handleResize)
-      }
-    })
-
-    return {
-      // Refs
-      iconPickerRef,
-      iconPanel,
-      eyedropperButton,
-      
-      // State
-      isOpen,
-      activeTab,
-      isColorPickerOpen,
-      selectedIcon,
-      iconType,
-      customInitials,
-      localBackgroundColor,
-      searchQuery,
-      selectedSkinTone,
-      panelPosition,
-      
-      // Methods
-      togglePicker,
-      openPicker,
-      closePicker,
-      openColorPicker,
-      closeColorPicker,
-      clearIcon,
-      handleTextSelection,
-      handleEmojiSelection,
-      handleIconSelection,
-      getDisplayIcon
-    }
+// 面板控制
+const togglePicker = () => {
+  if (isOpen.value) {
+    closePicker()
+  } else {
+    openPicker()
   }
 }
+
+const openPicker = () => {
+  isOpen.value = true
+  emit('update:isOpen', true)
+  nextTick(() => {
+    // 延遲一小段時間確保面板完全渲染
+    setTimeout(() => {
+      calculatePanelPosition()
+    }, 10)
+  })
+}
+
+const closePicker = () => {
+  isOpen.value = false
+  isColorPickerOpen.value = false
+  emit('close')
+}
+
+// 顏色選擇器
+const openColorPicker = () => {
+  isColorPickerOpen.value = !isColorPickerOpen.value
+}
+
+const closeColorPicker = () => {
+  isColorPickerOpen.value = false
+}
+
+// 清除圖標
+const clearIcon = () => {
+  selectedIcon.value = ''
+  emit('update:modelValue', '')
+  emit('update:iconType', '')
+}
+
+// 文字圖標選擇處理
+const handleTextSelection = (data) => {
+  selectedIcon.value = data.text
+  localBackgroundColor.value = data.backgroundColor
+  
+  emit('update:modelValue', data.text)
+  emit('update:iconType', 'initials')
+  emit('background-color-change', data.backgroundColor)
+  
+  closePicker()
+}
+
+// Emoji 選擇處理
+const handleEmojiSelection = (data) => {
+  selectedIcon.value = data.emoji
+  iconType.value = 'emoji'
+  
+  emit('update:modelValue', data.emoji)
+  emit('update:iconType', 'emoji')
+  
+  closePicker()
+}
+
+// 圖標選擇處理
+const handleIconSelection = (icon) => {
+  const iconData = icon.component || icon.class || icon.name
+  const iconTypeValue = icon.type || 'heroicons'
+  
+  selectedIcon.value = iconData
+  iconType.value = iconTypeValue
+  
+  emit('update:modelValue', iconData)
+  emit('update:iconType', iconTypeValue)
+  
+  closePicker()
+}
+
+// 鍵盤事件處理
+const handleKeyDown = (event) => {
+  if (event.key === 'Escape' && isOpen.value) {
+    closePicker()
+  }
+}
+
+// 窗口大小變化處理
+const handleResize = () => {
+  if (isOpen.value) {
+    calculatePanelPosition()
+  }
+}
+
+// 生命週期
+onMounted(() => {
+  if (typeof document !== 'undefined' && document.addEventListener) {
+    document.addEventListener('keydown', handleKeyDown)
+  }
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('resize', handleResize)
+  }
+})
+
+onUnmounted(() => {
+  if (typeof document !== 'undefined' && document.removeEventListener) {
+    document.removeEventListener('keydown', handleKeyDown)
+  }
+  if (typeof window !== 'undefined' && window.removeEventListener) {
+    window.removeEventListener('resize', handleResize)
+  }
+})
 </script>
 
 <style scoped>
