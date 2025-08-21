@@ -256,8 +256,8 @@ class EmojiControllerTest extends TestCase
         
         $data = $response->json();
         
-        // 驗證總 emoji 數量合理（約 1900 個）
-        $this->assertGreaterThan(1800, $data['meta']['total']);
-        $this->assertLessThan(2200, $data['meta']['total']);
+        // 驗證總 emoji 數量合理（約 1630 個，黑名單過濾後）
+        $this->assertGreaterThan(1600, $data['meta']['total']);
+        $this->assertLessThan(1700, $data['meta']['total']);
     }
 }

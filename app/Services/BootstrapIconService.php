@@ -39,13 +39,17 @@ class BootstrapIconService
                 
                 // 處理該分類下的每個 icon (新的扁平結構)
                 foreach ($categoryData['icons'] as $icon) {
-                    // 新結構中每個 icon 已經是完整的項目，直接使用
+                    // 確保所有圖標都有 variant_type 欄位
+                    if (!isset($icon['variant_type'])) {
+                        $icon['variant_type'] = 'outline'; // 預設為 outline
+                    }
+                    
                     $expandedIcons[] = $icon;
                 }
             }
             
-            // 按分類分組 - 根據實際圖標的分類來分組
-            $allCategories = ['all', 'general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others'];
+            // 按分類分組 - 根據實際圖標的分類來分組（不包含 'all' 分類）
+            $allCategories = ['general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others'];
             
             // 初始化所有分類
             foreach ($allCategories as $categoryId) {
