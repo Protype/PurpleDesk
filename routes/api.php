@@ -72,4 +72,7 @@ Route::prefix('config/icon')->group(function () {
     Route::get('/bootstrap-icons', [BootstrapIconController::class, 'index']);
     Route::get('/bootstrap-icons/categories', [BootstrapIconController::class, 'categories']);
     Route::get('/bootstrap-icons/category/{category}', [BootstrapIconController::class, 'category']);
+    
+    // 獨立的 all-filtered API 端點
+    Route::get('/bootstrap-icons/all-filtered', [BootstrapIconController::class, 'allFilteredIndependent']);
 });

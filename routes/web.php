@@ -32,6 +32,39 @@ Route::get('/debug/bootstrap-icons-config', function () {
     dd($config);
 });
 
+// Bootstrap Icons 轉換器 dd 檢視
+Route::get('/debug/bootstrap-icons/general', function () {
+    $generalConfig = include config_path('icon/bootstrap-icons/general_test.php');
+    dd($generalConfig);
+});
+
+// 測試 BootstrapIconService
+Route::get('/debug/service-test', function () {
+    try {
+        // 測試 loadCategoriesFromFiles 方法
+        $service = new \App\Services\BootstrapIconService();
+        $reflector = new ReflectionClass($service);
+        $method = $reflector->getMethod('loadCategoriesFromFiles');
+        $method->setAccessible(true);
+        $categoriesData = $method->invoke($service);
+        
+        dd([
+            'categories_count' => count($categoriesData),
+            'categories_sample' => count($categoriesData) > 0 ? [
+                'first_keys' => array_keys($categoriesData[0]),
+                'first_sample' => array_slice($categoriesData[0], 0, 4, true)
+            ] : null
+        ]);
+    } catch (\Exception $e) {
+        dd([
+            'error' => true,
+            'message' => $e->getMessage(),
+            'file' => $e->getFile(),
+            'line' => $e->getLine()
+        ]);
+    }
+});
+
 Route::get('/debug/heroicons-config', function () {
     $config = config('icon.heroicons');
     dd($config);

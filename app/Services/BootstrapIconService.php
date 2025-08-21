@@ -28,7 +28,8 @@ class BootstrapIconService
             $expandedIcons = [];
             
             foreach ($categoriesData as $categoryData) {
-                $categoryId = $categoryData['category'];
+                // 相容新舊格式：新格式使用 'id'，舊格式使用 'category'
+                $categoryId = $categoryData['id'] ?? $categoryData['category'];
                 
                 // 添加分類資訊到 meta
                 $result['meta']['categories'][$categoryId] = [
@@ -42,6 +43,7 @@ class BootstrapIconService
                     $baseClass = $icon['class'];
                     $keywords = $icon['keywords'] ?? [];
                     $variants = $icon['variants'] ?? [];
+                    $iconCategory = $icon['category'] ?? $categoryId; // 使用圖標自己的 category 欄位，fallback 到檔案 ID
                     
                     // 為每個變體創建獨立的項目
                     foreach ($variants as $variantType => $variantData) {
@@ -54,7 +56,7 @@ class BootstrapIconService
                             'value' => $variantClass, // Bootstrap Icon 使用 CSS class 作為 value
                             'type' => 'bootstrap-icons',
                             'keywords' => $this->generateKeywords($baseName, $keywords),
-                            'category' => $categoryId,
+                            'category' => $iconCategory, // 使用圖標自己的分類
                             'has_variants' => count($variants) > 1,
                             'variant_type' => $variantType
                         ];
@@ -64,15 +66,32 @@ class BootstrapIconService
                 }
             }
             
-            // 按分類分組
+            // 按分類分組 - 根據實際圖標的分類來分組
+            $allCategories = ['all', 'general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others'];
+            
+            // 初始化所有分類
+            foreach ($allCategories as $categoryId) {
+                $result['data'][$categoryId] = [];
+            }
+            
+            // 將圖標分配到對應分類
             foreach ($expandedIcons as $icon) {
-                $categoryId = $icon['category'];
-                
-                if (!isset($result['data'][$categoryId])) {
-                    $result['data'][$categoryId] = [];
+                $iconCategory = $icon['category'];
+                if (!isset($result['data'][$iconCategory])) {
+                    $result['data'][$iconCategory] = [];
                 }
-                
-                $result['data'][$categoryId][] = $icon;
+                $result['data'][$iconCategory][] = $icon;
+            }
+            
+            // 為實際存在的分類添加 meta 資訊
+            foreach ($categoriesData as $categoryData) {
+                $categoryId = $categoryData['id'] ?? $categoryData['category'];
+                if (!isset($result['meta']['categories'][$categoryId])) {
+                    $result['meta']['categories'][$categoryId] = [
+                        'name' => $categoryData['name'],
+                        'description' => $categoryData['description']
+                    ];
+                }
             }
             
             // 計算總數
@@ -89,7 +108,7 @@ class BootstrapIconService
     {
         $categoriesData = [];
         $categoryFiles = [
-            'general', 'ui', 'communications', 'files', 
+            'all', 'general', 'ui', 'communications', 'files', 
             'media', 'people', 'alphanumeric', 'others'
         ];
         
@@ -172,6 +191,46 @@ class BootstrapIconService
                 'type' => 'bootstrap-icons',
                 'categories' => [
                     $categoryId => $categories[$categoryId]
+                ]
+            ]
+        ];
+    }
+    
+    /**
+     * 取得過濾後的 'all' 分類圖標
+     * 只回傳 category 欄位仍然是 'all' 的圖標
+     */
+    public function getAllFilteredIcons(): array
+    {
+        $allData = $this->getAllBootstrapIcons();
+        
+        // 取得 'all' 分類的圖標
+        $allCategoryIcons = $allData['data']['all'] ?? [];
+        
+        // 篩選出 category 欄位仍然是 'all' 的圖標
+        $filteredIcons = [];
+        foreach ($allCategoryIcons as $icon) {
+            // 檢查展開後圖標的 category 欄位
+            if (isset($icon['category']) && $icon['category'] === 'all') {
+                $filteredIcons[] = $icon;
+            }
+        }
+        
+        return [
+            'data' => [
+                'all-filtered' => $filteredIcons
+            ],
+            'meta' => [
+                'total' => count($filteredIcons),
+                'type' => 'bootstrap-icons',
+                'description' => '只顯示未被重新分類的 all 類別圖標',
+                'original_total' => count($allCategoryIcons),
+                'filtered_count' => count($allCategoryIcons) - count($filteredIcons),
+                'categories' => [
+                    'all-filtered' => [
+                        'name' => '全部圖標 (未分類)',
+                        'description' => '只包含 category 仍為 all 的圖標'
+                    ]
                 ]
             ]
         ];
