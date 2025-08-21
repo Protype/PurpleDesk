@@ -220,7 +220,7 @@ export function useIconService() {
   // ===== 私有輔助函數 =====
 
   /**
-   * 處理 Emoji 資料格式
+   * 處理 Emoji 資料格式 - 適配新的扁平化 API 格式
    */
   const processEmojiData = (rawData) => {
     // 如果資料已經是陣列格式，直接返回
@@ -230,15 +230,17 @@ export function useIconService() {
     
     // 如果是物件，嘗試提取陣列
     if (rawData && typeof rawData === 'object') {
-      // 處理新的 API 格式：{ categories: { categoryId: { subgroups: { subgroupId: { emojis: [...] } } } } }
+      // 新的扁平化 API 格式：{ data: { categoryId: [...] } }
+      if (rawData.data && typeof rawData.data === 'object') {
+        return processNewEmojiFormat(rawData.data)
+      }
+      
+      // 處理舊的 API 格式：{ categories: { categoryId: { subgroups: { subgroupId: { emojis: [...] } } } } }
       if (rawData.categories && typeof rawData.categories === 'object') {
         return processCategoriesFormat(rawData.categories)
       }
       
-      // 檢查常見的資料結構
-      if (rawData.data && Array.isArray(rawData.data)) {
-        return rawData.data
-      }
+      // 檢查其他常見的資料結構
       if (rawData.emojis && Array.isArray(rawData.emojis)) {
         return rawData.emojis
       }
@@ -250,6 +252,38 @@ export function useIconService() {
     // 如果無法識別格式，返回空陣列
     console.warn('Unknown emoji data format, returning empty array')
     return []
+  }
+
+  /**
+   * 處理新的扁平化 emoji 格式
+   */
+  const processNewEmojiFormat = (data) => {
+    const result = []
+    
+    // 分類名稱對應表
+    const categoryNameMap = {
+      'smileys_emotion': '表情符號與人物',
+      'people_body': '人物與身體',
+      'animals_nature': '動物與自然',
+      'food_drink': '食物與飲料',
+      'travel_places': '旅遊與地點',
+      'activities': '活動',
+      'objects': '物品',
+      'symbols': '符號',
+      'flags': '旗幟'
+    }
+    
+    Object.entries(data).forEach(([categoryId, emojis]) => {
+      if (Array.isArray(emojis) && emojis.length > 0) {
+        result.push({
+          categoryId,
+          categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
+          emojis: emojis
+        })
+      }
+    })
+    
+    return result
   }
 
   /**

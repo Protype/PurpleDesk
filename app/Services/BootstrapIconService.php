@@ -72,8 +72,13 @@ class BootstrapIconService
                 }
             }
             
-            // 計算總數
-            $result['meta']['total'] = count($expandedIcons);
+            // 計算總數 - 計算唯一基礎圖標數量而非變體數量
+            $uniqueBaseIcons = [];
+            foreach ($expandedIcons as $icon) {
+                $baseName = str_replace(['-fill', '-solid'], '', $icon['name']);
+                $uniqueBaseIcons[$baseName] = true;
+            }
+            $result['meta']['total'] = count($uniqueBaseIcons);
             
             return $result;
         });

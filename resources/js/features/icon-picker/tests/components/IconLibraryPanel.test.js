@@ -193,7 +193,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
       
       // 驗證包含所有類型的圖標
       const heroIcons = processedIcons.filter(icon => icon.type === 'heroicons')
-      const bootstrapIcons = processedIcons.filter(icon => icon.type === 'bootstrap')
+      const bootstrapIcons = processedIcons.filter(icon => icon.type === 'bootstrap-icons')
       
       expect(heroIcons.length).toBe(3) // 3 個 HeroIcons
       expect(bootstrapIcons.length).toBe(4) // 4 個 Bootstrap Icons
@@ -221,7 +221,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
       })
 
       // Bootstrap Icons: 不包含 -fill 後綴的
-      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap')
+      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
       const fillIcons = bootstrapIcons.filter(icon => icon.value && icon.value.endsWith('-fill'))
       expect(fillIcons.length).toBe(0)
     })
@@ -239,7 +239,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
       })
 
       // Bootstrap Icons: 只包含 -fill 後綴的或單一變體的
-      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap')
+      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
       bootstrapIcons.forEach(icon => {
         const isFillIcon = icon.value && icon.value.endsWith('-fill')
         const isSingleVariant = !icon.has_variants
@@ -283,7 +283,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
 
     it('應該正確渲染 Bootstrap Icon 的 class', () => {
       const bootstrapIcon = {
-        type: 'bootstrap',
+        type: 'bootstrap-icons',
         value: 'bi-activity'
       }
 
@@ -306,7 +306,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
       const iconWithName = { name: 'Home', type: 'heroicons' }
       expect(wrapper.vm.getIconTitle(iconWithName)).toBe('Home')
 
-      const iconWithValue = { value: 'bi-activity', type: 'bootstrap' }
+      const iconWithValue = { value: 'bi-activity', type: 'bootstrap-icons' }
       expect(wrapper.vm.getIconTitle(iconWithValue)).toBe('bi-activity')
 
       const emptyIcon = {}
@@ -359,7 +359,7 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
 
       // 所有項目都應該是圖標
       groupedIcons.forEach(item => {
-        expect(['heroicons', 'bootstrap']).toContain(item.type)
+        expect(['heroicons', 'bootstrap-icons']).toContain(item.type)
       })
     })
   })

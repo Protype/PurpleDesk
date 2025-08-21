@@ -177,8 +177,8 @@ const processedIconsData = computed(() => {
   
   return processedIcons.sort((a, b) => {
     // 首先按類型排序：HeroIcons 在前，Bootstrap Icons 在後
-    const typeA = a.type === 'heroicons' ? 'heroicons' : 'bootstrap'
-    const typeB = b.type === 'heroicons' ? 'heroicons' : 'bootstrap' 
+    const typeA = a.type === 'heroicons' ? 'heroicons' : 'bootstrap-icons'
+    const typeB = b.type === 'heroicons' ? 'heroicons' : 'bootstrap-icons' 
     
     if (typeA !== typeB) {
       if (typeA === 'heroicons') return -1
@@ -256,7 +256,7 @@ const groupedIcons = computed(() => {
   
   // 正常顯示按分類分組
   const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
-  const bootstrapIcons = filteredIcons.value.filter(icon => icon.type === 'bootstrap')
+  const bootstrapIcons = filteredIcons.value.filter(icon => icon.type === 'bootstrap-icons')
 
   const items = []
   
