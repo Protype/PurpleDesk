@@ -37,32 +37,10 @@ class BootstrapIconService
                     'description' => $categoryData['description']
                 ];
                 
-                // 處理該分類下的每個 icon
+                // 處理該分類下的每個 icon (新的扁平結構)
                 foreach ($categoryData['icons'] as $icon) {
-                    $baseName = $icon['displayName'] ?? $icon['name'];
-                    $baseClass = $icon['class'];
-                    $keywords = $icon['keywords'] ?? [];
-                    $variants = $icon['variants'] ?? [];
-                    $iconCategory = $icon['category'] ?? $categoryId; // 使用圖標自己的 category 欄位，fallback 到檔案 ID
-                    
-                    // 為每個變體創建獨立的項目
-                    foreach ($variants as $variantType => $variantData) {
-                        $variantClass = $variantData['class'];
-                        $iconId = str_replace('bi-', '', $icon['name']) . '-' . $variantType;
-                        
-                        $expandedIcon = [
-                            'id' => $iconId,
-                            'name' => $baseName,
-                            'value' => $variantClass, // Bootstrap Icon 使用 CSS class 作為 value
-                            'type' => 'bootstrap-icons',
-                            'keywords' => $this->generateKeywords($baseName, $keywords),
-                            'category' => $iconCategory, // 使用圖標自己的分類
-                            'has_variants' => count($variants) > 1,
-                            'variant_type' => $variantType
-                        ];
-                        
-                        $expandedIcons[] = $expandedIcon;
-                    }
+                    // 新結構中每個 icon 已經是完整的項目，直接使用
+                    $expandedIcons[] = $icon;
                 }
             }
             
