@@ -40,7 +40,7 @@
     
     <!-- Hero Icon 顯示 -->
     <component
-      v-else-if="iconData?.type === 'hero_icon' && heroIconComponent"
+      v-else-if="(iconData?.type === 'hero_icon' || iconData?.type === 'heroicons') && heroIconComponent"
       :is="heroIconComponent"
       :class="iconSizeClasses"
       :style="iconStyles"
@@ -48,9 +48,9 @@
     
     <!-- Bootstrap Icon 顯示 -->
     <i
-      v-else-if="iconData?.type === 'bootstrap_icon'"
+      v-else-if="iconData?.type === 'bootstrap_icon' || iconData?.type === 'bootstrap-icons'"
       :class="[
-        `bi-${iconData.icon}${iconData.style === 'fill' ? '-fill' : ''}`,
+        iconData.icon,
         iconSizeClasses
       ]"
       :style="iconStyles"
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted, watch } from 'vue'
 import { getIconDisplayConfig } from '@/config/iconDisplayConfig.js'
 
 export default {
@@ -280,45 +280,35 @@ export default {
       imageError.value = true
     }
     
-    // 載入 Hero Icon (使用靜態導入)
+    // 載入 Hero Icon (使用專用 loader)
     const loadHeroIcon = async () => {
-      if (props.iconData?.type !== 'hero_icon' || !props.iconData?.icon) {
+      const isHeroIcon = props.iconData?.type === 'hero_icon' || props.iconData?.type === 'heroicons'
+      const iconName = props.iconData?.icon
+      
+      if (!isHeroIcon || !iconName) {
+        heroIconComponent.value = null
         return
       }
       
       try {
-        const iconName = props.iconData.icon
-        const style = props.iconData.style === 'solid' ? 'solid' : 'outline'
+        const variant = props.iconData.variant === 'solid' ? 'solid' : 'outline'
         
-        // 使用靜態導入，只支援常用的圖標
-        const iconMap = {
-          'user-outline': () => import('@heroicons/vue/outline/UserIcon'),
-          'user-solid': () => import('@heroicons/vue/solid/UserIcon'),
-          'heart-outline': () => import('@heroicons/vue/outline/HeartIcon'),
-          'heart-solid': () => import('@heroicons/vue/solid/HeartIcon'),
-          'star-outline': () => import('@heroicons/vue/outline/StarIcon'),
-          'star-solid': () => import('@heroicons/vue/solid/StarIcon'),
-          'home-outline': () => import('@heroicons/vue/outline/HomeIcon'),
-          'home-solid': () => import('@heroicons/vue/solid/HomeIcon'),
-          'office-building-outline': () => import('@heroicons/vue/outline/OfficeBuildingIcon'),
-          'office-building-solid': () => import('@heroicons/vue/solid/OfficeBuildingIcon'),
-        }
+        // 使用專用的 heroicons loader
+        const { loadHeroicon } = await import('@/utils/heroicons/heroiconsLoader.js')
+        const component = await loadHeroicon(iconName, variant)
         
-        const iconKey = `${iconName}-${style}`
-        if (iconMap[iconKey]) {
-          const iconModule = await iconMap[iconKey]()
-          heroIconComponent.value = iconModule.default
-        } else {
-          console.warn('Hero icon not found:', iconKey, 'Available:', Object.keys(iconMap))
-          heroIconComponent.value = null
-        }
+        heroIconComponent.value = component
       } catch (error) {
-        console.error('Failed to load hero icon:', props.iconData.icon, error)
+        console.error('Failed to load hero icon:', iconName, error)
         heroIconComponent.value = null
       }
     }
     
-    // 監聽頭像數據變化
+    // 監聽 iconData 變化，重新載入 hero icon
+    watch(() => props.iconData, () => {
+      loadHeroIcon()
+    }, { immediate: true })
+    
     onMounted(() => {
       loadHeroIcon()
     })
@@ -334,7 +324,7 @@ export default {
       iconStyles,
       emojiStyles,
       imageUrl,
-      onImageError
+      onImageError,
     }
   }
 }
