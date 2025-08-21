@@ -1,4643 +1,9578 @@
 <?php
 
-return [
-    'id' => 'ui',
-    'name' => 'UI 元件',
-    'description' => '用戶界面相關圖標',
-    'priority' => 'high',
-
-    'icons' => [
-        [
-            'name' => 'align-bottom',
-            'displayName' => 'Align Bottom',
-            'class' => 'bi-align-bottom',
-            'keywords' => ["align","bottom"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-bottom'],
-            ]
-        ],
-        [
-            'name' => 'align-center',
-            'displayName' => 'Align Center',
-            'class' => 'bi-align-center',
-            'keywords' => ["align","center"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-center'],
-            ]
-        ],
-        [
-            'name' => 'align-end',
-            'displayName' => 'Align End',
-            'class' => 'bi-align-end',
-            'keywords' => ["align","end"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-end'],
-            ]
-        ],
-        [
-            'name' => 'align-middle',
-            'displayName' => 'Align Middle',
-            'class' => 'bi-align-middle',
-            'keywords' => ["align","middle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-middle'],
-            ]
-        ],
-        [
-            'name' => 'align-start',
-            'displayName' => 'Align Start',
-            'class' => 'bi-align-start',
-            'keywords' => ["align","start"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-start'],
-            ]
-        ],
-        [
-            'name' => 'align-top',
-            'displayName' => 'Align Top',
-            'class' => 'bi-align-top',
-            'keywords' => ["align","top"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-align-top'],
-            ]
-        ],
-        [
-            'name' => 'app-indicator',
-            'displayName' => 'App Indicator',
-            'class' => 'bi-app-indicator',
-            'keywords' => ["app","indicator"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-app-indicator'],
-            ]
-        ],
-        [
-            'name' => 'app',
-            'displayName' => 'App',
-            'class' => 'bi-app',
-            'keywords' => ["app"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-app'],
-            ]
-        ],
-        [
-            'name' => 'arrow-90deg-down',
-            'displayName' => 'Arrow 90deg Down',
-            'class' => 'bi-arrow-90deg-down',
-            'keywords' => ["arrow","90deg","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-90deg-down'],
-            ]
-        ],
-        [
-            'name' => 'arrow-90deg-left',
-            'displayName' => 'Arrow 90deg Left',
-            'class' => 'bi-arrow-90deg-left',
-            'keywords' => ["arrow","90deg","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-90deg-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-90deg-right',
-            'displayName' => 'Arrow 90deg Right',
-            'class' => 'bi-arrow-90deg-right',
-            'keywords' => ["arrow","90deg","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-90deg-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-90deg-up',
-            'displayName' => 'Arrow 90deg Up',
-            'class' => 'bi-arrow-90deg-up',
-            'keywords' => ["arrow","90deg","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-90deg-up'],
-            ]
-        ],
-        [
-            'name' => 'arrow-bar-down',
-            'displayName' => 'Arrow Bar Down',
-            'class' => 'bi-arrow-bar-down',
-            'keywords' => ["arrow","bar","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-bar-down'],
-            ]
-        ],
-        [
-            'name' => 'arrow-bar-left',
-            'displayName' => 'Arrow Bar Left',
-            'class' => 'bi-arrow-bar-left',
-            'keywords' => ["arrow","bar","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-bar-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-bar-right',
-            'displayName' => 'Arrow Bar Right',
-            'class' => 'bi-arrow-bar-right',
-            'keywords' => ["arrow","bar","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-bar-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-bar-up',
-            'displayName' => 'Arrow Bar Up',
-            'class' => 'bi-arrow-bar-up',
-            'keywords' => ["arrow","bar","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-bar-up'],
-            ]
-        ],
-        [
-            'name' => 'arrow-clockwise',
-            'displayName' => 'Arrow Clockwise',
-            'class' => 'bi-arrow-clockwise',
-            'keywords' => ["arrow","clockwise"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-clockwise'],
-            ]
-        ],
-        [
-            'name' => 'arrow-counterclockwise',
-            'displayName' => 'Arrow Counterclockwise',
-            'class' => 'bi-arrow-counterclockwise',
-            'keywords' => ["arrow","counterclockwise"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-counterclockwise'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-circle-fill',
-            'displayName' => 'Arrow Down Circle Fill',
-            'class' => 'bi-arrow-down-circle-fill',
-            'keywords' => ["arrow","down","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-down-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-circle',
-            'displayName' => 'Arrow Down Circle',
-            'class' => 'bi-arrow-down-circle',
-            'keywords' => ["arrow","down","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-circle'],
-                'solid' => ['class' => 'bi-arrow-down-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-left-circle-fill',
-            'displayName' => 'Arrow Down Left Circle Fill',
-            'class' => 'bi-arrow-down-left-circle-fill',
-            'keywords' => ["arrow","down","left","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-left-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-down-left-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-left-circle',
-            'displayName' => 'Arrow Down Left Circle',
-            'class' => 'bi-arrow-down-left-circle',
-            'keywords' => ["arrow","down","left","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-left-circle'],
-                'solid' => ['class' => 'bi-arrow-down-left-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-left-square-fill',
-            'displayName' => 'Arrow Down Left Square Fill',
-            'class' => 'bi-arrow-down-left-square-fill',
-            'keywords' => ["arrow","down","left","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-left-square-fill'],
-                'outline' => ['class' => 'bi-arrow-down-left-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-left-square',
-            'displayName' => 'Arrow Down Left Square',
-            'class' => 'bi-arrow-down-left-square',
-            'keywords' => ["arrow","down","left","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-left-square'],
-                'solid' => ['class' => 'bi-arrow-down-left-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-left',
-            'displayName' => 'Arrow Down Left',
-            'class' => 'bi-arrow-down-left',
-            'keywords' => ["arrow","down","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-right-circle-fill',
-            'displayName' => 'Arrow Down Right Circle Fill',
-            'class' => 'bi-arrow-down-right-circle-fill',
-            'keywords' => ["arrow","down","right","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-right-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-down-right-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-right-circle',
-            'displayName' => 'Arrow Down Right Circle',
-            'class' => 'bi-arrow-down-right-circle',
-            'keywords' => ["arrow","down","right","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-right-circle'],
-                'solid' => ['class' => 'bi-arrow-down-right-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-right-square-fill',
-            'displayName' => 'Arrow Down Right Square Fill',
-            'class' => 'bi-arrow-down-right-square-fill',
-            'keywords' => ["arrow","down","right","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-right-square-fill'],
-                'outline' => ['class' => 'bi-arrow-down-right-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-right-square',
-            'displayName' => 'Arrow Down Right Square',
-            'class' => 'bi-arrow-down-right-square',
-            'keywords' => ["arrow","down","right","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-right-square'],
-                'solid' => ['class' => 'bi-arrow-down-right-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-right',
-            'displayName' => 'Arrow Down Right',
-            'class' => 'bi-arrow-down-right',
-            'keywords' => ["arrow","down","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-short',
-            'displayName' => 'Arrow Down Short',
-            'class' => 'bi-arrow-down-short',
-            'keywords' => ["arrow","down","short"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-short'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-square-fill',
-            'displayName' => 'Arrow Down Square Fill',
-            'class' => 'bi-arrow-down-square-fill',
-            'keywords' => ["arrow","down","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-down-square-fill'],
-                'outline' => ['class' => 'bi-arrow-down-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-square',
-            'displayName' => 'Arrow Down Square',
-            'class' => 'bi-arrow-down-square',
-            'keywords' => ["arrow","down","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-square'],
-                'solid' => ['class' => 'bi-arrow-down-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down-up',
-            'displayName' => 'Arrow Down Up',
-            'class' => 'bi-arrow-down-up',
-            'keywords' => ["arrow","down","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down-up'],
-            ]
-        ],
-        [
-            'name' => 'arrow-down',
-            'displayName' => 'Arrow Down',
-            'class' => 'bi-arrow-down',
-            'keywords' => ["arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-circle-fill',
-            'displayName' => 'Arrow Left Circle Fill',
-            'class' => 'bi-arrow-left-circle-fill',
-            'keywords' => ["arrow","left","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-left-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-left-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-circle',
-            'displayName' => 'Arrow Left Circle',
-            'class' => 'bi-arrow-left-circle',
-            'keywords' => ["arrow","left","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left-circle'],
-                'solid' => ['class' => 'bi-arrow-left-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-right',
-            'displayName' => 'Arrow Left Right',
-            'class' => 'bi-arrow-left-right',
-            'keywords' => ["arrow","left","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-short',
-            'displayName' => 'Arrow Left Short',
-            'class' => 'bi-arrow-left-short',
-            'keywords' => ["arrow","left","short"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left-short'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-square-fill',
-            'displayName' => 'Arrow Left Square Fill',
-            'class' => 'bi-arrow-left-square-fill',
-            'keywords' => ["arrow","left","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-left-square-fill'],
-                'outline' => ['class' => 'bi-arrow-left-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left-square',
-            'displayName' => 'Arrow Left Square',
-            'class' => 'bi-arrow-left-square',
-            'keywords' => ["arrow","left","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left-square'],
-                'solid' => ['class' => 'bi-arrow-left-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-left',
-            'displayName' => 'Arrow Left',
-            'class' => 'bi-arrow-left',
-            'keywords' => ["arrow","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-repeat',
-            'displayName' => 'Arrow Repeat',
-            'class' => 'bi-arrow-repeat',
-            'keywords' => ["arrow","repeat"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-repeat'],
-            ]
-        ],
-        [
-            'name' => 'arrow-return-left',
-            'displayName' => 'Arrow Return Left',
-            'class' => 'bi-arrow-return-left',
-            'keywords' => ["arrow","return","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-return-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-return-right',
-            'displayName' => 'Arrow Return Right',
-            'class' => 'bi-arrow-return-right',
-            'keywords' => ["arrow","return","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-return-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right-circle-fill',
-            'displayName' => 'Arrow Right Circle Fill',
-            'class' => 'bi-arrow-right-circle-fill',
-            'keywords' => ["arrow","right","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-right-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-right-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right-circle',
-            'displayName' => 'Arrow Right Circle',
-            'class' => 'bi-arrow-right-circle',
-            'keywords' => ["arrow","right","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-right-circle'],
-                'solid' => ['class' => 'bi-arrow-right-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right-short',
-            'displayName' => 'Arrow Right Short',
-            'class' => 'bi-arrow-right-short',
-            'keywords' => ["arrow","right","short"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-right-short'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right-square-fill',
-            'displayName' => 'Arrow Right Square Fill',
-            'class' => 'bi-arrow-right-square-fill',
-            'keywords' => ["arrow","right","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-right-square-fill'],
-                'outline' => ['class' => 'bi-arrow-right-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right-square',
-            'displayName' => 'Arrow Right Square',
-            'class' => 'bi-arrow-right-square',
-            'keywords' => ["arrow","right","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-right-square'],
-                'solid' => ['class' => 'bi-arrow-right-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-right',
-            'displayName' => 'Arrow Right',
-            'class' => 'bi-arrow-right',
-            'keywords' => ["arrow","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-circle-fill',
-            'displayName' => 'Arrow Up Circle Fill',
-            'class' => 'bi-arrow-up-circle-fill',
-            'keywords' => ["arrow","up","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-up-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-circle',
-            'displayName' => 'Arrow Up Circle',
-            'class' => 'bi-arrow-up-circle',
-            'keywords' => ["arrow","up","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-circle'],
-                'solid' => ['class' => 'bi-arrow-up-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-left-circle-fill',
-            'displayName' => 'Arrow Up Left Circle Fill',
-            'class' => 'bi-arrow-up-left-circle-fill',
-            'keywords' => ["arrow","up","left","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-left-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-up-left-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-left-circle',
-            'displayName' => 'Arrow Up Left Circle',
-            'class' => 'bi-arrow-up-left-circle',
-            'keywords' => ["arrow","up","left","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-left-circle'],
-                'solid' => ['class' => 'bi-arrow-up-left-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-left-square-fill',
-            'displayName' => 'Arrow Up Left Square Fill',
-            'class' => 'bi-arrow-up-left-square-fill',
-            'keywords' => ["arrow","up","left","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-left-square-fill'],
-                'outline' => ['class' => 'bi-arrow-up-left-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-left-square',
-            'displayName' => 'Arrow Up Left Square',
-            'class' => 'bi-arrow-up-left-square',
-            'keywords' => ["arrow","up","left","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-left-square'],
-                'solid' => ['class' => 'bi-arrow-up-left-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-left',
-            'displayName' => 'Arrow Up Left',
-            'class' => 'bi-arrow-up-left',
-            'keywords' => ["arrow","up","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-left'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-right-circle-fill',
-            'displayName' => 'Arrow Up Right Circle Fill',
-            'class' => 'bi-arrow-up-right-circle-fill',
-            'keywords' => ["arrow","up","right","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-right-circle-fill'],
-                'outline' => ['class' => 'bi-arrow-up-right-circle'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-right-circle',
-            'displayName' => 'Arrow Up Right Circle',
-            'class' => 'bi-arrow-up-right-circle',
-            'keywords' => ["arrow","up","right","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-right-circle'],
-                'solid' => ['class' => 'bi-arrow-up-right-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-right-square-fill',
-            'displayName' => 'Arrow Up Right Square Fill',
-            'class' => 'bi-arrow-up-right-square-fill',
-            'keywords' => ["arrow","up","right","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-right-square-fill'],
-                'outline' => ['class' => 'bi-arrow-up-right-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-right-square',
-            'displayName' => 'Arrow Up Right Square',
-            'class' => 'bi-arrow-up-right-square',
-            'keywords' => ["arrow","up","right","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-right-square'],
-                'solid' => ['class' => 'bi-arrow-up-right-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-right',
-            'displayName' => 'Arrow Up Right',
-            'class' => 'bi-arrow-up-right',
-            'keywords' => ["arrow","up","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-right'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-short',
-            'displayName' => 'Arrow Up Short',
-            'class' => 'bi-arrow-up-short',
-            'keywords' => ["arrow","up","short"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-short'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-square-fill',
-            'displayName' => 'Arrow Up Square Fill',
-            'class' => 'bi-arrow-up-square-fill',
-            'keywords' => ["arrow","up","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-arrow-up-square-fill'],
-                'outline' => ['class' => 'bi-arrow-up-square'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up-square',
-            'displayName' => 'Arrow Up Square',
-            'class' => 'bi-arrow-up-square',
-            'keywords' => ["arrow","up","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up-square'],
-                'solid' => ['class' => 'bi-arrow-up-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'arrow-up',
-            'displayName' => 'Arrow Up',
-            'class' => 'bi-arrow-up',
-            'keywords' => ["arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'arrows-angle-contract',
-            'displayName' => 'Arrows Angle Contract',
-            'class' => 'bi-arrows-angle-contract',
-            'keywords' => ["arrows","angle","contract"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-angle-contract'],
-            ]
-        ],
-        [
-            'name' => 'arrows-angle-expand',
-            'displayName' => 'Arrows Angle Expand',
-            'class' => 'bi-arrows-angle-expand',
-            'keywords' => ["arrows","angle","expand"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-angle-expand'],
-            ]
-        ],
-        [
-            'name' => 'arrows-collapse',
-            'displayName' => 'Arrows Collapse',
-            'class' => 'bi-arrows-collapse',
-            'keywords' => ["arrows","collapse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-collapse'],
-            ]
-        ],
-        [
-            'name' => 'arrows-expand',
-            'displayName' => 'Arrows Expand',
-            'class' => 'bi-arrows-expand',
-            'keywords' => ["arrows","expand"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-expand'],
-            ]
-        ],
-        [
-            'name' => 'arrows-fullscreen',
-            'displayName' => 'Arrows Fullscreen',
-            'class' => 'bi-arrows-fullscreen',
-            'keywords' => ["arrows","fullscreen"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-fullscreen'],
-            ]
-        ],
-        [
-            'name' => 'arrows-move',
-            'displayName' => 'Arrows Move',
-            'class' => 'bi-arrows-move',
-            'keywords' => ["arrows","move"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-move'],
-            ]
-        ],
-        [
-            'name' => 'aspect-ratio-fill',
-            'displayName' => 'Aspect Ratio Fill',
-            'class' => 'bi-aspect-ratio-fill',
-            'keywords' => ["aspect","ratio","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-aspect-ratio-fill'],
-                'outline' => ['class' => 'bi-aspect-ratio'],
-            ]
-        ],
-        [
-            'name' => 'aspect-ratio',
-            'displayName' => 'Aspect Ratio',
-            'class' => 'bi-aspect-ratio',
-            'keywords' => ["aspect","ratio"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-aspect-ratio'],
-                'solid' => ['class' => 'bi-aspect-ratio-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-3d-fill',
-            'displayName' => 'Badge 3d Fill',
-            'class' => 'bi-badge-3d-fill',
-            'keywords' => ["badge","3d","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-3d-fill'],
-                'outline' => ['class' => 'bi-badge-3d'],
-            ]
-        ],
-        [
-            'name' => 'badge-3d',
-            'displayName' => 'Badge 3d',
-            'class' => 'bi-badge-3d',
-            'keywords' => ["badge","3d"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-3d'],
-                'solid' => ['class' => 'bi-badge-3d-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-4k-fill',
-            'displayName' => 'Badge 4k Fill',
-            'class' => 'bi-badge-4k-fill',
-            'keywords' => ["badge","4k","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-4k-fill'],
-                'outline' => ['class' => 'bi-badge-4k'],
-            ]
-        ],
-        [
-            'name' => 'badge-4k',
-            'displayName' => 'Badge 4k',
-            'class' => 'bi-badge-4k',
-            'keywords' => ["badge","4k"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-4k'],
-                'solid' => ['class' => 'bi-badge-4k-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-8k-fill',
-            'displayName' => 'Badge 8k Fill',
-            'class' => 'bi-badge-8k-fill',
-            'keywords' => ["badge","8k","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-8k-fill'],
-                'outline' => ['class' => 'bi-badge-8k'],
-            ]
-        ],
-        [
-            'name' => 'badge-8k',
-            'displayName' => 'Badge 8k',
-            'class' => 'bi-badge-8k',
-            'keywords' => ["badge","8k"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-8k'],
-                'solid' => ['class' => 'bi-badge-8k-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-ad-fill',
-            'displayName' => 'Badge Ad Fill',
-            'class' => 'bi-badge-ad-fill',
-            'keywords' => ["badge","ad","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-ad-fill'],
-                'outline' => ['class' => 'bi-badge-ad'],
-            ]
-        ],
-        [
-            'name' => 'badge-ad',
-            'displayName' => 'Badge Ad',
-            'class' => 'bi-badge-ad',
-            'keywords' => ["badge","ad"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-ad'],
-                'solid' => ['class' => 'bi-badge-ad-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-ar-fill',
-            'displayName' => 'Badge Ar Fill',
-            'class' => 'bi-badge-ar-fill',
-            'keywords' => ["badge","ar","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-ar-fill'],
-                'outline' => ['class' => 'bi-badge-ar'],
-            ]
-        ],
-        [
-            'name' => 'badge-ar',
-            'displayName' => 'Badge Ar',
-            'class' => 'bi-badge-ar',
-            'keywords' => ["badge","ar"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-ar'],
-                'solid' => ['class' => 'bi-badge-ar-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-cc-fill',
-            'displayName' => 'Badge Cc Fill',
-            'class' => 'bi-badge-cc-fill',
-            'keywords' => ["badge","cc","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-cc-fill'],
-                'outline' => ['class' => 'bi-badge-cc'],
-            ]
-        ],
-        [
-            'name' => 'badge-cc',
-            'displayName' => 'Badge Cc',
-            'class' => 'bi-badge-cc',
-            'keywords' => ["badge","cc"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-cc'],
-                'solid' => ['class' => 'bi-badge-cc-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-hd-fill',
-            'displayName' => 'Badge Hd Fill',
-            'class' => 'bi-badge-hd-fill',
-            'keywords' => ["badge","hd","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-hd-fill'],
-                'outline' => ['class' => 'bi-badge-hd'],
-            ]
-        ],
-        [
-            'name' => 'badge-hd',
-            'displayName' => 'Badge Hd',
-            'class' => 'bi-badge-hd',
-            'keywords' => ["badge","hd"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-hd'],
-                'solid' => ['class' => 'bi-badge-hd-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-tm-fill',
-            'displayName' => 'Badge Tm Fill',
-            'class' => 'bi-badge-tm-fill',
-            'keywords' => ["badge","tm","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-tm-fill'],
-                'outline' => ['class' => 'bi-badge-tm'],
-            ]
-        ],
-        [
-            'name' => 'badge-tm',
-            'displayName' => 'Badge Tm',
-            'class' => 'bi-badge-tm',
-            'keywords' => ["badge","tm"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-tm'],
-                'solid' => ['class' => 'bi-badge-tm-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-vo-fill',
-            'displayName' => 'Badge Vo Fill',
-            'class' => 'bi-badge-vo-fill',
-            'keywords' => ["badge","vo","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-vo-fill'],
-                'outline' => ['class' => 'bi-badge-vo'],
-            ]
-        ],
-        [
-            'name' => 'badge-vo',
-            'displayName' => 'Badge Vo',
-            'class' => 'bi-badge-vo',
-            'keywords' => ["badge","vo"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-vo'],
-                'solid' => ['class' => 'bi-badge-vo-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-vr-fill',
-            'displayName' => 'Badge Vr Fill',
-            'class' => 'bi-badge-vr-fill',
-            'keywords' => ["badge","vr","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-vr-fill'],
-                'outline' => ['class' => 'bi-badge-vr'],
-            ]
-        ],
-        [
-            'name' => 'badge-vr',
-            'displayName' => 'Badge Vr',
-            'class' => 'bi-badge-vr',
-            'keywords' => ["badge","vr"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-vr'],
-                'solid' => ['class' => 'bi-badge-vr-fill'],
-            ]
-        ],
-        [
-            'name' => 'badge-wc-fill',
-            'displayName' => 'Badge Wc Fill',
-            'class' => 'bi-badge-wc-fill',
-            'keywords' => ["badge","wc","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-wc-fill'],
-                'outline' => ['class' => 'bi-badge-wc'],
-            ]
-        ],
-        [
-            'name' => 'badge-wc',
-            'displayName' => 'Badge Wc',
-            'class' => 'bi-badge-wc',
-            'keywords' => ["badge","wc"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-wc'],
-                'solid' => ['class' => 'bi-badge-wc-fill'],
-            ]
-        ],
-        [
-            'name' => 'bar-chart-fill',
-            'displayName' => 'Bar Chart Fill',
-            'class' => 'bi-bar-chart-fill',
-            'keywords' => ["bar","chart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-bar-chart-fill'],
-                'outline' => ['class' => 'bi-bar-chart'],
-            ]
-        ],
-        [
-            'name' => 'bar-chart-line-fill',
-            'displayName' => 'Bar Chart Line Fill',
-            'class' => 'bi-bar-chart-line-fill',
-            'keywords' => ["bar","chart","line","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-bar-chart-line-fill'],
-                'outline' => ['class' => 'bi-bar-chart-line'],
-            ]
-        ],
-        [
-            'name' => 'bar-chart-line',
-            'displayName' => 'Bar Chart Line',
-            'class' => 'bi-bar-chart-line',
-            'keywords' => ["bar","chart","line"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-bar-chart-line'],
-                'solid' => ['class' => 'bi-bar-chart-line-fill'],
-            ]
-        ],
-        [
-            'name' => 'bar-chart-steps',
-            'displayName' => 'Bar Chart Steps',
-            'class' => 'bi-bar-chart-steps',
-            'keywords' => ["bar","chart","steps"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-bar-chart-steps'],
-            ]
-        ],
-        [
-            'name' => 'bar-chart',
-            'displayName' => 'Bar Chart',
-            'class' => 'bi-bar-chart',
-            'keywords' => ["bar","chart"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-bar-chart'],
-                'solid' => ['class' => 'bi-bar-chart-fill'],
-            ]
-        ],
-        [
-            'name' => 'border-all',
-            'displayName' => 'Border All',
-            'class' => 'bi-border-all',
-            'keywords' => ["border","all"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-all'],
-            ]
-        ],
-        [
-            'name' => 'border-bottom',
-            'displayName' => 'Border Bottom',
-            'class' => 'bi-border-bottom',
-            'keywords' => ["border","bottom"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-bottom'],
-            ]
-        ],
-        [
-            'name' => 'border-center',
-            'displayName' => 'Border Center',
-            'class' => 'bi-border-center',
-            'keywords' => ["border","center"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-center'],
-            ]
-        ],
-        [
-            'name' => 'border-inner',
-            'displayName' => 'Border Inner',
-            'class' => 'bi-border-inner',
-            'keywords' => ["border","inner"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-inner'],
-            ]
-        ],
-        [
-            'name' => 'border-left',
-            'displayName' => 'Border Left',
-            'class' => 'bi-border-left',
-            'keywords' => ["border","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-left'],
-            ]
-        ],
-        [
-            'name' => 'border-middle',
-            'displayName' => 'Border Middle',
-            'class' => 'bi-border-middle',
-            'keywords' => ["border","middle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-middle'],
-            ]
-        ],
-        [
-            'name' => 'border-outer',
-            'displayName' => 'Border Outer',
-            'class' => 'bi-border-outer',
-            'keywords' => ["border","outer"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-outer'],
-            ]
-        ],
-        [
-            'name' => 'border-right',
-            'displayName' => 'Border Right',
-            'class' => 'bi-border-right',
-            'keywords' => ["border","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-right'],
-            ]
-        ],
-        [
-            'name' => 'border-style',
-            'displayName' => 'Border Style',
-            'class' => 'bi-border-style',
-            'keywords' => ["border","style"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-style'],
-            ]
-        ],
-        [
-            'name' => 'border-top',
-            'displayName' => 'Border Top',
-            'class' => 'bi-border-top',
-            'keywords' => ["border","top"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-top'],
-            ]
-        ],
-        [
-            'name' => 'border-width',
-            'displayName' => 'Border Width',
-            'class' => 'bi-border-width',
-            'keywords' => ["border","width"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border-width'],
-            ]
-        ],
-        [
-            'name' => 'border',
-            'displayName' => 'Border',
-            'class' => 'bi-border',
-            'keywords' => ["border"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-border'],
-            ]
-        ],
-        [
-            'name' => 'bounding-box-circles',
-            'displayName' => 'Bounding Box Circles',
-            'class' => 'bi-bounding-box-circles',
-            'keywords' => ["bounding","box","circles"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-bounding-box-circles'],
-            ]
-        ],
-        [
-            'name' => 'bounding-box',
-            'displayName' => 'Bounding Box',
-            'class' => 'bi-bounding-box',
-            'keywords' => ["bounding","box"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-bounding-box'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-down-left',
-            'displayName' => 'Box Arrow Down Left',
-            'class' => 'bi-box-arrow-down-left',
-            'keywords' => ["box","arrow","down","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-down-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-down-right',
-            'displayName' => 'Box Arrow Down Right',
-            'class' => 'bi-box-arrow-down-right',
-            'keywords' => ["box","arrow","down","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-down-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-down',
-            'displayName' => 'Box Arrow Down',
-            'class' => 'bi-box-arrow-down',
-            'keywords' => ["box","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-down-left',
-            'displayName' => 'Box Arrow In Down Left',
-            'class' => 'bi-box-arrow-in-down-left',
-            'keywords' => ["box","arrow","in","down","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-down-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-down-right',
-            'displayName' => 'Box Arrow In Down Right',
-            'class' => 'bi-box-arrow-in-down-right',
-            'keywords' => ["box","arrow","in","down","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-down-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-down',
-            'displayName' => 'Box Arrow In Down',
-            'class' => 'bi-box-arrow-in-down',
-            'keywords' => ["box","arrow","in","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-down'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-left',
-            'displayName' => 'Box Arrow In Left',
-            'class' => 'bi-box-arrow-in-left',
-            'keywords' => ["box","arrow","in","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-right',
-            'displayName' => 'Box Arrow In Right',
-            'class' => 'bi-box-arrow-in-right',
-            'keywords' => ["box","arrow","in","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-up-left',
-            'displayName' => 'Box Arrow In Up Left',
-            'class' => 'bi-box-arrow-in-up-left',
-            'keywords' => ["box","arrow","in","up","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-up-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-up-right',
-            'displayName' => 'Box Arrow In Up Right',
-            'class' => 'bi-box-arrow-in-up-right',
-            'keywords' => ["box","arrow","in","up","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-up-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-in-up',
-            'displayName' => 'Box Arrow In Up',
-            'class' => 'bi-box-arrow-in-up',
-            'keywords' => ["box","arrow","in","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-in-up'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-left',
-            'displayName' => 'Box Arrow Left',
-            'class' => 'bi-box-arrow-left',
-            'keywords' => ["box","arrow","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-right',
-            'displayName' => 'Box Arrow Right',
-            'class' => 'bi-box-arrow-right',
-            'keywords' => ["box","arrow","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-up-left',
-            'displayName' => 'Box Arrow Up Left',
-            'class' => 'bi-box-arrow-up-left',
-            'keywords' => ["box","arrow","up","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-up-left'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-up-right',
-            'displayName' => 'Box Arrow Up Right',
-            'class' => 'bi-box-arrow-up-right',
-            'keywords' => ["box","arrow","up","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-up-right'],
-            ]
-        ],
-        [
-            'name' => 'box-arrow-up',
-            'displayName' => 'Box Arrow Up',
-            'class' => 'bi-box-arrow-up',
-            'keywords' => ["box","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'box-seam',
-            'displayName' => 'Box Seam',
-            'class' => 'bi-box-seam',
-            'keywords' => ["box","seam"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box-seam'],
-                'solid' => ['class' => 'bi-box-seam-fill'],
-            ]
-        ],
-        [
-            'name' => 'box',
-            'displayName' => 'Box',
-            'class' => 'bi-box',
-            'keywords' => ["box"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-box'],
-                'solid' => ['class' => 'bi-box-fill'],
-            ]
-        ],
-        [
-            'name' => 'brightness-alt-high-fill',
-            'displayName' => 'Brightness Alt High Fill',
-            'class' => 'bi-brightness-alt-high-fill',
-            'keywords' => ["brightness","alt","high","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-brightness-alt-high-fill'],
-                'outline' => ['class' => 'bi-brightness-alt-high'],
-            ]
-        ],
-        [
-            'name' => 'brightness-alt-high',
-            'displayName' => 'Brightness Alt High',
-            'class' => 'bi-brightness-alt-high',
-            'keywords' => ["brightness","alt","high"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-alt-high'],
-                'solid' => ['class' => 'bi-brightness-alt-high-fill'],
-            ]
-        ],
-        [
-            'name' => 'brightness-alt-low-fill',
-            'displayName' => 'Brightness Alt Low Fill',
-            'class' => 'bi-brightness-alt-low-fill',
-            'keywords' => ["brightness","alt","low","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-brightness-alt-low-fill'],
-                'outline' => ['class' => 'bi-brightness-alt-low'],
-            ]
-        ],
-        [
-            'name' => 'brightness-alt-low',
-            'displayName' => 'Brightness Alt Low',
-            'class' => 'bi-brightness-alt-low',
-            'keywords' => ["brightness","alt","low"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-alt-low'],
-                'solid' => ['class' => 'bi-brightness-alt-low-fill'],
-            ]
-        ],
-        [
-            'name' => 'brightness-high-fill',
-            'displayName' => 'Brightness High Fill',
-            'class' => 'bi-brightness-high-fill',
-            'keywords' => ["brightness","high","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-brightness-high-fill'],
-                'outline' => ['class' => 'bi-brightness-high'],
-            ]
-        ],
-        [
-            'name' => 'brightness-high',
-            'displayName' => 'Brightness High',
-            'class' => 'bi-brightness-high',
-            'keywords' => ["brightness","high"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-high'],
-                'solid' => ['class' => 'bi-brightness-high-fill'],
-            ]
-        ],
-        [
-            'name' => 'brightness-low-fill',
-            'displayName' => 'Brightness Low Fill',
-            'class' => 'bi-brightness-low-fill',
-            'keywords' => ["brightness","low","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-brightness-low-fill'],
-                'outline' => ['class' => 'bi-brightness-low'],
-            ]
-        ],
-        [
-            'name' => 'brightness-low',
-            'displayName' => 'Brightness Low',
-            'class' => 'bi-brightness-low',
-            'keywords' => ["brightness","low"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-brightness-low'],
-                'solid' => ['class' => 'bi-brightness-low-fill'],
-            ]
-        ],
-        [
-            'name' => 'card-checklist',
-            'displayName' => 'Card Checklist',
-            'class' => 'bi-card-checklist',
-            'keywords' => ["card","checklist"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-card-checklist'],
-            ]
-        ],
-        [
-            'name' => 'card-heading',
-            'displayName' => 'Card Heading',
-            'class' => 'bi-card-heading',
-            'keywords' => ["card","heading"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-card-heading'],
-            ]
-        ],
-        [
-            'name' => 'card-image',
-            'displayName' => 'Card Image',
-            'class' => 'bi-card-image',
-            'keywords' => ["card","image"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-card-image'],
-            ]
-        ],
-        [
-            'name' => 'card-list',
-            'displayName' => 'Card List',
-            'class' => 'bi-card-list',
-            'keywords' => ["card","list"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-card-list'],
-            ]
-        ],
-        [
-            'name' => 'card-text',
-            'displayName' => 'Card Text',
-            'class' => 'bi-card-text',
-            'keywords' => ["card","text"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-card-text'],
-            ]
-        ],
-        [
-            'name' => 'caret-down-fill',
-            'displayName' => 'Caret Down Fill',
-            'class' => 'bi-caret-down-fill',
-            'keywords' => ["caret","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-down-fill'],
-                'outline' => ['class' => 'bi-caret-down'],
-            ]
-        ],
-        [
-            'name' => 'caret-down-square-fill',
-            'displayName' => 'Caret Down Square Fill',
-            'class' => 'bi-caret-down-square-fill',
-            'keywords' => ["caret","down","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-down-square-fill'],
-                'outline' => ['class' => 'bi-caret-down-square'],
-            ]
-        ],
-        [
-            'name' => 'caret-down-square',
-            'displayName' => 'Caret Down Square',
-            'class' => 'bi-caret-down-square',
-            'keywords' => ["caret","down","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-down-square'],
-                'solid' => ['class' => 'bi-caret-down-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-down',
-            'displayName' => 'Caret Down',
-            'class' => 'bi-caret-down',
-            'keywords' => ["caret","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-down'],
-                'solid' => ['class' => 'bi-caret-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-left-fill',
-            'displayName' => 'Caret Left Fill',
-            'class' => 'bi-caret-left-fill',
-            'keywords' => ["caret","left","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-left-fill'],
-                'outline' => ['class' => 'bi-caret-left'],
-            ]
-        ],
-        [
-            'name' => 'caret-left-square-fill',
-            'displayName' => 'Caret Left Square Fill',
-            'class' => 'bi-caret-left-square-fill',
-            'keywords' => ["caret","left","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-left-square-fill'],
-                'outline' => ['class' => 'bi-caret-left-square'],
-            ]
-        ],
-        [
-            'name' => 'caret-left-square',
-            'displayName' => 'Caret Left Square',
-            'class' => 'bi-caret-left-square',
-            'keywords' => ["caret","left","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-left-square'],
-                'solid' => ['class' => 'bi-caret-left-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-left',
-            'displayName' => 'Caret Left',
-            'class' => 'bi-caret-left',
-            'keywords' => ["caret","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-left'],
-                'solid' => ['class' => 'bi-caret-left-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-right-fill',
-            'displayName' => 'Caret Right Fill',
-            'class' => 'bi-caret-right-fill',
-            'keywords' => ["caret","right","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-right-fill'],
-                'outline' => ['class' => 'bi-caret-right'],
-            ]
-        ],
-        [
-            'name' => 'caret-right-square-fill',
-            'displayName' => 'Caret Right Square Fill',
-            'class' => 'bi-caret-right-square-fill',
-            'keywords' => ["caret","right","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-right-square-fill'],
-                'outline' => ['class' => 'bi-caret-right-square'],
-            ]
-        ],
-        [
-            'name' => 'caret-right-square',
-            'displayName' => 'Caret Right Square',
-            'class' => 'bi-caret-right-square',
-            'keywords' => ["caret","right","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-right-square'],
-                'solid' => ['class' => 'bi-caret-right-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-right',
-            'displayName' => 'Caret Right',
-            'class' => 'bi-caret-right',
-            'keywords' => ["caret","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-right'],
-                'solid' => ['class' => 'bi-caret-right-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-up-fill',
-            'displayName' => 'Caret Up Fill',
-            'class' => 'bi-caret-up-fill',
-            'keywords' => ["caret","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-up-fill'],
-                'outline' => ['class' => 'bi-caret-up'],
-            ]
-        ],
-        [
-            'name' => 'caret-up-square-fill',
-            'displayName' => 'Caret Up Square Fill',
-            'class' => 'bi-caret-up-square-fill',
-            'keywords' => ["caret","up","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-caret-up-square-fill'],
-                'outline' => ['class' => 'bi-caret-up-square'],
-            ]
-        ],
-        [
-            'name' => 'caret-up-square',
-            'displayName' => 'Caret Up Square',
-            'class' => 'bi-caret-up-square',
-            'keywords' => ["caret","up","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-up-square'],
-                'solid' => ['class' => 'bi-caret-up-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'caret-up',
-            'displayName' => 'Caret Up',
-            'class' => 'bi-caret-up',
-            'keywords' => ["caret","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-caret-up'],
-                'solid' => ['class' => 'bi-caret-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-contract',
-            'displayName' => 'Chevron Bar Contract',
-            'class' => 'bi-chevron-bar-contract',
-            'keywords' => ["chevron","bar","contract"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-contract'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-down',
-            'displayName' => 'Chevron Bar Down',
-            'class' => 'bi-chevron-bar-down',
-            'keywords' => ["chevron","bar","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-down'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-expand',
-            'displayName' => 'Chevron Bar Expand',
-            'class' => 'bi-chevron-bar-expand',
-            'keywords' => ["chevron","bar","expand"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-expand'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-left',
-            'displayName' => 'Chevron Bar Left',
-            'class' => 'bi-chevron-bar-left',
-            'keywords' => ["chevron","bar","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-left'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-right',
-            'displayName' => 'Chevron Bar Right',
-            'class' => 'bi-chevron-bar-right',
-            'keywords' => ["chevron","bar","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-right'],
-            ]
-        ],
-        [
-            'name' => 'chevron-bar-up',
-            'displayName' => 'Chevron Bar Up',
-            'class' => 'bi-chevron-bar-up',
-            'keywords' => ["chevron","bar","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-bar-up'],
-            ]
-        ],
-        [
-            'name' => 'chevron-compact-down',
-            'displayName' => 'Chevron Compact Down',
-            'class' => 'bi-chevron-compact-down',
-            'keywords' => ["chevron","compact","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-compact-down'],
-            ]
-        ],
-        [
-            'name' => 'chevron-compact-left',
-            'displayName' => 'Chevron Compact Left',
-            'class' => 'bi-chevron-compact-left',
-            'keywords' => ["chevron","compact","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-compact-left'],
-            ]
-        ],
-        [
-            'name' => 'chevron-compact-right',
-            'displayName' => 'Chevron Compact Right',
-            'class' => 'bi-chevron-compact-right',
-            'keywords' => ["chevron","compact","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-compact-right'],
-            ]
-        ],
-        [
-            'name' => 'chevron-compact-up',
-            'displayName' => 'Chevron Compact Up',
-            'class' => 'bi-chevron-compact-up',
-            'keywords' => ["chevron","compact","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-compact-up'],
-            ]
-        ],
-        [
-            'name' => 'chevron-contract',
-            'displayName' => 'Chevron Contract',
-            'class' => 'bi-chevron-contract',
-            'keywords' => ["chevron","contract"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-contract'],
-            ]
-        ],
-        [
-            'name' => 'chevron-double-down',
-            'displayName' => 'Chevron Double Down',
-            'class' => 'bi-chevron-double-down',
-            'keywords' => ["chevron","double","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-double-down'],
-            ]
-        ],
-        [
-            'name' => 'chevron-double-left',
-            'displayName' => 'Chevron Double Left',
-            'class' => 'bi-chevron-double-left',
-            'keywords' => ["chevron","double","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-double-left'],
-            ]
-        ],
-        [
-            'name' => 'chevron-double-right',
-            'displayName' => 'Chevron Double Right',
-            'class' => 'bi-chevron-double-right',
-            'keywords' => ["chevron","double","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-double-right'],
-            ]
-        ],
-        [
-            'name' => 'chevron-double-up',
-            'displayName' => 'Chevron Double Up',
-            'class' => 'bi-chevron-double-up',
-            'keywords' => ["chevron","double","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-double-up'],
-            ]
-        ],
-        [
-            'name' => 'chevron-down',
-            'displayName' => 'Chevron Down',
-            'class' => 'bi-chevron-down',
-            'keywords' => ["chevron","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-down'],
-            ]
-        ],
-        [
-            'name' => 'chevron-expand',
-            'displayName' => 'Chevron Expand',
-            'class' => 'bi-chevron-expand',
-            'keywords' => ["chevron","expand"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-expand'],
-            ]
-        ],
-        [
-            'name' => 'chevron-left',
-            'displayName' => 'Chevron Left',
-            'class' => 'bi-chevron-left',
-            'keywords' => ["chevron","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-left'],
-            ]
-        ],
-        [
-            'name' => 'chevron-right',
-            'displayName' => 'Chevron Right',
-            'class' => 'bi-chevron-right',
-            'keywords' => ["chevron","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-right'],
-            ]
-        ],
-        [
-            'name' => 'chevron-up',
-            'displayName' => 'Chevron Up',
-            'class' => 'bi-chevron-up',
-            'keywords' => ["chevron","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-chevron-up'],
-            ]
-        ],
-        [
-            'name' => 'circle-fill',
-            'displayName' => 'Circle Fill',
-            'class' => 'bi-circle-fill',
-            'keywords' => ["circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-circle-fill'],
-                'outline' => ['class' => 'bi-circle'],
-            ]
-        ],
-        [
-            'name' => 'circle-half',
-            'displayName' => 'Circle Half',
-            'class' => 'bi-circle-half',
-            'keywords' => ["circle","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-circle-half'],
-            ]
-        ],
-        [
-            'name' => 'circle-square',
-            'displayName' => 'Circle Square',
-            'class' => 'bi-circle-square',
-            'keywords' => ["circle","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-circle-square'],
-            ]
-        ],
-        [
-            'name' => 'circle',
-            'displayName' => 'Circle',
-            'class' => 'bi-circle',
-            'keywords' => ["circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-circle'],
-                'solid' => ['class' => 'bi-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'columns-gap',
-            'displayName' => 'Columns Gap',
-            'class' => 'bi-columns-gap',
-            'keywords' => ["columns","gap"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-columns-gap'],
-            ]
-        ],
-        [
-            'name' => 'columns',
-            'displayName' => 'Columns',
-            'class' => 'bi-columns',
-            'keywords' => ["columns"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-columns'],
-            ]
-        ],
-        [
-            'name' => 'cursor-fill',
-            'displayName' => 'Cursor Fill',
-            'class' => 'bi-cursor-fill',
-            'keywords' => ["cursor","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-cursor-fill'],
-                'outline' => ['class' => 'bi-cursor'],
-            ]
-        ],
-        [
-            'name' => 'cursor-text',
-            'displayName' => 'Cursor Text',
-            'class' => 'bi-cursor-text',
-            'keywords' => ["cursor","text"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-cursor-text'],
-            ]
-        ],
-        [
-            'name' => 'cursor',
-            'displayName' => 'Cursor',
-            'class' => 'bi-cursor',
-            'keywords' => ["cursor"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-cursor'],
-                'solid' => ['class' => 'bi-cursor-fill'],
-            ]
-        ],
-        [
-            'name' => 'dash-circle-dotted',
-            'displayName' => 'Dash Circle Dotted',
-            'class' => 'bi-dash-circle-dotted',
-            'keywords' => ["dash","circle","dotted"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-circle-dotted'],
-            ]
-        ],
-        [
-            'name' => 'dash-circle-fill',
-            'displayName' => 'Dash Circle Fill',
-            'class' => 'bi-dash-circle-fill',
-            'keywords' => ["dash","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-dash-circle-fill'],
-                'outline' => ['class' => 'bi-dash-circle'],
-            ]
-        ],
-        [
-            'name' => 'dash-circle',
-            'displayName' => 'Dash Circle',
-            'class' => 'bi-dash-circle',
-            'keywords' => ["dash","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-circle'],
-                'solid' => ['class' => 'bi-dash-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'dash-square-dotted',
-            'displayName' => 'Dash Square Dotted',
-            'class' => 'bi-dash-square-dotted',
-            'keywords' => ["dash","square","dotted"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-square-dotted'],
-            ]
-        ],
-        [
-            'name' => 'dash-square-fill',
-            'displayName' => 'Dash Square Fill',
-            'class' => 'bi-dash-square-fill',
-            'keywords' => ["dash","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-dash-square-fill'],
-                'outline' => ['class' => 'bi-dash-square'],
-            ]
-        ],
-        [
-            'name' => 'dash-square',
-            'displayName' => 'Dash Square',
-            'class' => 'bi-dash-square',
-            'keywords' => ["dash","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-square'],
-                'solid' => ['class' => 'bi-dash-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'dash',
-            'displayName' => 'Dash',
-            'class' => 'bi-dash',
-            'keywords' => ["dash"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash'],
-            ]
-        ],
-        [
-            'name' => 'diagram-2-fill',
-            'displayName' => 'Diagram 2 Fill',
-            'class' => 'bi-diagram-2-fill',
-            'keywords' => ["diagram","2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-diagram-2-fill'],
-                'outline' => ['class' => 'bi-diagram-2'],
-            ]
-        ],
-        [
-            'name' => 'diagram-2',
-            'displayName' => 'Diagram 2',
-            'class' => 'bi-diagram-2',
-            'keywords' => ["diagram","2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-diagram-2'],
-                'solid' => ['class' => 'bi-diagram-2-fill'],
-            ]
-        ],
-        [
-            'name' => 'diagram-3-fill',
-            'displayName' => 'Diagram 3 Fill',
-            'class' => 'bi-diagram-3-fill',
-            'keywords' => ["diagram","3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-diagram-3-fill'],
-                'outline' => ['class' => 'bi-diagram-3'],
-            ]
-        ],
-        [
-            'name' => 'diagram-3',
-            'displayName' => 'Diagram 3',
-            'class' => 'bi-diagram-3',
-            'keywords' => ["diagram","3"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-diagram-3'],
-                'solid' => ['class' => 'bi-diagram-3-fill'],
-            ]
-        ],
-        [
-            'name' => 'diamond-fill',
-            'displayName' => 'Diamond Fill',
-            'class' => 'bi-diamond-fill',
-            'keywords' => ["diamond","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-diamond-fill'],
-                'outline' => ['class' => 'bi-diamond'],
-            ]
-        ],
-        [
-            'name' => 'diamond-half',
-            'displayName' => 'Diamond Half',
-            'class' => 'bi-diamond-half',
-            'keywords' => ["diamond","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-diamond-half'],
-            ]
-        ],
-        [
-            'name' => 'diamond',
-            'displayName' => 'Diamond',
-            'class' => 'bi-diamond',
-            'keywords' => ["diamond"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-diamond'],
-                'solid' => ['class' => 'bi-diamond-fill'],
-            ]
-        ],
-        [
-            'name' => 'display-fill',
-            'displayName' => 'Display Fill',
-            'class' => 'bi-display-fill',
-            'keywords' => ["display","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-display-fill'],
-                'outline' => ['class' => 'bi-display'],
-            ]
-        ],
-        [
-            'name' => 'display',
-            'displayName' => 'Display',
-            'class' => 'bi-display',
-            'keywords' => ["display"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-display'],
-                'solid' => ['class' => 'bi-display-fill'],
-            ]
-        ],
-        [
-            'name' => 'distribute-horizontal',
-            'displayName' => 'Distribute Horizontal',
-            'class' => 'bi-distribute-horizontal',
-            'keywords' => ["distribute","horizontal"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-distribute-horizontal'],
-            ]
-        ],
-        [
-            'name' => 'distribute-vertical',
-            'displayName' => 'Distribute Vertical',
-            'class' => 'bi-distribute-vertical',
-            'keywords' => ["distribute","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-distribute-vertical'],
-            ]
-        ],
-        [
-            'name' => 'dot',
-            'displayName' => 'Dot',
-            'class' => 'bi-dot',
-            'keywords' => ["dot"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dot'],
-            ]
-        ],
-        [
-            'name' => 'eject-fill',
-            'displayName' => 'Eject Fill',
-            'class' => 'bi-eject-fill',
-            'keywords' => ["eject","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-eject-fill'],
-                'outline' => ['class' => 'bi-eject'],
-            ]
-        ],
-        [
-            'name' => 'eject',
-            'displayName' => 'Eject',
-            'class' => 'bi-eject',
-            'keywords' => ["eject"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-eject'],
-                'solid' => ['class' => 'bi-eject-fill'],
-            ]
-        ],
-        [
-            'name' => 'exclude',
-            'displayName' => 'Exclude',
-            'class' => 'bi-exclude',
-            'keywords' => ["exclude"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-exclude'],
-            ]
-        ],
-        [
-            'name' => 'filter-circle-fill',
-            'displayName' => 'Filter Circle Fill',
-            'class' => 'bi-filter-circle-fill',
-            'keywords' => ["filter","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-filter-circle-fill'],
-                'outline' => ['class' => 'bi-filter-circle'],
-            ]
-        ],
-        [
-            'name' => 'filter-circle',
-            'displayName' => 'Filter Circle',
-            'class' => 'bi-filter-circle',
-            'keywords' => ["filter","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter-circle'],
-                'solid' => ['class' => 'bi-filter-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'filter-left',
-            'displayName' => 'Filter Left',
-            'class' => 'bi-filter-left',
-            'keywords' => ["filter","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter-left'],
-            ]
-        ],
-        [
-            'name' => 'filter-right',
-            'displayName' => 'Filter Right',
-            'class' => 'bi-filter-right',
-            'keywords' => ["filter","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter-right'],
-            ]
-        ],
-        [
-            'name' => 'filter-square-fill',
-            'displayName' => 'Filter Square Fill',
-            'class' => 'bi-filter-square-fill',
-            'keywords' => ["filter","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-filter-square-fill'],
-                'outline' => ['class' => 'bi-filter-square'],
-            ]
-        ],
-        [
-            'name' => 'filter-square',
-            'displayName' => 'Filter Square',
-            'class' => 'bi-filter-square',
-            'keywords' => ["filter","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter-square'],
-                'solid' => ['class' => 'bi-filter-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'filter',
-            'displayName' => 'Filter',
-            'class' => 'bi-filter',
-            'keywords' => ["filter"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-filter'],
-            ]
-        ],
-        [
-            'name' => 'forward-fill',
-            'displayName' => 'Forward Fill',
-            'class' => 'bi-forward-fill',
-            'keywords' => ["forward","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-forward-fill'],
-                'outline' => ['class' => 'bi-forward'],
-            ]
-        ],
-        [
-            'name' => 'forward',
-            'displayName' => 'Forward',
-            'class' => 'bi-forward',
-            'keywords' => ["forward"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-forward'],
-                'solid' => ['class' => 'bi-forward-fill'],
-            ]
-        ],
-        [
-            'name' => 'fullscreen-exit',
-            'displayName' => 'Fullscreen Exit',
-            'class' => 'bi-fullscreen-exit',
-            'keywords' => ["fullscreen","exit"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-fullscreen-exit'],
-            ]
-        ],
-        [
-            'name' => 'fullscreen',
-            'displayName' => 'Fullscreen',
-            'class' => 'bi-fullscreen',
-            'keywords' => ["fullscreen"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-fullscreen'],
-            ]
-        ],
-        [
-            'name' => 'funnel-fill',
-            'displayName' => 'Funnel Fill',
-            'class' => 'bi-funnel-fill',
-            'keywords' => ["funnel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-funnel-fill'],
-                'outline' => ['class' => 'bi-funnel'],
-            ]
-        ],
-        [
-            'name' => 'funnel',
-            'displayName' => 'Funnel',
-            'class' => 'bi-funnel',
-            'keywords' => ["funnel"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-funnel'],
-                'solid' => ['class' => 'bi-funnel-fill'],
-            ]
-        ],
-        [
-            'name' => 'gear-fill',
-            'displayName' => 'Gear Fill',
-            'class' => 'bi-gear-fill',
-            'keywords' => ["gear","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-gear-fill'],
-                'outline' => ['class' => 'bi-gear'],
-            ]
-        ],
-        [
-            'name' => 'gear-wide-connected',
-            'displayName' => 'Gear Wide Connected',
-            'class' => 'bi-gear-wide-connected',
-            'keywords' => ["gear","wide","connected"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-gear-wide-connected'],
-            ]
-        ],
-        [
-            'name' => 'gear-wide',
-            'displayName' => 'Gear Wide',
-            'class' => 'bi-gear-wide',
-            'keywords' => ["gear","wide"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-gear-wide'],
-            ]
-        ],
-        [
-            'name' => 'gear',
-            'displayName' => 'Gear',
-            'class' => 'bi-gear',
-            'keywords' => ["gear"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-gear'],
-                'solid' => ['class' => 'bi-gear-fill'],
-            ]
-        ],
-        [
-            'name' => 'graph-down',
-            'displayName' => 'Graph Down',
-            'class' => 'bi-graph-down',
-            'keywords' => ["graph","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-graph-down'],
-            ]
-        ],
-        [
-            'name' => 'graph-up',
-            'displayName' => 'Graph Up',
-            'class' => 'bi-graph-up',
-            'keywords' => ["graph","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-graph-up'],
-            ]
-        ],
-        [
-            'name' => 'grid-1x2-fill',
-            'displayName' => 'Grid 1x2 Fill',
-            'class' => 'bi-grid-1x2-fill',
-            'keywords' => ["grid","1x2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-grid-1x2-fill'],
-                'outline' => ['class' => 'bi-grid-1x2'],
-            ]
-        ],
-        [
-            'name' => 'grid-1x2',
-            'displayName' => 'Grid 1x2',
-            'class' => 'bi-grid-1x2',
-            'keywords' => ["grid","1x2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid-1x2'],
-                'solid' => ['class' => 'bi-grid-1x2-fill'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x2-gap-fill',
-            'displayName' => 'Grid 3x2 Gap Fill',
-            'class' => 'bi-grid-3x2-gap-fill',
-            'keywords' => ["grid","3x2","gap","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-grid-3x2-gap-fill'],
-                'outline' => ['class' => 'bi-grid-3x2-gap'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x2-gap',
-            'displayName' => 'Grid 3x2 Gap',
-            'class' => 'bi-grid-3x2-gap',
-            'keywords' => ["grid","3x2","gap"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid-3x2-gap'],
-                'solid' => ['class' => 'bi-grid-3x2-gap-fill'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x2',
-            'displayName' => 'Grid 3x2',
-            'class' => 'bi-grid-3x2',
-            'keywords' => ["grid","3x2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid-3x2'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x3-gap-fill',
-            'displayName' => 'Grid 3x3 Gap Fill',
-            'class' => 'bi-grid-3x3-gap-fill',
-            'keywords' => ["grid","3x3","gap","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-grid-3x3-gap-fill'],
-                'outline' => ['class' => 'bi-grid-3x3-gap'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x3-gap',
-            'displayName' => 'Grid 3x3 Gap',
-            'class' => 'bi-grid-3x3-gap',
-            'keywords' => ["grid","3x3","gap"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid-3x3-gap'],
-                'solid' => ['class' => 'bi-grid-3x3-gap-fill'],
-            ]
-        ],
-        [
-            'name' => 'grid-3x3',
-            'displayName' => 'Grid 3x3',
-            'class' => 'bi-grid-3x3',
-            'keywords' => ["grid","3x3"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid-3x3'],
-            ]
-        ],
-        [
-            'name' => 'grid-fill',
-            'displayName' => 'Grid Fill',
-            'class' => 'bi-grid-fill',
-            'keywords' => ["grid","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-grid-fill'],
-                'outline' => ['class' => 'bi-grid'],
-            ]
-        ],
-        [
-            'name' => 'grid',
-            'displayName' => 'Grid',
-            'class' => 'bi-grid',
-            'keywords' => ["grid"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grid'],
-                'solid' => ['class' => 'bi-grid-fill'],
-            ]
-        ],
-        [
-            'name' => 'grip-horizontal',
-            'displayName' => 'Grip Horizontal',
-            'class' => 'bi-grip-horizontal',
-            'keywords' => ["grip","horizontal"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grip-horizontal'],
-            ]
-        ],
-        [
-            'name' => 'grip-vertical',
-            'displayName' => 'Grip Vertical',
-            'class' => 'bi-grip-vertical',
-            'keywords' => ["grip","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-grip-vertical'],
-            ]
-        ],
-        [
-            'name' => 'heptagon-fill',
-            'displayName' => 'Heptagon Fill',
-            'class' => 'bi-heptagon-fill',
-            'keywords' => ["heptagon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-heptagon-fill'],
-                'outline' => ['class' => 'bi-heptagon'],
-            ]
-        ],
-        [
-            'name' => 'heptagon-half',
-            'displayName' => 'Heptagon Half',
-            'class' => 'bi-heptagon-half',
-            'keywords' => ["heptagon","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-heptagon-half'],
-            ]
-        ],
-        [
-            'name' => 'heptagon',
-            'displayName' => 'Heptagon',
-            'class' => 'bi-heptagon',
-            'keywords' => ["heptagon"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-heptagon'],
-                'solid' => ['class' => 'bi-heptagon-fill'],
-            ]
-        ],
-        [
-            'name' => 'hexagon-fill',
-            'displayName' => 'Hexagon Fill',
-            'class' => 'bi-hexagon-fill',
-            'keywords' => ["hexagon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-hexagon-fill'],
-                'outline' => ['class' => 'bi-hexagon'],
-            ]
-        ],
-        [
-            'name' => 'hexagon-half',
-            'displayName' => 'Hexagon Half',
-            'class' => 'bi-hexagon-half',
-            'keywords' => ["hexagon","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-hexagon-half'],
-            ]
-        ],
-        [
-            'name' => 'hexagon',
-            'displayName' => 'Hexagon',
-            'class' => 'bi-hexagon',
-            'keywords' => ["hexagon"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-hexagon'],
-                'solid' => ['class' => 'bi-hexagon-fill'],
-            ]
-        ],
-        [
-            'name' => 'hr',
-            'displayName' => 'Hr',
-            'class' => 'bi-hr',
-            'keywords' => ["hr"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-hr'],
-            ]
-        ],
-        [
-            'name' => 'input-cursor-text',
-            'displayName' => 'Input Cursor Text',
-            'class' => 'bi-input-cursor-text',
-            'keywords' => ["input","cursor","text"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-input-cursor-text'],
-            ]
-        ],
-        [
-            'name' => 'input-cursor',
-            'displayName' => 'Input Cursor',
-            'class' => 'bi-input-cursor',
-            'keywords' => ["input","cursor"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-input-cursor'],
-            ]
-        ],
-        [
-            'name' => 'intersect',
-            'displayName' => 'Intersect',
-            'class' => 'bi-intersect',
-            'keywords' => ["intersect"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-intersect'],
-            ]
-        ],
-        [
-            'name' => 'justify-left',
-            'displayName' => 'Justify Left',
-            'class' => 'bi-justify-left',
-            'keywords' => ["justify","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-justify-left'],
-            ]
-        ],
-        [
-            'name' => 'justify-right',
-            'displayName' => 'Justify Right',
-            'class' => 'bi-justify-right',
-            'keywords' => ["justify","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-justify-right'],
-            ]
-        ],
-        [
-            'name' => 'justify',
-            'displayName' => 'Justify',
-            'class' => 'bi-justify',
-            'keywords' => ["justify"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-justify'],
-            ]
-        ],
-        [
-            'name' => 'kanban-fill',
-            'displayName' => 'Kanban Fill',
-            'class' => 'bi-kanban-fill',
-            'keywords' => ["kanban","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-kanban-fill'],
-                'outline' => ['class' => 'bi-kanban'],
-            ]
-        ],
-        [
-            'name' => 'kanban',
-            'displayName' => 'Kanban',
-            'class' => 'bi-kanban',
-            'keywords' => ["kanban"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-kanban'],
-                'solid' => ['class' => 'bi-kanban-fill'],
-            ]
-        ],
-        [
-            'name' => 'layer-backward',
-            'displayName' => 'Layer Backward',
-            'class' => 'bi-layer-backward',
-            'keywords' => ["layer","backward"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layer-backward'],
-            ]
-        ],
-        [
-            'name' => 'layer-forward',
-            'displayName' => 'Layer Forward',
-            'class' => 'bi-layer-forward',
-            'keywords' => ["layer","forward"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layer-forward'],
-            ]
-        ],
-        [
-            'name' => 'layers-fill',
-            'displayName' => 'Layers Fill',
-            'class' => 'bi-layers-fill',
-            'keywords' => ["layers","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-layers-fill'],
-                'outline' => ['class' => 'bi-layers'],
-            ]
-        ],
-        [
-            'name' => 'layers-half',
-            'displayName' => 'Layers Half',
-            'class' => 'bi-layers-half',
-            'keywords' => ["layers","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layers-half'],
-            ]
-        ],
-        [
-            'name' => 'layers',
-            'displayName' => 'Layers',
-            'class' => 'bi-layers',
-            'keywords' => ["layers"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layers'],
-                'solid' => ['class' => 'bi-layers-fill'],
-            ]
-        ],
-        [
-            'name' => 'layout-sidebar-inset-reverse',
-            'displayName' => 'Layout Sidebar Inset Reverse',
-            'class' => 'bi-layout-sidebar-inset-reverse',
-            'keywords' => ["layout","sidebar","inset","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-sidebar-inset-reverse'],
-            ]
-        ],
-        [
-            'name' => 'layout-sidebar-inset',
-            'displayName' => 'Layout Sidebar Inset',
-            'class' => 'bi-layout-sidebar-inset',
-            'keywords' => ["layout","sidebar","inset"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-sidebar-inset'],
-            ]
-        ],
-        [
-            'name' => 'layout-sidebar-reverse',
-            'displayName' => 'Layout Sidebar Reverse',
-            'class' => 'bi-layout-sidebar-reverse',
-            'keywords' => ["layout","sidebar","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-sidebar-reverse'],
-            ]
-        ],
-        [
-            'name' => 'layout-sidebar',
-            'displayName' => 'Layout Sidebar',
-            'class' => 'bi-layout-sidebar',
-            'keywords' => ["layout","sidebar"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-sidebar'],
-            ]
-        ],
-        [
-            'name' => 'layout-split',
-            'displayName' => 'Layout Split',
-            'class' => 'bi-layout-split',
-            'keywords' => ["layout","split"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-split'],
-            ]
-        ],
-        [
-            'name' => 'layout-text-sidebar-reverse',
-            'displayName' => 'Layout Text Sidebar Reverse',
-            'class' => 'bi-layout-text-sidebar-reverse',
-            'keywords' => ["layout","text","sidebar","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-text-sidebar-reverse'],
-            ]
-        ],
-        [
-            'name' => 'layout-text-sidebar',
-            'displayName' => 'Layout Text Sidebar',
-            'class' => 'bi-layout-text-sidebar',
-            'keywords' => ["layout","text","sidebar"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-text-sidebar'],
-            ]
-        ],
-        [
-            'name' => 'layout-text-window-reverse',
-            'displayName' => 'Layout Text Window Reverse',
-            'class' => 'bi-layout-text-window-reverse',
-            'keywords' => ["layout","text","window","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-text-window-reverse'],
-            ]
-        ],
-        [
-            'name' => 'layout-text-window',
-            'displayName' => 'Layout Text Window',
-            'class' => 'bi-layout-text-window',
-            'keywords' => ["layout","text","window"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-text-window'],
-            ]
-        ],
-        [
-            'name' => 'layout-three-columns',
-            'displayName' => 'Layout Three Columns',
-            'class' => 'bi-layout-three-columns',
-            'keywords' => ["layout","three","columns"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-three-columns'],
-            ]
-        ],
-        [
-            'name' => 'layout-wtf',
-            'displayName' => 'Layout Wtf',
-            'class' => 'bi-layout-wtf',
-            'keywords' => ["layout","wtf"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-layout-wtf'],
-            ]
-        ],
-        [
-            'name' => 'list-check',
-            'displayName' => 'List Check',
-            'class' => 'bi-list-check',
-            'keywords' => ["list","check"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-check'],
-            ]
-        ],
-        [
-            'name' => 'list-nested',
-            'displayName' => 'List Nested',
-            'class' => 'bi-list-nested',
-            'keywords' => ["list","nested"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-nested'],
-            ]
-        ],
-        [
-            'name' => 'list-ol',
-            'displayName' => 'List Ol',
-            'class' => 'bi-list-ol',
-            'keywords' => ["list","ol"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-ol'],
-            ]
-        ],
-        [
-            'name' => 'list-stars',
-            'displayName' => 'List Stars',
-            'class' => 'bi-list-stars',
-            'keywords' => ["list","stars"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-stars'],
-            ]
-        ],
-        [
-            'name' => 'list-task',
-            'displayName' => 'List Task',
-            'class' => 'bi-list-task',
-            'keywords' => ["list","task"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-task'],
-            ]
-        ],
-        [
-            'name' => 'list-ul',
-            'displayName' => 'List Ul',
-            'class' => 'bi-list-ul',
-            'keywords' => ["list","ul"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-ul'],
-            ]
-        ],
-        [
-            'name' => 'list',
-            'displayName' => 'List',
-            'class' => 'bi-list',
-            'keywords' => ["list"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list'],
-            ]
-        ],
-        [
-            'name' => 'menu-app-fill',
-            'displayName' => 'Menu App Fill',
-            'class' => 'bi-menu-app-fill',
-            'keywords' => ["menu","app","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-menu-app-fill'],
-                'outline' => ['class' => 'bi-menu-app'],
-            ]
-        ],
-        [
-            'name' => 'menu-app',
-            'displayName' => 'Menu App',
-            'class' => 'bi-menu-app',
-            'keywords' => ["menu","app"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-menu-app'],
-                'solid' => ['class' => 'bi-menu-app-fill'],
-            ]
-        ],
-        [
-            'name' => 'menu-button-fill',
-            'displayName' => 'Menu Button Fill',
-            'class' => 'bi-menu-button-fill',
-            'keywords' => ["menu","button","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-menu-button-fill'],
-                'outline' => ['class' => 'bi-menu-button'],
-            ]
-        ],
-        [
-            'name' => 'menu-button-wide-fill',
-            'displayName' => 'Menu Button Wide Fill',
-            'class' => 'bi-menu-button-wide-fill',
-            'keywords' => ["menu","button","wide","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-menu-button-wide-fill'],
-                'outline' => ['class' => 'bi-menu-button-wide'],
-            ]
-        ],
-        [
-            'name' => 'menu-button-wide',
-            'displayName' => 'Menu Button Wide',
-            'class' => 'bi-menu-button-wide',
-            'keywords' => ["menu","button","wide"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-menu-button-wide'],
-                'solid' => ['class' => 'bi-menu-button-wide-fill'],
-            ]
-        ],
-        [
-            'name' => 'menu-button',
-            'displayName' => 'Menu Button',
-            'class' => 'bi-menu-button',
-            'keywords' => ["menu","button"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-menu-button'],
-                'solid' => ['class' => 'bi-menu-button-fill'],
-            ]
-        ],
-        [
-            'name' => 'menu-down',
-            'displayName' => 'Menu Down',
-            'class' => 'bi-menu-down',
-            'keywords' => ["menu","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-menu-down'],
-            ]
-        ],
-        [
-            'name' => 'menu-up',
-            'displayName' => 'Menu Up',
-            'class' => 'bi-menu-up',
-            'keywords' => ["menu","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-menu-up'],
-            ]
-        ],
-        [
-            'name' => 'node-minus-fill',
-            'displayName' => 'Node Minus Fill',
-            'class' => 'bi-node-minus-fill',
-            'keywords' => ["node","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-node-minus-fill'],
-                'outline' => ['class' => 'bi-node-minus'],
-            ]
-        ],
-        [
-            'name' => 'node-minus',
-            'displayName' => 'Node Minus',
-            'class' => 'bi-node-minus',
-            'keywords' => ["node","minus"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-node-minus'],
-                'solid' => ['class' => 'bi-node-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'node-plus-fill',
-            'displayName' => 'Node Plus Fill',
-            'class' => 'bi-node-plus-fill',
-            'keywords' => ["node","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-node-plus-fill'],
-                'outline' => ['class' => 'bi-node-plus'],
-            ]
-        ],
-        [
-            'name' => 'node-plus',
-            'displayName' => 'Node Plus',
-            'class' => 'bi-node-plus',
-            'keywords' => ["node","plus"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-node-plus'],
-                'solid' => ['class' => 'bi-node-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'octagon-fill',
-            'displayName' => 'Octagon Fill',
-            'class' => 'bi-octagon-fill',
-            'keywords' => ["octagon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-octagon-fill'],
-                'outline' => ['class' => 'bi-octagon'],
-            ]
-        ],
-        [
-            'name' => 'octagon-half',
-            'displayName' => 'Octagon Half',
-            'class' => 'bi-octagon-half',
-            'keywords' => ["octagon","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-octagon-half'],
-            ]
-        ],
-        [
-            'name' => 'octagon',
-            'displayName' => 'Octagon',
-            'class' => 'bi-octagon',
-            'keywords' => ["octagon"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-octagon'],
-                'solid' => ['class' => 'bi-octagon-fill'],
-            ]
-        ],
-        [
-            'name' => 'patch-check-fill',
-            'displayName' => 'Patch Check Fill',
-            'class' => 'bi-patch-check-fill',
-            'keywords' => ["patch","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-patch-check-fill'],
-                'outline' => ['class' => 'bi-patch-check'],
-            ]
-        ],
-        [
-            'name' => 'patch-check',
-            'displayName' => 'Patch Check',
-            'class' => 'bi-patch-check',
-            'keywords' => ["patch","check"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-patch-check'],
-                'solid' => ['class' => 'bi-patch-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'patch-exclamation-fill',
-            'displayName' => 'Patch Exclamation Fill',
-            'class' => 'bi-patch-exclamation-fill',
-            'keywords' => ["patch","exclamation","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-patch-exclamation-fill'],
-                'outline' => ['class' => 'bi-patch-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'patch-exclamation',
-            'displayName' => 'Patch Exclamation',
-            'class' => 'bi-patch-exclamation',
-            'keywords' => ["patch","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-patch-exclamation'],
-                'solid' => ['class' => 'bi-patch-exclamation-fill'],
-            ]
-        ],
-        [
-            'name' => 'patch-minus-fill',
-            'displayName' => 'Patch Minus Fill',
-            'class' => 'bi-patch-minus-fill',
-            'keywords' => ["patch","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-patch-minus-fill'],
-                'outline' => ['class' => 'bi-patch-minus'],
-            ]
-        ],
-        [
-            'name' => 'patch-minus',
-            'displayName' => 'Patch Minus',
-            'class' => 'bi-patch-minus',
-            'keywords' => ["patch","minus"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-patch-minus'],
-                'solid' => ['class' => 'bi-patch-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'patch-plus-fill',
-            'displayName' => 'Patch Plus Fill',
-            'class' => 'bi-patch-plus-fill',
-            'keywords' => ["patch","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-patch-plus-fill'],
-                'outline' => ['class' => 'bi-patch-plus'],
-            ]
-        ],
-        [
-            'name' => 'patch-plus',
-            'displayName' => 'Patch Plus',
-            'class' => 'bi-patch-plus',
-            'keywords' => ["patch","plus"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-patch-plus'],
-                'solid' => ['class' => 'bi-patch-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'patch-question-fill',
-            'displayName' => 'Patch Question Fill',
-            'class' => 'bi-patch-question-fill',
-            'keywords' => ["patch","question","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-patch-question-fill'],
-                'outline' => ['class' => 'bi-patch-question'],
-            ]
-        ],
-        [
-            'name' => 'patch-question',
-            'displayName' => 'Patch Question',
-            'class' => 'bi-patch-question',
-            'keywords' => ["patch","question"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-patch-question'],
-                'solid' => ['class' => 'bi-patch-question-fill'],
-            ]
-        ],
-        [
-            'name' => 'pentagon-fill',
-            'displayName' => 'Pentagon Fill',
-            'class' => 'bi-pentagon-fill',
-            'keywords' => ["pentagon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-pentagon-fill'],
-                'outline' => ['class' => 'bi-pentagon'],
-            ]
-        ],
-        [
-            'name' => 'pentagon-half',
-            'displayName' => 'Pentagon Half',
-            'class' => 'bi-pentagon-half',
-            'keywords' => ["pentagon","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-pentagon-half'],
-            ]
-        ],
-        [
-            'name' => 'pentagon',
-            'displayName' => 'Pentagon',
-            'class' => 'bi-pentagon',
-            'keywords' => ["pentagon"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-pentagon'],
-                'solid' => ['class' => 'bi-pentagon-fill'],
-            ]
-        ],
-        [
-            'name' => 'pie-chart-fill',
-            'displayName' => 'Pie Chart Fill',
-            'class' => 'bi-pie-chart-fill',
-            'keywords' => ["pie","chart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-pie-chart-fill'],
-                'outline' => ['class' => 'bi-pie-chart'],
-            ]
-        ],
-        [
-            'name' => 'pie-chart',
-            'displayName' => 'Pie Chart',
-            'class' => 'bi-pie-chart',
-            'keywords' => ["pie","chart"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-pie-chart'],
-                'solid' => ['class' => 'bi-pie-chart-fill'],
-            ]
-        ],
-        [
-            'name' => 'pip-fill',
-            'displayName' => 'Pip Fill',
-            'class' => 'bi-pip-fill',
-            'keywords' => ["pip","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-pip-fill'],
-                'outline' => ['class' => 'bi-pip'],
-            ]
-        ],
-        [
-            'name' => 'pip',
-            'displayName' => 'Pip',
-            'class' => 'bi-pip',
-            'keywords' => ["pip"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-pip'],
-                'solid' => ['class' => 'bi-pip-fill'],
-            ]
-        ],
-        [
-            'name' => 'segmented-nav',
-            'displayName' => 'Segmented Nav',
-            'class' => 'bi-segmented-nav',
-            'keywords' => ["segmented","nav"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-segmented-nav'],
-            ]
-        ],
-        [
-            'name' => 'slash-circle-fill',
-            'displayName' => 'Slash Circle Fill',
-            'class' => 'bi-slash-circle-fill',
-            'keywords' => ["slash","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-slash-circle-fill'],
-                'outline' => ['class' => 'bi-slash-circle'],
-            ]
-        ],
-        [
-            'name' => 'slash-circle',
-            'displayName' => 'Slash Circle',
-            'class' => 'bi-slash-circle',
-            'keywords' => ["slash","circle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-slash-circle'],
-                'solid' => ['class' => 'bi-slash-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'slash-square-fill',
-            'displayName' => 'Slash Square Fill',
-            'class' => 'bi-slash-square-fill',
-            'keywords' => ["slash","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-slash-square-fill'],
-                'outline' => ['class' => 'bi-slash-square'],
-            ]
-        ],
-        [
-            'name' => 'slash-square',
-            'displayName' => 'Slash Square',
-            'class' => 'bi-slash-square',
-            'keywords' => ["slash","square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-slash-square'],
-                'solid' => ['class' => 'bi-slash-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'slash',
-            'displayName' => 'Slash',
-            'class' => 'bi-slash',
-            'keywords' => ["slash"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-slash'],
-            ]
-        ],
-        [
-            'name' => 'sliders',
-            'displayName' => 'Sliders',
-            'class' => 'bi-sliders',
-            'keywords' => ["sliders"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sliders'],
-            ]
-        ],
-        [
-            'name' => 'sort-alpha-down-alt',
-            'displayName' => 'Sort Alpha Down Alt',
-            'class' => 'bi-sort-alpha-down-alt',
-            'keywords' => ["sort","alpha","down","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-alpha-down-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-alpha-down',
-            'displayName' => 'Sort Alpha Down',
-            'class' => 'bi-sort-alpha-down',
-            'keywords' => ["sort","alpha","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-alpha-down'],
-            ]
-        ],
-        [
-            'name' => 'sort-alpha-up-alt',
-            'displayName' => 'Sort Alpha Up Alt',
-            'class' => 'bi-sort-alpha-up-alt',
-            'keywords' => ["sort","alpha","up","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-alpha-up-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-alpha-up',
-            'displayName' => 'Sort Alpha Up',
-            'class' => 'bi-sort-alpha-up',
-            'keywords' => ["sort","alpha","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-alpha-up'],
-            ]
-        ],
-        [
-            'name' => 'sort-down-alt',
-            'displayName' => 'Sort Down Alt',
-            'class' => 'bi-sort-down-alt',
-            'keywords' => ["sort","down","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-down-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-down',
-            'displayName' => 'Sort Down',
-            'class' => 'bi-sort-down',
-            'keywords' => ["sort","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-down'],
-            ]
-        ],
-        [
-            'name' => 'sort-numeric-down-alt',
-            'displayName' => 'Sort Numeric Down Alt',
-            'class' => 'bi-sort-numeric-down-alt',
-            'keywords' => ["sort","numeric","down","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-numeric-down-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-numeric-down',
-            'displayName' => 'Sort Numeric Down',
-            'class' => 'bi-sort-numeric-down',
-            'keywords' => ["sort","numeric","down"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-numeric-down'],
-            ]
-        ],
-        [
-            'name' => 'sort-numeric-up-alt',
-            'displayName' => 'Sort Numeric Up Alt',
-            'class' => 'bi-sort-numeric-up-alt',
-            'keywords' => ["sort","numeric","up","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-numeric-up-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-numeric-up',
-            'displayName' => 'Sort Numeric Up',
-            'class' => 'bi-sort-numeric-up',
-            'keywords' => ["sort","numeric","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-numeric-up'],
-            ]
-        ],
-        [
-            'name' => 'sort-up-alt',
-            'displayName' => 'Sort Up Alt',
-            'class' => 'bi-sort-up-alt',
-            'keywords' => ["sort","up","alt"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-up-alt'],
-            ]
-        ],
-        [
-            'name' => 'sort-up',
-            'displayName' => 'Sort Up',
-            'class' => 'bi-sort-up',
-            'keywords' => ["sort","up"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sort-up'],
-            ]
-        ],
-        [
-            'name' => 'square-fill',
-            'displayName' => 'Square Fill',
-            'class' => 'bi-square-fill',
-            'keywords' => ["square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-square-fill'],
-                'outline' => ['class' => 'bi-square'],
-            ]
-        ],
-        [
-            'name' => 'square-half',
-            'displayName' => 'Square Half',
-            'class' => 'bi-square-half',
-            'keywords' => ["square","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-square-half'],
-            ]
-        ],
-        [
-            'name' => 'square',
-            'displayName' => 'Square',
-            'class' => 'bi-square',
-            'keywords' => ["square"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-square'],
-                'solid' => ['class' => 'bi-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'stack',
-            'displayName' => 'Stack',
-            'class' => 'bi-stack',
-            'keywords' => ["stack"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-stack'],
-            ]
-        ],
-        [
-            'name' => 'symmetry-horizontal',
-            'displayName' => 'Symmetry Horizontal',
-            'class' => 'bi-symmetry-horizontal',
-            'keywords' => ["symmetry","horizontal"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-symmetry-horizontal'],
-            ]
-        ],
-        [
-            'name' => 'symmetry-vertical',
-            'displayName' => 'Symmetry Vertical',
-            'class' => 'bi-symmetry-vertical',
-            'keywords' => ["symmetry","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-symmetry-vertical'],
-            ]
-        ],
-        [
-            'name' => 'table',
-            'displayName' => 'Table',
-            'class' => 'bi-table',
-            'keywords' => ["table"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-table'],
-            ]
-        ],
-        [
-            'name' => 'text-center',
-            'displayName' => 'Text Center',
-            'class' => 'bi-text-center',
-            'keywords' => ["text","center"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-center'],
-            ]
-        ],
-        [
-            'name' => 'text-indent-left',
-            'displayName' => 'Text Indent Left',
-            'class' => 'bi-text-indent-left',
-            'keywords' => ["text","indent","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-indent-left'],
-            ]
-        ],
-        [
-            'name' => 'text-indent-right',
-            'displayName' => 'Text Indent Right',
-            'class' => 'bi-text-indent-right',
-            'keywords' => ["text","indent","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-indent-right'],
-            ]
-        ],
-        [
-            'name' => 'text-left',
-            'displayName' => 'Text Left',
-            'class' => 'bi-text-left',
-            'keywords' => ["text","left"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-left'],
-            ]
-        ],
-        [
-            'name' => 'text-paragraph',
-            'displayName' => 'Text Paragraph',
-            'class' => 'bi-text-paragraph',
-            'keywords' => ["text","paragraph"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-paragraph'],
-            ]
-        ],
-        [
-            'name' => 'text-right',
-            'displayName' => 'Text Right',
-            'class' => 'bi-text-right',
-            'keywords' => ["text","right"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-right'],
-            ]
-        ],
-        [
-            'name' => 'textarea-resize',
-            'displayName' => 'Textarea Resize',
-            'class' => 'bi-textarea-resize',
-            'keywords' => ["textarea","resize"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-textarea-resize'],
-            ]
-        ],
-        [
-            'name' => 'textarea-t',
-            'displayName' => 'Textarea T',
-            'class' => 'bi-textarea-t',
-            'keywords' => ["textarea","t"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-textarea-t'],
-            ]
-        ],
-        [
-            'name' => 'textarea',
-            'displayName' => 'Textarea',
-            'class' => 'bi-textarea',
-            'keywords' => ["textarea"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-textarea'],
-            ]
-        ],
-        [
-            'name' => 'three-dots-vertical',
-            'displayName' => 'Three Dots Vertical',
-            'class' => 'bi-three-dots-vertical',
-            'keywords' => ["three","dots","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-three-dots-vertical'],
-            ]
-        ],
-        [
-            'name' => 'three-dots',
-            'displayName' => 'Three Dots',
-            'class' => 'bi-three-dots',
-            'keywords' => ["three","dots"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-three-dots'],
-            ]
-        ],
-        [
-            'name' => 'toggle-off',
-            'displayName' => 'Toggle Off',
-            'class' => 'bi-toggle-off',
-            'keywords' => ["toggle","off"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggle-off'],
-            ]
-        ],
-        [
-            'name' => 'toggle-on',
-            'displayName' => 'Toggle On',
-            'class' => 'bi-toggle-on',
-            'keywords' => ["toggle","on"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggle-on'],
-            ]
-        ],
-        [
-            'name' => 'toggle2-off',
-            'displayName' => 'Toggle2 Off',
-            'class' => 'bi-toggle2-off',
-            'keywords' => ["toggle2","off"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggle2-off'],
-            ]
-        ],
-        [
-            'name' => 'toggle2-on',
-            'displayName' => 'Toggle2 On',
-            'class' => 'bi-toggle2-on',
-            'keywords' => ["toggle2","on"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggle2-on'],
-            ]
-        ],
-        [
-            'name' => 'toggles',
-            'displayName' => 'Toggles',
-            'class' => 'bi-toggles',
-            'keywords' => ["toggles"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggles'],
-            ]
-        ],
-        [
-            'name' => 'toggles2',
-            'displayName' => 'Toggles2',
-            'class' => 'bi-toggles2',
-            'keywords' => ["toggles2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-toggles2'],
-            ]
-        ],
-        [
-            'name' => 'triangle-fill',
-            'displayName' => 'Triangle Fill',
-            'class' => 'bi-triangle-fill',
-            'keywords' => ["triangle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'solid' => ['class' => 'bi-triangle-fill'],
-                'outline' => ['class' => 'bi-triangle'],
-            ]
-        ],
-        [
-            'name' => 'triangle-half',
-            'displayName' => 'Triangle Half',
-            'class' => 'bi-triangle-half',
-            'keywords' => ["triangle","half"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-triangle-half'],
-            ]
-        ],
-        [
-            'name' => 'triangle',
-            'displayName' => 'Triangle',
-            'class' => 'bi-triangle',
-            'keywords' => ["triangle"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-triangle'],
-                'solid' => ['class' => 'bi-triangle-fill'],
-            ]
-        ],
-        [
-            'name' => 'ui-checks-grid',
-            'displayName' => 'Ui Checks Grid',
-            'class' => 'bi-ui-checks-grid',
-            'keywords' => ["ui","checks","grid"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-ui-checks-grid'],
-            ]
-        ],
-        [
-            'name' => 'ui-checks',
-            'displayName' => 'Ui Checks',
-            'class' => 'bi-ui-checks',
-            'keywords' => ["ui","checks"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-ui-checks'],
-            ]
-        ],
-        [
-            'name' => 'ui-radios-grid',
-            'displayName' => 'Ui Radios Grid',
-            'class' => 'bi-ui-radios-grid',
-            'keywords' => ["ui","radios","grid"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-ui-radios-grid'],
-            ]
-        ],
-        [
-            'name' => 'ui-radios',
-            'displayName' => 'Ui Radios',
-            'class' => 'bi-ui-radios',
-            'keywords' => ["ui","radios"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-ui-radios'],
-            ]
-        ],
-        [
-            'name' => 'union',
-            'displayName' => 'Union',
-            'class' => 'bi-union',
-            'keywords' => ["union"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-union'],
-            ]
-        ],
-        [
-            'name' => 'view-list',
-            'displayName' => 'View List',
-            'class' => 'bi-view-list',
-            'keywords' => ["view","list"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-view-list'],
-            ]
-        ],
-        [
-            'name' => 'view-stacked',
-            'displayName' => 'View Stacked',
-            'class' => 'bi-view-stacked',
-            'keywords' => ["view","stacked"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-view-stacked'],
-            ]
-        ],
-        [
-            'name' => 'window-dock',
-            'displayName' => 'Window Dock',
-            'class' => 'bi-window-dock',
-            'keywords' => ["window","dock"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-dock'],
-            ]
-        ],
-        [
-            'name' => 'window-sidebar',
-            'displayName' => 'Window Sidebar',
-            'class' => 'bi-window-sidebar',
-            'keywords' => ["window","sidebar"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-sidebar'],
-            ]
-        ],
-        [
-            'name' => 'window',
-            'displayName' => 'Window',
-            'class' => 'bi-window',
-            'keywords' => ["window"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window'],
-            ]
-        ],
-        [
-            'name' => 'zoom-in',
-            'displayName' => 'Zoom In',
-            'class' => 'bi-zoom-in',
-            'keywords' => ["zoom","in"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-zoom-in'],
-            ]
-        ],
-        [
-            'name' => 'zoom-out',
-            'displayName' => 'Zoom Out',
-            'class' => 'bi-zoom-out',
-            'keywords' => ["zoom","out"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-zoom-out'],
-            ]
-        ],
-        [
-            'name' => 'dash-lg',
-            'displayName' => 'Dash Lg',
-            'class' => 'bi-dash-lg',
-            'keywords' => ["dash","lg"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-dash-lg'],
-            ]
-        ],
-        [
-            'name' => 'graph-down-arrow',
-            'displayName' => 'Graph Down Arrow',
-            'class' => 'bi-graph-down-arrow',
-            'keywords' => ["graph","down","arrow"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-graph-down-arrow'],
-            ]
-        ],
-        [
-            'name' => 'graph-up-arrow',
-            'displayName' => 'Graph Up Arrow',
-            'class' => 'bi-graph-up-arrow',
-            'keywords' => ["graph","up","arrow"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-graph-up-arrow'],
-            ]
-        ],
-        [
-            'name' => 'list-columns-reverse',
-            'displayName' => 'List Columns Reverse',
-            'class' => 'bi-list-columns-reverse',
-            'keywords' => ["list","columns","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-columns-reverse'],
-            ]
-        ],
-        [
-            'name' => 'list-columns',
-            'displayName' => 'List Columns',
-            'class' => 'bi-list-columns',
-            'keywords' => ["list","columns"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-list-columns'],
-            ]
-        ],
-        [
-            'name' => 'window-dash',
-            'displayName' => 'Window Dash',
-            'class' => 'bi-window-dash',
-            'keywords' => ["window","dash"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-dash'],
-            ]
-        ],
-        [
-            'name' => 'window-desktop',
-            'displayName' => 'Window Desktop',
-            'class' => 'bi-window-desktop',
-            'keywords' => ["window","desktop"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-desktop'],
-            ]
-        ],
-        [
-            'name' => 'window-fullscreen',
-            'displayName' => 'Window Fullscreen',
-            'class' => 'bi-window-fullscreen',
-            'keywords' => ["window","fullscreen"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-fullscreen'],
-            ]
-        ],
-        [
-            'name' => 'window-plus',
-            'displayName' => 'Window Plus',
-            'class' => 'bi-window-plus',
-            'keywords' => ["window","plus"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-plus'],
-            ]
-        ],
-        [
-            'name' => 'window-split',
-            'displayName' => 'Window Split',
-            'class' => 'bi-window-split',
-            'keywords' => ["window","split"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-split'],
-            ]
-        ],
-        [
-            'name' => 'window-stack',
-            'displayName' => 'Window Stack',
-            'class' => 'bi-window-stack',
-            'keywords' => ["window","stack"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-stack'],
-            ]
-        ],
-        [
-            'name' => 'window-x',
-            'displayName' => 'Window X',
-            'class' => 'bi-window-x',
-            'keywords' => ["window","x"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-window-x'],
-            ]
-        ],
-        [
-            'name' => 'sliders2-vertical',
-            'displayName' => 'Sliders2 Vertical',
-            'class' => 'bi-sliders2-vertical',
-            'keywords' => ["sliders2","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sliders2-vertical'],
-            ]
-        ],
-        [
-            'name' => 'sliders2',
-            'displayName' => 'Sliders2',
-            'class' => 'bi-sliders2',
-            'keywords' => ["sliders2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-sliders2'],
-            ]
-        ],
-        [
-            'name' => 'indent',
-            'displayName' => 'Indent',
-            'class' => 'bi-indent',
-            'keywords' => ["indent"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-indent'],
-            ]
-        ],
-        [
-            'name' => 'unindent',
-            'displayName' => 'Unindent',
-            'class' => 'bi-unindent',
-            'keywords' => ["unindent"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-unindent'],
-            ]
-        ],
-        [
-            'name' => 'text-wrap',
-            'displayName' => 'Text Wrap',
-            'class' => 'bi-text-wrap',
-            'keywords' => ["text","wrap"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-text-wrap'],
-            ]
-        ],
-        [
-            'name' => 'arrows-collapse-vertical',
-            'displayName' => 'Arrows Collapse Vertical',
-            'class' => 'bi-arrows-collapse-vertical',
-            'keywords' => ["arrows","collapse","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-collapse-vertical'],
-            ]
-        ],
-        [
-            'name' => 'arrows-expand-vertical',
-            'displayName' => 'Arrows Expand Vertical',
-            'class' => 'bi-arrows-expand-vertical',
-            'keywords' => ["arrows","expand","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-expand-vertical'],
-            ]
-        ],
-        [
-            'name' => 'arrows-vertical',
-            'displayName' => 'Arrows Vertical',
-            'class' => 'bi-arrows-vertical',
-            'keywords' => ["arrows","vertical"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows-vertical'],
-            ]
-        ],
-        [
-            'name' => 'arrows',
-            'displayName' => 'Arrows',
-            'class' => 'bi-arrows',
-            'keywords' => ["arrows"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-arrows'],
-            ]
-        ],
-        [
-            'name' => 'crosshair',
-            'displayName' => 'Crosshair',
-            'class' => 'bi-crosshair',
-            'keywords' => ["crosshair"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-crosshair'],
-            ]
-        ],
-        [
-            'name' => 'crosshair2',
-            'displayName' => 'Crosshair2',
-            'class' => 'bi-crosshair2',
-            'keywords' => ["crosshair2"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-crosshair2'],
-            ]
-        ],
-        [
-            'name' => 'transparency',
-            'displayName' => 'Transparency',
-            'class' => 'bi-transparency',
-            'keywords' => ["transparency"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-transparency'],
-            ]
-        ],
-        [
-            'name' => 'type-h4',
-            'displayName' => 'Type H4',
-            'class' => 'bi-type-h4',
-            'keywords' => ["type","h4"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-type-h4'],
-            ]
-        ],
-        [
-            'name' => 'type-h5',
-            'displayName' => 'Type H5',
-            'class' => 'bi-type-h5',
-            'keywords' => ["type","h5"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-type-h5'],
-            ]
-        ],
-        [
-            'name' => 'type-h6',
-            'displayName' => 'Type H6',
-            'class' => 'bi-type-h6',
-            'keywords' => ["type","h6"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-type-h6'],
-            ]
-        ],
-        [
-            'name' => 'brilliance',
-            'displayName' => 'Brilliance',
-            'class' => 'bi-brilliance',
-            'keywords' => ["brilliance"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-brilliance'],
-            ]
-        ],
-        [
-            'name' => 'highlights',
-            'displayName' => 'Highlights',
-            'class' => 'bi-highlights',
-            'keywords' => ["highlights"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-highlights'],
-            ]
-        ],
-        [
-            'name' => 'noise-reduction',
-            'displayName' => 'Noise Reduction',
-            'class' => 'bi-noise-reduction',
-            'keywords' => ["noise","reduction"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-noise-reduction'],
-            ]
-        ],
-        [
-            'name' => 'shadows',
-            'displayName' => 'Shadows',
-            'class' => 'bi-shadows',
-            'keywords' => ["shadows"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-shadows'],
-            ]
-        ],
-        [
-            'name' => 'vignette',
-            'displayName' => 'Vignette',
-            'class' => 'bi-vignette',
-            'keywords' => ["vignette"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-vignette'],
-            ]
-        ],
-        [
-            'name' => 'battery-low',
-            'displayName' => 'Battery Low',
-            'class' => 'bi-battery-low',
-            'keywords' => ["battery","low"],
-            'type' => 'bootstrap',
-            'category' => 'ui',
-            'variants' => [
-                'outline' => ['class' => 'bi-battery-low'],
-            ]
-        ],
-    ]
-];
+return array (
+  'id' => 'ui',
+  'name' => 'UI 元件',
+  'description' => '使用者介面相關圖標',
+  'priority' => 'normal',
+  'icons' => 
+  array (
+    0 => 
+    array (
+      'id' => 'align-bottom-outline',
+      'name' => 'Align Bottom',
+      'value' => 'bi-align-bottom',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'bottom',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    1 => 
+    array (
+      'id' => 'align-center-outline',
+      'name' => 'Align Center',
+      'value' => 'bi-align-center',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'center',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    2 => 
+    array (
+      'id' => 'align-end-outline',
+      'name' => 'Align End',
+      'value' => 'bi-align-end',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'end',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    3 => 
+    array (
+      'id' => 'align-middle-outline',
+      'name' => 'Align Middle',
+      'value' => 'bi-align-middle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'middle',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    4 => 
+    array (
+      'id' => 'align-start-outline',
+      'name' => 'Align Start',
+      'value' => 'bi-align-start',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'start',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    5 => 
+    array (
+      'id' => 'align-start-solid',
+      'name' => 'Align Start',
+      'value' => 'bi-align-start-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'start',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    6 => 
+    array (
+      'id' => 'align-top-outline',
+      'name' => 'Align Top',
+      'value' => 'bi-align-top',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'align',
+        1 => 'top',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    7 => 
+    array (
+      'id' => 'app-indicator-outline',
+      'name' => 'App Indicator',
+      'value' => 'bi-app-indicator',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'app',
+        1 => 'indicator',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    8 => 
+    array (
+      'id' => 'app-outline',
+      'name' => 'App',
+      'value' => 'bi-app',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'app',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    9 => 
+    array (
+      'id' => 'arrow-90deg-down-outline',
+      'name' => 'Arrow 90deg Down',
+      'value' => 'bi-arrow-90deg-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    10 => 
+    array (
+      'id' => 'arrow-90deg-down-solid',
+      'name' => 'Arrow 90deg Down',
+      'value' => 'bi-arrow-90deg-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    11 => 
+    array (
+      'id' => 'arrow-90deg-left-outline',
+      'name' => 'Arrow 90deg Left',
+      'value' => 'bi-arrow-90deg-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    12 => 
+    array (
+      'id' => 'arrow-90deg-left-solid',
+      'name' => 'Arrow 90deg Left',
+      'value' => 'bi-arrow-90deg-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    13 => 
+    array (
+      'id' => 'arrow-90deg-right-outline',
+      'name' => 'Arrow 90deg Right',
+      'value' => 'bi-arrow-90deg-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    14 => 
+    array (
+      'id' => 'arrow-90deg-right-solid',
+      'name' => 'Arrow 90deg Right',
+      'value' => 'bi-arrow-90deg-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    15 => 
+    array (
+      'id' => 'arrow-90deg-up-outline',
+      'name' => 'Arrow 90deg Up',
+      'value' => 'bi-arrow-90deg-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    16 => 
+    array (
+      'id' => 'arrow-90deg-up-solid',
+      'name' => 'Arrow 90deg Up',
+      'value' => 'bi-arrow-90deg-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => '90deg',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    17 => 
+    array (
+      'id' => 'arrow-bar-down-outline',
+      'name' => 'Arrow Bar Down',
+      'value' => 'bi-arrow-bar-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    18 => 
+    array (
+      'id' => 'arrow-bar-down-solid',
+      'name' => 'Arrow Bar Down',
+      'value' => 'bi-arrow-bar-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    19 => 
+    array (
+      'id' => 'arrow-bar-left-outline',
+      'name' => 'Arrow Bar Left',
+      'value' => 'bi-arrow-bar-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    20 => 
+    array (
+      'id' => 'arrow-bar-left-solid',
+      'name' => 'Arrow Bar Left',
+      'value' => 'bi-arrow-bar-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    21 => 
+    array (
+      'id' => 'arrow-bar-right-outline',
+      'name' => 'Arrow Bar Right',
+      'value' => 'bi-arrow-bar-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    22 => 
+    array (
+      'id' => 'arrow-bar-right-solid',
+      'name' => 'Arrow Bar Right',
+      'value' => 'bi-arrow-bar-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    23 => 
+    array (
+      'id' => 'arrow-bar-up-outline',
+      'name' => 'Arrow Bar Up',
+      'value' => 'bi-arrow-bar-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    24 => 
+    array (
+      'id' => 'arrow-bar-up-solid',
+      'name' => 'Arrow Bar Up',
+      'value' => 'bi-arrow-bar-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'bar',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    25 => 
+    array (
+      'id' => 'arrow-clockwise-outline',
+      'name' => 'Arrow Clockwise',
+      'value' => 'bi-arrow-clockwise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'clockwise',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    26 => 
+    array (
+      'id' => 'arrow-clockwise-solid',
+      'name' => 'Arrow Clockwise',
+      'value' => 'bi-arrow-clockwise-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'clockwise',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    27 => 
+    array (
+      'id' => 'arrow-counterclockwise-outline',
+      'name' => 'Arrow Counterclockwise',
+      'value' => 'bi-arrow-counterclockwise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'counterclockwise',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    28 => 
+    array (
+      'id' => 'arrow-counterclockwise-solid',
+      'name' => 'Arrow Counterclockwise',
+      'value' => 'bi-arrow-counterclockwise-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'counterclockwise',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    29 => 
+    array (
+      'id' => 'arrow-down-circle-fill-solid',
+      'name' => 'Arrow Down Circle Fill',
+      'value' => 'bi-arrow-down-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    30 => 
+    array (
+      'id' => 'arrow-down-circle-fill-outline',
+      'name' => 'Arrow Down Circle Fill',
+      'value' => 'bi-arrow-down-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    31 => 
+    array (
+      'id' => 'arrow-down-circle-outline',
+      'name' => 'Arrow Down Circle',
+      'value' => 'bi-arrow-down-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    32 => 
+    array (
+      'id' => 'arrow-down-circle-solid',
+      'name' => 'Arrow Down Circle',
+      'value' => 'bi-arrow-down-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    33 => 
+    array (
+      'id' => 'arrow-down-left-circle-fill-solid',
+      'name' => 'Arrow Down Left Circle Fill',
+      'value' => 'bi-arrow-down-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    34 => 
+    array (
+      'id' => 'arrow-down-left-circle-fill-outline',
+      'name' => 'Arrow Down Left Circle Fill',
+      'value' => 'bi-arrow-down-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    35 => 
+    array (
+      'id' => 'arrow-down-left-circle-outline',
+      'name' => 'Arrow Down Left Circle',
+      'value' => 'bi-arrow-down-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    36 => 
+    array (
+      'id' => 'arrow-down-left-circle-solid',
+      'name' => 'Arrow Down Left Circle',
+      'value' => 'bi-arrow-down-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    37 => 
+    array (
+      'id' => 'arrow-down-left-square-fill-solid',
+      'name' => 'Arrow Down Left Square Fill',
+      'value' => 'bi-arrow-down-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    38 => 
+    array (
+      'id' => 'arrow-down-left-square-fill-outline',
+      'name' => 'Arrow Down Left Square Fill',
+      'value' => 'bi-arrow-down-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    39 => 
+    array (
+      'id' => 'arrow-down-left-square-outline',
+      'name' => 'Arrow Down Left Square',
+      'value' => 'bi-arrow-down-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    40 => 
+    array (
+      'id' => 'arrow-down-left-square-solid',
+      'name' => 'Arrow Down Left Square',
+      'value' => 'bi-arrow-down-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    41 => 
+    array (
+      'id' => 'arrow-down-left-outline',
+      'name' => 'Arrow Down Left',
+      'value' => 'bi-arrow-down-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    42 => 
+    array (
+      'id' => 'arrow-down-left-solid',
+      'name' => 'Arrow Down Left',
+      'value' => 'bi-arrow-down-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    43 => 
+    array (
+      'id' => 'arrow-down-right-circle-fill-solid',
+      'name' => 'Arrow Down Right Circle Fill',
+      'value' => 'bi-arrow-down-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    44 => 
+    array (
+      'id' => 'arrow-down-right-circle-fill-outline',
+      'name' => 'Arrow Down Right Circle Fill',
+      'value' => 'bi-arrow-down-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    45 => 
+    array (
+      'id' => 'arrow-down-right-circle-outline',
+      'name' => 'Arrow Down Right Circle',
+      'value' => 'bi-arrow-down-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    46 => 
+    array (
+      'id' => 'arrow-down-right-circle-solid',
+      'name' => 'Arrow Down Right Circle',
+      'value' => 'bi-arrow-down-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    47 => 
+    array (
+      'id' => 'arrow-down-right-square-fill-solid',
+      'name' => 'Arrow Down Right Square Fill',
+      'value' => 'bi-arrow-down-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    48 => 
+    array (
+      'id' => 'arrow-down-right-square-fill-outline',
+      'name' => 'Arrow Down Right Square Fill',
+      'value' => 'bi-arrow-down-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    49 => 
+    array (
+      'id' => 'arrow-down-right-square-outline',
+      'name' => 'Arrow Down Right Square',
+      'value' => 'bi-arrow-down-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    50 => 
+    array (
+      'id' => 'arrow-down-right-square-solid',
+      'name' => 'Arrow Down Right Square',
+      'value' => 'bi-arrow-down-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    51 => 
+    array (
+      'id' => 'arrow-down-right-outline',
+      'name' => 'Arrow Down Right',
+      'value' => 'bi-arrow-down-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    52 => 
+    array (
+      'id' => 'arrow-down-right-solid',
+      'name' => 'Arrow Down Right',
+      'value' => 'bi-arrow-down-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    53 => 
+    array (
+      'id' => 'arrow-down-short-outline',
+      'name' => 'Arrow Down Short',
+      'value' => 'bi-arrow-down-short',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    54 => 
+    array (
+      'id' => 'arrow-down-short-solid',
+      'name' => 'Arrow Down Short',
+      'value' => 'bi-arrow-down-short-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    55 => 
+    array (
+      'id' => 'arrow-down-square-fill-solid',
+      'name' => 'Arrow Down Square Fill',
+      'value' => 'bi-arrow-down-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    56 => 
+    array (
+      'id' => 'arrow-down-square-fill-outline',
+      'name' => 'Arrow Down Square Fill',
+      'value' => 'bi-arrow-down-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    57 => 
+    array (
+      'id' => 'arrow-down-square-outline',
+      'name' => 'Arrow Down Square',
+      'value' => 'bi-arrow-down-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    58 => 
+    array (
+      'id' => 'arrow-down-square-solid',
+      'name' => 'Arrow Down Square',
+      'value' => 'bi-arrow-down-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    59 => 
+    array (
+      'id' => 'arrow-down-up-outline',
+      'name' => 'Arrow Down Up',
+      'value' => 'bi-arrow-down-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    60 => 
+    array (
+      'id' => 'arrow-down-up-solid',
+      'name' => 'Arrow Down Up',
+      'value' => 'bi-arrow-down-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    61 => 
+    array (
+      'id' => 'arrow-down-outline',
+      'name' => 'Arrow Down',
+      'value' => 'bi-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    62 => 
+    array (
+      'id' => 'arrow-down-solid',
+      'name' => 'Arrow Down',
+      'value' => 'bi-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    63 => 
+    array (
+      'id' => 'arrow-left-circle-fill-solid',
+      'name' => 'Arrow Left Circle Fill',
+      'value' => 'bi-arrow-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    64 => 
+    array (
+      'id' => 'arrow-left-circle-fill-outline',
+      'name' => 'Arrow Left Circle Fill',
+      'value' => 'bi-arrow-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    65 => 
+    array (
+      'id' => 'arrow-left-circle-outline',
+      'name' => 'Arrow Left Circle',
+      'value' => 'bi-arrow-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    66 => 
+    array (
+      'id' => 'arrow-left-circle-solid',
+      'name' => 'Arrow Left Circle',
+      'value' => 'bi-arrow-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    67 => 
+    array (
+      'id' => 'arrow-left-right-outline',
+      'name' => 'Arrow Left Right',
+      'value' => 'bi-arrow-left-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    68 => 
+    array (
+      'id' => 'arrow-left-right-solid',
+      'name' => 'Arrow Left Right',
+      'value' => 'bi-arrow-left-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    69 => 
+    array (
+      'id' => 'arrow-left-short-outline',
+      'name' => 'Arrow Left Short',
+      'value' => 'bi-arrow-left-short',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    70 => 
+    array (
+      'id' => 'arrow-left-short-solid',
+      'name' => 'Arrow Left Short',
+      'value' => 'bi-arrow-left-short-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    71 => 
+    array (
+      'id' => 'arrow-left-square-fill-solid',
+      'name' => 'Arrow Left Square Fill',
+      'value' => 'bi-arrow-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    72 => 
+    array (
+      'id' => 'arrow-left-square-fill-outline',
+      'name' => 'Arrow Left Square Fill',
+      'value' => 'bi-arrow-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    73 => 
+    array (
+      'id' => 'arrow-left-square-outline',
+      'name' => 'Arrow Left Square',
+      'value' => 'bi-arrow-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    74 => 
+    array (
+      'id' => 'arrow-left-square-solid',
+      'name' => 'Arrow Left Square',
+      'value' => 'bi-arrow-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    75 => 
+    array (
+      'id' => 'arrow-left-outline',
+      'name' => 'Arrow Left',
+      'value' => 'bi-arrow-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
+      'id' => 'arrow-left-solid',
+      'name' => 'Arrow Left',
+      'value' => 'bi-arrow-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    77 => 
+    array (
+      'id' => 'arrow-repeat-outline',
+      'name' => 'Arrow Repeat',
+      'value' => 'bi-arrow-repeat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'repeat',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    78 => 
+    array (
+      'id' => 'arrow-repeat-solid',
+      'name' => 'Arrow Repeat',
+      'value' => 'bi-arrow-repeat-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'repeat',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    79 => 
+    array (
+      'id' => 'arrow-return-left-outline',
+      'name' => 'Arrow Return Left',
+      'value' => 'bi-arrow-return-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'return',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    80 => 
+    array (
+      'id' => 'arrow-return-left-solid',
+      'name' => 'Arrow Return Left',
+      'value' => 'bi-arrow-return-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'return',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    81 => 
+    array (
+      'id' => 'arrow-return-right-outline',
+      'name' => 'Arrow Return Right',
+      'value' => 'bi-arrow-return-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'return',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    82 => 
+    array (
+      'id' => 'arrow-return-right-solid',
+      'name' => 'Arrow Return Right',
+      'value' => 'bi-arrow-return-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'return',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    83 => 
+    array (
+      'id' => 'arrow-right-circle-fill-solid',
+      'name' => 'Arrow Right Circle Fill',
+      'value' => 'bi-arrow-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    84 => 
+    array (
+      'id' => 'arrow-right-circle-fill-outline',
+      'name' => 'Arrow Right Circle Fill',
+      'value' => 'bi-arrow-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    85 => 
+    array (
+      'id' => 'arrow-right-circle-outline',
+      'name' => 'Arrow Right Circle',
+      'value' => 'bi-arrow-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    86 => 
+    array (
+      'id' => 'arrow-right-circle-solid',
+      'name' => 'Arrow Right Circle',
+      'value' => 'bi-arrow-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    87 => 
+    array (
+      'id' => 'arrow-right-short-outline',
+      'name' => 'Arrow Right Short',
+      'value' => 'bi-arrow-right-short',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    88 => 
+    array (
+      'id' => 'arrow-right-short-solid',
+      'name' => 'Arrow Right Short',
+      'value' => 'bi-arrow-right-short-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    89 => 
+    array (
+      'id' => 'arrow-right-square-fill-solid',
+      'name' => 'Arrow Right Square Fill',
+      'value' => 'bi-arrow-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    90 => 
+    array (
+      'id' => 'arrow-right-square-fill-outline',
+      'name' => 'Arrow Right Square Fill',
+      'value' => 'bi-arrow-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    91 => 
+    array (
+      'id' => 'arrow-right-square-outline',
+      'name' => 'Arrow Right Square',
+      'value' => 'bi-arrow-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    92 => 
+    array (
+      'id' => 'arrow-right-square-solid',
+      'name' => 'Arrow Right Square',
+      'value' => 'bi-arrow-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    93 => 
+    array (
+      'id' => 'arrow-right-outline',
+      'name' => 'Arrow Right',
+      'value' => 'bi-arrow-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    94 => 
+    array (
+      'id' => 'arrow-right-solid',
+      'name' => 'Arrow Right',
+      'value' => 'bi-arrow-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    95 => 
+    array (
+      'id' => 'arrow-up-circle-fill-solid',
+      'name' => 'Arrow Up Circle Fill',
+      'value' => 'bi-arrow-up-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    96 => 
+    array (
+      'id' => 'arrow-up-circle-fill-outline',
+      'name' => 'Arrow Up Circle Fill',
+      'value' => 'bi-arrow-up-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    97 => 
+    array (
+      'id' => 'arrow-up-circle-outline',
+      'name' => 'Arrow Up Circle',
+      'value' => 'bi-arrow-up-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    98 => 
+    array (
+      'id' => 'arrow-up-circle-solid',
+      'name' => 'Arrow Up Circle',
+      'value' => 'bi-arrow-up-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    99 => 
+    array (
+      'id' => 'arrow-up-left-circle-fill-solid',
+      'name' => 'Arrow Up Left Circle Fill',
+      'value' => 'bi-arrow-up-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    100 => 
+    array (
+      'id' => 'arrow-up-left-circle-fill-outline',
+      'name' => 'Arrow Up Left Circle Fill',
+      'value' => 'bi-arrow-up-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    101 => 
+    array (
+      'id' => 'arrow-up-left-circle-outline',
+      'name' => 'Arrow Up Left Circle',
+      'value' => 'bi-arrow-up-left-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    102 => 
+    array (
+      'id' => 'arrow-up-left-circle-solid',
+      'name' => 'Arrow Up Left Circle',
+      'value' => 'bi-arrow-up-left-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    103 => 
+    array (
+      'id' => 'arrow-up-left-square-fill-solid',
+      'name' => 'Arrow Up Left Square Fill',
+      'value' => 'bi-arrow-up-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    104 => 
+    array (
+      'id' => 'arrow-up-left-square-fill-outline',
+      'name' => 'Arrow Up Left Square Fill',
+      'value' => 'bi-arrow-up-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    105 => 
+    array (
+      'id' => 'arrow-up-left-square-outline',
+      'name' => 'Arrow Up Left Square',
+      'value' => 'bi-arrow-up-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    106 => 
+    array (
+      'id' => 'arrow-up-left-square-solid',
+      'name' => 'Arrow Up Left Square',
+      'value' => 'bi-arrow-up-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    107 => 
+    array (
+      'id' => 'arrow-up-left-outline',
+      'name' => 'Arrow Up Left',
+      'value' => 'bi-arrow-up-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    108 => 
+    array (
+      'id' => 'arrow-up-left-solid',
+      'name' => 'Arrow Up Left',
+      'value' => 'bi-arrow-up-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    109 => 
+    array (
+      'id' => 'arrow-up-right-circle-fill-solid',
+      'name' => 'Arrow Up Right Circle Fill',
+      'value' => 'bi-arrow-up-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    110 => 
+    array (
+      'id' => 'arrow-up-right-circle-fill-outline',
+      'name' => 'Arrow Up Right Circle Fill',
+      'value' => 'bi-arrow-up-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'circle',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    111 => 
+    array (
+      'id' => 'arrow-up-right-circle-outline',
+      'name' => 'Arrow Up Right Circle',
+      'value' => 'bi-arrow-up-right-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    112 => 
+    array (
+      'id' => 'arrow-up-right-circle-solid',
+      'name' => 'Arrow Up Right Circle',
+      'value' => 'bi-arrow-up-right-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    113 => 
+    array (
+      'id' => 'arrow-up-right-square-fill-solid',
+      'name' => 'Arrow Up Right Square Fill',
+      'value' => 'bi-arrow-up-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    114 => 
+    array (
+      'id' => 'arrow-up-right-square-fill-outline',
+      'name' => 'Arrow Up Right Square Fill',
+      'value' => 'bi-arrow-up-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'square',
+        4 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    115 => 
+    array (
+      'id' => 'arrow-up-right-square-outline',
+      'name' => 'Arrow Up Right Square',
+      'value' => 'bi-arrow-up-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    116 => 
+    array (
+      'id' => 'arrow-up-right-square-solid',
+      'name' => 'Arrow Up Right Square',
+      'value' => 'bi-arrow-up-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+        3 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    117 => 
+    array (
+      'id' => 'arrow-up-right-outline',
+      'name' => 'Arrow Up Right',
+      'value' => 'bi-arrow-up-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    118 => 
+    array (
+      'id' => 'arrow-up-right-solid',
+      'name' => 'Arrow Up Right',
+      'value' => 'bi-arrow-up-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    119 => 
+    array (
+      'id' => 'arrow-up-short-outline',
+      'name' => 'Arrow Up Short',
+      'value' => 'bi-arrow-up-short',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    120 => 
+    array (
+      'id' => 'arrow-up-short-solid',
+      'name' => 'Arrow Up Short',
+      'value' => 'bi-arrow-up-short-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'short',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    121 => 
+    array (
+      'id' => 'arrow-up-square-fill-solid',
+      'name' => 'Arrow Up Square Fill',
+      'value' => 'bi-arrow-up-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    122 => 
+    array (
+      'id' => 'arrow-up-square-fill-outline',
+      'name' => 'Arrow Up Square Fill',
+      'value' => 'bi-arrow-up-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    123 => 
+    array (
+      'id' => 'arrow-up-square-outline',
+      'name' => 'Arrow Up Square',
+      'value' => 'bi-arrow-up-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    124 => 
+    array (
+      'id' => 'arrow-up-square-solid',
+      'name' => 'Arrow Up Square',
+      'value' => 'bi-arrow-up-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    125 => 
+    array (
+      'id' => 'arrow-up-outline',
+      'name' => 'Arrow Up',
+      'value' => 'bi-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    126 => 
+    array (
+      'id' => 'arrow-up-solid',
+      'name' => 'Arrow Up',
+      'value' => 'bi-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrow',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    127 => 
+    array (
+      'id' => 'arrows-angle-contract-outline',
+      'name' => 'Arrows Angle Contract',
+      'value' => 'bi-arrows-angle-contract',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'angle',
+        2 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    128 => 
+    array (
+      'id' => 'arrows-angle-contract-solid',
+      'name' => 'Arrows Angle Contract',
+      'value' => 'bi-arrows-angle-contract-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'angle',
+        2 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    129 => 
+    array (
+      'id' => 'arrows-angle-expand-outline',
+      'name' => 'Arrows Angle Expand',
+      'value' => 'bi-arrows-angle-expand',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'angle',
+        2 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
+      'id' => 'arrows-angle-expand-solid',
+      'name' => 'Arrows Angle Expand',
+      'value' => 'bi-arrows-angle-expand-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'angle',
+        2 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    131 => 
+    array (
+      'id' => 'arrows-collapse-outline',
+      'name' => 'Arrows Collapse',
+      'value' => 'bi-arrows-collapse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'collapse',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    132 => 
+    array (
+      'id' => 'arrows-collapse-solid',
+      'name' => 'Arrows Collapse',
+      'value' => 'bi-arrows-collapse-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'collapse',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    133 => 
+    array (
+      'id' => 'arrows-expand-outline',
+      'name' => 'Arrows Expand',
+      'value' => 'bi-arrows-expand',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    134 => 
+    array (
+      'id' => 'arrows-expand-solid',
+      'name' => 'Arrows Expand',
+      'value' => 'bi-arrows-expand-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    135 => 
+    array (
+      'id' => 'arrows-fullscreen-outline',
+      'name' => 'Arrows Fullscreen',
+      'value' => 'bi-arrows-fullscreen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'fullscreen',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    136 => 
+    array (
+      'id' => 'arrows-fullscreen-solid',
+      'name' => 'Arrows Fullscreen',
+      'value' => 'bi-arrows-fullscreen-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'fullscreen',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    137 => 
+    array (
+      'id' => 'arrows-move-outline',
+      'name' => 'Arrows Move',
+      'value' => 'bi-arrows-move',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'move',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    138 => 
+    array (
+      'id' => 'arrows-move-solid',
+      'name' => 'Arrows Move',
+      'value' => 'bi-arrows-move-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'move',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    139 => 
+    array (
+      'id' => 'aspect-ratio-fill-solid',
+      'name' => 'Aspect Ratio Fill',
+      'value' => 'bi-aspect-ratio-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'aspect',
+        1 => 'ratio',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    140 => 
+    array (
+      'id' => 'aspect-ratio-fill-outline',
+      'name' => 'Aspect Ratio Fill',
+      'value' => 'bi-aspect-ratio',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'aspect',
+        1 => 'ratio',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    141 => 
+    array (
+      'id' => 'aspect-ratio-outline',
+      'name' => 'Aspect Ratio',
+      'value' => 'bi-aspect-ratio',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'aspect',
+        1 => 'ratio',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    142 => 
+    array (
+      'id' => 'badge-3d-fill-solid',
+      'name' => 'Badge 3d Fill',
+      'value' => 'bi-badge-3d-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '3d',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    143 => 
+    array (
+      'id' => 'badge-3d-fill-outline',
+      'name' => 'Badge 3d Fill',
+      'value' => 'bi-badge-3d',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '3d',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    144 => 
+    array (
+      'id' => 'badge-3d-outline',
+      'name' => 'Badge 3d',
+      'value' => 'bi-badge-3d',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '3d',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    145 => 
+    array (
+      'id' => 'badge-3d-solid',
+      'name' => 'Badge 3d',
+      'value' => 'bi-badge-3d-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '3d',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    146 => 
+    array (
+      'id' => 'badge-4k-fill-solid',
+      'name' => 'Badge 4k Fill',
+      'value' => 'bi-badge-4k-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '4k',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    147 => 
+    array (
+      'id' => 'badge-4k-fill-outline',
+      'name' => 'Badge 4k Fill',
+      'value' => 'bi-badge-4k',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '4k',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    148 => 
+    array (
+      'id' => 'badge-4k-outline',
+      'name' => 'Badge 4k',
+      'value' => 'bi-badge-4k',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '4k',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    149 => 
+    array (
+      'id' => 'badge-4k-solid',
+      'name' => 'Badge 4k',
+      'value' => 'bi-badge-4k-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '4k',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    150 => 
+    array (
+      'id' => 'badge-8k-fill-solid',
+      'name' => 'Badge 8k Fill',
+      'value' => 'bi-badge-8k-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '8k',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    151 => 
+    array (
+      'id' => 'badge-8k-fill-outline',
+      'name' => 'Badge 8k Fill',
+      'value' => 'bi-badge-8k',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '8k',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    152 => 
+    array (
+      'id' => 'badge-8k-outline',
+      'name' => 'Badge 8k',
+      'value' => 'bi-badge-8k',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '8k',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    153 => 
+    array (
+      'id' => 'badge-8k-solid',
+      'name' => 'Badge 8k',
+      'value' => 'bi-badge-8k-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => '8k',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    154 => 
+    array (
+      'id' => 'badge-ad-fill-solid',
+      'name' => 'Badge Ad Fill',
+      'value' => 'bi-badge-ad-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ad',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    155 => 
+    array (
+      'id' => 'badge-ad-fill-outline',
+      'name' => 'Badge Ad Fill',
+      'value' => 'bi-badge-ad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ad',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    156 => 
+    array (
+      'id' => 'badge-ad-outline',
+      'name' => 'Badge Ad',
+      'value' => 'bi-badge-ad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ad',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
+      'id' => 'badge-ad-solid',
+      'name' => 'Badge Ad',
+      'value' => 'bi-badge-ad-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ad',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    158 => 
+    array (
+      'id' => 'badge-ar-fill-solid',
+      'name' => 'Badge Ar Fill',
+      'value' => 'bi-badge-ar-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ar',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    159 => 
+    array (
+      'id' => 'badge-ar-fill-outline',
+      'name' => 'Badge Ar Fill',
+      'value' => 'bi-badge-ar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ar',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    160 => 
+    array (
+      'id' => 'badge-ar-outline',
+      'name' => 'Badge Ar',
+      'value' => 'bi-badge-ar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ar',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    161 => 
+    array (
+      'id' => 'badge-ar-solid',
+      'name' => 'Badge Ar',
+      'value' => 'bi-badge-ar-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'ar',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    162 => 
+    array (
+      'id' => 'badge-cc-fill-solid',
+      'name' => 'Badge Cc Fill',
+      'value' => 'bi-badge-cc-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'cc',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    163 => 
+    array (
+      'id' => 'badge-cc-fill-outline',
+      'name' => 'Badge Cc Fill',
+      'value' => 'bi-badge-cc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'cc',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    164 => 
+    array (
+      'id' => 'badge-cc-outline',
+      'name' => 'Badge Cc',
+      'value' => 'bi-badge-cc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'cc',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    165 => 
+    array (
+      'id' => 'badge-cc-solid',
+      'name' => 'Badge Cc',
+      'value' => 'bi-badge-cc-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'cc',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    166 => 
+    array (
+      'id' => 'badge-hd-fill-solid',
+      'name' => 'Badge Hd Fill',
+      'value' => 'bi-badge-hd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'hd',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    167 => 
+    array (
+      'id' => 'badge-hd-fill-outline',
+      'name' => 'Badge Hd Fill',
+      'value' => 'bi-badge-hd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'hd',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    168 => 
+    array (
+      'id' => 'badge-hd-outline',
+      'name' => 'Badge Hd',
+      'value' => 'bi-badge-hd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'hd',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    169 => 
+    array (
+      'id' => 'badge-hd-solid',
+      'name' => 'Badge Hd',
+      'value' => 'bi-badge-hd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'hd',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    170 => 
+    array (
+      'id' => 'badge-tm-fill-solid',
+      'name' => 'Badge Tm Fill',
+      'value' => 'bi-badge-tm-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'tm',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    171 => 
+    array (
+      'id' => 'badge-tm-fill-outline',
+      'name' => 'Badge Tm Fill',
+      'value' => 'bi-badge-tm',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'tm',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    172 => 
+    array (
+      'id' => 'badge-tm-outline',
+      'name' => 'Badge Tm',
+      'value' => 'bi-badge-tm',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'tm',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    173 => 
+    array (
+      'id' => 'badge-tm-solid',
+      'name' => 'Badge Tm',
+      'value' => 'bi-badge-tm-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'tm',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    174 => 
+    array (
+      'id' => 'badge-vo-fill-solid',
+      'name' => 'Badge Vo Fill',
+      'value' => 'bi-badge-vo-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vo',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    175 => 
+    array (
+      'id' => 'badge-vo-fill-outline',
+      'name' => 'Badge Vo Fill',
+      'value' => 'bi-badge-vo',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vo',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    176 => 
+    array (
+      'id' => 'badge-vo-outline',
+      'name' => 'Badge Vo',
+      'value' => 'bi-badge-vo',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vo',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    177 => 
+    array (
+      'id' => 'badge-vo-solid',
+      'name' => 'Badge Vo',
+      'value' => 'bi-badge-vo-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vo',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    178 => 
+    array (
+      'id' => 'badge-vr-fill-solid',
+      'name' => 'Badge Vr Fill',
+      'value' => 'bi-badge-vr-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vr',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    179 => 
+    array (
+      'id' => 'badge-vr-fill-outline',
+      'name' => 'Badge Vr Fill',
+      'value' => 'bi-badge-vr',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vr',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    180 => 
+    array (
+      'id' => 'badge-vr-outline',
+      'name' => 'Badge Vr',
+      'value' => 'bi-badge-vr',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vr',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    181 => 
+    array (
+      'id' => 'badge-vr-solid',
+      'name' => 'Badge Vr',
+      'value' => 'bi-badge-vr-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'vr',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    182 => 
+    array (
+      'id' => 'badge-wc-fill-solid',
+      'name' => 'Badge Wc Fill',
+      'value' => 'bi-badge-wc-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'wc',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    183 => 
+    array (
+      'id' => 'badge-wc-fill-outline',
+      'name' => 'Badge Wc Fill',
+      'value' => 'bi-badge-wc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'wc',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    184 => 
+    array (
+      'id' => 'badge-wc-outline',
+      'name' => 'Badge Wc',
+      'value' => 'bi-badge-wc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'wc',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    185 => 
+    array (
+      'id' => 'badge-wc-solid',
+      'name' => 'Badge Wc',
+      'value' => 'bi-badge-wc-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'wc',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    186 => 
+    array (
+      'id' => 'bar-chart-fill-solid',
+      'name' => 'Bar Chart Fill',
+      'value' => 'bi-bar-chart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    187 => 
+    array (
+      'id' => 'bar-chart-fill-outline',
+      'name' => 'Bar Chart Fill',
+      'value' => 'bi-bar-chart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    188 => 
+    array (
+      'id' => 'bar-chart-line-fill-solid',
+      'name' => 'Bar Chart Line Fill',
+      'value' => 'bi-bar-chart-line-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'line',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    189 => 
+    array (
+      'id' => 'bar-chart-line-fill-outline',
+      'name' => 'Bar Chart Line Fill',
+      'value' => 'bi-bar-chart-line',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'line',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    190 => 
+    array (
+      'id' => 'bar-chart-line-outline',
+      'name' => 'Bar Chart Line',
+      'value' => 'bi-bar-chart-line',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'line',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    191 => 
+    array (
+      'id' => 'bar-chart-steps-outline',
+      'name' => 'Bar Chart Steps',
+      'value' => 'bi-bar-chart-steps',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+        2 => 'steps',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    192 => 
+    array (
+      'id' => 'bar-chart-outline',
+      'name' => 'Bar Chart',
+      'value' => 'bi-bar-chart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bar',
+        1 => 'chart',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    193 => 
+    array (
+      'id' => 'border-all-outline',
+      'name' => 'Border All',
+      'value' => 'bi-border-all',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'all',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    194 => 
+    array (
+      'id' => 'border-bottom-outline',
+      'name' => 'Border Bottom',
+      'value' => 'bi-border-bottom',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'bottom',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    195 => 
+    array (
+      'id' => 'border-center-outline',
+      'name' => 'Border Center',
+      'value' => 'bi-border-center',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'center',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    196 => 
+    array (
+      'id' => 'border-inner-outline',
+      'name' => 'Border Inner',
+      'value' => 'bi-border-inner',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'inner',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    197 => 
+    array (
+      'id' => 'border-left-outline',
+      'name' => 'Border Left',
+      'value' => 'bi-border-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    198 => 
+    array (
+      'id' => 'border-middle-outline',
+      'name' => 'Border Middle',
+      'value' => 'bi-border-middle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'middle',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    199 => 
+    array (
+      'id' => 'border-outer-outline',
+      'name' => 'Border Outer',
+      'value' => 'bi-border-outer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'outer',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    200 => 
+    array (
+      'id' => 'border-right-outline',
+      'name' => 'Border Right',
+      'value' => 'bi-border-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    201 => 
+    array (
+      'id' => 'border-style-outline',
+      'name' => 'Border Style',
+      'value' => 'bi-border-style',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'style',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    202 => 
+    array (
+      'id' => 'border-top-outline',
+      'name' => 'Border Top',
+      'value' => 'bi-border-top',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'top',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    203 => 
+    array (
+      'id' => 'border-width-outline',
+      'name' => 'Border Width',
+      'value' => 'bi-border-width',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+        1 => 'width',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    204 => 
+    array (
+      'id' => 'border-outline',
+      'name' => 'Border',
+      'value' => 'bi-border',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'border',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    205 => 
+    array (
+      'id' => 'bounding-box-circles-outline',
+      'name' => 'Bounding Box Circles',
+      'value' => 'bi-bounding-box-circles',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bounding',
+        1 => 'box',
+        2 => 'circles',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    206 => 
+    array (
+      'id' => 'bounding-box-circles-solid',
+      'name' => 'Bounding Box Circles',
+      'value' => 'bi-bounding-box-circles-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bounding',
+        1 => 'box',
+        2 => 'circles',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    207 => 
+    array (
+      'id' => 'bounding-box-outline',
+      'name' => 'Bounding Box',
+      'value' => 'bi-bounding-box',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bounding',
+        1 => 'box',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    208 => 
+    array (
+      'id' => 'box-arrow-down-left-outline',
+      'name' => 'Box Arrow Down Left',
+      'value' => 'bi-box-arrow-down-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    209 => 
+    array (
+      'id' => 'box-arrow-down-left-solid',
+      'name' => 'Box Arrow Down Left',
+      'value' => 'bi-box-arrow-down-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    210 => 
+    array (
+      'id' => 'box-arrow-down-right-outline',
+      'name' => 'Box Arrow Down Right',
+      'value' => 'bi-box-arrow-down-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    211 => 
+    array (
+      'id' => 'box-arrow-down-right-solid',
+      'name' => 'Box Arrow Down Right',
+      'value' => 'bi-box-arrow-down-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    212 => 
+    array (
+      'id' => 'box-arrow-down-outline',
+      'name' => 'Box Arrow Down',
+      'value' => 'bi-box-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    213 => 
+    array (
+      'id' => 'box-arrow-down-solid',
+      'name' => 'Box Arrow Down',
+      'value' => 'bi-box-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    214 => 
+    array (
+      'id' => 'box-arrow-in-down-left-outline',
+      'name' => 'Box Arrow In Down Left',
+      'value' => 'bi-box-arrow-in-down-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+        4 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    215 => 
+    array (
+      'id' => 'box-arrow-in-down-left-solid',
+      'name' => 'Box Arrow In Down Left',
+      'value' => 'bi-box-arrow-in-down-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+        4 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    216 => 
+    array (
+      'id' => 'box-arrow-in-down-right-outline',
+      'name' => 'Box Arrow In Down Right',
+      'value' => 'bi-box-arrow-in-down-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+        4 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    217 => 
+    array (
+      'id' => 'box-arrow-in-down-right-solid',
+      'name' => 'Box Arrow In Down Right',
+      'value' => 'bi-box-arrow-in-down-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+        4 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    218 => 
+    array (
+      'id' => 'box-arrow-in-down-outline',
+      'name' => 'Box Arrow In Down',
+      'value' => 'bi-box-arrow-in-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    219 => 
+    array (
+      'id' => 'box-arrow-in-down-solid',
+      'name' => 'Box Arrow In Down',
+      'value' => 'bi-box-arrow-in-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    220 => 
+    array (
+      'id' => 'box-arrow-in-left-outline',
+      'name' => 'Box Arrow In Left',
+      'value' => 'bi-box-arrow-in-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    221 => 
+    array (
+      'id' => 'box-arrow-in-left-solid',
+      'name' => 'Box Arrow In Left',
+      'value' => 'bi-box-arrow-in-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    222 => 
+    array (
+      'id' => 'box-arrow-in-right-outline',
+      'name' => 'Box Arrow In Right',
+      'value' => 'bi-box-arrow-in-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    223 => 
+    array (
+      'id' => 'box-arrow-in-right-solid',
+      'name' => 'Box Arrow In Right',
+      'value' => 'bi-box-arrow-in-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    224 => 
+    array (
+      'id' => 'box-arrow-in-up-left-outline',
+      'name' => 'Box Arrow In Up Left',
+      'value' => 'bi-box-arrow-in-up-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+        4 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    225 => 
+    array (
+      'id' => 'box-arrow-in-up-left-solid',
+      'name' => 'Box Arrow In Up Left',
+      'value' => 'bi-box-arrow-in-up-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+        4 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    226 => 
+    array (
+      'id' => 'box-arrow-in-up-right-outline',
+      'name' => 'Box Arrow In Up Right',
+      'value' => 'bi-box-arrow-in-up-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+        4 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    227 => 
+    array (
+      'id' => 'box-arrow-in-up-right-solid',
+      'name' => 'Box Arrow In Up Right',
+      'value' => 'bi-box-arrow-in-up-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+        4 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    228 => 
+    array (
+      'id' => 'box-arrow-in-up-outline',
+      'name' => 'Box Arrow In Up',
+      'value' => 'bi-box-arrow-in-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    229 => 
+    array (
+      'id' => 'box-arrow-in-up-solid',
+      'name' => 'Box Arrow In Up',
+      'value' => 'bi-box-arrow-in-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'in',
+        3 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    230 => 
+    array (
+      'id' => 'box-arrow-left-outline',
+      'name' => 'Box Arrow Left',
+      'value' => 'bi-box-arrow-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    231 => 
+    array (
+      'id' => 'box-arrow-left-solid',
+      'name' => 'Box Arrow Left',
+      'value' => 'bi-box-arrow-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    232 => 
+    array (
+      'id' => 'box-arrow-right-outline',
+      'name' => 'Box Arrow Right',
+      'value' => 'bi-box-arrow-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    233 => 
+    array (
+      'id' => 'box-arrow-right-solid',
+      'name' => 'Box Arrow Right',
+      'value' => 'bi-box-arrow-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    234 => 
+    array (
+      'id' => 'box-arrow-up-left-outline',
+      'name' => 'Box Arrow Up Left',
+      'value' => 'bi-box-arrow-up-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    235 => 
+    array (
+      'id' => 'box-arrow-up-left-solid',
+      'name' => 'Box Arrow Up Left',
+      'value' => 'bi-box-arrow-up-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    236 => 
+    array (
+      'id' => 'box-arrow-up-right-outline',
+      'name' => 'Box Arrow Up Right',
+      'value' => 'bi-box-arrow-up-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    237 => 
+    array (
+      'id' => 'box-arrow-up-right-solid',
+      'name' => 'Box Arrow Up Right',
+      'value' => 'bi-box-arrow-up-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    238 => 
+    array (
+      'id' => 'box-arrow-up-outline',
+      'name' => 'Box Arrow Up',
+      'value' => 'bi-box-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    239 => 
+    array (
+      'id' => 'box-arrow-up-solid',
+      'name' => 'Box Arrow Up',
+      'value' => 'bi-box-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    240 => 
+    array (
+      'id' => 'box-seam-outline',
+      'name' => 'Box Seam',
+      'value' => 'bi-box-seam',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'seam',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    241 => 
+    array (
+      'id' => 'box-outline',
+      'name' => 'Box',
+      'value' => 'bi-box',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    242 => 
+    array (
+      'id' => 'brightness-alt-high-fill-solid',
+      'name' => 'Brightness Alt High Fill',
+      'value' => 'bi-brightness-alt-high-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'high',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    243 => 
+    array (
+      'id' => 'brightness-alt-high-fill-outline',
+      'name' => 'Brightness Alt High Fill',
+      'value' => 'bi-brightness-alt-high',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'high',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    244 => 
+    array (
+      'id' => 'brightness-alt-high-outline',
+      'name' => 'Brightness Alt High',
+      'value' => 'bi-brightness-alt-high',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'high',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    245 => 
+    array (
+      'id' => 'brightness-alt-low-fill-solid',
+      'name' => 'Brightness Alt Low Fill',
+      'value' => 'bi-brightness-alt-low-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'low',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    246 => 
+    array (
+      'id' => 'brightness-alt-low-fill-outline',
+      'name' => 'Brightness Alt Low Fill',
+      'value' => 'bi-brightness-alt-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'low',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    247 => 
+    array (
+      'id' => 'brightness-alt-low-outline',
+      'name' => 'Brightness Alt Low',
+      'value' => 'bi-brightness-alt-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'alt',
+        2 => 'low',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    248 => 
+    array (
+      'id' => 'brightness-high-fill-solid',
+      'name' => 'Brightness High Fill',
+      'value' => 'bi-brightness-high-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'high',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    249 => 
+    array (
+      'id' => 'brightness-high-fill-outline',
+      'name' => 'Brightness High Fill',
+      'value' => 'bi-brightness-high',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'high',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    250 => 
+    array (
+      'id' => 'brightness-high-outline',
+      'name' => 'Brightness High',
+      'value' => 'bi-brightness-high',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'high',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    251 => 
+    array (
+      'id' => 'brightness-low-fill-solid',
+      'name' => 'Brightness Low Fill',
+      'value' => 'bi-brightness-low-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'low',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    252 => 
+    array (
+      'id' => 'brightness-low-fill-outline',
+      'name' => 'Brightness Low Fill',
+      'value' => 'bi-brightness-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'low',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    253 => 
+    array (
+      'id' => 'brightness-low-outline',
+      'name' => 'Brightness Low',
+      'value' => 'bi-brightness-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brightness',
+        1 => 'low',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    254 => 
+    array (
+      'id' => 'card-checklist-outline',
+      'name' => 'Card Checklist',
+      'value' => 'bi-card-checklist',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'card',
+        1 => 'checklist',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    255 => 
+    array (
+      'id' => 'card-heading-outline',
+      'name' => 'Card Heading',
+      'value' => 'bi-card-heading',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'card',
+        1 => 'heading',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    256 => 
+    array (
+      'id' => 'card-image-outline',
+      'name' => 'Card Image',
+      'value' => 'bi-card-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'card',
+        1 => 'image',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    257 => 
+    array (
+      'id' => 'card-list-outline',
+      'name' => 'Card List',
+      'value' => 'bi-card-list',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'card',
+        1 => 'list',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    258 => 
+    array (
+      'id' => 'card-text-outline',
+      'name' => 'Card Text',
+      'value' => 'bi-card-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'card',
+        1 => 'text',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    259 => 
+    array (
+      'id' => 'caret-down-fill-solid',
+      'name' => 'Caret Down Fill',
+      'value' => 'bi-caret-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    260 => 
+    array (
+      'id' => 'caret-down-fill-outline',
+      'name' => 'Caret Down Fill',
+      'value' => 'bi-caret-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    261 => 
+    array (
+      'id' => 'caret-down-square-fill-solid',
+      'name' => 'Caret Down Square Fill',
+      'value' => 'bi-caret-down-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    262 => 
+    array (
+      'id' => 'caret-down-square-fill-outline',
+      'name' => 'Caret Down Square Fill',
+      'value' => 'bi-caret-down-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    263 => 
+    array (
+      'id' => 'caret-down-square-outline',
+      'name' => 'Caret Down Square',
+      'value' => 'bi-caret-down-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    264 => 
+    array (
+      'id' => 'caret-down-square-solid',
+      'name' => 'Caret Down Square',
+      'value' => 'bi-caret-down-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    265 => 
+    array (
+      'id' => 'caret-down-outline',
+      'name' => 'Caret Down',
+      'value' => 'bi-caret-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    266 => 
+    array (
+      'id' => 'caret-left-fill-solid',
+      'name' => 'Caret Left Fill',
+      'value' => 'bi-caret-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    267 => 
+    array (
+      'id' => 'caret-left-fill-outline',
+      'name' => 'Caret Left Fill',
+      'value' => 'bi-caret-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    268 => 
+    array (
+      'id' => 'caret-left-square-fill-solid',
+      'name' => 'Caret Left Square Fill',
+      'value' => 'bi-caret-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    269 => 
+    array (
+      'id' => 'caret-left-square-fill-outline',
+      'name' => 'Caret Left Square Fill',
+      'value' => 'bi-caret-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    270 => 
+    array (
+      'id' => 'caret-left-square-outline',
+      'name' => 'Caret Left Square',
+      'value' => 'bi-caret-left-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    271 => 
+    array (
+      'id' => 'caret-left-square-solid',
+      'name' => 'Caret Left Square',
+      'value' => 'bi-caret-left-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    272 => 
+    array (
+      'id' => 'caret-left-outline',
+      'name' => 'Caret Left',
+      'value' => 'bi-caret-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    273 => 
+    array (
+      'id' => 'caret-right-fill-solid',
+      'name' => 'Caret Right Fill',
+      'value' => 'bi-caret-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    274 => 
+    array (
+      'id' => 'caret-right-fill-outline',
+      'name' => 'Caret Right Fill',
+      'value' => 'bi-caret-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    275 => 
+    array (
+      'id' => 'caret-right-square-fill-solid',
+      'name' => 'Caret Right Square Fill',
+      'value' => 'bi-caret-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    276 => 
+    array (
+      'id' => 'caret-right-square-fill-outline',
+      'name' => 'Caret Right Square Fill',
+      'value' => 'bi-caret-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    277 => 
+    array (
+      'id' => 'caret-right-square-outline',
+      'name' => 'Caret Right Square',
+      'value' => 'bi-caret-right-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    278 => 
+    array (
+      'id' => 'caret-right-square-solid',
+      'name' => 'Caret Right Square',
+      'value' => 'bi-caret-right-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    279 => 
+    array (
+      'id' => 'caret-right-outline',
+      'name' => 'Caret Right',
+      'value' => 'bi-caret-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    280 => 
+    array (
+      'id' => 'caret-up-fill-solid',
+      'name' => 'Caret Up Fill',
+      'value' => 'bi-caret-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    281 => 
+    array (
+      'id' => 'caret-up-fill-outline',
+      'name' => 'Caret Up Fill',
+      'value' => 'bi-caret-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    282 => 
+    array (
+      'id' => 'caret-up-square-fill-solid',
+      'name' => 'Caret Up Square Fill',
+      'value' => 'bi-caret-up-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    283 => 
+    array (
+      'id' => 'caret-up-square-fill-outline',
+      'name' => 'Caret Up Square Fill',
+      'value' => 'bi-caret-up-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'square',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    284 => 
+    array (
+      'id' => 'caret-up-square-outline',
+      'name' => 'Caret Up Square',
+      'value' => 'bi-caret-up-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    285 => 
+    array (
+      'id' => 'caret-up-square-solid',
+      'name' => 'Caret Up Square',
+      'value' => 'bi-caret-up-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+        2 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    286 => 
+    array (
+      'id' => 'caret-up-outline',
+      'name' => 'Caret Up',
+      'value' => 'bi-caret-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'caret',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    287 => 
+    array (
+      'id' => 'chevron-bar-contract-outline',
+      'name' => 'Chevron Bar Contract',
+      'value' => 'bi-chevron-bar-contract',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    288 => 
+    array (
+      'id' => 'chevron-bar-contract-solid',
+      'name' => 'Chevron Bar Contract',
+      'value' => 'bi-chevron-bar-contract-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    289 => 
+    array (
+      'id' => 'chevron-bar-down-outline',
+      'name' => 'Chevron Bar Down',
+      'value' => 'bi-chevron-bar-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    290 => 
+    array (
+      'id' => 'chevron-bar-down-solid',
+      'name' => 'Chevron Bar Down',
+      'value' => 'bi-chevron-bar-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    291 => 
+    array (
+      'id' => 'chevron-bar-expand-outline',
+      'name' => 'Chevron Bar Expand',
+      'value' => 'bi-chevron-bar-expand',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    292 => 
+    array (
+      'id' => 'chevron-bar-expand-solid',
+      'name' => 'Chevron Bar Expand',
+      'value' => 'bi-chevron-bar-expand-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    293 => 
+    array (
+      'id' => 'chevron-bar-left-outline',
+      'name' => 'Chevron Bar Left',
+      'value' => 'bi-chevron-bar-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    294 => 
+    array (
+      'id' => 'chevron-bar-left-solid',
+      'name' => 'Chevron Bar Left',
+      'value' => 'bi-chevron-bar-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    295 => 
+    array (
+      'id' => 'chevron-bar-right-outline',
+      'name' => 'Chevron Bar Right',
+      'value' => 'bi-chevron-bar-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    296 => 
+    array (
+      'id' => 'chevron-bar-right-solid',
+      'name' => 'Chevron Bar Right',
+      'value' => 'bi-chevron-bar-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    297 => 
+    array (
+      'id' => 'chevron-bar-up-outline',
+      'name' => 'Chevron Bar Up',
+      'value' => 'bi-chevron-bar-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    298 => 
+    array (
+      'id' => 'chevron-bar-up-solid',
+      'name' => 'Chevron Bar Up',
+      'value' => 'bi-chevron-bar-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'bar',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    299 => 
+    array (
+      'id' => 'chevron-compact-down-outline',
+      'name' => 'Chevron Compact Down',
+      'value' => 'bi-chevron-compact-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    300 => 
+    array (
+      'id' => 'chevron-compact-down-solid',
+      'name' => 'Chevron Compact Down',
+      'value' => 'bi-chevron-compact-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    301 => 
+    array (
+      'id' => 'chevron-compact-left-outline',
+      'name' => 'Chevron Compact Left',
+      'value' => 'bi-chevron-compact-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    302 => 
+    array (
+      'id' => 'chevron-compact-left-solid',
+      'name' => 'Chevron Compact Left',
+      'value' => 'bi-chevron-compact-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    303 => 
+    array (
+      'id' => 'chevron-compact-right-outline',
+      'name' => 'Chevron Compact Right',
+      'value' => 'bi-chevron-compact-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    304 => 
+    array (
+      'id' => 'chevron-compact-right-solid',
+      'name' => 'Chevron Compact Right',
+      'value' => 'bi-chevron-compact-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    305 => 
+    array (
+      'id' => 'chevron-compact-up-outline',
+      'name' => 'Chevron Compact Up',
+      'value' => 'bi-chevron-compact-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    306 => 
+    array (
+      'id' => 'chevron-compact-up-solid',
+      'name' => 'Chevron Compact Up',
+      'value' => 'bi-chevron-compact-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'compact',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    307 => 
+    array (
+      'id' => 'chevron-contract-outline',
+      'name' => 'Chevron Contract',
+      'value' => 'bi-chevron-contract',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    308 => 
+    array (
+      'id' => 'chevron-contract-solid',
+      'name' => 'Chevron Contract',
+      'value' => 'bi-chevron-contract-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'contract',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    309 => 
+    array (
+      'id' => 'chevron-double-down-outline',
+      'name' => 'Chevron Double Down',
+      'value' => 'bi-chevron-double-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    310 => 
+    array (
+      'id' => 'chevron-double-down-solid',
+      'name' => 'Chevron Double Down',
+      'value' => 'bi-chevron-double-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    311 => 
+    array (
+      'id' => 'chevron-double-left-outline',
+      'name' => 'Chevron Double Left',
+      'value' => 'bi-chevron-double-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    312 => 
+    array (
+      'id' => 'chevron-double-left-solid',
+      'name' => 'Chevron Double Left',
+      'value' => 'bi-chevron-double-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    313 => 
+    array (
+      'id' => 'chevron-double-right-outline',
+      'name' => 'Chevron Double Right',
+      'value' => 'bi-chevron-double-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    314 => 
+    array (
+      'id' => 'chevron-double-right-solid',
+      'name' => 'Chevron Double Right',
+      'value' => 'bi-chevron-double-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    315 => 
+    array (
+      'id' => 'chevron-double-up-outline',
+      'name' => 'Chevron Double Up',
+      'value' => 'bi-chevron-double-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    316 => 
+    array (
+      'id' => 'chevron-double-up-solid',
+      'name' => 'Chevron Double Up',
+      'value' => 'bi-chevron-double-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'double',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    317 => 
+    array (
+      'id' => 'chevron-down-outline',
+      'name' => 'Chevron Down',
+      'value' => 'bi-chevron-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    318 => 
+    array (
+      'id' => 'chevron-down-solid',
+      'name' => 'Chevron Down',
+      'value' => 'bi-chevron-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    319 => 
+    array (
+      'id' => 'chevron-expand-outline',
+      'name' => 'Chevron Expand',
+      'value' => 'bi-chevron-expand',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    320 => 
+    array (
+      'id' => 'chevron-expand-solid',
+      'name' => 'Chevron Expand',
+      'value' => 'bi-chevron-expand-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'expand',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    321 => 
+    array (
+      'id' => 'chevron-left-outline',
+      'name' => 'Chevron Left',
+      'value' => 'bi-chevron-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    322 => 
+    array (
+      'id' => 'chevron-left-solid',
+      'name' => 'Chevron Left',
+      'value' => 'bi-chevron-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    323 => 
+    array (
+      'id' => 'chevron-right-outline',
+      'name' => 'Chevron Right',
+      'value' => 'bi-chevron-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    324 => 
+    array (
+      'id' => 'chevron-right-solid',
+      'name' => 'Chevron Right',
+      'value' => 'bi-chevron-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    325 => 
+    array (
+      'id' => 'chevron-up-outline',
+      'name' => 'Chevron Up',
+      'value' => 'bi-chevron-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    326 => 
+    array (
+      'id' => 'chevron-up-solid',
+      'name' => 'Chevron Up',
+      'value' => 'bi-chevron-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chevron',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    327 => 
+    array (
+      'id' => 'circle-fill-solid',
+      'name' => 'Circle Fill',
+      'value' => 'bi-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    328 => 
+    array (
+      'id' => 'circle-fill-outline',
+      'name' => 'Circle Fill',
+      'value' => 'bi-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    329 => 
+    array (
+      'id' => 'circle-half-outline',
+      'name' => 'Circle Half',
+      'value' => 'bi-circle-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    330 => 
+    array (
+      'id' => 'circle-half-solid',
+      'name' => 'Circle Half',
+      'value' => 'bi-circle-half-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    331 => 
+    array (
+      'id' => 'circle-square-outline',
+      'name' => 'Circle Square',
+      'value' => 'bi-circle-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    332 => 
+    array (
+      'id' => 'circle-square-solid',
+      'name' => 'Circle Square',
+      'value' => 'bi-circle-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    333 => 
+    array (
+      'id' => 'circle-outline',
+      'name' => 'Circle',
+      'value' => 'bi-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    334 => 
+    array (
+      'id' => 'circle-solid',
+      'name' => 'Circle',
+      'value' => 'bi-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    335 => 
+    array (
+      'id' => 'columns-gap-outline',
+      'name' => 'Columns Gap',
+      'value' => 'bi-columns-gap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'columns',
+        1 => 'gap',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    336 => 
+    array (
+      'id' => 'columns-outline',
+      'name' => 'Columns',
+      'value' => 'bi-columns',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'columns',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    337 => 
+    array (
+      'id' => 'cursor-fill-solid',
+      'name' => 'Cursor Fill',
+      'value' => 'bi-cursor-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cursor',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    338 => 
+    array (
+      'id' => 'cursor-fill-outline',
+      'name' => 'Cursor Fill',
+      'value' => 'bi-cursor',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cursor',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    339 => 
+    array (
+      'id' => 'cursor-text-outline',
+      'name' => 'Cursor Text',
+      'value' => 'bi-cursor-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cursor',
+        1 => 'text',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    340 => 
+    array (
+      'id' => 'cursor-outline',
+      'name' => 'Cursor',
+      'value' => 'bi-cursor',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cursor',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    341 => 
+    array (
+      'id' => 'dash-circle-dotted-outline',
+      'name' => 'Dash Circle Dotted',
+      'value' => 'bi-dash-circle-dotted',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+        2 => 'dotted',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    342 => 
+    array (
+      'id' => 'dash-circle-dotted-solid',
+      'name' => 'Dash Circle Dotted',
+      'value' => 'bi-dash-circle-dotted-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+        2 => 'dotted',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    343 => 
+    array (
+      'id' => 'dash-circle-fill-solid',
+      'name' => 'Dash Circle Fill',
+      'value' => 'bi-dash-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    344 => 
+    array (
+      'id' => 'dash-circle-fill-outline',
+      'name' => 'Dash Circle Fill',
+      'value' => 'bi-dash-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    345 => 
+    array (
+      'id' => 'dash-circle-outline',
+      'name' => 'Dash Circle',
+      'value' => 'bi-dash-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    346 => 
+    array (
+      'id' => 'dash-circle-solid',
+      'name' => 'Dash Circle',
+      'value' => 'bi-dash-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    347 => 
+    array (
+      'id' => 'dash-square-dotted-outline',
+      'name' => 'Dash Square Dotted',
+      'value' => 'bi-dash-square-dotted',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+        2 => 'dotted',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    348 => 
+    array (
+      'id' => 'dash-square-dotted-solid',
+      'name' => 'Dash Square Dotted',
+      'value' => 'bi-dash-square-dotted-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+        2 => 'dotted',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    349 => 
+    array (
+      'id' => 'dash-square-fill-solid',
+      'name' => 'Dash Square Fill',
+      'value' => 'bi-dash-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    350 => 
+    array (
+      'id' => 'dash-square-fill-outline',
+      'name' => 'Dash Square Fill',
+      'value' => 'bi-dash-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    351 => 
+    array (
+      'id' => 'dash-square-outline',
+      'name' => 'Dash Square',
+      'value' => 'bi-dash-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    352 => 
+    array (
+      'id' => 'dash-square-solid',
+      'name' => 'Dash Square',
+      'value' => 'bi-dash-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    353 => 
+    array (
+      'id' => 'dash-outline',
+      'name' => 'Dash',
+      'value' => 'bi-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    354 => 
+    array (
+      'id' => 'diagram-2-fill-solid',
+      'name' => 'Diagram 2 Fill',
+      'value' => 'bi-diagram-2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '2',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    355 => 
+    array (
+      'id' => 'diagram-2-fill-outline',
+      'name' => 'Diagram 2 Fill',
+      'value' => 'bi-diagram-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '2',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    356 => 
+    array (
+      'id' => 'diagram-2-outline',
+      'name' => 'Diagram 2',
+      'value' => 'bi-diagram-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    357 => 
+    array (
+      'id' => 'diagram-3-fill-solid',
+      'name' => 'Diagram 3 Fill',
+      'value' => 'bi-diagram-3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '3',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    358 => 
+    array (
+      'id' => 'diagram-3-fill-outline',
+      'name' => 'Diagram 3 Fill',
+      'value' => 'bi-diagram-3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '3',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    359 => 
+    array (
+      'id' => 'diagram-3-outline',
+      'name' => 'Diagram 3',
+      'value' => 'bi-diagram-3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diagram',
+        1 => '3',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    360 => 
+    array (
+      'id' => 'diamond-fill-solid',
+      'name' => 'Diamond Fill',
+      'value' => 'bi-diamond-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diamond',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    361 => 
+    array (
+      'id' => 'diamond-fill-outline',
+      'name' => 'Diamond Fill',
+      'value' => 'bi-diamond',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diamond',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    362 => 
+    array (
+      'id' => 'diamond-half-outline',
+      'name' => 'Diamond Half',
+      'value' => 'bi-diamond-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diamond',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    363 => 
+    array (
+      'id' => 'diamond-outline',
+      'name' => 'Diamond',
+      'value' => 'bi-diamond',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'diamond',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    364 => 
+    array (
+      'id' => 'display-fill-solid',
+      'name' => 'Display Fill',
+      'value' => 'bi-display-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'display',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    365 => 
+    array (
+      'id' => 'display-fill-outline',
+      'name' => 'Display Fill',
+      'value' => 'bi-display',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'display',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    366 => 
+    array (
+      'id' => 'display-outline',
+      'name' => 'Display',
+      'value' => 'bi-display',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'display',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    367 => 
+    array (
+      'id' => 'distribute-horizontal-outline',
+      'name' => 'Distribute Horizontal',
+      'value' => 'bi-distribute-horizontal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'distribute',
+        1 => 'horizontal',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    368 => 
+    array (
+      'id' => 'distribute-vertical-outline',
+      'name' => 'Distribute Vertical',
+      'value' => 'bi-distribute-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'distribute',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    369 => 
+    array (
+      'id' => 'dot-outline',
+      'name' => 'Dot',
+      'value' => 'bi-dot',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dot',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    370 => 
+    array (
+      'id' => 'eject-fill-solid',
+      'name' => 'Eject Fill',
+      'value' => 'bi-eject-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eject',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    371 => 
+    array (
+      'id' => 'eject-fill-outline',
+      'name' => 'Eject Fill',
+      'value' => 'bi-eject',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eject',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    372 => 
+    array (
+      'id' => 'eject-outline',
+      'name' => 'Eject',
+      'value' => 'bi-eject',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eject',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    373 => 
+    array (
+      'id' => 'exclude-outline',
+      'name' => 'Exclude',
+      'value' => 'bi-exclude',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'exclude',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    374 => 
+    array (
+      'id' => 'filter-circle-fill-solid',
+      'name' => 'Filter Circle Fill',
+      'value' => 'bi-filter-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    375 => 
+    array (
+      'id' => 'filter-circle-fill-outline',
+      'name' => 'Filter Circle Fill',
+      'value' => 'bi-filter-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    376 => 
+    array (
+      'id' => 'filter-circle-outline',
+      'name' => 'Filter Circle',
+      'value' => 'bi-filter-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    377 => 
+    array (
+      'id' => 'filter-circle-solid',
+      'name' => 'Filter Circle',
+      'value' => 'bi-filter-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    378 => 
+    array (
+      'id' => 'filter-left-outline',
+      'name' => 'Filter Left',
+      'value' => 'bi-filter-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    379 => 
+    array (
+      'id' => 'filter-right-outline',
+      'name' => 'Filter Right',
+      'value' => 'bi-filter-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    380 => 
+    array (
+      'id' => 'filter-square-fill-solid',
+      'name' => 'Filter Square Fill',
+      'value' => 'bi-filter-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    381 => 
+    array (
+      'id' => 'filter-square-fill-outline',
+      'name' => 'Filter Square Fill',
+      'value' => 'bi-filter-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    382 => 
+    array (
+      'id' => 'filter-square-outline',
+      'name' => 'Filter Square',
+      'value' => 'bi-filter-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    383 => 
+    array (
+      'id' => 'filter-square-solid',
+      'name' => 'Filter Square',
+      'value' => 'bi-filter-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    384 => 
+    array (
+      'id' => 'filter-outline',
+      'name' => 'Filter',
+      'value' => 'bi-filter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filter',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    385 => 
+    array (
+      'id' => 'forward-fill-solid',
+      'name' => 'Forward Fill',
+      'value' => 'bi-forward-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'forward',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    386 => 
+    array (
+      'id' => 'forward-fill-outline',
+      'name' => 'Forward Fill',
+      'value' => 'bi-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'forward',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    387 => 
+    array (
+      'id' => 'forward-outline',
+      'name' => 'Forward',
+      'value' => 'bi-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'forward',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    388 => 
+    array (
+      'id' => 'fullscreen-exit-outline',
+      'name' => 'Fullscreen Exit',
+      'value' => 'bi-fullscreen-exit',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fullscreen',
+        1 => 'exit',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    389 => 
+    array (
+      'id' => 'fullscreen-outline',
+      'name' => 'Fullscreen',
+      'value' => 'bi-fullscreen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fullscreen',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    390 => 
+    array (
+      'id' => 'funnel-fill-solid',
+      'name' => 'Funnel Fill',
+      'value' => 'bi-funnel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'funnel',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    391 => 
+    array (
+      'id' => 'funnel-fill-outline',
+      'name' => 'Funnel Fill',
+      'value' => 'bi-funnel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'funnel',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    392 => 
+    array (
+      'id' => 'funnel-outline',
+      'name' => 'Funnel',
+      'value' => 'bi-funnel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'funnel',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    393 => 
+    array (
+      'id' => 'gear-fill-solid',
+      'name' => 'Gear Fill',
+      'value' => 'bi-gear-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gear',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    394 => 
+    array (
+      'id' => 'gear-fill-outline',
+      'name' => 'Gear Fill',
+      'value' => 'bi-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gear',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    395 => 
+    array (
+      'id' => 'gear-wide-connected-outline',
+      'name' => 'Gear Wide Connected',
+      'value' => 'bi-gear-wide-connected',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gear',
+        1 => 'wide',
+        2 => 'connected',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    396 => 
+    array (
+      'id' => 'gear-wide-outline',
+      'name' => 'Gear Wide',
+      'value' => 'bi-gear-wide',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gear',
+        1 => 'wide',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    397 => 
+    array (
+      'id' => 'gear-outline',
+      'name' => 'Gear',
+      'value' => 'bi-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gear',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    398 => 
+    array (
+      'id' => 'graph-down-outline',
+      'name' => 'Graph Down',
+      'value' => 'bi-graph-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    399 => 
+    array (
+      'id' => 'graph-up-outline',
+      'name' => 'Graph Up',
+      'value' => 'bi-graph-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    400 => 
+    array (
+      'id' => 'grid-1x2-fill-solid',
+      'name' => 'Grid 1x2 Fill',
+      'value' => 'bi-grid-1x2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '1x2',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    401 => 
+    array (
+      'id' => 'grid-1x2-fill-outline',
+      'name' => 'Grid 1x2 Fill',
+      'value' => 'bi-grid-1x2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '1x2',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    402 => 
+    array (
+      'id' => 'grid-1x2-outline',
+      'name' => 'Grid 1x2',
+      'value' => 'bi-grid-1x2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '1x2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    403 => 
+    array (
+      'id' => 'grid-3x2-gap-fill-solid',
+      'name' => 'Grid 3x2 Gap Fill',
+      'value' => 'bi-grid-3x2-gap-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x2',
+        2 => 'gap',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    404 => 
+    array (
+      'id' => 'grid-3x2-gap-fill-outline',
+      'name' => 'Grid 3x2 Gap Fill',
+      'value' => 'bi-grid-3x2-gap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x2',
+        2 => 'gap',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    405 => 
+    array (
+      'id' => 'grid-3x2-gap-outline',
+      'name' => 'Grid 3x2 Gap',
+      'value' => 'bi-grid-3x2-gap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x2',
+        2 => 'gap',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    406 => 
+    array (
+      'id' => 'grid-3x2-outline',
+      'name' => 'Grid 3x2',
+      'value' => 'bi-grid-3x2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    407 => 
+    array (
+      'id' => 'grid-3x3-gap-fill-solid',
+      'name' => 'Grid 3x3 Gap Fill',
+      'value' => 'bi-grid-3x3-gap-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x3',
+        2 => 'gap',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    408 => 
+    array (
+      'id' => 'grid-3x3-gap-fill-outline',
+      'name' => 'Grid 3x3 Gap Fill',
+      'value' => 'bi-grid-3x3-gap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x3',
+        2 => 'gap',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    409 => 
+    array (
+      'id' => 'grid-3x3-gap-outline',
+      'name' => 'Grid 3x3 Gap',
+      'value' => 'bi-grid-3x3-gap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x3',
+        2 => 'gap',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    410 => 
+    array (
+      'id' => 'grid-3x3-outline',
+      'name' => 'Grid 3x3',
+      'value' => 'bi-grid-3x3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => '3x3',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    411 => 
+    array (
+      'id' => 'grid-fill-solid',
+      'name' => 'Grid Fill',
+      'value' => 'bi-grid-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    412 => 
+    array (
+      'id' => 'grid-fill-outline',
+      'name' => 'Grid Fill',
+      'value' => 'bi-grid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    413 => 
+    array (
+      'id' => 'grid-outline',
+      'name' => 'Grid',
+      'value' => 'bi-grid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grid',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    414 => 
+    array (
+      'id' => 'grip-horizontal-outline',
+      'name' => 'Grip Horizontal',
+      'value' => 'bi-grip-horizontal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grip',
+        1 => 'horizontal',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    415 => 
+    array (
+      'id' => 'grip-vertical-outline',
+      'name' => 'Grip Vertical',
+      'value' => 'bi-grip-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'grip',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    416 => 
+    array (
+      'id' => 'heptagon-fill-solid',
+      'name' => 'Heptagon Fill',
+      'value' => 'bi-heptagon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'heptagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    417 => 
+    array (
+      'id' => 'heptagon-fill-outline',
+      'name' => 'Heptagon Fill',
+      'value' => 'bi-heptagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'heptagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    418 => 
+    array (
+      'id' => 'heptagon-half-outline',
+      'name' => 'Heptagon Half',
+      'value' => 'bi-heptagon-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'heptagon',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    419 => 
+    array (
+      'id' => 'heptagon-outline',
+      'name' => 'Heptagon',
+      'value' => 'bi-heptagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'heptagon',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    420 => 
+    array (
+      'id' => 'hexagon-fill-solid',
+      'name' => 'Hexagon Fill',
+      'value' => 'bi-hexagon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hexagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    421 => 
+    array (
+      'id' => 'hexagon-fill-outline',
+      'name' => 'Hexagon Fill',
+      'value' => 'bi-hexagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hexagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    422 => 
+    array (
+      'id' => 'hexagon-half-outline',
+      'name' => 'Hexagon Half',
+      'value' => 'bi-hexagon-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hexagon',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    423 => 
+    array (
+      'id' => 'hexagon-outline',
+      'name' => 'Hexagon',
+      'value' => 'bi-hexagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hexagon',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    424 => 
+    array (
+      'id' => 'hr-outline',
+      'name' => 'Hr',
+      'value' => 'bi-hr',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hr',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    425 => 
+    array (
+      'id' => 'input-cursor-text-outline',
+      'name' => 'Input Cursor Text',
+      'value' => 'bi-input-cursor-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'input',
+        1 => 'cursor',
+        2 => 'text',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    426 => 
+    array (
+      'id' => 'input-cursor-outline',
+      'name' => 'Input Cursor',
+      'value' => 'bi-input-cursor',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'input',
+        1 => 'cursor',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    427 => 
+    array (
+      'id' => 'intersect-outline',
+      'name' => 'Intersect',
+      'value' => 'bi-intersect',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'intersect',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    428 => 
+    array (
+      'id' => 'justify-left-outline',
+      'name' => 'Justify Left',
+      'value' => 'bi-justify-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'justify',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    429 => 
+    array (
+      'id' => 'justify-right-outline',
+      'name' => 'Justify Right',
+      'value' => 'bi-justify-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'justify',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    430 => 
+    array (
+      'id' => 'justify-outline',
+      'name' => 'Justify',
+      'value' => 'bi-justify',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'justify',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    431 => 
+    array (
+      'id' => 'kanban-fill-solid',
+      'name' => 'Kanban Fill',
+      'value' => 'bi-kanban-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'kanban',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    432 => 
+    array (
+      'id' => 'kanban-fill-outline',
+      'name' => 'Kanban Fill',
+      'value' => 'bi-kanban',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'kanban',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    433 => 
+    array (
+      'id' => 'kanban-outline',
+      'name' => 'Kanban',
+      'value' => 'bi-kanban',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'kanban',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    434 => 
+    array (
+      'id' => 'layer-backward-outline',
+      'name' => 'Layer Backward',
+      'value' => 'bi-layer-backward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layer',
+        1 => 'backward',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    435 => 
+    array (
+      'id' => 'layer-forward-outline',
+      'name' => 'Layer Forward',
+      'value' => 'bi-layer-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layer',
+        1 => 'forward',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    436 => 
+    array (
+      'id' => 'layers-fill-solid',
+      'name' => 'Layers Fill',
+      'value' => 'bi-layers-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layers',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    437 => 
+    array (
+      'id' => 'layers-fill-outline',
+      'name' => 'Layers Fill',
+      'value' => 'bi-layers',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layers',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    438 => 
+    array (
+      'id' => 'layers-half-outline',
+      'name' => 'Layers Half',
+      'value' => 'bi-layers-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layers',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    439 => 
+    array (
+      'id' => 'layers-outline',
+      'name' => 'Layers',
+      'value' => 'bi-layers',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layers',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    440 => 
+    array (
+      'id' => 'layout-sidebar-inset-reverse-outline',
+      'name' => 'Layout Sidebar Inset Reverse',
+      'value' => 'bi-layout-sidebar-inset-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'sidebar',
+        2 => 'inset',
+        3 => 'reverse',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    441 => 
+    array (
+      'id' => 'layout-sidebar-inset-outline',
+      'name' => 'Layout Sidebar Inset',
+      'value' => 'bi-layout-sidebar-inset',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'sidebar',
+        2 => 'inset',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    442 => 
+    array (
+      'id' => 'layout-sidebar-reverse-outline',
+      'name' => 'Layout Sidebar Reverse',
+      'value' => 'bi-layout-sidebar-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'sidebar',
+        2 => 'reverse',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    443 => 
+    array (
+      'id' => 'layout-sidebar-outline',
+      'name' => 'Layout Sidebar',
+      'value' => 'bi-layout-sidebar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'sidebar',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    444 => 
+    array (
+      'id' => 'layout-split-outline',
+      'name' => 'Layout Split',
+      'value' => 'bi-layout-split',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'split',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    445 => 
+    array (
+      'id' => 'layout-text-sidebar-reverse-outline',
+      'name' => 'Layout Text Sidebar Reverse',
+      'value' => 'bi-layout-text-sidebar-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'text',
+        2 => 'sidebar',
+        3 => 'reverse',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    446 => 
+    array (
+      'id' => 'layout-text-sidebar-outline',
+      'name' => 'Layout Text Sidebar',
+      'value' => 'bi-layout-text-sidebar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'text',
+        2 => 'sidebar',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    447 => 
+    array (
+      'id' => 'layout-text-window-reverse-outline',
+      'name' => 'Layout Text Window Reverse',
+      'value' => 'bi-layout-text-window-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'text',
+        2 => 'window',
+        3 => 'reverse',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    448 => 
+    array (
+      'id' => 'layout-text-window-outline',
+      'name' => 'Layout Text Window',
+      'value' => 'bi-layout-text-window',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'text',
+        2 => 'window',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    449 => 
+    array (
+      'id' => 'layout-three-columns-outline',
+      'name' => 'Layout Three Columns',
+      'value' => 'bi-layout-three-columns',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'three',
+        2 => 'columns',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    450 => 
+    array (
+      'id' => 'layout-wtf-outline',
+      'name' => 'Layout Wtf',
+      'value' => 'bi-layout-wtf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'layout',
+        1 => 'wtf',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    451 => 
+    array (
+      'id' => 'list-check-outline',
+      'name' => 'List Check',
+      'value' => 'bi-list-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'check',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    452 => 
+    array (
+      'id' => 'list-nested-outline',
+      'name' => 'List Nested',
+      'value' => 'bi-list-nested',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'nested',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    453 => 
+    array (
+      'id' => 'list-ol-outline',
+      'name' => 'List Ol',
+      'value' => 'bi-list-ol',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'ol',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    454 => 
+    array (
+      'id' => 'list-stars-outline',
+      'name' => 'List Stars',
+      'value' => 'bi-list-stars',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'stars',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    455 => 
+    array (
+      'id' => 'list-stars-solid',
+      'name' => 'List Stars',
+      'value' => 'bi-list-stars-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'stars',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    456 => 
+    array (
+      'id' => 'list-task-outline',
+      'name' => 'List Task',
+      'value' => 'bi-list-task',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'task',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    457 => 
+    array (
+      'id' => 'list-ul-outline',
+      'name' => 'List Ul',
+      'value' => 'bi-list-ul',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'ul',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    458 => 
+    array (
+      'id' => 'list-outline',
+      'name' => 'List',
+      'value' => 'bi-list',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    459 => 
+    array (
+      'id' => 'menu-app-fill-solid',
+      'name' => 'Menu App Fill',
+      'value' => 'bi-menu-app-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'app',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    460 => 
+    array (
+      'id' => 'menu-app-fill-outline',
+      'name' => 'Menu App Fill',
+      'value' => 'bi-menu-app',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'app',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    461 => 
+    array (
+      'id' => 'menu-app-outline',
+      'name' => 'Menu App',
+      'value' => 'bi-menu-app',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'app',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    462 => 
+    array (
+      'id' => 'menu-button-fill-solid',
+      'name' => 'Menu Button Fill',
+      'value' => 'bi-menu-button-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    463 => 
+    array (
+      'id' => 'menu-button-fill-outline',
+      'name' => 'Menu Button Fill',
+      'value' => 'bi-menu-button',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    464 => 
+    array (
+      'id' => 'menu-button-wide-fill-solid',
+      'name' => 'Menu Button Wide Fill',
+      'value' => 'bi-menu-button-wide-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+        2 => 'wide',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    465 => 
+    array (
+      'id' => 'menu-button-wide-fill-outline',
+      'name' => 'Menu Button Wide Fill',
+      'value' => 'bi-menu-button-wide',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+        2 => 'wide',
+        3 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    466 => 
+    array (
+      'id' => 'menu-button-wide-outline',
+      'name' => 'Menu Button Wide',
+      'value' => 'bi-menu-button-wide',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+        2 => 'wide',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    467 => 
+    array (
+      'id' => 'menu-button-outline',
+      'name' => 'Menu Button',
+      'value' => 'bi-menu-button',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'button',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    468 => 
+    array (
+      'id' => 'menu-down-outline',
+      'name' => 'Menu Down',
+      'value' => 'bi-menu-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    469 => 
+    array (
+      'id' => 'menu-up-outline',
+      'name' => 'Menu Up',
+      'value' => 'bi-menu-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'menu',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    470 => 
+    array (
+      'id' => 'node-minus-fill-solid',
+      'name' => 'Node Minus Fill',
+      'value' => 'bi-node-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    471 => 
+    array (
+      'id' => 'node-minus-fill-outline',
+      'name' => 'Node Minus Fill',
+      'value' => 'bi-node-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    472 => 
+    array (
+      'id' => 'node-minus-outline',
+      'name' => 'Node Minus',
+      'value' => 'bi-node-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'minus',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    473 => 
+    array (
+      'id' => 'node-plus-fill-solid',
+      'name' => 'Node Plus Fill',
+      'value' => 'bi-node-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    474 => 
+    array (
+      'id' => 'node-plus-fill-outline',
+      'name' => 'Node Plus Fill',
+      'value' => 'bi-node-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    475 => 
+    array (
+      'id' => 'node-plus-outline',
+      'name' => 'Node Plus',
+      'value' => 'bi-node-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'node',
+        1 => 'plus',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    476 => 
+    array (
+      'id' => 'octagon-fill-solid',
+      'name' => 'Octagon Fill',
+      'value' => 'bi-octagon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'octagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    477 => 
+    array (
+      'id' => 'octagon-fill-outline',
+      'name' => 'Octagon Fill',
+      'value' => 'bi-octagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'octagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    478 => 
+    array (
+      'id' => 'octagon-half-outline',
+      'name' => 'Octagon Half',
+      'value' => 'bi-octagon-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'octagon',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    479 => 
+    array (
+      'id' => 'octagon-outline',
+      'name' => 'Octagon',
+      'value' => 'bi-octagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'octagon',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    480 => 
+    array (
+      'id' => 'patch-check-fill-solid',
+      'name' => 'Patch Check Fill',
+      'value' => 'bi-patch-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    481 => 
+    array (
+      'id' => 'patch-check-fill-outline',
+      'name' => 'Patch Check Fill',
+      'value' => 'bi-patch-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    482 => 
+    array (
+      'id' => 'patch-check-outline',
+      'name' => 'Patch Check',
+      'value' => 'bi-patch-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'check',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    483 => 
+    array (
+      'id' => 'patch-exclamation-fill-solid',
+      'name' => 'Patch Exclamation Fill',
+      'value' => 'bi-patch-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    484 => 
+    array (
+      'id' => 'patch-exclamation-fill-outline',
+      'name' => 'Patch Exclamation Fill',
+      'value' => 'bi-patch-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    485 => 
+    array (
+      'id' => 'patch-exclamation-outline',
+      'name' => 'Patch Exclamation',
+      'value' => 'bi-patch-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'exclamation',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    486 => 
+    array (
+      'id' => 'patch-minus-fill-solid',
+      'name' => 'Patch Minus Fill',
+      'value' => 'bi-patch-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    487 => 
+    array (
+      'id' => 'patch-minus-fill-outline',
+      'name' => 'Patch Minus Fill',
+      'value' => 'bi-patch-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    488 => 
+    array (
+      'id' => 'patch-minus-outline',
+      'name' => 'Patch Minus',
+      'value' => 'bi-patch-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'minus',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    489 => 
+    array (
+      'id' => 'patch-plus-fill-solid',
+      'name' => 'Patch Plus Fill',
+      'value' => 'bi-patch-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    490 => 
+    array (
+      'id' => 'patch-plus-fill-outline',
+      'name' => 'Patch Plus Fill',
+      'value' => 'bi-patch-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    491 => 
+    array (
+      'id' => 'patch-plus-outline',
+      'name' => 'Patch Plus',
+      'value' => 'bi-patch-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'plus',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    492 => 
+    array (
+      'id' => 'patch-question-fill-solid',
+      'name' => 'Patch Question Fill',
+      'value' => 'bi-patch-question-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'question',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    493 => 
+    array (
+      'id' => 'patch-question-fill-outline',
+      'name' => 'Patch Question Fill',
+      'value' => 'bi-patch-question',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'question',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    494 => 
+    array (
+      'id' => 'patch-question-outline',
+      'name' => 'Patch Question',
+      'value' => 'bi-patch-question',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'patch',
+        1 => 'question',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    495 => 
+    array (
+      'id' => 'pentagon-fill-solid',
+      'name' => 'Pentagon Fill',
+      'value' => 'bi-pentagon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pentagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    496 => 
+    array (
+      'id' => 'pentagon-fill-outline',
+      'name' => 'Pentagon Fill',
+      'value' => 'bi-pentagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pentagon',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    497 => 
+    array (
+      'id' => 'pentagon-half-outline',
+      'name' => 'Pentagon Half',
+      'value' => 'bi-pentagon-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pentagon',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    498 => 
+    array (
+      'id' => 'pentagon-outline',
+      'name' => 'Pentagon',
+      'value' => 'bi-pentagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pentagon',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    499 => 
+    array (
+      'id' => 'pie-chart-fill-solid',
+      'name' => 'Pie Chart Fill',
+      'value' => 'bi-pie-chart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pie',
+        1 => 'chart',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    500 => 
+    array (
+      'id' => 'pie-chart-fill-outline',
+      'name' => 'Pie Chart Fill',
+      'value' => 'bi-pie-chart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pie',
+        1 => 'chart',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    501 => 
+    array (
+      'id' => 'pie-chart-outline',
+      'name' => 'Pie Chart',
+      'value' => 'bi-pie-chart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pie',
+        1 => 'chart',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    502 => 
+    array (
+      'id' => 'pip-fill-solid',
+      'name' => 'Pip Fill',
+      'value' => 'bi-pip-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pip',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    503 => 
+    array (
+      'id' => 'pip-fill-outline',
+      'name' => 'Pip Fill',
+      'value' => 'bi-pip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pip',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    504 => 
+    array (
+      'id' => 'pip-outline',
+      'name' => 'Pip',
+      'value' => 'bi-pip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pip',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    505 => 
+    array (
+      'id' => 'segmented-nav-outline',
+      'name' => 'Segmented Nav',
+      'value' => 'bi-segmented-nav',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'segmented',
+        1 => 'nav',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    506 => 
+    array (
+      'id' => 'slash-circle-fill-solid',
+      'name' => 'Slash Circle Fill',
+      'value' => 'bi-slash-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    507 => 
+    array (
+      'id' => 'slash-circle-fill-outline',
+      'name' => 'Slash Circle Fill',
+      'value' => 'bi-slash-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    508 => 
+    array (
+      'id' => 'slash-circle-outline',
+      'name' => 'Slash Circle',
+      'value' => 'bi-slash-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    509 => 
+    array (
+      'id' => 'slash-circle-solid',
+      'name' => 'Slash Circle',
+      'value' => 'bi-slash-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'circle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    510 => 
+    array (
+      'id' => 'slash-square-fill-solid',
+      'name' => 'Slash Square Fill',
+      'value' => 'bi-slash-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    511 => 
+    array (
+      'id' => 'slash-square-fill-outline',
+      'name' => 'Slash Square Fill',
+      'value' => 'bi-slash-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    512 => 
+    array (
+      'id' => 'slash-square-outline',
+      'name' => 'Slash Square',
+      'value' => 'bi-slash-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    513 => 
+    array (
+      'id' => 'slash-square-solid',
+      'name' => 'Slash Square',
+      'value' => 'bi-slash-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+        1 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    514 => 
+    array (
+      'id' => 'slash-outline',
+      'name' => 'Slash',
+      'value' => 'bi-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slash',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    515 => 
+    array (
+      'id' => 'sliders-outline',
+      'name' => 'Sliders',
+      'value' => 'bi-sliders',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sliders',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    516 => 
+    array (
+      'id' => 'sort-alpha-down-alt-outline',
+      'name' => 'Sort Alpha Down Alt',
+      'value' => 'bi-sort-alpha-down-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'alpha',
+        2 => 'down',
+        3 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    517 => 
+    array (
+      'id' => 'sort-alpha-down-outline',
+      'name' => 'Sort Alpha Down',
+      'value' => 'bi-sort-alpha-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'alpha',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    518 => 
+    array (
+      'id' => 'sort-alpha-up-alt-outline',
+      'name' => 'Sort Alpha Up Alt',
+      'value' => 'bi-sort-alpha-up-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'alpha',
+        2 => 'up',
+        3 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    519 => 
+    array (
+      'id' => 'sort-alpha-up-outline',
+      'name' => 'Sort Alpha Up',
+      'value' => 'bi-sort-alpha-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'alpha',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    520 => 
+    array (
+      'id' => 'sort-down-alt-outline',
+      'name' => 'Sort Down Alt',
+      'value' => 'bi-sort-down-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'down',
+        2 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    521 => 
+    array (
+      'id' => 'sort-down-outline',
+      'name' => 'Sort Down',
+      'value' => 'bi-sort-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    522 => 
+    array (
+      'id' => 'sort-numeric-down-alt-outline',
+      'name' => 'Sort Numeric Down Alt',
+      'value' => 'bi-sort-numeric-down-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'numeric',
+        2 => 'down',
+        3 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    523 => 
+    array (
+      'id' => 'sort-numeric-down-outline',
+      'name' => 'Sort Numeric Down',
+      'value' => 'bi-sort-numeric-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'numeric',
+        2 => 'down',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    524 => 
+    array (
+      'id' => 'sort-numeric-up-alt-outline',
+      'name' => 'Sort Numeric Up Alt',
+      'value' => 'bi-sort-numeric-up-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'numeric',
+        2 => 'up',
+        3 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    525 => 
+    array (
+      'id' => 'sort-numeric-up-outline',
+      'name' => 'Sort Numeric Up',
+      'value' => 'bi-sort-numeric-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'numeric',
+        2 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    526 => 
+    array (
+      'id' => 'sort-up-alt-outline',
+      'name' => 'Sort Up Alt',
+      'value' => 'bi-sort-up-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'up',
+        2 => 'alt',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    527 => 
+    array (
+      'id' => 'sort-up-outline',
+      'name' => 'Sort Up',
+      'value' => 'bi-sort-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sort',
+        1 => 'up',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    528 => 
+    array (
+      'id' => 'square-fill-solid',
+      'name' => 'Square Fill',
+      'value' => 'bi-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    529 => 
+    array (
+      'id' => 'square-fill-outline',
+      'name' => 'Square Fill',
+      'value' => 'bi-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    530 => 
+    array (
+      'id' => 'square-half-outline',
+      'name' => 'Square Half',
+      'value' => 'bi-square-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    531 => 
+    array (
+      'id' => 'square-half-solid',
+      'name' => 'Square Half',
+      'value' => 'bi-square-half-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    532 => 
+    array (
+      'id' => 'square-outline',
+      'name' => 'Square',
+      'value' => 'bi-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    533 => 
+    array (
+      'id' => 'square-solid',
+      'name' => 'Square',
+      'value' => 'bi-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'square',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    534 => 
+    array (
+      'id' => 'stack-outline',
+      'name' => 'Stack',
+      'value' => 'bi-stack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stack',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    535 => 
+    array (
+      'id' => 'symmetry-horizontal-outline',
+      'name' => 'Symmetry Horizontal',
+      'value' => 'bi-symmetry-horizontal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'symmetry',
+        1 => 'horizontal',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    536 => 
+    array (
+      'id' => 'symmetry-vertical-outline',
+      'name' => 'Symmetry Vertical',
+      'value' => 'bi-symmetry-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'symmetry',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    537 => 
+    array (
+      'id' => 'table-outline',
+      'name' => 'Table',
+      'value' => 'bi-table',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'table',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    538 => 
+    array (
+      'id' => 'text-center-outline',
+      'name' => 'Text Center',
+      'value' => 'bi-text-center',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'center',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    539 => 
+    array (
+      'id' => 'text-indent-left-outline',
+      'name' => 'Text Indent Left',
+      'value' => 'bi-text-indent-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'indent',
+        2 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    540 => 
+    array (
+      'id' => 'text-indent-right-outline',
+      'name' => 'Text Indent Right',
+      'value' => 'bi-text-indent-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'indent',
+        2 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    541 => 
+    array (
+      'id' => 'text-left-outline',
+      'name' => 'Text Left',
+      'value' => 'bi-text-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'left',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    542 => 
+    array (
+      'id' => 'text-paragraph-outline',
+      'name' => 'Text Paragraph',
+      'value' => 'bi-text-paragraph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'paragraph',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    543 => 
+    array (
+      'id' => 'text-right-outline',
+      'name' => 'Text Right',
+      'value' => 'bi-text-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'right',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    544 => 
+    array (
+      'id' => 'textarea-resize-outline',
+      'name' => 'Textarea Resize',
+      'value' => 'bi-textarea-resize',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'textarea',
+        1 => 'resize',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    545 => 
+    array (
+      'id' => 'textarea-t-outline',
+      'name' => 'Textarea T',
+      'value' => 'bi-textarea-t',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'textarea',
+        1 => 't',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    546 => 
+    array (
+      'id' => 'textarea-outline',
+      'name' => 'Textarea',
+      'value' => 'bi-textarea',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'textarea',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    547 => 
+    array (
+      'id' => 'three-dots-vertical-outline',
+      'name' => 'Three Dots Vertical',
+      'value' => 'bi-three-dots-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'three',
+        1 => 'dots',
+        2 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    548 => 
+    array (
+      'id' => 'three-dots-outline',
+      'name' => 'Three Dots',
+      'value' => 'bi-three-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'three',
+        1 => 'dots',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    549 => 
+    array (
+      'id' => 'toggle-off-outline',
+      'name' => 'Toggle Off',
+      'value' => 'bi-toggle-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggle',
+        1 => 'off',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    550 => 
+    array (
+      'id' => 'toggle-on-outline',
+      'name' => 'Toggle On',
+      'value' => 'bi-toggle-on',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggle',
+        1 => 'on',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    551 => 
+    array (
+      'id' => 'toggle2-off-outline',
+      'name' => 'Toggle2 Off',
+      'value' => 'bi-toggle2-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggle2',
+        1 => 'off',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    552 => 
+    array (
+      'id' => 'toggle2-on-outline',
+      'name' => 'Toggle2 On',
+      'value' => 'bi-toggle2-on',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggle2',
+        1 => 'on',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    553 => 
+    array (
+      'id' => 'toggles-outline',
+      'name' => 'Toggles',
+      'value' => 'bi-toggles',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggles',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    554 => 
+    array (
+      'id' => 'toggles2-outline',
+      'name' => 'Toggles2',
+      'value' => 'bi-toggles2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'toggles2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    555 => 
+    array (
+      'id' => 'triangle-fill-solid',
+      'name' => 'Triangle Fill',
+      'value' => 'bi-triangle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    556 => 
+    array (
+      'id' => 'triangle-fill-outline',
+      'name' => 'Triangle Fill',
+      'value' => 'bi-triangle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+        1 => 'fill',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    557 => 
+    array (
+      'id' => 'triangle-half-outline',
+      'name' => 'Triangle Half',
+      'value' => 'bi-triangle-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    558 => 
+    array (
+      'id' => 'triangle-half-solid',
+      'name' => 'Triangle Half',
+      'value' => 'bi-triangle-half-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+        1 => 'half',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    559 => 
+    array (
+      'id' => 'triangle-outline',
+      'name' => 'Triangle',
+      'value' => 'bi-triangle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    560 => 
+    array (
+      'id' => 'triangle-solid',
+      'name' => 'Triangle',
+      'value' => 'bi-triangle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'triangle',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    561 => 
+    array (
+      'id' => 'ui-checks-grid-outline',
+      'name' => 'Ui Checks Grid',
+      'value' => 'bi-ui-checks-grid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ui',
+        1 => 'checks',
+        2 => 'grid',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    562 => 
+    array (
+      'id' => 'ui-checks-outline',
+      'name' => 'Ui Checks',
+      'value' => 'bi-ui-checks',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ui',
+        1 => 'checks',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    563 => 
+    array (
+      'id' => 'ui-radios-grid-outline',
+      'name' => 'Ui Radios Grid',
+      'value' => 'bi-ui-radios-grid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ui',
+        1 => 'radios',
+        2 => 'grid',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    564 => 
+    array (
+      'id' => 'ui-radios-outline',
+      'name' => 'Ui Radios',
+      'value' => 'bi-ui-radios',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ui',
+        1 => 'radios',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    565 => 
+    array (
+      'id' => 'union-outline',
+      'name' => 'Union',
+      'value' => 'bi-union',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'union',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    566 => 
+    array (
+      'id' => 'view-list-outline',
+      'name' => 'View List',
+      'value' => 'bi-view-list',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'view',
+        1 => 'list',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    567 => 
+    array (
+      'id' => 'view-stacked-outline',
+      'name' => 'View Stacked',
+      'value' => 'bi-view-stacked',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'view',
+        1 => 'stacked',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    568 => 
+    array (
+      'id' => 'window-dock-outline',
+      'name' => 'Window Dock',
+      'value' => 'bi-window-dock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'dock',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    569 => 
+    array (
+      'id' => 'window-sidebar-outline',
+      'name' => 'Window Sidebar',
+      'value' => 'bi-window-sidebar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'sidebar',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    570 => 
+    array (
+      'id' => 'window-outline',
+      'name' => 'Window',
+      'value' => 'bi-window',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    571 => 
+    array (
+      'id' => 'zoom-in-outline',
+      'name' => 'Zoom In',
+      'value' => 'bi-zoom-in',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'zoom',
+        1 => 'in',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    572 => 
+    array (
+      'id' => 'zoom-out-outline',
+      'name' => 'Zoom Out',
+      'value' => 'bi-zoom-out',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'zoom',
+        1 => 'out',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    573 => 
+    array (
+      'id' => 'dash-lg-outline',
+      'name' => 'Dash Lg',
+      'value' => 'bi-dash-lg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dash',
+        1 => 'lg',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    574 => 
+    array (
+      'id' => 'graph-down-arrow-outline',
+      'name' => 'Graph Down Arrow',
+      'value' => 'bi-graph-down-arrow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'down',
+        2 => 'arrow',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    575 => 
+    array (
+      'id' => 'graph-down-arrow-solid',
+      'name' => 'Graph Down Arrow',
+      'value' => 'bi-graph-down-arrow-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'down',
+        2 => 'arrow',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    576 => 
+    array (
+      'id' => 'graph-up-arrow-outline',
+      'name' => 'Graph Up Arrow',
+      'value' => 'bi-graph-up-arrow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'up',
+        2 => 'arrow',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    577 => 
+    array (
+      'id' => 'graph-up-arrow-solid',
+      'name' => 'Graph Up Arrow',
+      'value' => 'bi-graph-up-arrow-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'graph',
+        1 => 'up',
+        2 => 'arrow',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    578 => 
+    array (
+      'id' => 'list-columns-reverse-outline',
+      'name' => 'List Columns Reverse',
+      'value' => 'bi-list-columns-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'columns',
+        2 => 'reverse',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    579 => 
+    array (
+      'id' => 'list-columns-outline',
+      'name' => 'List Columns',
+      'value' => 'bi-list-columns',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'list',
+        1 => 'columns',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    580 => 
+    array (
+      'id' => 'window-dash-outline',
+      'name' => 'Window Dash',
+      'value' => 'bi-window-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'dash',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    581 => 
+    array (
+      'id' => 'window-desktop-outline',
+      'name' => 'Window Desktop',
+      'value' => 'bi-window-desktop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'desktop',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    582 => 
+    array (
+      'id' => 'window-fullscreen-outline',
+      'name' => 'Window Fullscreen',
+      'value' => 'bi-window-fullscreen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'fullscreen',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    583 => 
+    array (
+      'id' => 'window-plus-outline',
+      'name' => 'Window Plus',
+      'value' => 'bi-window-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'plus',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    584 => 
+    array (
+      'id' => 'window-split-outline',
+      'name' => 'Window Split',
+      'value' => 'bi-window-split',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'split',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    585 => 
+    array (
+      'id' => 'window-stack-outline',
+      'name' => 'Window Stack',
+      'value' => 'bi-window-stack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'stack',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    586 => 
+    array (
+      'id' => 'window-x-outline',
+      'name' => 'Window X',
+      'value' => 'bi-window-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'window',
+        1 => 'x',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    587 => 
+    array (
+      'id' => 'sliders2-vertical-outline',
+      'name' => 'Sliders2 Vertical',
+      'value' => 'bi-sliders2-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sliders2',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    588 => 
+    array (
+      'id' => 'sliders2-outline',
+      'name' => 'Sliders2',
+      'value' => 'bi-sliders2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sliders2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    589 => 
+    array (
+      'id' => 'indent-outline',
+      'name' => 'Indent',
+      'value' => 'bi-indent',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'indent',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    590 => 
+    array (
+      'id' => 'unindent-outline',
+      'name' => 'Unindent',
+      'value' => 'bi-unindent',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'unindent',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    591 => 
+    array (
+      'id' => 'text-wrap-outline',
+      'name' => 'Text Wrap',
+      'value' => 'bi-text-wrap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'text',
+        1 => 'wrap',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    592 => 
+    array (
+      'id' => 'arrows-collapse-vertical-outline',
+      'name' => 'Arrows Collapse Vertical',
+      'value' => 'bi-arrows-collapse-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'collapse',
+        2 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    593 => 
+    array (
+      'id' => 'arrows-collapse-vertical-solid',
+      'name' => 'Arrows Collapse Vertical',
+      'value' => 'bi-arrows-collapse-vertical-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'collapse',
+        2 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    594 => 
+    array (
+      'id' => 'arrows-expand-vertical-outline',
+      'name' => 'Arrows Expand Vertical',
+      'value' => 'bi-arrows-expand-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'expand',
+        2 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    595 => 
+    array (
+      'id' => 'arrows-expand-vertical-solid',
+      'name' => 'Arrows Expand Vertical',
+      'value' => 'bi-arrows-expand-vertical-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'expand',
+        2 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    596 => 
+    array (
+      'id' => 'arrows-vertical-outline',
+      'name' => 'Arrows Vertical',
+      'value' => 'bi-arrows-vertical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    597 => 
+    array (
+      'id' => 'arrows-vertical-solid',
+      'name' => 'Arrows Vertical',
+      'value' => 'bi-arrows-vertical-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+        1 => 'vertical',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    598 => 
+    array (
+      'id' => 'arrows-outline',
+      'name' => 'Arrows',
+      'value' => 'bi-arrows',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    599 => 
+    array (
+      'id' => 'arrows-solid',
+      'name' => 'Arrows',
+      'value' => 'bi-arrows-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'arrows',
+      ),
+      'category' => 'ui',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    600 => 
+    array (
+      'id' => 'crosshair-outline',
+      'name' => 'Crosshair',
+      'value' => 'bi-crosshair',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'crosshair',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    601 => 
+    array (
+      'id' => 'crosshair2-outline',
+      'name' => 'Crosshair2',
+      'value' => 'bi-crosshair2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'crosshair2',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    602 => 
+    array (
+      'id' => 'transparency-outline',
+      'name' => 'Transparency',
+      'value' => 'bi-transparency',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'transparency',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    603 => 
+    array (
+      'id' => 'type-h4-outline',
+      'name' => 'Type H4',
+      'value' => 'bi-type-h4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'type',
+        1 => 'h4',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    604 => 
+    array (
+      'id' => 'type-h5-outline',
+      'name' => 'Type H5',
+      'value' => 'bi-type-h5',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'type',
+        1 => 'h5',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    605 => 
+    array (
+      'id' => 'type-h6-outline',
+      'name' => 'Type H6',
+      'value' => 'bi-type-h6',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'type',
+        1 => 'h6',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    606 => 
+    array (
+      'id' => 'brilliance-outline',
+      'name' => 'Brilliance',
+      'value' => 'bi-brilliance',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brilliance',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    607 => 
+    array (
+      'id' => 'highlights-outline',
+      'name' => 'Highlights',
+      'value' => 'bi-highlights',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'highlights',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    608 => 
+    array (
+      'id' => 'noise-reduction-outline',
+      'name' => 'Noise Reduction',
+      'value' => 'bi-noise-reduction',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'noise',
+        1 => 'reduction',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    609 => 
+    array (
+      'id' => 'shadows-outline',
+      'name' => 'Shadows',
+      'value' => 'bi-shadows',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'shadows',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    610 => 
+    array (
+      'id' => 'vignette-outline',
+      'name' => 'Vignette',
+      'value' => 'bi-vignette',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vignette',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    611 => 
+    array (
+      'id' => 'battery-low-outline',
+      'name' => 'Battery Low',
+      'value' => 'bi-battery-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'battery',
+        1 => 'low',
+      ),
+      'category' => 'ui',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+  ),
+);

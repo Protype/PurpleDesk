@@ -1,7371 +1,13520 @@
 <?php
 
-return [
-    'id' => 'others',
-    'name' => '其他圖標',
-    'description' => '未分類的其他圖標',
-    'priority' => 'low',
-
-    'icons' => [
-        [
-            'name' => 'asterisk',
-            'displayName' => 'Asterisk',
-            'class' => 'bi-asterisk',
-            'keywords' => ["asterisk"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-asterisk'],
-            ]
-        ],
-        [
-            'name' => 'award-fill',
-            'displayName' => 'Award Fill',
-            'class' => 'bi-award-fill',
-            'keywords' => ["award","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-award-fill'],
-                'outline' => ['class' => 'bi-award'],
-            ]
-        ],
-        [
-            'name' => 'award',
-            'displayName' => 'Award',
-            'class' => 'bi-award',
-            'keywords' => ["award"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-award'],
-                'solid' => ['class' => 'bi-award-fill'],
-            ]
-        ],
-        [
-            'name' => 'backspace-fill',
-            'displayName' => 'Backspace Fill',
-            'class' => 'bi-backspace-fill',
-            'keywords' => ["backspace","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backspace-fill'],
-                'outline' => ['class' => 'bi-backspace'],
-            ]
-        ],
-        [
-            'name' => 'backspace-reverse-fill',
-            'displayName' => 'Backspace Reverse Fill',
-            'class' => 'bi-backspace-reverse-fill',
-            'keywords' => ["backspace","reverse","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backspace-reverse-fill'],
-                'outline' => ['class' => 'bi-backspace-reverse'],
-            ]
-        ],
-        [
-            'name' => 'backspace-reverse',
-            'displayName' => 'Backspace Reverse',
-            'class' => 'bi-backspace-reverse',
-            'keywords' => ["backspace","reverse"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backspace-reverse'],
-                'solid' => ['class' => 'bi-backspace-reverse-fill'],
-            ]
-        ],
-        [
-            'name' => 'backspace',
-            'displayName' => 'Backspace',
-            'class' => 'bi-backspace',
-            'keywords' => ["backspace"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backspace'],
-                'solid' => ['class' => 'bi-backspace-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag-check-fill',
-            'displayName' => 'Bag Check Fill',
-            'class' => 'bi-bag-check-fill',
-            'keywords' => ["bag","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-check-fill'],
-                'outline' => ['class' => 'bi-bag-check'],
-            ]
-        ],
-        [
-            'name' => 'bag-check',
-            'displayName' => 'Bag Check',
-            'class' => 'bi-bag-check',
-            'keywords' => ["bag","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag-check'],
-                'solid' => ['class' => 'bi-bag-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag-dash-fill',
-            'displayName' => 'Bag Dash Fill',
-            'class' => 'bi-bag-dash-fill',
-            'keywords' => ["bag","dash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-dash-fill'],
-                'outline' => ['class' => 'bi-bag-dash'],
-            ]
-        ],
-        [
-            'name' => 'bag-dash',
-            'displayName' => 'Bag Dash',
-            'class' => 'bi-bag-dash',
-            'keywords' => ["bag","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag-dash'],
-                'solid' => ['class' => 'bi-bag-dash-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag-fill',
-            'displayName' => 'Bag Fill',
-            'class' => 'bi-bag-fill',
-            'keywords' => ["bag","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-fill'],
-                'outline' => ['class' => 'bi-bag'],
-            ]
-        ],
-        [
-            'name' => 'bag-plus-fill',
-            'displayName' => 'Bag Plus Fill',
-            'class' => 'bi-bag-plus-fill',
-            'keywords' => ["bag","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-plus-fill'],
-                'outline' => ['class' => 'bi-bag-plus'],
-            ]
-        ],
-        [
-            'name' => 'bag-plus',
-            'displayName' => 'Bag Plus',
-            'class' => 'bi-bag-plus',
-            'keywords' => ["bag","plus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag-plus'],
-                'solid' => ['class' => 'bi-bag-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag-x-fill',
-            'displayName' => 'Bag X Fill',
-            'class' => 'bi-bag-x-fill',
-            'keywords' => ["bag","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-x-fill'],
-                'outline' => ['class' => 'bi-bag-x'],
-            ]
-        ],
-        [
-            'name' => 'bag-x',
-            'displayName' => 'Bag X',
-            'class' => 'bi-bag-x',
-            'keywords' => ["bag","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag-x'],
-                'solid' => ['class' => 'bi-bag-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag',
-            'displayName' => 'Bag',
-            'class' => 'bi-bag',
-            'keywords' => ["bag"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag'],
-                'solid' => ['class' => 'bi-bag-fill'],
-            ]
-        ],
-        [
-            'name' => 'basket-fill',
-            'displayName' => 'Basket Fill',
-            'class' => 'bi-basket-fill',
-            'keywords' => ["basket","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-basket-fill'],
-                'outline' => ['class' => 'bi-basket'],
-            ]
-        ],
-        [
-            'name' => 'basket',
-            'displayName' => 'Basket',
-            'class' => 'bi-basket',
-            'keywords' => ["basket"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-basket'],
-                'solid' => ['class' => 'bi-basket-fill'],
-            ]
-        ],
-        [
-            'name' => 'basket2-fill',
-            'displayName' => 'Basket2 Fill',
-            'class' => 'bi-basket2-fill',
-            'keywords' => ["basket2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-basket2-fill'],
-                'outline' => ['class' => 'bi-basket2'],
-            ]
-        ],
-        [
-            'name' => 'basket2',
-            'displayName' => 'Basket2',
-            'class' => 'bi-basket2',
-            'keywords' => ["basket2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-basket2'],
-                'solid' => ['class' => 'bi-basket2-fill'],
-            ]
-        ],
-        [
-            'name' => 'basket3-fill',
-            'displayName' => 'Basket3 Fill',
-            'class' => 'bi-basket3-fill',
-            'keywords' => ["basket3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-basket3-fill'],
-                'outline' => ['class' => 'bi-basket3'],
-            ]
-        ],
-        [
-            'name' => 'basket3',
-            'displayName' => 'Basket3',
-            'class' => 'bi-basket3',
-            'keywords' => ["basket3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-basket3'],
-                'solid' => ['class' => 'bi-basket3-fill'],
-            ]
-        ],
-        [
-            'name' => 'battery-charging',
-            'displayName' => 'Battery Charging',
-            'class' => 'bi-battery-charging',
-            'keywords' => ["battery","charging"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-battery-charging'],
-            ]
-        ],
-        [
-            'name' => 'battery-full',
-            'displayName' => 'Battery Full',
-            'class' => 'bi-battery-full',
-            'keywords' => ["battery","full"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-battery-full'],
-            ]
-        ],
-        [
-            'name' => 'battery-half',
-            'displayName' => 'Battery Half',
-            'class' => 'bi-battery-half',
-            'keywords' => ["battery","half"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-battery-half'],
-            ]
-        ],
-        [
-            'name' => 'battery',
-            'displayName' => 'Battery',
-            'class' => 'bi-battery',
-            'keywords' => ["battery"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-battery'],
-            ]
-        ],
-        [
-            'name' => 'bezier',
-            'displayName' => 'Bezier',
-            'class' => 'bi-bezier',
-            'keywords' => ["bezier"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bezier'],
-            ]
-        ],
-        [
-            'name' => 'bezier2',
-            'displayName' => 'Bezier2',
-            'class' => 'bi-bezier2',
-            'keywords' => ["bezier2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bezier2'],
-            ]
-        ],
-        [
-            'name' => 'bicycle',
-            'displayName' => 'Bicycle',
-            'class' => 'bi-bicycle',
-            'keywords' => ["bicycle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bicycle'],
-            ]
-        ],
-        [
-            'name' => 'binoculars-fill',
-            'displayName' => 'Binoculars Fill',
-            'class' => 'bi-binoculars-fill',
-            'keywords' => ["binoculars","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-binoculars-fill'],
-                'outline' => ['class' => 'bi-binoculars'],
-            ]
-        ],
-        [
-            'name' => 'binoculars',
-            'displayName' => 'Binoculars',
-            'class' => 'bi-binoculars',
-            'keywords' => ["binoculars"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-binoculars'],
-                'solid' => ['class' => 'bi-binoculars-fill'],
-            ]
-        ],
-        [
-            'name' => 'bootstrap-fill',
-            'displayName' => 'Bootstrap Fill',
-            'class' => 'bi-bootstrap-fill',
-            'keywords' => ["bootstrap","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bootstrap-fill'],
-                'outline' => ['class' => 'bi-bootstrap'],
-            ]
-        ],
-        [
-            'name' => 'bootstrap-reboot',
-            'displayName' => 'Bootstrap Reboot',
-            'class' => 'bi-bootstrap-reboot',
-            'keywords' => ["bootstrap","reboot"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bootstrap-reboot'],
-            ]
-        ],
-        [
-            'name' => 'bootstrap',
-            'displayName' => 'Bootstrap',
-            'class' => 'bi-bootstrap',
-            'keywords' => ["bootstrap"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bootstrap'],
-                'solid' => ['class' => 'bi-bootstrap-fill'],
-            ]
-        ],
-        [
-            'name' => 'bricks',
-            'displayName' => 'Bricks',
-            'class' => 'bi-bricks',
-            'keywords' => ["bricks"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bricks'],
-            ]
-        ],
-        [
-            'name' => 'briefcase-fill',
-            'displayName' => 'Briefcase Fill',
-            'class' => 'bi-briefcase-fill',
-            'keywords' => ["briefcase","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-briefcase-fill'],
-                'outline' => ['class' => 'bi-briefcase'],
-            ]
-        ],
-        [
-            'name' => 'briefcase',
-            'displayName' => 'Briefcase',
-            'class' => 'bi-briefcase',
-            'keywords' => ["briefcase"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-briefcase'],
-                'solid' => ['class' => 'bi-briefcase-fill'],
-            ]
-        ],
-        [
-            'name' => 'brush-fill',
-            'displayName' => 'Brush Fill',
-            'class' => 'bi-brush-fill',
-            'keywords' => ["brush","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-brush-fill'],
-                'outline' => ['class' => 'bi-brush'],
-            ]
-        ],
-        [
-            'name' => 'brush',
-            'displayName' => 'Brush',
-            'class' => 'bi-brush',
-            'keywords' => ["brush"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-brush'],
-                'solid' => ['class' => 'bi-brush-fill'],
-            ]
-        ],
-        [
-            'name' => 'bucket-fill',
-            'displayName' => 'Bucket Fill',
-            'class' => 'bi-bucket-fill',
-            'keywords' => ["bucket","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bucket-fill'],
-                'outline' => ['class' => 'bi-bucket'],
-            ]
-        ],
-        [
-            'name' => 'bucket',
-            'displayName' => 'Bucket',
-            'class' => 'bi-bucket',
-            'keywords' => ["bucket"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bucket'],
-                'solid' => ['class' => 'bi-bucket-fill'],
-            ]
-        ],
-        [
-            'name' => 'bug-fill',
-            'displayName' => 'Bug Fill',
-            'class' => 'bi-bug-fill',
-            'keywords' => ["bug","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bug-fill'],
-                'outline' => ['class' => 'bi-bug'],
-            ]
-        ],
-        [
-            'name' => 'bug',
-            'displayName' => 'Bug',
-            'class' => 'bi-bug',
-            'keywords' => ["bug"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bug'],
-                'solid' => ['class' => 'bi-bug-fill'],
-            ]
-        ],
-        [
-            'name' => 'building',
-            'displayName' => 'Building',
-            'class' => 'bi-building',
-            'keywords' => ["building"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building'],
-                'solid' => ['class' => 'bi-building-fill'],
-            ]
-        ],
-        [
-            'name' => 'bullseye',
-            'displayName' => 'Bullseye',
-            'class' => 'bi-bullseye',
-            'keywords' => ["bullseye"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bullseye'],
-            ]
-        ],
-        [
-            'name' => 'calculator-fill',
-            'displayName' => 'Calculator Fill',
-            'class' => 'bi-calculator-fill',
-            'keywords' => ["calculator","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-calculator-fill'],
-                'outline' => ['class' => 'bi-calculator'],
-            ]
-        ],
-        [
-            'name' => 'calculator',
-            'displayName' => 'Calculator',
-            'class' => 'bi-calculator',
-            'keywords' => ["calculator"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-calculator'],
-                'solid' => ['class' => 'bi-calculator-fill'],
-            ]
-        ],
-        [
-            'name' => 'capslock-fill',
-            'displayName' => 'Capslock Fill',
-            'class' => 'bi-capslock-fill',
-            'keywords' => ["capslock","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-capslock-fill'],
-                'outline' => ['class' => 'bi-capslock'],
-            ]
-        ],
-        [
-            'name' => 'capslock',
-            'displayName' => 'Capslock',
-            'class' => 'bi-capslock',
-            'keywords' => ["capslock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-capslock'],
-                'solid' => ['class' => 'bi-capslock-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart-check-fill',
-            'displayName' => 'Cart Check Fill',
-            'class' => 'bi-cart-check-fill',
-            'keywords' => ["cart","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cart-check-fill'],
-                'outline' => ['class' => 'bi-cart-check'],
-            ]
-        ],
-        [
-            'name' => 'cart-check',
-            'displayName' => 'Cart Check',
-            'class' => 'bi-cart-check',
-            'keywords' => ["cart","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart-check'],
-                'solid' => ['class' => 'bi-cart-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart-dash-fill',
-            'displayName' => 'Cart Dash Fill',
-            'class' => 'bi-cart-dash-fill',
-            'keywords' => ["cart","dash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cart-dash-fill'],
-                'outline' => ['class' => 'bi-cart-dash'],
-            ]
-        ],
-        [
-            'name' => 'cart-dash',
-            'displayName' => 'Cart Dash',
-            'class' => 'bi-cart-dash',
-            'keywords' => ["cart","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart-dash'],
-                'solid' => ['class' => 'bi-cart-dash-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart-fill',
-            'displayName' => 'Cart Fill',
-            'class' => 'bi-cart-fill',
-            'keywords' => ["cart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cart-fill'],
-                'outline' => ['class' => 'bi-cart'],
-            ]
-        ],
-        [
-            'name' => 'cart-plus-fill',
-            'displayName' => 'Cart Plus Fill',
-            'class' => 'bi-cart-plus-fill',
-            'keywords' => ["cart","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cart-plus-fill'],
-                'outline' => ['class' => 'bi-cart-plus'],
-            ]
-        ],
-        [
-            'name' => 'cart-plus',
-            'displayName' => 'Cart Plus',
-            'class' => 'bi-cart-plus',
-            'keywords' => ["cart","plus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart-plus'],
-                'solid' => ['class' => 'bi-cart-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart-x-fill',
-            'displayName' => 'Cart X Fill',
-            'class' => 'bi-cart-x-fill',
-            'keywords' => ["cart","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cart-x-fill'],
-                'outline' => ['class' => 'bi-cart-x'],
-            ]
-        ],
-        [
-            'name' => 'cart-x',
-            'displayName' => 'Cart X',
-            'class' => 'bi-cart-x',
-            'keywords' => ["cart","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart-x'],
-                'solid' => ['class' => 'bi-cart-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart',
-            'displayName' => 'Cart',
-            'class' => 'bi-cart',
-            'keywords' => ["cart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart'],
-                'solid' => ['class' => 'bi-cart-fill'],
-            ]
-        ],
-        [
-            'name' => 'cart2',
-            'displayName' => 'Cart2',
-            'class' => 'bi-cart2',
-            'keywords' => ["cart2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart2'],
-            ]
-        ],
-        [
-            'name' => 'cart3',
-            'displayName' => 'Cart3',
-            'class' => 'bi-cart3',
-            'keywords' => ["cart3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart3'],
-            ]
-        ],
-        [
-            'name' => 'cart4',
-            'displayName' => 'Cart4',
-            'class' => 'bi-cart4',
-            'keywords' => ["cart4"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cart4'],
-            ]
-        ],
-        [
-            'name' => 'cash-stack',
-            'displayName' => 'Cash Stack',
-            'class' => 'bi-cash-stack',
-            'keywords' => ["cash","stack"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cash-stack'],
-            ]
-        ],
-        [
-            'name' => 'cash',
-            'displayName' => 'Cash',
-            'class' => 'bi-cash',
-            'keywords' => ["cash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cash'],
-            ]
-        ],
-        [
-            'name' => 'cloud-arrow-down-fill',
-            'displayName' => 'Cloud Arrow Down Fill',
-            'class' => 'bi-cloud-arrow-down-fill',
-            'keywords' => ["cloud","arrow","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-arrow-down-fill'],
-                'outline' => ['class' => 'bi-cloud-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'cloud-arrow-down',
-            'displayName' => 'Cloud Arrow Down',
-            'class' => 'bi-cloud-arrow-down',
-            'keywords' => ["cloud","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-arrow-down'],
-                'solid' => ['class' => 'bi-cloud-arrow-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-arrow-up-fill',
-            'displayName' => 'Cloud Arrow Up Fill',
-            'class' => 'bi-cloud-arrow-up-fill',
-            'keywords' => ["cloud","arrow","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-arrow-up-fill'],
-                'outline' => ['class' => 'bi-cloud-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'cloud-arrow-up',
-            'displayName' => 'Cloud Arrow Up',
-            'class' => 'bi-cloud-arrow-up',
-            'keywords' => ["cloud","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-arrow-up'],
-                'solid' => ['class' => 'bi-cloud-arrow-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-check-fill',
-            'displayName' => 'Cloud Check Fill',
-            'class' => 'bi-cloud-check-fill',
-            'keywords' => ["cloud","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-check-fill'],
-                'outline' => ['class' => 'bi-cloud-check'],
-            ]
-        ],
-        [
-            'name' => 'cloud-check',
-            'displayName' => 'Cloud Check',
-            'class' => 'bi-cloud-check',
-            'keywords' => ["cloud","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-check'],
-                'solid' => ['class' => 'bi-cloud-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-download-fill',
-            'displayName' => 'Cloud Download Fill',
-            'class' => 'bi-cloud-download-fill',
-            'keywords' => ["cloud","download","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-download-fill'],
-                'outline' => ['class' => 'bi-cloud-download'],
-            ]
-        ],
-        [
-            'name' => 'cloud-download',
-            'displayName' => 'Cloud Download',
-            'class' => 'bi-cloud-download',
-            'keywords' => ["cloud","download"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-download'],
-                'solid' => ['class' => 'bi-cloud-download-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-drizzle-fill',
-            'displayName' => 'Cloud Drizzle Fill',
-            'class' => 'bi-cloud-drizzle-fill',
-            'keywords' => ["cloud","drizzle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-drizzle-fill'],
-                'outline' => ['class' => 'bi-cloud-drizzle'],
-            ]
-        ],
-        [
-            'name' => 'cloud-drizzle',
-            'displayName' => 'Cloud Drizzle',
-            'class' => 'bi-cloud-drizzle',
-            'keywords' => ["cloud","drizzle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-drizzle'],
-                'solid' => ['class' => 'bi-cloud-drizzle-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-fill',
-            'displayName' => 'Cloud Fill',
-            'class' => 'bi-cloud-fill',
-            'keywords' => ["cloud","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-fill'],
-                'outline' => ['class' => 'bi-cloud'],
-            ]
-        ],
-        [
-            'name' => 'cloud-fog-fill',
-            'displayName' => 'Cloud Fog Fill',
-            'class' => 'bi-cloud-fog-fill',
-            'keywords' => ["cloud","fog","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-fog-fill'],
-                'outline' => ['class' => 'bi-cloud-fog'],
-            ]
-        ],
-        [
-            'name' => 'cloud-fog',
-            'displayName' => 'Cloud Fog',
-            'class' => 'bi-cloud-fog',
-            'keywords' => ["cloud","fog"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-fog'],
-                'solid' => ['class' => 'bi-cloud-fog-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-fog2-fill',
-            'displayName' => 'Cloud Fog2 Fill',
-            'class' => 'bi-cloud-fog2-fill',
-            'keywords' => ["cloud","fog2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-fog2-fill'],
-                'outline' => ['class' => 'bi-cloud-fog2'],
-            ]
-        ],
-        [
-            'name' => 'cloud-fog2',
-            'displayName' => 'Cloud Fog2',
-            'class' => 'bi-cloud-fog2',
-            'keywords' => ["cloud","fog2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-fog2'],
-                'solid' => ['class' => 'bi-cloud-fog2-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-hail-fill',
-            'displayName' => 'Cloud Hail Fill',
-            'class' => 'bi-cloud-hail-fill',
-            'keywords' => ["cloud","hail","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-hail-fill'],
-                'outline' => ['class' => 'bi-cloud-hail'],
-            ]
-        ],
-        [
-            'name' => 'cloud-hail',
-            'displayName' => 'Cloud Hail',
-            'class' => 'bi-cloud-hail',
-            'keywords' => ["cloud","hail"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-hail'],
-                'solid' => ['class' => 'bi-cloud-hail-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-haze-fill',
-            'displayName' => 'Cloud Haze Fill',
-            'class' => 'bi-cloud-haze-fill',
-            'keywords' => ["cloud","haze","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-haze-fill'],
-                'outline' => ['class' => 'bi-cloud-haze'],
-            ]
-        ],
-        [
-            'name' => 'cloud-haze',
-            'displayName' => 'Cloud Haze',
-            'class' => 'bi-cloud-haze',
-            'keywords' => ["cloud","haze"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-haze'],
-                'solid' => ['class' => 'bi-cloud-haze-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-haze2-fill',
-            'displayName' => 'Cloud Haze2 Fill',
-            'class' => 'bi-cloud-haze2-fill',
-            'keywords' => ["cloud","haze2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-haze2-fill'],
-                'outline' => ['class' => 'bi-cloud-haze2'],
-            ]
-        ],
-        [
-            'name' => 'cloud-lightning-fill',
-            'displayName' => 'Cloud Lightning Fill',
-            'class' => 'bi-cloud-lightning-fill',
-            'keywords' => ["cloud","lightning","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-lightning-fill'],
-                'outline' => ['class' => 'bi-cloud-lightning'],
-            ]
-        ],
-        [
-            'name' => 'cloud-lightning-rain-fill',
-            'displayName' => 'Cloud Lightning Rain Fill',
-            'class' => 'bi-cloud-lightning-rain-fill',
-            'keywords' => ["cloud","lightning","rain","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-lightning-rain-fill'],
-                'outline' => ['class' => 'bi-cloud-lightning-rain'],
-            ]
-        ],
-        [
-            'name' => 'cloud-lightning-rain',
-            'displayName' => 'Cloud Lightning Rain',
-            'class' => 'bi-cloud-lightning-rain',
-            'keywords' => ["cloud","lightning","rain"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-lightning-rain'],
-                'solid' => ['class' => 'bi-cloud-lightning-rain-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-lightning',
-            'displayName' => 'Cloud Lightning',
-            'class' => 'bi-cloud-lightning',
-            'keywords' => ["cloud","lightning"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-lightning'],
-                'solid' => ['class' => 'bi-cloud-lightning-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-minus-fill',
-            'displayName' => 'Cloud Minus Fill',
-            'class' => 'bi-cloud-minus-fill',
-            'keywords' => ["cloud","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-minus-fill'],
-                'outline' => ['class' => 'bi-cloud-minus'],
-            ]
-        ],
-        [
-            'name' => 'cloud-minus',
-            'displayName' => 'Cloud Minus',
-            'class' => 'bi-cloud-minus',
-            'keywords' => ["cloud","minus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-minus'],
-                'solid' => ['class' => 'bi-cloud-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-moon-fill',
-            'displayName' => 'Cloud Moon Fill',
-            'class' => 'bi-cloud-moon-fill',
-            'keywords' => ["cloud","moon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-moon-fill'],
-                'outline' => ['class' => 'bi-cloud-moon'],
-            ]
-        ],
-        [
-            'name' => 'cloud-moon',
-            'displayName' => 'Cloud Moon',
-            'class' => 'bi-cloud-moon',
-            'keywords' => ["cloud","moon"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-moon'],
-                'solid' => ['class' => 'bi-cloud-moon-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-plus-fill',
-            'displayName' => 'Cloud Plus Fill',
-            'class' => 'bi-cloud-plus-fill',
-            'keywords' => ["cloud","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-plus-fill'],
-                'outline' => ['class' => 'bi-cloud-plus'],
-            ]
-        ],
-        [
-            'name' => 'cloud-plus',
-            'displayName' => 'Cloud Plus',
-            'class' => 'bi-cloud-plus',
-            'keywords' => ["cloud","plus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-plus'],
-                'solid' => ['class' => 'bi-cloud-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-rain-fill',
-            'displayName' => 'Cloud Rain Fill',
-            'class' => 'bi-cloud-rain-fill',
-            'keywords' => ["cloud","rain","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-rain-fill'],
-                'outline' => ['class' => 'bi-cloud-rain'],
-            ]
-        ],
-        [
-            'name' => 'cloud-rain-heavy-fill',
-            'displayName' => 'Cloud Rain Heavy Fill',
-            'class' => 'bi-cloud-rain-heavy-fill',
-            'keywords' => ["cloud","rain","heavy","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-rain-heavy-fill'],
-                'outline' => ['class' => 'bi-cloud-rain-heavy'],
-            ]
-        ],
-        [
-            'name' => 'cloud-rain-heavy',
-            'displayName' => 'Cloud Rain Heavy',
-            'class' => 'bi-cloud-rain-heavy',
-            'keywords' => ["cloud","rain","heavy"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-rain-heavy'],
-                'solid' => ['class' => 'bi-cloud-rain-heavy-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-rain',
-            'displayName' => 'Cloud Rain',
-            'class' => 'bi-cloud-rain',
-            'keywords' => ["cloud","rain"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-rain'],
-                'solid' => ['class' => 'bi-cloud-rain-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-slash-fill',
-            'displayName' => 'Cloud Slash Fill',
-            'class' => 'bi-cloud-slash-fill',
-            'keywords' => ["cloud","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-slash-fill'],
-                'outline' => ['class' => 'bi-cloud-slash'],
-            ]
-        ],
-        [
-            'name' => 'cloud-slash',
-            'displayName' => 'Cloud Slash',
-            'class' => 'bi-cloud-slash',
-            'keywords' => ["cloud","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-slash'],
-                'solid' => ['class' => 'bi-cloud-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-sleet-fill',
-            'displayName' => 'Cloud Sleet Fill',
-            'class' => 'bi-cloud-sleet-fill',
-            'keywords' => ["cloud","sleet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-sleet-fill'],
-                'outline' => ['class' => 'bi-cloud-sleet'],
-            ]
-        ],
-        [
-            'name' => 'cloud-sleet',
-            'displayName' => 'Cloud Sleet',
-            'class' => 'bi-cloud-sleet',
-            'keywords' => ["cloud","sleet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-sleet'],
-                'solid' => ['class' => 'bi-cloud-sleet-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-snow-fill',
-            'displayName' => 'Cloud Snow Fill',
-            'class' => 'bi-cloud-snow-fill',
-            'keywords' => ["cloud","snow","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-snow-fill'],
-                'outline' => ['class' => 'bi-cloud-snow'],
-            ]
-        ],
-        [
-            'name' => 'cloud-snow',
-            'displayName' => 'Cloud Snow',
-            'class' => 'bi-cloud-snow',
-            'keywords' => ["cloud","snow"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-snow'],
-                'solid' => ['class' => 'bi-cloud-snow-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-sun-fill',
-            'displayName' => 'Cloud Sun Fill',
-            'class' => 'bi-cloud-sun-fill',
-            'keywords' => ["cloud","sun","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-sun-fill'],
-                'outline' => ['class' => 'bi-cloud-sun'],
-            ]
-        ],
-        [
-            'name' => 'cloud-sun',
-            'displayName' => 'Cloud Sun',
-            'class' => 'bi-cloud-sun',
-            'keywords' => ["cloud","sun"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-sun'],
-                'solid' => ['class' => 'bi-cloud-sun-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-upload-fill',
-            'displayName' => 'Cloud Upload Fill',
-            'class' => 'bi-cloud-upload-fill',
-            'keywords' => ["cloud","upload","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloud-upload-fill'],
-                'outline' => ['class' => 'bi-cloud-upload'],
-            ]
-        ],
-        [
-            'name' => 'cloud-upload',
-            'displayName' => 'Cloud Upload',
-            'class' => 'bi-cloud-upload',
-            'keywords' => ["cloud","upload"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-upload'],
-                'solid' => ['class' => 'bi-cloud-upload-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud',
-            'displayName' => 'Cloud',
-            'class' => 'bi-cloud',
-            'keywords' => ["cloud"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud'],
-                'solid' => ['class' => 'bi-cloud-fill'],
-            ]
-        ],
-        [
-            'name' => 'clouds-fill',
-            'displayName' => 'Clouds Fill',
-            'class' => 'bi-clouds-fill',
-            'keywords' => ["clouds","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-clouds-fill'],
-                'outline' => ['class' => 'bi-clouds'],
-            ]
-        ],
-        [
-            'name' => 'clouds',
-            'displayName' => 'Clouds',
-            'class' => 'bi-clouds',
-            'keywords' => ["clouds"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-clouds'],
-                'solid' => ['class' => 'bi-clouds-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloudy-fill',
-            'displayName' => 'Cloudy Fill',
-            'class' => 'bi-cloudy-fill',
-            'keywords' => ["cloudy","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cloudy-fill'],
-                'outline' => ['class' => 'bi-cloudy'],
-            ]
-        ],
-        [
-            'name' => 'cloudy',
-            'displayName' => 'Cloudy',
-            'class' => 'bi-cloudy',
-            'keywords' => ["cloudy"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloudy'],
-                'solid' => ['class' => 'bi-cloudy-fill'],
-            ]
-        ],
-        [
-            'name' => 'command',
-            'displayName' => 'Command',
-            'class' => 'bi-command',
-            'keywords' => ["command"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-command'],
-            ]
-        ],
-        [
-            'name' => 'compass-fill',
-            'displayName' => 'Compass Fill',
-            'class' => 'bi-compass-fill',
-            'keywords' => ["compass","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-compass-fill'],
-                'outline' => ['class' => 'bi-compass'],
-            ]
-        ],
-        [
-            'name' => 'compass',
-            'displayName' => 'Compass',
-            'class' => 'bi-compass',
-            'keywords' => ["compass"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-compass'],
-                'solid' => ['class' => 'bi-compass-fill'],
-            ]
-        ],
-        [
-            'name' => 'cone-striped',
-            'displayName' => 'Cone Striped',
-            'class' => 'bi-cone-striped',
-            'keywords' => ["cone","striped"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cone-striped'],
-            ]
-        ],
-        [
-            'name' => 'cone',
-            'displayName' => 'Cone',
-            'class' => 'bi-cone',
-            'keywords' => ["cone"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cone'],
-            ]
-        ],
-        [
-            'name' => 'controller',
-            'displayName' => 'Controller',
-            'class' => 'bi-controller',
-            'keywords' => ["controller"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-controller'],
-            ]
-        ],
-        [
-            'name' => 'cpu-fill',
-            'displayName' => 'Cpu Fill',
-            'class' => 'bi-cpu-fill',
-            'keywords' => ["cpu","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cpu-fill'],
-                'outline' => ['class' => 'bi-cpu'],
-            ]
-        ],
-        [
-            'name' => 'cpu',
-            'displayName' => 'Cpu',
-            'class' => 'bi-cpu',
-            'keywords' => ["cpu"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cpu'],
-                'solid' => ['class' => 'bi-cpu-fill'],
-            ]
-        ],
-        [
-            'name' => 'credit-card-2-back-fill',
-            'displayName' => 'Credit Card 2 Back Fill',
-            'class' => 'bi-credit-card-2-back-fill',
-            'keywords' => ["credit","card","2","back","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-credit-card-2-back-fill'],
-                'outline' => ['class' => 'bi-credit-card-2-back'],
-            ]
-        ],
-        [
-            'name' => 'credit-card-2-back',
-            'displayName' => 'Credit Card 2 Back',
-            'class' => 'bi-credit-card-2-back',
-            'keywords' => ["credit","card","2","back"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-credit-card-2-back'],
-                'solid' => ['class' => 'bi-credit-card-2-back-fill'],
-            ]
-        ],
-        [
-            'name' => 'credit-card-2-front-fill',
-            'displayName' => 'Credit Card 2 Front Fill',
-            'class' => 'bi-credit-card-2-front-fill',
-            'keywords' => ["credit","card","2","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-credit-card-2-front-fill'],
-                'outline' => ['class' => 'bi-credit-card-2-front'],
-            ]
-        ],
-        [
-            'name' => 'credit-card-2-front',
-            'displayName' => 'Credit Card 2 Front',
-            'class' => 'bi-credit-card-2-front',
-            'keywords' => ["credit","card","2","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-credit-card-2-front'],
-                'solid' => ['class' => 'bi-credit-card-2-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'credit-card-fill',
-            'displayName' => 'Credit Card Fill',
-            'class' => 'bi-credit-card-fill',
-            'keywords' => ["credit","card","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-credit-card-fill'],
-                'outline' => ['class' => 'bi-credit-card'],
-            ]
-        ],
-        [
-            'name' => 'credit-card',
-            'displayName' => 'Credit Card',
-            'class' => 'bi-credit-card',
-            'keywords' => ["credit","card"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-credit-card'],
-                'solid' => ['class' => 'bi-credit-card-fill'],
-            ]
-        ],
-        [
-            'name' => 'crop',
-            'displayName' => 'Crop',
-            'class' => 'bi-crop',
-            'keywords' => ["crop"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-crop'],
-            ]
-        ],
-        [
-            'name' => 'cup-fill',
-            'displayName' => 'Cup Fill',
-            'class' => 'bi-cup-fill',
-            'keywords' => ["cup","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cup-fill'],
-                'outline' => ['class' => 'bi-cup'],
-            ]
-        ],
-        [
-            'name' => 'cup-straw',
-            'displayName' => 'Cup Straw',
-            'class' => 'bi-cup-straw',
-            'keywords' => ["cup","straw"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cup-straw'],
-            ]
-        ],
-        [
-            'name' => 'cup',
-            'displayName' => 'Cup',
-            'class' => 'bi-cup',
-            'keywords' => ["cup"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cup'],
-                'solid' => ['class' => 'bi-cup-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-1-fill',
-            'displayName' => 'Dice 1 Fill',
-            'class' => 'bi-dice-1-fill',
-            'keywords' => ["dice","1","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-1-fill'],
-                'outline' => ['class' => 'bi-dice-1'],
-            ]
-        ],
-        [
-            'name' => 'dice-1',
-            'displayName' => 'Dice 1',
-            'class' => 'bi-dice-1',
-            'keywords' => ["dice","1"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-1'],
-                'solid' => ['class' => 'bi-dice-1-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-2-fill',
-            'displayName' => 'Dice 2 Fill',
-            'class' => 'bi-dice-2-fill',
-            'keywords' => ["dice","2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-2-fill'],
-                'outline' => ['class' => 'bi-dice-2'],
-            ]
-        ],
-        [
-            'name' => 'dice-2',
-            'displayName' => 'Dice 2',
-            'class' => 'bi-dice-2',
-            'keywords' => ["dice","2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-2'],
-                'solid' => ['class' => 'bi-dice-2-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-3-fill',
-            'displayName' => 'Dice 3 Fill',
-            'class' => 'bi-dice-3-fill',
-            'keywords' => ["dice","3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-3-fill'],
-                'outline' => ['class' => 'bi-dice-3'],
-            ]
-        ],
-        [
-            'name' => 'dice-3',
-            'displayName' => 'Dice 3',
-            'class' => 'bi-dice-3',
-            'keywords' => ["dice","3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-3'],
-                'solid' => ['class' => 'bi-dice-3-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-4-fill',
-            'displayName' => 'Dice 4 Fill',
-            'class' => 'bi-dice-4-fill',
-            'keywords' => ["dice","4","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-4-fill'],
-                'outline' => ['class' => 'bi-dice-4'],
-            ]
-        ],
-        [
-            'name' => 'dice-4',
-            'displayName' => 'Dice 4',
-            'class' => 'bi-dice-4',
-            'keywords' => ["dice","4"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-4'],
-                'solid' => ['class' => 'bi-dice-4-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-5-fill',
-            'displayName' => 'Dice 5 Fill',
-            'class' => 'bi-dice-5-fill',
-            'keywords' => ["dice","5","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-5-fill'],
-                'outline' => ['class' => 'bi-dice-5'],
-            ]
-        ],
-        [
-            'name' => 'dice-5',
-            'displayName' => 'Dice 5',
-            'class' => 'bi-dice-5',
-            'keywords' => ["dice","5"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-5'],
-                'solid' => ['class' => 'bi-dice-5-fill'],
-            ]
-        ],
-        [
-            'name' => 'dice-6-fill',
-            'displayName' => 'Dice 6 Fill',
-            'class' => 'bi-dice-6-fill',
-            'keywords' => ["dice","6","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dice-6-fill'],
-                'outline' => ['class' => 'bi-dice-6'],
-            ]
-        ],
-        [
-            'name' => 'dice-6',
-            'displayName' => 'Dice 6',
-            'class' => 'bi-dice-6',
-            'keywords' => ["dice","6"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dice-6'],
-                'solid' => ['class' => 'bi-dice-6-fill'],
-            ]
-        ],
-        [
-            'name' => 'door-closed-fill',
-            'displayName' => 'Door Closed Fill',
-            'class' => 'bi-door-closed-fill',
-            'keywords' => ["door","closed","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-door-closed-fill'],
-                'outline' => ['class' => 'bi-door-closed'],
-            ]
-        ],
-        [
-            'name' => 'door-closed',
-            'displayName' => 'Door Closed',
-            'class' => 'bi-door-closed',
-            'keywords' => ["door","closed"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-door-closed'],
-                'solid' => ['class' => 'bi-door-closed-fill'],
-            ]
-        ],
-        [
-            'name' => 'door-open-fill',
-            'displayName' => 'Door Open Fill',
-            'class' => 'bi-door-open-fill',
-            'keywords' => ["door","open","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-door-open-fill'],
-                'outline' => ['class' => 'bi-door-open'],
-            ]
-        ],
-        [
-            'name' => 'door-open',
-            'displayName' => 'Door Open',
-            'class' => 'bi-door-open',
-            'keywords' => ["door","open"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-door-open'],
-                'solid' => ['class' => 'bi-door-open-fill'],
-            ]
-        ],
-        [
-            'name' => 'droplet-fill',
-            'displayName' => 'Droplet Fill',
-            'class' => 'bi-droplet-fill',
-            'keywords' => ["droplet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-droplet-fill'],
-                'outline' => ['class' => 'bi-droplet'],
-            ]
-        ],
-        [
-            'name' => 'droplet-half',
-            'displayName' => 'Droplet Half',
-            'class' => 'bi-droplet-half',
-            'keywords' => ["droplet","half"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-droplet-half'],
-            ]
-        ],
-        [
-            'name' => 'droplet',
-            'displayName' => 'Droplet',
-            'class' => 'bi-droplet',
-            'keywords' => ["droplet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-droplet'],
-                'solid' => ['class' => 'bi-droplet-fill'],
-            ]
-        ],
-        [
-            'name' => 'easel-fill',
-            'displayName' => 'Easel Fill',
-            'class' => 'bi-easel-fill',
-            'keywords' => ["easel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-easel-fill'],
-                'outline' => ['class' => 'bi-easel'],
-            ]
-        ],
-        [
-            'name' => 'easel',
-            'displayName' => 'Easel',
-            'class' => 'bi-easel',
-            'keywords' => ["easel"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-easel'],
-                'solid' => ['class' => 'bi-easel-fill'],
-            ]
-        ],
-        [
-            'name' => 'egg-fill',
-            'displayName' => 'Egg Fill',
-            'class' => 'bi-egg-fill',
-            'keywords' => ["egg","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-egg-fill'],
-                'outline' => ['class' => 'bi-egg'],
-            ]
-        ],
-        [
-            'name' => 'egg-fried',
-            'displayName' => 'Egg Fried',
-            'class' => 'bi-egg-fried',
-            'keywords' => ["egg","fried"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-egg-fried'],
-            ]
-        ],
-        [
-            'name' => 'egg',
-            'displayName' => 'Egg',
-            'class' => 'bi-egg',
-            'keywords' => ["egg"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-egg'],
-                'solid' => ['class' => 'bi-egg-fill'],
-            ]
-        ],
-        [
-            'name' => 'eraser-fill',
-            'displayName' => 'Eraser Fill',
-            'class' => 'bi-eraser-fill',
-            'keywords' => ["eraser","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-eraser-fill'],
-                'outline' => ['class' => 'bi-eraser'],
-            ]
-        ],
-        [
-            'name' => 'eraser',
-            'displayName' => 'Eraser',
-            'class' => 'bi-eraser',
-            'keywords' => ["eraser"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-eraser'],
-                'solid' => ['class' => 'bi-eraser-fill'],
-            ]
-        ],
-        [
-            'name' => 'eyedropper',
-            'displayName' => 'Eyedropper',
-            'class' => 'bi-eyedropper',
-            'keywords' => ["eyedropper"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-eyedropper'],
-            ]
-        ],
-        [
-            'name' => 'flag-fill',
-            'displayName' => 'Flag Fill',
-            'class' => 'bi-flag-fill',
-            'keywords' => ["flag","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-flag-fill'],
-                'outline' => ['class' => 'bi-flag'],
-            ]
-        ],
-        [
-            'name' => 'flag',
-            'displayName' => 'Flag',
-            'class' => 'bi-flag',
-            'keywords' => ["flag"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flag'],
-                'solid' => ['class' => 'bi-flag-fill'],
-            ]
-        ],
-        [
-            'name' => 'flower1',
-            'displayName' => 'Flower1',
-            'class' => 'bi-flower1',
-            'keywords' => ["flower1"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flower1'],
-            ]
-        ],
-        [
-            'name' => 'flower2',
-            'displayName' => 'Flower2',
-            'class' => 'bi-flower2',
-            'keywords' => ["flower2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flower2'],
-            ]
-        ],
-        [
-            'name' => 'flower3',
-            'displayName' => 'Flower3',
-            'class' => 'bi-flower3',
-            'keywords' => ["flower3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flower3'],
-            ]
-        ],
-        [
-            'name' => 'front',
-            'displayName' => 'Front',
-            'class' => 'bi-front',
-            'keywords' => ["front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-front'],
-            ]
-        ],
-        [
-            'name' => 'gem',
-            'displayName' => 'Gem',
-            'class' => 'bi-gem',
-            'keywords' => ["gem"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-gem'],
-            ]
-        ],
-        [
-            'name' => 'gift-fill',
-            'displayName' => 'Gift Fill',
-            'class' => 'bi-gift-fill',
-            'keywords' => ["gift","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-gift-fill'],
-                'outline' => ['class' => 'bi-gift'],
-            ]
-        ],
-        [
-            'name' => 'gift',
-            'displayName' => 'Gift',
-            'class' => 'bi-gift',
-            'keywords' => ["gift"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-gift'],
-                'solid' => ['class' => 'bi-gift-fill'],
-            ]
-        ],
-        [
-            'name' => 'hammer',
-            'displayName' => 'Hammer',
-            'class' => 'bi-hammer',
-            'keywords' => ["hammer"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hammer'],
-            ]
-        ],
-        [
-            'name' => 'handbag-fill',
-            'displayName' => 'Handbag Fill',
-            'class' => 'bi-handbag-fill',
-            'keywords' => ["handbag","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-handbag-fill'],
-                'outline' => ['class' => 'bi-handbag'],
-            ]
-        ],
-        [
-            'name' => 'handbag',
-            'displayName' => 'Handbag',
-            'class' => 'bi-handbag',
-            'keywords' => ["handbag"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-handbag'],
-                'solid' => ['class' => 'bi-handbag-fill'],
-            ]
-        ],
-        [
-            'name' => 'hdd-fill',
-            'displayName' => 'Hdd Fill',
-            'class' => 'bi-hdd-fill',
-            'keywords' => ["hdd","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hdd-fill'],
-                'outline' => ['class' => 'bi-hdd'],
-            ]
-        ],
-        [
-            'name' => 'hdd-network-fill',
-            'displayName' => 'Hdd Network Fill',
-            'class' => 'bi-hdd-network-fill',
-            'keywords' => ["hdd","network","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hdd-network-fill'],
-                'outline' => ['class' => 'bi-hdd-network'],
-            ]
-        ],
-        [
-            'name' => 'hdd-network',
-            'displayName' => 'Hdd Network',
-            'class' => 'bi-hdd-network',
-            'keywords' => ["hdd","network"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hdd-network'],
-                'solid' => ['class' => 'bi-hdd-network-fill'],
-            ]
-        ],
-        [
-            'name' => 'hdd-rack-fill',
-            'displayName' => 'Hdd Rack Fill',
-            'class' => 'bi-hdd-rack-fill',
-            'keywords' => ["hdd","rack","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hdd-rack-fill'],
-                'outline' => ['class' => 'bi-hdd-rack'],
-            ]
-        ],
-        [
-            'name' => 'hdd-rack',
-            'displayName' => 'Hdd Rack',
-            'class' => 'bi-hdd-rack',
-            'keywords' => ["hdd","rack"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hdd-rack'],
-                'solid' => ['class' => 'bi-hdd-rack-fill'],
-            ]
-        ],
-        [
-            'name' => 'hdd-stack-fill',
-            'displayName' => 'Hdd Stack Fill',
-            'class' => 'bi-hdd-stack-fill',
-            'keywords' => ["hdd","stack","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hdd-stack-fill'],
-                'outline' => ['class' => 'bi-hdd-stack'],
-            ]
-        ],
-        [
-            'name' => 'hdd-stack',
-            'displayName' => 'Hdd Stack',
-            'class' => 'bi-hdd-stack',
-            'keywords' => ["hdd","stack"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hdd-stack'],
-                'solid' => ['class' => 'bi-hdd-stack-fill'],
-            ]
-        ],
-        [
-            'name' => 'hdd',
-            'displayName' => 'Hdd',
-            'class' => 'bi-hdd',
-            'keywords' => ["hdd"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hdd'],
-                'solid' => ['class' => 'bi-hdd-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-door-fill',
-            'displayName' => 'House Door Fill',
-            'class' => 'bi-house-door-fill',
-            'keywords' => ["house","door","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-door-fill'],
-                'outline' => ['class' => 'bi-house-door'],
-            ]
-        ],
-        [
-            'name' => 'house-door',
-            'displayName' => 'House Door',
-            'class' => 'bi-house-door',
-            'keywords' => ["house","door"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-door'],
-                'solid' => ['class' => 'bi-house-door-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-fill',
-            'displayName' => 'House Fill',
-            'class' => 'bi-house-fill',
-            'keywords' => ["house","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-fill'],
-                'outline' => ['class' => 'bi-house'],
-            ]
-        ],
-        [
-            'name' => 'house',
-            'displayName' => 'House',
-            'class' => 'bi-house',
-            'keywords' => ["house"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house'],
-                'solid' => ['class' => 'bi-house-fill'],
-            ]
-        ],
-        [
-            'name' => 'hurricane',
-            'displayName' => 'Hurricane',
-            'class' => 'bi-hurricane',
-            'keywords' => ["hurricane"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hurricane'],
-            ]
-        ],
-        [
-            'name' => 'joystick',
-            'displayName' => 'Joystick',
-            'class' => 'bi-joystick',
-            'keywords' => ["joystick"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-joystick'],
-            ]
-        ],
-        [
-            'name' => 'keyboard-fill',
-            'displayName' => 'Keyboard Fill',
-            'class' => 'bi-keyboard-fill',
-            'keywords' => ["keyboard","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-keyboard-fill'],
-                'outline' => ['class' => 'bi-keyboard'],
-            ]
-        ],
-        [
-            'name' => 'keyboard',
-            'displayName' => 'Keyboard',
-            'class' => 'bi-keyboard',
-            'keywords' => ["keyboard"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-keyboard'],
-                'solid' => ['class' => 'bi-keyboard-fill'],
-            ]
-        ],
-        [
-            'name' => 'ladder',
-            'displayName' => 'Ladder',
-            'class' => 'bi-ladder',
-            'keywords' => ["ladder"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ladder'],
-            ]
-        ],
-        [
-            'name' => 'lamp-fill',
-            'displayName' => 'Lamp Fill',
-            'class' => 'bi-lamp-fill',
-            'keywords' => ["lamp","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lamp-fill'],
-                'outline' => ['class' => 'bi-lamp'],
-            ]
-        ],
-        [
-            'name' => 'lamp',
-            'displayName' => 'Lamp',
-            'class' => 'bi-lamp',
-            'keywords' => ["lamp"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lamp'],
-                'solid' => ['class' => 'bi-lamp-fill'],
-            ]
-        ],
-        [
-            'name' => 'laptop-fill',
-            'displayName' => 'Laptop Fill',
-            'class' => 'bi-laptop-fill',
-            'keywords' => ["laptop","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-laptop-fill'],
-                'outline' => ['class' => 'bi-laptop'],
-            ]
-        ],
-        [
-            'name' => 'laptop',
-            'displayName' => 'Laptop',
-            'class' => 'bi-laptop',
-            'keywords' => ["laptop"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-laptop'],
-                'solid' => ['class' => 'bi-laptop-fill'],
-            ]
-        ],
-        [
-            'name' => 'life-preserver',
-            'displayName' => 'Life Preserver',
-            'class' => 'bi-life-preserver',
-            'keywords' => ["life","preserver"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-life-preserver'],
-            ]
-        ],
-        [
-            'name' => 'lightbulb-fill',
-            'displayName' => 'Lightbulb Fill',
-            'class' => 'bi-lightbulb-fill',
-            'keywords' => ["lightbulb","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lightbulb-fill'],
-                'outline' => ['class' => 'bi-lightbulb'],
-            ]
-        ],
-        [
-            'name' => 'lightbulb-off-fill',
-            'displayName' => 'Lightbulb Off Fill',
-            'class' => 'bi-lightbulb-off-fill',
-            'keywords' => ["lightbulb","off","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lightbulb-off-fill'],
-                'outline' => ['class' => 'bi-lightbulb-off'],
-            ]
-        ],
-        [
-            'name' => 'lightbulb-off',
-            'displayName' => 'Lightbulb Off',
-            'class' => 'bi-lightbulb-off',
-            'keywords' => ["lightbulb","off"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightbulb-off'],
-                'solid' => ['class' => 'bi-lightbulb-off-fill'],
-            ]
-        ],
-        [
-            'name' => 'lightbulb',
-            'displayName' => 'Lightbulb',
-            'class' => 'bi-lightbulb',
-            'keywords' => ["lightbulb"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightbulb'],
-                'solid' => ['class' => 'bi-lightbulb-fill'],
-            ]
-        ],
-        [
-            'name' => 'lightning-charge-fill',
-            'displayName' => 'Lightning Charge Fill',
-            'class' => 'bi-lightning-charge-fill',
-            'keywords' => ["lightning","charge","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lightning-charge-fill'],
-                'outline' => ['class' => 'bi-lightning-charge'],
-            ]
-        ],
-        [
-            'name' => 'lightning-charge',
-            'displayName' => 'Lightning Charge',
-            'class' => 'bi-lightning-charge',
-            'keywords' => ["lightning","charge"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightning-charge'],
-                'solid' => ['class' => 'bi-lightning-charge-fill'],
-            ]
-        ],
-        [
-            'name' => 'lightning-fill',
-            'displayName' => 'Lightning Fill',
-            'class' => 'bi-lightning-fill',
-            'keywords' => ["lightning","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lightning-fill'],
-                'outline' => ['class' => 'bi-lightning'],
-            ]
-        ],
-        [
-            'name' => 'lightning',
-            'displayName' => 'Lightning',
-            'class' => 'bi-lightning',
-            'keywords' => ["lightning"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lightning'],
-                'solid' => ['class' => 'bi-lightning-fill'],
-            ]
-        ],
-        [
-            'name' => 'mask',
-            'displayName' => 'Mask',
-            'class' => 'bi-mask',
-            'keywords' => ["mask"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-mask'],
-            ]
-        ],
-        [
-            'name' => 'minecart-loaded',
-            'displayName' => 'Minecart Loaded',
-            'class' => 'bi-minecart-loaded',
-            'keywords' => ["minecart","loaded"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-minecart-loaded'],
-            ]
-        ],
-        [
-            'name' => 'minecart',
-            'displayName' => 'Minecart',
-            'class' => 'bi-minecart',
-            'keywords' => ["minecart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-minecart'],
-            ]
-        ],
-        [
-            'name' => 'moisture',
-            'displayName' => 'Moisture',
-            'class' => 'bi-moisture',
-            'keywords' => ["moisture"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-moisture'],
-            ]
-        ],
-        [
-            'name' => 'moon-fill',
-            'displayName' => 'Moon Fill',
-            'class' => 'bi-moon-fill',
-            'keywords' => ["moon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-moon-fill'],
-                'outline' => ['class' => 'bi-moon'],
-            ]
-        ],
-        [
-            'name' => 'moon-stars-fill',
-            'displayName' => 'Moon Stars Fill',
-            'class' => 'bi-moon-stars-fill',
-            'keywords' => ["moon","stars","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-moon-stars-fill'],
-                'outline' => ['class' => 'bi-moon-stars'],
-            ]
-        ],
-        [
-            'name' => 'moon-stars',
-            'displayName' => 'Moon Stars',
-            'class' => 'bi-moon-stars',
-            'keywords' => ["moon","stars"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-moon-stars'],
-                'solid' => ['class' => 'bi-moon-stars-fill'],
-            ]
-        ],
-        [
-            'name' => 'moon',
-            'displayName' => 'Moon',
-            'class' => 'bi-moon',
-            'keywords' => ["moon"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-moon'],
-                'solid' => ['class' => 'bi-moon-fill'],
-            ]
-        ],
-        [
-            'name' => 'mouse-fill',
-            'displayName' => 'Mouse Fill',
-            'class' => 'bi-mouse-fill',
-            'keywords' => ["mouse","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-mouse-fill'],
-                'outline' => ['class' => 'bi-mouse'],
-            ]
-        ],
-        [
-            'name' => 'mouse',
-            'displayName' => 'Mouse',
-            'class' => 'bi-mouse',
-            'keywords' => ["mouse"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-mouse'],
-                'solid' => ['class' => 'bi-mouse-fill'],
-            ]
-        ],
-        [
-            'name' => 'mouse2-fill',
-            'displayName' => 'Mouse2 Fill',
-            'class' => 'bi-mouse2-fill',
-            'keywords' => ["mouse2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-mouse2-fill'],
-                'outline' => ['class' => 'bi-mouse2'],
-            ]
-        ],
-        [
-            'name' => 'mouse2',
-            'displayName' => 'Mouse2',
-            'class' => 'bi-mouse2',
-            'keywords' => ["mouse2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-mouse2'],
-                'solid' => ['class' => 'bi-mouse2-fill'],
-            ]
-        ],
-        [
-            'name' => 'mouse3-fill',
-            'displayName' => 'Mouse3 Fill',
-            'class' => 'bi-mouse3-fill',
-            'keywords' => ["mouse3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-mouse3-fill'],
-                'outline' => ['class' => 'bi-mouse3'],
-            ]
-        ],
-        [
-            'name' => 'mouse3',
-            'displayName' => 'Mouse3',
-            'class' => 'bi-mouse3',
-            'keywords' => ["mouse3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-mouse3'],
-                'solid' => ['class' => 'bi-mouse3-fill'],
-            ]
-        ],
-        [
-            'name' => 'nut-fill',
-            'displayName' => 'Nut Fill',
-            'class' => 'bi-nut-fill',
-            'keywords' => ["nut","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-nut-fill'],
-                'outline' => ['class' => 'bi-nut'],
-            ]
-        ],
-        [
-            'name' => 'nut',
-            'displayName' => 'Nut',
-            'class' => 'bi-nut',
-            'keywords' => ["nut"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-nut'],
-                'solid' => ['class' => 'bi-nut-fill'],
-            ]
-        ],
-        [
-            'name' => 'outlet',
-            'displayName' => 'Outlet',
-            'class' => 'bi-outlet',
-            'keywords' => ["outlet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-outlet'],
-            ]
-        ],
-        [
-            'name' => 'paint-bucket',
-            'displayName' => 'Paint Bucket',
-            'class' => 'bi-paint-bucket',
-            'keywords' => ["paint","bucket"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-paint-bucket'],
-            ]
-        ],
-        [
-            'name' => 'palette-fill',
-            'displayName' => 'Palette Fill',
-            'class' => 'bi-palette-fill',
-            'keywords' => ["palette","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-palette-fill'],
-                'outline' => ['class' => 'bi-palette'],
-            ]
-        ],
-        [
-            'name' => 'palette',
-            'displayName' => 'Palette',
-            'class' => 'bi-palette',
-            'keywords' => ["palette"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-palette'],
-                'solid' => ['class' => 'bi-palette-fill'],
-            ]
-        ],
-        [
-            'name' => 'palette2',
-            'displayName' => 'Palette2',
-            'class' => 'bi-palette2',
-            'keywords' => ["palette2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-palette2'],
-            ]
-        ],
-        [
-            'name' => 'paperclip',
-            'displayName' => 'Paperclip',
-            'class' => 'bi-paperclip',
-            'keywords' => ["paperclip"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-paperclip'],
-            ]
-        ],
-        [
-            'name' => 'peace-fill',
-            'displayName' => 'Peace Fill',
-            'class' => 'bi-peace-fill',
-            'keywords' => ["peace","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-peace-fill'],
-                'outline' => ['class' => 'bi-peace'],
-            ]
-        ],
-        [
-            'name' => 'peace',
-            'displayName' => 'Peace',
-            'class' => 'bi-peace',
-            'keywords' => ["peace"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-peace'],
-                'solid' => ['class' => 'bi-peace-fill'],
-            ]
-        ],
-        [
-            'name' => 'pen-fill',
-            'displayName' => 'Pen Fill',
-            'class' => 'bi-pen-fill',
-            'keywords' => ["pen","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-pen-fill'],
-                'outline' => ['class' => 'bi-pen'],
-            ]
-        ],
-        [
-            'name' => 'pen',
-            'displayName' => 'Pen',
-            'class' => 'bi-pen',
-            'keywords' => ["pen"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pen'],
-                'solid' => ['class' => 'bi-pen-fill'],
-            ]
-        ],
-        [
-            'name' => 'pencil-fill',
-            'displayName' => 'Pencil Fill',
-            'class' => 'bi-pencil-fill',
-            'keywords' => ["pencil","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-pencil-fill'],
-                'outline' => ['class' => 'bi-pencil'],
-            ]
-        ],
-        [
-            'name' => 'pencil-square',
-            'displayName' => 'Pencil Square',
-            'class' => 'bi-pencil-square',
-            'keywords' => ["pencil","square"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pencil-square'],
-            ]
-        ],
-        [
-            'name' => 'pencil',
-            'displayName' => 'Pencil',
-            'class' => 'bi-pencil',
-            'keywords' => ["pencil"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pencil'],
-                'solid' => ['class' => 'bi-pencil-fill'],
-            ]
-        ],
-        [
-            'name' => 'plug-fill',
-            'displayName' => 'Plug Fill',
-            'class' => 'bi-plug-fill',
-            'keywords' => ["plug","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-plug-fill'],
-                'outline' => ['class' => 'bi-plug'],
-            ]
-        ],
-        [
-            'name' => 'plug',
-            'displayName' => 'Plug',
-            'class' => 'bi-plug',
-            'keywords' => ["plug"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-plug'],
-                'solid' => ['class' => 'bi-plug-fill'],
-            ]
-        ],
-        [
-            'name' => 'power',
-            'displayName' => 'Power',
-            'class' => 'bi-power',
-            'keywords' => ["power"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-power'],
-            ]
-        ],
-        [
-            'name' => 'printer-fill',
-            'displayName' => 'Printer Fill',
-            'class' => 'bi-printer-fill',
-            'keywords' => ["printer","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-printer-fill'],
-                'outline' => ['class' => 'bi-printer'],
-            ]
-        ],
-        [
-            'name' => 'printer',
-            'displayName' => 'Printer',
-            'class' => 'bi-printer',
-            'keywords' => ["printer"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-printer'],
-                'solid' => ['class' => 'bi-printer-fill'],
-            ]
-        ],
-        [
-            'name' => 'puzzle-fill',
-            'displayName' => 'Puzzle Fill',
-            'class' => 'bi-puzzle-fill',
-            'keywords' => ["puzzle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-puzzle-fill'],
-                'outline' => ['class' => 'bi-puzzle'],
-            ]
-        ],
-        [
-            'name' => 'puzzle',
-            'displayName' => 'Puzzle',
-            'class' => 'bi-puzzle',
-            'keywords' => ["puzzle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-puzzle'],
-                'solid' => ['class' => 'bi-puzzle-fill'],
-            ]
-        ],
-        [
-            'name' => 'rainbow',
-            'displayName' => 'Rainbow',
-            'class' => 'bi-rainbow',
-            'keywords' => ["rainbow"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-rainbow'],
-            ]
-        ],
-        [
-            'name' => 'rulers',
-            'displayName' => 'Rulers',
-            'class' => 'bi-rulers',
-            'keywords' => ["rulers"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-rulers'],
-            ]
-        ],
-        [
-            'name' => 'scissors',
-            'displayName' => 'Scissors',
-            'class' => 'bi-scissors',
-            'keywords' => ["scissors"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-scissors'],
-            ]
-        ],
-        [
-            'name' => 'screwdriver',
-            'displayName' => 'Screwdriver',
-            'class' => 'bi-screwdriver',
-            'keywords' => ["screwdriver"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-screwdriver'],
-            ]
-        ],
-        [
-            'name' => 'server',
-            'displayName' => 'Server',
-            'class' => 'bi-server',
-            'keywords' => ["server"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-server'],
-            ]
-        ],
-        [
-            'name' => 'shop-window',
-            'displayName' => 'Shop Window',
-            'class' => 'bi-shop-window',
-            'keywords' => ["shop","window"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-shop-window'],
-            ]
-        ],
-        [
-            'name' => 'shop',
-            'displayName' => 'Shop',
-            'class' => 'bi-shop',
-            'keywords' => ["shop"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-shop'],
-            ]
-        ],
-        [
-            'name' => 'sim-fill',
-            'displayName' => 'Sim Fill',
-            'class' => 'bi-sim-fill',
-            'keywords' => ["sim","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sim-fill'],
-                'outline' => ['class' => 'bi-sim'],
-            ]
-        ],
-        [
-            'name' => 'sim',
-            'displayName' => 'Sim',
-            'class' => 'bi-sim',
-            'keywords' => ["sim"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sim'],
-                'solid' => ['class' => 'bi-sim-fill'],
-            ]
-        ],
-        [
-            'name' => 'smartwatch',
-            'displayName' => 'Smartwatch',
-            'class' => 'bi-smartwatch',
-            'keywords' => ["smartwatch"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-smartwatch'],
-            ]
-        ],
-        [
-            'name' => 'snow',
-            'displayName' => 'Snow',
-            'class' => 'bi-snow',
-            'keywords' => ["snow"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-snow'],
-            ]
-        ],
-        [
-            'name' => 'snow2',
-            'displayName' => 'Snow2',
-            'class' => 'bi-snow2',
-            'keywords' => ["snow2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-snow2'],
-            ]
-        ],
-        [
-            'name' => 'snow3',
-            'displayName' => 'Snow3',
-            'class' => 'bi-snow3',
-            'keywords' => ["snow3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-snow3'],
-            ]
-        ],
-        [
-            'name' => 'speedometer',
-            'displayName' => 'Speedometer',
-            'class' => 'bi-speedometer',
-            'keywords' => ["speedometer"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-speedometer'],
-            ]
-        ],
-        [
-            'name' => 'speedometer2',
-            'displayName' => 'Speedometer2',
-            'class' => 'bi-speedometer2',
-            'keywords' => ["speedometer2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-speedometer2'],
-            ]
-        ],
-        [
-            'name' => 'stickies-fill',
-            'displayName' => 'Stickies Fill',
-            'class' => 'bi-stickies-fill',
-            'keywords' => ["stickies","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-stickies-fill'],
-                'outline' => ['class' => 'bi-stickies'],
-            ]
-        ],
-        [
-            'name' => 'stickies',
-            'displayName' => 'Stickies',
-            'class' => 'bi-stickies',
-            'keywords' => ["stickies"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-stickies'],
-                'solid' => ['class' => 'bi-stickies-fill'],
-            ]
-        ],
-        [
-            'name' => 'sticky-fill',
-            'displayName' => 'Sticky Fill',
-            'class' => 'bi-sticky-fill',
-            'keywords' => ["sticky","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sticky-fill'],
-                'outline' => ['class' => 'bi-sticky'],
-            ]
-        ],
-        [
-            'name' => 'sticky',
-            'displayName' => 'Sticky',
-            'class' => 'bi-sticky',
-            'keywords' => ["sticky"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sticky'],
-                'solid' => ['class' => 'bi-sticky-fill'],
-            ]
-        ],
-        [
-            'name' => 'stoplights-fill',
-            'displayName' => 'Stoplights Fill',
-            'class' => 'bi-stoplights-fill',
-            'keywords' => ["stoplights","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-stoplights-fill'],
-                'outline' => ['class' => 'bi-stoplights'],
-            ]
-        ],
-        [
-            'name' => 'stoplights',
-            'displayName' => 'Stoplights',
-            'class' => 'bi-stoplights',
-            'keywords' => ["stoplights"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-stoplights'],
-                'solid' => ['class' => 'bi-stoplights-fill'],
-            ]
-        ],
-        [
-            'name' => 'suit-club-fill',
-            'displayName' => 'Suit Club Fill',
-            'class' => 'bi-suit-club-fill',
-            'keywords' => ["suit","club","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suit-club-fill'],
-                'outline' => ['class' => 'bi-suit-club'],
-            ]
-        ],
-        [
-            'name' => 'suit-club',
-            'displayName' => 'Suit Club',
-            'class' => 'bi-suit-club',
-            'keywords' => ["suit","club"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suit-club'],
-                'solid' => ['class' => 'bi-suit-club-fill'],
-            ]
-        ],
-        [
-            'name' => 'suit-diamond-fill',
-            'displayName' => 'Suit Diamond Fill',
-            'class' => 'bi-suit-diamond-fill',
-            'keywords' => ["suit","diamond","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suit-diamond-fill'],
-                'outline' => ['class' => 'bi-suit-diamond'],
-            ]
-        ],
-        [
-            'name' => 'suit-diamond',
-            'displayName' => 'Suit Diamond',
-            'class' => 'bi-suit-diamond',
-            'keywords' => ["suit","diamond"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suit-diamond'],
-                'solid' => ['class' => 'bi-suit-diamond-fill'],
-            ]
-        ],
-        [
-            'name' => 'suit-heart-fill',
-            'displayName' => 'Suit Heart Fill',
-            'class' => 'bi-suit-heart-fill',
-            'keywords' => ["suit","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suit-heart-fill'],
-                'outline' => ['class' => 'bi-suit-heart'],
-            ]
-        ],
-        [
-            'name' => 'suit-heart',
-            'displayName' => 'Suit Heart',
-            'class' => 'bi-suit-heart',
-            'keywords' => ["suit","heart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suit-heart'],
-                'solid' => ['class' => 'bi-suit-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'suit-spade-fill',
-            'displayName' => 'Suit Spade Fill',
-            'class' => 'bi-suit-spade-fill',
-            'keywords' => ["suit","spade","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suit-spade-fill'],
-                'outline' => ['class' => 'bi-suit-spade'],
-            ]
-        ],
-        [
-            'name' => 'suit-spade',
-            'displayName' => 'Suit Spade',
-            'class' => 'bi-suit-spade',
-            'keywords' => ["suit","spade"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suit-spade'],
-                'solid' => ['class' => 'bi-suit-spade-fill'],
-            ]
-        ],
-        [
-            'name' => 'sun-fill',
-            'displayName' => 'Sun Fill',
-            'class' => 'bi-sun-fill',
-            'keywords' => ["sun","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sun-fill'],
-                'outline' => ['class' => 'bi-sun'],
-            ]
-        ],
-        [
-            'name' => 'sun',
-            'displayName' => 'Sun',
-            'class' => 'bi-sun',
-            'keywords' => ["sun"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sun'],
-                'solid' => ['class' => 'bi-sun-fill'],
-            ]
-        ],
-        [
-            'name' => 'sunrise-fill',
-            'displayName' => 'Sunrise Fill',
-            'class' => 'bi-sunrise-fill',
-            'keywords' => ["sunrise","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sunrise-fill'],
-                'outline' => ['class' => 'bi-sunrise'],
-            ]
-        ],
-        [
-            'name' => 'sunrise',
-            'displayName' => 'Sunrise',
-            'class' => 'bi-sunrise',
-            'keywords' => ["sunrise"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sunrise'],
-                'solid' => ['class' => 'bi-sunrise-fill'],
-            ]
-        ],
-        [
-            'name' => 'sunset-fill',
-            'displayName' => 'Sunset Fill',
-            'class' => 'bi-sunset-fill',
-            'keywords' => ["sunset","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sunset-fill'],
-                'outline' => ['class' => 'bi-sunset'],
-            ]
-        ],
-        [
-            'name' => 'sunset',
-            'displayName' => 'Sunset',
-            'class' => 'bi-sunset',
-            'keywords' => ["sunset"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sunset'],
-                'solid' => ['class' => 'bi-sunset-fill'],
-            ]
-        ],
-        [
-            'name' => 'tablet-fill',
-            'displayName' => 'Tablet Fill',
-            'class' => 'bi-tablet-fill',
-            'keywords' => ["tablet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-tablet-fill'],
-                'outline' => ['class' => 'bi-tablet'],
-            ]
-        ],
-        [
-            'name' => 'tablet-landscape-fill',
-            'displayName' => 'Tablet Landscape Fill',
-            'class' => 'bi-tablet-landscape-fill',
-            'keywords' => ["tablet","landscape","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-tablet-landscape-fill'],
-                'outline' => ['class' => 'bi-tablet-landscape'],
-            ]
-        ],
-        [
-            'name' => 'tablet-landscape',
-            'displayName' => 'Tablet Landscape',
-            'class' => 'bi-tablet-landscape',
-            'keywords' => ["tablet","landscape"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tablet-landscape'],
-                'solid' => ['class' => 'bi-tablet-landscape-fill'],
-            ]
-        ],
-        [
-            'name' => 'tablet',
-            'displayName' => 'Tablet',
-            'class' => 'bi-tablet',
-            'keywords' => ["tablet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tablet'],
-                'solid' => ['class' => 'bi-tablet-fill'],
-            ]
-        ],
-        [
-            'name' => 'terminal-fill',
-            'displayName' => 'Terminal Fill',
-            'class' => 'bi-terminal-fill',
-            'keywords' => ["terminal","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-terminal-fill'],
-                'outline' => ['class' => 'bi-terminal'],
-            ]
-        ],
-        [
-            'name' => 'terminal',
-            'displayName' => 'Terminal',
-            'class' => 'bi-terminal',
-            'keywords' => ["terminal"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-terminal'],
-                'solid' => ['class' => 'bi-terminal-fill'],
-            ]
-        ],
-        [
-            'name' => 'thermometer-half',
-            'displayName' => 'Thermometer Half',
-            'class' => 'bi-thermometer-half',
-            'keywords' => ["thermometer","half"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer-half'],
-            ]
-        ],
-        [
-            'name' => 'thermometer-high',
-            'displayName' => 'Thermometer High',
-            'class' => 'bi-thermometer-high',
-            'keywords' => ["thermometer","high"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer-high'],
-            ]
-        ],
-        [
-            'name' => 'thermometer-low',
-            'displayName' => 'Thermometer Low',
-            'class' => 'bi-thermometer-low',
-            'keywords' => ["thermometer","low"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer-low'],
-            ]
-        ],
-        [
-            'name' => 'thermometer-snow',
-            'displayName' => 'Thermometer Snow',
-            'class' => 'bi-thermometer-snow',
-            'keywords' => ["thermometer","snow"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer-snow'],
-            ]
-        ],
-        [
-            'name' => 'thermometer-sun',
-            'displayName' => 'Thermometer Sun',
-            'class' => 'bi-thermometer-sun',
-            'keywords' => ["thermometer","sun"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer-sun'],
-            ]
-        ],
-        [
-            'name' => 'thermometer',
-            'displayName' => 'Thermometer',
-            'class' => 'bi-thermometer',
-            'keywords' => ["thermometer"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thermometer'],
-            ]
-        ],
-        [
-            'name' => 'tools',
-            'displayName' => 'Tools',
-            'class' => 'bi-tools',
-            'keywords' => ["tools"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tools'],
-            ]
-        ],
-        [
-            'name' => 'tornado',
-            'displayName' => 'Tornado',
-            'class' => 'bi-tornado',
-            'keywords' => ["tornado"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tornado'],
-            ]
-        ],
-        [
-            'name' => 'tree-fill',
-            'displayName' => 'Tree Fill',
-            'class' => 'bi-tree-fill',
-            'keywords' => ["tree","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-tree-fill'],
-                'outline' => ['class' => 'bi-tree'],
-            ]
-        ],
-        [
-            'name' => 'tree',
-            'displayName' => 'Tree',
-            'class' => 'bi-tree',
-            'keywords' => ["tree"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tree'],
-                'solid' => ['class' => 'bi-tree-fill'],
-            ]
-        ],
-        [
-            'name' => 'trophy-fill',
-            'displayName' => 'Trophy Fill',
-            'class' => 'bi-trophy-fill',
-            'keywords' => ["trophy","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-trophy-fill'],
-                'outline' => ['class' => 'bi-trophy'],
-            ]
-        ],
-        [
-            'name' => 'trophy',
-            'displayName' => 'Trophy',
-            'class' => 'bi-trophy',
-            'keywords' => ["trophy"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-trophy'],
-                'solid' => ['class' => 'bi-trophy-fill'],
-            ]
-        ],
-        [
-            'name' => 'tropical-storm',
-            'displayName' => 'Tropical Storm',
-            'class' => 'bi-tropical-storm',
-            'keywords' => ["tropical","storm"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tropical-storm'],
-            ]
-        ],
-        [
-            'name' => 'truck-flatbed',
-            'displayName' => 'Truck Flatbed',
-            'class' => 'bi-truck-flatbed',
-            'keywords' => ["truck","flatbed"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-truck-flatbed'],
-            ]
-        ],
-        [
-            'name' => 'truck',
-            'displayName' => 'Truck',
-            'class' => 'bi-truck',
-            'keywords' => ["truck"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-truck'],
-            ]
-        ],
-        [
-            'name' => 'tsunami',
-            'displayName' => 'Tsunami',
-            'class' => 'bi-tsunami',
-            'keywords' => ["tsunami"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-tsunami'],
-            ]
-        ],
-        [
-            'name' => 'umbrella-fill',
-            'displayName' => 'Umbrella Fill',
-            'class' => 'bi-umbrella-fill',
-            'keywords' => ["umbrella","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-umbrella-fill'],
-                'outline' => ['class' => 'bi-umbrella'],
-            ]
-        ],
-        [
-            'name' => 'umbrella',
-            'displayName' => 'Umbrella',
-            'class' => 'bi-umbrella',
-            'keywords' => ["umbrella"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-umbrella'],
-                'solid' => ['class' => 'bi-umbrella-fill'],
-            ]
-        ],
-        [
-            'name' => 'upc-scan',
-            'displayName' => 'Upc Scan',
-            'class' => 'bi-upc-scan',
-            'keywords' => ["upc","scan"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-upc-scan'],
-            ]
-        ],
-        [
-            'name' => 'upc',
-            'displayName' => 'Upc',
-            'class' => 'bi-upc',
-            'keywords' => ["upc"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-upc'],
-            ]
-        ],
-        [
-            'name' => 'vector-pen',
-            'displayName' => 'Vector Pen',
-            'class' => 'bi-vector-pen',
-            'keywords' => ["vector","pen"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-vector-pen'],
-            ]
-        ],
-        [
-            'name' => 'vr',
-            'displayName' => 'Vr',
-            'class' => 'bi-vr',
-            'keywords' => ["vr"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-vr'],
-            ]
-        ],
-        [
-            'name' => 'wallet-fill',
-            'displayName' => 'Wallet Fill',
-            'class' => 'bi-wallet-fill',
-            'keywords' => ["wallet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-wallet-fill'],
-                'outline' => ['class' => 'bi-wallet'],
-            ]
-        ],
-        [
-            'name' => 'wallet',
-            'displayName' => 'Wallet',
-            'class' => 'bi-wallet',
-            'keywords' => ["wallet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wallet'],
-                'solid' => ['class' => 'bi-wallet-fill'],
-            ]
-        ],
-        [
-            'name' => 'wallet2',
-            'displayName' => 'Wallet2',
-            'class' => 'bi-wallet2',
-            'keywords' => ["wallet2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wallet2'],
-            ]
-        ],
-        [
-            'name' => 'watch',
-            'displayName' => 'Watch',
-            'class' => 'bi-watch',
-            'keywords' => ["watch"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-watch'],
-            ]
-        ],
-        [
-            'name' => 'water',
-            'displayName' => 'Water',
-            'class' => 'bi-water',
-            'keywords' => ["water"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-water'],
-            ]
-        ],
-        [
-            'name' => 'wind',
-            'displayName' => 'Wind',
-            'class' => 'bi-wind',
-            'keywords' => ["wind"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wind'],
-            ]
-        ],
-        [
-            'name' => 'wrench',
-            'displayName' => 'Wrench',
-            'class' => 'bi-wrench',
-            'keywords' => ["wrench"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wrench'],
-            ]
-        ],
-        [
-            'name' => 'bank',
-            'displayName' => 'Bank',
-            'class' => 'bi-bank',
-            'keywords' => ["bank"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bank'],
-            ]
-        ],
-        [
-            'name' => 'bank2',
-            'displayName' => 'Bank2',
-            'class' => 'bi-bank2',
-            'keywords' => ["bank2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bank2'],
-            ]
-        ],
-        [
-            'name' => 'cash-coin',
-            'displayName' => 'Cash Coin',
-            'class' => 'bi-cash-coin',
-            'keywords' => ["cash","coin"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cash-coin'],
-            ]
-        ],
-        [
-            'name' => 'coin',
-            'displayName' => 'Coin',
-            'class' => 'bi-coin',
-            'keywords' => ["coin"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-coin'],
-            ]
-        ],
-        [
-            'name' => 'currency-bitcoin',
-            'displayName' => 'Currency Bitcoin',
-            'class' => 'bi-currency-bitcoin',
-            'keywords' => ["currency","bitcoin"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-bitcoin'],
-            ]
-        ],
-        [
-            'name' => 'currency-dollar',
-            'displayName' => 'Currency Dollar',
-            'class' => 'bi-currency-dollar',
-            'keywords' => ["currency","dollar"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-dollar'],
-            ]
-        ],
-        [
-            'name' => 'currency-euro',
-            'displayName' => 'Currency Euro',
-            'class' => 'bi-currency-euro',
-            'keywords' => ["currency","euro"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-euro'],
-            ]
-        ],
-        [
-            'name' => 'currency-exchange',
-            'displayName' => 'Currency Exchange',
-            'class' => 'bi-currency-exchange',
-            'keywords' => ["currency","exchange"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-exchange'],
-            ]
-        ],
-        [
-            'name' => 'currency-pound',
-            'displayName' => 'Currency Pound',
-            'class' => 'bi-currency-pound',
-            'keywords' => ["currency","pound"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-pound'],
-            ]
-        ],
-        [
-            'name' => 'currency-yen',
-            'displayName' => 'Currency Yen',
-            'class' => 'bi-currency-yen',
-            'keywords' => ["currency","yen"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-yen'],
-            ]
-        ],
-        [
-            'name' => 'headset-vr',
-            'displayName' => 'Headset Vr',
-            'class' => 'bi-headset-vr',
-            'keywords' => ["headset","vr"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-headset-vr'],
-            ]
-        ],
-        [
-            'name' => 'piggy-bank-fill',
-            'displayName' => 'Piggy Bank Fill',
-            'class' => 'bi-piggy-bank-fill',
-            'keywords' => ["piggy","bank","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-piggy-bank-fill'],
-                'outline' => ['class' => 'bi-piggy-bank'],
-            ]
-        ],
-        [
-            'name' => 'piggy-bank',
-            'displayName' => 'Piggy Bank',
-            'class' => 'bi-piggy-bank',
-            'keywords' => ["piggy","bank"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-piggy-bank'],
-                'solid' => ['class' => 'bi-piggy-bank-fill'],
-            ]
-        ],
-        [
-            'name' => 'recycle',
-            'displayName' => 'Recycle',
-            'class' => 'bi-recycle',
-            'keywords' => ["recycle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-recycle'],
-            ]
-        ],
-        [
-            'name' => 'safe-fill',
-            'displayName' => 'Safe Fill',
-            'class' => 'bi-safe-fill',
-            'keywords' => ["safe","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-safe-fill'],
-                'outline' => ['class' => 'bi-safe'],
-            ]
-        ],
-        [
-            'name' => 'safe2-fill',
-            'displayName' => 'Safe2 Fill',
-            'class' => 'bi-safe2-fill',
-            'keywords' => ["safe2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-safe2-fill'],
-                'outline' => ['class' => 'bi-safe2'],
-            ]
-        ],
-        [
-            'name' => 'safe2',
-            'displayName' => 'Safe2',
-            'class' => 'bi-safe2',
-            'keywords' => ["safe2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-safe2'],
-                'solid' => ['class' => 'bi-safe2-fill'],
-            ]
-        ],
-        [
-            'name' => 'sd-card-fill',
-            'displayName' => 'Sd Card Fill',
-            'class' => 'bi-sd-card-fill',
-            'keywords' => ["sd","card","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sd-card-fill'],
-                'outline' => ['class' => 'bi-sd-card'],
-            ]
-        ],
-        [
-            'name' => 'sd-card',
-            'displayName' => 'Sd Card',
-            'class' => 'bi-sd-card',
-            'keywords' => ["sd","card"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sd-card'],
-                'solid' => ['class' => 'bi-sd-card-fill'],
-            ]
-        ],
-        [
-            'name' => 'safe',
-            'displayName' => 'Safe',
-            'class' => 'bi-safe',
-            'keywords' => ["safe"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-safe'],
-                'solid' => ['class' => 'bi-safe-fill'],
-            ]
-        ],
-        [
-            'name' => 'easel2-fill',
-            'displayName' => 'Easel2 Fill',
-            'class' => 'bi-easel2-fill',
-            'keywords' => ["easel2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-easel2-fill'],
-                'outline' => ['class' => 'bi-easel2'],
-            ]
-        ],
-        [
-            'name' => 'easel2',
-            'displayName' => 'Easel2',
-            'class' => 'bi-easel2',
-            'keywords' => ["easel2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-easel2'],
-                'solid' => ['class' => 'bi-easel2-fill'],
-            ]
-        ],
-        [
-            'name' => 'easel3-fill',
-            'displayName' => 'Easel3 Fill',
-            'class' => 'bi-easel3-fill',
-            'keywords' => ["easel3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-easel3-fill'],
-                'outline' => ['class' => 'bi-easel3'],
-            ]
-        ],
-        [
-            'name' => 'easel3',
-            'displayName' => 'Easel3',
-            'class' => 'bi-easel3',
-            'keywords' => ["easel3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-easel3'],
-                'solid' => ['class' => 'bi-easel3-fill'],
-            ]
-        ],
-        [
-            'name' => 'fan',
-            'displayName' => 'Fan',
-            'class' => 'bi-fan',
-            'keywords' => ["fan"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-fan'],
-            ]
-        ],
-        [
-            'name' => 'hypnotize',
-            'displayName' => 'Hypnotize',
-            'class' => 'bi-hypnotize',
-            'keywords' => ["hypnotize"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hypnotize'],
-            ]
-        ],
-        [
-            'name' => 'magic',
-            'displayName' => 'Magic',
-            'class' => 'bi-magic',
-            'keywords' => ["magic"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-magic'],
-            ]
-        ],
-        [
-            'name' => 'radioactive',
-            'displayName' => 'Radioactive',
-            'class' => 'bi-radioactive',
-            'keywords' => ["radioactive"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-radioactive'],
-            ]
-        ],
-        [
-            'name' => 'yin-yang',
-            'displayName' => 'Yin Yang',
-            'class' => 'bi-yin-yang',
-            'keywords' => ["yin","yang"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-yin-yang'],
-            ]
-        ],
-        [
-            'name' => 'bandaid-fill',
-            'displayName' => 'Bandaid Fill',
-            'class' => 'bi-bandaid-fill',
-            'keywords' => ["bandaid","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bandaid-fill'],
-                'outline' => ['class' => 'bi-bandaid'],
-            ]
-        ],
-        [
-            'name' => 'bandaid',
-            'displayName' => 'Bandaid',
-            'class' => 'bi-bandaid',
-            'keywords' => ["bandaid"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bandaid'],
-                'solid' => ['class' => 'bi-bandaid-fill'],
-            ]
-        ],
-        [
-            'name' => 'boxes',
-            'displayName' => 'Boxes',
-            'class' => 'bi-boxes',
-            'keywords' => ["boxes"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-boxes'],
-            ]
-        ],
-        [
-            'name' => 'dpad-fill',
-            'displayName' => 'Dpad Fill',
-            'class' => 'bi-dpad-fill',
-            'keywords' => ["dpad","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-dpad-fill'],
-                'outline' => ['class' => 'bi-dpad'],
-            ]
-        ],
-        [
-            'name' => 'dpad',
-            'displayName' => 'Dpad',
-            'class' => 'bi-dpad',
-            'keywords' => ["dpad"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-dpad'],
-                'solid' => ['class' => 'bi-dpad-fill'],
-            ]
-        ],
-        [
-            'name' => 'explicit-fill',
-            'displayName' => 'Explicit Fill',
-            'class' => 'bi-explicit-fill',
-            'keywords' => ["explicit","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-explicit-fill'],
-                'outline' => ['class' => 'bi-explicit'],
-            ]
-        ],
-        [
-            'name' => 'explicit',
-            'displayName' => 'Explicit',
-            'class' => 'bi-explicit',
-            'keywords' => ["explicit"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-explicit'],
-                'solid' => ['class' => 'bi-explicit-fill'],
-            ]
-        ],
-        [
-            'name' => 'git',
-            'displayName' => 'Git',
-            'class' => 'bi-git',
-            'keywords' => ["git"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-git'],
-            ]
-        ],
-        [
-            'name' => 'pc-display-horizontal',
-            'displayName' => 'Pc Display Horizontal',
-            'class' => 'bi-pc-display-horizontal',
-            'keywords' => ["pc","display","horizontal"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pc-display-horizontal'],
-            ]
-        ],
-        [
-            'name' => 'pc-display',
-            'displayName' => 'Pc Display',
-            'class' => 'bi-pc-display',
-            'keywords' => ["pc","display"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pc-display'],
-            ]
-        ],
-        [
-            'name' => 'pc-horizontal',
-            'displayName' => 'Pc Horizontal',
-            'class' => 'bi-pc-horizontal',
-            'keywords' => ["pc","horizontal"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pc-horizontal'],
-            ]
-        ],
-        [
-            'name' => 'pc',
-            'displayName' => 'Pc',
-            'class' => 'bi-pc',
-            'keywords' => ["pc"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pc'],
-            ]
-        ],
-        [
-            'name' => 'qr-code-scan',
-            'displayName' => 'Qr Code Scan',
-            'class' => 'bi-qr-code-scan',
-            'keywords' => ["qr","code","scan"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-qr-code-scan'],
-            ]
-        ],
-        [
-            'name' => 'qr-code',
-            'displayName' => 'Qr Code',
-            'class' => 'bi-qr-code',
-            'keywords' => ["qr","code"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-qr-code'],
-            ]
-        ],
-        [
-            'name' => 'robot',
-            'displayName' => 'Robot',
-            'class' => 'bi-robot',
-            'keywords' => ["robot"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-robot'],
-            ]
-        ],
-        [
-            'name' => 'terminal-dash',
-            'displayName' => 'Terminal Dash',
-            'class' => 'bi-terminal-dash',
-            'keywords' => ["terminal","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-terminal-dash'],
-            ]
-        ],
-        [
-            'name' => 'terminal-plus',
-            'displayName' => 'Terminal Plus',
-            'class' => 'bi-terminal-plus',
-            'keywords' => ["terminal","plus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-terminal-plus'],
-            ]
-        ],
-        [
-            'name' => 'terminal-split',
-            'displayName' => 'Terminal Split',
-            'class' => 'bi-terminal-split',
-            'keywords' => ["terminal","split"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-terminal-split'],
-            ]
-        ],
-        [
-            'name' => 'ticket-detailed-fill',
-            'displayName' => 'Ticket Detailed Fill',
-            'class' => 'bi-ticket-detailed-fill',
-            'keywords' => ["ticket","detailed","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-ticket-detailed-fill'],
-                'outline' => ['class' => 'bi-ticket-detailed'],
-            ]
-        ],
-        [
-            'name' => 'ticket-detailed',
-            'displayName' => 'Ticket Detailed',
-            'class' => 'bi-ticket-detailed',
-            'keywords' => ["ticket","detailed"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ticket-detailed'],
-                'solid' => ['class' => 'bi-ticket-detailed-fill'],
-            ]
-        ],
-        [
-            'name' => 'ticket-fill',
-            'displayName' => 'Ticket Fill',
-            'class' => 'bi-ticket-fill',
-            'keywords' => ["ticket","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-ticket-fill'],
-                'outline' => ['class' => 'bi-ticket'],
-            ]
-        ],
-        [
-            'name' => 'ticket-perforated-fill',
-            'displayName' => 'Ticket Perforated Fill',
-            'class' => 'bi-ticket-perforated-fill',
-            'keywords' => ["ticket","perforated","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-ticket-perforated-fill'],
-                'outline' => ['class' => 'bi-ticket-perforated'],
-            ]
-        ],
-        [
-            'name' => 'ticket-perforated',
-            'displayName' => 'Ticket Perforated',
-            'class' => 'bi-ticket-perforated',
-            'keywords' => ["ticket","perforated"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ticket-perforated'],
-                'solid' => ['class' => 'bi-ticket-perforated-fill'],
-            ]
-        ],
-        [
-            'name' => 'ticket',
-            'displayName' => 'Ticket',
-            'class' => 'bi-ticket',
-            'keywords' => ["ticket"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ticket'],
-                'solid' => ['class' => 'bi-ticket-fill'],
-            ]
-        ],
-        [
-            'name' => 'ethernet',
-            'displayName' => 'Ethernet',
-            'class' => 'bi-ethernet',
-            'keywords' => ["ethernet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ethernet'],
-            ]
-        ],
-        [
-            'name' => 'hdmi-fill',
-            'displayName' => 'Hdmi Fill',
-            'class' => 'bi-hdmi-fill',
-            'keywords' => ["hdmi","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hdmi-fill'],
-                'outline' => ['class' => 'bi-hdmi'],
-            ]
-        ],
-        [
-            'name' => 'hdmi',
-            'displayName' => 'Hdmi',
-            'class' => 'bi-hdmi',
-            'keywords' => ["hdmi"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hdmi'],
-                'solid' => ['class' => 'bi-hdmi-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-c-fill',
-            'displayName' => 'Usb C Fill',
-            'class' => 'bi-usb-c-fill',
-            'keywords' => ["usb","c","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-c-fill'],
-                'outline' => ['class' => 'bi-usb-c'],
-            ]
-        ],
-        [
-            'name' => 'usb-c',
-            'displayName' => 'Usb C',
-            'class' => 'bi-usb-c',
-            'keywords' => ["usb","c"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-c'],
-                'solid' => ['class' => 'bi-usb-c-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-fill',
-            'displayName' => 'Usb Fill',
-            'class' => 'bi-usb-fill',
-            'keywords' => ["usb","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-fill'],
-                'outline' => ['class' => 'bi-usb'],
-            ]
-        ],
-        [
-            'name' => 'usb-plug-fill',
-            'displayName' => 'Usb Plug Fill',
-            'class' => 'bi-usb-plug-fill',
-            'keywords' => ["usb","plug","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-plug-fill'],
-                'outline' => ['class' => 'bi-usb-plug'],
-            ]
-        ],
-        [
-            'name' => 'usb-plug',
-            'displayName' => 'Usb Plug',
-            'class' => 'bi-usb-plug',
-            'keywords' => ["usb","plug"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-plug'],
-                'solid' => ['class' => 'bi-usb-plug-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-symbol',
-            'displayName' => 'Usb Symbol',
-            'class' => 'bi-usb-symbol',
-            'keywords' => ["usb","symbol"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-symbol'],
-            ]
-        ],
-        [
-            'name' => 'usb',
-            'displayName' => 'Usb',
-            'class' => 'bi-usb',
-            'keywords' => ["usb"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb'],
-                'solid' => ['class' => 'bi-usb-fill'],
-            ]
-        ],
-        [
-            'name' => 'displayport',
-            'displayName' => 'Displayport',
-            'class' => 'bi-displayport',
-            'keywords' => ["displayport"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-displayport'],
-                'solid' => ['class' => 'bi-displayport-fill'],
-            ]
-        ],
-        [
-            'name' => 'gpu-card',
-            'displayName' => 'Gpu Card',
-            'class' => 'bi-gpu-card',
-            'keywords' => ["gpu","card"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-gpu-card'],
-            ]
-        ],
-        [
-            'name' => 'memory',
-            'displayName' => 'Memory',
-            'class' => 'bi-memory',
-            'keywords' => ["memory"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-memory'],
-            ]
-        ],
-        [
-            'name' => 'modem-fill',
-            'displayName' => 'Modem Fill',
-            'class' => 'bi-modem-fill',
-            'keywords' => ["modem","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-modem-fill'],
-                'outline' => ['class' => 'bi-modem'],
-            ]
-        ],
-        [
-            'name' => 'modem',
-            'displayName' => 'Modem',
-            'class' => 'bi-modem',
-            'keywords' => ["modem"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-modem'],
-                'solid' => ['class' => 'bi-modem-fill'],
-            ]
-        ],
-        [
-            'name' => 'motherboard-fill',
-            'displayName' => 'Motherboard Fill',
-            'class' => 'bi-motherboard-fill',
-            'keywords' => ["motherboard","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-motherboard-fill'],
-                'outline' => ['class' => 'bi-motherboard'],
-            ]
-        ],
-        [
-            'name' => 'motherboard',
-            'displayName' => 'Motherboard',
-            'class' => 'bi-motherboard',
-            'keywords' => ["motherboard"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-motherboard'],
-                'solid' => ['class' => 'bi-motherboard-fill'],
-            ]
-        ],
-        [
-            'name' => 'pci-card',
-            'displayName' => 'Pci Card',
-            'class' => 'bi-pci-card',
-            'keywords' => ["pci","card"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pci-card'],
-            ]
-        ],
-        [
-            'name' => 'router-fill',
-            'displayName' => 'Router Fill',
-            'class' => 'bi-router-fill',
-            'keywords' => ["router","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-router-fill'],
-                'outline' => ['class' => 'bi-router'],
-            ]
-        ],
-        [
-            'name' => 'router',
-            'displayName' => 'Router',
-            'class' => 'bi-router',
-            'keywords' => ["router"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-router'],
-                'solid' => ['class' => 'bi-router-fill'],
-            ]
-        ],
-        [
-            'name' => 'thunderbolt-fill',
-            'displayName' => 'Thunderbolt Fill',
-            'class' => 'bi-thunderbolt-fill',
-            'keywords' => ["thunderbolt","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-thunderbolt-fill'],
-                'outline' => ['class' => 'bi-thunderbolt'],
-            ]
-        ],
-        [
-            'name' => 'thunderbolt',
-            'displayName' => 'Thunderbolt',
-            'class' => 'bi-thunderbolt',
-            'keywords' => ["thunderbolt"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-thunderbolt'],
-                'solid' => ['class' => 'bi-thunderbolt-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-drive-fill',
-            'displayName' => 'Usb Drive Fill',
-            'class' => 'bi-usb-drive-fill',
-            'keywords' => ["usb","drive","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-drive-fill'],
-                'outline' => ['class' => 'bi-usb-drive'],
-            ]
-        ],
-        [
-            'name' => 'usb-drive',
-            'displayName' => 'Usb Drive',
-            'class' => 'bi-usb-drive',
-            'keywords' => ["usb","drive"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-drive'],
-                'solid' => ['class' => 'bi-usb-drive-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-micro-fill',
-            'displayName' => 'Usb Micro Fill',
-            'class' => 'bi-usb-micro-fill',
-            'keywords' => ["usb","micro","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-micro-fill'],
-                'outline' => ['class' => 'bi-usb-micro'],
-            ]
-        ],
-        [
-            'name' => 'usb-micro',
-            'displayName' => 'Usb Micro',
-            'class' => 'bi-usb-micro',
-            'keywords' => ["usb","micro"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-micro'],
-                'solid' => ['class' => 'bi-usb-micro-fill'],
-            ]
-        ],
-        [
-            'name' => 'usb-mini-fill',
-            'displayName' => 'Usb Mini Fill',
-            'class' => 'bi-usb-mini-fill',
-            'keywords' => ["usb","mini","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-usb-mini-fill'],
-                'outline' => ['class' => 'bi-usb-mini'],
-            ]
-        ],
-        [
-            'name' => 'usb-mini',
-            'displayName' => 'Usb Mini',
-            'class' => 'bi-usb-mini',
-            'keywords' => ["usb","mini"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-usb-mini'],
-                'solid' => ['class' => 'bi-usb-mini-fill'],
-            ]
-        ],
-        [
-            'name' => 'cloud-haze2',
-            'displayName' => 'Cloud Haze2',
-            'class' => 'bi-cloud-haze2',
-            'keywords' => ["cloud","haze2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cloud-haze2'],
-                'solid' => ['class' => 'bi-cloud-haze2-fill'],
-            ]
-        ],
-        [
-            'name' => 'device-hdd-fill',
-            'displayName' => 'Device Hdd Fill',
-            'class' => 'bi-device-hdd-fill',
-            'keywords' => ["device","hdd","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-device-hdd-fill'],
-                'outline' => ['class' => 'bi-device-hdd'],
-            ]
-        ],
-        [
-            'name' => 'device-hdd',
-            'displayName' => 'Device Hdd',
-            'class' => 'bi-device-hdd',
-            'keywords' => ["device","hdd"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-device-hdd'],
-                'solid' => ['class' => 'bi-device-hdd-fill'],
-            ]
-        ],
-        [
-            'name' => 'device-ssd-fill',
-            'displayName' => 'Device Ssd Fill',
-            'class' => 'bi-device-ssd-fill',
-            'keywords' => ["device","ssd","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-device-ssd-fill'],
-                'outline' => ['class' => 'bi-device-ssd'],
-            ]
-        ],
-        [
-            'name' => 'device-ssd',
-            'displayName' => 'Device Ssd',
-            'class' => 'bi-device-ssd',
-            'keywords' => ["device","ssd"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-device-ssd'],
-                'solid' => ['class' => 'bi-device-ssd-fill'],
-            ]
-        ],
-        [
-            'name' => 'displayport-fill',
-            'displayName' => 'Displayport Fill',
-            'class' => 'bi-displayport-fill',
-            'keywords' => ["displayport","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-displayport-fill'],
-                'outline' => ['class' => 'bi-displayport'],
-            ]
-        ],
-        [
-            'name' => 'mortarboard-fill',
-            'displayName' => 'Mortarboard Fill',
-            'class' => 'bi-mortarboard-fill',
-            'keywords' => ["mortarboard","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-mortarboard-fill'],
-                'outline' => ['class' => 'bi-mortarboard'],
-            ]
-        ],
-        [
-            'name' => 'mortarboard',
-            'displayName' => 'Mortarboard',
-            'class' => 'bi-mortarboard',
-            'keywords' => ["mortarboard"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-mortarboard'],
-                'solid' => ['class' => 'bi-mortarboard-fill'],
-            ]
-        ],
-        [
-            'name' => 'terminal-x',
-            'displayName' => 'Terminal X',
-            'class' => 'bi-terminal-x',
-            'keywords' => ["terminal","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-terminal-x'],
-            ]
-        ],
-        [
-            'name' => 'badge-sd-fill',
-            'displayName' => 'Badge Sd Fill',
-            'class' => 'bi-badge-sd-fill',
-            'keywords' => ["badge","sd","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-badge-sd-fill'],
-                'outline' => ['class' => 'bi-badge-sd'],
-            ]
-        ],
-        [
-            'name' => 'badge-sd',
-            'displayName' => 'Badge Sd',
-            'class' => 'bi-badge-sd',
-            'keywords' => ["badge","sd"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-badge-sd'],
-                'solid' => ['class' => 'bi-badge-sd-fill'],
-            ]
-        ],
-        [
-            'name' => 'bag-heart-fill',
-            'displayName' => 'Bag Heart Fill',
-            'class' => 'bi-bag-heart-fill',
-            'keywords' => ["bag","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bag-heart-fill'],
-                'outline' => ['class' => 'bi-bag-heart'],
-            ]
-        ],
-        [
-            'name' => 'bag-heart',
-            'displayName' => 'Bag Heart',
-            'class' => 'bi-bag-heart',
-            'keywords' => ["bag","heart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bag-heart'],
-                'solid' => ['class' => 'bi-bag-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'balloon-fill',
-            'displayName' => 'Balloon Fill',
-            'class' => 'bi-balloon-fill',
-            'keywords' => ["balloon","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-balloon-fill'],
-                'outline' => ['class' => 'bi-balloon'],
-            ]
-        ],
-        [
-            'name' => 'balloon-heart-fill',
-            'displayName' => 'Balloon Heart Fill',
-            'class' => 'bi-balloon-heart-fill',
-            'keywords' => ["balloon","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-balloon-heart-fill'],
-                'outline' => ['class' => 'bi-balloon-heart'],
-            ]
-        ],
-        [
-            'name' => 'balloon-heart',
-            'displayName' => 'Balloon Heart',
-            'class' => 'bi-balloon-heart',
-            'keywords' => ["balloon","heart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-balloon-heart'],
-                'solid' => ['class' => 'bi-balloon-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'balloon',
-            'displayName' => 'Balloon',
-            'class' => 'bi-balloon',
-            'keywords' => ["balloon"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-balloon'],
-                'solid' => ['class' => 'bi-balloon-fill'],
-            ]
-        ],
-        [
-            'name' => 'box2-fill',
-            'displayName' => 'Box2 Fill',
-            'class' => 'bi-box2-fill',
-            'keywords' => ["box2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-box2-fill'],
-                'outline' => ['class' => 'bi-box2'],
-            ]
-        ],
-        [
-            'name' => 'box2-heart-fill',
-            'displayName' => 'Box2 Heart Fill',
-            'class' => 'bi-box2-heart-fill',
-            'keywords' => ["box2","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-box2-heart-fill'],
-                'outline' => ['class' => 'bi-box2-heart'],
-            ]
-        ],
-        [
-            'name' => 'box2-heart',
-            'displayName' => 'Box2 Heart',
-            'class' => 'bi-box2-heart',
-            'keywords' => ["box2","heart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-box2-heart'],
-                'solid' => ['class' => 'bi-box2-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'box2',
-            'displayName' => 'Box2',
-            'class' => 'bi-box2',
-            'keywords' => ["box2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-box2'],
-                'solid' => ['class' => 'bi-box2-fill'],
-            ]
-        ],
-        [
-            'name' => 'hospital-fill',
-            'displayName' => 'Hospital Fill',
-            'class' => 'bi-hospital-fill',
-            'keywords' => ["hospital","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-hospital-fill'],
-                'outline' => ['class' => 'bi-hospital'],
-            ]
-        ],
-        [
-            'name' => 'hospital',
-            'displayName' => 'Hospital',
-            'class' => 'bi-hospital',
-            'keywords' => ["hospital"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-hospital'],
-                'solid' => ['class' => 'bi-hospital-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-heart-fill',
-            'displayName' => 'House Heart Fill',
-            'class' => 'bi-house-heart-fill',
-            'keywords' => ["house","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-heart-fill'],
-                'outline' => ['class' => 'bi-house-heart'],
-            ]
-        ],
-        [
-            'name' => 'house-heart',
-            'displayName' => 'House Heart',
-            'class' => 'bi-house-heart',
-            'keywords' => ["house","heart"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-heart'],
-                'solid' => ['class' => 'bi-house-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'magnet-fill',
-            'displayName' => 'Magnet Fill',
-            'class' => 'bi-magnet-fill',
-            'keywords' => ["magnet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-magnet-fill'],
-                'outline' => ['class' => 'bi-magnet'],
-            ]
-        ],
-        [
-            'name' => 'magnet',
-            'displayName' => 'Magnet',
-            'class' => 'bi-magnet',
-            'keywords' => ["magnet"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-magnet'],
-                'solid' => ['class' => 'bi-magnet-fill'],
-            ]
-        ],
-        [
-            'name' => 'plugin',
-            'displayName' => 'Plugin',
-            'class' => 'bi-plugin',
-            'keywords' => ["plugin"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-plugin'],
-            ]
-        ],
-        [
-            'name' => 'valentine',
-            'displayName' => 'Valentine',
-            'class' => 'bi-valentine',
-            'keywords' => ["valentine"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-valentine'],
-            ]
-        ],
-        [
-            'name' => 'valentine2',
-            'displayName' => 'Valentine2',
-            'class' => 'bi-valentine2',
-            'keywords' => ["valentine2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-valentine2'],
-            ]
-        ],
-        [
-            'name' => 'wrench-adjustable-circle-fill',
-            'displayName' => 'Wrench Adjustable Circle Fill',
-            'class' => 'bi-wrench-adjustable-circle-fill',
-            'keywords' => ["wrench","adjustable","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-wrench-adjustable-circle-fill'],
-                'outline' => ['class' => 'bi-wrench-adjustable-circle'],
-            ]
-        ],
-        [
-            'name' => 'wrench-adjustable-circle',
-            'displayName' => 'Wrench Adjustable Circle',
-            'class' => 'bi-wrench-adjustable-circle',
-            'keywords' => ["wrench","adjustable","circle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wrench-adjustable-circle'],
-                'solid' => ['class' => 'bi-wrench-adjustable-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'wrench-adjustable',
-            'displayName' => 'Wrench Adjustable',
-            'class' => 'bi-wrench-adjustable',
-            'keywords' => ["wrench","adjustable"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-wrench-adjustable'],
-            ]
-        ],
-        [
-            'name' => 'airplane-engines-fill',
-            'displayName' => 'Airplane Engines Fill',
-            'class' => 'bi-airplane-engines-fill',
-            'keywords' => ["airplane","engines","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-airplane-engines-fill'],
-                'outline' => ['class' => 'bi-airplane-engines'],
-            ]
-        ],
-        [
-            'name' => 'airplane-engines',
-            'displayName' => 'Airplane Engines',
-            'class' => 'bi-airplane-engines',
-            'keywords' => ["airplane","engines"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-airplane-engines'],
-                'solid' => ['class' => 'bi-airplane-engines-fill'],
-            ]
-        ],
-        [
-            'name' => 'airplane-fill',
-            'displayName' => 'Airplane Fill',
-            'class' => 'bi-airplane-fill',
-            'keywords' => ["airplane","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-airplane-fill'],
-                'outline' => ['class' => 'bi-airplane'],
-            ]
-        ],
-        [
-            'name' => 'airplane',
-            'displayName' => 'Airplane',
-            'class' => 'bi-airplane',
-            'keywords' => ["airplane"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-airplane'],
-                'solid' => ['class' => 'bi-airplane-fill'],
-            ]
-        ],
-        [
-            'name' => 'box-fill',
-            'displayName' => 'Box Fill',
-            'class' => 'bi-box-fill',
-            'keywords' => ["box","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-box-fill'],
-                'outline' => ['class' => 'bi-box'],
-            ]
-        ],
-        [
-            'name' => 'box-seam-fill',
-            'displayName' => 'Box Seam Fill',
-            'class' => 'bi-box-seam-fill',
-            'keywords' => ["box","seam","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-box-seam-fill'],
-                'outline' => ['class' => 'bi-box-seam'],
-            ]
-        ],
-        [
-            'name' => 'capsule-pill',
-            'displayName' => 'Capsule Pill',
-            'class' => 'bi-capsule-pill',
-            'keywords' => ["capsule","pill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-capsule-pill'],
-            ]
-        ],
-        [
-            'name' => 'capsule',
-            'displayName' => 'Capsule',
-            'class' => 'bi-capsule',
-            'keywords' => ["capsule"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-capsule'],
-            ]
-        ],
-        [
-            'name' => 'car-front-fill',
-            'displayName' => 'Car Front Fill',
-            'class' => 'bi-car-front-fill',
-            'keywords' => ["car","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-car-front-fill'],
-                'outline' => ['class' => 'bi-car-front'],
-            ]
-        ],
-        [
-            'name' => 'car-front',
-            'displayName' => 'Car Front',
-            'class' => 'bi-car-front',
-            'keywords' => ["car","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-car-front'],
-                'solid' => ['class' => 'bi-car-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'cup-hot-fill',
-            'displayName' => 'Cup Hot Fill',
-            'class' => 'bi-cup-hot-fill',
-            'keywords' => ["cup","hot","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cup-hot-fill'],
-                'outline' => ['class' => 'bi-cup-hot'],
-            ]
-        ],
-        [
-            'name' => 'cup-hot',
-            'displayName' => 'Cup Hot',
-            'class' => 'bi-cup-hot',
-            'keywords' => ["cup","hot"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cup-hot'],
-                'solid' => ['class' => 'bi-cup-hot-fill'],
-            ]
-        ],
-        [
-            'name' => 'currency-rupee',
-            'displayName' => 'Currency Rupee',
-            'class' => 'bi-currency-rupee',
-            'keywords' => ["currency","rupee"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-currency-rupee'],
-            ]
-        ],
-        [
-            'name' => 'fire',
-            'displayName' => 'Fire',
-            'class' => 'bi-fire',
-            'keywords' => ["fire"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-fire'],
-            ]
-        ],
-        [
-            'name' => 'lungs-fill',
-            'displayName' => 'Lungs Fill',
-            'class' => 'bi-lungs-fill',
-            'keywords' => ["lungs","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-lungs-fill'],
-                'outline' => ['class' => 'bi-lungs'],
-            ]
-        ],
-        [
-            'name' => 'lungs',
-            'displayName' => 'Lungs',
-            'class' => 'bi-lungs',
-            'keywords' => ["lungs"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-lungs'],
-                'solid' => ['class' => 'bi-lungs-fill'],
-            ]
-        ],
-        [
-            'name' => 'pass-fill',
-            'displayName' => 'Pass Fill',
-            'class' => 'bi-pass-fill',
-            'keywords' => ["pass","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-pass-fill'],
-                'outline' => ['class' => 'bi-pass'],
-            ]
-        ],
-        [
-            'name' => 'pass',
-            'displayName' => 'Pass',
-            'class' => 'bi-pass',
-            'keywords' => ["pass"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pass'],
-                'solid' => ['class' => 'bi-pass-fill'],
-            ]
-        ],
-        [
-            'name' => 'prescription',
-            'displayName' => 'Prescription',
-            'class' => 'bi-prescription',
-            'keywords' => ["prescription"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-prescription'],
-            ]
-        ],
-        [
-            'name' => 'prescription2',
-            'displayName' => 'Prescription2',
-            'class' => 'bi-prescription2',
-            'keywords' => ["prescription2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-prescription2'],
-            ]
-        ],
-        [
-            'name' => 'train-freight-front-fill',
-            'displayName' => 'Train Freight Front Fill',
-            'class' => 'bi-train-freight-front-fill',
-            'keywords' => ["train","freight","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-train-freight-front-fill'],
-                'outline' => ['class' => 'bi-train-freight-front'],
-            ]
-        ],
-        [
-            'name' => 'train-freight-front',
-            'displayName' => 'Train Freight Front',
-            'class' => 'bi-train-freight-front',
-            'keywords' => ["train","freight","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-train-freight-front'],
-                'solid' => ['class' => 'bi-train-freight-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'train-front-fill',
-            'displayName' => 'Train Front Fill',
-            'class' => 'bi-train-front-fill',
-            'keywords' => ["train","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-train-front-fill'],
-                'outline' => ['class' => 'bi-train-front'],
-            ]
-        ],
-        [
-            'name' => 'train-front',
-            'displayName' => 'Train Front',
-            'class' => 'bi-train-front',
-            'keywords' => ["train","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-train-front'],
-                'solid' => ['class' => 'bi-train-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'train-lightrail-front-fill',
-            'displayName' => 'Train Lightrail Front Fill',
-            'class' => 'bi-train-lightrail-front-fill',
-            'keywords' => ["train","lightrail","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-train-lightrail-front-fill'],
-                'outline' => ['class' => 'bi-train-lightrail-front'],
-            ]
-        ],
-        [
-            'name' => 'train-lightrail-front',
-            'displayName' => 'Train Lightrail Front',
-            'class' => 'bi-train-lightrail-front',
-            'keywords' => ["train","lightrail","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-train-lightrail-front'],
-                'solid' => ['class' => 'bi-train-lightrail-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'truck-front-fill',
-            'displayName' => 'Truck Front Fill',
-            'class' => 'bi-truck-front-fill',
-            'keywords' => ["truck","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-truck-front-fill'],
-                'outline' => ['class' => 'bi-truck-front'],
-            ]
-        ],
-        [
-            'name' => 'truck-front',
-            'displayName' => 'Truck Front',
-            'class' => 'bi-truck-front',
-            'keywords' => ["truck","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-truck-front'],
-                'solid' => ['class' => 'bi-truck-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'virus',
-            'displayName' => 'Virus',
-            'class' => 'bi-virus',
-            'keywords' => ["virus"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-virus'],
-            ]
-        ],
-        [
-            'name' => 'virus2',
-            'displayName' => 'Virus2',
-            'class' => 'bi-virus2',
-            'keywords' => ["virus2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-virus2'],
-            ]
-        ],
-        [
-            'name' => 'sign-stop-fill',
-            'displayName' => 'Sign Stop Fill',
-            'class' => 'bi-sign-stop-fill',
-            'keywords' => ["sign","stop","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-stop-fill'],
-                'outline' => ['class' => 'bi-sign-stop'],
-            ]
-        ],
-        [
-            'name' => 'sign-stop-lights-fill',
-            'displayName' => 'Sign Stop Lights Fill',
-            'class' => 'bi-sign-stop-lights-fill',
-            'keywords' => ["sign","stop","lights","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-stop-lights-fill'],
-                'outline' => ['class' => 'bi-sign-stop-lights'],
-            ]
-        ],
-        [
-            'name' => 'sign-stop-lights',
-            'displayName' => 'Sign Stop Lights',
-            'class' => 'bi-sign-stop-lights',
-            'keywords' => ["sign","stop","lights"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-stop-lights'],
-                'solid' => ['class' => 'bi-sign-stop-lights-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-stop',
-            'displayName' => 'Sign Stop',
-            'class' => 'bi-sign-stop',
-            'keywords' => ["sign","stop"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-stop'],
-                'solid' => ['class' => 'bi-sign-stop-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-left-fill',
-            'displayName' => 'Sign Turn Left Fill',
-            'class' => 'bi-sign-turn-left-fill',
-            'keywords' => ["sign","turn","left","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-turn-left-fill'],
-                'outline' => ['class' => 'bi-sign-turn-left'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-left',
-            'displayName' => 'Sign Turn Left',
-            'class' => 'bi-sign-turn-left',
-            'keywords' => ["sign","turn","left"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-turn-left'],
-                'solid' => ['class' => 'bi-sign-turn-left-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-right-fill',
-            'displayName' => 'Sign Turn Right Fill',
-            'class' => 'bi-sign-turn-right-fill',
-            'keywords' => ["sign","turn","right","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-turn-right-fill'],
-                'outline' => ['class' => 'bi-sign-turn-right'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-right',
-            'displayName' => 'Sign Turn Right',
-            'class' => 'bi-sign-turn-right',
-            'keywords' => ["sign","turn","right"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-turn-right'],
-                'solid' => ['class' => 'bi-sign-turn-right-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-slight-left-fill',
-            'displayName' => 'Sign Turn Slight Left Fill',
-            'class' => 'bi-sign-turn-slight-left-fill',
-            'keywords' => ["sign","turn","slight","left","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-turn-slight-left-fill'],
-                'outline' => ['class' => 'bi-sign-turn-slight-left'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-slight-left',
-            'displayName' => 'Sign Turn Slight Left',
-            'class' => 'bi-sign-turn-slight-left',
-            'keywords' => ["sign","turn","slight","left"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-turn-slight-left'],
-                'solid' => ['class' => 'bi-sign-turn-slight-left-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-slight-right-fill',
-            'displayName' => 'Sign Turn Slight Right Fill',
-            'class' => 'bi-sign-turn-slight-right-fill',
-            'keywords' => ["sign","turn","slight","right","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-turn-slight-right-fill'],
-                'outline' => ['class' => 'bi-sign-turn-slight-right'],
-            ]
-        ],
-        [
-            'name' => 'sign-turn-slight-right',
-            'displayName' => 'Sign Turn Slight Right',
-            'class' => 'bi-sign-turn-slight-right',
-            'keywords' => ["sign","turn","slight","right"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-turn-slight-right'],
-                'solid' => ['class' => 'bi-sign-turn-slight-right-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-yield-fill',
-            'displayName' => 'Sign Yield Fill',
-            'class' => 'bi-sign-yield-fill',
-            'keywords' => ["sign","yield","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-yield-fill'],
-                'outline' => ['class' => 'bi-sign-yield'],
-            ]
-        ],
-        [
-            'name' => 'sign-yield',
-            'displayName' => 'Sign Yield',
-            'class' => 'bi-sign-yield',
-            'keywords' => ["sign","yield"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-yield'],
-                'solid' => ['class' => 'bi-sign-yield-fill'],
-            ]
-        ],
-        [
-            'name' => 'ev-station-fill',
-            'displayName' => 'Ev Station Fill',
-            'class' => 'bi-ev-station-fill',
-            'keywords' => ["ev","station","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-ev-station-fill'],
-                'outline' => ['class' => 'bi-ev-station'],
-            ]
-        ],
-        [
-            'name' => 'ev-station',
-            'displayName' => 'Ev Station',
-            'class' => 'bi-ev-station',
-            'keywords' => ["ev","station"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ev-station'],
-                'solid' => ['class' => 'bi-ev-station-fill'],
-            ]
-        ],
-        [
-            'name' => 'fuel-pump-diesel-fill',
-            'displayName' => 'Fuel Pump Diesel Fill',
-            'class' => 'bi-fuel-pump-diesel-fill',
-            'keywords' => ["fuel","pump","diesel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-fuel-pump-diesel-fill'],
-                'outline' => ['class' => 'bi-fuel-pump-diesel'],
-            ]
-        ],
-        [
-            'name' => 'fuel-pump-diesel',
-            'displayName' => 'Fuel Pump Diesel',
-            'class' => 'bi-fuel-pump-diesel',
-            'keywords' => ["fuel","pump","diesel"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-fuel-pump-diesel'],
-                'solid' => ['class' => 'bi-fuel-pump-diesel-fill'],
-            ]
-        ],
-        [
-            'name' => 'fuel-pump-fill',
-            'displayName' => 'Fuel Pump Fill',
-            'class' => 'bi-fuel-pump-fill',
-            'keywords' => ["fuel","pump","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-fuel-pump-fill'],
-                'outline' => ['class' => 'bi-fuel-pump'],
-            ]
-        ],
-        [
-            'name' => 'fuel-pump',
-            'displayName' => 'Fuel Pump',
-            'class' => 'bi-fuel-pump',
-            'keywords' => ["fuel","pump"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-fuel-pump'],
-                'solid' => ['class' => 'bi-fuel-pump-fill'],
-            ]
-        ],
-        [
-            'name' => 'rocket-fill',
-            'displayName' => 'Rocket Fill',
-            'class' => 'bi-rocket-fill',
-            'keywords' => ["rocket","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-rocket-fill'],
-                'outline' => ['class' => 'bi-rocket'],
-            ]
-        ],
-        [
-            'name' => 'rocket-takeoff-fill',
-            'displayName' => 'Rocket Takeoff Fill',
-            'class' => 'bi-rocket-takeoff-fill',
-            'keywords' => ["rocket","takeoff","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-rocket-takeoff-fill'],
-                'outline' => ['class' => 'bi-rocket-takeoff'],
-            ]
-        ],
-        [
-            'name' => 'rocket-takeoff',
-            'displayName' => 'Rocket Takeoff',
-            'class' => 'bi-rocket-takeoff',
-            'keywords' => ["rocket","takeoff"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-rocket-takeoff'],
-                'solid' => ['class' => 'bi-rocket-takeoff-fill'],
-            ]
-        ],
-        [
-            'name' => 'rocket',
-            'displayName' => 'Rocket',
-            'class' => 'bi-rocket',
-            'keywords' => ["rocket"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-rocket'],
-                'solid' => ['class' => 'bi-rocket-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-dead-end-fill',
-            'displayName' => 'Sign Dead End Fill',
-            'class' => 'bi-sign-dead-end-fill',
-            'keywords' => ["sign","dead","end","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-dead-end-fill'],
-                'outline' => ['class' => 'bi-sign-dead-end'],
-            ]
-        ],
-        [
-            'name' => 'sign-dead-end',
-            'displayName' => 'Sign Dead End',
-            'class' => 'bi-sign-dead-end',
-            'keywords' => ["sign","dead","end"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-dead-end'],
-                'solid' => ['class' => 'bi-sign-dead-end-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-do-not-enter-fill',
-            'displayName' => 'Sign Do Not Enter Fill',
-            'class' => 'bi-sign-do-not-enter-fill',
-            'keywords' => ["sign","do","not","enter","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-do-not-enter-fill'],
-                'outline' => ['class' => 'bi-sign-do-not-enter'],
-            ]
-        ],
-        [
-            'name' => 'sign-do-not-enter',
-            'displayName' => 'Sign Do Not Enter',
-            'class' => 'bi-sign-do-not-enter',
-            'keywords' => ["sign","do","not","enter"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-do-not-enter'],
-                'solid' => ['class' => 'bi-sign-do-not-enter-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-fill',
-            'displayName' => 'Sign Intersection Fill',
-            'class' => 'bi-sign-intersection-fill',
-            'keywords' => ["sign","intersection","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-intersection-fill'],
-                'outline' => ['class' => 'bi-sign-intersection'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-side-fill',
-            'displayName' => 'Sign Intersection Side Fill',
-            'class' => 'bi-sign-intersection-side-fill',
-            'keywords' => ["sign","intersection","side","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-intersection-side-fill'],
-                'outline' => ['class' => 'bi-sign-intersection-side'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-side',
-            'displayName' => 'Sign Intersection Side',
-            'class' => 'bi-sign-intersection-side',
-            'keywords' => ["sign","intersection","side"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-intersection-side'],
-                'solid' => ['class' => 'bi-sign-intersection-side-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-t-fill',
-            'displayName' => 'Sign Intersection T Fill',
-            'class' => 'bi-sign-intersection-t-fill',
-            'keywords' => ["sign","intersection","t","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-intersection-t-fill'],
-                'outline' => ['class' => 'bi-sign-intersection-t'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-t',
-            'displayName' => 'Sign Intersection T',
-            'class' => 'bi-sign-intersection-t',
-            'keywords' => ["sign","intersection","t"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-intersection-t'],
-                'solid' => ['class' => 'bi-sign-intersection-t-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-y-fill',
-            'displayName' => 'Sign Intersection Y Fill',
-            'class' => 'bi-sign-intersection-y-fill',
-            'keywords' => ["sign","intersection","y","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-intersection-y-fill'],
-                'outline' => ['class' => 'bi-sign-intersection-y'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection-y',
-            'displayName' => 'Sign Intersection Y',
-            'class' => 'bi-sign-intersection-y',
-            'keywords' => ["sign","intersection","y"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-intersection-y'],
-                'solid' => ['class' => 'bi-sign-intersection-y-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-intersection',
-            'displayName' => 'Sign Intersection',
-            'class' => 'bi-sign-intersection',
-            'keywords' => ["sign","intersection"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-intersection'],
-                'solid' => ['class' => 'bi-sign-intersection-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-merge-left-fill',
-            'displayName' => 'Sign Merge Left Fill',
-            'class' => 'bi-sign-merge-left-fill',
-            'keywords' => ["sign","merge","left","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-merge-left-fill'],
-                'outline' => ['class' => 'bi-sign-merge-left'],
-            ]
-        ],
-        [
-            'name' => 'sign-merge-left',
-            'displayName' => 'Sign Merge Left',
-            'class' => 'bi-sign-merge-left',
-            'keywords' => ["sign","merge","left"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-merge-left'],
-                'solid' => ['class' => 'bi-sign-merge-left-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-merge-right-fill',
-            'displayName' => 'Sign Merge Right Fill',
-            'class' => 'bi-sign-merge-right-fill',
-            'keywords' => ["sign","merge","right","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-merge-right-fill'],
-                'outline' => ['class' => 'bi-sign-merge-right'],
-            ]
-        ],
-        [
-            'name' => 'sign-merge-right',
-            'displayName' => 'Sign Merge Right',
-            'class' => 'bi-sign-merge-right',
-            'keywords' => ["sign","merge","right"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-merge-right'],
-                'solid' => ['class' => 'bi-sign-merge-right-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-left-turn-fill',
-            'displayName' => 'Sign No Left Turn Fill',
-            'class' => 'bi-sign-no-left-turn-fill',
-            'keywords' => ["sign","no","left","turn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-no-left-turn-fill'],
-                'outline' => ['class' => 'bi-sign-no-left-turn'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-left-turn',
-            'displayName' => 'Sign No Left Turn',
-            'class' => 'bi-sign-no-left-turn',
-            'keywords' => ["sign","no","left","turn"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-no-left-turn'],
-                'solid' => ['class' => 'bi-sign-no-left-turn-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-parking-fill',
-            'displayName' => 'Sign No Parking Fill',
-            'class' => 'bi-sign-no-parking-fill',
-            'keywords' => ["sign","no","parking","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-no-parking-fill'],
-                'outline' => ['class' => 'bi-sign-no-parking'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-parking',
-            'displayName' => 'Sign No Parking',
-            'class' => 'bi-sign-no-parking',
-            'keywords' => ["sign","no","parking"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-no-parking'],
-                'solid' => ['class' => 'bi-sign-no-parking-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-right-turn-fill',
-            'displayName' => 'Sign No Right Turn Fill',
-            'class' => 'bi-sign-no-right-turn-fill',
-            'keywords' => ["sign","no","right","turn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-no-right-turn-fill'],
-                'outline' => ['class' => 'bi-sign-no-right-turn'],
-            ]
-        ],
-        [
-            'name' => 'sign-no-right-turn',
-            'displayName' => 'Sign No Right Turn',
-            'class' => 'bi-sign-no-right-turn',
-            'keywords' => ["sign","no","right","turn"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-no-right-turn'],
-                'solid' => ['class' => 'bi-sign-no-right-turn-fill'],
-            ]
-        ],
-        [
-            'name' => 'sign-railroad-fill',
-            'displayName' => 'Sign Railroad Fill',
-            'class' => 'bi-sign-railroad-fill',
-            'keywords' => ["sign","railroad","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-sign-railroad-fill'],
-                'outline' => ['class' => 'bi-sign-railroad'],
-            ]
-        ],
-        [
-            'name' => 'sign-railroad',
-            'displayName' => 'Sign Railroad',
-            'class' => 'bi-sign-railroad',
-            'keywords' => ["sign","railroad"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-sign-railroad'],
-                'solid' => ['class' => 'bi-sign-railroad-fill'],
-            ]
-        ],
-        [
-            'name' => 'building-add',
-            'displayName' => 'Building Add',
-            'class' => 'bi-building-add',
-            'keywords' => ["building","add"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-add'],
-            ]
-        ],
-        [
-            'name' => 'building-check',
-            'displayName' => 'Building Check',
-            'class' => 'bi-building-check',
-            'keywords' => ["building","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-check'],
-            ]
-        ],
-        [
-            'name' => 'building-dash',
-            'displayName' => 'Building Dash',
-            'class' => 'bi-building-dash',
-            'keywords' => ["building","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-dash'],
-            ]
-        ],
-        [
-            'name' => 'building-down',
-            'displayName' => 'Building Down',
-            'class' => 'bi-building-down',
-            'keywords' => ["building","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-down'],
-            ]
-        ],
-        [
-            'name' => 'building-exclamation',
-            'displayName' => 'Building Exclamation',
-            'class' => 'bi-building-exclamation',
-            'keywords' => ["building","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-add',
-            'displayName' => 'Building Fill Add',
-            'class' => 'bi-building-fill-add',
-            'keywords' => ["building","fill","add"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-add'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-check',
-            'displayName' => 'Building Fill Check',
-            'class' => 'bi-building-fill-check',
-            'keywords' => ["building","fill","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-check'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-dash',
-            'displayName' => 'Building Fill Dash',
-            'class' => 'bi-building-fill-dash',
-            'keywords' => ["building","fill","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-dash'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-down',
-            'displayName' => 'Building Fill Down',
-            'class' => 'bi-building-fill-down',
-            'keywords' => ["building","fill","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-down'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-exclamation',
-            'displayName' => 'Building Fill Exclamation',
-            'class' => 'bi-building-fill-exclamation',
-            'keywords' => ["building","fill","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-gear',
-            'displayName' => 'Building Fill Gear',
-            'class' => 'bi-building-fill-gear',
-            'keywords' => ["building","fill","gear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-gear'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-lock',
-            'displayName' => 'Building Fill Lock',
-            'class' => 'bi-building-fill-lock',
-            'keywords' => ["building","fill","lock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-lock'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-slash',
-            'displayName' => 'Building Fill Slash',
-            'class' => 'bi-building-fill-slash',
-            'keywords' => ["building","fill","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-slash'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-up',
-            'displayName' => 'Building Fill Up',
-            'class' => 'bi-building-fill-up',
-            'keywords' => ["building","fill","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-up'],
-            ]
-        ],
-        [
-            'name' => 'building-fill-x',
-            'displayName' => 'Building Fill X',
-            'class' => 'bi-building-fill-x',
-            'keywords' => ["building","fill","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-fill-x'],
-            ]
-        ],
-        [
-            'name' => 'building-fill',
-            'displayName' => 'Building Fill',
-            'class' => 'bi-building-fill',
-            'keywords' => ["building","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-building-fill'],
-                'outline' => ['class' => 'bi-building'],
-            ]
-        ],
-        [
-            'name' => 'building-gear',
-            'displayName' => 'Building Gear',
-            'class' => 'bi-building-gear',
-            'keywords' => ["building","gear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-gear'],
-            ]
-        ],
-        [
-            'name' => 'building-lock',
-            'displayName' => 'Building Lock',
-            'class' => 'bi-building-lock',
-            'keywords' => ["building","lock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-lock'],
-            ]
-        ],
-        [
-            'name' => 'building-slash',
-            'displayName' => 'Building Slash',
-            'class' => 'bi-building-slash',
-            'keywords' => ["building","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-slash'],
-            ]
-        ],
-        [
-            'name' => 'building-up',
-            'displayName' => 'Building Up',
-            'class' => 'bi-building-up',
-            'keywords' => ["building","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-up'],
-            ]
-        ],
-        [
-            'name' => 'building-x',
-            'displayName' => 'Building X',
-            'class' => 'bi-building-x',
-            'keywords' => ["building","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-building-x'],
-            ]
-        ],
-        [
-            'name' => 'buildings-fill',
-            'displayName' => 'Buildings Fill',
-            'class' => 'bi-buildings-fill',
-            'keywords' => ["buildings","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-buildings-fill'],
-                'outline' => ['class' => 'bi-buildings'],
-            ]
-        ],
-        [
-            'name' => 'buildings',
-            'displayName' => 'Buildings',
-            'class' => 'bi-buildings',
-            'keywords' => ["buildings"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-buildings'],
-                'solid' => ['class' => 'bi-buildings-fill'],
-            ]
-        ],
-        [
-            'name' => 'bus-front-fill',
-            'displayName' => 'Bus Front Fill',
-            'class' => 'bi-bus-front-fill',
-            'keywords' => ["bus","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-bus-front-fill'],
-                'outline' => ['class' => 'bi-bus-front'],
-            ]
-        ],
-        [
-            'name' => 'bus-front',
-            'displayName' => 'Bus Front',
-            'class' => 'bi-bus-front',
-            'keywords' => ["bus","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-bus-front'],
-                'solid' => ['class' => 'bi-bus-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'ev-front-fill',
-            'displayName' => 'Ev Front Fill',
-            'class' => 'bi-ev-front-fill',
-            'keywords' => ["ev","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-ev-front-fill'],
-                'outline' => ['class' => 'bi-ev-front'],
-            ]
-        ],
-        [
-            'name' => 'ev-front',
-            'displayName' => 'Ev Front',
-            'class' => 'bi-ev-front',
-            'keywords' => ["ev","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-ev-front'],
-                'solid' => ['class' => 'bi-ev-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-add-fill',
-            'displayName' => 'House Add Fill',
-            'class' => 'bi-house-add-fill',
-            'keywords' => ["house","add","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-add-fill'],
-                'outline' => ['class' => 'bi-house-add'],
-            ]
-        ],
-        [
-            'name' => 'house-add',
-            'displayName' => 'House Add',
-            'class' => 'bi-house-add',
-            'keywords' => ["house","add"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-add'],
-                'solid' => ['class' => 'bi-house-add-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-check-fill',
-            'displayName' => 'House Check Fill',
-            'class' => 'bi-house-check-fill',
-            'keywords' => ["house","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-check-fill'],
-                'outline' => ['class' => 'bi-house-check'],
-            ]
-        ],
-        [
-            'name' => 'house-check',
-            'displayName' => 'House Check',
-            'class' => 'bi-house-check',
-            'keywords' => ["house","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-check'],
-                'solid' => ['class' => 'bi-house-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-dash-fill',
-            'displayName' => 'House Dash Fill',
-            'class' => 'bi-house-dash-fill',
-            'keywords' => ["house","dash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-dash-fill'],
-                'outline' => ['class' => 'bi-house-dash'],
-            ]
-        ],
-        [
-            'name' => 'house-dash',
-            'displayName' => 'House Dash',
-            'class' => 'bi-house-dash',
-            'keywords' => ["house","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-dash'],
-                'solid' => ['class' => 'bi-house-dash-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-down-fill',
-            'displayName' => 'House Down Fill',
-            'class' => 'bi-house-down-fill',
-            'keywords' => ["house","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-down-fill'],
-                'outline' => ['class' => 'bi-house-down'],
-            ]
-        ],
-        [
-            'name' => 'house-down',
-            'displayName' => 'House Down',
-            'class' => 'bi-house-down',
-            'keywords' => ["house","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-down'],
-                'solid' => ['class' => 'bi-house-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-exclamation-fill',
-            'displayName' => 'House Exclamation Fill',
-            'class' => 'bi-house-exclamation-fill',
-            'keywords' => ["house","exclamation","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-exclamation-fill'],
-                'outline' => ['class' => 'bi-house-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'house-exclamation',
-            'displayName' => 'House Exclamation',
-            'class' => 'bi-house-exclamation',
-            'keywords' => ["house","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-exclamation'],
-                'solid' => ['class' => 'bi-house-exclamation-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-gear-fill',
-            'displayName' => 'House Gear Fill',
-            'class' => 'bi-house-gear-fill',
-            'keywords' => ["house","gear","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-gear-fill'],
-                'outline' => ['class' => 'bi-house-gear'],
-            ]
-        ],
-        [
-            'name' => 'house-gear',
-            'displayName' => 'House Gear',
-            'class' => 'bi-house-gear',
-            'keywords' => ["house","gear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-gear'],
-                'solid' => ['class' => 'bi-house-gear-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-lock-fill',
-            'displayName' => 'House Lock Fill',
-            'class' => 'bi-house-lock-fill',
-            'keywords' => ["house","lock","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-lock-fill'],
-                'outline' => ['class' => 'bi-house-lock'],
-            ]
-        ],
-        [
-            'name' => 'house-lock',
-            'displayName' => 'House Lock',
-            'class' => 'bi-house-lock',
-            'keywords' => ["house","lock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-lock'],
-                'solid' => ['class' => 'bi-house-lock-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-slash-fill',
-            'displayName' => 'House Slash Fill',
-            'class' => 'bi-house-slash-fill',
-            'keywords' => ["house","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-slash-fill'],
-                'outline' => ['class' => 'bi-house-slash'],
-            ]
-        ],
-        [
-            'name' => 'house-slash',
-            'displayName' => 'House Slash',
-            'class' => 'bi-house-slash',
-            'keywords' => ["house","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-slash'],
-                'solid' => ['class' => 'bi-house-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-up-fill',
-            'displayName' => 'House Up Fill',
-            'class' => 'bi-house-up-fill',
-            'keywords' => ["house","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-up-fill'],
-                'outline' => ['class' => 'bi-house-up'],
-            ]
-        ],
-        [
-            'name' => 'house-up',
-            'displayName' => 'House Up',
-            'class' => 'bi-house-up',
-            'keywords' => ["house","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-up'],
-                'solid' => ['class' => 'bi-house-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'house-x-fill',
-            'displayName' => 'House X Fill',
-            'class' => 'bi-house-x-fill',
-            'keywords' => ["house","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-house-x-fill'],
-                'outline' => ['class' => 'bi-house-x'],
-            ]
-        ],
-        [
-            'name' => 'house-x',
-            'displayName' => 'House X',
-            'class' => 'bi-house-x',
-            'keywords' => ["house","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-house-x'],
-                'solid' => ['class' => 'bi-house-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'scooter',
-            'displayName' => 'Scooter',
-            'class' => 'bi-scooter',
-            'keywords' => ["scooter"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-scooter'],
-            ]
-        ],
-        [
-            'name' => 'taxi-front-fill',
-            'displayName' => 'Taxi Front Fill',
-            'class' => 'bi-taxi-front-fill',
-            'keywords' => ["taxi","front","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-taxi-front-fill'],
-                'outline' => ['class' => 'bi-taxi-front'],
-            ]
-        ],
-        [
-            'name' => 'taxi-front',
-            'displayName' => 'Taxi Front',
-            'class' => 'bi-taxi-front',
-            'keywords' => ["taxi","front"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-taxi-front'],
-                'solid' => ['class' => 'bi-taxi-front-fill'],
-            ]
-        ],
-        [
-            'name' => 'database-add',
-            'displayName' => 'Database Add',
-            'class' => 'bi-database-add',
-            'keywords' => ["database","add"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-add'],
-            ]
-        ],
-        [
-            'name' => 'database-check',
-            'displayName' => 'Database Check',
-            'class' => 'bi-database-check',
-            'keywords' => ["database","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-check'],
-            ]
-        ],
-        [
-            'name' => 'database-dash',
-            'displayName' => 'Database Dash',
-            'class' => 'bi-database-dash',
-            'keywords' => ["database","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-dash'],
-            ]
-        ],
-        [
-            'name' => 'database-down',
-            'displayName' => 'Database Down',
-            'class' => 'bi-database-down',
-            'keywords' => ["database","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-down'],
-            ]
-        ],
-        [
-            'name' => 'database-exclamation',
-            'displayName' => 'Database Exclamation',
-            'class' => 'bi-database-exclamation',
-            'keywords' => ["database","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-add',
-            'displayName' => 'Database Fill Add',
-            'class' => 'bi-database-fill-add',
-            'keywords' => ["database","fill","add"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-add'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-check',
-            'displayName' => 'Database Fill Check',
-            'class' => 'bi-database-fill-check',
-            'keywords' => ["database","fill","check"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-check'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-dash',
-            'displayName' => 'Database Fill Dash',
-            'class' => 'bi-database-fill-dash',
-            'keywords' => ["database","fill","dash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-dash'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-down',
-            'displayName' => 'Database Fill Down',
-            'class' => 'bi-database-fill-down',
-            'keywords' => ["database","fill","down"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-down'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-exclamation',
-            'displayName' => 'Database Fill Exclamation',
-            'class' => 'bi-database-fill-exclamation',
-            'keywords' => ["database","fill","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-gear',
-            'displayName' => 'Database Fill Gear',
-            'class' => 'bi-database-fill-gear',
-            'keywords' => ["database","fill","gear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-gear'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-lock',
-            'displayName' => 'Database Fill Lock',
-            'class' => 'bi-database-fill-lock',
-            'keywords' => ["database","fill","lock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-lock'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-slash',
-            'displayName' => 'Database Fill Slash',
-            'class' => 'bi-database-fill-slash',
-            'keywords' => ["database","fill","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-slash'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-up',
-            'displayName' => 'Database Fill Up',
-            'class' => 'bi-database-fill-up',
-            'keywords' => ["database","fill","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-up'],
-            ]
-        ],
-        [
-            'name' => 'database-fill-x',
-            'displayName' => 'Database Fill X',
-            'class' => 'bi-database-fill-x',
-            'keywords' => ["database","fill","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-fill-x'],
-            ]
-        ],
-        [
-            'name' => 'database-fill',
-            'displayName' => 'Database Fill',
-            'class' => 'bi-database-fill',
-            'keywords' => ["database","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-database-fill'],
-                'outline' => ['class' => 'bi-database'],
-            ]
-        ],
-        [
-            'name' => 'database-gear',
-            'displayName' => 'Database Gear',
-            'class' => 'bi-database-gear',
-            'keywords' => ["database","gear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-gear'],
-            ]
-        ],
-        [
-            'name' => 'database-lock',
-            'displayName' => 'Database Lock',
-            'class' => 'bi-database-lock',
-            'keywords' => ["database","lock"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-lock'],
-            ]
-        ],
-        [
-            'name' => 'database-slash',
-            'displayName' => 'Database Slash',
-            'class' => 'bi-database-slash',
-            'keywords' => ["database","slash"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-slash'],
-            ]
-        ],
-        [
-            'name' => 'database-up',
-            'displayName' => 'Database Up',
-            'class' => 'bi-database-up',
-            'keywords' => ["database","up"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-up'],
-            ]
-        ],
-        [
-            'name' => 'database-x',
-            'displayName' => 'Database X',
-            'class' => 'bi-database-x',
-            'keywords' => ["database","x"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database-x'],
-            ]
-        ],
-        [
-            'name' => 'database',
-            'displayName' => 'Database',
-            'class' => 'bi-database',
-            'keywords' => ["database"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-database'],
-                'solid' => ['class' => 'bi-database-fill'],
-            ]
-        ],
-        [
-            'name' => 'houses-fill',
-            'displayName' => 'Houses Fill',
-            'class' => 'bi-houses-fill',
-            'keywords' => ["houses","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-houses-fill'],
-                'outline' => ['class' => 'bi-houses'],
-            ]
-        ],
-        [
-            'name' => 'houses',
-            'displayName' => 'Houses',
-            'class' => 'bi-houses',
-            'keywords' => ["houses"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-houses'],
-                'solid' => ['class' => 'bi-houses-fill'],
-            ]
-        ],
-        [
-            'name' => 'cake',
-            'displayName' => 'Cake',
-            'class' => 'bi-cake',
-            'keywords' => ["cake"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cake'],
-                'solid' => ['class' => 'bi-cake-fill'],
-            ]
-        ],
-        [
-            'name' => 'cake2',
-            'displayName' => 'Cake2',
-            'class' => 'bi-cake2',
-            'keywords' => ["cake2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cake2'],
-                'solid' => ['class' => 'bi-cake2-fill'],
-            ]
-        ],
-        [
-            'name' => 'cookie',
-            'displayName' => 'Cookie',
-            'class' => 'bi-cookie',
-            'keywords' => ["cookie"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-cookie'],
-            ]
-        ],
-        [
-            'name' => 'emoji-astonished-fill',
-            'displayName' => 'Emoji Astonished Fill',
-            'class' => 'bi-emoji-astonished-fill',
-            'keywords' => ["emoji","astonished","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-emoji-astonished-fill'],
-                'outline' => ['class' => 'bi-emoji-astonished'],
-            ]
-        ],
-        [
-            'name' => 'emoji-astonished',
-            'displayName' => 'Emoji Astonished',
-            'class' => 'bi-emoji-astonished',
-            'keywords' => ["emoji","astonished"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-emoji-astonished'],
-                'solid' => ['class' => 'bi-emoji-astonished-fill'],
-            ]
-        ],
-        [
-            'name' => 'emoji-grimace-fill',
-            'displayName' => 'Emoji Grimace Fill',
-            'class' => 'bi-emoji-grimace-fill',
-            'keywords' => ["emoji","grimace","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-emoji-grimace-fill'],
-                'outline' => ['class' => 'bi-emoji-grimace'],
-            ]
-        ],
-        [
-            'name' => 'emoji-grimace',
-            'displayName' => 'Emoji Grimace',
-            'class' => 'bi-emoji-grimace',
-            'keywords' => ["emoji","grimace"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-emoji-grimace'],
-                'solid' => ['class' => 'bi-emoji-grimace-fill'],
-            ]
-        ],
-        [
-            'name' => 'emoji-grin-fill',
-            'displayName' => 'Emoji Grin Fill',
-            'class' => 'bi-emoji-grin-fill',
-            'keywords' => ["emoji","grin","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-emoji-grin-fill'],
-                'outline' => ['class' => 'bi-emoji-grin'],
-            ]
-        ],
-        [
-            'name' => 'emoji-grin',
-            'displayName' => 'Emoji Grin',
-            'class' => 'bi-emoji-grin',
-            'keywords' => ["emoji","grin"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-emoji-grin'],
-                'solid' => ['class' => 'bi-emoji-grin-fill'],
-            ]
-        ],
-        [
-            'name' => 'emoji-surprise-fill',
-            'displayName' => 'Emoji Surprise Fill',
-            'class' => 'bi-emoji-surprise-fill',
-            'keywords' => ["emoji","surprise","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-emoji-surprise-fill'],
-                'outline' => ['class' => 'bi-emoji-surprise'],
-            ]
-        ],
-        [
-            'name' => 'emoji-surprise',
-            'displayName' => 'Emoji Surprise',
-            'class' => 'bi-emoji-surprise',
-            'keywords' => ["emoji","surprise"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-emoji-surprise'],
-                'solid' => ['class' => 'bi-emoji-surprise-fill'],
-            ]
-        ],
-        [
-            'name' => 'emoji-tear-fill',
-            'displayName' => 'Emoji Tear Fill',
-            'class' => 'bi-emoji-tear-fill',
-            'keywords' => ["emoji","tear","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-emoji-tear-fill'],
-                'outline' => ['class' => 'bi-emoji-tear'],
-            ]
-        ],
-        [
-            'name' => 'emoji-tear',
-            'displayName' => 'Emoji Tear',
-            'class' => 'bi-emoji-tear',
-            'keywords' => ["emoji","tear"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-emoji-tear'],
-                'solid' => ['class' => 'bi-emoji-tear-fill'],
-            ]
-        ],
-        [
-            'name' => 'feather',
-            'displayName' => 'Feather',
-            'class' => 'bi-feather',
-            'keywords' => ["feather"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-feather'],
-            ]
-        ],
-        [
-            'name' => 'feather2',
-            'displayName' => 'Feather2',
-            'class' => 'bi-feather2',
-            'keywords' => ["feather2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-feather2'],
-            ]
-        ],
-        [
-            'name' => 'highlighter',
-            'displayName' => 'Highlighter',
-            'class' => 'bi-highlighter',
-            'keywords' => ["highlighter"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-highlighter'],
-            ]
-        ],
-        [
-            'name' => 'marker-tip',
-            'displayName' => 'Marker Tip',
-            'class' => 'bi-marker-tip',
-            'keywords' => ["marker","tip"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-marker-tip'],
-            ]
-        ],
-        [
-            'name' => 'nvme-fill',
-            'displayName' => 'Nvme Fill',
-            'class' => 'bi-nvme-fill',
-            'keywords' => ["nvme","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-nvme-fill'],
-                'outline' => ['class' => 'bi-nvme'],
-            ]
-        ],
-        [
-            'name' => 'nvme',
-            'displayName' => 'Nvme',
-            'class' => 'bi-nvme',
-            'keywords' => ["nvme"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-nvme'],
-                'solid' => ['class' => 'bi-nvme-fill'],
-            ]
-        ],
-        [
-            'name' => 'pci-card-network',
-            'displayName' => 'Pci Card Network',
-            'class' => 'bi-pci-card-network',
-            'keywords' => ["pci","card","network"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pci-card-network'],
-            ]
-        ],
-        [
-            'name' => 'pci-card-sound',
-            'displayName' => 'Pci Card Sound',
-            'class' => 'bi-pci-card-sound',
-            'keywords' => ["pci","card","sound"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-pci-card-sound'],
-            ]
-        ],
-        [
-            'name' => 'radar',
-            'displayName' => 'Radar',
-            'class' => 'bi-radar',
-            'keywords' => ["radar"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-radar'],
-            ]
-        ],
-        [
-            'name' => 'backpack-fill',
-            'displayName' => 'Backpack Fill',
-            'class' => 'bi-backpack-fill',
-            'keywords' => ["backpack","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backpack-fill'],
-                'outline' => ['class' => 'bi-backpack'],
-            ]
-        ],
-        [
-            'name' => 'backpack',
-            'displayName' => 'Backpack',
-            'class' => 'bi-backpack',
-            'keywords' => ["backpack"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backpack'],
-                'solid' => ['class' => 'bi-backpack-fill'],
-            ]
-        ],
-        [
-            'name' => 'backpack2-fill',
-            'displayName' => 'Backpack2 Fill',
-            'class' => 'bi-backpack2-fill',
-            'keywords' => ["backpack2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backpack2-fill'],
-                'outline' => ['class' => 'bi-backpack2'],
-            ]
-        ],
-        [
-            'name' => 'backpack2',
-            'displayName' => 'Backpack2',
-            'class' => 'bi-backpack2',
-            'keywords' => ["backpack2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backpack2'],
-                'solid' => ['class' => 'bi-backpack2-fill'],
-            ]
-        ],
-        [
-            'name' => 'backpack3-fill',
-            'displayName' => 'Backpack3 Fill',
-            'class' => 'bi-backpack3-fill',
-            'keywords' => ["backpack3","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backpack3-fill'],
-                'outline' => ['class' => 'bi-backpack3'],
-            ]
-        ],
-        [
-            'name' => 'backpack3',
-            'displayName' => 'Backpack3',
-            'class' => 'bi-backpack3',
-            'keywords' => ["backpack3"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backpack3'],
-                'solid' => ['class' => 'bi-backpack3-fill'],
-            ]
-        ],
-        [
-            'name' => 'backpack4-fill',
-            'displayName' => 'Backpack4 Fill',
-            'class' => 'bi-backpack4-fill',
-            'keywords' => ["backpack4","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-backpack4-fill'],
-                'outline' => ['class' => 'bi-backpack4'],
-            ]
-        ],
-        [
-            'name' => 'backpack4',
-            'displayName' => 'Backpack4',
-            'class' => 'bi-backpack4',
-            'keywords' => ["backpack4"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-backpack4'],
-                'solid' => ['class' => 'bi-backpack4-fill'],
-            ]
-        ],
-        [
-            'name' => 'cake-fill',
-            'displayName' => 'Cake Fill',
-            'class' => 'bi-cake-fill',
-            'keywords' => ["cake","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cake-fill'],
-                'outline' => ['class' => 'bi-cake'],
-            ]
-        ],
-        [
-            'name' => 'cake2-fill',
-            'displayName' => 'Cake2 Fill',
-            'class' => 'bi-cake2-fill',
-            'keywords' => ["cake2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-cake2-fill'],
-                'outline' => ['class' => 'bi-cake2'],
-            ]
-        ],
-        [
-            'name' => 'duffle-fill',
-            'displayName' => 'Duffle Fill',
-            'class' => 'bi-duffle-fill',
-            'keywords' => ["duffle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-duffle-fill'],
-                'outline' => ['class' => 'bi-duffle'],
-            ]
-        ],
-        [
-            'name' => 'duffle',
-            'displayName' => 'Duffle',
-            'class' => 'bi-duffle',
-            'keywords' => ["duffle"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-duffle'],
-                'solid' => ['class' => 'bi-duffle-fill'],
-            ]
-        ],
-        [
-            'name' => 'luggage-fill',
-            'displayName' => 'Luggage Fill',
-            'class' => 'bi-luggage-fill',
-            'keywords' => ["luggage","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-luggage-fill'],
-                'outline' => ['class' => 'bi-luggage'],
-            ]
-        ],
-        [
-            'name' => 'luggage',
-            'displayName' => 'Luggage',
-            'class' => 'bi-luggage',
-            'keywords' => ["luggage"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-luggage'],
-                'solid' => ['class' => 'bi-luggage-fill'],
-            ]
-        ],
-        [
-            'name' => 'passport-fill',
-            'displayName' => 'Passport Fill',
-            'class' => 'bi-passport-fill',
-            'keywords' => ["passport","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-passport-fill'],
-                'outline' => ['class' => 'bi-passport'],
-            ]
-        ],
-        [
-            'name' => 'passport',
-            'displayName' => 'Passport',
-            'class' => 'bi-passport',
-            'keywords' => ["passport"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-passport'],
-                'solid' => ['class' => 'bi-passport-fill'],
-            ]
-        ],
-        [
-            'name' => 'suitcase-fill',
-            'displayName' => 'Suitcase Fill',
-            'class' => 'bi-suitcase-fill',
-            'keywords' => ["suitcase","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suitcase-fill'],
-                'outline' => ['class' => 'bi-suitcase'],
-            ]
-        ],
-        [
-            'name' => 'suitcase-lg-fill',
-            'displayName' => 'Suitcase Lg Fill',
-            'class' => 'bi-suitcase-lg-fill',
-            'keywords' => ["suitcase","lg","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suitcase-lg-fill'],
-                'outline' => ['class' => 'bi-suitcase-lg'],
-            ]
-        ],
-        [
-            'name' => 'suitcase-lg',
-            'displayName' => 'Suitcase Lg',
-            'class' => 'bi-suitcase-lg',
-            'keywords' => ["suitcase","lg"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suitcase-lg'],
-                'solid' => ['class' => 'bi-suitcase-lg-fill'],
-            ]
-        ],
-        [
-            'name' => 'suitcase',
-            'displayName' => 'Suitcase',
-            'class' => 'bi-suitcase',
-            'keywords' => ["suitcase"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suitcase'],
-                'solid' => ['class' => 'bi-suitcase-fill'],
-            ]
-        ],
-        [
-            'name' => 'suitcase2-fill',
-            'displayName' => 'Suitcase2 Fill',
-            'class' => 'bi-suitcase2-fill',
-            'keywords' => ["suitcase2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-suitcase2-fill'],
-                'outline' => ['class' => 'bi-suitcase2'],
-            ]
-        ],
-        [
-            'name' => 'suitcase2',
-            'displayName' => 'Suitcase2',
-            'class' => 'bi-suitcase2',
-            'keywords' => ["suitcase2"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-suitcase2'],
-                'solid' => ['class' => 'bi-suitcase2-fill'],
-            ]
-        ],
-        [
-            'name' => 'beaker-fill',
-            'displayName' => 'Beaker Fill',
-            'class' => 'bi-beaker-fill',
-            'keywords' => ["beaker","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-beaker-fill'],
-                'outline' => ['class' => 'bi-beaker'],
-            ]
-        ],
-        [
-            'name' => 'beaker',
-            'displayName' => 'Beaker',
-            'class' => 'bi-beaker',
-            'keywords' => ["beaker"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-beaker'],
-                'solid' => ['class' => 'bi-beaker-fill'],
-            ]
-        ],
-        [
-            'name' => 'flask-fill',
-            'displayName' => 'Flask Fill',
-            'class' => 'bi-flask-fill',
-            'keywords' => ["flask","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-flask-fill'],
-                'outline' => ['class' => 'bi-flask'],
-            ]
-        ],
-        [
-            'name' => 'flask-florence-fill',
-            'displayName' => 'Flask Florence Fill',
-            'class' => 'bi-flask-florence-fill',
-            'keywords' => ["flask","florence","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-flask-florence-fill'],
-                'outline' => ['class' => 'bi-flask-florence'],
-            ]
-        ],
-        [
-            'name' => 'flask-florence',
-            'displayName' => 'Flask Florence',
-            'class' => 'bi-flask-florence',
-            'keywords' => ["flask","florence"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flask-florence'],
-                'solid' => ['class' => 'bi-flask-florence-fill'],
-            ]
-        ],
-        [
-            'name' => 'flask',
-            'displayName' => 'Flask',
-            'class' => 'bi-flask',
-            'keywords' => ["flask"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-flask'],
-                'solid' => ['class' => 'bi-flask-fill'],
-            ]
-        ],
-        [
-            'name' => 'leaf-fill',
-            'displayName' => 'Leaf Fill',
-            'class' => 'bi-leaf-fill',
-            'keywords' => ["leaf","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-leaf-fill'],
-                'outline' => ['class' => 'bi-leaf'],
-            ]
-        ],
-        [
-            'name' => 'leaf',
-            'displayName' => 'Leaf',
-            'class' => 'bi-leaf',
-            'keywords' => ["leaf"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-leaf'],
-                'solid' => ['class' => 'bi-leaf-fill'],
-            ]
-        ],
-        [
-            'name' => 'measuring-cup-fill',
-            'displayName' => 'Measuring Cup Fill',
-            'class' => 'bi-measuring-cup-fill',
-            'keywords' => ["measuring","cup","fill"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'solid' => ['class' => 'bi-measuring-cup-fill'],
-                'outline' => ['class' => 'bi-measuring-cup'],
-            ]
-        ],
-        [
-            'name' => 'measuring-cup',
-            'displayName' => 'Measuring Cup',
-            'class' => 'bi-measuring-cup',
-            'keywords' => ["measuring","cup"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-measuring-cup'],
-                'solid' => ['class' => 'bi-measuring-cup-fill'],
-            ]
-        ],
-        [
-            'name' => 'fork-knife',
-            'displayName' => 'Fork Knife',
-            'class' => 'bi-fork-knife',
-            'keywords' => ["fork","knife"],
-            'type' => 'bootstrap',
-            'category' => 'others',
-            'variants' => [
-                'outline' => ['class' => 'bi-fork-knife'],
-            ]
-        ],
-    ]
-];
+return array (
+  'id' => 'others',
+  'name' => '其他',
+  'description' => '其他類別圖標',
+  'priority' => 'normal',
+  'icons' => 
+  array (
+    0 => 
+    array (
+      'id' => 'asterisk-outline',
+      'name' => 'Asterisk',
+      'value' => 'bi-asterisk',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'asterisk',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    1 => 
+    array (
+      'id' => 'award-fill-solid',
+      'name' => 'Award Fill',
+      'value' => 'bi-award-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'award',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    2 => 
+    array (
+      'id' => 'award-fill-outline',
+      'name' => 'Award Fill',
+      'value' => 'bi-award',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'award',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    3 => 
+    array (
+      'id' => 'award-outline',
+      'name' => 'Award',
+      'value' => 'bi-award',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'award',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    4 => 
+    array (
+      'id' => 'backspace-fill-solid',
+      'name' => 'Backspace Fill',
+      'value' => 'bi-backspace-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    5 => 
+    array (
+      'id' => 'backspace-fill-outline',
+      'name' => 'Backspace Fill',
+      'value' => 'bi-backspace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    6 => 
+    array (
+      'id' => 'backspace-reverse-fill-solid',
+      'name' => 'Backspace Reverse Fill',
+      'value' => 'bi-backspace-reverse-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+        1 => 'reverse',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    7 => 
+    array (
+      'id' => 'backspace-reverse-fill-outline',
+      'name' => 'Backspace Reverse Fill',
+      'value' => 'bi-backspace-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+        1 => 'reverse',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    8 => 
+    array (
+      'id' => 'backspace-reverse-outline',
+      'name' => 'Backspace Reverse',
+      'value' => 'bi-backspace-reverse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+        1 => 'reverse',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    9 => 
+    array (
+      'id' => 'backspace-outline',
+      'name' => 'Backspace',
+      'value' => 'bi-backspace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backspace',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    10 => 
+    array (
+      'id' => 'bag-check-fill-solid',
+      'name' => 'Bag Check Fill',
+      'value' => 'bi-bag-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    11 => 
+    array (
+      'id' => 'bag-check-fill-outline',
+      'name' => 'Bag Check Fill',
+      'value' => 'bi-bag-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    12 => 
+    array (
+      'id' => 'bag-check-outline',
+      'name' => 'Bag Check',
+      'value' => 'bi-bag-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    13 => 
+    array (
+      'id' => 'bag-dash-fill-solid',
+      'name' => 'Bag Dash Fill',
+      'value' => 'bi-bag-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    14 => 
+    array (
+      'id' => 'bag-dash-fill-outline',
+      'name' => 'Bag Dash Fill',
+      'value' => 'bi-bag-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    15 => 
+    array (
+      'id' => 'bag-dash-outline',
+      'name' => 'Bag Dash',
+      'value' => 'bi-bag-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    16 => 
+    array (
+      'id' => 'bag-fill-solid',
+      'name' => 'Bag Fill',
+      'value' => 'bi-bag-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    17 => 
+    array (
+      'id' => 'bag-fill-outline',
+      'name' => 'Bag Fill',
+      'value' => 'bi-bag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    18 => 
+    array (
+      'id' => 'bag-plus-fill-solid',
+      'name' => 'Bag Plus Fill',
+      'value' => 'bi-bag-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    19 => 
+    array (
+      'id' => 'bag-plus-fill-outline',
+      'name' => 'Bag Plus Fill',
+      'value' => 'bi-bag-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    20 => 
+    array (
+      'id' => 'bag-plus-outline',
+      'name' => 'Bag Plus',
+      'value' => 'bi-bag-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'plus',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    21 => 
+    array (
+      'id' => 'bag-x-fill-solid',
+      'name' => 'Bag X Fill',
+      'value' => 'bi-bag-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    22 => 
+    array (
+      'id' => 'bag-x-fill-outline',
+      'name' => 'Bag X Fill',
+      'value' => 'bi-bag-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    23 => 
+    array (
+      'id' => 'bag-x-outline',
+      'name' => 'Bag X',
+      'value' => 'bi-bag-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    24 => 
+    array (
+      'id' => 'bag-outline',
+      'name' => 'Bag',
+      'value' => 'bi-bag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    25 => 
+    array (
+      'id' => 'basket-fill-solid',
+      'name' => 'Basket Fill',
+      'value' => 'bi-basket-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    26 => 
+    array (
+      'id' => 'basket-fill-outline',
+      'name' => 'Basket Fill',
+      'value' => 'bi-basket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    27 => 
+    array (
+      'id' => 'basket-outline',
+      'name' => 'Basket',
+      'value' => 'bi-basket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    28 => 
+    array (
+      'id' => 'basket2-fill-solid',
+      'name' => 'Basket2 Fill',
+      'value' => 'bi-basket2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    29 => 
+    array (
+      'id' => 'basket2-fill-outline',
+      'name' => 'Basket2 Fill',
+      'value' => 'bi-basket2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    30 => 
+    array (
+      'id' => 'basket2-outline',
+      'name' => 'Basket2',
+      'value' => 'bi-basket2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    31 => 
+    array (
+      'id' => 'basket3-fill-solid',
+      'name' => 'Basket3 Fill',
+      'value' => 'bi-basket3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    32 => 
+    array (
+      'id' => 'basket3-fill-outline',
+      'name' => 'Basket3 Fill',
+      'value' => 'bi-basket3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    33 => 
+    array (
+      'id' => 'basket3-outline',
+      'name' => 'Basket3',
+      'value' => 'bi-basket3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'basket3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    34 => 
+    array (
+      'id' => 'battery-charging-outline',
+      'name' => 'Battery Charging',
+      'value' => 'bi-battery-charging',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'battery',
+        1 => 'charging',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    35 => 
+    array (
+      'id' => 'battery-full-outline',
+      'name' => 'Battery Full',
+      'value' => 'bi-battery-full',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'battery',
+        1 => 'full',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    36 => 
+    array (
+      'id' => 'battery-half-outline',
+      'name' => 'Battery Half',
+      'value' => 'bi-battery-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'battery',
+        1 => 'half',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    37 => 
+    array (
+      'id' => 'battery-outline',
+      'name' => 'Battery',
+      'value' => 'bi-battery',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'battery',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    38 => 
+    array (
+      'id' => 'bezier-outline',
+      'name' => 'Bezier',
+      'value' => 'bi-bezier',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bezier',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    39 => 
+    array (
+      'id' => 'bezier2-outline',
+      'name' => 'Bezier2',
+      'value' => 'bi-bezier2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bezier2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    40 => 
+    array (
+      'id' => 'bicycle-outline',
+      'name' => 'Bicycle',
+      'value' => 'bi-bicycle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bicycle',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    41 => 
+    array (
+      'id' => 'binoculars-fill-solid',
+      'name' => 'Binoculars Fill',
+      'value' => 'bi-binoculars-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'binoculars',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    42 => 
+    array (
+      'id' => 'binoculars-fill-outline',
+      'name' => 'Binoculars Fill',
+      'value' => 'bi-binoculars',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'binoculars',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    43 => 
+    array (
+      'id' => 'binoculars-outline',
+      'name' => 'Binoculars',
+      'value' => 'bi-binoculars',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'binoculars',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    44 => 
+    array (
+      'id' => 'bootstrap-fill-solid',
+      'name' => 'Bootstrap Fill',
+      'value' => 'bi-bootstrap-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bootstrap',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    45 => 
+    array (
+      'id' => 'bootstrap-fill-outline',
+      'name' => 'Bootstrap Fill',
+      'value' => 'bi-bootstrap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bootstrap',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    46 => 
+    array (
+      'id' => 'bootstrap-reboot-outline',
+      'name' => 'Bootstrap Reboot',
+      'value' => 'bi-bootstrap-reboot',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bootstrap',
+        1 => 'reboot',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    47 => 
+    array (
+      'id' => 'bootstrap-outline',
+      'name' => 'Bootstrap',
+      'value' => 'bi-bootstrap',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bootstrap',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    48 => 
+    array (
+      'id' => 'bricks-outline',
+      'name' => 'Bricks',
+      'value' => 'bi-bricks',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bricks',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    49 => 
+    array (
+      'id' => 'briefcase-fill-solid',
+      'name' => 'Briefcase Fill',
+      'value' => 'bi-briefcase-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'briefcase',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    50 => 
+    array (
+      'id' => 'briefcase-fill-outline',
+      'name' => 'Briefcase Fill',
+      'value' => 'bi-briefcase',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'briefcase',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    51 => 
+    array (
+      'id' => 'briefcase-outline',
+      'name' => 'Briefcase',
+      'value' => 'bi-briefcase',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'briefcase',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    52 => 
+    array (
+      'id' => 'brush-fill-solid',
+      'name' => 'Brush Fill',
+      'value' => 'bi-brush-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brush',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    53 => 
+    array (
+      'id' => 'brush-fill-outline',
+      'name' => 'Brush Fill',
+      'value' => 'bi-brush',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brush',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    54 => 
+    array (
+      'id' => 'brush-outline',
+      'name' => 'Brush',
+      'value' => 'bi-brush',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'brush',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    55 => 
+    array (
+      'id' => 'bucket-fill-solid',
+      'name' => 'Bucket Fill',
+      'value' => 'bi-bucket-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bucket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    56 => 
+    array (
+      'id' => 'bucket-fill-outline',
+      'name' => 'Bucket Fill',
+      'value' => 'bi-bucket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bucket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    57 => 
+    array (
+      'id' => 'bucket-outline',
+      'name' => 'Bucket',
+      'value' => 'bi-bucket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bucket',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    58 => 
+    array (
+      'id' => 'bug-fill-solid',
+      'name' => 'Bug Fill',
+      'value' => 'bi-bug-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bug',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    59 => 
+    array (
+      'id' => 'bug-fill-outline',
+      'name' => 'Bug Fill',
+      'value' => 'bi-bug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bug',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    60 => 
+    array (
+      'id' => 'bug-outline',
+      'name' => 'Bug',
+      'value' => 'bi-bug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bug',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    61 => 
+    array (
+      'id' => 'building-outline',
+      'name' => 'Building',
+      'value' => 'bi-building',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    62 => 
+    array (
+      'id' => 'bullseye-outline',
+      'name' => 'Bullseye',
+      'value' => 'bi-bullseye',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bullseye',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    63 => 
+    array (
+      'id' => 'calculator-fill-solid',
+      'name' => 'Calculator Fill',
+      'value' => 'bi-calculator-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calculator',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    64 => 
+    array (
+      'id' => 'calculator-fill-outline',
+      'name' => 'Calculator Fill',
+      'value' => 'bi-calculator',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calculator',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    65 => 
+    array (
+      'id' => 'calculator-outline',
+      'name' => 'Calculator',
+      'value' => 'bi-calculator',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calculator',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    66 => 
+    array (
+      'id' => 'capslock-fill-solid',
+      'name' => 'Capslock Fill',
+      'value' => 'bi-capslock-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'capslock',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    67 => 
+    array (
+      'id' => 'capslock-fill-outline',
+      'name' => 'Capslock Fill',
+      'value' => 'bi-capslock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'capslock',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    68 => 
+    array (
+      'id' => 'capslock-outline',
+      'name' => 'Capslock',
+      'value' => 'bi-capslock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'capslock',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    69 => 
+    array (
+      'id' => 'cart-check-fill-solid',
+      'name' => 'Cart Check Fill',
+      'value' => 'bi-cart-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    70 => 
+    array (
+      'id' => 'cart-check-fill-outline',
+      'name' => 'Cart Check Fill',
+      'value' => 'bi-cart-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    71 => 
+    array (
+      'id' => 'cart-check-outline',
+      'name' => 'Cart Check',
+      'value' => 'bi-cart-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    72 => 
+    array (
+      'id' => 'cart-check-solid',
+      'name' => 'Cart Check',
+      'value' => 'bi-cart-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    73 => 
+    array (
+      'id' => 'cart-dash-fill-solid',
+      'name' => 'Cart Dash Fill',
+      'value' => 'bi-cart-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    74 => 
+    array (
+      'id' => 'cart-dash-fill-outline',
+      'name' => 'Cart Dash Fill',
+      'value' => 'bi-cart-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    75 => 
+    array (
+      'id' => 'cart-dash-outline',
+      'name' => 'Cart Dash',
+      'value' => 'bi-cart-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
+      'id' => 'cart-dash-solid',
+      'name' => 'Cart Dash',
+      'value' => 'bi-cart-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    77 => 
+    array (
+      'id' => 'cart-fill-solid',
+      'name' => 'Cart Fill',
+      'value' => 'bi-cart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    78 => 
+    array (
+      'id' => 'cart-fill-outline',
+      'name' => 'Cart Fill',
+      'value' => 'bi-cart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    79 => 
+    array (
+      'id' => 'cart-plus-fill-solid',
+      'name' => 'Cart Plus Fill',
+      'value' => 'bi-cart-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    80 => 
+    array (
+      'id' => 'cart-plus-fill-outline',
+      'name' => 'Cart Plus Fill',
+      'value' => 'bi-cart-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    81 => 
+    array (
+      'id' => 'cart-plus-outline',
+      'name' => 'Cart Plus',
+      'value' => 'bi-cart-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'plus',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    82 => 
+    array (
+      'id' => 'cart-plus-solid',
+      'name' => 'Cart Plus',
+      'value' => 'bi-cart-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'plus',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    83 => 
+    array (
+      'id' => 'cart-x-fill-solid',
+      'name' => 'Cart X Fill',
+      'value' => 'bi-cart-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    84 => 
+    array (
+      'id' => 'cart-x-fill-outline',
+      'name' => 'Cart X Fill',
+      'value' => 'bi-cart-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    85 => 
+    array (
+      'id' => 'cart-x-outline',
+      'name' => 'Cart X',
+      'value' => 'bi-cart-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    86 => 
+    array (
+      'id' => 'cart-x-solid',
+      'name' => 'Cart X',
+      'value' => 'bi-cart-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    87 => 
+    array (
+      'id' => 'cart-outline',
+      'name' => 'Cart',
+      'value' => 'bi-cart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    88 => 
+    array (
+      'id' => 'cart-solid',
+      'name' => 'Cart',
+      'value' => 'bi-cart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    89 => 
+    array (
+      'id' => 'cart2-outline',
+      'name' => 'Cart2',
+      'value' => 'bi-cart2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart2',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    90 => 
+    array (
+      'id' => 'cart2-solid',
+      'name' => 'Cart2',
+      'value' => 'bi-cart2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart2',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    91 => 
+    array (
+      'id' => 'cart3-outline',
+      'name' => 'Cart3',
+      'value' => 'bi-cart3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart3',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    92 => 
+    array (
+      'id' => 'cart3-solid',
+      'name' => 'Cart3',
+      'value' => 'bi-cart3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart3',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    93 => 
+    array (
+      'id' => 'cart4-outline',
+      'name' => 'Cart4',
+      'value' => 'bi-cart4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart4',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    94 => 
+    array (
+      'id' => 'cart4-solid',
+      'name' => 'Cart4',
+      'value' => 'bi-cart4-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cart4',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    95 => 
+    array (
+      'id' => 'cash-stack-outline',
+      'name' => 'Cash Stack',
+      'value' => 'bi-cash-stack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cash',
+        1 => 'stack',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    96 => 
+    array (
+      'id' => 'cash-outline',
+      'name' => 'Cash',
+      'value' => 'bi-cash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    97 => 
+    array (
+      'id' => 'cloud-arrow-down-fill-solid',
+      'name' => 'Cloud Arrow Down Fill',
+      'value' => 'bi-cloud-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    98 => 
+    array (
+      'id' => 'cloud-arrow-down-fill-outline',
+      'name' => 'Cloud Arrow Down Fill',
+      'value' => 'bi-cloud-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    99 => 
+    array (
+      'id' => 'cloud-arrow-down-outline',
+      'name' => 'Cloud Arrow Down',
+      'value' => 'bi-cloud-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    100 => 
+    array (
+      'id' => 'cloud-arrow-down-solid',
+      'name' => 'Cloud Arrow Down',
+      'value' => 'bi-cloud-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    101 => 
+    array (
+      'id' => 'cloud-arrow-up-fill-solid',
+      'name' => 'Cloud Arrow Up Fill',
+      'value' => 'bi-cloud-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    102 => 
+    array (
+      'id' => 'cloud-arrow-up-fill-outline',
+      'name' => 'Cloud Arrow Up Fill',
+      'value' => 'bi-cloud-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    103 => 
+    array (
+      'id' => 'cloud-arrow-up-outline',
+      'name' => 'Cloud Arrow Up',
+      'value' => 'bi-cloud-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    104 => 
+    array (
+      'id' => 'cloud-arrow-up-solid',
+      'name' => 'Cloud Arrow Up',
+      'value' => 'bi-cloud-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    105 => 
+    array (
+      'id' => 'cloud-check-fill-solid',
+      'name' => 'Cloud Check Fill',
+      'value' => 'bi-cloud-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    106 => 
+    array (
+      'id' => 'cloud-check-fill-outline',
+      'name' => 'Cloud Check Fill',
+      'value' => 'bi-cloud-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    107 => 
+    array (
+      'id' => 'cloud-check-outline',
+      'name' => 'Cloud Check',
+      'value' => 'bi-cloud-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    108 => 
+    array (
+      'id' => 'cloud-download-fill-solid',
+      'name' => 'Cloud Download Fill',
+      'value' => 'bi-cloud-download-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'download',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    109 => 
+    array (
+      'id' => 'cloud-download-fill-outline',
+      'name' => 'Cloud Download Fill',
+      'value' => 'bi-cloud-download',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'download',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    110 => 
+    array (
+      'id' => 'cloud-download-outline',
+      'name' => 'Cloud Download',
+      'value' => 'bi-cloud-download',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'download',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    111 => 
+    array (
+      'id' => 'cloud-drizzle-fill-solid',
+      'name' => 'Cloud Drizzle Fill',
+      'value' => 'bi-cloud-drizzle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'drizzle',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    112 => 
+    array (
+      'id' => 'cloud-drizzle-fill-outline',
+      'name' => 'Cloud Drizzle Fill',
+      'value' => 'bi-cloud-drizzle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'drizzle',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    113 => 
+    array (
+      'id' => 'cloud-drizzle-outline',
+      'name' => 'Cloud Drizzle',
+      'value' => 'bi-cloud-drizzle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'drizzle',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    114 => 
+    array (
+      'id' => 'cloud-fill-solid',
+      'name' => 'Cloud Fill',
+      'value' => 'bi-cloud-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    115 => 
+    array (
+      'id' => 'cloud-fill-outline',
+      'name' => 'Cloud Fill',
+      'value' => 'bi-cloud',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    116 => 
+    array (
+      'id' => 'cloud-fog-fill-solid',
+      'name' => 'Cloud Fog Fill',
+      'value' => 'bi-cloud-fog-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    117 => 
+    array (
+      'id' => 'cloud-fog-fill-outline',
+      'name' => 'Cloud Fog Fill',
+      'value' => 'bi-cloud-fog',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    118 => 
+    array (
+      'id' => 'cloud-fog-outline',
+      'name' => 'Cloud Fog',
+      'value' => 'bi-cloud-fog',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    119 => 
+    array (
+      'id' => 'cloud-fog2-fill-solid',
+      'name' => 'Cloud Fog2 Fill',
+      'value' => 'bi-cloud-fog2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    120 => 
+    array (
+      'id' => 'cloud-fog2-fill-outline',
+      'name' => 'Cloud Fog2 Fill',
+      'value' => 'bi-cloud-fog2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    121 => 
+    array (
+      'id' => 'cloud-fog2-outline',
+      'name' => 'Cloud Fog2',
+      'value' => 'bi-cloud-fog2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'fog2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    122 => 
+    array (
+      'id' => 'cloud-hail-fill-solid',
+      'name' => 'Cloud Hail Fill',
+      'value' => 'bi-cloud-hail-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'hail',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    123 => 
+    array (
+      'id' => 'cloud-hail-fill-outline',
+      'name' => 'Cloud Hail Fill',
+      'value' => 'bi-cloud-hail',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'hail',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    124 => 
+    array (
+      'id' => 'cloud-hail-outline',
+      'name' => 'Cloud Hail',
+      'value' => 'bi-cloud-hail',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'hail',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    125 => 
+    array (
+      'id' => 'cloud-haze-fill-solid',
+      'name' => 'Cloud Haze Fill',
+      'value' => 'bi-cloud-haze-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    126 => 
+    array (
+      'id' => 'cloud-haze-fill-outline',
+      'name' => 'Cloud Haze Fill',
+      'value' => 'bi-cloud-haze',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    127 => 
+    array (
+      'id' => 'cloud-haze-outline',
+      'name' => 'Cloud Haze',
+      'value' => 'bi-cloud-haze',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    128 => 
+    array (
+      'id' => 'cloud-haze2-fill-solid',
+      'name' => 'Cloud Haze2 Fill',
+      'value' => 'bi-cloud-haze2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    129 => 
+    array (
+      'id' => 'cloud-haze2-fill-outline',
+      'name' => 'Cloud Haze2 Fill',
+      'value' => 'bi-cloud-haze2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
+      'id' => 'cloud-lightning-fill-solid',
+      'name' => 'Cloud Lightning Fill',
+      'value' => 'bi-cloud-lightning-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    131 => 
+    array (
+      'id' => 'cloud-lightning-fill-outline',
+      'name' => 'Cloud Lightning Fill',
+      'value' => 'bi-cloud-lightning',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    132 => 
+    array (
+      'id' => 'cloud-lightning-rain-fill-solid',
+      'name' => 'Cloud Lightning Rain Fill',
+      'value' => 'bi-cloud-lightning-rain-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+        2 => 'rain',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    133 => 
+    array (
+      'id' => 'cloud-lightning-rain-fill-outline',
+      'name' => 'Cloud Lightning Rain Fill',
+      'value' => 'bi-cloud-lightning-rain',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+        2 => 'rain',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    134 => 
+    array (
+      'id' => 'cloud-lightning-rain-outline',
+      'name' => 'Cloud Lightning Rain',
+      'value' => 'bi-cloud-lightning-rain',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+        2 => 'rain',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    135 => 
+    array (
+      'id' => 'cloud-lightning-outline',
+      'name' => 'Cloud Lightning',
+      'value' => 'bi-cloud-lightning',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'lightning',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    136 => 
+    array (
+      'id' => 'cloud-minus-fill-solid',
+      'name' => 'Cloud Minus Fill',
+      'value' => 'bi-cloud-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    137 => 
+    array (
+      'id' => 'cloud-minus-fill-outline',
+      'name' => 'Cloud Minus Fill',
+      'value' => 'bi-cloud-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    138 => 
+    array (
+      'id' => 'cloud-minus-outline',
+      'name' => 'Cloud Minus',
+      'value' => 'bi-cloud-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'minus',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    139 => 
+    array (
+      'id' => 'cloud-moon-fill-solid',
+      'name' => 'Cloud Moon Fill',
+      'value' => 'bi-cloud-moon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'moon',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    140 => 
+    array (
+      'id' => 'cloud-moon-fill-outline',
+      'name' => 'Cloud Moon Fill',
+      'value' => 'bi-cloud-moon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'moon',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    141 => 
+    array (
+      'id' => 'cloud-moon-outline',
+      'name' => 'Cloud Moon',
+      'value' => 'bi-cloud-moon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'moon',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    142 => 
+    array (
+      'id' => 'cloud-plus-fill-solid',
+      'name' => 'Cloud Plus Fill',
+      'value' => 'bi-cloud-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    143 => 
+    array (
+      'id' => 'cloud-plus-fill-outline',
+      'name' => 'Cloud Plus Fill',
+      'value' => 'bi-cloud-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    144 => 
+    array (
+      'id' => 'cloud-plus-outline',
+      'name' => 'Cloud Plus',
+      'value' => 'bi-cloud-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'plus',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    145 => 
+    array (
+      'id' => 'cloud-rain-fill-solid',
+      'name' => 'Cloud Rain Fill',
+      'value' => 'bi-cloud-rain-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    146 => 
+    array (
+      'id' => 'cloud-rain-fill-outline',
+      'name' => 'Cloud Rain Fill',
+      'value' => 'bi-cloud-rain',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    147 => 
+    array (
+      'id' => 'cloud-rain-heavy-fill-solid',
+      'name' => 'Cloud Rain Heavy Fill',
+      'value' => 'bi-cloud-rain-heavy-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+        2 => 'heavy',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    148 => 
+    array (
+      'id' => 'cloud-rain-heavy-fill-outline',
+      'name' => 'Cloud Rain Heavy Fill',
+      'value' => 'bi-cloud-rain-heavy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+        2 => 'heavy',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    149 => 
+    array (
+      'id' => 'cloud-rain-heavy-outline',
+      'name' => 'Cloud Rain Heavy',
+      'value' => 'bi-cloud-rain-heavy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+        2 => 'heavy',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    150 => 
+    array (
+      'id' => 'cloud-rain-outline',
+      'name' => 'Cloud Rain',
+      'value' => 'bi-cloud-rain',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'rain',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    151 => 
+    array (
+      'id' => 'cloud-slash-fill-solid',
+      'name' => 'Cloud Slash Fill',
+      'value' => 'bi-cloud-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    152 => 
+    array (
+      'id' => 'cloud-slash-fill-outline',
+      'name' => 'Cloud Slash Fill',
+      'value' => 'bi-cloud-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    153 => 
+    array (
+      'id' => 'cloud-slash-outline',
+      'name' => 'Cloud Slash',
+      'value' => 'bi-cloud-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    154 => 
+    array (
+      'id' => 'cloud-sleet-fill-solid',
+      'name' => 'Cloud Sleet Fill',
+      'value' => 'bi-cloud-sleet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sleet',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    155 => 
+    array (
+      'id' => 'cloud-sleet-fill-outline',
+      'name' => 'Cloud Sleet Fill',
+      'value' => 'bi-cloud-sleet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sleet',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    156 => 
+    array (
+      'id' => 'cloud-sleet-outline',
+      'name' => 'Cloud Sleet',
+      'value' => 'bi-cloud-sleet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sleet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
+      'id' => 'cloud-snow-fill-solid',
+      'name' => 'Cloud Snow Fill',
+      'value' => 'bi-cloud-snow-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'snow',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    158 => 
+    array (
+      'id' => 'cloud-snow-fill-outline',
+      'name' => 'Cloud Snow Fill',
+      'value' => 'bi-cloud-snow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'snow',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    159 => 
+    array (
+      'id' => 'cloud-snow-outline',
+      'name' => 'Cloud Snow',
+      'value' => 'bi-cloud-snow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'snow',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    160 => 
+    array (
+      'id' => 'cloud-sun-fill-solid',
+      'name' => 'Cloud Sun Fill',
+      'value' => 'bi-cloud-sun-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sun',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    161 => 
+    array (
+      'id' => 'cloud-sun-fill-outline',
+      'name' => 'Cloud Sun Fill',
+      'value' => 'bi-cloud-sun',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sun',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    162 => 
+    array (
+      'id' => 'cloud-sun-outline',
+      'name' => 'Cloud Sun',
+      'value' => 'bi-cloud-sun',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'sun',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    163 => 
+    array (
+      'id' => 'cloud-upload-fill-solid',
+      'name' => 'Cloud Upload Fill',
+      'value' => 'bi-cloud-upload-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'upload',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    164 => 
+    array (
+      'id' => 'cloud-upload-fill-outline',
+      'name' => 'Cloud Upload Fill',
+      'value' => 'bi-cloud-upload',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'upload',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    165 => 
+    array (
+      'id' => 'cloud-upload-outline',
+      'name' => 'Cloud Upload',
+      'value' => 'bi-cloud-upload',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'upload',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    166 => 
+    array (
+      'id' => 'cloud-outline',
+      'name' => 'Cloud',
+      'value' => 'bi-cloud',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    167 => 
+    array (
+      'id' => 'clouds-fill-solid',
+      'name' => 'Clouds Fill',
+      'value' => 'bi-clouds-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clouds',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    168 => 
+    array (
+      'id' => 'clouds-fill-outline',
+      'name' => 'Clouds Fill',
+      'value' => 'bi-clouds',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clouds',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    169 => 
+    array (
+      'id' => 'clouds-outline',
+      'name' => 'Clouds',
+      'value' => 'bi-clouds',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clouds',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    170 => 
+    array (
+      'id' => 'cloudy-fill-solid',
+      'name' => 'Cloudy Fill',
+      'value' => 'bi-cloudy-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloudy',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    171 => 
+    array (
+      'id' => 'cloudy-fill-outline',
+      'name' => 'Cloudy Fill',
+      'value' => 'bi-cloudy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloudy',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    172 => 
+    array (
+      'id' => 'cloudy-outline',
+      'name' => 'Cloudy',
+      'value' => 'bi-cloudy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloudy',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    173 => 
+    array (
+      'id' => 'command-outline',
+      'name' => 'Command',
+      'value' => 'bi-command',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'command',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    174 => 
+    array (
+      'id' => 'compass-fill-solid',
+      'name' => 'Compass Fill',
+      'value' => 'bi-compass-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'compass',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    175 => 
+    array (
+      'id' => 'compass-fill-outline',
+      'name' => 'Compass Fill',
+      'value' => 'bi-compass',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'compass',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    176 => 
+    array (
+      'id' => 'compass-outline',
+      'name' => 'Compass',
+      'value' => 'bi-compass',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'compass',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    177 => 
+    array (
+      'id' => 'cone-striped-outline',
+      'name' => 'Cone Striped',
+      'value' => 'bi-cone-striped',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cone',
+        1 => 'striped',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    178 => 
+    array (
+      'id' => 'cone-outline',
+      'name' => 'Cone',
+      'value' => 'bi-cone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cone',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    179 => 
+    array (
+      'id' => 'controller-outline',
+      'name' => 'Controller',
+      'value' => 'bi-controller',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'controller',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    180 => 
+    array (
+      'id' => 'cpu-fill-solid',
+      'name' => 'Cpu Fill',
+      'value' => 'bi-cpu-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cpu',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    181 => 
+    array (
+      'id' => 'cpu-fill-outline',
+      'name' => 'Cpu Fill',
+      'value' => 'bi-cpu',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cpu',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    182 => 
+    array (
+      'id' => 'cpu-outline',
+      'name' => 'Cpu',
+      'value' => 'bi-cpu',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cpu',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    183 => 
+    array (
+      'id' => 'credit-card-2-back-fill-solid',
+      'name' => 'Credit Card 2 Back Fill',
+      'value' => 'bi-credit-card-2-back-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'back',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    184 => 
+    array (
+      'id' => 'credit-card-2-back-fill-outline',
+      'name' => 'Credit Card 2 Back Fill',
+      'value' => 'bi-credit-card-2-back',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'back',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    185 => 
+    array (
+      'id' => 'credit-card-2-back-outline',
+      'name' => 'Credit Card 2 Back',
+      'value' => 'bi-credit-card-2-back',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'back',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    186 => 
+    array (
+      'id' => 'credit-card-2-front-fill-solid',
+      'name' => 'Credit Card 2 Front Fill',
+      'value' => 'bi-credit-card-2-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'front',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    187 => 
+    array (
+      'id' => 'credit-card-2-front-fill-outline',
+      'name' => 'Credit Card 2 Front Fill',
+      'value' => 'bi-credit-card-2-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'front',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    188 => 
+    array (
+      'id' => 'credit-card-2-front-outline',
+      'name' => 'Credit Card 2 Front',
+      'value' => 'bi-credit-card-2-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => '2',
+        3 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    189 => 
+    array (
+      'id' => 'credit-card-fill-solid',
+      'name' => 'Credit Card Fill',
+      'value' => 'bi-credit-card-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    190 => 
+    array (
+      'id' => 'credit-card-fill-outline',
+      'name' => 'Credit Card Fill',
+      'value' => 'bi-credit-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    191 => 
+    array (
+      'id' => 'credit-card-outline',
+      'name' => 'Credit Card',
+      'value' => 'bi-credit-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'credit',
+        1 => 'card',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    192 => 
+    array (
+      'id' => 'crop-outline',
+      'name' => 'Crop',
+      'value' => 'bi-crop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'crop',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    193 => 
+    array (
+      'id' => 'cup-fill-solid',
+      'name' => 'Cup Fill',
+      'value' => 'bi-cup-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    194 => 
+    array (
+      'id' => 'cup-fill-outline',
+      'name' => 'Cup Fill',
+      'value' => 'bi-cup',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    195 => 
+    array (
+      'id' => 'cup-straw-outline',
+      'name' => 'Cup Straw',
+      'value' => 'bi-cup-straw',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'straw',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    196 => 
+    array (
+      'id' => 'cup-outline',
+      'name' => 'Cup',
+      'value' => 'bi-cup',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    197 => 
+    array (
+      'id' => 'dice-1-fill-solid',
+      'name' => 'Dice 1 Fill',
+      'value' => 'bi-dice-1-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '1',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    198 => 
+    array (
+      'id' => 'dice-1-fill-outline',
+      'name' => 'Dice 1 Fill',
+      'value' => 'bi-dice-1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '1',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    199 => 
+    array (
+      'id' => 'dice-1-outline',
+      'name' => 'Dice 1',
+      'value' => 'bi-dice-1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '1',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    200 => 
+    array (
+      'id' => 'dice-2-fill-solid',
+      'name' => 'Dice 2 Fill',
+      'value' => 'bi-dice-2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    201 => 
+    array (
+      'id' => 'dice-2-fill-outline',
+      'name' => 'Dice 2 Fill',
+      'value' => 'bi-dice-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '2',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    202 => 
+    array (
+      'id' => 'dice-2-outline',
+      'name' => 'Dice 2',
+      'value' => 'bi-dice-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    203 => 
+    array (
+      'id' => 'dice-3-fill-solid',
+      'name' => 'Dice 3 Fill',
+      'value' => 'bi-dice-3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '3',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    204 => 
+    array (
+      'id' => 'dice-3-fill-outline',
+      'name' => 'Dice 3 Fill',
+      'value' => 'bi-dice-3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '3',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    205 => 
+    array (
+      'id' => 'dice-3-outline',
+      'name' => 'Dice 3',
+      'value' => 'bi-dice-3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    206 => 
+    array (
+      'id' => 'dice-4-fill-solid',
+      'name' => 'Dice 4 Fill',
+      'value' => 'bi-dice-4-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '4',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    207 => 
+    array (
+      'id' => 'dice-4-fill-outline',
+      'name' => 'Dice 4 Fill',
+      'value' => 'bi-dice-4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '4',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    208 => 
+    array (
+      'id' => 'dice-4-outline',
+      'name' => 'Dice 4',
+      'value' => 'bi-dice-4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '4',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    209 => 
+    array (
+      'id' => 'dice-5-fill-solid',
+      'name' => 'Dice 5 Fill',
+      'value' => 'bi-dice-5-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '5',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    210 => 
+    array (
+      'id' => 'dice-5-fill-outline',
+      'name' => 'Dice 5 Fill',
+      'value' => 'bi-dice-5',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '5',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    211 => 
+    array (
+      'id' => 'dice-5-outline',
+      'name' => 'Dice 5',
+      'value' => 'bi-dice-5',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '5',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    212 => 
+    array (
+      'id' => 'dice-6-fill-solid',
+      'name' => 'Dice 6 Fill',
+      'value' => 'bi-dice-6-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '6',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    213 => 
+    array (
+      'id' => 'dice-6-fill-outline',
+      'name' => 'Dice 6 Fill',
+      'value' => 'bi-dice-6',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '6',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    214 => 
+    array (
+      'id' => 'dice-6-outline',
+      'name' => 'Dice 6',
+      'value' => 'bi-dice-6',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dice',
+        1 => '6',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    215 => 
+    array (
+      'id' => 'door-closed-fill-solid',
+      'name' => 'Door Closed Fill',
+      'value' => 'bi-door-closed-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'closed',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    216 => 
+    array (
+      'id' => 'door-closed-fill-outline',
+      'name' => 'Door Closed Fill',
+      'value' => 'bi-door-closed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'closed',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    217 => 
+    array (
+      'id' => 'door-closed-outline',
+      'name' => 'Door Closed',
+      'value' => 'bi-door-closed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'closed',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    218 => 
+    array (
+      'id' => 'door-open-fill-solid',
+      'name' => 'Door Open Fill',
+      'value' => 'bi-door-open-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'open',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    219 => 
+    array (
+      'id' => 'door-open-fill-outline',
+      'name' => 'Door Open Fill',
+      'value' => 'bi-door-open',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'open',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    220 => 
+    array (
+      'id' => 'door-open-outline',
+      'name' => 'Door Open',
+      'value' => 'bi-door-open',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'door',
+        1 => 'open',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    221 => 
+    array (
+      'id' => 'droplet-fill-solid',
+      'name' => 'Droplet Fill',
+      'value' => 'bi-droplet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'droplet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    222 => 
+    array (
+      'id' => 'droplet-fill-outline',
+      'name' => 'Droplet Fill',
+      'value' => 'bi-droplet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'droplet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    223 => 
+    array (
+      'id' => 'droplet-half-outline',
+      'name' => 'Droplet Half',
+      'value' => 'bi-droplet-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'droplet',
+        1 => 'half',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    224 => 
+    array (
+      'id' => 'droplet-outline',
+      'name' => 'Droplet',
+      'value' => 'bi-droplet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'droplet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    225 => 
+    array (
+      'id' => 'easel-fill-solid',
+      'name' => 'Easel Fill',
+      'value' => 'bi-easel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    226 => 
+    array (
+      'id' => 'easel-fill-outline',
+      'name' => 'Easel Fill',
+      'value' => 'bi-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    227 => 
+    array (
+      'id' => 'easel-outline',
+      'name' => 'Easel',
+      'value' => 'bi-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    228 => 
+    array (
+      'id' => 'egg-fill-solid',
+      'name' => 'Egg Fill',
+      'value' => 'bi-egg-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'egg',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    229 => 
+    array (
+      'id' => 'egg-fill-outline',
+      'name' => 'Egg Fill',
+      'value' => 'bi-egg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'egg',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    230 => 
+    array (
+      'id' => 'egg-fried-outline',
+      'name' => 'Egg Fried',
+      'value' => 'bi-egg-fried',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'egg',
+        1 => 'fried',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    231 => 
+    array (
+      'id' => 'egg-outline',
+      'name' => 'Egg',
+      'value' => 'bi-egg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'egg',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    232 => 
+    array (
+      'id' => 'eraser-fill-solid',
+      'name' => 'Eraser Fill',
+      'value' => 'bi-eraser-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eraser',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    233 => 
+    array (
+      'id' => 'eraser-fill-outline',
+      'name' => 'Eraser Fill',
+      'value' => 'bi-eraser',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eraser',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    234 => 
+    array (
+      'id' => 'eraser-outline',
+      'name' => 'Eraser',
+      'value' => 'bi-eraser',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eraser',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    235 => 
+    array (
+      'id' => 'eyedropper-outline',
+      'name' => 'Eyedropper',
+      'value' => 'bi-eyedropper',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eyedropper',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    236 => 
+    array (
+      'id' => 'flag-fill-solid',
+      'name' => 'Flag Fill',
+      'value' => 'bi-flag-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    237 => 
+    array (
+      'id' => 'flag-fill-outline',
+      'name' => 'Flag Fill',
+      'value' => 'bi-flag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    238 => 
+    array (
+      'id' => 'flag-outline',
+      'name' => 'Flag',
+      'value' => 'bi-flag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flag',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    239 => 
+    array (
+      'id' => 'flower1-outline',
+      'name' => 'Flower1',
+      'value' => 'bi-flower1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flower1',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    240 => 
+    array (
+      'id' => 'flower2-outline',
+      'name' => 'Flower2',
+      'value' => 'bi-flower2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flower2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    241 => 
+    array (
+      'id' => 'flower3-outline',
+      'name' => 'Flower3',
+      'value' => 'bi-flower3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flower3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    242 => 
+    array (
+      'id' => 'front-outline',
+      'name' => 'Front',
+      'value' => 'bi-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    243 => 
+    array (
+      'id' => 'gem-outline',
+      'name' => 'Gem',
+      'value' => 'bi-gem',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gem',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    244 => 
+    array (
+      'id' => 'gift-fill-solid',
+      'name' => 'Gift Fill',
+      'value' => 'bi-gift-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gift',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    245 => 
+    array (
+      'id' => 'gift-fill-outline',
+      'name' => 'Gift Fill',
+      'value' => 'bi-gift',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gift',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    246 => 
+    array (
+      'id' => 'gift-outline',
+      'name' => 'Gift',
+      'value' => 'bi-gift',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gift',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    247 => 
+    array (
+      'id' => 'hammer-outline',
+      'name' => 'Hammer',
+      'value' => 'bi-hammer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hammer',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    248 => 
+    array (
+      'id' => 'handbag-fill-solid',
+      'name' => 'Handbag Fill',
+      'value' => 'bi-handbag-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'handbag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    249 => 
+    array (
+      'id' => 'handbag-fill-outline',
+      'name' => 'Handbag Fill',
+      'value' => 'bi-handbag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'handbag',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    250 => 
+    array (
+      'id' => 'handbag-outline',
+      'name' => 'Handbag',
+      'value' => 'bi-handbag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'handbag',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    251 => 
+    array (
+      'id' => 'hdd-fill-solid',
+      'name' => 'Hdd Fill',
+      'value' => 'bi-hdd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    252 => 
+    array (
+      'id' => 'hdd-fill-outline',
+      'name' => 'Hdd Fill',
+      'value' => 'bi-hdd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    253 => 
+    array (
+      'id' => 'hdd-network-fill-solid',
+      'name' => 'Hdd Network Fill',
+      'value' => 'bi-hdd-network-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'network',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    254 => 
+    array (
+      'id' => 'hdd-network-fill-outline',
+      'name' => 'Hdd Network Fill',
+      'value' => 'bi-hdd-network',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'network',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    255 => 
+    array (
+      'id' => 'hdd-network-outline',
+      'name' => 'Hdd Network',
+      'value' => 'bi-hdd-network',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'network',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    256 => 
+    array (
+      'id' => 'hdd-rack-fill-solid',
+      'name' => 'Hdd Rack Fill',
+      'value' => 'bi-hdd-rack-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'rack',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    257 => 
+    array (
+      'id' => 'hdd-rack-fill-outline',
+      'name' => 'Hdd Rack Fill',
+      'value' => 'bi-hdd-rack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'rack',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    258 => 
+    array (
+      'id' => 'hdd-rack-outline',
+      'name' => 'Hdd Rack',
+      'value' => 'bi-hdd-rack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'rack',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    259 => 
+    array (
+      'id' => 'hdd-stack-fill-solid',
+      'name' => 'Hdd Stack Fill',
+      'value' => 'bi-hdd-stack-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'stack',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    260 => 
+    array (
+      'id' => 'hdd-stack-fill-outline',
+      'name' => 'Hdd Stack Fill',
+      'value' => 'bi-hdd-stack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'stack',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    261 => 
+    array (
+      'id' => 'hdd-stack-outline',
+      'name' => 'Hdd Stack',
+      'value' => 'bi-hdd-stack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+        1 => 'stack',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    262 => 
+    array (
+      'id' => 'hdd-outline',
+      'name' => 'Hdd',
+      'value' => 'bi-hdd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdd',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    263 => 
+    array (
+      'id' => 'house-door-fill-solid',
+      'name' => 'House Door Fill',
+      'value' => 'bi-house-door-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'door',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    264 => 
+    array (
+      'id' => 'house-door-fill-outline',
+      'name' => 'House Door Fill',
+      'value' => 'bi-house-door',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'door',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    265 => 
+    array (
+      'id' => 'house-door-outline',
+      'name' => 'House Door',
+      'value' => 'bi-house-door',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'door',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    266 => 
+    array (
+      'id' => 'house-door-solid',
+      'name' => 'House Door',
+      'value' => 'bi-house-door-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'door',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    267 => 
+    array (
+      'id' => 'house-fill-solid',
+      'name' => 'House Fill',
+      'value' => 'bi-house-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    268 => 
+    array (
+      'id' => 'house-fill-outline',
+      'name' => 'House Fill',
+      'value' => 'bi-house',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    269 => 
+    array (
+      'id' => 'house-outline',
+      'name' => 'House',
+      'value' => 'bi-house',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    270 => 
+    array (
+      'id' => 'house-solid',
+      'name' => 'House',
+      'value' => 'bi-house-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    271 => 
+    array (
+      'id' => 'hurricane-outline',
+      'name' => 'Hurricane',
+      'value' => 'bi-hurricane',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hurricane',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    272 => 
+    array (
+      'id' => 'joystick-outline',
+      'name' => 'Joystick',
+      'value' => 'bi-joystick',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'joystick',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    273 => 
+    array (
+      'id' => 'keyboard-fill-solid',
+      'name' => 'Keyboard Fill',
+      'value' => 'bi-keyboard-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'keyboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    274 => 
+    array (
+      'id' => 'keyboard-fill-outline',
+      'name' => 'Keyboard Fill',
+      'value' => 'bi-keyboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'keyboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    275 => 
+    array (
+      'id' => 'keyboard-outline',
+      'name' => 'Keyboard',
+      'value' => 'bi-keyboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'keyboard',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    276 => 
+    array (
+      'id' => 'ladder-outline',
+      'name' => 'Ladder',
+      'value' => 'bi-ladder',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ladder',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    277 => 
+    array (
+      'id' => 'lamp-fill-solid',
+      'name' => 'Lamp Fill',
+      'value' => 'bi-lamp-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lamp',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    278 => 
+    array (
+      'id' => 'lamp-fill-outline',
+      'name' => 'Lamp Fill',
+      'value' => 'bi-lamp',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lamp',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    279 => 
+    array (
+      'id' => 'lamp-outline',
+      'name' => 'Lamp',
+      'value' => 'bi-lamp',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lamp',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    280 => 
+    array (
+      'id' => 'laptop-fill-solid',
+      'name' => 'Laptop Fill',
+      'value' => 'bi-laptop-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'laptop',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    281 => 
+    array (
+      'id' => 'laptop-fill-outline',
+      'name' => 'Laptop Fill',
+      'value' => 'bi-laptop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'laptop',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    282 => 
+    array (
+      'id' => 'laptop-outline',
+      'name' => 'Laptop',
+      'value' => 'bi-laptop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'laptop',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    283 => 
+    array (
+      'id' => 'life-preserver-outline',
+      'name' => 'Life Preserver',
+      'value' => 'bi-life-preserver',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'life',
+        1 => 'preserver',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    284 => 
+    array (
+      'id' => 'lightbulb-fill-solid',
+      'name' => 'Lightbulb Fill',
+      'value' => 'bi-lightbulb-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    285 => 
+    array (
+      'id' => 'lightbulb-fill-outline',
+      'name' => 'Lightbulb Fill',
+      'value' => 'bi-lightbulb',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    286 => 
+    array (
+      'id' => 'lightbulb-off-fill-solid',
+      'name' => 'Lightbulb Off Fill',
+      'value' => 'bi-lightbulb-off-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+        1 => 'off',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    287 => 
+    array (
+      'id' => 'lightbulb-off-fill-outline',
+      'name' => 'Lightbulb Off Fill',
+      'value' => 'bi-lightbulb-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+        1 => 'off',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    288 => 
+    array (
+      'id' => 'lightbulb-off-outline',
+      'name' => 'Lightbulb Off',
+      'value' => 'bi-lightbulb-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+        1 => 'off',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    289 => 
+    array (
+      'id' => 'lightbulb-outline',
+      'name' => 'Lightbulb',
+      'value' => 'bi-lightbulb',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightbulb',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    290 => 
+    array (
+      'id' => 'lightning-charge-fill-solid',
+      'name' => 'Lightning Charge Fill',
+      'value' => 'bi-lightning-charge-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+        1 => 'charge',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    291 => 
+    array (
+      'id' => 'lightning-charge-fill-outline',
+      'name' => 'Lightning Charge Fill',
+      'value' => 'bi-lightning-charge',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+        1 => 'charge',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    292 => 
+    array (
+      'id' => 'lightning-charge-outline',
+      'name' => 'Lightning Charge',
+      'value' => 'bi-lightning-charge',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+        1 => 'charge',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    293 => 
+    array (
+      'id' => 'lightning-fill-solid',
+      'name' => 'Lightning Fill',
+      'value' => 'bi-lightning-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    294 => 
+    array (
+      'id' => 'lightning-fill-outline',
+      'name' => 'Lightning Fill',
+      'value' => 'bi-lightning',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    295 => 
+    array (
+      'id' => 'lightning-outline',
+      'name' => 'Lightning',
+      'value' => 'bi-lightning',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lightning',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    296 => 
+    array (
+      'id' => 'mask-outline',
+      'name' => 'Mask',
+      'value' => 'bi-mask',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mask',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    297 => 
+    array (
+      'id' => 'minecart-loaded-outline',
+      'name' => 'Minecart Loaded',
+      'value' => 'bi-minecart-loaded',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'minecart',
+        1 => 'loaded',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    298 => 
+    array (
+      'id' => 'minecart-loaded-solid',
+      'name' => 'Minecart Loaded',
+      'value' => 'bi-minecart-loaded-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'minecart',
+        1 => 'loaded',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    299 => 
+    array (
+      'id' => 'minecart-outline',
+      'name' => 'Minecart',
+      'value' => 'bi-minecart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'minecart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    300 => 
+    array (
+      'id' => 'minecart-solid',
+      'name' => 'Minecart',
+      'value' => 'bi-minecart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'minecart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    301 => 
+    array (
+      'id' => 'moisture-outline',
+      'name' => 'Moisture',
+      'value' => 'bi-moisture',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moisture',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    302 => 
+    array (
+      'id' => 'moon-fill-solid',
+      'name' => 'Moon Fill',
+      'value' => 'bi-moon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    303 => 
+    array (
+      'id' => 'moon-fill-outline',
+      'name' => 'Moon Fill',
+      'value' => 'bi-moon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    304 => 
+    array (
+      'id' => 'moon-stars-fill-solid',
+      'name' => 'Moon Stars Fill',
+      'value' => 'bi-moon-stars-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'stars',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    305 => 
+    array (
+      'id' => 'moon-stars-fill-outline',
+      'name' => 'Moon Stars Fill',
+      'value' => 'bi-moon-stars',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'stars',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    306 => 
+    array (
+      'id' => 'moon-stars-outline',
+      'name' => 'Moon Stars',
+      'value' => 'bi-moon-stars',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'stars',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    307 => 
+    array (
+      'id' => 'moon-stars-solid',
+      'name' => 'Moon Stars',
+      'value' => 'bi-moon-stars-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+        1 => 'stars',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    308 => 
+    array (
+      'id' => 'moon-outline',
+      'name' => 'Moon',
+      'value' => 'bi-moon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'moon',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    309 => 
+    array (
+      'id' => 'mouse-fill-solid',
+      'name' => 'Mouse Fill',
+      'value' => 'bi-mouse-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    310 => 
+    array (
+      'id' => 'mouse-fill-outline',
+      'name' => 'Mouse Fill',
+      'value' => 'bi-mouse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    311 => 
+    array (
+      'id' => 'mouse-outline',
+      'name' => 'Mouse',
+      'value' => 'bi-mouse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    312 => 
+    array (
+      'id' => 'mouse2-fill-solid',
+      'name' => 'Mouse2 Fill',
+      'value' => 'bi-mouse2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    313 => 
+    array (
+      'id' => 'mouse2-fill-outline',
+      'name' => 'Mouse2 Fill',
+      'value' => 'bi-mouse2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    314 => 
+    array (
+      'id' => 'mouse2-outline',
+      'name' => 'Mouse2',
+      'value' => 'bi-mouse2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    315 => 
+    array (
+      'id' => 'mouse3-fill-solid',
+      'name' => 'Mouse3 Fill',
+      'value' => 'bi-mouse3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    316 => 
+    array (
+      'id' => 'mouse3-fill-outline',
+      'name' => 'Mouse3 Fill',
+      'value' => 'bi-mouse3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    317 => 
+    array (
+      'id' => 'mouse3-outline',
+      'name' => 'Mouse3',
+      'value' => 'bi-mouse3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mouse3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    318 => 
+    array (
+      'id' => 'nut-fill-solid',
+      'name' => 'Nut Fill',
+      'value' => 'bi-nut-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nut',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    319 => 
+    array (
+      'id' => 'nut-fill-outline',
+      'name' => 'Nut Fill',
+      'value' => 'bi-nut',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nut',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    320 => 
+    array (
+      'id' => 'nut-outline',
+      'name' => 'Nut',
+      'value' => 'bi-nut',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nut',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    321 => 
+    array (
+      'id' => 'outlet-outline',
+      'name' => 'Outlet',
+      'value' => 'bi-outlet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'outlet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    322 => 
+    array (
+      'id' => 'paint-bucket-outline',
+      'name' => 'Paint Bucket',
+      'value' => 'bi-paint-bucket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'paint',
+        1 => 'bucket',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    323 => 
+    array (
+      'id' => 'palette-fill-solid',
+      'name' => 'Palette Fill',
+      'value' => 'bi-palette-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'palette',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    324 => 
+    array (
+      'id' => 'palette-fill-outline',
+      'name' => 'Palette Fill',
+      'value' => 'bi-palette',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'palette',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    325 => 
+    array (
+      'id' => 'palette-outline',
+      'name' => 'Palette',
+      'value' => 'bi-palette',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'palette',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    326 => 
+    array (
+      'id' => 'palette2-outline',
+      'name' => 'Palette2',
+      'value' => 'bi-palette2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'palette2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    327 => 
+    array (
+      'id' => 'paperclip-outline',
+      'name' => 'Paperclip',
+      'value' => 'bi-paperclip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'paperclip',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    328 => 
+    array (
+      'id' => 'peace-fill-solid',
+      'name' => 'Peace Fill',
+      'value' => 'bi-peace-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'peace',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    329 => 
+    array (
+      'id' => 'peace-fill-outline',
+      'name' => 'Peace Fill',
+      'value' => 'bi-peace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'peace',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    330 => 
+    array (
+      'id' => 'peace-outline',
+      'name' => 'Peace',
+      'value' => 'bi-peace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'peace',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    331 => 
+    array (
+      'id' => 'pen-fill-solid',
+      'name' => 'Pen Fill',
+      'value' => 'bi-pen-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pen',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    332 => 
+    array (
+      'id' => 'pen-fill-outline',
+      'name' => 'Pen Fill',
+      'value' => 'bi-pen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pen',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    333 => 
+    array (
+      'id' => 'pen-outline',
+      'name' => 'Pen',
+      'value' => 'bi-pen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pen',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    334 => 
+    array (
+      'id' => 'pencil-fill-solid',
+      'name' => 'Pencil Fill',
+      'value' => 'bi-pencil-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pencil',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    335 => 
+    array (
+      'id' => 'pencil-fill-outline',
+      'name' => 'Pencil Fill',
+      'value' => 'bi-pencil',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pencil',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    336 => 
+    array (
+      'id' => 'pencil-square-outline',
+      'name' => 'Pencil Square',
+      'value' => 'bi-pencil-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pencil',
+        1 => 'square',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    337 => 
+    array (
+      'id' => 'pencil-square-solid',
+      'name' => 'Pencil Square',
+      'value' => 'bi-pencil-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pencil',
+        1 => 'square',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    338 => 
+    array (
+      'id' => 'pencil-outline',
+      'name' => 'Pencil',
+      'value' => 'bi-pencil',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pencil',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    339 => 
+    array (
+      'id' => 'plug-fill-solid',
+      'name' => 'Plug Fill',
+      'value' => 'bi-plug-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'plug',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    340 => 
+    array (
+      'id' => 'plug-fill-outline',
+      'name' => 'Plug Fill',
+      'value' => 'bi-plug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'plug',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    341 => 
+    array (
+      'id' => 'plug-outline',
+      'name' => 'Plug',
+      'value' => 'bi-plug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'plug',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    342 => 
+    array (
+      'id' => 'power-outline',
+      'name' => 'Power',
+      'value' => 'bi-power',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'power',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    343 => 
+    array (
+      'id' => 'printer-fill-solid',
+      'name' => 'Printer Fill',
+      'value' => 'bi-printer-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'printer',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    344 => 
+    array (
+      'id' => 'printer-fill-outline',
+      'name' => 'Printer Fill',
+      'value' => 'bi-printer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'printer',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    345 => 
+    array (
+      'id' => 'printer-outline',
+      'name' => 'Printer',
+      'value' => 'bi-printer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'printer',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    346 => 
+    array (
+      'id' => 'puzzle-fill-solid',
+      'name' => 'Puzzle Fill',
+      'value' => 'bi-puzzle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'puzzle',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    347 => 
+    array (
+      'id' => 'puzzle-fill-outline',
+      'name' => 'Puzzle Fill',
+      'value' => 'bi-puzzle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'puzzle',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    348 => 
+    array (
+      'id' => 'puzzle-outline',
+      'name' => 'Puzzle',
+      'value' => 'bi-puzzle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'puzzle',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    349 => 
+    array (
+      'id' => 'rainbow-outline',
+      'name' => 'Rainbow',
+      'value' => 'bi-rainbow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rainbow',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    350 => 
+    array (
+      'id' => 'rulers-outline',
+      'name' => 'Rulers',
+      'value' => 'bi-rulers',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rulers',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    351 => 
+    array (
+      'id' => 'scissors-outline',
+      'name' => 'Scissors',
+      'value' => 'bi-scissors',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'scissors',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    352 => 
+    array (
+      'id' => 'screwdriver-outline',
+      'name' => 'Screwdriver',
+      'value' => 'bi-screwdriver',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'screwdriver',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    353 => 
+    array (
+      'id' => 'server-outline',
+      'name' => 'Server',
+      'value' => 'bi-server',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'server',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    354 => 
+    array (
+      'id' => 'shop-window-outline',
+      'name' => 'Shop Window',
+      'value' => 'bi-shop-window',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'shop',
+        1 => 'window',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    355 => 
+    array (
+      'id' => 'shop-outline',
+      'name' => 'Shop',
+      'value' => 'bi-shop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'shop',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    356 => 
+    array (
+      'id' => 'sim-fill-solid',
+      'name' => 'Sim Fill',
+      'value' => 'bi-sim-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    357 => 
+    array (
+      'id' => 'sim-fill-outline',
+      'name' => 'Sim Fill',
+      'value' => 'bi-sim',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    358 => 
+    array (
+      'id' => 'sim-outline',
+      'name' => 'Sim',
+      'value' => 'bi-sim',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    359 => 
+    array (
+      'id' => 'smartwatch-outline',
+      'name' => 'Smartwatch',
+      'value' => 'bi-smartwatch',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'smartwatch',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    360 => 
+    array (
+      'id' => 'snow-outline',
+      'name' => 'Snow',
+      'value' => 'bi-snow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'snow',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    361 => 
+    array (
+      'id' => 'snow2-outline',
+      'name' => 'Snow2',
+      'value' => 'bi-snow2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'snow2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    362 => 
+    array (
+      'id' => 'snow3-outline',
+      'name' => 'Snow3',
+      'value' => 'bi-snow3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'snow3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    363 => 
+    array (
+      'id' => 'speedometer-outline',
+      'name' => 'Speedometer',
+      'value' => 'bi-speedometer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'speedometer',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    364 => 
+    array (
+      'id' => 'speedometer2-outline',
+      'name' => 'Speedometer2',
+      'value' => 'bi-speedometer2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'speedometer2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    365 => 
+    array (
+      'id' => 'stickies-fill-solid',
+      'name' => 'Stickies Fill',
+      'value' => 'bi-stickies-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stickies',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    366 => 
+    array (
+      'id' => 'stickies-fill-outline',
+      'name' => 'Stickies Fill',
+      'value' => 'bi-stickies',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stickies',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    367 => 
+    array (
+      'id' => 'stickies-outline',
+      'name' => 'Stickies',
+      'value' => 'bi-stickies',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stickies',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    368 => 
+    array (
+      'id' => 'sticky-fill-solid',
+      'name' => 'Sticky Fill',
+      'value' => 'bi-sticky-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sticky',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    369 => 
+    array (
+      'id' => 'sticky-fill-outline',
+      'name' => 'Sticky Fill',
+      'value' => 'bi-sticky',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sticky',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    370 => 
+    array (
+      'id' => 'sticky-outline',
+      'name' => 'Sticky',
+      'value' => 'bi-sticky',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sticky',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    371 => 
+    array (
+      'id' => 'stoplights-fill-solid',
+      'name' => 'Stoplights Fill',
+      'value' => 'bi-stoplights-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stoplights',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    372 => 
+    array (
+      'id' => 'stoplights-fill-outline',
+      'name' => 'Stoplights Fill',
+      'value' => 'bi-stoplights',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stoplights',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    373 => 
+    array (
+      'id' => 'stoplights-outline',
+      'name' => 'Stoplights',
+      'value' => 'bi-stoplights',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stoplights',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    374 => 
+    array (
+      'id' => 'suit-club-fill-solid',
+      'name' => 'Suit Club Fill',
+      'value' => 'bi-suit-club-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'club',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    375 => 
+    array (
+      'id' => 'suit-club-fill-outline',
+      'name' => 'Suit Club Fill',
+      'value' => 'bi-suit-club',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'club',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    376 => 
+    array (
+      'id' => 'suit-club-outline',
+      'name' => 'Suit Club',
+      'value' => 'bi-suit-club',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'club',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    377 => 
+    array (
+      'id' => 'suit-diamond-fill-solid',
+      'name' => 'Suit Diamond Fill',
+      'value' => 'bi-suit-diamond-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'diamond',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    378 => 
+    array (
+      'id' => 'suit-diamond-fill-outline',
+      'name' => 'Suit Diamond Fill',
+      'value' => 'bi-suit-diamond',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'diamond',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    379 => 
+    array (
+      'id' => 'suit-diamond-outline',
+      'name' => 'Suit Diamond',
+      'value' => 'bi-suit-diamond',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'diamond',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    380 => 
+    array (
+      'id' => 'suit-heart-fill-solid',
+      'name' => 'Suit Heart Fill',
+      'value' => 'bi-suit-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    381 => 
+    array (
+      'id' => 'suit-heart-fill-outline',
+      'name' => 'Suit Heart Fill',
+      'value' => 'bi-suit-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    382 => 
+    array (
+      'id' => 'suit-heart-outline',
+      'name' => 'Suit Heart',
+      'value' => 'bi-suit-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    383 => 
+    array (
+      'id' => 'suit-heart-solid',
+      'name' => 'Suit Heart',
+      'value' => 'bi-suit-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    384 => 
+    array (
+      'id' => 'suit-spade-fill-solid',
+      'name' => 'Suit Spade Fill',
+      'value' => 'bi-suit-spade-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'spade',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    385 => 
+    array (
+      'id' => 'suit-spade-fill-outline',
+      'name' => 'Suit Spade Fill',
+      'value' => 'bi-suit-spade',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'spade',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    386 => 
+    array (
+      'id' => 'suit-spade-outline',
+      'name' => 'Suit Spade',
+      'value' => 'bi-suit-spade',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suit',
+        1 => 'spade',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    387 => 
+    array (
+      'id' => 'sun-fill-solid',
+      'name' => 'Sun Fill',
+      'value' => 'bi-sun-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sun',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    388 => 
+    array (
+      'id' => 'sun-fill-outline',
+      'name' => 'Sun Fill',
+      'value' => 'bi-sun',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sun',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    389 => 
+    array (
+      'id' => 'sun-outline',
+      'name' => 'Sun',
+      'value' => 'bi-sun',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sun',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    390 => 
+    array (
+      'id' => 'sunrise-fill-solid',
+      'name' => 'Sunrise Fill',
+      'value' => 'bi-sunrise-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunrise',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    391 => 
+    array (
+      'id' => 'sunrise-fill-outline',
+      'name' => 'Sunrise Fill',
+      'value' => 'bi-sunrise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunrise',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    392 => 
+    array (
+      'id' => 'sunrise-outline',
+      'name' => 'Sunrise',
+      'value' => 'bi-sunrise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunrise',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    393 => 
+    array (
+      'id' => 'sunset-fill-solid',
+      'name' => 'Sunset Fill',
+      'value' => 'bi-sunset-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunset',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    394 => 
+    array (
+      'id' => 'sunset-fill-outline',
+      'name' => 'Sunset Fill',
+      'value' => 'bi-sunset',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunset',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    395 => 
+    array (
+      'id' => 'sunset-outline',
+      'name' => 'Sunset',
+      'value' => 'bi-sunset',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sunset',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    396 => 
+    array (
+      'id' => 'tablet-fill-solid',
+      'name' => 'Tablet Fill',
+      'value' => 'bi-tablet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    397 => 
+    array (
+      'id' => 'tablet-fill-outline',
+      'name' => 'Tablet Fill',
+      'value' => 'bi-tablet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    398 => 
+    array (
+      'id' => 'tablet-landscape-fill-solid',
+      'name' => 'Tablet Landscape Fill',
+      'value' => 'bi-tablet-landscape-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+        1 => 'landscape',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    399 => 
+    array (
+      'id' => 'tablet-landscape-fill-outline',
+      'name' => 'Tablet Landscape Fill',
+      'value' => 'bi-tablet-landscape',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+        1 => 'landscape',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    400 => 
+    array (
+      'id' => 'tablet-landscape-outline',
+      'name' => 'Tablet Landscape',
+      'value' => 'bi-tablet-landscape',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+        1 => 'landscape',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    401 => 
+    array (
+      'id' => 'tablet-outline',
+      'name' => 'Tablet',
+      'value' => 'bi-tablet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tablet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    402 => 
+    array (
+      'id' => 'terminal-fill-solid',
+      'name' => 'Terminal Fill',
+      'value' => 'bi-terminal-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    403 => 
+    array (
+      'id' => 'terminal-fill-outline',
+      'name' => 'Terminal Fill',
+      'value' => 'bi-terminal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    404 => 
+    array (
+      'id' => 'terminal-outline',
+      'name' => 'Terminal',
+      'value' => 'bi-terminal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    405 => 
+    array (
+      'id' => 'thermometer-half-outline',
+      'name' => 'Thermometer Half',
+      'value' => 'bi-thermometer-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+        1 => 'half',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    406 => 
+    array (
+      'id' => 'thermometer-high-outline',
+      'name' => 'Thermometer High',
+      'value' => 'bi-thermometer-high',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+        1 => 'high',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    407 => 
+    array (
+      'id' => 'thermometer-low-outline',
+      'name' => 'Thermometer Low',
+      'value' => 'bi-thermometer-low',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+        1 => 'low',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    408 => 
+    array (
+      'id' => 'thermometer-snow-outline',
+      'name' => 'Thermometer Snow',
+      'value' => 'bi-thermometer-snow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+        1 => 'snow',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    409 => 
+    array (
+      'id' => 'thermometer-sun-outline',
+      'name' => 'Thermometer Sun',
+      'value' => 'bi-thermometer-sun',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+        1 => 'sun',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    410 => 
+    array (
+      'id' => 'thermometer-outline',
+      'name' => 'Thermometer',
+      'value' => 'bi-thermometer',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thermometer',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    411 => 
+    array (
+      'id' => 'tools-outline',
+      'name' => 'Tools',
+      'value' => 'bi-tools',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tools',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    412 => 
+    array (
+      'id' => 'tornado-outline',
+      'name' => 'Tornado',
+      'value' => 'bi-tornado',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tornado',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    413 => 
+    array (
+      'id' => 'tree-fill-solid',
+      'name' => 'Tree Fill',
+      'value' => 'bi-tree-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tree',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    414 => 
+    array (
+      'id' => 'tree-fill-outline',
+      'name' => 'Tree Fill',
+      'value' => 'bi-tree',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tree',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    415 => 
+    array (
+      'id' => 'tree-outline',
+      'name' => 'Tree',
+      'value' => 'bi-tree',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tree',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    416 => 
+    array (
+      'id' => 'trophy-fill-solid',
+      'name' => 'Trophy Fill',
+      'value' => 'bi-trophy-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'trophy',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    417 => 
+    array (
+      'id' => 'trophy-fill-outline',
+      'name' => 'Trophy Fill',
+      'value' => 'bi-trophy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'trophy',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    418 => 
+    array (
+      'id' => 'trophy-outline',
+      'name' => 'Trophy',
+      'value' => 'bi-trophy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'trophy',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    419 => 
+    array (
+      'id' => 'tropical-storm-outline',
+      'name' => 'Tropical Storm',
+      'value' => 'bi-tropical-storm',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tropical',
+        1 => 'storm',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    420 => 
+    array (
+      'id' => 'truck-flatbed-outline',
+      'name' => 'Truck Flatbed',
+      'value' => 'bi-truck-flatbed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'truck',
+        1 => 'flatbed',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    421 => 
+    array (
+      'id' => 'truck-outline',
+      'name' => 'Truck',
+      'value' => 'bi-truck',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'truck',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    422 => 
+    array (
+      'id' => 'tsunami-outline',
+      'name' => 'Tsunami',
+      'value' => 'bi-tsunami',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tsunami',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    423 => 
+    array (
+      'id' => 'umbrella-fill-solid',
+      'name' => 'Umbrella Fill',
+      'value' => 'bi-umbrella-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'umbrella',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    424 => 
+    array (
+      'id' => 'umbrella-fill-outline',
+      'name' => 'Umbrella Fill',
+      'value' => 'bi-umbrella',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'umbrella',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    425 => 
+    array (
+      'id' => 'umbrella-outline',
+      'name' => 'Umbrella',
+      'value' => 'bi-umbrella',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'umbrella',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    426 => 
+    array (
+      'id' => 'upc-scan-outline',
+      'name' => 'Upc Scan',
+      'value' => 'bi-upc-scan',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'upc',
+        1 => 'scan',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    427 => 
+    array (
+      'id' => 'upc-outline',
+      'name' => 'Upc',
+      'value' => 'bi-upc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'upc',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    428 => 
+    array (
+      'id' => 'vector-pen-outline',
+      'name' => 'Vector Pen',
+      'value' => 'bi-vector-pen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vector',
+        1 => 'pen',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    429 => 
+    array (
+      'id' => 'vr-outline',
+      'name' => 'Vr',
+      'value' => 'bi-vr',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vr',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    430 => 
+    array (
+      'id' => 'wallet-fill-solid',
+      'name' => 'Wallet Fill',
+      'value' => 'bi-wallet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wallet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    431 => 
+    array (
+      'id' => 'wallet-fill-outline',
+      'name' => 'Wallet Fill',
+      'value' => 'bi-wallet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wallet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    432 => 
+    array (
+      'id' => 'wallet-outline',
+      'name' => 'Wallet',
+      'value' => 'bi-wallet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wallet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    433 => 
+    array (
+      'id' => 'wallet2-outline',
+      'name' => 'Wallet2',
+      'value' => 'bi-wallet2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wallet2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    434 => 
+    array (
+      'id' => 'watch-outline',
+      'name' => 'Watch',
+      'value' => 'bi-watch',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'watch',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    435 => 
+    array (
+      'id' => 'water-outline',
+      'name' => 'Water',
+      'value' => 'bi-water',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'water',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    436 => 
+    array (
+      'id' => 'wind-outline',
+      'name' => 'Wind',
+      'value' => 'bi-wind',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wind',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    437 => 
+    array (
+      'id' => 'wrench-outline',
+      'name' => 'Wrench',
+      'value' => 'bi-wrench',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    438 => 
+    array (
+      'id' => 'bank-outline',
+      'name' => 'Bank',
+      'value' => 'bi-bank',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bank',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    439 => 
+    array (
+      'id' => 'bank2-outline',
+      'name' => 'Bank2',
+      'value' => 'bi-bank2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bank2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    440 => 
+    array (
+      'id' => 'cash-coin-outline',
+      'name' => 'Cash Coin',
+      'value' => 'bi-cash-coin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cash',
+        1 => 'coin',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    441 => 
+    array (
+      'id' => 'coin-outline',
+      'name' => 'Coin',
+      'value' => 'bi-coin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'coin',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    442 => 
+    array (
+      'id' => 'currency-bitcoin-outline',
+      'name' => 'Currency Bitcoin',
+      'value' => 'bi-currency-bitcoin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'bitcoin',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    443 => 
+    array (
+      'id' => 'currency-dollar-outline',
+      'name' => 'Currency Dollar',
+      'value' => 'bi-currency-dollar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'dollar',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    444 => 
+    array (
+      'id' => 'currency-euro-outline',
+      'name' => 'Currency Euro',
+      'value' => 'bi-currency-euro',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'euro',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    445 => 
+    array (
+      'id' => 'currency-exchange-outline',
+      'name' => 'Currency Exchange',
+      'value' => 'bi-currency-exchange',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'exchange',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    446 => 
+    array (
+      'id' => 'currency-pound-outline',
+      'name' => 'Currency Pound',
+      'value' => 'bi-currency-pound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'pound',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    447 => 
+    array (
+      'id' => 'currency-yen-outline',
+      'name' => 'Currency Yen',
+      'value' => 'bi-currency-yen',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'yen',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    448 => 
+    array (
+      'id' => 'headset-vr-outline',
+      'name' => 'Headset Vr',
+      'value' => 'bi-headset-vr',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'headset',
+        1 => 'vr',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    449 => 
+    array (
+      'id' => 'piggy-bank-fill-solid',
+      'name' => 'Piggy Bank Fill',
+      'value' => 'bi-piggy-bank-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'piggy',
+        1 => 'bank',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    450 => 
+    array (
+      'id' => 'piggy-bank-fill-outline',
+      'name' => 'Piggy Bank Fill',
+      'value' => 'bi-piggy-bank',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'piggy',
+        1 => 'bank',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    451 => 
+    array (
+      'id' => 'piggy-bank-outline',
+      'name' => 'Piggy Bank',
+      'value' => 'bi-piggy-bank',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'piggy',
+        1 => 'bank',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    452 => 
+    array (
+      'id' => 'recycle-outline',
+      'name' => 'Recycle',
+      'value' => 'bi-recycle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'recycle',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    453 => 
+    array (
+      'id' => 'safe-fill-solid',
+      'name' => 'Safe Fill',
+      'value' => 'bi-safe-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    454 => 
+    array (
+      'id' => 'safe-fill-outline',
+      'name' => 'Safe Fill',
+      'value' => 'bi-safe',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    455 => 
+    array (
+      'id' => 'safe2-fill-solid',
+      'name' => 'Safe2 Fill',
+      'value' => 'bi-safe2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    456 => 
+    array (
+      'id' => 'safe2-fill-outline',
+      'name' => 'Safe2 Fill',
+      'value' => 'bi-safe2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    457 => 
+    array (
+      'id' => 'safe2-outline',
+      'name' => 'Safe2',
+      'value' => 'bi-safe2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    458 => 
+    array (
+      'id' => 'sd-card-fill-solid',
+      'name' => 'Sd Card Fill',
+      'value' => 'bi-sd-card-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sd',
+        1 => 'card',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    459 => 
+    array (
+      'id' => 'sd-card-fill-outline',
+      'name' => 'Sd Card Fill',
+      'value' => 'bi-sd-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sd',
+        1 => 'card',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    460 => 
+    array (
+      'id' => 'sd-card-outline',
+      'name' => 'Sd Card',
+      'value' => 'bi-sd-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sd',
+        1 => 'card',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    461 => 
+    array (
+      'id' => 'safe-outline',
+      'name' => 'Safe',
+      'value' => 'bi-safe',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'safe',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    462 => 
+    array (
+      'id' => 'easel2-fill-solid',
+      'name' => 'Easel2 Fill',
+      'value' => 'bi-easel2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    463 => 
+    array (
+      'id' => 'easel2-fill-outline',
+      'name' => 'Easel2 Fill',
+      'value' => 'bi-easel2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    464 => 
+    array (
+      'id' => 'easel2-outline',
+      'name' => 'Easel2',
+      'value' => 'bi-easel2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    465 => 
+    array (
+      'id' => 'easel3-fill-solid',
+      'name' => 'Easel3 Fill',
+      'value' => 'bi-easel3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    466 => 
+    array (
+      'id' => 'easel3-fill-outline',
+      'name' => 'Easel3 Fill',
+      'value' => 'bi-easel3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    467 => 
+    array (
+      'id' => 'easel3-outline',
+      'name' => 'Easel3',
+      'value' => 'bi-easel3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'easel3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    468 => 
+    array (
+      'id' => 'fan-outline',
+      'name' => 'Fan',
+      'value' => 'bi-fan',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fan',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    469 => 
+    array (
+      'id' => 'hypnotize-outline',
+      'name' => 'Hypnotize',
+      'value' => 'bi-hypnotize',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hypnotize',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    470 => 
+    array (
+      'id' => 'magic-outline',
+      'name' => 'Magic',
+      'value' => 'bi-magic',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'magic',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    471 => 
+    array (
+      'id' => 'radioactive-outline',
+      'name' => 'Radioactive',
+      'value' => 'bi-radioactive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'radioactive',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    472 => 
+    array (
+      'id' => 'yin-yang-outline',
+      'name' => 'Yin Yang',
+      'value' => 'bi-yin-yang',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'yin',
+        1 => 'yang',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    473 => 
+    array (
+      'id' => 'bandaid-fill-solid',
+      'name' => 'Bandaid Fill',
+      'value' => 'bi-bandaid-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bandaid',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    474 => 
+    array (
+      'id' => 'bandaid-fill-outline',
+      'name' => 'Bandaid Fill',
+      'value' => 'bi-bandaid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bandaid',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    475 => 
+    array (
+      'id' => 'bandaid-outline',
+      'name' => 'Bandaid',
+      'value' => 'bi-bandaid',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bandaid',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    476 => 
+    array (
+      'id' => 'boxes-outline',
+      'name' => 'Boxes',
+      'value' => 'bi-boxes',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'boxes',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    477 => 
+    array (
+      'id' => 'dpad-fill-solid',
+      'name' => 'Dpad Fill',
+      'value' => 'bi-dpad-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dpad',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    478 => 
+    array (
+      'id' => 'dpad-fill-outline',
+      'name' => 'Dpad Fill',
+      'value' => 'bi-dpad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dpad',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    479 => 
+    array (
+      'id' => 'dpad-outline',
+      'name' => 'Dpad',
+      'value' => 'bi-dpad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dpad',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    480 => 
+    array (
+      'id' => 'explicit-fill-solid',
+      'name' => 'Explicit Fill',
+      'value' => 'bi-explicit-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'explicit',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    481 => 
+    array (
+      'id' => 'explicit-fill-outline',
+      'name' => 'Explicit Fill',
+      'value' => 'bi-explicit',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'explicit',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    482 => 
+    array (
+      'id' => 'explicit-outline',
+      'name' => 'Explicit',
+      'value' => 'bi-explicit',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'explicit',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    483 => 
+    array (
+      'id' => 'git-outline',
+      'name' => 'Git',
+      'value' => 'bi-git',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'git',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    484 => 
+    array (
+      'id' => 'pc-display-horizontal-outline',
+      'name' => 'Pc Display Horizontal',
+      'value' => 'bi-pc-display-horizontal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pc',
+        1 => 'display',
+        2 => 'horizontal',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    485 => 
+    array (
+      'id' => 'pc-display-outline',
+      'name' => 'Pc Display',
+      'value' => 'bi-pc-display',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pc',
+        1 => 'display',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    486 => 
+    array (
+      'id' => 'pc-horizontal-outline',
+      'name' => 'Pc Horizontal',
+      'value' => 'bi-pc-horizontal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pc',
+        1 => 'horizontal',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    487 => 
+    array (
+      'id' => 'pc-outline',
+      'name' => 'Pc',
+      'value' => 'bi-pc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pc',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    488 => 
+    array (
+      'id' => 'qr-code-scan-outline',
+      'name' => 'Qr Code Scan',
+      'value' => 'bi-qr-code-scan',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'qr',
+        1 => 'code',
+        2 => 'scan',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    489 => 
+    array (
+      'id' => 'qr-code-outline',
+      'name' => 'Qr Code',
+      'value' => 'bi-qr-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'qr',
+        1 => 'code',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    490 => 
+    array (
+      'id' => 'robot-outline',
+      'name' => 'Robot',
+      'value' => 'bi-robot',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'robot',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    491 => 
+    array (
+      'id' => 'terminal-dash-outline',
+      'name' => 'Terminal Dash',
+      'value' => 'bi-terminal-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    492 => 
+    array (
+      'id' => 'terminal-plus-outline',
+      'name' => 'Terminal Plus',
+      'value' => 'bi-terminal-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'plus',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    493 => 
+    array (
+      'id' => 'terminal-split-outline',
+      'name' => 'Terminal Split',
+      'value' => 'bi-terminal-split',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'split',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    494 => 
+    array (
+      'id' => 'ticket-detailed-fill-solid',
+      'name' => 'Ticket Detailed Fill',
+      'value' => 'bi-ticket-detailed-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'detailed',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    495 => 
+    array (
+      'id' => 'ticket-detailed-fill-outline',
+      'name' => 'Ticket Detailed Fill',
+      'value' => 'bi-ticket-detailed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'detailed',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    496 => 
+    array (
+      'id' => 'ticket-detailed-outline',
+      'name' => 'Ticket Detailed',
+      'value' => 'bi-ticket-detailed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'detailed',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    497 => 
+    array (
+      'id' => 'ticket-fill-solid',
+      'name' => 'Ticket Fill',
+      'value' => 'bi-ticket-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    498 => 
+    array (
+      'id' => 'ticket-fill-outline',
+      'name' => 'Ticket Fill',
+      'value' => 'bi-ticket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    499 => 
+    array (
+      'id' => 'ticket-perforated-fill-solid',
+      'name' => 'Ticket Perforated Fill',
+      'value' => 'bi-ticket-perforated-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'perforated',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    500 => 
+    array (
+      'id' => 'ticket-perforated-fill-outline',
+      'name' => 'Ticket Perforated Fill',
+      'value' => 'bi-ticket-perforated',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'perforated',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    501 => 
+    array (
+      'id' => 'ticket-perforated-outline',
+      'name' => 'Ticket Perforated',
+      'value' => 'bi-ticket-perforated',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+        1 => 'perforated',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    502 => 
+    array (
+      'id' => 'ticket-outline',
+      'name' => 'Ticket',
+      'value' => 'bi-ticket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ticket',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    503 => 
+    array (
+      'id' => 'ethernet-outline',
+      'name' => 'Ethernet',
+      'value' => 'bi-ethernet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ethernet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    504 => 
+    array (
+      'id' => 'hdmi-fill-solid',
+      'name' => 'Hdmi Fill',
+      'value' => 'bi-hdmi-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdmi',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    505 => 
+    array (
+      'id' => 'hdmi-fill-outline',
+      'name' => 'Hdmi Fill',
+      'value' => 'bi-hdmi',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdmi',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    506 => 
+    array (
+      'id' => 'hdmi-outline',
+      'name' => 'Hdmi',
+      'value' => 'bi-hdmi',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hdmi',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    507 => 
+    array (
+      'id' => 'usb-c-fill-solid',
+      'name' => 'Usb C Fill',
+      'value' => 'bi-usb-c-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'c',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    508 => 
+    array (
+      'id' => 'usb-c-fill-outline',
+      'name' => 'Usb C Fill',
+      'value' => 'bi-usb-c',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'c',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    509 => 
+    array (
+      'id' => 'usb-c-outline',
+      'name' => 'Usb C',
+      'value' => 'bi-usb-c',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'c',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    510 => 
+    array (
+      'id' => 'usb-fill-solid',
+      'name' => 'Usb Fill',
+      'value' => 'bi-usb-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    511 => 
+    array (
+      'id' => 'usb-fill-outline',
+      'name' => 'Usb Fill',
+      'value' => 'bi-usb',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    512 => 
+    array (
+      'id' => 'usb-plug-fill-solid',
+      'name' => 'Usb Plug Fill',
+      'value' => 'bi-usb-plug-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'plug',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    513 => 
+    array (
+      'id' => 'usb-plug-fill-outline',
+      'name' => 'Usb Plug Fill',
+      'value' => 'bi-usb-plug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'plug',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    514 => 
+    array (
+      'id' => 'usb-plug-outline',
+      'name' => 'Usb Plug',
+      'value' => 'bi-usb-plug',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'plug',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    515 => 
+    array (
+      'id' => 'usb-symbol-outline',
+      'name' => 'Usb Symbol',
+      'value' => 'bi-usb-symbol',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'symbol',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    516 => 
+    array (
+      'id' => 'usb-outline',
+      'name' => 'Usb',
+      'value' => 'bi-usb',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    517 => 
+    array (
+      'id' => 'displayport-outline',
+      'name' => 'Displayport',
+      'value' => 'bi-displayport',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'displayport',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    518 => 
+    array (
+      'id' => 'gpu-card-outline',
+      'name' => 'Gpu Card',
+      'value' => 'bi-gpu-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gpu',
+        1 => 'card',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    519 => 
+    array (
+      'id' => 'memory-outline',
+      'name' => 'Memory',
+      'value' => 'bi-memory',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'memory',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    520 => 
+    array (
+      'id' => 'modem-fill-solid',
+      'name' => 'Modem Fill',
+      'value' => 'bi-modem-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'modem',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    521 => 
+    array (
+      'id' => 'modem-fill-outline',
+      'name' => 'Modem Fill',
+      'value' => 'bi-modem',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'modem',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    522 => 
+    array (
+      'id' => 'modem-outline',
+      'name' => 'Modem',
+      'value' => 'bi-modem',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'modem',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    523 => 
+    array (
+      'id' => 'motherboard-fill-solid',
+      'name' => 'Motherboard Fill',
+      'value' => 'bi-motherboard-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'motherboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    524 => 
+    array (
+      'id' => 'motherboard-fill-outline',
+      'name' => 'Motherboard Fill',
+      'value' => 'bi-motherboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'motherboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    525 => 
+    array (
+      'id' => 'motherboard-outline',
+      'name' => 'Motherboard',
+      'value' => 'bi-motherboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'motherboard',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    526 => 
+    array (
+      'id' => 'pci-card-outline',
+      'name' => 'Pci Card',
+      'value' => 'bi-pci-card',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pci',
+        1 => 'card',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    527 => 
+    array (
+      'id' => 'router-fill-solid',
+      'name' => 'Router Fill',
+      'value' => 'bi-router-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'router',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    528 => 
+    array (
+      'id' => 'router-fill-outline',
+      'name' => 'Router Fill',
+      'value' => 'bi-router',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'router',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    529 => 
+    array (
+      'id' => 'router-outline',
+      'name' => 'Router',
+      'value' => 'bi-router',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'router',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    530 => 
+    array (
+      'id' => 'thunderbolt-fill-solid',
+      'name' => 'Thunderbolt Fill',
+      'value' => 'bi-thunderbolt-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thunderbolt',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    531 => 
+    array (
+      'id' => 'thunderbolt-fill-outline',
+      'name' => 'Thunderbolt Fill',
+      'value' => 'bi-thunderbolt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thunderbolt',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    532 => 
+    array (
+      'id' => 'thunderbolt-outline',
+      'name' => 'Thunderbolt',
+      'value' => 'bi-thunderbolt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'thunderbolt',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    533 => 
+    array (
+      'id' => 'usb-drive-fill-solid',
+      'name' => 'Usb Drive Fill',
+      'value' => 'bi-usb-drive-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'drive',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    534 => 
+    array (
+      'id' => 'usb-drive-fill-outline',
+      'name' => 'Usb Drive Fill',
+      'value' => 'bi-usb-drive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'drive',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    535 => 
+    array (
+      'id' => 'usb-drive-outline',
+      'name' => 'Usb Drive',
+      'value' => 'bi-usb-drive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'drive',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    536 => 
+    array (
+      'id' => 'usb-micro-fill-solid',
+      'name' => 'Usb Micro Fill',
+      'value' => 'bi-usb-micro-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'micro',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    537 => 
+    array (
+      'id' => 'usb-micro-fill-outline',
+      'name' => 'Usb Micro Fill',
+      'value' => 'bi-usb-micro',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'micro',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    538 => 
+    array (
+      'id' => 'usb-micro-outline',
+      'name' => 'Usb Micro',
+      'value' => 'bi-usb-micro',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'micro',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    539 => 
+    array (
+      'id' => 'usb-mini-fill-solid',
+      'name' => 'Usb Mini Fill',
+      'value' => 'bi-usb-mini-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'mini',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    540 => 
+    array (
+      'id' => 'usb-mini-fill-outline',
+      'name' => 'Usb Mini Fill',
+      'value' => 'bi-usb-mini',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'mini',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    541 => 
+    array (
+      'id' => 'usb-mini-outline',
+      'name' => 'Usb Mini',
+      'value' => 'bi-usb-mini',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'usb',
+        1 => 'mini',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    542 => 
+    array (
+      'id' => 'cloud-haze2-outline',
+      'name' => 'Cloud Haze2',
+      'value' => 'bi-cloud-haze2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cloud',
+        1 => 'haze2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    543 => 
+    array (
+      'id' => 'device-hdd-fill-solid',
+      'name' => 'Device Hdd Fill',
+      'value' => 'bi-device-hdd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'hdd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    544 => 
+    array (
+      'id' => 'device-hdd-fill-outline',
+      'name' => 'Device Hdd Fill',
+      'value' => 'bi-device-hdd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'hdd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    545 => 
+    array (
+      'id' => 'device-hdd-outline',
+      'name' => 'Device Hdd',
+      'value' => 'bi-device-hdd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'hdd',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    546 => 
+    array (
+      'id' => 'device-ssd-fill-solid',
+      'name' => 'Device Ssd Fill',
+      'value' => 'bi-device-ssd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'ssd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    547 => 
+    array (
+      'id' => 'device-ssd-fill-outline',
+      'name' => 'Device Ssd Fill',
+      'value' => 'bi-device-ssd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'ssd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    548 => 
+    array (
+      'id' => 'device-ssd-outline',
+      'name' => 'Device Ssd',
+      'value' => 'bi-device-ssd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'device',
+        1 => 'ssd',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    549 => 
+    array (
+      'id' => 'displayport-fill-solid',
+      'name' => 'Displayport Fill',
+      'value' => 'bi-displayport-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'displayport',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    550 => 
+    array (
+      'id' => 'displayport-fill-outline',
+      'name' => 'Displayport Fill',
+      'value' => 'bi-displayport',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'displayport',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    551 => 
+    array (
+      'id' => 'mortarboard-fill-solid',
+      'name' => 'Mortarboard Fill',
+      'value' => 'bi-mortarboard-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mortarboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    552 => 
+    array (
+      'id' => 'mortarboard-fill-outline',
+      'name' => 'Mortarboard Fill',
+      'value' => 'bi-mortarboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mortarboard',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    553 => 
+    array (
+      'id' => 'mortarboard-outline',
+      'name' => 'Mortarboard',
+      'value' => 'bi-mortarboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mortarboard',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    554 => 
+    array (
+      'id' => 'terminal-x-outline',
+      'name' => 'Terminal X',
+      'value' => 'bi-terminal-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'terminal',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    555 => 
+    array (
+      'id' => 'badge-sd-fill-solid',
+      'name' => 'Badge Sd Fill',
+      'value' => 'bi-badge-sd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'sd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    556 => 
+    array (
+      'id' => 'badge-sd-fill-outline',
+      'name' => 'Badge Sd Fill',
+      'value' => 'bi-badge-sd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'sd',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    557 => 
+    array (
+      'id' => 'badge-sd-outline',
+      'name' => 'Badge Sd',
+      'value' => 'bi-badge-sd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'sd',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    558 => 
+    array (
+      'id' => 'badge-sd-solid',
+      'name' => 'Badge Sd',
+      'value' => 'bi-badge-sd-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'badge',
+        1 => 'sd',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    559 => 
+    array (
+      'id' => 'bag-heart-fill-solid',
+      'name' => 'Bag Heart Fill',
+      'value' => 'bi-bag-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    560 => 
+    array (
+      'id' => 'bag-heart-fill-outline',
+      'name' => 'Bag Heart Fill',
+      'value' => 'bi-bag-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    561 => 
+    array (
+      'id' => 'bag-heart-outline',
+      'name' => 'Bag Heart',
+      'value' => 'bi-bag-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    562 => 
+    array (
+      'id' => 'bag-heart-solid',
+      'name' => 'Bag Heart',
+      'value' => 'bi-bag-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bag',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    563 => 
+    array (
+      'id' => 'balloon-fill-solid',
+      'name' => 'Balloon Fill',
+      'value' => 'bi-balloon-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    564 => 
+    array (
+      'id' => 'balloon-fill-outline',
+      'name' => 'Balloon Fill',
+      'value' => 'bi-balloon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    565 => 
+    array (
+      'id' => 'balloon-heart-fill-solid',
+      'name' => 'Balloon Heart Fill',
+      'value' => 'bi-balloon-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    566 => 
+    array (
+      'id' => 'balloon-heart-fill-outline',
+      'name' => 'Balloon Heart Fill',
+      'value' => 'bi-balloon-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    567 => 
+    array (
+      'id' => 'balloon-heart-outline',
+      'name' => 'Balloon Heart',
+      'value' => 'bi-balloon-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    568 => 
+    array (
+      'id' => 'balloon-heart-solid',
+      'name' => 'Balloon Heart',
+      'value' => 'bi-balloon-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    569 => 
+    array (
+      'id' => 'balloon-outline',
+      'name' => 'Balloon',
+      'value' => 'bi-balloon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'balloon',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    570 => 
+    array (
+      'id' => 'box2-fill-solid',
+      'name' => 'Box2 Fill',
+      'value' => 'bi-box2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    571 => 
+    array (
+      'id' => 'box2-fill-outline',
+      'name' => 'Box2 Fill',
+      'value' => 'bi-box2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    572 => 
+    array (
+      'id' => 'box2-heart-fill-solid',
+      'name' => 'Box2 Heart Fill',
+      'value' => 'bi-box2-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    573 => 
+    array (
+      'id' => 'box2-heart-fill-outline',
+      'name' => 'Box2 Heart Fill',
+      'value' => 'bi-box2-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    574 => 
+    array (
+      'id' => 'box2-heart-outline',
+      'name' => 'Box2 Heart',
+      'value' => 'bi-box2-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    575 => 
+    array (
+      'id' => 'box2-heart-solid',
+      'name' => 'Box2 Heart',
+      'value' => 'bi-box2-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    576 => 
+    array (
+      'id' => 'box2-outline',
+      'name' => 'Box2',
+      'value' => 'bi-box2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    577 => 
+    array (
+      'id' => 'hospital-fill-solid',
+      'name' => 'Hospital Fill',
+      'value' => 'bi-hospital-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hospital',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    578 => 
+    array (
+      'id' => 'hospital-fill-outline',
+      'name' => 'Hospital Fill',
+      'value' => 'bi-hospital',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hospital',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    579 => 
+    array (
+      'id' => 'hospital-outline',
+      'name' => 'Hospital',
+      'value' => 'bi-hospital',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'hospital',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    580 => 
+    array (
+      'id' => 'house-heart-fill-solid',
+      'name' => 'House Heart Fill',
+      'value' => 'bi-house-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    581 => 
+    array (
+      'id' => 'house-heart-fill-outline',
+      'name' => 'House Heart Fill',
+      'value' => 'bi-house-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    582 => 
+    array (
+      'id' => 'house-heart-outline',
+      'name' => 'House Heart',
+      'value' => 'bi-house-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    583 => 
+    array (
+      'id' => 'house-heart-solid',
+      'name' => 'House Heart',
+      'value' => 'bi-house-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'heart',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    584 => 
+    array (
+      'id' => 'magnet-fill-solid',
+      'name' => 'Magnet Fill',
+      'value' => 'bi-magnet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'magnet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    585 => 
+    array (
+      'id' => 'magnet-fill-outline',
+      'name' => 'Magnet Fill',
+      'value' => 'bi-magnet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'magnet',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    586 => 
+    array (
+      'id' => 'magnet-outline',
+      'name' => 'Magnet',
+      'value' => 'bi-magnet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'magnet',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    587 => 
+    array (
+      'id' => 'plugin-outline',
+      'name' => 'Plugin',
+      'value' => 'bi-plugin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'plugin',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    588 => 
+    array (
+      'id' => 'valentine-outline',
+      'name' => 'Valentine',
+      'value' => 'bi-valentine',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'valentine',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    589 => 
+    array (
+      'id' => 'valentine2-outline',
+      'name' => 'Valentine2',
+      'value' => 'bi-valentine2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'valentine2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    590 => 
+    array (
+      'id' => 'wrench-adjustable-circle-fill-solid',
+      'name' => 'Wrench Adjustable Circle Fill',
+      'value' => 'bi-wrench-adjustable-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+        1 => 'adjustable',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    591 => 
+    array (
+      'id' => 'wrench-adjustable-circle-fill-outline',
+      'name' => 'Wrench Adjustable Circle Fill',
+      'value' => 'bi-wrench-adjustable-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+        1 => 'adjustable',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    592 => 
+    array (
+      'id' => 'wrench-adjustable-circle-outline',
+      'name' => 'Wrench Adjustable Circle',
+      'value' => 'bi-wrench-adjustable-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+        1 => 'adjustable',
+        2 => 'circle',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    593 => 
+    array (
+      'id' => 'wrench-adjustable-circle-solid',
+      'name' => 'Wrench Adjustable Circle',
+      'value' => 'bi-wrench-adjustable-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+        1 => 'adjustable',
+        2 => 'circle',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    594 => 
+    array (
+      'id' => 'wrench-adjustable-outline',
+      'name' => 'Wrench Adjustable',
+      'value' => 'bi-wrench-adjustable',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wrench',
+        1 => 'adjustable',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    595 => 
+    array (
+      'id' => 'airplane-engines-fill-solid',
+      'name' => 'Airplane Engines Fill',
+      'value' => 'bi-airplane-engines-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+        1 => 'engines',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    596 => 
+    array (
+      'id' => 'airplane-engines-fill-outline',
+      'name' => 'Airplane Engines Fill',
+      'value' => 'bi-airplane-engines',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+        1 => 'engines',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    597 => 
+    array (
+      'id' => 'airplane-engines-outline',
+      'name' => 'Airplane Engines',
+      'value' => 'bi-airplane-engines',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+        1 => 'engines',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    598 => 
+    array (
+      'id' => 'airplane-fill-solid',
+      'name' => 'Airplane Fill',
+      'value' => 'bi-airplane-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    599 => 
+    array (
+      'id' => 'airplane-fill-outline',
+      'name' => 'Airplane Fill',
+      'value' => 'bi-airplane',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    600 => 
+    array (
+      'id' => 'airplane-outline',
+      'name' => 'Airplane',
+      'value' => 'bi-airplane',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'airplane',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    601 => 
+    array (
+      'id' => 'box-fill-solid',
+      'name' => 'Box Fill',
+      'value' => 'bi-box-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    602 => 
+    array (
+      'id' => 'box-fill-outline',
+      'name' => 'Box Fill',
+      'value' => 'bi-box',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    603 => 
+    array (
+      'id' => 'box-seam-fill-solid',
+      'name' => 'Box Seam Fill',
+      'value' => 'bi-box-seam-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'seam',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    604 => 
+    array (
+      'id' => 'box-seam-fill-outline',
+      'name' => 'Box Seam Fill',
+      'value' => 'bi-box-seam',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'box',
+        1 => 'seam',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    605 => 
+    array (
+      'id' => 'capsule-pill-outline',
+      'name' => 'Capsule Pill',
+      'value' => 'bi-capsule-pill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'capsule',
+        1 => 'pill',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    606 => 
+    array (
+      'id' => 'capsule-outline',
+      'name' => 'Capsule',
+      'value' => 'bi-capsule',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'capsule',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    607 => 
+    array (
+      'id' => 'car-front-fill-solid',
+      'name' => 'Car Front Fill',
+      'value' => 'bi-car-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'car',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    608 => 
+    array (
+      'id' => 'car-front-fill-outline',
+      'name' => 'Car Front Fill',
+      'value' => 'bi-car-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'car',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    609 => 
+    array (
+      'id' => 'car-front-outline',
+      'name' => 'Car Front',
+      'value' => 'bi-car-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'car',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    610 => 
+    array (
+      'id' => 'cup-hot-fill-solid',
+      'name' => 'Cup Hot Fill',
+      'value' => 'bi-cup-hot-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'hot',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    611 => 
+    array (
+      'id' => 'cup-hot-fill-outline',
+      'name' => 'Cup Hot Fill',
+      'value' => 'bi-cup-hot',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'hot',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    612 => 
+    array (
+      'id' => 'cup-hot-outline',
+      'name' => 'Cup Hot',
+      'value' => 'bi-cup-hot',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cup',
+        1 => 'hot',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    613 => 
+    array (
+      'id' => 'currency-rupee-outline',
+      'name' => 'Currency Rupee',
+      'value' => 'bi-currency-rupee',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'currency',
+        1 => 'rupee',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    614 => 
+    array (
+      'id' => 'fire-outline',
+      'name' => 'Fire',
+      'value' => 'bi-fire',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fire',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    615 => 
+    array (
+      'id' => 'lungs-fill-solid',
+      'name' => 'Lungs Fill',
+      'value' => 'bi-lungs-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lungs',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    616 => 
+    array (
+      'id' => 'lungs-fill-outline',
+      'name' => 'Lungs Fill',
+      'value' => 'bi-lungs',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lungs',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    617 => 
+    array (
+      'id' => 'lungs-outline',
+      'name' => 'Lungs',
+      'value' => 'bi-lungs',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lungs',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    618 => 
+    array (
+      'id' => 'pass-fill-solid',
+      'name' => 'Pass Fill',
+      'value' => 'bi-pass-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pass',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    619 => 
+    array (
+      'id' => 'pass-fill-outline',
+      'name' => 'Pass Fill',
+      'value' => 'bi-pass',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pass',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    620 => 
+    array (
+      'id' => 'pass-outline',
+      'name' => 'Pass',
+      'value' => 'bi-pass',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pass',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    621 => 
+    array (
+      'id' => 'prescription-outline',
+      'name' => 'Prescription',
+      'value' => 'bi-prescription',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'prescription',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    622 => 
+    array (
+      'id' => 'prescription2-outline',
+      'name' => 'Prescription2',
+      'value' => 'bi-prescription2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'prescription2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    623 => 
+    array (
+      'id' => 'train-freight-front-fill-solid',
+      'name' => 'Train Freight Front Fill',
+      'value' => 'bi-train-freight-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'freight',
+        2 => 'front',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    624 => 
+    array (
+      'id' => 'train-freight-front-fill-outline',
+      'name' => 'Train Freight Front Fill',
+      'value' => 'bi-train-freight-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'freight',
+        2 => 'front',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    625 => 
+    array (
+      'id' => 'train-freight-front-outline',
+      'name' => 'Train Freight Front',
+      'value' => 'bi-train-freight-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'freight',
+        2 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    626 => 
+    array (
+      'id' => 'train-front-fill-solid',
+      'name' => 'Train Front Fill',
+      'value' => 'bi-train-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    627 => 
+    array (
+      'id' => 'train-front-fill-outline',
+      'name' => 'Train Front Fill',
+      'value' => 'bi-train-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    628 => 
+    array (
+      'id' => 'train-front-outline',
+      'name' => 'Train Front',
+      'value' => 'bi-train-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    629 => 
+    array (
+      'id' => 'train-lightrail-front-fill-solid',
+      'name' => 'Train Lightrail Front Fill',
+      'value' => 'bi-train-lightrail-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'lightrail',
+        2 => 'front',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    630 => 
+    array (
+      'id' => 'train-lightrail-front-fill-outline',
+      'name' => 'Train Lightrail Front Fill',
+      'value' => 'bi-train-lightrail-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'lightrail',
+        2 => 'front',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    631 => 
+    array (
+      'id' => 'train-lightrail-front-outline',
+      'name' => 'Train Lightrail Front',
+      'value' => 'bi-train-lightrail-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'train',
+        1 => 'lightrail',
+        2 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    632 => 
+    array (
+      'id' => 'truck-front-fill-solid',
+      'name' => 'Truck Front Fill',
+      'value' => 'bi-truck-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'truck',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    633 => 
+    array (
+      'id' => 'truck-front-fill-outline',
+      'name' => 'Truck Front Fill',
+      'value' => 'bi-truck-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'truck',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    634 => 
+    array (
+      'id' => 'truck-front-outline',
+      'name' => 'Truck Front',
+      'value' => 'bi-truck-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'truck',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    635 => 
+    array (
+      'id' => 'virus-outline',
+      'name' => 'Virus',
+      'value' => 'bi-virus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'virus',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    636 => 
+    array (
+      'id' => 'virus2-outline',
+      'name' => 'Virus2',
+      'value' => 'bi-virus2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'virus2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    637 => 
+    array (
+      'id' => 'sign-stop-fill-solid',
+      'name' => 'Sign Stop Fill',
+      'value' => 'bi-sign-stop-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    638 => 
+    array (
+      'id' => 'sign-stop-fill-outline',
+      'name' => 'Sign Stop Fill',
+      'value' => 'bi-sign-stop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    639 => 
+    array (
+      'id' => 'sign-stop-lights-fill-solid',
+      'name' => 'Sign Stop Lights Fill',
+      'value' => 'bi-sign-stop-lights-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+        2 => 'lights',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    640 => 
+    array (
+      'id' => 'sign-stop-lights-fill-outline',
+      'name' => 'Sign Stop Lights Fill',
+      'value' => 'bi-sign-stop-lights',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+        2 => 'lights',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    641 => 
+    array (
+      'id' => 'sign-stop-lights-outline',
+      'name' => 'Sign Stop Lights',
+      'value' => 'bi-sign-stop-lights',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+        2 => 'lights',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    642 => 
+    array (
+      'id' => 'sign-stop-outline',
+      'name' => 'Sign Stop',
+      'value' => 'bi-sign-stop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'stop',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    643 => 
+    array (
+      'id' => 'sign-turn-left-fill-solid',
+      'name' => 'Sign Turn Left Fill',
+      'value' => 'bi-sign-turn-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'left',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    644 => 
+    array (
+      'id' => 'sign-turn-left-fill-outline',
+      'name' => 'Sign Turn Left Fill',
+      'value' => 'bi-sign-turn-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'left',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    645 => 
+    array (
+      'id' => 'sign-turn-left-outline',
+      'name' => 'Sign Turn Left',
+      'value' => 'bi-sign-turn-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'left',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    646 => 
+    array (
+      'id' => 'sign-turn-right-fill-solid',
+      'name' => 'Sign Turn Right Fill',
+      'value' => 'bi-sign-turn-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'right',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    647 => 
+    array (
+      'id' => 'sign-turn-right-fill-outline',
+      'name' => 'Sign Turn Right Fill',
+      'value' => 'bi-sign-turn-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'right',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    648 => 
+    array (
+      'id' => 'sign-turn-right-outline',
+      'name' => 'Sign Turn Right',
+      'value' => 'bi-sign-turn-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'right',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    649 => 
+    array (
+      'id' => 'sign-turn-slight-left-fill-solid',
+      'name' => 'Sign Turn Slight Left Fill',
+      'value' => 'bi-sign-turn-slight-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'left',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    650 => 
+    array (
+      'id' => 'sign-turn-slight-left-fill-outline',
+      'name' => 'Sign Turn Slight Left Fill',
+      'value' => 'bi-sign-turn-slight-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'left',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    651 => 
+    array (
+      'id' => 'sign-turn-slight-left-outline',
+      'name' => 'Sign Turn Slight Left',
+      'value' => 'bi-sign-turn-slight-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'left',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    652 => 
+    array (
+      'id' => 'sign-turn-slight-right-fill-solid',
+      'name' => 'Sign Turn Slight Right Fill',
+      'value' => 'bi-sign-turn-slight-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'right',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    653 => 
+    array (
+      'id' => 'sign-turn-slight-right-fill-outline',
+      'name' => 'Sign Turn Slight Right Fill',
+      'value' => 'bi-sign-turn-slight-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'right',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    654 => 
+    array (
+      'id' => 'sign-turn-slight-right-outline',
+      'name' => 'Sign Turn Slight Right',
+      'value' => 'bi-sign-turn-slight-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'turn',
+        2 => 'slight',
+        3 => 'right',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    655 => 
+    array (
+      'id' => 'sign-yield-fill-solid',
+      'name' => 'Sign Yield Fill',
+      'value' => 'bi-sign-yield-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'yield',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    656 => 
+    array (
+      'id' => 'sign-yield-fill-outline',
+      'name' => 'Sign Yield Fill',
+      'value' => 'bi-sign-yield',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'yield',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    657 => 
+    array (
+      'id' => 'sign-yield-outline',
+      'name' => 'Sign Yield',
+      'value' => 'bi-sign-yield',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'yield',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    658 => 
+    array (
+      'id' => 'ev-station-fill-solid',
+      'name' => 'Ev Station Fill',
+      'value' => 'bi-ev-station-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'station',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    659 => 
+    array (
+      'id' => 'ev-station-fill-outline',
+      'name' => 'Ev Station Fill',
+      'value' => 'bi-ev-station',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'station',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    660 => 
+    array (
+      'id' => 'ev-station-outline',
+      'name' => 'Ev Station',
+      'value' => 'bi-ev-station',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'station',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    661 => 
+    array (
+      'id' => 'fuel-pump-diesel-fill-solid',
+      'name' => 'Fuel Pump Diesel Fill',
+      'value' => 'bi-fuel-pump-diesel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+        2 => 'diesel',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    662 => 
+    array (
+      'id' => 'fuel-pump-diesel-fill-outline',
+      'name' => 'Fuel Pump Diesel Fill',
+      'value' => 'bi-fuel-pump-diesel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+        2 => 'diesel',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    663 => 
+    array (
+      'id' => 'fuel-pump-diesel-outline',
+      'name' => 'Fuel Pump Diesel',
+      'value' => 'bi-fuel-pump-diesel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+        2 => 'diesel',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    664 => 
+    array (
+      'id' => 'fuel-pump-fill-solid',
+      'name' => 'Fuel Pump Fill',
+      'value' => 'bi-fuel-pump-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    665 => 
+    array (
+      'id' => 'fuel-pump-fill-outline',
+      'name' => 'Fuel Pump Fill',
+      'value' => 'bi-fuel-pump',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    666 => 
+    array (
+      'id' => 'fuel-pump-outline',
+      'name' => 'Fuel Pump',
+      'value' => 'bi-fuel-pump',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fuel',
+        1 => 'pump',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    667 => 
+    array (
+      'id' => 'rocket-fill-solid',
+      'name' => 'Rocket Fill',
+      'value' => 'bi-rocket-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    668 => 
+    array (
+      'id' => 'rocket-fill-outline',
+      'name' => 'Rocket Fill',
+      'value' => 'bi-rocket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    669 => 
+    array (
+      'id' => 'rocket-takeoff-fill-solid',
+      'name' => 'Rocket Takeoff Fill',
+      'value' => 'bi-rocket-takeoff-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+        1 => 'takeoff',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    670 => 
+    array (
+      'id' => 'rocket-takeoff-fill-outline',
+      'name' => 'Rocket Takeoff Fill',
+      'value' => 'bi-rocket-takeoff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+        1 => 'takeoff',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    671 => 
+    array (
+      'id' => 'rocket-takeoff-outline',
+      'name' => 'Rocket Takeoff',
+      'value' => 'bi-rocket-takeoff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+        1 => 'takeoff',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    672 => 
+    array (
+      'id' => 'rocket-outline',
+      'name' => 'Rocket',
+      'value' => 'bi-rocket',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rocket',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    673 => 
+    array (
+      'id' => 'sign-dead-end-fill-solid',
+      'name' => 'Sign Dead End Fill',
+      'value' => 'bi-sign-dead-end-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'dead',
+        2 => 'end',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    674 => 
+    array (
+      'id' => 'sign-dead-end-fill-outline',
+      'name' => 'Sign Dead End Fill',
+      'value' => 'bi-sign-dead-end',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'dead',
+        2 => 'end',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    675 => 
+    array (
+      'id' => 'sign-dead-end-outline',
+      'name' => 'Sign Dead End',
+      'value' => 'bi-sign-dead-end',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'dead',
+        2 => 'end',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    676 => 
+    array (
+      'id' => 'sign-do-not-enter-fill-solid',
+      'name' => 'Sign Do Not Enter Fill',
+      'value' => 'bi-sign-do-not-enter-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'do',
+        2 => 'not',
+        3 => 'enter',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    677 => 
+    array (
+      'id' => 'sign-do-not-enter-fill-outline',
+      'name' => 'Sign Do Not Enter Fill',
+      'value' => 'bi-sign-do-not-enter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'do',
+        2 => 'not',
+        3 => 'enter',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    678 => 
+    array (
+      'id' => 'sign-do-not-enter-outline',
+      'name' => 'Sign Do Not Enter',
+      'value' => 'bi-sign-do-not-enter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'do',
+        2 => 'not',
+        3 => 'enter',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    679 => 
+    array (
+      'id' => 'sign-intersection-fill-solid',
+      'name' => 'Sign Intersection Fill',
+      'value' => 'bi-sign-intersection-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    680 => 
+    array (
+      'id' => 'sign-intersection-fill-outline',
+      'name' => 'Sign Intersection Fill',
+      'value' => 'bi-sign-intersection',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    681 => 
+    array (
+      'id' => 'sign-intersection-side-fill-solid',
+      'name' => 'Sign Intersection Side Fill',
+      'value' => 'bi-sign-intersection-side-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'side',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    682 => 
+    array (
+      'id' => 'sign-intersection-side-fill-outline',
+      'name' => 'Sign Intersection Side Fill',
+      'value' => 'bi-sign-intersection-side',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'side',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    683 => 
+    array (
+      'id' => 'sign-intersection-side-outline',
+      'name' => 'Sign Intersection Side',
+      'value' => 'bi-sign-intersection-side',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'side',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    684 => 
+    array (
+      'id' => 'sign-intersection-t-fill-solid',
+      'name' => 'Sign Intersection T Fill',
+      'value' => 'bi-sign-intersection-t-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 't',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    685 => 
+    array (
+      'id' => 'sign-intersection-t-fill-outline',
+      'name' => 'Sign Intersection T Fill',
+      'value' => 'bi-sign-intersection-t',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 't',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    686 => 
+    array (
+      'id' => 'sign-intersection-t-outline',
+      'name' => 'Sign Intersection T',
+      'value' => 'bi-sign-intersection-t',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 't',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    687 => 
+    array (
+      'id' => 'sign-intersection-y-fill-solid',
+      'name' => 'Sign Intersection Y Fill',
+      'value' => 'bi-sign-intersection-y-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'y',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    688 => 
+    array (
+      'id' => 'sign-intersection-y-fill-outline',
+      'name' => 'Sign Intersection Y Fill',
+      'value' => 'bi-sign-intersection-y',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'y',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    689 => 
+    array (
+      'id' => 'sign-intersection-y-outline',
+      'name' => 'Sign Intersection Y',
+      'value' => 'bi-sign-intersection-y',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+        2 => 'y',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    690 => 
+    array (
+      'id' => 'sign-intersection-outline',
+      'name' => 'Sign Intersection',
+      'value' => 'bi-sign-intersection',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'intersection',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    691 => 
+    array (
+      'id' => 'sign-merge-left-fill-solid',
+      'name' => 'Sign Merge Left Fill',
+      'value' => 'bi-sign-merge-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'left',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    692 => 
+    array (
+      'id' => 'sign-merge-left-fill-outline',
+      'name' => 'Sign Merge Left Fill',
+      'value' => 'bi-sign-merge-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'left',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    693 => 
+    array (
+      'id' => 'sign-merge-left-outline',
+      'name' => 'Sign Merge Left',
+      'value' => 'bi-sign-merge-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'left',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    694 => 
+    array (
+      'id' => 'sign-merge-right-fill-solid',
+      'name' => 'Sign Merge Right Fill',
+      'value' => 'bi-sign-merge-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'right',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    695 => 
+    array (
+      'id' => 'sign-merge-right-fill-outline',
+      'name' => 'Sign Merge Right Fill',
+      'value' => 'bi-sign-merge-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'right',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    696 => 
+    array (
+      'id' => 'sign-merge-right-outline',
+      'name' => 'Sign Merge Right',
+      'value' => 'bi-sign-merge-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'merge',
+        2 => 'right',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    697 => 
+    array (
+      'id' => 'sign-no-left-turn-fill-solid',
+      'name' => 'Sign No Left Turn Fill',
+      'value' => 'bi-sign-no-left-turn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'left',
+        3 => 'turn',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    698 => 
+    array (
+      'id' => 'sign-no-left-turn-fill-outline',
+      'name' => 'Sign No Left Turn Fill',
+      'value' => 'bi-sign-no-left-turn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'left',
+        3 => 'turn',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    699 => 
+    array (
+      'id' => 'sign-no-left-turn-outline',
+      'name' => 'Sign No Left Turn',
+      'value' => 'bi-sign-no-left-turn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'left',
+        3 => 'turn',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    700 => 
+    array (
+      'id' => 'sign-no-parking-fill-solid',
+      'name' => 'Sign No Parking Fill',
+      'value' => 'bi-sign-no-parking-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'parking',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    701 => 
+    array (
+      'id' => 'sign-no-parking-fill-outline',
+      'name' => 'Sign No Parking Fill',
+      'value' => 'bi-sign-no-parking',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'parking',
+        3 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    702 => 
+    array (
+      'id' => 'sign-no-parking-outline',
+      'name' => 'Sign No Parking',
+      'value' => 'bi-sign-no-parking',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'parking',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    703 => 
+    array (
+      'id' => 'sign-no-right-turn-fill-solid',
+      'name' => 'Sign No Right Turn Fill',
+      'value' => 'bi-sign-no-right-turn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'right',
+        3 => 'turn',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    704 => 
+    array (
+      'id' => 'sign-no-right-turn-fill-outline',
+      'name' => 'Sign No Right Turn Fill',
+      'value' => 'bi-sign-no-right-turn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'right',
+        3 => 'turn',
+        4 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    705 => 
+    array (
+      'id' => 'sign-no-right-turn-outline',
+      'name' => 'Sign No Right Turn',
+      'value' => 'bi-sign-no-right-turn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'no',
+        2 => 'right',
+        3 => 'turn',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    706 => 
+    array (
+      'id' => 'sign-railroad-fill-solid',
+      'name' => 'Sign Railroad Fill',
+      'value' => 'bi-sign-railroad-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'railroad',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    707 => 
+    array (
+      'id' => 'sign-railroad-fill-outline',
+      'name' => 'Sign Railroad Fill',
+      'value' => 'bi-sign-railroad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'railroad',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    708 => 
+    array (
+      'id' => 'sign-railroad-outline',
+      'name' => 'Sign Railroad',
+      'value' => 'bi-sign-railroad',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sign',
+        1 => 'railroad',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    709 => 
+    array (
+      'id' => 'building-add-outline',
+      'name' => 'Building Add',
+      'value' => 'bi-building-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    710 => 
+    array (
+      'id' => 'building-check-outline',
+      'name' => 'Building Check',
+      'value' => 'bi-building-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    711 => 
+    array (
+      'id' => 'building-dash-outline',
+      'name' => 'Building Dash',
+      'value' => 'bi-building-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    712 => 
+    array (
+      'id' => 'building-down-outline',
+      'name' => 'Building Down',
+      'value' => 'bi-building-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    713 => 
+    array (
+      'id' => 'building-exclamation-outline',
+      'name' => 'Building Exclamation',
+      'value' => 'bi-building-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    714 => 
+    array (
+      'id' => 'building-fill-add-outline',
+      'name' => 'Building Fill Add',
+      'value' => 'bi-building-fill-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    715 => 
+    array (
+      'id' => 'building-fill-check-outline',
+      'name' => 'Building Fill Check',
+      'value' => 'bi-building-fill-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    716 => 
+    array (
+      'id' => 'building-fill-dash-outline',
+      'name' => 'Building Fill Dash',
+      'value' => 'bi-building-fill-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    717 => 
+    array (
+      'id' => 'building-fill-down-outline',
+      'name' => 'Building Fill Down',
+      'value' => 'bi-building-fill-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    718 => 
+    array (
+      'id' => 'building-fill-exclamation-outline',
+      'name' => 'Building Fill Exclamation',
+      'value' => 'bi-building-fill-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    719 => 
+    array (
+      'id' => 'building-fill-gear-outline',
+      'name' => 'Building Fill Gear',
+      'value' => 'bi-building-fill-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    720 => 
+    array (
+      'id' => 'building-fill-lock-outline',
+      'name' => 'Building Fill Lock',
+      'value' => 'bi-building-fill-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    721 => 
+    array (
+      'id' => 'building-fill-slash-outline',
+      'name' => 'Building Fill Slash',
+      'value' => 'bi-building-fill-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    722 => 
+    array (
+      'id' => 'building-fill-up-outline',
+      'name' => 'Building Fill Up',
+      'value' => 'bi-building-fill-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    723 => 
+    array (
+      'id' => 'building-fill-x-outline',
+      'name' => 'Building Fill X',
+      'value' => 'bi-building-fill-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+        2 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    724 => 
+    array (
+      'id' => 'building-fill-solid',
+      'name' => 'Building Fill',
+      'value' => 'bi-building-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    725 => 
+    array (
+      'id' => 'building-fill-outline',
+      'name' => 'Building Fill',
+      'value' => 'bi-building',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    726 => 
+    array (
+      'id' => 'building-gear-outline',
+      'name' => 'Building Gear',
+      'value' => 'bi-building-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    727 => 
+    array (
+      'id' => 'building-lock-outline',
+      'name' => 'Building Lock',
+      'value' => 'bi-building-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    728 => 
+    array (
+      'id' => 'building-slash-outline',
+      'name' => 'Building Slash',
+      'value' => 'bi-building-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    729 => 
+    array (
+      'id' => 'building-up-outline',
+      'name' => 'Building Up',
+      'value' => 'bi-building-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    730 => 
+    array (
+      'id' => 'building-x-outline',
+      'name' => 'Building X',
+      'value' => 'bi-building-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'building',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    731 => 
+    array (
+      'id' => 'buildings-fill-solid',
+      'name' => 'Buildings Fill',
+      'value' => 'bi-buildings-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'buildings',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    732 => 
+    array (
+      'id' => 'buildings-fill-outline',
+      'name' => 'Buildings Fill',
+      'value' => 'bi-buildings',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'buildings',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    733 => 
+    array (
+      'id' => 'buildings-outline',
+      'name' => 'Buildings',
+      'value' => 'bi-buildings',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'buildings',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    734 => 
+    array (
+      'id' => 'bus-front-fill-solid',
+      'name' => 'Bus Front Fill',
+      'value' => 'bi-bus-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bus',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    735 => 
+    array (
+      'id' => 'bus-front-fill-outline',
+      'name' => 'Bus Front Fill',
+      'value' => 'bi-bus-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bus',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    736 => 
+    array (
+      'id' => 'bus-front-outline',
+      'name' => 'Bus Front',
+      'value' => 'bi-bus-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bus',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    737 => 
+    array (
+      'id' => 'ev-front-fill-solid',
+      'name' => 'Ev Front Fill',
+      'value' => 'bi-ev-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    738 => 
+    array (
+      'id' => 'ev-front-fill-outline',
+      'name' => 'Ev Front Fill',
+      'value' => 'bi-ev-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    739 => 
+    array (
+      'id' => 'ev-front-outline',
+      'name' => 'Ev Front',
+      'value' => 'bi-ev-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ev',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    740 => 
+    array (
+      'id' => 'house-add-fill-solid',
+      'name' => 'House Add Fill',
+      'value' => 'bi-house-add-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'add',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    741 => 
+    array (
+      'id' => 'house-add-fill-outline',
+      'name' => 'House Add Fill',
+      'value' => 'bi-house-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'add',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    742 => 
+    array (
+      'id' => 'house-add-outline',
+      'name' => 'House Add',
+      'value' => 'bi-house-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    743 => 
+    array (
+      'id' => 'house-add-solid',
+      'name' => 'House Add',
+      'value' => 'bi-house-add-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    744 => 
+    array (
+      'id' => 'house-check-fill-solid',
+      'name' => 'House Check Fill',
+      'value' => 'bi-house-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    745 => 
+    array (
+      'id' => 'house-check-fill-outline',
+      'name' => 'House Check Fill',
+      'value' => 'bi-house-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    746 => 
+    array (
+      'id' => 'house-check-outline',
+      'name' => 'House Check',
+      'value' => 'bi-house-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    747 => 
+    array (
+      'id' => 'house-check-solid',
+      'name' => 'House Check',
+      'value' => 'bi-house-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    748 => 
+    array (
+      'id' => 'house-dash-fill-solid',
+      'name' => 'House Dash Fill',
+      'value' => 'bi-house-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    749 => 
+    array (
+      'id' => 'house-dash-fill-outline',
+      'name' => 'House Dash Fill',
+      'value' => 'bi-house-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    750 => 
+    array (
+      'id' => 'house-dash-outline',
+      'name' => 'House Dash',
+      'value' => 'bi-house-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    751 => 
+    array (
+      'id' => 'house-dash-solid',
+      'name' => 'House Dash',
+      'value' => 'bi-house-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    752 => 
+    array (
+      'id' => 'house-down-fill-solid',
+      'name' => 'House Down Fill',
+      'value' => 'bi-house-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    753 => 
+    array (
+      'id' => 'house-down-fill-outline',
+      'name' => 'House Down Fill',
+      'value' => 'bi-house-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    754 => 
+    array (
+      'id' => 'house-down-outline',
+      'name' => 'House Down',
+      'value' => 'bi-house-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    755 => 
+    array (
+      'id' => 'house-down-solid',
+      'name' => 'House Down',
+      'value' => 'bi-house-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    756 => 
+    array (
+      'id' => 'house-exclamation-fill-solid',
+      'name' => 'House Exclamation Fill',
+      'value' => 'bi-house-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    757 => 
+    array (
+      'id' => 'house-exclamation-fill-outline',
+      'name' => 'House Exclamation Fill',
+      'value' => 'bi-house-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    758 => 
+    array (
+      'id' => 'house-exclamation-outline',
+      'name' => 'House Exclamation',
+      'value' => 'bi-house-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    759 => 
+    array (
+      'id' => 'house-exclamation-solid',
+      'name' => 'House Exclamation',
+      'value' => 'bi-house-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    760 => 
+    array (
+      'id' => 'house-gear-fill-solid',
+      'name' => 'House Gear Fill',
+      'value' => 'bi-house-gear-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'gear',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    761 => 
+    array (
+      'id' => 'house-gear-fill-outline',
+      'name' => 'House Gear Fill',
+      'value' => 'bi-house-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'gear',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    762 => 
+    array (
+      'id' => 'house-gear-outline',
+      'name' => 'House Gear',
+      'value' => 'bi-house-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    763 => 
+    array (
+      'id' => 'house-gear-solid',
+      'name' => 'House Gear',
+      'value' => 'bi-house-gear-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    764 => 
+    array (
+      'id' => 'house-lock-fill-solid',
+      'name' => 'House Lock Fill',
+      'value' => 'bi-house-lock-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'lock',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    765 => 
+    array (
+      'id' => 'house-lock-fill-outline',
+      'name' => 'House Lock Fill',
+      'value' => 'bi-house-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'lock',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    766 => 
+    array (
+      'id' => 'house-lock-outline',
+      'name' => 'House Lock',
+      'value' => 'bi-house-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    767 => 
+    array (
+      'id' => 'house-lock-solid',
+      'name' => 'House Lock',
+      'value' => 'bi-house-lock-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    768 => 
+    array (
+      'id' => 'house-slash-fill-solid',
+      'name' => 'House Slash Fill',
+      'value' => 'bi-house-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    769 => 
+    array (
+      'id' => 'house-slash-fill-outline',
+      'name' => 'House Slash Fill',
+      'value' => 'bi-house-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    770 => 
+    array (
+      'id' => 'house-slash-outline',
+      'name' => 'House Slash',
+      'value' => 'bi-house-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    771 => 
+    array (
+      'id' => 'house-slash-solid',
+      'name' => 'House Slash',
+      'value' => 'bi-house-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    772 => 
+    array (
+      'id' => 'house-up-fill-solid',
+      'name' => 'House Up Fill',
+      'value' => 'bi-house-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    773 => 
+    array (
+      'id' => 'house-up-fill-outline',
+      'name' => 'House Up Fill',
+      'value' => 'bi-house-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    774 => 
+    array (
+      'id' => 'house-up-outline',
+      'name' => 'House Up',
+      'value' => 'bi-house-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    775 => 
+    array (
+      'id' => 'house-up-solid',
+      'name' => 'House Up',
+      'value' => 'bi-house-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    776 => 
+    array (
+      'id' => 'house-x-fill-solid',
+      'name' => 'House X Fill',
+      'value' => 'bi-house-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    777 => 
+    array (
+      'id' => 'house-x-fill-outline',
+      'name' => 'House X Fill',
+      'value' => 'bi-house-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    778 => 
+    array (
+      'id' => 'house-x-outline',
+      'name' => 'House X',
+      'value' => 'bi-house-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    779 => 
+    array (
+      'id' => 'house-x-solid',
+      'name' => 'House X',
+      'value' => 'bi-house-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'house',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    780 => 
+    array (
+      'id' => 'scooter-outline',
+      'name' => 'Scooter',
+      'value' => 'bi-scooter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'scooter',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    781 => 
+    array (
+      'id' => 'taxi-front-fill-solid',
+      'name' => 'Taxi Front Fill',
+      'value' => 'bi-taxi-front-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'taxi',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    782 => 
+    array (
+      'id' => 'taxi-front-fill-outline',
+      'name' => 'Taxi Front Fill',
+      'value' => 'bi-taxi-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'taxi',
+        1 => 'front',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    783 => 
+    array (
+      'id' => 'taxi-front-outline',
+      'name' => 'Taxi Front',
+      'value' => 'bi-taxi-front',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'taxi',
+        1 => 'front',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    784 => 
+    array (
+      'id' => 'database-add-outline',
+      'name' => 'Database Add',
+      'value' => 'bi-database-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    785 => 
+    array (
+      'id' => 'database-check-outline',
+      'name' => 'Database Check',
+      'value' => 'bi-database-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    786 => 
+    array (
+      'id' => 'database-dash-outline',
+      'name' => 'Database Dash',
+      'value' => 'bi-database-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    787 => 
+    array (
+      'id' => 'database-down-outline',
+      'name' => 'Database Down',
+      'value' => 'bi-database-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    788 => 
+    array (
+      'id' => 'database-exclamation-outline',
+      'name' => 'Database Exclamation',
+      'value' => 'bi-database-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    789 => 
+    array (
+      'id' => 'database-fill-add-outline',
+      'name' => 'Database Fill Add',
+      'value' => 'bi-database-fill-add',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'add',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    790 => 
+    array (
+      'id' => 'database-fill-check-outline',
+      'name' => 'Database Fill Check',
+      'value' => 'bi-database-fill-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'check',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    791 => 
+    array (
+      'id' => 'database-fill-dash-outline',
+      'name' => 'Database Fill Dash',
+      'value' => 'bi-database-fill-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'dash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    792 => 
+    array (
+      'id' => 'database-fill-down-outline',
+      'name' => 'Database Fill Down',
+      'value' => 'bi-database-fill-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'down',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    793 => 
+    array (
+      'id' => 'database-fill-exclamation-outline',
+      'name' => 'Database Fill Exclamation',
+      'value' => 'bi-database-fill-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'exclamation',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    794 => 
+    array (
+      'id' => 'database-fill-gear-outline',
+      'name' => 'Database Fill Gear',
+      'value' => 'bi-database-fill-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    795 => 
+    array (
+      'id' => 'database-fill-lock-outline',
+      'name' => 'Database Fill Lock',
+      'value' => 'bi-database-fill-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    796 => 
+    array (
+      'id' => 'database-fill-slash-outline',
+      'name' => 'Database Fill Slash',
+      'value' => 'bi-database-fill-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    797 => 
+    array (
+      'id' => 'database-fill-up-outline',
+      'name' => 'Database Fill Up',
+      'value' => 'bi-database-fill-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    798 => 
+    array (
+      'id' => 'database-fill-x-outline',
+      'name' => 'Database Fill X',
+      'value' => 'bi-database-fill-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+        2 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    799 => 
+    array (
+      'id' => 'database-fill-solid',
+      'name' => 'Database Fill',
+      'value' => 'bi-database-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    800 => 
+    array (
+      'id' => 'database-fill-outline',
+      'name' => 'Database Fill',
+      'value' => 'bi-database',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    801 => 
+    array (
+      'id' => 'database-gear-outline',
+      'name' => 'Database Gear',
+      'value' => 'bi-database-gear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'gear',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    802 => 
+    array (
+      'id' => 'database-lock-outline',
+      'name' => 'Database Lock',
+      'value' => 'bi-database-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'lock',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    803 => 
+    array (
+      'id' => 'database-slash-outline',
+      'name' => 'Database Slash',
+      'value' => 'bi-database-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'slash',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    804 => 
+    array (
+      'id' => 'database-up-outline',
+      'name' => 'Database Up',
+      'value' => 'bi-database-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'up',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    805 => 
+    array (
+      'id' => 'database-x-outline',
+      'name' => 'Database X',
+      'value' => 'bi-database-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+        1 => 'x',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    806 => 
+    array (
+      'id' => 'database-outline',
+      'name' => 'Database',
+      'value' => 'bi-database',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'database',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    807 => 
+    array (
+      'id' => 'houses-fill-solid',
+      'name' => 'Houses Fill',
+      'value' => 'bi-houses-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'houses',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    808 => 
+    array (
+      'id' => 'houses-fill-outline',
+      'name' => 'Houses Fill',
+      'value' => 'bi-houses',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'houses',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    809 => 
+    array (
+      'id' => 'houses-outline',
+      'name' => 'Houses',
+      'value' => 'bi-houses',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'houses',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    810 => 
+    array (
+      'id' => 'houses-solid',
+      'name' => 'Houses',
+      'value' => 'bi-houses-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'houses',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    811 => 
+    array (
+      'id' => 'cake-outline',
+      'name' => 'Cake',
+      'value' => 'bi-cake',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    812 => 
+    array (
+      'id' => 'cake2-outline',
+      'name' => 'Cake2',
+      'value' => 'bi-cake2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    813 => 
+    array (
+      'id' => 'cookie-outline',
+      'name' => 'Cookie',
+      'value' => 'bi-cookie',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cookie',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    814 => 
+    array (
+      'id' => 'emoji-astonished-fill-solid',
+      'name' => 'Emoji Astonished Fill',
+      'value' => 'bi-emoji-astonished-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'astonished',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    815 => 
+    array (
+      'id' => 'emoji-astonished-fill-outline',
+      'name' => 'Emoji Astonished Fill',
+      'value' => 'bi-emoji-astonished',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'astonished',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    816 => 
+    array (
+      'id' => 'emoji-astonished-outline',
+      'name' => 'Emoji Astonished',
+      'value' => 'bi-emoji-astonished',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'astonished',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    817 => 
+    array (
+      'id' => 'emoji-grimace-fill-solid',
+      'name' => 'Emoji Grimace Fill',
+      'value' => 'bi-emoji-grimace-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grimace',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    818 => 
+    array (
+      'id' => 'emoji-grimace-fill-outline',
+      'name' => 'Emoji Grimace Fill',
+      'value' => 'bi-emoji-grimace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grimace',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    819 => 
+    array (
+      'id' => 'emoji-grimace-outline',
+      'name' => 'Emoji Grimace',
+      'value' => 'bi-emoji-grimace',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grimace',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    820 => 
+    array (
+      'id' => 'emoji-grin-fill-solid',
+      'name' => 'Emoji Grin Fill',
+      'value' => 'bi-emoji-grin-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grin',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    821 => 
+    array (
+      'id' => 'emoji-grin-fill-outline',
+      'name' => 'Emoji Grin Fill',
+      'value' => 'bi-emoji-grin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grin',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    822 => 
+    array (
+      'id' => 'emoji-grin-outline',
+      'name' => 'Emoji Grin',
+      'value' => 'bi-emoji-grin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'grin',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    823 => 
+    array (
+      'id' => 'emoji-surprise-fill-solid',
+      'name' => 'Emoji Surprise Fill',
+      'value' => 'bi-emoji-surprise-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'surprise',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    824 => 
+    array (
+      'id' => 'emoji-surprise-fill-outline',
+      'name' => 'Emoji Surprise Fill',
+      'value' => 'bi-emoji-surprise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'surprise',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    825 => 
+    array (
+      'id' => 'emoji-surprise-outline',
+      'name' => 'Emoji Surprise',
+      'value' => 'bi-emoji-surprise',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'surprise',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    826 => 
+    array (
+      'id' => 'emoji-tear-fill-solid',
+      'name' => 'Emoji Tear Fill',
+      'value' => 'bi-emoji-tear-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'tear',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    827 => 
+    array (
+      'id' => 'emoji-tear-fill-outline',
+      'name' => 'Emoji Tear Fill',
+      'value' => 'bi-emoji-tear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'tear',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    828 => 
+    array (
+      'id' => 'emoji-tear-outline',
+      'name' => 'Emoji Tear',
+      'value' => 'bi-emoji-tear',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'emoji',
+        1 => 'tear',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    829 => 
+    array (
+      'id' => 'feather-outline',
+      'name' => 'Feather',
+      'value' => 'bi-feather',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'feather',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    830 => 
+    array (
+      'id' => 'feather2-outline',
+      'name' => 'Feather2',
+      'value' => 'bi-feather2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'feather2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    831 => 
+    array (
+      'id' => 'highlighter-outline',
+      'name' => 'Highlighter',
+      'value' => 'bi-highlighter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'highlighter',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    832 => 
+    array (
+      'id' => 'marker-tip-outline',
+      'name' => 'Marker Tip',
+      'value' => 'bi-marker-tip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'marker',
+        1 => 'tip',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    833 => 
+    array (
+      'id' => 'nvme-fill-solid',
+      'name' => 'Nvme Fill',
+      'value' => 'bi-nvme-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nvme',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    834 => 
+    array (
+      'id' => 'nvme-fill-outline',
+      'name' => 'Nvme Fill',
+      'value' => 'bi-nvme',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nvme',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    835 => 
+    array (
+      'id' => 'nvme-outline',
+      'name' => 'Nvme',
+      'value' => 'bi-nvme',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nvme',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    836 => 
+    array (
+      'id' => 'pci-card-network-outline',
+      'name' => 'Pci Card Network',
+      'value' => 'bi-pci-card-network',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pci',
+        1 => 'card',
+        2 => 'network',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    837 => 
+    array (
+      'id' => 'pci-card-sound-outline',
+      'name' => 'Pci Card Sound',
+      'value' => 'bi-pci-card-sound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pci',
+        1 => 'card',
+        2 => 'sound',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    838 => 
+    array (
+      'id' => 'radar-outline',
+      'name' => 'Radar',
+      'value' => 'bi-radar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'radar',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    839 => 
+    array (
+      'id' => 'backpack-fill-solid',
+      'name' => 'Backpack Fill',
+      'value' => 'bi-backpack-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    840 => 
+    array (
+      'id' => 'backpack-fill-outline',
+      'name' => 'Backpack Fill',
+      'value' => 'bi-backpack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    841 => 
+    array (
+      'id' => 'backpack-outline',
+      'name' => 'Backpack',
+      'value' => 'bi-backpack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    842 => 
+    array (
+      'id' => 'backpack2-fill-solid',
+      'name' => 'Backpack2 Fill',
+      'value' => 'bi-backpack2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    843 => 
+    array (
+      'id' => 'backpack2-fill-outline',
+      'name' => 'Backpack2 Fill',
+      'value' => 'bi-backpack2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    844 => 
+    array (
+      'id' => 'backpack2-outline',
+      'name' => 'Backpack2',
+      'value' => 'bi-backpack2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    845 => 
+    array (
+      'id' => 'backpack3-fill-solid',
+      'name' => 'Backpack3 Fill',
+      'value' => 'bi-backpack3-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    846 => 
+    array (
+      'id' => 'backpack3-fill-outline',
+      'name' => 'Backpack3 Fill',
+      'value' => 'bi-backpack3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack3',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    847 => 
+    array (
+      'id' => 'backpack3-outline',
+      'name' => 'Backpack3',
+      'value' => 'bi-backpack3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack3',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    848 => 
+    array (
+      'id' => 'backpack4-fill-solid',
+      'name' => 'Backpack4 Fill',
+      'value' => 'bi-backpack4-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack4',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    849 => 
+    array (
+      'id' => 'backpack4-fill-outline',
+      'name' => 'Backpack4 Fill',
+      'value' => 'bi-backpack4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack4',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    850 => 
+    array (
+      'id' => 'backpack4-outline',
+      'name' => 'Backpack4',
+      'value' => 'bi-backpack4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'backpack4',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    851 => 
+    array (
+      'id' => 'cake-fill-solid',
+      'name' => 'Cake Fill',
+      'value' => 'bi-cake-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    852 => 
+    array (
+      'id' => 'cake-fill-outline',
+      'name' => 'Cake Fill',
+      'value' => 'bi-cake',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    853 => 
+    array (
+      'id' => 'cake2-fill-solid',
+      'name' => 'Cake2 Fill',
+      'value' => 'bi-cake2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    854 => 
+    array (
+      'id' => 'cake2-fill-outline',
+      'name' => 'Cake2 Fill',
+      'value' => 'bi-cake2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cake2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    855 => 
+    array (
+      'id' => 'duffle-fill-solid',
+      'name' => 'Duffle Fill',
+      'value' => 'bi-duffle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'duffle',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    856 => 
+    array (
+      'id' => 'duffle-fill-outline',
+      'name' => 'Duffle Fill',
+      'value' => 'bi-duffle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'duffle',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    857 => 
+    array (
+      'id' => 'duffle-outline',
+      'name' => 'Duffle',
+      'value' => 'bi-duffle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'duffle',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    858 => 
+    array (
+      'id' => 'luggage-fill-solid',
+      'name' => 'Luggage Fill',
+      'value' => 'bi-luggage-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'luggage',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    859 => 
+    array (
+      'id' => 'luggage-fill-outline',
+      'name' => 'Luggage Fill',
+      'value' => 'bi-luggage',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'luggage',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    860 => 
+    array (
+      'id' => 'luggage-outline',
+      'name' => 'Luggage',
+      'value' => 'bi-luggage',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'luggage',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    861 => 
+    array (
+      'id' => 'passport-fill-solid',
+      'name' => 'Passport Fill',
+      'value' => 'bi-passport-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'passport',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    862 => 
+    array (
+      'id' => 'passport-fill-outline',
+      'name' => 'Passport Fill',
+      'value' => 'bi-passport',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'passport',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    863 => 
+    array (
+      'id' => 'passport-outline',
+      'name' => 'Passport',
+      'value' => 'bi-passport',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'passport',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    864 => 
+    array (
+      'id' => 'suitcase-fill-solid',
+      'name' => 'Suitcase Fill',
+      'value' => 'bi-suitcase-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    865 => 
+    array (
+      'id' => 'suitcase-fill-outline',
+      'name' => 'Suitcase Fill',
+      'value' => 'bi-suitcase',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    866 => 
+    array (
+      'id' => 'suitcase-lg-fill-solid',
+      'name' => 'Suitcase Lg Fill',
+      'value' => 'bi-suitcase-lg-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+        1 => 'lg',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    867 => 
+    array (
+      'id' => 'suitcase-lg-fill-outline',
+      'name' => 'Suitcase Lg Fill',
+      'value' => 'bi-suitcase-lg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+        1 => 'lg',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    868 => 
+    array (
+      'id' => 'suitcase-lg-outline',
+      'name' => 'Suitcase Lg',
+      'value' => 'bi-suitcase-lg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+        1 => 'lg',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    869 => 
+    array (
+      'id' => 'suitcase-outline',
+      'name' => 'Suitcase',
+      'value' => 'bi-suitcase',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    870 => 
+    array (
+      'id' => 'suitcase2-fill-solid',
+      'name' => 'Suitcase2 Fill',
+      'value' => 'bi-suitcase2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    871 => 
+    array (
+      'id' => 'suitcase2-fill-outline',
+      'name' => 'Suitcase2 Fill',
+      'value' => 'bi-suitcase2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase2',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    872 => 
+    array (
+      'id' => 'suitcase2-outline',
+      'name' => 'Suitcase2',
+      'value' => 'bi-suitcase2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'suitcase2',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    873 => 
+    array (
+      'id' => 'beaker-fill-solid',
+      'name' => 'Beaker Fill',
+      'value' => 'bi-beaker-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'beaker',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    874 => 
+    array (
+      'id' => 'beaker-fill-outline',
+      'name' => 'Beaker Fill',
+      'value' => 'bi-beaker',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'beaker',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    875 => 
+    array (
+      'id' => 'beaker-outline',
+      'name' => 'Beaker',
+      'value' => 'bi-beaker',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'beaker',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    876 => 
+    array (
+      'id' => 'flask-fill-solid',
+      'name' => 'Flask Fill',
+      'value' => 'bi-flask-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    877 => 
+    array (
+      'id' => 'flask-fill-outline',
+      'name' => 'Flask Fill',
+      'value' => 'bi-flask',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    878 => 
+    array (
+      'id' => 'flask-florence-fill-solid',
+      'name' => 'Flask Florence Fill',
+      'value' => 'bi-flask-florence-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+        1 => 'florence',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    879 => 
+    array (
+      'id' => 'flask-florence-fill-outline',
+      'name' => 'Flask Florence Fill',
+      'value' => 'bi-flask-florence',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+        1 => 'florence',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    880 => 
+    array (
+      'id' => 'flask-florence-outline',
+      'name' => 'Flask Florence',
+      'value' => 'bi-flask-florence',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+        1 => 'florence',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    881 => 
+    array (
+      'id' => 'flask-outline',
+      'name' => 'Flask',
+      'value' => 'bi-flask',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'flask',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    882 => 
+    array (
+      'id' => 'leaf-fill-solid',
+      'name' => 'Leaf Fill',
+      'value' => 'bi-leaf-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'leaf',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    883 => 
+    array (
+      'id' => 'leaf-fill-outline',
+      'name' => 'Leaf Fill',
+      'value' => 'bi-leaf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'leaf',
+        1 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    884 => 
+    array (
+      'id' => 'leaf-outline',
+      'name' => 'Leaf',
+      'value' => 'bi-leaf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'leaf',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    885 => 
+    array (
+      'id' => 'measuring-cup-fill-solid',
+      'name' => 'Measuring Cup Fill',
+      'value' => 'bi-measuring-cup-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'measuring',
+        1 => 'cup',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    886 => 
+    array (
+      'id' => 'measuring-cup-fill-outline',
+      'name' => 'Measuring Cup Fill',
+      'value' => 'bi-measuring-cup',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'measuring',
+        1 => 'cup',
+        2 => 'fill',
+      ),
+      'category' => 'others',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    887 => 
+    array (
+      'id' => 'measuring-cup-outline',
+      'name' => 'Measuring Cup',
+      'value' => 'bi-measuring-cup',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'measuring',
+        1 => 'cup',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    888 => 
+    array (
+      'id' => 'fork-knife-outline',
+      'name' => 'Fork Knife',
+      'value' => 'bi-fork-knife',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fork',
+        1 => 'knife',
+      ),
+      'category' => 'others',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+  ),
+);

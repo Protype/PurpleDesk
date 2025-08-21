@@ -1,2806 +1,5232 @@
 <?php
 
-return [
-    'id' => 'communications',
-    'name' => '通訊與社群',
-    'description' => '通訊、社群媒體相關圖標',
-    'priority' => 'high',
-
-    'icons' => [
-        [
-            'name' => 'broadcast-pin',
-            'displayName' => 'Broadcast Pin',
-            'class' => 'bi-broadcast-pin',
-            'keywords' => ["broadcast","pin"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-broadcast-pin'],
-            ]
-        ],
-        [
-            'name' => 'broadcast',
-            'displayName' => 'Broadcast',
-            'class' => 'bi-broadcast',
-            'keywords' => ["broadcast"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-broadcast'],
-            ]
-        ],
-        [
-            'name' => 'cast',
-            'displayName' => 'Cast',
-            'class' => 'bi-cast',
-            'keywords' => ["cast"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-cast'],
-            ]
-        ],
-        [
-            'name' => 'chat-dots-fill',
-            'displayName' => 'Chat Dots Fill',
-            'class' => 'bi-chat-dots-fill',
-            'keywords' => ["chat","dots","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-dots-fill'],
-                'outline' => ['class' => 'bi-chat-dots'],
-            ]
-        ],
-        [
-            'name' => 'chat-dots',
-            'displayName' => 'Chat Dots',
-            'class' => 'bi-chat-dots',
-            'keywords' => ["chat","dots"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-dots'],
-                'solid' => ['class' => 'bi-chat-dots-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-fill',
-            'displayName' => 'Chat Fill',
-            'class' => 'bi-chat-fill',
-            'keywords' => ["chat","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-fill'],
-                'outline' => ['class' => 'bi-chat'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-dots-fill',
-            'displayName' => 'Chat Left Dots Fill',
-            'class' => 'bi-chat-left-dots-fill',
-            'keywords' => ["chat","left","dots","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-left-dots-fill'],
-                'outline' => ['class' => 'bi-chat-left-dots'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-dots',
-            'displayName' => 'Chat Left Dots',
-            'class' => 'bi-chat-left-dots',
-            'keywords' => ["chat","left","dots"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-dots'],
-                'solid' => ['class' => 'bi-chat-left-dots-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-fill',
-            'displayName' => 'Chat Left Fill',
-            'class' => 'bi-chat-left-fill',
-            'keywords' => ["chat","left","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-left-fill'],
-                'outline' => ['class' => 'bi-chat-left'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-quote-fill',
-            'displayName' => 'Chat Left Quote Fill',
-            'class' => 'bi-chat-left-quote-fill',
-            'keywords' => ["chat","left","quote","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-left-quote-fill'],
-                'outline' => ['class' => 'bi-chat-left-quote'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-quote',
-            'displayName' => 'Chat Left Quote',
-            'class' => 'bi-chat-left-quote',
-            'keywords' => ["chat","left","quote"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-quote'],
-                'solid' => ['class' => 'bi-chat-left-quote-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-text-fill',
-            'displayName' => 'Chat Left Text Fill',
-            'class' => 'bi-chat-left-text-fill',
-            'keywords' => ["chat","left","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-left-text-fill'],
-                'outline' => ['class' => 'bi-chat-left-text'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-text',
-            'displayName' => 'Chat Left Text',
-            'class' => 'bi-chat-left-text',
-            'keywords' => ["chat","left","text"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-text'],
-                'solid' => ['class' => 'bi-chat-left-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-left',
-            'displayName' => 'Chat Left',
-            'class' => 'bi-chat-left',
-            'keywords' => ["chat","left"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left'],
-                'solid' => ['class' => 'bi-chat-left-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-quote-fill',
-            'displayName' => 'Chat Quote Fill',
-            'class' => 'bi-chat-quote-fill',
-            'keywords' => ["chat","quote","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-quote-fill'],
-                'outline' => ['class' => 'bi-chat-quote'],
-            ]
-        ],
-        [
-            'name' => 'chat-quote',
-            'displayName' => 'Chat Quote',
-            'class' => 'bi-chat-quote',
-            'keywords' => ["chat","quote"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-quote'],
-                'solid' => ['class' => 'bi-chat-quote-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-dots-fill',
-            'displayName' => 'Chat Right Dots Fill',
-            'class' => 'bi-chat-right-dots-fill',
-            'keywords' => ["chat","right","dots","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-right-dots-fill'],
-                'outline' => ['class' => 'bi-chat-right-dots'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-dots',
-            'displayName' => 'Chat Right Dots',
-            'class' => 'bi-chat-right-dots',
-            'keywords' => ["chat","right","dots"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-right-dots'],
-                'solid' => ['class' => 'bi-chat-right-dots-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-fill',
-            'displayName' => 'Chat Right Fill',
-            'class' => 'bi-chat-right-fill',
-            'keywords' => ["chat","right","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-right-fill'],
-                'outline' => ['class' => 'bi-chat-right'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-quote-fill',
-            'displayName' => 'Chat Right Quote Fill',
-            'class' => 'bi-chat-right-quote-fill',
-            'keywords' => ["chat","right","quote","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-right-quote-fill'],
-                'outline' => ['class' => 'bi-chat-right-quote'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-quote',
-            'displayName' => 'Chat Right Quote',
-            'class' => 'bi-chat-right-quote',
-            'keywords' => ["chat","right","quote"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-right-quote'],
-                'solid' => ['class' => 'bi-chat-right-quote-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-text-fill',
-            'displayName' => 'Chat Right Text Fill',
-            'class' => 'bi-chat-right-text-fill',
-            'keywords' => ["chat","right","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-right-text-fill'],
-                'outline' => ['class' => 'bi-chat-right-text'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-text',
-            'displayName' => 'Chat Right Text',
-            'class' => 'bi-chat-right-text',
-            'keywords' => ["chat","right","text"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-right-text'],
-                'solid' => ['class' => 'bi-chat-right-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-right',
-            'displayName' => 'Chat Right',
-            'class' => 'bi-chat-right',
-            'keywords' => ["chat","right"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-right'],
-                'solid' => ['class' => 'bi-chat-right-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-dots-fill',
-            'displayName' => 'Chat Square Dots Fill',
-            'class' => 'bi-chat-square-dots-fill',
-            'keywords' => ["chat","square","dots","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-square-dots-fill'],
-                'outline' => ['class' => 'bi-chat-square-dots'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-dots',
-            'displayName' => 'Chat Square Dots',
-            'class' => 'bi-chat-square-dots',
-            'keywords' => ["chat","square","dots"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-square-dots'],
-                'solid' => ['class' => 'bi-chat-square-dots-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-fill',
-            'displayName' => 'Chat Square Fill',
-            'class' => 'bi-chat-square-fill',
-            'keywords' => ["chat","square","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-square-fill'],
-                'outline' => ['class' => 'bi-chat-square'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-quote-fill',
-            'displayName' => 'Chat Square Quote Fill',
-            'class' => 'bi-chat-square-quote-fill',
-            'keywords' => ["chat","square","quote","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-square-quote-fill'],
-                'outline' => ['class' => 'bi-chat-square-quote'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-quote',
-            'displayName' => 'Chat Square Quote',
-            'class' => 'bi-chat-square-quote',
-            'keywords' => ["chat","square","quote"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-square-quote'],
-                'solid' => ['class' => 'bi-chat-square-quote-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-text-fill',
-            'displayName' => 'Chat Square Text Fill',
-            'class' => 'bi-chat-square-text-fill',
-            'keywords' => ["chat","square","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-square-text-fill'],
-                'outline' => ['class' => 'bi-chat-square-text'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-text',
-            'displayName' => 'Chat Square Text',
-            'class' => 'bi-chat-square-text',
-            'keywords' => ["chat","square","text"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-square-text'],
-                'solid' => ['class' => 'bi-chat-square-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-square',
-            'displayName' => 'Chat Square',
-            'class' => 'bi-chat-square',
-            'keywords' => ["chat","square"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-square'],
-                'solid' => ['class' => 'bi-chat-square-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-text-fill',
-            'displayName' => 'Chat Text Fill',
-            'class' => 'bi-chat-text-fill',
-            'keywords' => ["chat","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-text-fill'],
-                'outline' => ['class' => 'bi-chat-text'],
-            ]
-        ],
-        [
-            'name' => 'chat-text',
-            'displayName' => 'Chat Text',
-            'class' => 'bi-chat-text',
-            'keywords' => ["chat","text"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-text'],
-                'solid' => ['class' => 'bi-chat-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat',
-            'displayName' => 'Chat',
-            'class' => 'bi-chat',
-            'keywords' => ["chat"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat'],
-                'solid' => ['class' => 'bi-chat-fill'],
-            ]
-        ],
-        [
-            'name' => 'discord',
-            'displayName' => 'Discord',
-            'class' => 'bi-discord',
-            'keywords' => ["discord"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-discord'],
-            ]
-        ],
-        [
-            'name' => 'envelope-fill',
-            'displayName' => 'Envelope Fill',
-            'class' => 'bi-envelope-fill',
-            'keywords' => ["envelope","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-fill'],
-                'outline' => ['class' => 'bi-envelope'],
-            ]
-        ],
-        [
-            'name' => 'envelope-open-fill',
-            'displayName' => 'Envelope Open Fill',
-            'class' => 'bi-envelope-open-fill',
-            'keywords' => ["envelope","open","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-open-fill'],
-                'outline' => ['class' => 'bi-envelope-open'],
-            ]
-        ],
-        [
-            'name' => 'envelope-open',
-            'displayName' => 'Envelope Open',
-            'class' => 'bi-envelope-open',
-            'keywords' => ["envelope","open"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-open'],
-                'solid' => ['class' => 'bi-envelope-open-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope',
-            'displayName' => 'Envelope',
-            'class' => 'bi-envelope',
-            'keywords' => ["envelope"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope'],
-                'solid' => ['class' => 'bi-envelope-fill'],
-            ]
-        ],
-        [
-            'name' => 'facebook',
-            'displayName' => 'Facebook',
-            'class' => 'bi-facebook',
-            'keywords' => ["facebook"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-facebook'],
-            ]
-        ],
-        [
-            'name' => 'github',
-            'displayName' => 'Github',
-            'class' => 'bi-github',
-            'keywords' => ["github"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-github'],
-            ]
-        ],
-        [
-            'name' => 'globe',
-            'displayName' => 'Globe',
-            'class' => 'bi-globe',
-            'keywords' => ["globe"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe'],
-            ]
-        ],
-        [
-            'name' => 'globe2',
-            'displayName' => 'Globe2',
-            'class' => 'bi-globe2',
-            'keywords' => ["globe2"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe2'],
-            ]
-        ],
-        [
-            'name' => 'google',
-            'displayName' => 'Google',
-            'class' => 'bi-google',
-            'keywords' => ["google"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-google'],
-            ]
-        ],
-        [
-            'name' => 'inbox-fill',
-            'displayName' => 'Inbox Fill',
-            'class' => 'bi-inbox-fill',
-            'keywords' => ["inbox","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-inbox-fill'],
-                'outline' => ['class' => 'bi-inbox'],
-            ]
-        ],
-        [
-            'name' => 'inbox',
-            'displayName' => 'Inbox',
-            'class' => 'bi-inbox',
-            'keywords' => ["inbox"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-inbox'],
-                'solid' => ['class' => 'bi-inbox-fill'],
-            ]
-        ],
-        [
-            'name' => 'inboxes-fill',
-            'displayName' => 'Inboxes Fill',
-            'class' => 'bi-inboxes-fill',
-            'keywords' => ["inboxes","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-inboxes-fill'],
-                'outline' => ['class' => 'bi-inboxes'],
-            ]
-        ],
-        [
-            'name' => 'inboxes',
-            'displayName' => 'Inboxes',
-            'class' => 'bi-inboxes',
-            'keywords' => ["inboxes"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-inboxes'],
-                'solid' => ['class' => 'bi-inboxes-fill'],
-            ]
-        ],
-        [
-            'name' => 'instagram',
-            'displayName' => 'Instagram',
-            'class' => 'bi-instagram',
-            'keywords' => ["instagram"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-instagram'],
-            ]
-        ],
-        [
-            'name' => 'linkedin',
-            'displayName' => 'Linkedin',
-            'class' => 'bi-linkedin',
-            'keywords' => ["linkedin"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-linkedin'],
-            ]
-        ],
-        [
-            'name' => 'mailbox',
-            'displayName' => 'Mailbox',
-            'class' => 'bi-mailbox',
-            'keywords' => ["mailbox"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mailbox'],
-            ]
-        ],
-        [
-            'name' => 'mailbox2',
-            'displayName' => 'Mailbox2',
-            'class' => 'bi-mailbox2',
-            'keywords' => ["mailbox2"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mailbox2'],
-            ]
-        ],
-        [
-            'name' => 'megaphone-fill',
-            'displayName' => 'Megaphone Fill',
-            'class' => 'bi-megaphone-fill',
-            'keywords' => ["megaphone","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-megaphone-fill'],
-                'outline' => ['class' => 'bi-megaphone'],
-            ]
-        ],
-        [
-            'name' => 'megaphone',
-            'displayName' => 'Megaphone',
-            'class' => 'bi-megaphone',
-            'keywords' => ["megaphone"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-megaphone'],
-                'solid' => ['class' => 'bi-megaphone-fill'],
-            ]
-        ],
-        [
-            'name' => 'newspaper',
-            'displayName' => 'Newspaper',
-            'class' => 'bi-newspaper',
-            'keywords' => ["newspaper"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-newspaper'],
-            ]
-        ],
-        [
-            'name' => 'phone-fill',
-            'displayName' => 'Phone Fill',
-            'class' => 'bi-phone-fill',
-            'keywords' => ["phone","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-phone-fill'],
-                'outline' => ['class' => 'bi-phone'],
-            ]
-        ],
-        [
-            'name' => 'phone-landscape-fill',
-            'displayName' => 'Phone Landscape Fill',
-            'class' => 'bi-phone-landscape-fill',
-            'keywords' => ["phone","landscape","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-phone-landscape-fill'],
-                'outline' => ['class' => 'bi-phone-landscape'],
-            ]
-        ],
-        [
-            'name' => 'phone-landscape',
-            'displayName' => 'Phone Landscape',
-            'class' => 'bi-phone-landscape',
-            'keywords' => ["phone","landscape"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-phone-landscape'],
-                'solid' => ['class' => 'bi-phone-landscape-fill'],
-            ]
-        ],
-        [
-            'name' => 'phone-vibrate-fill',
-            'displayName' => 'Phone Vibrate Fill',
-            'class' => 'bi-phone-vibrate-fill',
-            'keywords' => ["phone","vibrate","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-phone-vibrate-fill'],
-                'outline' => ['class' => 'bi-phone-vibrate'],
-            ]
-        ],
-        [
-            'name' => 'phone-vibrate',
-            'displayName' => 'Phone Vibrate',
-            'class' => 'bi-phone-vibrate',
-            'keywords' => ["phone","vibrate"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-phone-vibrate'],
-                'solid' => ['class' => 'bi-phone-vibrate-fill'],
-            ]
-        ],
-        [
-            'name' => 'phone',
-            'displayName' => 'Phone',
-            'class' => 'bi-phone',
-            'keywords' => ["phone"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-phone'],
-                'solid' => ['class' => 'bi-phone-fill'],
-            ]
-        ],
-        [
-            'name' => 'reception-0',
-            'displayName' => 'Reception 0',
-            'class' => 'bi-reception-0',
-            'keywords' => ["reception","0"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reception-0'],
-            ]
-        ],
-        [
-            'name' => 'reception-1',
-            'displayName' => 'Reception 1',
-            'class' => 'bi-reception-1',
-            'keywords' => ["reception","1"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reception-1'],
-            ]
-        ],
-        [
-            'name' => 'reception-2',
-            'displayName' => 'Reception 2',
-            'class' => 'bi-reception-2',
-            'keywords' => ["reception","2"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reception-2'],
-            ]
-        ],
-        [
-            'name' => 'reception-3',
-            'displayName' => 'Reception 3',
-            'class' => 'bi-reception-3',
-            'keywords' => ["reception","3"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reception-3'],
-            ]
-        ],
-        [
-            'name' => 'reception-4',
-            'displayName' => 'Reception 4',
-            'class' => 'bi-reception-4',
-            'keywords' => ["reception","4"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reception-4'],
-            ]
-        ],
-        [
-            'name' => 'reply-all-fill',
-            'displayName' => 'Reply All Fill',
-            'class' => 'bi-reply-all-fill',
-            'keywords' => ["reply","all","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-reply-all-fill'],
-                'outline' => ['class' => 'bi-reply-all'],
-            ]
-        ],
-        [
-            'name' => 'reply-all',
-            'displayName' => 'Reply All',
-            'class' => 'bi-reply-all',
-            'keywords' => ["reply","all"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reply-all'],
-                'solid' => ['class' => 'bi-reply-all-fill'],
-            ]
-        ],
-        [
-            'name' => 'reply-fill',
-            'displayName' => 'Reply Fill',
-            'class' => 'bi-reply-fill',
-            'keywords' => ["reply","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-reply-fill'],
-                'outline' => ['class' => 'bi-reply'],
-            ]
-        ],
-        [
-            'name' => 'reply',
-            'displayName' => 'Reply',
-            'class' => 'bi-reply',
-            'keywords' => ["reply"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reply'],
-                'solid' => ['class' => 'bi-reply-fill'],
-            ]
-        ],
-        [
-            'name' => 'rss-fill',
-            'displayName' => 'Rss Fill',
-            'class' => 'bi-rss-fill',
-            'keywords' => ["rss","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-rss-fill'],
-                'outline' => ['class' => 'bi-rss'],
-            ]
-        ],
-        [
-            'name' => 'rss',
-            'displayName' => 'Rss',
-            'class' => 'bi-rss',
-            'keywords' => ["rss"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-rss'],
-                'solid' => ['class' => 'bi-rss-fill'],
-            ]
-        ],
-        [
-            'name' => 'share-fill',
-            'displayName' => 'Share Fill',
-            'class' => 'bi-share-fill',
-            'keywords' => ["share","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-share-fill'],
-                'outline' => ['class' => 'bi-share'],
-            ]
-        ],
-        [
-            'name' => 'share',
-            'displayName' => 'Share',
-            'class' => 'bi-share',
-            'keywords' => ["share"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-share'],
-                'solid' => ['class' => 'bi-share-fill'],
-            ]
-        ],
-        [
-            'name' => 'slack',
-            'displayName' => 'Slack',
-            'class' => 'bi-slack',
-            'keywords' => ["slack"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-slack'],
-            ]
-        ],
-        [
-            'name' => 'telegram',
-            'displayName' => 'Telegram',
-            'class' => 'bi-telegram',
-            'keywords' => ["telegram"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telegram'],
-            ]
-        ],
-        [
-            'name' => 'telephone-fill',
-            'displayName' => 'Telephone Fill',
-            'class' => 'bi-telephone-fill',
-            'keywords' => ["telephone","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-fill'],
-                'outline' => ['class' => 'bi-telephone'],
-            ]
-        ],
-        [
-            'name' => 'telephone-forward-fill',
-            'displayName' => 'Telephone Forward Fill',
-            'class' => 'bi-telephone-forward-fill',
-            'keywords' => ["telephone","forward","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-forward-fill'],
-                'outline' => ['class' => 'bi-telephone-forward'],
-            ]
-        ],
-        [
-            'name' => 'telephone-forward',
-            'displayName' => 'Telephone Forward',
-            'class' => 'bi-telephone-forward',
-            'keywords' => ["telephone","forward"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-forward'],
-                'solid' => ['class' => 'bi-telephone-forward-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone-inbound-fill',
-            'displayName' => 'Telephone Inbound Fill',
-            'class' => 'bi-telephone-inbound-fill',
-            'keywords' => ["telephone","inbound","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-inbound-fill'],
-                'outline' => ['class' => 'bi-telephone-inbound'],
-            ]
-        ],
-        [
-            'name' => 'telephone-inbound',
-            'displayName' => 'Telephone Inbound',
-            'class' => 'bi-telephone-inbound',
-            'keywords' => ["telephone","inbound"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-inbound'],
-                'solid' => ['class' => 'bi-telephone-inbound-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone-minus-fill',
-            'displayName' => 'Telephone Minus Fill',
-            'class' => 'bi-telephone-minus-fill',
-            'keywords' => ["telephone","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-minus-fill'],
-                'outline' => ['class' => 'bi-telephone-minus'],
-            ]
-        ],
-        [
-            'name' => 'telephone-minus',
-            'displayName' => 'Telephone Minus',
-            'class' => 'bi-telephone-minus',
-            'keywords' => ["telephone","minus"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-minus'],
-                'solid' => ['class' => 'bi-telephone-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone-outbound-fill',
-            'displayName' => 'Telephone Outbound Fill',
-            'class' => 'bi-telephone-outbound-fill',
-            'keywords' => ["telephone","outbound","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-outbound-fill'],
-                'outline' => ['class' => 'bi-telephone-outbound'],
-            ]
-        ],
-        [
-            'name' => 'telephone-outbound',
-            'displayName' => 'Telephone Outbound',
-            'class' => 'bi-telephone-outbound',
-            'keywords' => ["telephone","outbound"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-outbound'],
-                'solid' => ['class' => 'bi-telephone-outbound-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone-plus-fill',
-            'displayName' => 'Telephone Plus Fill',
-            'class' => 'bi-telephone-plus-fill',
-            'keywords' => ["telephone","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-plus-fill'],
-                'outline' => ['class' => 'bi-telephone-plus'],
-            ]
-        ],
-        [
-            'name' => 'telephone-plus',
-            'displayName' => 'Telephone Plus',
-            'class' => 'bi-telephone-plus',
-            'keywords' => ["telephone","plus"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-plus'],
-                'solid' => ['class' => 'bi-telephone-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone-x-fill',
-            'displayName' => 'Telephone X Fill',
-            'class' => 'bi-telephone-x-fill',
-            'keywords' => ["telephone","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-telephone-x-fill'],
-                'outline' => ['class' => 'bi-telephone-x'],
-            ]
-        ],
-        [
-            'name' => 'telephone-x',
-            'displayName' => 'Telephone X',
-            'class' => 'bi-telephone-x',
-            'keywords' => ["telephone","x"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone-x'],
-                'solid' => ['class' => 'bi-telephone-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'telephone',
-            'displayName' => 'Telephone',
-            'class' => 'bi-telephone',
-            'keywords' => ["telephone"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-telephone'],
-                'solid' => ['class' => 'bi-telephone-fill'],
-            ]
-        ],
-        [
-            'name' => 'twitch',
-            'displayName' => 'Twitch',
-            'class' => 'bi-twitch',
-            'keywords' => ["twitch"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-twitch'],
-            ]
-        ],
-        [
-            'name' => 'twitter',
-            'displayName' => 'Twitter',
-            'class' => 'bi-twitter',
-            'keywords' => ["twitter"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-twitter'],
-            ]
-        ],
-        [
-            'name' => 'voicemail',
-            'displayName' => 'Voicemail',
-            'class' => 'bi-voicemail',
-            'keywords' => ["voicemail"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-voicemail'],
-            ]
-        ],
-        [
-            'name' => 'whatsapp',
-            'displayName' => 'Whatsapp',
-            'class' => 'bi-whatsapp',
-            'keywords' => ["whatsapp"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-whatsapp'],
-            ]
-        ],
-        [
-            'name' => 'wifi-1',
-            'displayName' => 'Wifi 1',
-            'class' => 'bi-wifi-1',
-            'keywords' => ["wifi","1"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi-1'],
-            ]
-        ],
-        [
-            'name' => 'wifi-2',
-            'displayName' => 'Wifi 2',
-            'class' => 'bi-wifi-2',
-            'keywords' => ["wifi","2"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi-2'],
-            ]
-        ],
-        [
-            'name' => 'wifi-off',
-            'displayName' => 'Wifi Off',
-            'class' => 'bi-wifi-off',
-            'keywords' => ["wifi","off"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi-off'],
-            ]
-        ],
-        [
-            'name' => 'wifi',
-            'displayName' => 'Wifi',
-            'class' => 'bi-wifi',
-            'keywords' => ["wifi"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wifi'],
-            ]
-        ],
-        [
-            'name' => 'youtube',
-            'displayName' => 'Youtube',
-            'class' => 'bi-youtube',
-            'keywords' => ["youtube"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-youtube'],
-            ]
-        ],
-        [
-            'name' => 'bell-slash-fill',
-            'displayName' => 'Bell Slash Fill',
-            'class' => 'bi-bell-slash-fill',
-            'keywords' => ["bell","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-bell-slash-fill'],
-                'outline' => ['class' => 'bi-bell-slash'],
-            ]
-        ],
-        [
-            'name' => 'bell-slash',
-            'displayName' => 'Bell Slash',
-            'class' => 'bi-bell-slash',
-            'keywords' => ["bell","slash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-bell-slash'],
-                'solid' => ['class' => 'bi-bell-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'mastodon',
-            'displayName' => 'Mastodon',
-            'class' => 'bi-mastodon',
-            'keywords' => ["mastodon"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mastodon'],
-            ]
-        ],
-        [
-            'name' => 'messenger',
-            'displayName' => 'Messenger',
-            'class' => 'bi-messenger',
-            'keywords' => ["messenger"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-messenger'],
-            ]
-        ],
-        [
-            'name' => 'reddit',
-            'displayName' => 'Reddit',
-            'class' => 'bi-reddit',
-            'keywords' => ["reddit"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-reddit'],
-            ]
-        ],
-        [
-            'name' => 'skype',
-            'displayName' => 'Skype',
-            'class' => 'bi-skype',
-            'keywords' => ["skype"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-skype'],
-            ]
-        ],
-        [
-            'name' => 'apple',
-            'displayName' => 'Apple',
-            'class' => 'bi-apple',
-            'keywords' => ["apple"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-apple'],
-            ]
-        ],
-        [
-            'name' => 'microsoft',
-            'displayName' => 'Microsoft',
-            'class' => 'bi-microsoft',
-            'keywords' => ["microsoft"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-microsoft'],
-            ]
-        ],
-        [
-            'name' => 'windows',
-            'displayName' => 'Windows',
-            'class' => 'bi-windows',
-            'keywords' => ["windows"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-windows'],
-            ]
-        ],
-        [
-            'name' => 'behance',
-            'displayName' => 'Behance',
-            'class' => 'bi-behance',
-            'keywords' => ["behance"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-behance'],
-            ]
-        ],
-        [
-            'name' => 'dribbble',
-            'displayName' => 'Dribbble',
-            'class' => 'bi-dribbble',
-            'keywords' => ["dribbble"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-dribbble'],
-            ]
-        ],
-        [
-            'name' => 'line',
-            'displayName' => 'Line',
-            'class' => 'bi-line',
-            'keywords' => ["line"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-line'],
-            ]
-        ],
-        [
-            'name' => 'medium',
-            'displayName' => 'Medium',
-            'class' => 'bi-medium',
-            'keywords' => ["medium"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-medium'],
-            ]
-        ],
-        [
-            'name' => 'paypal',
-            'displayName' => 'Paypal',
-            'class' => 'bi-paypal',
-            'keywords' => ["paypal"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-paypal'],
-            ]
-        ],
-        [
-            'name' => 'pinterest',
-            'displayName' => 'Pinterest',
-            'class' => 'bi-pinterest',
-            'keywords' => ["pinterest"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-pinterest'],
-            ]
-        ],
-        [
-            'name' => 'signal',
-            'displayName' => 'Signal',
-            'class' => 'bi-signal',
-            'keywords' => ["signal"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-signal'],
-            ]
-        ],
-        [
-            'name' => 'snapchat',
-            'displayName' => 'Snapchat',
-            'class' => 'bi-snapchat',
-            'keywords' => ["snapchat"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-snapchat'],
-            ]
-        ],
-        [
-            'name' => 'spotify',
-            'displayName' => 'Spotify',
-            'class' => 'bi-spotify',
-            'keywords' => ["spotify"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-spotify'],
-            ]
-        ],
-        [
-            'name' => 'stack-overflow',
-            'displayName' => 'Stack Overflow',
-            'class' => 'bi-stack-overflow',
-            'keywords' => ["stack","overflow"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-stack-overflow'],
-            ]
-        ],
-        [
-            'name' => 'strava',
-            'displayName' => 'Strava',
-            'class' => 'bi-strava',
-            'keywords' => ["strava"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-strava'],
-            ]
-        ],
-        [
-            'name' => 'wordpress',
-            'displayName' => 'Wordpress',
-            'class' => 'bi-wordpress',
-            'keywords' => ["wordpress"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wordpress'],
-            ]
-        ],
-        [
-            'name' => 'vimeo',
-            'displayName' => 'Vimeo',
-            'class' => 'bi-vimeo',
-            'keywords' => ["vimeo"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-vimeo'],
-            ]
-        ],
-        [
-            'name' => 'bluetooth',
-            'displayName' => 'Bluetooth',
-            'class' => 'bi-bluetooth',
-            'keywords' => ["bluetooth"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-bluetooth'],
-            ]
-        ],
-        [
-            'name' => 'envelope-check-fill',
-            'displayName' => 'Envelope Check Fill',
-            'class' => 'bi-envelope-check-fill',
-            'keywords' => ["envelope","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-check-fill'],
-                'outline' => ['class' => 'bi-envelope-check'],
-            ]
-        ],
-        [
-            'name' => 'envelope-check',
-            'displayName' => 'Envelope Check',
-            'class' => 'bi-envelope-check',
-            'keywords' => ["envelope","check"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-check'],
-                'solid' => ['class' => 'bi-envelope-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-dash-fill',
-            'displayName' => 'Envelope Dash Fill',
-            'class' => 'bi-envelope-dash-fill',
-            'keywords' => ["envelope","dash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-dash-fill'],
-                'outline' => ['class' => 'bi-envelope-dash'],
-            ]
-        ],
-        [
-            'name' => 'envelope-dash',
-            'displayName' => 'Envelope Dash',
-            'class' => 'bi-envelope-dash',
-            'keywords' => ["envelope","dash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-dash'],
-                'solid' => ['class' => 'bi-envelope-dash-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-exclamation-fill',
-            'displayName' => 'Envelope Exclamation Fill',
-            'class' => 'bi-envelope-exclamation-fill',
-            'keywords' => ["envelope","exclamation","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-exclamation-fill'],
-                'outline' => ['class' => 'bi-envelope-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'envelope-exclamation',
-            'displayName' => 'Envelope Exclamation',
-            'class' => 'bi-envelope-exclamation',
-            'keywords' => ["envelope","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-exclamation'],
-                'solid' => ['class' => 'bi-envelope-exclamation-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-plus-fill',
-            'displayName' => 'Envelope Plus Fill',
-            'class' => 'bi-envelope-plus-fill',
-            'keywords' => ["envelope","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-plus-fill'],
-                'outline' => ['class' => 'bi-envelope-plus'],
-            ]
-        ],
-        [
-            'name' => 'envelope-plus',
-            'displayName' => 'Envelope Plus',
-            'class' => 'bi-envelope-plus',
-            'keywords' => ["envelope","plus"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-plus'],
-                'solid' => ['class' => 'bi-envelope-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-slash-fill',
-            'displayName' => 'Envelope Slash Fill',
-            'class' => 'bi-envelope-slash-fill',
-            'keywords' => ["envelope","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-slash-fill'],
-                'outline' => ['class' => 'bi-envelope-slash'],
-            ]
-        ],
-        [
-            'name' => 'envelope-slash',
-            'displayName' => 'Envelope Slash',
-            'class' => 'bi-envelope-slash',
-            'keywords' => ["envelope","slash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-slash'],
-                'solid' => ['class' => 'bi-envelope-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-x-fill',
-            'displayName' => 'Envelope X Fill',
-            'class' => 'bi-envelope-x-fill',
-            'keywords' => ["envelope","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-x-fill'],
-                'outline' => ['class' => 'bi-envelope-x'],
-            ]
-        ],
-        [
-            'name' => 'envelope-x',
-            'displayName' => 'Envelope X',
-            'class' => 'bi-envelope-x',
-            'keywords' => ["envelope","x"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-x'],
-                'solid' => ['class' => 'bi-envelope-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'meta',
-            'displayName' => 'Meta',
-            'class' => 'bi-meta',
-            'keywords' => ["meta"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-meta'],
-            ]
-        ],
-        [
-            'name' => 'nintendo-switch',
-            'displayName' => 'Nintendo Switch',
-            'class' => 'bi-nintendo-switch',
-            'keywords' => ["nintendo","switch"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-nintendo-switch'],
-            ]
-        ],
-        [
-            'name' => 'playstation',
-            'displayName' => 'Playstation',
-            'class' => 'bi-playstation',
-            'keywords' => ["playstation"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-playstation'],
-            ]
-        ],
-        [
-            'name' => 'quora',
-            'displayName' => 'Quora',
-            'class' => 'bi-quora',
-            'keywords' => ["quora"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-quora'],
-            ]
-        ],
-        [
-            'name' => 'send-check-fill',
-            'displayName' => 'Send Check Fill',
-            'class' => 'bi-send-check-fill',
-            'keywords' => ["send","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-check-fill'],
-                'outline' => ['class' => 'bi-send-check'],
-            ]
-        ],
-        [
-            'name' => 'send-check',
-            'displayName' => 'Send Check',
-            'class' => 'bi-send-check',
-            'keywords' => ["send","check"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-check'],
-                'solid' => ['class' => 'bi-send-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-dash-fill',
-            'displayName' => 'Send Dash Fill',
-            'class' => 'bi-send-dash-fill',
-            'keywords' => ["send","dash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-dash-fill'],
-                'outline' => ['class' => 'bi-send-dash'],
-            ]
-        ],
-        [
-            'name' => 'send-dash',
-            'displayName' => 'Send Dash',
-            'class' => 'bi-send-dash',
-            'keywords' => ["send","dash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-dash'],
-                'solid' => ['class' => 'bi-send-dash-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-exclamation-fill',
-            'displayName' => 'Send Exclamation Fill',
-            'class' => 'bi-send-exclamation-fill',
-            'keywords' => ["send","exclamation","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-exclamation-fill'],
-                'outline' => ['class' => 'bi-send-exclamation'],
-            ]
-        ],
-        [
-            'name' => 'send-exclamation',
-            'displayName' => 'Send Exclamation',
-            'class' => 'bi-send-exclamation',
-            'keywords' => ["send","exclamation"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-exclamation'],
-                'solid' => ['class' => 'bi-send-exclamation-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-fill',
-            'displayName' => 'Send Fill',
-            'class' => 'bi-send-fill',
-            'keywords' => ["send","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-fill'],
-                'outline' => ['class' => 'bi-send'],
-            ]
-        ],
-        [
-            'name' => 'send-plus-fill',
-            'displayName' => 'Send Plus Fill',
-            'class' => 'bi-send-plus-fill',
-            'keywords' => ["send","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-plus-fill'],
-                'outline' => ['class' => 'bi-send-plus'],
-            ]
-        ],
-        [
-            'name' => 'send-plus',
-            'displayName' => 'Send Plus',
-            'class' => 'bi-send-plus',
-            'keywords' => ["send","plus"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-plus'],
-                'solid' => ['class' => 'bi-send-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-slash-fill',
-            'displayName' => 'Send Slash Fill',
-            'class' => 'bi-send-slash-fill',
-            'keywords' => ["send","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-slash-fill'],
-                'outline' => ['class' => 'bi-send-slash'],
-            ]
-        ],
-        [
-            'name' => 'send-slash',
-            'displayName' => 'Send Slash',
-            'class' => 'bi-send-slash',
-            'keywords' => ["send","slash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-slash'],
-                'solid' => ['class' => 'bi-send-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-x-fill',
-            'displayName' => 'Send X Fill',
-            'class' => 'bi-send-x-fill',
-            'keywords' => ["send","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-x-fill'],
-                'outline' => ['class' => 'bi-send-x'],
-            ]
-        ],
-        [
-            'name' => 'send-x',
-            'displayName' => 'Send X',
-            'class' => 'bi-send-x',
-            'keywords' => ["send","x"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-x'],
-                'solid' => ['class' => 'bi-send-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'send',
-            'displayName' => 'Send',
-            'class' => 'bi-send',
-            'keywords' => ["send"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send'],
-                'solid' => ['class' => 'bi-send-fill'],
-            ]
-        ],
-        [
-            'name' => 'steam',
-            'displayName' => 'Steam',
-            'class' => 'bi-steam',
-            'keywords' => ["steam"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-steam'],
-            ]
-        ],
-        [
-            'name' => 'tiktok',
-            'displayName' => 'Tiktok',
-            'class' => 'bi-tiktok',
-            'keywords' => ["tiktok"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-tiktok'],
-            ]
-        ],
-        [
-            'name' => 'xbox',
-            'displayName' => 'Xbox',
-            'class' => 'bi-xbox',
-            'keywords' => ["xbox"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-xbox'],
-            ]
-        ],
-        [
-            'name' => 'chat-heart-fill',
-            'displayName' => 'Chat Heart Fill',
-            'class' => 'bi-chat-heart-fill',
-            'keywords' => ["chat","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-heart-fill'],
-                'outline' => ['class' => 'bi-chat-heart'],
-            ]
-        ],
-        [
-            'name' => 'chat-heart',
-            'displayName' => 'Chat Heart',
-            'class' => 'bi-chat-heart',
-            'keywords' => ["chat","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-heart'],
-                'solid' => ['class' => 'bi-chat-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-heart-fill',
-            'displayName' => 'Chat Left Heart Fill',
-            'class' => 'bi-chat-left-heart-fill',
-            'keywords' => ["chat","left","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-left-heart-fill'],
-                'outline' => ['class' => 'bi-chat-left-heart'],
-            ]
-        ],
-        [
-            'name' => 'chat-left-heart',
-            'displayName' => 'Chat Left Heart',
-            'class' => 'bi-chat-left-heart',
-            'keywords' => ["chat","left","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-left-heart'],
-                'solid' => ['class' => 'bi-chat-left-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-heart-fill',
-            'displayName' => 'Chat Right Heart Fill',
-            'class' => 'bi-chat-right-heart-fill',
-            'keywords' => ["chat","right","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-right-heart-fill'],
-                'outline' => ['class' => 'bi-chat-right-heart'],
-            ]
-        ],
-        [
-            'name' => 'chat-right-heart',
-            'displayName' => 'Chat Right Heart',
-            'class' => 'bi-chat-right-heart',
-            'keywords' => ["chat","right","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-right-heart'],
-                'solid' => ['class' => 'bi-chat-right-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-heart-fill',
-            'displayName' => 'Chat Square Heart Fill',
-            'class' => 'bi-chat-square-heart-fill',
-            'keywords' => ["chat","square","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-chat-square-heart-fill'],
-                'outline' => ['class' => 'bi-chat-square-heart'],
-            ]
-        ],
-        [
-            'name' => 'chat-square-heart',
-            'displayName' => 'Chat Square Heart',
-            'class' => 'bi-chat-square-heart',
-            'keywords' => ["chat","square","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-chat-square-heart'],
-                'solid' => ['class' => 'bi-chat-square-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-heart-fill',
-            'displayName' => 'Envelope Heart Fill',
-            'class' => 'bi-envelope-heart-fill',
-            'keywords' => ["envelope","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-heart-fill'],
-                'outline' => ['class' => 'bi-envelope-heart'],
-            ]
-        ],
-        [
-            'name' => 'envelope-heart',
-            'displayName' => 'Envelope Heart',
-            'class' => 'bi-envelope-heart',
-            'keywords' => ["envelope","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-heart'],
-                'solid' => ['class' => 'bi-envelope-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-open-heart-fill',
-            'displayName' => 'Envelope Open Heart Fill',
-            'class' => 'bi-envelope-open-heart-fill',
-            'keywords' => ["envelope","open","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-open-heart-fill'],
-                'outline' => ['class' => 'bi-envelope-open-heart'],
-            ]
-        ],
-        [
-            'name' => 'envelope-open-heart',
-            'displayName' => 'Envelope Open Heart',
-            'class' => 'bi-envelope-open-heart',
-            'keywords' => ["envelope","open","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-open-heart'],
-                'solid' => ['class' => 'bi-envelope-open-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-paper-fill',
-            'displayName' => 'Envelope Paper Fill',
-            'class' => 'bi-envelope-paper-fill',
-            'keywords' => ["envelope","paper","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-paper-fill'],
-                'outline' => ['class' => 'bi-envelope-paper'],
-            ]
-        ],
-        [
-            'name' => 'envelope-paper-heart-fill',
-            'displayName' => 'Envelope Paper Heart Fill',
-            'class' => 'bi-envelope-paper-heart-fill',
-            'keywords' => ["envelope","paper","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-paper-heart-fill'],
-                'outline' => ['class' => 'bi-envelope-paper-heart'],
-            ]
-        ],
-        [
-            'name' => 'envelope-paper-heart',
-            'displayName' => 'Envelope Paper Heart',
-            'class' => 'bi-envelope-paper-heart',
-            'keywords' => ["envelope","paper","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-paper-heart'],
-                'solid' => ['class' => 'bi-envelope-paper-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-paper',
-            'displayName' => 'Envelope Paper',
-            'class' => 'bi-envelope-paper',
-            'keywords' => ["envelope","paper"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-paper'],
-                'solid' => ['class' => 'bi-envelope-paper-fill'],
-            ]
-        ],
-        [
-            'name' => 'phone-flip',
-            'displayName' => 'Phone Flip',
-            'class' => 'bi-phone-flip',
-            'keywords' => ["phone","flip"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-phone-flip'],
-            ]
-        ],
-        [
-            'name' => 'postage-fill',
-            'displayName' => 'Postage Fill',
-            'class' => 'bi-postage-fill',
-            'keywords' => ["postage","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-postage-fill'],
-                'outline' => ['class' => 'bi-postage'],
-            ]
-        ],
-        [
-            'name' => 'postage-heart-fill',
-            'displayName' => 'Postage Heart Fill',
-            'class' => 'bi-postage-heart-fill',
-            'keywords' => ["postage","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-postage-heart-fill'],
-                'outline' => ['class' => 'bi-postage-heart'],
-            ]
-        ],
-        [
-            'name' => 'postage-heart',
-            'displayName' => 'Postage Heart',
-            'class' => 'bi-postage-heart',
-            'keywords' => ["postage","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-postage-heart'],
-                'solid' => ['class' => 'bi-postage-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'postage',
-            'displayName' => 'Postage',
-            'class' => 'bi-postage',
-            'keywords' => ["postage"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-postage'],
-                'solid' => ['class' => 'bi-postage-fill'],
-            ]
-        ],
-        [
-            'name' => 'postcard-fill',
-            'displayName' => 'Postcard Fill',
-            'class' => 'bi-postcard-fill',
-            'keywords' => ["postcard","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-postcard-fill'],
-                'outline' => ['class' => 'bi-postcard'],
-            ]
-        ],
-        [
-            'name' => 'postcard-heart-fill',
-            'displayName' => 'Postcard Heart Fill',
-            'class' => 'bi-postcard-heart-fill',
-            'keywords' => ["postcard","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-postcard-heart-fill'],
-                'outline' => ['class' => 'bi-postcard-heart'],
-            ]
-        ],
-        [
-            'name' => 'postcard-heart',
-            'displayName' => 'Postcard Heart',
-            'class' => 'bi-postcard-heart',
-            'keywords' => ["postcard","heart"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-postcard-heart'],
-                'solid' => ['class' => 'bi-postcard-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'postcard',
-            'displayName' => 'Postcard',
-            'class' => 'bi-postcard',
-            'keywords' => ["postcard"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-postcard'],
-                'solid' => ['class' => 'bi-postcard-fill'],
-            ]
-        ],
-        [
-            'name' => 'alexa',
-            'displayName' => 'Alexa',
-            'class' => 'bi-alexa',
-            'keywords' => ["alexa"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-alexa'],
-            ]
-        ],
-        [
-            'name' => 'alipay',
-            'displayName' => 'Alipay',
-            'class' => 'bi-alipay',
-            'keywords' => ["alipay"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-alipay'],
-            ]
-        ],
-        [
-            'name' => 'android',
-            'displayName' => 'Android',
-            'class' => 'bi-android',
-            'keywords' => ["android"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-android'],
-            ]
-        ],
-        [
-            'name' => 'android2',
-            'displayName' => 'Android2',
-            'class' => 'bi-android2',
-            'keywords' => ["android2"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-android2'],
-            ]
-        ],
-        [
-            'name' => 'browser-chrome',
-            'displayName' => 'Browser Chrome',
-            'class' => 'bi-browser-chrome',
-            'keywords' => ["browser","chrome"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-browser-chrome'],
-            ]
-        ],
-        [
-            'name' => 'browser-edge',
-            'displayName' => 'Browser Edge',
-            'class' => 'bi-browser-edge',
-            'keywords' => ["browser","edge"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-browser-edge'],
-            ]
-        ],
-        [
-            'name' => 'browser-firefox',
-            'displayName' => 'Browser Firefox',
-            'class' => 'bi-browser-firefox',
-            'keywords' => ["browser","firefox"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-browser-firefox'],
-            ]
-        ],
-        [
-            'name' => 'browser-safari',
-            'displayName' => 'Browser Safari',
-            'class' => 'bi-browser-safari',
-            'keywords' => ["browser","safari"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-browser-safari'],
-            ]
-        ],
-        [
-            'name' => 'dropbox',
-            'displayName' => 'Dropbox',
-            'class' => 'bi-dropbox',
-            'keywords' => ["dropbox"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-dropbox'],
-            ]
-        ],
-        [
-            'name' => 'google-play',
-            'displayName' => 'Google Play',
-            'class' => 'bi-google-play',
-            'keywords' => ["google","play"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-google-play'],
-            ]
-        ],
-        [
-            'name' => 'microsoft-teams',
-            'displayName' => 'Microsoft Teams',
-            'class' => 'bi-microsoft-teams',
-            'keywords' => ["microsoft","teams"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-microsoft-teams'],
-            ]
-        ],
-        [
-            'name' => 'ubuntu',
-            'displayName' => 'Ubuntu',
-            'class' => 'bi-ubuntu',
-            'keywords' => ["ubuntu"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-ubuntu'],
-            ]
-        ],
-        [
-            'name' => 'unity',
-            'displayName' => 'Unity',
-            'class' => 'bi-unity',
-            'keywords' => ["unity"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-unity'],
-            ]
-        ],
-        [
-            'name' => 'wechat',
-            'displayName' => 'Wechat',
-            'class' => 'bi-wechat',
-            'keywords' => ["wechat"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wechat'],
-            ]
-        ],
-        [
-            'name' => 'yelp',
-            'displayName' => 'Yelp',
-            'class' => 'bi-yelp',
-            'keywords' => ["yelp"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-yelp'],
-            ]
-        ],
-        [
-            'name' => 'stripe',
-            'displayName' => 'Stripe',
-            'class' => 'bi-stripe',
-            'keywords' => ["stripe"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-stripe'],
-            ]
-        ],
-        [
-            'name' => 'trello',
-            'displayName' => 'Trello',
-            'class' => 'bi-trello',
-            'keywords' => ["trello"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-trello'],
-            ]
-        ],
-        [
-            'name' => 'envelope-at-fill',
-            'displayName' => 'Envelope At Fill',
-            'class' => 'bi-envelope-at-fill',
-            'keywords' => ["envelope","at","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-at-fill'],
-                'outline' => ['class' => 'bi-envelope-at'],
-            ]
-        ],
-        [
-            'name' => 'envelope-at',
-            'displayName' => 'Envelope At',
-            'class' => 'bi-envelope-at',
-            'keywords' => ["envelope","at"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-at'],
-                'solid' => ['class' => 'bi-envelope-at-fill'],
-            ]
-        ],
-        [
-            'name' => 'globe-americas',
-            'displayName' => 'Globe Americas',
-            'class' => 'bi-globe-americas',
-            'keywords' => ["globe","americas"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe-americas'],
-                'solid' => ['class' => 'bi-globe-americas-fill'],
-            ]
-        ],
-        [
-            'name' => 'globe-asia-australia',
-            'displayName' => 'Globe Asia Australia',
-            'class' => 'bi-globe-asia-australia',
-            'keywords' => ["globe","asia","australia"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe-asia-australia'],
-                'solid' => ['class' => 'bi-globe-asia-australia-fill'],
-            ]
-        ],
-        [
-            'name' => 'globe-central-south-asia',
-            'displayName' => 'Globe Central South Asia',
-            'class' => 'bi-globe-central-south-asia',
-            'keywords' => ["globe","central","south","asia"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe-central-south-asia'],
-                'solid' => ['class' => 'bi-globe-central-south-asia-fill'],
-            ]
-        ],
-        [
-            'name' => 'globe-europe-africa',
-            'displayName' => 'Globe Europe Africa',
-            'class' => 'bi-globe-europe-africa',
-            'keywords' => ["globe","europe","africa"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-globe-europe-africa'],
-                'solid' => ['class' => 'bi-globe-europe-africa-fill'],
-            ]
-        ],
-        [
-            'name' => 'amd',
-            'displayName' => 'Amd',
-            'class' => 'bi-amd',
-            'keywords' => ["amd"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-amd'],
-            ]
-        ],
-        [
-            'name' => 'nvidia',
-            'displayName' => 'Nvidia',
-            'class' => 'bi-nvidia',
-            'keywords' => ["nvidia"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-nvidia'],
-            ]
-        ],
-        [
-            'name' => 'sina-weibo',
-            'displayName' => 'Sina Weibo',
-            'class' => 'bi-sina-weibo',
-            'keywords' => ["sina","weibo"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-sina-weibo'],
-            ]
-        ],
-        [
-            'name' => 'tencent-qq',
-            'displayName' => 'Tencent Qq',
-            'class' => 'bi-tencent-qq',
-            'keywords' => ["tencent","qq"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-tencent-qq'],
-            ]
-        ],
-        [
-            'name' => 'wikipedia',
-            'displayName' => 'Wikipedia',
-            'class' => 'bi-wikipedia',
-            'keywords' => ["wikipedia"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-wikipedia'],
-            ]
-        ],
-        [
-            'name' => 'amazon',
-            'displayName' => 'Amazon',
-            'class' => 'bi-amazon',
-            'keywords' => ["amazon"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-amazon'],
-            ]
-        ],
-        [
-            'name' => 'bing',
-            'displayName' => 'Bing',
-            'class' => 'bi-bing',
-            'keywords' => ["bing"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-bing'],
-            ]
-        ],
-        [
-            'name' => 'envelope-arrow-down-fill',
-            'displayName' => 'Envelope Arrow Down Fill',
-            'class' => 'bi-envelope-arrow-down-fill',
-            'keywords' => ["envelope","arrow","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-arrow-down-fill'],
-                'outline' => ['class' => 'bi-envelope-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'envelope-arrow-down',
-            'displayName' => 'Envelope Arrow Down',
-            'class' => 'bi-envelope-arrow-down',
-            'keywords' => ["envelope","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-arrow-down'],
-                'solid' => ['class' => 'bi-envelope-arrow-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'envelope-arrow-up-fill',
-            'displayName' => 'Envelope Arrow Up Fill',
-            'class' => 'bi-envelope-arrow-up-fill',
-            'keywords' => ["envelope","arrow","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-envelope-arrow-up-fill'],
-                'outline' => ['class' => 'bi-envelope-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'envelope-arrow-up',
-            'displayName' => 'Envelope Arrow Up',
-            'class' => 'bi-envelope-arrow-up',
-            'keywords' => ["envelope","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-envelope-arrow-up'],
-                'solid' => ['class' => 'bi-envelope-arrow-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'gitlab',
-            'displayName' => 'Gitlab',
-            'class' => 'bi-gitlab',
-            'keywords' => ["gitlab"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-gitlab'],
-            ]
-        ],
-        [
-            'name' => 'opencollective',
-            'displayName' => 'Opencollective',
-            'class' => 'bi-opencollective',
-            'keywords' => ["opencollective"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-opencollective'],
-            ]
-        ],
-        [
-            'name' => 'send-arrow-down-fill',
-            'displayName' => 'Send Arrow Down Fill',
-            'class' => 'bi-send-arrow-down-fill',
-            'keywords' => ["send","arrow","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-arrow-down-fill'],
-                'outline' => ['class' => 'bi-send-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'send-arrow-down',
-            'displayName' => 'Send Arrow Down',
-            'class' => 'bi-send-arrow-down',
-            'keywords' => ["send","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-arrow-down'],
-                'solid' => ['class' => 'bi-send-arrow-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'send-arrow-up-fill',
-            'displayName' => 'Send Arrow Up Fill',
-            'class' => 'bi-send-arrow-up-fill',
-            'keywords' => ["send","arrow","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-send-arrow-up-fill'],
-                'outline' => ['class' => 'bi-send-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'send-arrow-up',
-            'displayName' => 'Send Arrow Up',
-            'class' => 'bi-send-arrow-up',
-            'keywords' => ["send","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-send-arrow-up'],
-                'solid' => ['class' => 'bi-send-arrow-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'sim-slash-fill',
-            'displayName' => 'Sim Slash Fill',
-            'class' => 'bi-sim-slash-fill',
-            'keywords' => ["sim","slash","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-sim-slash-fill'],
-                'outline' => ['class' => 'bi-sim-slash'],
-            ]
-        ],
-        [
-            'name' => 'sim-slash',
-            'displayName' => 'Sim Slash',
-            'class' => 'bi-sim-slash',
-            'keywords' => ["sim","slash"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-sim-slash'],
-                'solid' => ['class' => 'bi-sim-slash-fill'],
-            ]
-        ],
-        [
-            'name' => 'sourceforge',
-            'displayName' => 'Sourceforge',
-            'class' => 'bi-sourceforge',
-            'keywords' => ["sourceforge"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-sourceforge'],
-            ]
-        ],
-        [
-            'name' => 'substack',
-            'displayName' => 'Substack',
-            'class' => 'bi-substack',
-            'keywords' => ["substack"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-substack'],
-            ]
-        ],
-        [
-            'name' => 'threads-fill',
-            'displayName' => 'Threads Fill',
-            'class' => 'bi-threads-fill',
-            'keywords' => ["threads","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-threads-fill'],
-                'outline' => ['class' => 'bi-threads'],
-            ]
-        ],
-        [
-            'name' => 'threads',
-            'displayName' => 'Threads',
-            'class' => 'bi-threads',
-            'keywords' => ["threads"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-threads'],
-                'solid' => ['class' => 'bi-threads-fill'],
-            ]
-        ],
-        [
-            'name' => 'twitter-x',
-            'displayName' => 'Twitter X',
-            'class' => 'bi-twitter-x',
-            'keywords' => ["twitter","x"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-twitter-x'],
-            ]
-        ],
-        [
-            'name' => 'mailbox-flag',
-            'displayName' => 'Mailbox Flag',
-            'class' => 'bi-mailbox-flag',
-            'keywords' => ["mailbox","flag"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mailbox-flag'],
-            ]
-        ],
-        [
-            'name' => 'mailbox2-flag',
-            'displayName' => 'Mailbox2 Flag',
-            'class' => 'bi-mailbox2-flag',
-            'keywords' => ["mailbox2","flag"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-mailbox2-flag'],
-            ]
-        ],
-        [
-            'name' => 'bluesky',
-            'displayName' => 'Bluesky',
-            'class' => 'bi-bluesky',
-            'keywords' => ["bluesky"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-bluesky'],
-            ]
-        ],
-        [
-            'name' => 'tux',
-            'displayName' => 'Tux',
-            'class' => 'bi-tux',
-            'keywords' => ["tux"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-tux'],
-            ]
-        ],
-        [
-            'name' => 'anthropic',
-            'displayName' => 'Anthropic',
-            'class' => 'bi-anthropic',
-            'keywords' => ["anthropic"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-anthropic'],
-            ]
-        ],
-        [
-            'name' => 'apple-music',
-            'displayName' => 'Apple Music',
-            'class' => 'bi-apple-music',
-            'keywords' => ["apple","music"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-apple-music'],
-            ]
-        ],
-        [
-            'name' => 'claude',
-            'displayName' => 'Claude',
-            'class' => 'bi-claude',
-            'keywords' => ["claude"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-claude'],
-            ]
-        ],
-        [
-            'name' => 'openai',
-            'displayName' => 'Openai',
-            'class' => 'bi-openai',
-            'keywords' => ["openai"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-openai'],
-            ]
-        ],
-        [
-            'name' => 'perplexity',
-            'displayName' => 'Perplexity',
-            'class' => 'bi-perplexity',
-            'keywords' => ["perplexity"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'outline' => ['class' => 'bi-perplexity'],
-            ]
-        ],
-        [
-            'name' => 'globe-americas-fill',
-            'displayName' => 'Globe Americas Fill',
-            'class' => 'bi-globe-americas-fill',
-            'keywords' => ["globe","americas","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-globe-americas-fill'],
-                'outline' => ['class' => 'bi-globe-americas'],
-            ]
-        ],
-        [
-            'name' => 'globe-asia-australia-fill',
-            'displayName' => 'Globe Asia Australia Fill',
-            'class' => 'bi-globe-asia-australia-fill',
-            'keywords' => ["globe","asia","australia","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-globe-asia-australia-fill'],
-                'outline' => ['class' => 'bi-globe-asia-australia'],
-            ]
-        ],
-        [
-            'name' => 'globe-central-south-asia-fill',
-            'displayName' => 'Globe Central South Asia Fill',
-            'class' => 'bi-globe-central-south-asia-fill',
-            'keywords' => ["globe","central","south","asia","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-globe-central-south-asia-fill'],
-                'outline' => ['class' => 'bi-globe-central-south-asia'],
-            ]
-        ],
-        [
-            'name' => 'globe-europe-africa-fill',
-            'displayName' => 'Globe Europe Africa Fill',
-            'class' => 'bi-globe-europe-africa-fill',
-            'keywords' => ["globe","europe","africa","fill"],
-            'type' => 'bootstrap',
-            'category' => 'communications',
-            'variants' => [
-                'solid' => ['class' => 'bi-globe-europe-africa-fill'],
-                'outline' => ['class' => 'bi-globe-europe-africa'],
-            ]
-        ],
-    ]
-];
+return array (
+  'id' => 'communications',
+  'name' => '通訊',
+  'description' => '通訊和聯絡相關圖標',
+  'priority' => 'normal',
+  'icons' => 
+  array (
+    0 => 
+    array (
+      'id' => 'broadcast-pin-outline',
+      'name' => 'Broadcast Pin',
+      'value' => 'bi-broadcast-pin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'broadcast',
+        1 => 'pin',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    1 => 
+    array (
+      'id' => 'broadcast-outline',
+      'name' => 'Broadcast',
+      'value' => 'bi-broadcast',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'broadcast',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    2 => 
+    array (
+      'id' => 'cast-outline',
+      'name' => 'Cast',
+      'value' => 'bi-cast',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cast',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    3 => 
+    array (
+      'id' => 'chat-dots-fill-solid',
+      'name' => 'Chat Dots Fill',
+      'value' => 'bi-chat-dots-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'dots',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    4 => 
+    array (
+      'id' => 'chat-dots-fill-outline',
+      'name' => 'Chat Dots Fill',
+      'value' => 'bi-chat-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'dots',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    5 => 
+    array (
+      'id' => 'chat-dots-outline',
+      'name' => 'Chat Dots',
+      'value' => 'bi-chat-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'dots',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    6 => 
+    array (
+      'id' => 'chat-fill-solid',
+      'name' => 'Chat Fill',
+      'value' => 'bi-chat-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    7 => 
+    array (
+      'id' => 'chat-fill-outline',
+      'name' => 'Chat Fill',
+      'value' => 'bi-chat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    8 => 
+    array (
+      'id' => 'chat-left-dots-fill-solid',
+      'name' => 'Chat Left Dots Fill',
+      'value' => 'bi-chat-left-dots-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    9 => 
+    array (
+      'id' => 'chat-left-dots-fill-outline',
+      'name' => 'Chat Left Dots Fill',
+      'value' => 'bi-chat-left-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    10 => 
+    array (
+      'id' => 'chat-left-dots-outline',
+      'name' => 'Chat Left Dots',
+      'value' => 'bi-chat-left-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'dots',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    11 => 
+    array (
+      'id' => 'chat-left-fill-solid',
+      'name' => 'Chat Left Fill',
+      'value' => 'bi-chat-left-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    12 => 
+    array (
+      'id' => 'chat-left-fill-outline',
+      'name' => 'Chat Left Fill',
+      'value' => 'bi-chat-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    13 => 
+    array (
+      'id' => 'chat-left-quote-fill-solid',
+      'name' => 'Chat Left Quote Fill',
+      'value' => 'bi-chat-left-quote-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    14 => 
+    array (
+      'id' => 'chat-left-quote-fill-outline',
+      'name' => 'Chat Left Quote Fill',
+      'value' => 'bi-chat-left-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    15 => 
+    array (
+      'id' => 'chat-left-quote-outline',
+      'name' => 'Chat Left Quote',
+      'value' => 'bi-chat-left-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'quote',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    16 => 
+    array (
+      'id' => 'chat-left-text-fill-solid',
+      'name' => 'Chat Left Text Fill',
+      'value' => 'bi-chat-left-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    17 => 
+    array (
+      'id' => 'chat-left-text-fill-outline',
+      'name' => 'Chat Left Text Fill',
+      'value' => 'bi-chat-left-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    18 => 
+    array (
+      'id' => 'chat-left-text-outline',
+      'name' => 'Chat Left Text',
+      'value' => 'bi-chat-left-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'text',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    19 => 
+    array (
+      'id' => 'chat-left-outline',
+      'name' => 'Chat Left',
+      'value' => 'bi-chat-left',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    20 => 
+    array (
+      'id' => 'chat-quote-fill-solid',
+      'name' => 'Chat Quote Fill',
+      'value' => 'bi-chat-quote-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'quote',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    21 => 
+    array (
+      'id' => 'chat-quote-fill-outline',
+      'name' => 'Chat Quote Fill',
+      'value' => 'bi-chat-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'quote',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    22 => 
+    array (
+      'id' => 'chat-quote-outline',
+      'name' => 'Chat Quote',
+      'value' => 'bi-chat-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'quote',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    23 => 
+    array (
+      'id' => 'chat-right-dots-fill-solid',
+      'name' => 'Chat Right Dots Fill',
+      'value' => 'bi-chat-right-dots-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    24 => 
+    array (
+      'id' => 'chat-right-dots-fill-outline',
+      'name' => 'Chat Right Dots Fill',
+      'value' => 'bi-chat-right-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    25 => 
+    array (
+      'id' => 'chat-right-dots-outline',
+      'name' => 'Chat Right Dots',
+      'value' => 'bi-chat-right-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'dots',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    26 => 
+    array (
+      'id' => 'chat-right-fill-solid',
+      'name' => 'Chat Right Fill',
+      'value' => 'bi-chat-right-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    27 => 
+    array (
+      'id' => 'chat-right-fill-outline',
+      'name' => 'Chat Right Fill',
+      'value' => 'bi-chat-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    28 => 
+    array (
+      'id' => 'chat-right-quote-fill-solid',
+      'name' => 'Chat Right Quote Fill',
+      'value' => 'bi-chat-right-quote-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    29 => 
+    array (
+      'id' => 'chat-right-quote-fill-outline',
+      'name' => 'Chat Right Quote Fill',
+      'value' => 'bi-chat-right-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    30 => 
+    array (
+      'id' => 'chat-right-quote-outline',
+      'name' => 'Chat Right Quote',
+      'value' => 'bi-chat-right-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'quote',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    31 => 
+    array (
+      'id' => 'chat-right-text-fill-solid',
+      'name' => 'Chat Right Text Fill',
+      'value' => 'bi-chat-right-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    32 => 
+    array (
+      'id' => 'chat-right-text-fill-outline',
+      'name' => 'Chat Right Text Fill',
+      'value' => 'bi-chat-right-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    33 => 
+    array (
+      'id' => 'chat-right-text-outline',
+      'name' => 'Chat Right Text',
+      'value' => 'bi-chat-right-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'text',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    34 => 
+    array (
+      'id' => 'chat-right-outline',
+      'name' => 'Chat Right',
+      'value' => 'bi-chat-right',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    35 => 
+    array (
+      'id' => 'chat-square-dots-fill-solid',
+      'name' => 'Chat Square Dots Fill',
+      'value' => 'bi-chat-square-dots-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    36 => 
+    array (
+      'id' => 'chat-square-dots-fill-outline',
+      'name' => 'Chat Square Dots Fill',
+      'value' => 'bi-chat-square-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'dots',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    37 => 
+    array (
+      'id' => 'chat-square-dots-outline',
+      'name' => 'Chat Square Dots',
+      'value' => 'bi-chat-square-dots',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'dots',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    38 => 
+    array (
+      'id' => 'chat-square-dots-solid',
+      'name' => 'Chat Square Dots',
+      'value' => 'bi-chat-square-dots-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'dots',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    39 => 
+    array (
+      'id' => 'chat-square-fill-solid',
+      'name' => 'Chat Square Fill',
+      'value' => 'bi-chat-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    40 => 
+    array (
+      'id' => 'chat-square-fill-outline',
+      'name' => 'Chat Square Fill',
+      'value' => 'bi-chat-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    41 => 
+    array (
+      'id' => 'chat-square-quote-fill-solid',
+      'name' => 'Chat Square Quote Fill',
+      'value' => 'bi-chat-square-quote-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    42 => 
+    array (
+      'id' => 'chat-square-quote-fill-outline',
+      'name' => 'Chat Square Quote Fill',
+      'value' => 'bi-chat-square-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'quote',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    43 => 
+    array (
+      'id' => 'chat-square-quote-outline',
+      'name' => 'Chat Square Quote',
+      'value' => 'bi-chat-square-quote',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'quote',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    44 => 
+    array (
+      'id' => 'chat-square-quote-solid',
+      'name' => 'Chat Square Quote',
+      'value' => 'bi-chat-square-quote-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'quote',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    45 => 
+    array (
+      'id' => 'chat-square-text-fill-solid',
+      'name' => 'Chat Square Text Fill',
+      'value' => 'bi-chat-square-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    46 => 
+    array (
+      'id' => 'chat-square-text-fill-outline',
+      'name' => 'Chat Square Text Fill',
+      'value' => 'bi-chat-square-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    47 => 
+    array (
+      'id' => 'chat-square-text-outline',
+      'name' => 'Chat Square Text',
+      'value' => 'bi-chat-square-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'text',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    48 => 
+    array (
+      'id' => 'chat-square-text-solid',
+      'name' => 'Chat Square Text',
+      'value' => 'bi-chat-square-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'text',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    49 => 
+    array (
+      'id' => 'chat-square-outline',
+      'name' => 'Chat Square',
+      'value' => 'bi-chat-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    50 => 
+    array (
+      'id' => 'chat-square-solid',
+      'name' => 'Chat Square',
+      'value' => 'bi-chat-square-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    51 => 
+    array (
+      'id' => 'chat-text-fill-solid',
+      'name' => 'Chat Text Fill',
+      'value' => 'bi-chat-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'text',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    52 => 
+    array (
+      'id' => 'chat-text-fill-outline',
+      'name' => 'Chat Text Fill',
+      'value' => 'bi-chat-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'text',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    53 => 
+    array (
+      'id' => 'chat-text-outline',
+      'name' => 'Chat Text',
+      'value' => 'bi-chat-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'text',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    54 => 
+    array (
+      'id' => 'chat-outline',
+      'name' => 'Chat',
+      'value' => 'bi-chat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    55 => 
+    array (
+      'id' => 'discord-outline',
+      'name' => 'Discord',
+      'value' => 'bi-discord',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'discord',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    56 => 
+    array (
+      'id' => 'envelope-fill-solid',
+      'name' => 'Envelope Fill',
+      'value' => 'bi-envelope-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    57 => 
+    array (
+      'id' => 'envelope-fill-outline',
+      'name' => 'Envelope Fill',
+      'value' => 'bi-envelope',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    58 => 
+    array (
+      'id' => 'envelope-open-fill-solid',
+      'name' => 'Envelope Open Fill',
+      'value' => 'bi-envelope-open-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    59 => 
+    array (
+      'id' => 'envelope-open-fill-outline',
+      'name' => 'Envelope Open Fill',
+      'value' => 'bi-envelope-open',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    60 => 
+    array (
+      'id' => 'envelope-open-outline',
+      'name' => 'Envelope Open',
+      'value' => 'bi-envelope-open',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    61 => 
+    array (
+      'id' => 'envelope-open-solid',
+      'name' => 'Envelope Open',
+      'value' => 'bi-envelope-open-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    62 => 
+    array (
+      'id' => 'envelope-outline',
+      'name' => 'Envelope',
+      'value' => 'bi-envelope',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    63 => 
+    array (
+      'id' => 'envelope-solid',
+      'name' => 'Envelope',
+      'value' => 'bi-envelope-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    64 => 
+    array (
+      'id' => 'facebook-outline',
+      'name' => 'Facebook',
+      'value' => 'bi-facebook',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'facebook',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    65 => 
+    array (
+      'id' => 'github-outline',
+      'name' => 'Github',
+      'value' => 'bi-github',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'github',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    66 => 
+    array (
+      'id' => 'globe-outline',
+      'name' => 'Globe',
+      'value' => 'bi-globe',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    67 => 
+    array (
+      'id' => 'globe2-outline',
+      'name' => 'Globe2',
+      'value' => 'bi-globe2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe2',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    68 => 
+    array (
+      'id' => 'google-outline',
+      'name' => 'Google',
+      'value' => 'bi-google',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'google',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    69 => 
+    array (
+      'id' => 'inbox-fill-solid',
+      'name' => 'Inbox Fill',
+      'value' => 'bi-inbox-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inbox',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    70 => 
+    array (
+      'id' => 'inbox-fill-outline',
+      'name' => 'Inbox Fill',
+      'value' => 'bi-inbox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inbox',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    71 => 
+    array (
+      'id' => 'inbox-outline',
+      'name' => 'Inbox',
+      'value' => 'bi-inbox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inbox',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    72 => 
+    array (
+      'id' => 'inboxes-fill-solid',
+      'name' => 'Inboxes Fill',
+      'value' => 'bi-inboxes-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inboxes',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    73 => 
+    array (
+      'id' => 'inboxes-fill-outline',
+      'name' => 'Inboxes Fill',
+      'value' => 'bi-inboxes',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inboxes',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    74 => 
+    array (
+      'id' => 'inboxes-outline',
+      'name' => 'Inboxes',
+      'value' => 'bi-inboxes',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'inboxes',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    75 => 
+    array (
+      'id' => 'instagram-outline',
+      'name' => 'Instagram',
+      'value' => 'bi-instagram',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'instagram',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
+      'id' => 'linkedin-outline',
+      'name' => 'Linkedin',
+      'value' => 'bi-linkedin',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'linkedin',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    77 => 
+    array (
+      'id' => 'mailbox-outline',
+      'name' => 'Mailbox',
+      'value' => 'bi-mailbox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mailbox',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    78 => 
+    array (
+      'id' => 'mailbox2-outline',
+      'name' => 'Mailbox2',
+      'value' => 'bi-mailbox2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mailbox2',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    79 => 
+    array (
+      'id' => 'megaphone-fill-solid',
+      'name' => 'Megaphone Fill',
+      'value' => 'bi-megaphone-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'megaphone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    80 => 
+    array (
+      'id' => 'megaphone-fill-outline',
+      'name' => 'Megaphone Fill',
+      'value' => 'bi-megaphone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'megaphone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    81 => 
+    array (
+      'id' => 'megaphone-outline',
+      'name' => 'Megaphone',
+      'value' => 'bi-megaphone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'megaphone',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    82 => 
+    array (
+      'id' => 'newspaper-outline',
+      'name' => 'Newspaper',
+      'value' => 'bi-newspaper',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'newspaper',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    83 => 
+    array (
+      'id' => 'phone-fill-solid',
+      'name' => 'Phone Fill',
+      'value' => 'bi-phone-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    84 => 
+    array (
+      'id' => 'phone-fill-outline',
+      'name' => 'Phone Fill',
+      'value' => 'bi-phone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    85 => 
+    array (
+      'id' => 'phone-landscape-fill-solid',
+      'name' => 'Phone Landscape Fill',
+      'value' => 'bi-phone-landscape-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'landscape',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    86 => 
+    array (
+      'id' => 'phone-landscape-fill-outline',
+      'name' => 'Phone Landscape Fill',
+      'value' => 'bi-phone-landscape',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'landscape',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    87 => 
+    array (
+      'id' => 'phone-landscape-outline',
+      'name' => 'Phone Landscape',
+      'value' => 'bi-phone-landscape',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'landscape',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    88 => 
+    array (
+      'id' => 'phone-vibrate-fill-solid',
+      'name' => 'Phone Vibrate Fill',
+      'value' => 'bi-phone-vibrate-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'vibrate',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    89 => 
+    array (
+      'id' => 'phone-vibrate-fill-outline',
+      'name' => 'Phone Vibrate Fill',
+      'value' => 'bi-phone-vibrate',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'vibrate',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    90 => 
+    array (
+      'id' => 'phone-vibrate-outline',
+      'name' => 'Phone Vibrate',
+      'value' => 'bi-phone-vibrate',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'vibrate',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    91 => 
+    array (
+      'id' => 'phone-outline',
+      'name' => 'Phone',
+      'value' => 'bi-phone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    92 => 
+    array (
+      'id' => 'reception-0-outline',
+      'name' => 'Reception 0',
+      'value' => 'bi-reception-0',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reception',
+        1 => '0',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    93 => 
+    array (
+      'id' => 'reception-1-outline',
+      'name' => 'Reception 1',
+      'value' => 'bi-reception-1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reception',
+        1 => '1',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    94 => 
+    array (
+      'id' => 'reception-2-outline',
+      'name' => 'Reception 2',
+      'value' => 'bi-reception-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reception',
+        1 => '2',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    95 => 
+    array (
+      'id' => 'reception-3-outline',
+      'name' => 'Reception 3',
+      'value' => 'bi-reception-3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reception',
+        1 => '3',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    96 => 
+    array (
+      'id' => 'reception-4-outline',
+      'name' => 'Reception 4',
+      'value' => 'bi-reception-4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reception',
+        1 => '4',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    97 => 
+    array (
+      'id' => 'reply-all-fill-solid',
+      'name' => 'Reply All Fill',
+      'value' => 'bi-reply-all-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+        1 => 'all',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    98 => 
+    array (
+      'id' => 'reply-all-fill-outline',
+      'name' => 'Reply All Fill',
+      'value' => 'bi-reply-all',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+        1 => 'all',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    99 => 
+    array (
+      'id' => 'reply-all-outline',
+      'name' => 'Reply All',
+      'value' => 'bi-reply-all',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+        1 => 'all',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    100 => 
+    array (
+      'id' => 'reply-fill-solid',
+      'name' => 'Reply Fill',
+      'value' => 'bi-reply-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    101 => 
+    array (
+      'id' => 'reply-fill-outline',
+      'name' => 'Reply Fill',
+      'value' => 'bi-reply',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    102 => 
+    array (
+      'id' => 'reply-outline',
+      'name' => 'Reply',
+      'value' => 'bi-reply',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reply',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    103 => 
+    array (
+      'id' => 'rss-fill-solid',
+      'name' => 'Rss Fill',
+      'value' => 'bi-rss-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rss',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    104 => 
+    array (
+      'id' => 'rss-fill-outline',
+      'name' => 'Rss Fill',
+      'value' => 'bi-rss',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rss',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    105 => 
+    array (
+      'id' => 'rss-outline',
+      'name' => 'Rss',
+      'value' => 'bi-rss',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rss',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    106 => 
+    array (
+      'id' => 'share-fill-solid',
+      'name' => 'Share Fill',
+      'value' => 'bi-share-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'share',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    107 => 
+    array (
+      'id' => 'share-fill-outline',
+      'name' => 'Share Fill',
+      'value' => 'bi-share',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'share',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    108 => 
+    array (
+      'id' => 'share-outline',
+      'name' => 'Share',
+      'value' => 'bi-share',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'share',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    109 => 
+    array (
+      'id' => 'slack-outline',
+      'name' => 'Slack',
+      'value' => 'bi-slack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'slack',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    110 => 
+    array (
+      'id' => 'telegram-outline',
+      'name' => 'Telegram',
+      'value' => 'bi-telegram',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telegram',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    111 => 
+    array (
+      'id' => 'telephone-fill-solid',
+      'name' => 'Telephone Fill',
+      'value' => 'bi-telephone-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    112 => 
+    array (
+      'id' => 'telephone-fill-outline',
+      'name' => 'Telephone Fill',
+      'value' => 'bi-telephone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    113 => 
+    array (
+      'id' => 'telephone-forward-fill-solid',
+      'name' => 'Telephone Forward Fill',
+      'value' => 'bi-telephone-forward-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    114 => 
+    array (
+      'id' => 'telephone-forward-fill-outline',
+      'name' => 'Telephone Forward Fill',
+      'value' => 'bi-telephone-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    115 => 
+    array (
+      'id' => 'telephone-forward-outline',
+      'name' => 'Telephone Forward',
+      'value' => 'bi-telephone-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'forward',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    116 => 
+    array (
+      'id' => 'telephone-inbound-fill-solid',
+      'name' => 'Telephone Inbound Fill',
+      'value' => 'bi-telephone-inbound-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'inbound',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    117 => 
+    array (
+      'id' => 'telephone-inbound-fill-outline',
+      'name' => 'Telephone Inbound Fill',
+      'value' => 'bi-telephone-inbound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'inbound',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    118 => 
+    array (
+      'id' => 'telephone-inbound-outline',
+      'name' => 'Telephone Inbound',
+      'value' => 'bi-telephone-inbound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'inbound',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    119 => 
+    array (
+      'id' => 'telephone-minus-fill-solid',
+      'name' => 'Telephone Minus Fill',
+      'value' => 'bi-telephone-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    120 => 
+    array (
+      'id' => 'telephone-minus-fill-outline',
+      'name' => 'Telephone Minus Fill',
+      'value' => 'bi-telephone-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    121 => 
+    array (
+      'id' => 'telephone-minus-outline',
+      'name' => 'Telephone Minus',
+      'value' => 'bi-telephone-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'minus',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    122 => 
+    array (
+      'id' => 'telephone-outbound-fill-solid',
+      'name' => 'Telephone Outbound Fill',
+      'value' => 'bi-telephone-outbound-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'outbound',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    123 => 
+    array (
+      'id' => 'telephone-outbound-fill-outline',
+      'name' => 'Telephone Outbound Fill',
+      'value' => 'bi-telephone-outbound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'outbound',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    124 => 
+    array (
+      'id' => 'telephone-outbound-outline',
+      'name' => 'Telephone Outbound',
+      'value' => 'bi-telephone-outbound',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'outbound',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    125 => 
+    array (
+      'id' => 'telephone-plus-fill-solid',
+      'name' => 'Telephone Plus Fill',
+      'value' => 'bi-telephone-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    126 => 
+    array (
+      'id' => 'telephone-plus-fill-outline',
+      'name' => 'Telephone Plus Fill',
+      'value' => 'bi-telephone-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    127 => 
+    array (
+      'id' => 'telephone-plus-outline',
+      'name' => 'Telephone Plus',
+      'value' => 'bi-telephone-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'plus',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    128 => 
+    array (
+      'id' => 'telephone-x-fill-solid',
+      'name' => 'Telephone X Fill',
+      'value' => 'bi-telephone-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    129 => 
+    array (
+      'id' => 'telephone-x-fill-outline',
+      'name' => 'Telephone X Fill',
+      'value' => 'bi-telephone-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
+      'id' => 'telephone-x-outline',
+      'name' => 'Telephone X',
+      'value' => 'bi-telephone-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+        1 => 'x',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    131 => 
+    array (
+      'id' => 'telephone-outline',
+      'name' => 'Telephone',
+      'value' => 'bi-telephone',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'telephone',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    132 => 
+    array (
+      'id' => 'twitch-outline',
+      'name' => 'Twitch',
+      'value' => 'bi-twitch',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'twitch',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    133 => 
+    array (
+      'id' => 'twitter-outline',
+      'name' => 'Twitter',
+      'value' => 'bi-twitter',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'twitter',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    134 => 
+    array (
+      'id' => 'voicemail-outline',
+      'name' => 'Voicemail',
+      'value' => 'bi-voicemail',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'voicemail',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    135 => 
+    array (
+      'id' => 'whatsapp-outline',
+      'name' => 'Whatsapp',
+      'value' => 'bi-whatsapp',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'whatsapp',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    136 => 
+    array (
+      'id' => 'wifi-1-outline',
+      'name' => 'Wifi 1',
+      'value' => 'bi-wifi-1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wifi',
+        1 => '1',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    137 => 
+    array (
+      'id' => 'wifi-2-outline',
+      'name' => 'Wifi 2',
+      'value' => 'bi-wifi-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wifi',
+        1 => '2',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    138 => 
+    array (
+      'id' => 'wifi-off-outline',
+      'name' => 'Wifi Off',
+      'value' => 'bi-wifi-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wifi',
+        1 => 'off',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    139 => 
+    array (
+      'id' => 'wifi-outline',
+      'name' => 'Wifi',
+      'value' => 'bi-wifi',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wifi',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    140 => 
+    array (
+      'id' => 'youtube-outline',
+      'name' => 'Youtube',
+      'value' => 'bi-youtube',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'youtube',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    141 => 
+    array (
+      'id' => 'bell-slash-fill-solid',
+      'name' => 'Bell Slash Fill',
+      'value' => 'bi-bell-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bell',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    142 => 
+    array (
+      'id' => 'bell-slash-fill-outline',
+      'name' => 'Bell Slash Fill',
+      'value' => 'bi-bell-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bell',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    143 => 
+    array (
+      'id' => 'bell-slash-outline',
+      'name' => 'Bell Slash',
+      'value' => 'bi-bell-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bell',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    144 => 
+    array (
+      'id' => 'bell-slash-solid',
+      'name' => 'Bell Slash',
+      'value' => 'bi-bell-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bell',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    145 => 
+    array (
+      'id' => 'mastodon-outline',
+      'name' => 'Mastodon',
+      'value' => 'bi-mastodon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mastodon',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    146 => 
+    array (
+      'id' => 'messenger-outline',
+      'name' => 'Messenger',
+      'value' => 'bi-messenger',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'messenger',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    147 => 
+    array (
+      'id' => 'reddit-outline',
+      'name' => 'Reddit',
+      'value' => 'bi-reddit',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'reddit',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    148 => 
+    array (
+      'id' => 'skype-outline',
+      'name' => 'Skype',
+      'value' => 'bi-skype',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skype',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    149 => 
+    array (
+      'id' => 'apple-outline',
+      'name' => 'Apple',
+      'value' => 'bi-apple',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'apple',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    150 => 
+    array (
+      'id' => 'microsoft-outline',
+      'name' => 'Microsoft',
+      'value' => 'bi-microsoft',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'microsoft',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    151 => 
+    array (
+      'id' => 'windows-outline',
+      'name' => 'Windows',
+      'value' => 'bi-windows',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'windows',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    152 => 
+    array (
+      'id' => 'behance-outline',
+      'name' => 'Behance',
+      'value' => 'bi-behance',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'behance',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    153 => 
+    array (
+      'id' => 'dribbble-outline',
+      'name' => 'Dribbble',
+      'value' => 'bi-dribbble',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dribbble',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    154 => 
+    array (
+      'id' => 'line-outline',
+      'name' => 'Line',
+      'value' => 'bi-line',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'line',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    155 => 
+    array (
+      'id' => 'medium-outline',
+      'name' => 'Medium',
+      'value' => 'bi-medium',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'medium',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    156 => 
+    array (
+      'id' => 'paypal-outline',
+      'name' => 'Paypal',
+      'value' => 'bi-paypal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'paypal',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
+      'id' => 'pinterest-outline',
+      'name' => 'Pinterest',
+      'value' => 'bi-pinterest',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pinterest',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    158 => 
+    array (
+      'id' => 'signal-outline',
+      'name' => 'Signal',
+      'value' => 'bi-signal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'signal',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    159 => 
+    array (
+      'id' => 'snapchat-outline',
+      'name' => 'Snapchat',
+      'value' => 'bi-snapchat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'snapchat',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    160 => 
+    array (
+      'id' => 'spotify-outline',
+      'name' => 'Spotify',
+      'value' => 'bi-spotify',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'spotify',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    161 => 
+    array (
+      'id' => 'stack-overflow-outline',
+      'name' => 'Stack Overflow',
+      'value' => 'bi-stack-overflow',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stack',
+        1 => 'overflow',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    162 => 
+    array (
+      'id' => 'strava-outline',
+      'name' => 'Strava',
+      'value' => 'bi-strava',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'strava',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    163 => 
+    array (
+      'id' => 'wordpress-outline',
+      'name' => 'Wordpress',
+      'value' => 'bi-wordpress',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wordpress',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    164 => 
+    array (
+      'id' => 'vimeo-outline',
+      'name' => 'Vimeo',
+      'value' => 'bi-vimeo',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vimeo',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    165 => 
+    array (
+      'id' => 'bluetooth-outline',
+      'name' => 'Bluetooth',
+      'value' => 'bi-bluetooth',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bluetooth',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    166 => 
+    array (
+      'id' => 'envelope-check-fill-solid',
+      'name' => 'Envelope Check Fill',
+      'value' => 'bi-envelope-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    167 => 
+    array (
+      'id' => 'envelope-check-fill-outline',
+      'name' => 'Envelope Check Fill',
+      'value' => 'bi-envelope-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    168 => 
+    array (
+      'id' => 'envelope-check-outline',
+      'name' => 'Envelope Check',
+      'value' => 'bi-envelope-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'check',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    169 => 
+    array (
+      'id' => 'envelope-check-solid',
+      'name' => 'Envelope Check',
+      'value' => 'bi-envelope-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'check',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    170 => 
+    array (
+      'id' => 'envelope-dash-fill-solid',
+      'name' => 'Envelope Dash Fill',
+      'value' => 'bi-envelope-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    171 => 
+    array (
+      'id' => 'envelope-dash-fill-outline',
+      'name' => 'Envelope Dash Fill',
+      'value' => 'bi-envelope-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    172 => 
+    array (
+      'id' => 'envelope-dash-outline',
+      'name' => 'Envelope Dash',
+      'value' => 'bi-envelope-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'dash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    173 => 
+    array (
+      'id' => 'envelope-dash-solid',
+      'name' => 'Envelope Dash',
+      'value' => 'bi-envelope-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'dash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    174 => 
+    array (
+      'id' => 'envelope-exclamation-fill-solid',
+      'name' => 'Envelope Exclamation Fill',
+      'value' => 'bi-envelope-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    175 => 
+    array (
+      'id' => 'envelope-exclamation-fill-outline',
+      'name' => 'Envelope Exclamation Fill',
+      'value' => 'bi-envelope-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    176 => 
+    array (
+      'id' => 'envelope-exclamation-outline',
+      'name' => 'Envelope Exclamation',
+      'value' => 'bi-envelope-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'exclamation',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    177 => 
+    array (
+      'id' => 'envelope-exclamation-solid',
+      'name' => 'Envelope Exclamation',
+      'value' => 'bi-envelope-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'exclamation',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    178 => 
+    array (
+      'id' => 'envelope-plus-fill-solid',
+      'name' => 'Envelope Plus Fill',
+      'value' => 'bi-envelope-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    179 => 
+    array (
+      'id' => 'envelope-plus-fill-outline',
+      'name' => 'Envelope Plus Fill',
+      'value' => 'bi-envelope-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    180 => 
+    array (
+      'id' => 'envelope-plus-outline',
+      'name' => 'Envelope Plus',
+      'value' => 'bi-envelope-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'plus',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    181 => 
+    array (
+      'id' => 'envelope-plus-solid',
+      'name' => 'Envelope Plus',
+      'value' => 'bi-envelope-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'plus',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    182 => 
+    array (
+      'id' => 'envelope-slash-fill-solid',
+      'name' => 'Envelope Slash Fill',
+      'value' => 'bi-envelope-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    183 => 
+    array (
+      'id' => 'envelope-slash-fill-outline',
+      'name' => 'Envelope Slash Fill',
+      'value' => 'bi-envelope-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    184 => 
+    array (
+      'id' => 'envelope-slash-outline',
+      'name' => 'Envelope Slash',
+      'value' => 'bi-envelope-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    185 => 
+    array (
+      'id' => 'envelope-slash-solid',
+      'name' => 'Envelope Slash',
+      'value' => 'bi-envelope-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    186 => 
+    array (
+      'id' => 'envelope-x-fill-solid',
+      'name' => 'Envelope X Fill',
+      'value' => 'bi-envelope-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    187 => 
+    array (
+      'id' => 'envelope-x-fill-outline',
+      'name' => 'Envelope X Fill',
+      'value' => 'bi-envelope-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    188 => 
+    array (
+      'id' => 'envelope-x-outline',
+      'name' => 'Envelope X',
+      'value' => 'bi-envelope-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'x',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    189 => 
+    array (
+      'id' => 'envelope-x-solid',
+      'name' => 'Envelope X',
+      'value' => 'bi-envelope-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'x',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    190 => 
+    array (
+      'id' => 'meta-outline',
+      'name' => 'Meta',
+      'value' => 'bi-meta',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'meta',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    191 => 
+    array (
+      'id' => 'nintendo-switch-outline',
+      'name' => 'Nintendo Switch',
+      'value' => 'bi-nintendo-switch',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nintendo',
+        1 => 'switch',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    192 => 
+    array (
+      'id' => 'playstation-outline',
+      'name' => 'Playstation',
+      'value' => 'bi-playstation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'playstation',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    193 => 
+    array (
+      'id' => 'quora-outline',
+      'name' => 'Quora',
+      'value' => 'bi-quora',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'quora',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    194 => 
+    array (
+      'id' => 'send-check-fill-solid',
+      'name' => 'Send Check Fill',
+      'value' => 'bi-send-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    195 => 
+    array (
+      'id' => 'send-check-fill-outline',
+      'name' => 'Send Check Fill',
+      'value' => 'bi-send-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    196 => 
+    array (
+      'id' => 'send-check-outline',
+      'name' => 'Send Check',
+      'value' => 'bi-send-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'check',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    197 => 
+    array (
+      'id' => 'send-dash-fill-solid',
+      'name' => 'Send Dash Fill',
+      'value' => 'bi-send-dash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    198 => 
+    array (
+      'id' => 'send-dash-fill-outline',
+      'name' => 'Send Dash Fill',
+      'value' => 'bi-send-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'dash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    199 => 
+    array (
+      'id' => 'send-dash-outline',
+      'name' => 'Send Dash',
+      'value' => 'bi-send-dash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'dash',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    200 => 
+    array (
+      'id' => 'send-exclamation-fill-solid',
+      'name' => 'Send Exclamation Fill',
+      'value' => 'bi-send-exclamation-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    201 => 
+    array (
+      'id' => 'send-exclamation-fill-outline',
+      'name' => 'Send Exclamation Fill',
+      'value' => 'bi-send-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'exclamation',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    202 => 
+    array (
+      'id' => 'send-exclamation-outline',
+      'name' => 'Send Exclamation',
+      'value' => 'bi-send-exclamation',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'exclamation',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    203 => 
+    array (
+      'id' => 'send-fill-solid',
+      'name' => 'Send Fill',
+      'value' => 'bi-send-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    204 => 
+    array (
+      'id' => 'send-fill-outline',
+      'name' => 'Send Fill',
+      'value' => 'bi-send',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    205 => 
+    array (
+      'id' => 'send-plus-fill-solid',
+      'name' => 'Send Plus Fill',
+      'value' => 'bi-send-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    206 => 
+    array (
+      'id' => 'send-plus-fill-outline',
+      'name' => 'Send Plus Fill',
+      'value' => 'bi-send-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    207 => 
+    array (
+      'id' => 'send-plus-outline',
+      'name' => 'Send Plus',
+      'value' => 'bi-send-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'plus',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    208 => 
+    array (
+      'id' => 'send-slash-fill-solid',
+      'name' => 'Send Slash Fill',
+      'value' => 'bi-send-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    209 => 
+    array (
+      'id' => 'send-slash-fill-outline',
+      'name' => 'Send Slash Fill',
+      'value' => 'bi-send-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    210 => 
+    array (
+      'id' => 'send-slash-outline',
+      'name' => 'Send Slash',
+      'value' => 'bi-send-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    211 => 
+    array (
+      'id' => 'send-x-fill-solid',
+      'name' => 'Send X Fill',
+      'value' => 'bi-send-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    212 => 
+    array (
+      'id' => 'send-x-fill-outline',
+      'name' => 'Send X Fill',
+      'value' => 'bi-send-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    213 => 
+    array (
+      'id' => 'send-x-outline',
+      'name' => 'Send X',
+      'value' => 'bi-send-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'x',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    214 => 
+    array (
+      'id' => 'send-outline',
+      'name' => 'Send',
+      'value' => 'bi-send',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    215 => 
+    array (
+      'id' => 'steam-outline',
+      'name' => 'Steam',
+      'value' => 'bi-steam',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'steam',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    216 => 
+    array (
+      'id' => 'tiktok-outline',
+      'name' => 'Tiktok',
+      'value' => 'bi-tiktok',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tiktok',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    217 => 
+    array (
+      'id' => 'xbox-outline',
+      'name' => 'Xbox',
+      'value' => 'bi-xbox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'xbox',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    218 => 
+    array (
+      'id' => 'chat-heart-fill-solid',
+      'name' => 'Chat Heart Fill',
+      'value' => 'bi-chat-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    219 => 
+    array (
+      'id' => 'chat-heart-fill-outline',
+      'name' => 'Chat Heart Fill',
+      'value' => 'bi-chat-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    220 => 
+    array (
+      'id' => 'chat-heart-outline',
+      'name' => 'Chat Heart',
+      'value' => 'bi-chat-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    221 => 
+    array (
+      'id' => 'chat-heart-solid',
+      'name' => 'Chat Heart',
+      'value' => 'bi-chat-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    222 => 
+    array (
+      'id' => 'chat-left-heart-fill-solid',
+      'name' => 'Chat Left Heart Fill',
+      'value' => 'bi-chat-left-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    223 => 
+    array (
+      'id' => 'chat-left-heart-fill-outline',
+      'name' => 'Chat Left Heart Fill',
+      'value' => 'bi-chat-left-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    224 => 
+    array (
+      'id' => 'chat-left-heart-outline',
+      'name' => 'Chat Left Heart',
+      'value' => 'bi-chat-left-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    225 => 
+    array (
+      'id' => 'chat-left-heart-solid',
+      'name' => 'Chat Left Heart',
+      'value' => 'bi-chat-left-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'left',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    226 => 
+    array (
+      'id' => 'chat-right-heart-fill-solid',
+      'name' => 'Chat Right Heart Fill',
+      'value' => 'bi-chat-right-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    227 => 
+    array (
+      'id' => 'chat-right-heart-fill-outline',
+      'name' => 'Chat Right Heart Fill',
+      'value' => 'bi-chat-right-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    228 => 
+    array (
+      'id' => 'chat-right-heart-outline',
+      'name' => 'Chat Right Heart',
+      'value' => 'bi-chat-right-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    229 => 
+    array (
+      'id' => 'chat-right-heart-solid',
+      'name' => 'Chat Right Heart',
+      'value' => 'bi-chat-right-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'right',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    230 => 
+    array (
+      'id' => 'chat-square-heart-fill-solid',
+      'name' => 'Chat Square Heart Fill',
+      'value' => 'bi-chat-square-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    231 => 
+    array (
+      'id' => 'chat-square-heart-fill-outline',
+      'name' => 'Chat Square Heart Fill',
+      'value' => 'bi-chat-square-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    232 => 
+    array (
+      'id' => 'chat-square-heart-outline',
+      'name' => 'Chat Square Heart',
+      'value' => 'bi-chat-square-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    233 => 
+    array (
+      'id' => 'chat-square-heart-solid',
+      'name' => 'Chat Square Heart',
+      'value' => 'bi-chat-square-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'chat',
+        1 => 'square',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    234 => 
+    array (
+      'id' => 'envelope-heart-fill-solid',
+      'name' => 'Envelope Heart Fill',
+      'value' => 'bi-envelope-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    235 => 
+    array (
+      'id' => 'envelope-heart-fill-outline',
+      'name' => 'Envelope Heart Fill',
+      'value' => 'bi-envelope-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    236 => 
+    array (
+      'id' => 'envelope-heart-outline',
+      'name' => 'Envelope Heart',
+      'value' => 'bi-envelope-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    237 => 
+    array (
+      'id' => 'envelope-heart-solid',
+      'name' => 'Envelope Heart',
+      'value' => 'bi-envelope-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    238 => 
+    array (
+      'id' => 'envelope-open-heart-fill-solid',
+      'name' => 'Envelope Open Heart Fill',
+      'value' => 'bi-envelope-open-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    239 => 
+    array (
+      'id' => 'envelope-open-heart-fill-outline',
+      'name' => 'Envelope Open Heart Fill',
+      'value' => 'bi-envelope-open-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    240 => 
+    array (
+      'id' => 'envelope-open-heart-outline',
+      'name' => 'Envelope Open Heart',
+      'value' => 'bi-envelope-open-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    241 => 
+    array (
+      'id' => 'envelope-open-heart-solid',
+      'name' => 'Envelope Open Heart',
+      'value' => 'bi-envelope-open-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'open',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    242 => 
+    array (
+      'id' => 'envelope-paper-fill-solid',
+      'name' => 'Envelope Paper Fill',
+      'value' => 'bi-envelope-paper-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    243 => 
+    array (
+      'id' => 'envelope-paper-fill-outline',
+      'name' => 'Envelope Paper Fill',
+      'value' => 'bi-envelope-paper',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    244 => 
+    array (
+      'id' => 'envelope-paper-heart-fill-solid',
+      'name' => 'Envelope Paper Heart Fill',
+      'value' => 'bi-envelope-paper-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    245 => 
+    array (
+      'id' => 'envelope-paper-heart-fill-outline',
+      'name' => 'Envelope Paper Heart Fill',
+      'value' => 'bi-envelope-paper-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'heart',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    246 => 
+    array (
+      'id' => 'envelope-paper-heart-outline',
+      'name' => 'Envelope Paper Heart',
+      'value' => 'bi-envelope-paper-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    247 => 
+    array (
+      'id' => 'envelope-paper-heart-solid',
+      'name' => 'Envelope Paper Heart',
+      'value' => 'bi-envelope-paper-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+        2 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    248 => 
+    array (
+      'id' => 'envelope-paper-outline',
+      'name' => 'Envelope Paper',
+      'value' => 'bi-envelope-paper',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    249 => 
+    array (
+      'id' => 'envelope-paper-solid',
+      'name' => 'Envelope Paper',
+      'value' => 'bi-envelope-paper-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'paper',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    250 => 
+    array (
+      'id' => 'phone-flip-outline',
+      'name' => 'Phone Flip',
+      'value' => 'bi-phone-flip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'phone',
+        1 => 'flip',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    251 => 
+    array (
+      'id' => 'postage-fill-solid',
+      'name' => 'Postage Fill',
+      'value' => 'bi-postage-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    252 => 
+    array (
+      'id' => 'postage-fill-outline',
+      'name' => 'Postage Fill',
+      'value' => 'bi-postage',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    253 => 
+    array (
+      'id' => 'postage-heart-fill-solid',
+      'name' => 'Postage Heart Fill',
+      'value' => 'bi-postage-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    254 => 
+    array (
+      'id' => 'postage-heart-fill-outline',
+      'name' => 'Postage Heart Fill',
+      'value' => 'bi-postage-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    255 => 
+    array (
+      'id' => 'postage-heart-outline',
+      'name' => 'Postage Heart',
+      'value' => 'bi-postage-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    256 => 
+    array (
+      'id' => 'postage-heart-solid',
+      'name' => 'Postage Heart',
+      'value' => 'bi-postage-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    257 => 
+    array (
+      'id' => 'postage-outline',
+      'name' => 'Postage',
+      'value' => 'bi-postage',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postage',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    258 => 
+    array (
+      'id' => 'postcard-fill-solid',
+      'name' => 'Postcard Fill',
+      'value' => 'bi-postcard-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    259 => 
+    array (
+      'id' => 'postcard-fill-outline',
+      'name' => 'Postcard Fill',
+      'value' => 'bi-postcard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    260 => 
+    array (
+      'id' => 'postcard-heart-fill-solid',
+      'name' => 'Postcard Heart Fill',
+      'value' => 'bi-postcard-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    261 => 
+    array (
+      'id' => 'postcard-heart-fill-outline',
+      'name' => 'Postcard Heart Fill',
+      'value' => 'bi-postcard-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    262 => 
+    array (
+      'id' => 'postcard-heart-outline',
+      'name' => 'Postcard Heart',
+      'value' => 'bi-postcard-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    263 => 
+    array (
+      'id' => 'postcard-heart-solid',
+      'name' => 'Postcard Heart',
+      'value' => 'bi-postcard-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+        1 => 'heart',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    264 => 
+    array (
+      'id' => 'postcard-outline',
+      'name' => 'Postcard',
+      'value' => 'bi-postcard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'postcard',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    265 => 
+    array (
+      'id' => 'alexa-outline',
+      'name' => 'Alexa',
+      'value' => 'bi-alexa',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'alexa',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    266 => 
+    array (
+      'id' => 'alipay-outline',
+      'name' => 'Alipay',
+      'value' => 'bi-alipay',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'alipay',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    267 => 
+    array (
+      'id' => 'android-outline',
+      'name' => 'Android',
+      'value' => 'bi-android',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'android',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    268 => 
+    array (
+      'id' => 'android2-outline',
+      'name' => 'Android2',
+      'value' => 'bi-android2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'android2',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    269 => 
+    array (
+      'id' => 'browser-chrome-outline',
+      'name' => 'Browser Chrome',
+      'value' => 'bi-browser-chrome',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'browser',
+        1 => 'chrome',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    270 => 
+    array (
+      'id' => 'browser-edge-outline',
+      'name' => 'Browser Edge',
+      'value' => 'bi-browser-edge',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'browser',
+        1 => 'edge',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    271 => 
+    array (
+      'id' => 'browser-firefox-outline',
+      'name' => 'Browser Firefox',
+      'value' => 'bi-browser-firefox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'browser',
+        1 => 'firefox',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    272 => 
+    array (
+      'id' => 'browser-safari-outline',
+      'name' => 'Browser Safari',
+      'value' => 'bi-browser-safari',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'browser',
+        1 => 'safari',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    273 => 
+    array (
+      'id' => 'dropbox-outline',
+      'name' => 'Dropbox',
+      'value' => 'bi-dropbox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'dropbox',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    274 => 
+    array (
+      'id' => 'google-play-outline',
+      'name' => 'Google Play',
+      'value' => 'bi-google-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'google',
+        1 => 'play',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    275 => 
+    array (
+      'id' => 'microsoft-teams-outline',
+      'name' => 'Microsoft Teams',
+      'value' => 'bi-microsoft-teams',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'microsoft',
+        1 => 'teams',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    276 => 
+    array (
+      'id' => 'ubuntu-outline',
+      'name' => 'Ubuntu',
+      'value' => 'bi-ubuntu',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ubuntu',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    277 => 
+    array (
+      'id' => 'unity-outline',
+      'name' => 'Unity',
+      'value' => 'bi-unity',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'unity',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    278 => 
+    array (
+      'id' => 'wechat-outline',
+      'name' => 'Wechat',
+      'value' => 'bi-wechat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wechat',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    279 => 
+    array (
+      'id' => 'yelp-outline',
+      'name' => 'Yelp',
+      'value' => 'bi-yelp',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'yelp',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    280 => 
+    array (
+      'id' => 'stripe-outline',
+      'name' => 'Stripe',
+      'value' => 'bi-stripe',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stripe',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    281 => 
+    array (
+      'id' => 'trello-outline',
+      'name' => 'Trello',
+      'value' => 'bi-trello',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'trello',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    282 => 
+    array (
+      'id' => 'envelope-at-fill-solid',
+      'name' => 'Envelope At Fill',
+      'value' => 'bi-envelope-at-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'at',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    283 => 
+    array (
+      'id' => 'envelope-at-fill-outline',
+      'name' => 'Envelope At Fill',
+      'value' => 'bi-envelope-at',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'at',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    284 => 
+    array (
+      'id' => 'envelope-at-outline',
+      'name' => 'Envelope At',
+      'value' => 'bi-envelope-at',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'at',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    285 => 
+    array (
+      'id' => 'envelope-at-solid',
+      'name' => 'Envelope At',
+      'value' => 'bi-envelope-at-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'at',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    286 => 
+    array (
+      'id' => 'globe-americas-outline',
+      'name' => 'Globe Americas',
+      'value' => 'bi-globe-americas',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'americas',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    287 => 
+    array (
+      'id' => 'globe-asia-australia-outline',
+      'name' => 'Globe Asia Australia',
+      'value' => 'bi-globe-asia-australia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'asia',
+        2 => 'australia',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    288 => 
+    array (
+      'id' => 'globe-central-south-asia-outline',
+      'name' => 'Globe Central South Asia',
+      'value' => 'bi-globe-central-south-asia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'central',
+        2 => 'south',
+        3 => 'asia',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    289 => 
+    array (
+      'id' => 'globe-europe-africa-outline',
+      'name' => 'Globe Europe Africa',
+      'value' => 'bi-globe-europe-africa',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'europe',
+        2 => 'africa',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    290 => 
+    array (
+      'id' => 'amd-outline',
+      'name' => 'Amd',
+      'value' => 'bi-amd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'amd',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    291 => 
+    array (
+      'id' => 'nvidia-outline',
+      'name' => 'Nvidia',
+      'value' => 'bi-nvidia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'nvidia',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    292 => 
+    array (
+      'id' => 'sina-weibo-outline',
+      'name' => 'Sina Weibo',
+      'value' => 'bi-sina-weibo',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sina',
+        1 => 'weibo',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    293 => 
+    array (
+      'id' => 'tencent-qq-outline',
+      'name' => 'Tencent Qq',
+      'value' => 'bi-tencent-qq',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tencent',
+        1 => 'qq',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    294 => 
+    array (
+      'id' => 'wikipedia-outline',
+      'name' => 'Wikipedia',
+      'value' => 'bi-wikipedia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'wikipedia',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    295 => 
+    array (
+      'id' => 'amazon-outline',
+      'name' => 'Amazon',
+      'value' => 'bi-amazon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'amazon',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    296 => 
+    array (
+      'id' => 'bing-outline',
+      'name' => 'Bing',
+      'value' => 'bi-bing',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bing',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    297 => 
+    array (
+      'id' => 'envelope-arrow-down-fill-solid',
+      'name' => 'Envelope Arrow Down Fill',
+      'value' => 'bi-envelope-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    298 => 
+    array (
+      'id' => 'envelope-arrow-down-fill-outline',
+      'name' => 'Envelope Arrow Down Fill',
+      'value' => 'bi-envelope-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    299 => 
+    array (
+      'id' => 'envelope-arrow-down-outline',
+      'name' => 'Envelope Arrow Down',
+      'value' => 'bi-envelope-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    300 => 
+    array (
+      'id' => 'envelope-arrow-down-solid',
+      'name' => 'Envelope Arrow Down',
+      'value' => 'bi-envelope-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    301 => 
+    array (
+      'id' => 'envelope-arrow-up-fill-solid',
+      'name' => 'Envelope Arrow Up Fill',
+      'value' => 'bi-envelope-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    302 => 
+    array (
+      'id' => 'envelope-arrow-up-fill-outline',
+      'name' => 'Envelope Arrow Up Fill',
+      'value' => 'bi-envelope-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    303 => 
+    array (
+      'id' => 'envelope-arrow-up-outline',
+      'name' => 'Envelope Arrow Up',
+      'value' => 'bi-envelope-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    304 => 
+    array (
+      'id' => 'envelope-arrow-up-solid',
+      'name' => 'Envelope Arrow Up',
+      'value' => 'bi-envelope-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'envelope',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    305 => 
+    array (
+      'id' => 'gitlab-outline',
+      'name' => 'Gitlab',
+      'value' => 'bi-gitlab',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'gitlab',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    306 => 
+    array (
+      'id' => 'opencollective-outline',
+      'name' => 'Opencollective',
+      'value' => 'bi-opencollective',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'opencollective',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    307 => 
+    array (
+      'id' => 'send-arrow-down-fill-solid',
+      'name' => 'Send Arrow Down Fill',
+      'value' => 'bi-send-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    308 => 
+    array (
+      'id' => 'send-arrow-down-fill-outline',
+      'name' => 'Send Arrow Down Fill',
+      'value' => 'bi-send-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    309 => 
+    array (
+      'id' => 'send-arrow-down-outline',
+      'name' => 'Send Arrow Down',
+      'value' => 'bi-send-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    310 => 
+    array (
+      'id' => 'send-arrow-down-solid',
+      'name' => 'Send Arrow Down',
+      'value' => 'bi-send-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    311 => 
+    array (
+      'id' => 'send-arrow-up-fill-solid',
+      'name' => 'Send Arrow Up Fill',
+      'value' => 'bi-send-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    312 => 
+    array (
+      'id' => 'send-arrow-up-fill-outline',
+      'name' => 'Send Arrow Up Fill',
+      'value' => 'bi-send-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    313 => 
+    array (
+      'id' => 'send-arrow-up-outline',
+      'name' => 'Send Arrow Up',
+      'value' => 'bi-send-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    314 => 
+    array (
+      'id' => 'send-arrow-up-solid',
+      'name' => 'Send Arrow Up',
+      'value' => 'bi-send-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'send',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    315 => 
+    array (
+      'id' => 'sim-slash-fill-solid',
+      'name' => 'Sim Slash Fill',
+      'value' => 'bi-sim-slash-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    316 => 
+    array (
+      'id' => 'sim-slash-fill-outline',
+      'name' => 'Sim Slash Fill',
+      'value' => 'bi-sim-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+        1 => 'slash',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    317 => 
+    array (
+      'id' => 'sim-slash-outline',
+      'name' => 'Sim Slash',
+      'value' => 'bi-sim-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sim',
+        1 => 'slash',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    318 => 
+    array (
+      'id' => 'sourceforge-outline',
+      'name' => 'Sourceforge',
+      'value' => 'bi-sourceforge',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'sourceforge',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    319 => 
+    array (
+      'id' => 'substack-outline',
+      'name' => 'Substack',
+      'value' => 'bi-substack',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'substack',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    320 => 
+    array (
+      'id' => 'threads-fill-solid',
+      'name' => 'Threads Fill',
+      'value' => 'bi-threads-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'threads',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    321 => 
+    array (
+      'id' => 'threads-fill-outline',
+      'name' => 'Threads Fill',
+      'value' => 'bi-threads',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'threads',
+        1 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    322 => 
+    array (
+      'id' => 'threads-outline',
+      'name' => 'Threads',
+      'value' => 'bi-threads',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'threads',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    323 => 
+    array (
+      'id' => 'twitter-x-outline',
+      'name' => 'Twitter X',
+      'value' => 'bi-twitter-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'twitter',
+        1 => 'x',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    324 => 
+    array (
+      'id' => 'mailbox-flag-outline',
+      'name' => 'Mailbox Flag',
+      'value' => 'bi-mailbox-flag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mailbox',
+        1 => 'flag',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    325 => 
+    array (
+      'id' => 'mailbox2-flag-outline',
+      'name' => 'Mailbox2 Flag',
+      'value' => 'bi-mailbox2-flag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mailbox2',
+        1 => 'flag',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    326 => 
+    array (
+      'id' => 'bluesky-outline',
+      'name' => 'Bluesky',
+      'value' => 'bi-bluesky',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bluesky',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    327 => 
+    array (
+      'id' => 'tux-outline',
+      'name' => 'Tux',
+      'value' => 'bi-tux',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tux',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    328 => 
+    array (
+      'id' => 'anthropic-outline',
+      'name' => 'Anthropic',
+      'value' => 'bi-anthropic',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'anthropic',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    329 => 
+    array (
+      'id' => 'apple-music-outline',
+      'name' => 'Apple Music',
+      'value' => 'bi-apple-music',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'apple',
+        1 => 'music',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    330 => 
+    array (
+      'id' => 'claude-outline',
+      'name' => 'Claude',
+      'value' => 'bi-claude',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'claude',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    331 => 
+    array (
+      'id' => 'openai-outline',
+      'name' => 'Openai',
+      'value' => 'bi-openai',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'openai',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    332 => 
+    array (
+      'id' => 'perplexity-outline',
+      'name' => 'Perplexity',
+      'value' => 'bi-perplexity',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'perplexity',
+      ),
+      'category' => 'communications',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    333 => 
+    array (
+      'id' => 'globe-americas-fill-solid',
+      'name' => 'Globe Americas Fill',
+      'value' => 'bi-globe-americas-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'americas',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    334 => 
+    array (
+      'id' => 'globe-americas-fill-outline',
+      'name' => 'Globe Americas Fill',
+      'value' => 'bi-globe-americas',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'americas',
+        2 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    335 => 
+    array (
+      'id' => 'globe-asia-australia-fill-solid',
+      'name' => 'Globe Asia Australia Fill',
+      'value' => 'bi-globe-asia-australia-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'asia',
+        2 => 'australia',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    336 => 
+    array (
+      'id' => 'globe-asia-australia-fill-outline',
+      'name' => 'Globe Asia Australia Fill',
+      'value' => 'bi-globe-asia-australia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'asia',
+        2 => 'australia',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    337 => 
+    array (
+      'id' => 'globe-central-south-asia-fill-solid',
+      'name' => 'Globe Central South Asia Fill',
+      'value' => 'bi-globe-central-south-asia-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'central',
+        2 => 'south',
+        3 => 'asia',
+        4 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    338 => 
+    array (
+      'id' => 'globe-central-south-asia-fill-outline',
+      'name' => 'Globe Central South Asia Fill',
+      'value' => 'bi-globe-central-south-asia',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'central',
+        2 => 'south',
+        3 => 'asia',
+        4 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    339 => 
+    array (
+      'id' => 'globe-europe-africa-fill-solid',
+      'name' => 'Globe Europe Africa Fill',
+      'value' => 'bi-globe-europe-africa-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'europe',
+        2 => 'africa',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    340 => 
+    array (
+      'id' => 'globe-europe-africa-fill-outline',
+      'name' => 'Globe Europe Africa Fill',
+      'value' => 'bi-globe-europe-africa',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'globe',
+        1 => 'europe',
+        2 => 'africa',
+        3 => 'fill',
+      ),
+      'category' => 'communications',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+  ),
+);

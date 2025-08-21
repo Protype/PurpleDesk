@@ -1,1424 +1,2840 @@
 <?php
 
-return [
-    'id' => 'media',
-    'name' => '媒體控制',
-    'description' => '音視頻播放控制圖標',
-    'priority' => 'normal',
-
-    'icons' => [
-        [
-            'name' => 'camera-fill',
-            'displayName' => 'Camera Fill',
-            'class' => 'bi-camera-fill',
-            'keywords' => ["camera","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-camera-fill'],
-                'outline' => ['class' => 'bi-camera'],
-            ]
-        ],
-        [
-            'name' => 'camera-reels-fill',
-            'displayName' => 'Camera Reels Fill',
-            'class' => 'bi-camera-reels-fill',
-            'keywords' => ["camera","reels","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-camera-reels-fill'],
-                'outline' => ['class' => 'bi-camera-reels'],
-            ]
-        ],
-        [
-            'name' => 'camera-reels',
-            'displayName' => 'Camera Reels',
-            'class' => 'bi-camera-reels',
-            'keywords' => ["camera","reels"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-camera-reels'],
-                'solid' => ['class' => 'bi-camera-reels-fill'],
-            ]
-        ],
-        [
-            'name' => 'camera-video-fill',
-            'displayName' => 'Camera Video Fill',
-            'class' => 'bi-camera-video-fill',
-            'keywords' => ["camera","video","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-camera-video-fill'],
-                'outline' => ['class' => 'bi-camera-video'],
-            ]
-        ],
-        [
-            'name' => 'camera-video-off-fill',
-            'displayName' => 'Camera Video Off Fill',
-            'class' => 'bi-camera-video-off-fill',
-            'keywords' => ["camera","video","off","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-camera-video-off-fill'],
-                'outline' => ['class' => 'bi-camera-video-off'],
-            ]
-        ],
-        [
-            'name' => 'camera-video-off',
-            'displayName' => 'Camera Video Off',
-            'class' => 'bi-camera-video-off',
-            'keywords' => ["camera","video","off"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-camera-video-off'],
-                'solid' => ['class' => 'bi-camera-video-off-fill'],
-            ]
-        ],
-        [
-            'name' => 'camera-video',
-            'displayName' => 'Camera Video',
-            'class' => 'bi-camera-video',
-            'keywords' => ["camera","video"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-camera-video'],
-                'solid' => ['class' => 'bi-camera-video-fill'],
-            ]
-        ],
-        [
-            'name' => 'camera',
-            'displayName' => 'Camera',
-            'class' => 'bi-camera',
-            'keywords' => ["camera"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-camera'],
-                'solid' => ['class' => 'bi-camera-fill'],
-            ]
-        ],
-        [
-            'name' => 'camera2',
-            'displayName' => 'Camera2',
-            'class' => 'bi-camera2',
-            'keywords' => ["camera2"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-camera2'],
-            ]
-        ],
-        [
-            'name' => 'disc-fill',
-            'displayName' => 'Disc Fill',
-            'class' => 'bi-disc-fill',
-            'keywords' => ["disc","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-disc-fill'],
-                'outline' => ['class' => 'bi-disc'],
-            ]
-        ],
-        [
-            'name' => 'disc',
-            'displayName' => 'Disc',
-            'class' => 'bi-disc',
-            'keywords' => ["disc"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-disc'],
-                'solid' => ['class' => 'bi-disc-fill'],
-            ]
-        ],
-        [
-            'name' => 'earbuds',
-            'displayName' => 'Earbuds',
-            'class' => 'bi-earbuds',
-            'keywords' => ["earbuds"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-earbuds'],
-            ]
-        ],
-        [
-            'name' => 'film',
-            'displayName' => 'Film',
-            'class' => 'bi-film',
-            'keywords' => ["film"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-film'],
-            ]
-        ],
-        [
-            'name' => 'headphones',
-            'displayName' => 'Headphones',
-            'class' => 'bi-headphones',
-            'keywords' => ["headphones"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-headphones'],
-            ]
-        ],
-        [
-            'name' => 'headset',
-            'displayName' => 'Headset',
-            'class' => 'bi-headset',
-            'keywords' => ["headset"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-headset'],
-            ]
-        ],
-        [
-            'name' => 'image-alt',
-            'displayName' => 'Image Alt',
-            'class' => 'bi-image-alt',
-            'keywords' => ["image","alt"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-image-alt'],
-            ]
-        ],
-        [
-            'name' => 'image-fill',
-            'displayName' => 'Image Fill',
-            'class' => 'bi-image-fill',
-            'keywords' => ["image","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-image-fill'],
-                'outline' => ['class' => 'bi-image'],
-            ]
-        ],
-        [
-            'name' => 'image',
-            'displayName' => 'Image',
-            'class' => 'bi-image',
-            'keywords' => ["image"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-image'],
-                'solid' => ['class' => 'bi-image-fill'],
-            ]
-        ],
-        [
-            'name' => 'images',
-            'displayName' => 'Images',
-            'class' => 'bi-images',
-            'keywords' => ["images"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-images'],
-            ]
-        ],
-        [
-            'name' => 'mic-fill',
-            'displayName' => 'Mic Fill',
-            'class' => 'bi-mic-fill',
-            'keywords' => ["mic","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-mic-fill'],
-                'outline' => ['class' => 'bi-mic'],
-            ]
-        ],
-        [
-            'name' => 'mic-mute-fill',
-            'displayName' => 'Mic Mute Fill',
-            'class' => 'bi-mic-mute-fill',
-            'keywords' => ["mic","mute","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-mic-mute-fill'],
-                'outline' => ['class' => 'bi-mic-mute'],
-            ]
-        ],
-        [
-            'name' => 'mic-mute',
-            'displayName' => 'Mic Mute',
-            'class' => 'bi-mic-mute',
-            'keywords' => ["mic","mute"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-mic-mute'],
-                'solid' => ['class' => 'bi-mic-mute-fill'],
-            ]
-        ],
-        [
-            'name' => 'mic',
-            'displayName' => 'Mic',
-            'class' => 'bi-mic',
-            'keywords' => ["mic"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-mic'],
-                'solid' => ['class' => 'bi-mic-fill'],
-            ]
-        ],
-        [
-            'name' => 'music-note-beamed',
-            'displayName' => 'Music Note Beamed',
-            'class' => 'bi-music-note-beamed',
-            'keywords' => ["music","note","beamed"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-music-note-beamed'],
-            ]
-        ],
-        [
-            'name' => 'music-note-list',
-            'displayName' => 'Music Note List',
-            'class' => 'bi-music-note-list',
-            'keywords' => ["music","note","list"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-music-note-list'],
-            ]
-        ],
-        [
-            'name' => 'music-note',
-            'displayName' => 'Music Note',
-            'class' => 'bi-music-note',
-            'keywords' => ["music","note"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-music-note'],
-            ]
-        ],
-        [
-            'name' => 'music-player-fill',
-            'displayName' => 'Music Player Fill',
-            'class' => 'bi-music-player-fill',
-            'keywords' => ["music","player","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-music-player-fill'],
-                'outline' => ['class' => 'bi-music-player'],
-            ]
-        ],
-        [
-            'name' => 'music-player',
-            'displayName' => 'Music Player',
-            'class' => 'bi-music-player',
-            'keywords' => ["music","player"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-music-player'],
-                'solid' => ['class' => 'bi-music-player-fill'],
-            ]
-        ],
-        [
-            'name' => 'pause-btn-fill',
-            'displayName' => 'Pause Btn Fill',
-            'class' => 'bi-pause-btn-fill',
-            'keywords' => ["pause","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-pause-btn-fill'],
-                'outline' => ['class' => 'bi-pause-btn'],
-            ]
-        ],
-        [
-            'name' => 'pause-btn',
-            'displayName' => 'Pause Btn',
-            'class' => 'bi-pause-btn',
-            'keywords' => ["pause","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-pause-btn'],
-                'solid' => ['class' => 'bi-pause-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'pause-circle-fill',
-            'displayName' => 'Pause Circle Fill',
-            'class' => 'bi-pause-circle-fill',
-            'keywords' => ["pause","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-pause-circle-fill'],
-                'outline' => ['class' => 'bi-pause-circle'],
-            ]
-        ],
-        [
-            'name' => 'pause-circle',
-            'displayName' => 'Pause Circle',
-            'class' => 'bi-pause-circle',
-            'keywords' => ["pause","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-pause-circle'],
-                'solid' => ['class' => 'bi-pause-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'pause-fill',
-            'displayName' => 'Pause Fill',
-            'class' => 'bi-pause-fill',
-            'keywords' => ["pause","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-pause-fill'],
-                'outline' => ['class' => 'bi-pause'],
-            ]
-        ],
-        [
-            'name' => 'pause',
-            'displayName' => 'Pause',
-            'class' => 'bi-pause',
-            'keywords' => ["pause"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-pause'],
-                'solid' => ['class' => 'bi-pause-fill'],
-            ]
-        ],
-        [
-            'name' => 'play-btn-fill',
-            'displayName' => 'Play Btn Fill',
-            'class' => 'bi-play-btn-fill',
-            'keywords' => ["play","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-play-btn-fill'],
-                'outline' => ['class' => 'bi-play-btn'],
-            ]
-        ],
-        [
-            'name' => 'play-btn',
-            'displayName' => 'Play Btn',
-            'class' => 'bi-play-btn',
-            'keywords' => ["play","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-play-btn'],
-                'solid' => ['class' => 'bi-play-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'play-circle-fill',
-            'displayName' => 'Play Circle Fill',
-            'class' => 'bi-play-circle-fill',
-            'keywords' => ["play","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-play-circle-fill'],
-                'outline' => ['class' => 'bi-play-circle'],
-            ]
-        ],
-        [
-            'name' => 'play-circle',
-            'displayName' => 'Play Circle',
-            'class' => 'bi-play-circle',
-            'keywords' => ["play","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-play-circle'],
-                'solid' => ['class' => 'bi-play-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'play-fill',
-            'displayName' => 'Play Fill',
-            'class' => 'bi-play-fill',
-            'keywords' => ["play","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-play-fill'],
-                'outline' => ['class' => 'bi-play'],
-            ]
-        ],
-        [
-            'name' => 'play',
-            'displayName' => 'Play',
-            'class' => 'bi-play',
-            'keywords' => ["play"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-play'],
-                'solid' => ['class' => 'bi-play-fill'],
-            ]
-        ],
-        [
-            'name' => 'record-btn-fill',
-            'displayName' => 'Record Btn Fill',
-            'class' => 'bi-record-btn-fill',
-            'keywords' => ["record","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-record-btn-fill'],
-                'outline' => ['class' => 'bi-record-btn'],
-            ]
-        ],
-        [
-            'name' => 'record-btn',
-            'displayName' => 'Record Btn',
-            'class' => 'bi-record-btn',
-            'keywords' => ["record","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-record-btn'],
-                'solid' => ['class' => 'bi-record-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'record-circle-fill',
-            'displayName' => 'Record Circle Fill',
-            'class' => 'bi-record-circle-fill',
-            'keywords' => ["record","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-record-circle-fill'],
-                'outline' => ['class' => 'bi-record-circle'],
-            ]
-        ],
-        [
-            'name' => 'record-circle',
-            'displayName' => 'Record Circle',
-            'class' => 'bi-record-circle',
-            'keywords' => ["record","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-record-circle'],
-                'solid' => ['class' => 'bi-record-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'record-fill',
-            'displayName' => 'Record Fill',
-            'class' => 'bi-record-fill',
-            'keywords' => ["record","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-record-fill'],
-                'outline' => ['class' => 'bi-record'],
-            ]
-        ],
-        [
-            'name' => 'record',
-            'displayName' => 'Record',
-            'class' => 'bi-record',
-            'keywords' => ["record"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-record'],
-                'solid' => ['class' => 'bi-record-fill'],
-            ]
-        ],
-        [
-            'name' => 'record2-fill',
-            'displayName' => 'Record2 Fill',
-            'class' => 'bi-record2-fill',
-            'keywords' => ["record2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-record2-fill'],
-                'outline' => ['class' => 'bi-record2'],
-            ]
-        ],
-        [
-            'name' => 'record2',
-            'displayName' => 'Record2',
-            'class' => 'bi-record2',
-            'keywords' => ["record2"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-record2'],
-                'solid' => ['class' => 'bi-record2-fill'],
-            ]
-        ],
-        [
-            'name' => 'shuffle',
-            'displayName' => 'Shuffle',
-            'class' => 'bi-shuffle',
-            'keywords' => ["shuffle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-shuffle'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward-btn-fill',
-            'displayName' => 'Skip Backward Btn Fill',
-            'class' => 'bi-skip-backward-btn-fill',
-            'keywords' => ["skip","backward","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-backward-btn-fill'],
-                'outline' => ['class' => 'bi-skip-backward-btn'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward-btn',
-            'displayName' => 'Skip Backward Btn',
-            'class' => 'bi-skip-backward-btn',
-            'keywords' => ["skip","backward","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-backward-btn'],
-                'solid' => ['class' => 'bi-skip-backward-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward-circle-fill',
-            'displayName' => 'Skip Backward Circle Fill',
-            'class' => 'bi-skip-backward-circle-fill',
-            'keywords' => ["skip","backward","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-backward-circle-fill'],
-                'outline' => ['class' => 'bi-skip-backward-circle'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward-circle',
-            'displayName' => 'Skip Backward Circle',
-            'class' => 'bi-skip-backward-circle',
-            'keywords' => ["skip","backward","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-backward-circle'],
-                'solid' => ['class' => 'bi-skip-backward-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward-fill',
-            'displayName' => 'Skip Backward Fill',
-            'class' => 'bi-skip-backward-fill',
-            'keywords' => ["skip","backward","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-backward-fill'],
-                'outline' => ['class' => 'bi-skip-backward'],
-            ]
-        ],
-        [
-            'name' => 'skip-backward',
-            'displayName' => 'Skip Backward',
-            'class' => 'bi-skip-backward',
-            'keywords' => ["skip","backward"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-backward'],
-                'solid' => ['class' => 'bi-skip-backward-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-end-btn-fill',
-            'displayName' => 'Skip End Btn Fill',
-            'class' => 'bi-skip-end-btn-fill',
-            'keywords' => ["skip","end","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-end-btn-fill'],
-                'outline' => ['class' => 'bi-skip-end-btn'],
-            ]
-        ],
-        [
-            'name' => 'skip-end-btn',
-            'displayName' => 'Skip End Btn',
-            'class' => 'bi-skip-end-btn',
-            'keywords' => ["skip","end","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-end-btn'],
-                'solid' => ['class' => 'bi-skip-end-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-end-circle-fill',
-            'displayName' => 'Skip End Circle Fill',
-            'class' => 'bi-skip-end-circle-fill',
-            'keywords' => ["skip","end","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-end-circle-fill'],
-                'outline' => ['class' => 'bi-skip-end-circle'],
-            ]
-        ],
-        [
-            'name' => 'skip-end-circle',
-            'displayName' => 'Skip End Circle',
-            'class' => 'bi-skip-end-circle',
-            'keywords' => ["skip","end","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-end-circle'],
-                'solid' => ['class' => 'bi-skip-end-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-end-fill',
-            'displayName' => 'Skip End Fill',
-            'class' => 'bi-skip-end-fill',
-            'keywords' => ["skip","end","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-end-fill'],
-                'outline' => ['class' => 'bi-skip-end'],
-            ]
-        ],
-        [
-            'name' => 'skip-end',
-            'displayName' => 'Skip End',
-            'class' => 'bi-skip-end',
-            'keywords' => ["skip","end"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-end'],
-                'solid' => ['class' => 'bi-skip-end-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward-btn-fill',
-            'displayName' => 'Skip Forward Btn Fill',
-            'class' => 'bi-skip-forward-btn-fill',
-            'keywords' => ["skip","forward","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-forward-btn-fill'],
-                'outline' => ['class' => 'bi-skip-forward-btn'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward-btn',
-            'displayName' => 'Skip Forward Btn',
-            'class' => 'bi-skip-forward-btn',
-            'keywords' => ["skip","forward","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-forward-btn'],
-                'solid' => ['class' => 'bi-skip-forward-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward-circle-fill',
-            'displayName' => 'Skip Forward Circle Fill',
-            'class' => 'bi-skip-forward-circle-fill',
-            'keywords' => ["skip","forward","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-forward-circle-fill'],
-                'outline' => ['class' => 'bi-skip-forward-circle'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward-circle',
-            'displayName' => 'Skip Forward Circle',
-            'class' => 'bi-skip-forward-circle',
-            'keywords' => ["skip","forward","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-forward-circle'],
-                'solid' => ['class' => 'bi-skip-forward-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward-fill',
-            'displayName' => 'Skip Forward Fill',
-            'class' => 'bi-skip-forward-fill',
-            'keywords' => ["skip","forward","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-forward-fill'],
-                'outline' => ['class' => 'bi-skip-forward'],
-            ]
-        ],
-        [
-            'name' => 'skip-forward',
-            'displayName' => 'Skip Forward',
-            'class' => 'bi-skip-forward',
-            'keywords' => ["skip","forward"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-forward'],
-                'solid' => ['class' => 'bi-skip-forward-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-start-btn-fill',
-            'displayName' => 'Skip Start Btn Fill',
-            'class' => 'bi-skip-start-btn-fill',
-            'keywords' => ["skip","start","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-start-btn-fill'],
-                'outline' => ['class' => 'bi-skip-start-btn'],
-            ]
-        ],
-        [
-            'name' => 'skip-start-btn',
-            'displayName' => 'Skip Start Btn',
-            'class' => 'bi-skip-start-btn',
-            'keywords' => ["skip","start","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-start-btn'],
-                'solid' => ['class' => 'bi-skip-start-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-start-circle-fill',
-            'displayName' => 'Skip Start Circle Fill',
-            'class' => 'bi-skip-start-circle-fill',
-            'keywords' => ["skip","start","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-start-circle-fill'],
-                'outline' => ['class' => 'bi-skip-start-circle'],
-            ]
-        ],
-        [
-            'name' => 'skip-start-circle',
-            'displayName' => 'Skip Start Circle',
-            'class' => 'bi-skip-start-circle',
-            'keywords' => ["skip","start","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-start-circle'],
-                'solid' => ['class' => 'bi-skip-start-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'skip-start-fill',
-            'displayName' => 'Skip Start Fill',
-            'class' => 'bi-skip-start-fill',
-            'keywords' => ["skip","start","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-skip-start-fill'],
-                'outline' => ['class' => 'bi-skip-start'],
-            ]
-        ],
-        [
-            'name' => 'skip-start',
-            'displayName' => 'Skip Start',
-            'class' => 'bi-skip-start',
-            'keywords' => ["skip","start"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-skip-start'],
-                'solid' => ['class' => 'bi-skip-start-fill'],
-            ]
-        ],
-        [
-            'name' => 'soundwave',
-            'displayName' => 'Soundwave',
-            'class' => 'bi-soundwave',
-            'keywords' => ["soundwave"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-soundwave'],
-            ]
-        ],
-        [
-            'name' => 'speaker-fill',
-            'displayName' => 'Speaker Fill',
-            'class' => 'bi-speaker-fill',
-            'keywords' => ["speaker","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-speaker-fill'],
-                'outline' => ['class' => 'bi-speaker'],
-            ]
-        ],
-        [
-            'name' => 'speaker',
-            'displayName' => 'Speaker',
-            'class' => 'bi-speaker',
-            'keywords' => ["speaker"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-speaker'],
-                'solid' => ['class' => 'bi-speaker-fill'],
-            ]
-        ],
-        [
-            'name' => 'stop-btn-fill',
-            'displayName' => 'Stop Btn Fill',
-            'class' => 'bi-stop-btn-fill',
-            'keywords' => ["stop","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-stop-btn-fill'],
-                'outline' => ['class' => 'bi-stop-btn'],
-            ]
-        ],
-        [
-            'name' => 'stop-btn',
-            'displayName' => 'Stop Btn',
-            'class' => 'bi-stop-btn',
-            'keywords' => ["stop","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-stop-btn'],
-                'solid' => ['class' => 'bi-stop-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'stop-circle-fill',
-            'displayName' => 'Stop Circle Fill',
-            'class' => 'bi-stop-circle-fill',
-            'keywords' => ["stop","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-stop-circle-fill'],
-                'outline' => ['class' => 'bi-stop-circle'],
-            ]
-        ],
-        [
-            'name' => 'stop-circle',
-            'displayName' => 'Stop Circle',
-            'class' => 'bi-stop-circle',
-            'keywords' => ["stop","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-stop-circle'],
-                'solid' => ['class' => 'bi-stop-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'stop-fill',
-            'displayName' => 'Stop Fill',
-            'class' => 'bi-stop-fill',
-            'keywords' => ["stop","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-stop-fill'],
-                'outline' => ['class' => 'bi-stop'],
-            ]
-        ],
-        [
-            'name' => 'stop',
-            'displayName' => 'Stop',
-            'class' => 'bi-stop',
-            'keywords' => ["stop"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-stop'],
-                'solid' => ['class' => 'bi-stop-fill'],
-            ]
-        ],
-        [
-            'name' => 'tv-fill',
-            'displayName' => 'Tv Fill',
-            'class' => 'bi-tv-fill',
-            'keywords' => ["tv","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-tv-fill'],
-                'outline' => ['class' => 'bi-tv'],
-            ]
-        ],
-        [
-            'name' => 'tv',
-            'displayName' => 'Tv',
-            'class' => 'bi-tv',
-            'keywords' => ["tv"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-tv'],
-                'solid' => ['class' => 'bi-tv-fill'],
-            ]
-        ],
-        [
-            'name' => 'vinyl-fill',
-            'displayName' => 'Vinyl Fill',
-            'class' => 'bi-vinyl-fill',
-            'keywords' => ["vinyl","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-vinyl-fill'],
-                'outline' => ['class' => 'bi-vinyl'],
-            ]
-        ],
-        [
-            'name' => 'vinyl',
-            'displayName' => 'Vinyl',
-            'class' => 'bi-vinyl',
-            'keywords' => ["vinyl"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-vinyl'],
-                'solid' => ['class' => 'bi-vinyl-fill'],
-            ]
-        ],
-        [
-            'name' => 'volume-down-fill',
-            'displayName' => 'Volume Down Fill',
-            'class' => 'bi-volume-down-fill',
-            'keywords' => ["volume","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-volume-down-fill'],
-                'outline' => ['class' => 'bi-volume-down'],
-            ]
-        ],
-        [
-            'name' => 'volume-down',
-            'displayName' => 'Volume Down',
-            'class' => 'bi-volume-down',
-            'keywords' => ["volume","down"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-volume-down'],
-                'solid' => ['class' => 'bi-volume-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'volume-mute-fill',
-            'displayName' => 'Volume Mute Fill',
-            'class' => 'bi-volume-mute-fill',
-            'keywords' => ["volume","mute","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-volume-mute-fill'],
-                'outline' => ['class' => 'bi-volume-mute'],
-            ]
-        ],
-        [
-            'name' => 'volume-mute',
-            'displayName' => 'Volume Mute',
-            'class' => 'bi-volume-mute',
-            'keywords' => ["volume","mute"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-volume-mute'],
-                'solid' => ['class' => 'bi-volume-mute-fill'],
-            ]
-        ],
-        [
-            'name' => 'volume-off-fill',
-            'displayName' => 'Volume Off Fill',
-            'class' => 'bi-volume-off-fill',
-            'keywords' => ["volume","off","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-volume-off-fill'],
-                'outline' => ['class' => 'bi-volume-off'],
-            ]
-        ],
-        [
-            'name' => 'volume-off',
-            'displayName' => 'Volume Off',
-            'class' => 'bi-volume-off',
-            'keywords' => ["volume","off"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-volume-off'],
-                'solid' => ['class' => 'bi-volume-off-fill'],
-            ]
-        ],
-        [
-            'name' => 'volume-up-fill',
-            'displayName' => 'Volume Up Fill',
-            'class' => 'bi-volume-up-fill',
-            'keywords' => ["volume","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-volume-up-fill'],
-                'outline' => ['class' => 'bi-volume-up'],
-            ]
-        ],
-        [
-            'name' => 'volume-up',
-            'displayName' => 'Volume Up',
-            'class' => 'bi-volume-up',
-            'keywords' => ["volume","up"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-volume-up'],
-                'solid' => ['class' => 'bi-volume-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'webcam-fill',
-            'displayName' => 'Webcam Fill',
-            'class' => 'bi-webcam-fill',
-            'keywords' => ["webcam","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-webcam-fill'],
-                'outline' => ['class' => 'bi-webcam'],
-            ]
-        ],
-        [
-            'name' => 'webcam',
-            'displayName' => 'Webcam',
-            'class' => 'bi-webcam',
-            'keywords' => ["webcam"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-webcam'],
-                'solid' => ['class' => 'bi-webcam-fill'],
-            ]
-        ],
-        [
-            'name' => 'boombox',
-            'displayName' => 'Boombox',
-            'class' => 'bi-boombox',
-            'keywords' => ["boombox"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-boombox'],
-                'solid' => ['class' => 'bi-boombox-fill'],
-            ]
-        ],
-        [
-            'name' => 'projector-fill',
-            'displayName' => 'Projector Fill',
-            'class' => 'bi-projector-fill',
-            'keywords' => ["projector","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-projector-fill'],
-                'outline' => ['class' => 'bi-projector'],
-            ]
-        ],
-        [
-            'name' => 'projector',
-            'displayName' => 'Projector',
-            'class' => 'bi-projector',
-            'keywords' => ["projector"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-projector'],
-                'solid' => ['class' => 'bi-projector-fill'],
-            ]
-        ],
-        [
-            'name' => 'boombox-fill',
-            'displayName' => 'Boombox Fill',
-            'class' => 'bi-boombox-fill',
-            'keywords' => ["boombox","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-boombox-fill'],
-                'outline' => ['class' => 'bi-boombox'],
-            ]
-        ],
-        [
-            'name' => 'optical-audio-fill',
-            'displayName' => 'Optical Audio Fill',
-            'class' => 'bi-optical-audio-fill',
-            'keywords' => ["optical","audio","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-optical-audio-fill'],
-                'outline' => ['class' => 'bi-optical-audio'],
-            ]
-        ],
-        [
-            'name' => 'optical-audio',
-            'displayName' => 'Optical Audio',
-            'class' => 'bi-optical-audio',
-            'keywords' => ["optical","audio"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-optical-audio'],
-                'solid' => ['class' => 'bi-optical-audio-fill'],
-            ]
-        ],
-        [
-            'name' => 'cassette-fill',
-            'displayName' => 'Cassette Fill',
-            'class' => 'bi-cassette-fill',
-            'keywords' => ["cassette","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-cassette-fill'],
-                'outline' => ['class' => 'bi-cassette'],
-            ]
-        ],
-        [
-            'name' => 'cassette',
-            'displayName' => 'Cassette',
-            'class' => 'bi-cassette',
-            'keywords' => ["cassette"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-cassette'],
-                'solid' => ['class' => 'bi-cassette-fill'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward-btn-fill',
-            'displayName' => 'Fast Forward Btn Fill',
-            'class' => 'bi-fast-forward-btn-fill',
-            'keywords' => ["fast","forward","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-fast-forward-btn-fill'],
-                'outline' => ['class' => 'bi-fast-forward-btn'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward-btn',
-            'displayName' => 'Fast Forward Btn',
-            'class' => 'bi-fast-forward-btn',
-            'keywords' => ["fast","forward","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-fast-forward-btn'],
-                'solid' => ['class' => 'bi-fast-forward-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward-circle-fill',
-            'displayName' => 'Fast Forward Circle Fill',
-            'class' => 'bi-fast-forward-circle-fill',
-            'keywords' => ["fast","forward","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-fast-forward-circle-fill'],
-                'outline' => ['class' => 'bi-fast-forward-circle'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward-circle',
-            'displayName' => 'Fast Forward Circle',
-            'class' => 'bi-fast-forward-circle',
-            'keywords' => ["fast","forward","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-fast-forward-circle'],
-                'solid' => ['class' => 'bi-fast-forward-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward-fill',
-            'displayName' => 'Fast Forward Fill',
-            'class' => 'bi-fast-forward-fill',
-            'keywords' => ["fast","forward","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-fast-forward-fill'],
-                'outline' => ['class' => 'bi-fast-forward'],
-            ]
-        ],
-        [
-            'name' => 'fast-forward',
-            'displayName' => 'Fast Forward',
-            'class' => 'bi-fast-forward',
-            'keywords' => ["fast","forward"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-fast-forward'],
-                'solid' => ['class' => 'bi-fast-forward-fill'],
-            ]
-        ],
-        [
-            'name' => 'repeat-1',
-            'displayName' => 'Repeat 1',
-            'class' => 'bi-repeat-1',
-            'keywords' => ["repeat","1"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-repeat-1'],
-            ]
-        ],
-        [
-            'name' => 'repeat',
-            'displayName' => 'Repeat',
-            'class' => 'bi-repeat',
-            'keywords' => ["repeat"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-repeat'],
-            ]
-        ],
-        [
-            'name' => 'rewind-btn-fill',
-            'displayName' => 'Rewind Btn Fill',
-            'class' => 'bi-rewind-btn-fill',
-            'keywords' => ["rewind","btn","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-rewind-btn-fill'],
-                'outline' => ['class' => 'bi-rewind-btn'],
-            ]
-        ],
-        [
-            'name' => 'rewind-btn',
-            'displayName' => 'Rewind Btn',
-            'class' => 'bi-rewind-btn',
-            'keywords' => ["rewind","btn"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-rewind-btn'],
-                'solid' => ['class' => 'bi-rewind-btn-fill'],
-            ]
-        ],
-        [
-            'name' => 'rewind-circle-fill',
-            'displayName' => 'Rewind Circle Fill',
-            'class' => 'bi-rewind-circle-fill',
-            'keywords' => ["rewind","circle","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-rewind-circle-fill'],
-                'outline' => ['class' => 'bi-rewind-circle'],
-            ]
-        ],
-        [
-            'name' => 'rewind-circle',
-            'displayName' => 'Rewind Circle',
-            'class' => 'bi-rewind-circle',
-            'keywords' => ["rewind","circle"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-rewind-circle'],
-                'solid' => ['class' => 'bi-rewind-circle-fill'],
-            ]
-        ],
-        [
-            'name' => 'rewind-fill',
-            'displayName' => 'Rewind Fill',
-            'class' => 'bi-rewind-fill',
-            'keywords' => ["rewind","fill"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'solid' => ['class' => 'bi-rewind-fill'],
-                'outline' => ['class' => 'bi-rewind'],
-            ]
-        ],
-        [
-            'name' => 'rewind',
-            'displayName' => 'Rewind',
-            'class' => 'bi-rewind',
-            'keywords' => ["rewind"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-rewind'],
-                'solid' => ['class' => 'bi-rewind-fill'],
-            ]
-        ],
-        [
-            'name' => 'exposure',
-            'displayName' => 'Exposure',
-            'class' => 'bi-exposure',
-            'keywords' => ["exposure"],
-            'type' => 'bootstrap',
-            'category' => 'media',
-            'variants' => [
-                'outline' => ['class' => 'bi-exposure'],
-            ]
-        ],
-    ]
-];
+return array (
+  'id' => 'media',
+  'name' => '媒體',
+  'description' => '媒體和娛樂相關圖標',
+  'priority' => 'normal',
+  'icons' => 
+  array (
+    0 => 
+    array (
+      'id' => 'camera-fill-solid',
+      'name' => 'Camera Fill',
+      'value' => 'bi-camera-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    1 => 
+    array (
+      'id' => 'camera-fill-outline',
+      'name' => 'Camera Fill',
+      'value' => 'bi-camera',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    2 => 
+    array (
+      'id' => 'camera-reels-fill-solid',
+      'name' => 'Camera Reels Fill',
+      'value' => 'bi-camera-reels-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'reels',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    3 => 
+    array (
+      'id' => 'camera-reels-fill-outline',
+      'name' => 'Camera Reels Fill',
+      'value' => 'bi-camera-reels',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'reels',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    4 => 
+    array (
+      'id' => 'camera-reels-outline',
+      'name' => 'Camera Reels',
+      'value' => 'bi-camera-reels',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'reels',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    5 => 
+    array (
+      'id' => 'camera-video-fill-solid',
+      'name' => 'Camera Video Fill',
+      'value' => 'bi-camera-video-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    6 => 
+    array (
+      'id' => 'camera-video-fill-outline',
+      'name' => 'Camera Video Fill',
+      'value' => 'bi-camera-video',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    7 => 
+    array (
+      'id' => 'camera-video-off-fill-solid',
+      'name' => 'Camera Video Off Fill',
+      'value' => 'bi-camera-video-off-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+        2 => 'off',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    8 => 
+    array (
+      'id' => 'camera-video-off-fill-outline',
+      'name' => 'Camera Video Off Fill',
+      'value' => 'bi-camera-video-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+        2 => 'off',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    9 => 
+    array (
+      'id' => 'camera-video-off-outline',
+      'name' => 'Camera Video Off',
+      'value' => 'bi-camera-video-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+        2 => 'off',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    10 => 
+    array (
+      'id' => 'camera-video-outline',
+      'name' => 'Camera Video',
+      'value' => 'bi-camera-video',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+        1 => 'video',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    11 => 
+    array (
+      'id' => 'camera-outline',
+      'name' => 'Camera',
+      'value' => 'bi-camera',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    12 => 
+    array (
+      'id' => 'camera2-outline',
+      'name' => 'Camera2',
+      'value' => 'bi-camera2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'camera2',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    13 => 
+    array (
+      'id' => 'disc-fill-solid',
+      'name' => 'Disc Fill',
+      'value' => 'bi-disc-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'disc',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    14 => 
+    array (
+      'id' => 'disc-fill-outline',
+      'name' => 'Disc Fill',
+      'value' => 'bi-disc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'disc',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    15 => 
+    array (
+      'id' => 'disc-outline',
+      'name' => 'Disc',
+      'value' => 'bi-disc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'disc',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    16 => 
+    array (
+      'id' => 'earbuds-outline',
+      'name' => 'Earbuds',
+      'value' => 'bi-earbuds',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'earbuds',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    17 => 
+    array (
+      'id' => 'film-outline',
+      'name' => 'Film',
+      'value' => 'bi-film',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'film',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    18 => 
+    array (
+      'id' => 'headphones-outline',
+      'name' => 'Headphones',
+      'value' => 'bi-headphones',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'headphones',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    19 => 
+    array (
+      'id' => 'headset-outline',
+      'name' => 'Headset',
+      'value' => 'bi-headset',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'headset',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    20 => 
+    array (
+      'id' => 'image-alt-outline',
+      'name' => 'Image Alt',
+      'value' => 'bi-image-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'image',
+        1 => 'alt',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    21 => 
+    array (
+      'id' => 'image-fill-solid',
+      'name' => 'Image Fill',
+      'value' => 'bi-image-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'image',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    22 => 
+    array (
+      'id' => 'image-fill-outline',
+      'name' => 'Image Fill',
+      'value' => 'bi-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'image',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    23 => 
+    array (
+      'id' => 'image-outline',
+      'name' => 'Image',
+      'value' => 'bi-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'image',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    24 => 
+    array (
+      'id' => 'images-outline',
+      'name' => 'Images',
+      'value' => 'bi-images',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'images',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    25 => 
+    array (
+      'id' => 'mic-fill-solid',
+      'name' => 'Mic Fill',
+      'value' => 'bi-mic-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    26 => 
+    array (
+      'id' => 'mic-fill-outline',
+      'name' => 'Mic Fill',
+      'value' => 'bi-mic',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    27 => 
+    array (
+      'id' => 'mic-mute-fill-solid',
+      'name' => 'Mic Mute Fill',
+      'value' => 'bi-mic-mute-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+        1 => 'mute',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    28 => 
+    array (
+      'id' => 'mic-mute-fill-outline',
+      'name' => 'Mic Mute Fill',
+      'value' => 'bi-mic-mute',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+        1 => 'mute',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    29 => 
+    array (
+      'id' => 'mic-mute-outline',
+      'name' => 'Mic Mute',
+      'value' => 'bi-mic-mute',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+        1 => 'mute',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    30 => 
+    array (
+      'id' => 'mic-outline',
+      'name' => 'Mic',
+      'value' => 'bi-mic',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'mic',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    31 => 
+    array (
+      'id' => 'music-note-beamed-outline',
+      'name' => 'Music Note Beamed',
+      'value' => 'bi-music-note-beamed',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'note',
+        2 => 'beamed',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    32 => 
+    array (
+      'id' => 'music-note-list-outline',
+      'name' => 'Music Note List',
+      'value' => 'bi-music-note-list',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'note',
+        2 => 'list',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    33 => 
+    array (
+      'id' => 'music-note-outline',
+      'name' => 'Music Note',
+      'value' => 'bi-music-note',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'note',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    34 => 
+    array (
+      'id' => 'music-player-fill-solid',
+      'name' => 'Music Player Fill',
+      'value' => 'bi-music-player-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'player',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    35 => 
+    array (
+      'id' => 'music-player-fill-outline',
+      'name' => 'Music Player Fill',
+      'value' => 'bi-music-player',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'player',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    36 => 
+    array (
+      'id' => 'music-player-outline',
+      'name' => 'Music Player',
+      'value' => 'bi-music-player',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'music',
+        1 => 'player',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    37 => 
+    array (
+      'id' => 'pause-btn-fill-solid',
+      'name' => 'Pause Btn Fill',
+      'value' => 'bi-pause-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    38 => 
+    array (
+      'id' => 'pause-btn-fill-outline',
+      'name' => 'Pause Btn Fill',
+      'value' => 'bi-pause-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    39 => 
+    array (
+      'id' => 'pause-btn-outline',
+      'name' => 'Pause Btn',
+      'value' => 'bi-pause-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    40 => 
+    array (
+      'id' => 'pause-circle-fill-solid',
+      'name' => 'Pause Circle Fill',
+      'value' => 'bi-pause-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    41 => 
+    array (
+      'id' => 'pause-circle-fill-outline',
+      'name' => 'Pause Circle Fill',
+      'value' => 'bi-pause-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    42 => 
+    array (
+      'id' => 'pause-circle-outline',
+      'name' => 'Pause Circle',
+      'value' => 'bi-pause-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    43 => 
+    array (
+      'id' => 'pause-circle-solid',
+      'name' => 'Pause Circle',
+      'value' => 'bi-pause-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    44 => 
+    array (
+      'id' => 'pause-fill-solid',
+      'name' => 'Pause Fill',
+      'value' => 'bi-pause-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    45 => 
+    array (
+      'id' => 'pause-fill-outline',
+      'name' => 'Pause Fill',
+      'value' => 'bi-pause',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    46 => 
+    array (
+      'id' => 'pause-outline',
+      'name' => 'Pause',
+      'value' => 'bi-pause',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pause',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    47 => 
+    array (
+      'id' => 'play-btn-fill-solid',
+      'name' => 'Play Btn Fill',
+      'value' => 'bi-play-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    48 => 
+    array (
+      'id' => 'play-btn-fill-outline',
+      'name' => 'Play Btn Fill',
+      'value' => 'bi-play-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    49 => 
+    array (
+      'id' => 'play-btn-outline',
+      'name' => 'Play Btn',
+      'value' => 'bi-play-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    50 => 
+    array (
+      'id' => 'play-circle-fill-solid',
+      'name' => 'Play Circle Fill',
+      'value' => 'bi-play-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    51 => 
+    array (
+      'id' => 'play-circle-fill-outline',
+      'name' => 'Play Circle Fill',
+      'value' => 'bi-play-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    52 => 
+    array (
+      'id' => 'play-circle-outline',
+      'name' => 'Play Circle',
+      'value' => 'bi-play-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    53 => 
+    array (
+      'id' => 'play-circle-solid',
+      'name' => 'Play Circle',
+      'value' => 'bi-play-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    54 => 
+    array (
+      'id' => 'play-fill-solid',
+      'name' => 'Play Fill',
+      'value' => 'bi-play-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    55 => 
+    array (
+      'id' => 'play-fill-outline',
+      'name' => 'Play Fill',
+      'value' => 'bi-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    56 => 
+    array (
+      'id' => 'play-outline',
+      'name' => 'Play',
+      'value' => 'bi-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'play',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    57 => 
+    array (
+      'id' => 'record-btn-fill-solid',
+      'name' => 'Record Btn Fill',
+      'value' => 'bi-record-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    58 => 
+    array (
+      'id' => 'record-btn-fill-outline',
+      'name' => 'Record Btn Fill',
+      'value' => 'bi-record-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    59 => 
+    array (
+      'id' => 'record-btn-outline',
+      'name' => 'Record Btn',
+      'value' => 'bi-record-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    60 => 
+    array (
+      'id' => 'record-circle-fill-solid',
+      'name' => 'Record Circle Fill',
+      'value' => 'bi-record-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    61 => 
+    array (
+      'id' => 'record-circle-fill-outline',
+      'name' => 'Record Circle Fill',
+      'value' => 'bi-record-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    62 => 
+    array (
+      'id' => 'record-circle-outline',
+      'name' => 'Record Circle',
+      'value' => 'bi-record-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    63 => 
+    array (
+      'id' => 'record-circle-solid',
+      'name' => 'Record Circle',
+      'value' => 'bi-record-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    64 => 
+    array (
+      'id' => 'record-fill-solid',
+      'name' => 'Record Fill',
+      'value' => 'bi-record-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    65 => 
+    array (
+      'id' => 'record-fill-outline',
+      'name' => 'Record Fill',
+      'value' => 'bi-record',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    66 => 
+    array (
+      'id' => 'record-outline',
+      'name' => 'Record',
+      'value' => 'bi-record',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    67 => 
+    array (
+      'id' => 'record2-fill-solid',
+      'name' => 'Record2 Fill',
+      'value' => 'bi-record2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record2',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    68 => 
+    array (
+      'id' => 'record2-fill-outline',
+      'name' => 'Record2 Fill',
+      'value' => 'bi-record2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record2',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    69 => 
+    array (
+      'id' => 'record2-outline',
+      'name' => 'Record2',
+      'value' => 'bi-record2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'record2',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    70 => 
+    array (
+      'id' => 'shuffle-outline',
+      'name' => 'Shuffle',
+      'value' => 'bi-shuffle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'shuffle',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    71 => 
+    array (
+      'id' => 'skip-backward-btn-fill-solid',
+      'name' => 'Skip Backward Btn Fill',
+      'value' => 'bi-skip-backward-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    72 => 
+    array (
+      'id' => 'skip-backward-btn-fill-outline',
+      'name' => 'Skip Backward Btn Fill',
+      'value' => 'bi-skip-backward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    73 => 
+    array (
+      'id' => 'skip-backward-btn-outline',
+      'name' => 'Skip Backward Btn',
+      'value' => 'bi-skip-backward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    74 => 
+    array (
+      'id' => 'skip-backward-circle-fill-solid',
+      'name' => 'Skip Backward Circle Fill',
+      'value' => 'bi-skip-backward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    75 => 
+    array (
+      'id' => 'skip-backward-circle-fill-outline',
+      'name' => 'Skip Backward Circle Fill',
+      'value' => 'bi-skip-backward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
+      'id' => 'skip-backward-circle-outline',
+      'name' => 'Skip Backward Circle',
+      'value' => 'bi-skip-backward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    77 => 
+    array (
+      'id' => 'skip-backward-circle-solid',
+      'name' => 'Skip Backward Circle',
+      'value' => 'bi-skip-backward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    78 => 
+    array (
+      'id' => 'skip-backward-fill-solid',
+      'name' => 'Skip Backward Fill',
+      'value' => 'bi-skip-backward-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    79 => 
+    array (
+      'id' => 'skip-backward-fill-outline',
+      'name' => 'Skip Backward Fill',
+      'value' => 'bi-skip-backward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    80 => 
+    array (
+      'id' => 'skip-backward-outline',
+      'name' => 'Skip Backward',
+      'value' => 'bi-skip-backward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'backward',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    81 => 
+    array (
+      'id' => 'skip-end-btn-fill-solid',
+      'name' => 'Skip End Btn Fill',
+      'value' => 'bi-skip-end-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    82 => 
+    array (
+      'id' => 'skip-end-btn-fill-outline',
+      'name' => 'Skip End Btn Fill',
+      'value' => 'bi-skip-end-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    83 => 
+    array (
+      'id' => 'skip-end-btn-outline',
+      'name' => 'Skip End Btn',
+      'value' => 'bi-skip-end-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    84 => 
+    array (
+      'id' => 'skip-end-circle-fill-solid',
+      'name' => 'Skip End Circle Fill',
+      'value' => 'bi-skip-end-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    85 => 
+    array (
+      'id' => 'skip-end-circle-fill-outline',
+      'name' => 'Skip End Circle Fill',
+      'value' => 'bi-skip-end-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    86 => 
+    array (
+      'id' => 'skip-end-circle-outline',
+      'name' => 'Skip End Circle',
+      'value' => 'bi-skip-end-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    87 => 
+    array (
+      'id' => 'skip-end-circle-solid',
+      'name' => 'Skip End Circle',
+      'value' => 'bi-skip-end-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    88 => 
+    array (
+      'id' => 'skip-end-fill-solid',
+      'name' => 'Skip End Fill',
+      'value' => 'bi-skip-end-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    89 => 
+    array (
+      'id' => 'skip-end-fill-outline',
+      'name' => 'Skip End Fill',
+      'value' => 'bi-skip-end',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    90 => 
+    array (
+      'id' => 'skip-end-outline',
+      'name' => 'Skip End',
+      'value' => 'bi-skip-end',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'end',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    91 => 
+    array (
+      'id' => 'skip-forward-btn-fill-solid',
+      'name' => 'Skip Forward Btn Fill',
+      'value' => 'bi-skip-forward-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    92 => 
+    array (
+      'id' => 'skip-forward-btn-fill-outline',
+      'name' => 'Skip Forward Btn Fill',
+      'value' => 'bi-skip-forward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    93 => 
+    array (
+      'id' => 'skip-forward-btn-outline',
+      'name' => 'Skip Forward Btn',
+      'value' => 'bi-skip-forward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    94 => 
+    array (
+      'id' => 'skip-forward-circle-fill-solid',
+      'name' => 'Skip Forward Circle Fill',
+      'value' => 'bi-skip-forward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    95 => 
+    array (
+      'id' => 'skip-forward-circle-fill-outline',
+      'name' => 'Skip Forward Circle Fill',
+      'value' => 'bi-skip-forward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    96 => 
+    array (
+      'id' => 'skip-forward-circle-outline',
+      'name' => 'Skip Forward Circle',
+      'value' => 'bi-skip-forward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    97 => 
+    array (
+      'id' => 'skip-forward-circle-solid',
+      'name' => 'Skip Forward Circle',
+      'value' => 'bi-skip-forward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    98 => 
+    array (
+      'id' => 'skip-forward-fill-solid',
+      'name' => 'Skip Forward Fill',
+      'value' => 'bi-skip-forward-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    99 => 
+    array (
+      'id' => 'skip-forward-fill-outline',
+      'name' => 'Skip Forward Fill',
+      'value' => 'bi-skip-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    100 => 
+    array (
+      'id' => 'skip-forward-outline',
+      'name' => 'Skip Forward',
+      'value' => 'bi-skip-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'forward',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    101 => 
+    array (
+      'id' => 'skip-start-btn-fill-solid',
+      'name' => 'Skip Start Btn Fill',
+      'value' => 'bi-skip-start-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    102 => 
+    array (
+      'id' => 'skip-start-btn-fill-outline',
+      'name' => 'Skip Start Btn Fill',
+      'value' => 'bi-skip-start-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    103 => 
+    array (
+      'id' => 'skip-start-btn-outline',
+      'name' => 'Skip Start Btn',
+      'value' => 'bi-skip-start-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    104 => 
+    array (
+      'id' => 'skip-start-btn-solid',
+      'name' => 'Skip Start Btn',
+      'value' => 'bi-skip-start-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    105 => 
+    array (
+      'id' => 'skip-start-circle-fill-solid',
+      'name' => 'Skip Start Circle Fill',
+      'value' => 'bi-skip-start-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    106 => 
+    array (
+      'id' => 'skip-start-circle-fill-outline',
+      'name' => 'Skip Start Circle Fill',
+      'value' => 'bi-skip-start-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    107 => 
+    array (
+      'id' => 'skip-start-circle-outline',
+      'name' => 'Skip Start Circle',
+      'value' => 'bi-skip-start-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    108 => 
+    array (
+      'id' => 'skip-start-circle-solid',
+      'name' => 'Skip Start Circle',
+      'value' => 'bi-skip-start-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    109 => 
+    array (
+      'id' => 'skip-start-fill-solid',
+      'name' => 'Skip Start Fill',
+      'value' => 'bi-skip-start-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    110 => 
+    array (
+      'id' => 'skip-start-fill-outline',
+      'name' => 'Skip Start Fill',
+      'value' => 'bi-skip-start',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    111 => 
+    array (
+      'id' => 'skip-start-outline',
+      'name' => 'Skip Start',
+      'value' => 'bi-skip-start',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    112 => 
+    array (
+      'id' => 'skip-start-solid',
+      'name' => 'Skip Start',
+      'value' => 'bi-skip-start-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'skip',
+        1 => 'start',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    113 => 
+    array (
+      'id' => 'soundwave-outline',
+      'name' => 'Soundwave',
+      'value' => 'bi-soundwave',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'soundwave',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    114 => 
+    array (
+      'id' => 'speaker-fill-solid',
+      'name' => 'Speaker Fill',
+      'value' => 'bi-speaker-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'speaker',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    115 => 
+    array (
+      'id' => 'speaker-fill-outline',
+      'name' => 'Speaker Fill',
+      'value' => 'bi-speaker',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'speaker',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    116 => 
+    array (
+      'id' => 'speaker-outline',
+      'name' => 'Speaker',
+      'value' => 'bi-speaker',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'speaker',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    117 => 
+    array (
+      'id' => 'stop-btn-fill-solid',
+      'name' => 'Stop Btn Fill',
+      'value' => 'bi-stop-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    118 => 
+    array (
+      'id' => 'stop-btn-fill-outline',
+      'name' => 'Stop Btn Fill',
+      'value' => 'bi-stop-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    119 => 
+    array (
+      'id' => 'stop-btn-outline',
+      'name' => 'Stop Btn',
+      'value' => 'bi-stop-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    120 => 
+    array (
+      'id' => 'stop-circle-fill-solid',
+      'name' => 'Stop Circle Fill',
+      'value' => 'bi-stop-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    121 => 
+    array (
+      'id' => 'stop-circle-fill-outline',
+      'name' => 'Stop Circle Fill',
+      'value' => 'bi-stop-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    122 => 
+    array (
+      'id' => 'stop-circle-outline',
+      'name' => 'Stop Circle',
+      'value' => 'bi-stop-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    123 => 
+    array (
+      'id' => 'stop-circle-solid',
+      'name' => 'Stop Circle',
+      'value' => 'bi-stop-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    124 => 
+    array (
+      'id' => 'stop-fill-solid',
+      'name' => 'Stop Fill',
+      'value' => 'bi-stop-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    125 => 
+    array (
+      'id' => 'stop-fill-outline',
+      'name' => 'Stop Fill',
+      'value' => 'bi-stop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    126 => 
+    array (
+      'id' => 'stop-outline',
+      'name' => 'Stop',
+      'value' => 'bi-stop',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stop',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    127 => 
+    array (
+      'id' => 'tv-fill-solid',
+      'name' => 'Tv Fill',
+      'value' => 'bi-tv-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tv',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    128 => 
+    array (
+      'id' => 'tv-fill-outline',
+      'name' => 'Tv Fill',
+      'value' => 'bi-tv',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tv',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    129 => 
+    array (
+      'id' => 'tv-outline',
+      'name' => 'Tv',
+      'value' => 'bi-tv',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tv',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
+      'id' => 'vinyl-fill-solid',
+      'name' => 'Vinyl Fill',
+      'value' => 'bi-vinyl-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vinyl',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    131 => 
+    array (
+      'id' => 'vinyl-fill-outline',
+      'name' => 'Vinyl Fill',
+      'value' => 'bi-vinyl',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vinyl',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    132 => 
+    array (
+      'id' => 'vinyl-outline',
+      'name' => 'Vinyl',
+      'value' => 'bi-vinyl',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'vinyl',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    133 => 
+    array (
+      'id' => 'volume-down-fill-solid',
+      'name' => 'Volume Down Fill',
+      'value' => 'bi-volume-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    134 => 
+    array (
+      'id' => 'volume-down-fill-outline',
+      'name' => 'Volume Down Fill',
+      'value' => 'bi-volume-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'down',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    135 => 
+    array (
+      'id' => 'volume-down-outline',
+      'name' => 'Volume Down',
+      'value' => 'bi-volume-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'down',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    136 => 
+    array (
+      'id' => 'volume-mute-fill-solid',
+      'name' => 'Volume Mute Fill',
+      'value' => 'bi-volume-mute-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'mute',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    137 => 
+    array (
+      'id' => 'volume-mute-fill-outline',
+      'name' => 'Volume Mute Fill',
+      'value' => 'bi-volume-mute',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'mute',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    138 => 
+    array (
+      'id' => 'volume-mute-outline',
+      'name' => 'Volume Mute',
+      'value' => 'bi-volume-mute',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'mute',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    139 => 
+    array (
+      'id' => 'volume-off-fill-solid',
+      'name' => 'Volume Off Fill',
+      'value' => 'bi-volume-off-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'off',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    140 => 
+    array (
+      'id' => 'volume-off-fill-outline',
+      'name' => 'Volume Off Fill',
+      'value' => 'bi-volume-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'off',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    141 => 
+    array (
+      'id' => 'volume-off-outline',
+      'name' => 'Volume Off',
+      'value' => 'bi-volume-off',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'off',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    142 => 
+    array (
+      'id' => 'volume-up-fill-solid',
+      'name' => 'Volume Up Fill',
+      'value' => 'bi-volume-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    143 => 
+    array (
+      'id' => 'volume-up-fill-outline',
+      'name' => 'Volume Up Fill',
+      'value' => 'bi-volume-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'up',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    144 => 
+    array (
+      'id' => 'volume-up-outline',
+      'name' => 'Volume Up',
+      'value' => 'bi-volume-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'volume',
+        1 => 'up',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    145 => 
+    array (
+      'id' => 'webcam-fill-solid',
+      'name' => 'Webcam Fill',
+      'value' => 'bi-webcam-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'webcam',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    146 => 
+    array (
+      'id' => 'webcam-fill-outline',
+      'name' => 'Webcam Fill',
+      'value' => 'bi-webcam',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'webcam',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    147 => 
+    array (
+      'id' => 'webcam-outline',
+      'name' => 'Webcam',
+      'value' => 'bi-webcam',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'webcam',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    148 => 
+    array (
+      'id' => 'boombox-outline',
+      'name' => 'Boombox',
+      'value' => 'bi-boombox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'boombox',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    149 => 
+    array (
+      'id' => 'projector-fill-solid',
+      'name' => 'Projector Fill',
+      'value' => 'bi-projector-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'projector',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    150 => 
+    array (
+      'id' => 'projector-fill-outline',
+      'name' => 'Projector Fill',
+      'value' => 'bi-projector',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'projector',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    151 => 
+    array (
+      'id' => 'projector-outline',
+      'name' => 'Projector',
+      'value' => 'bi-projector',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'projector',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    152 => 
+    array (
+      'id' => 'boombox-fill-solid',
+      'name' => 'Boombox Fill',
+      'value' => 'bi-boombox-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'boombox',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    153 => 
+    array (
+      'id' => 'boombox-fill-outline',
+      'name' => 'Boombox Fill',
+      'value' => 'bi-boombox',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'boombox',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    154 => 
+    array (
+      'id' => 'optical-audio-fill-solid',
+      'name' => 'Optical Audio Fill',
+      'value' => 'bi-optical-audio-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'optical',
+        1 => 'audio',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    155 => 
+    array (
+      'id' => 'optical-audio-fill-outline',
+      'name' => 'Optical Audio Fill',
+      'value' => 'bi-optical-audio',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'optical',
+        1 => 'audio',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    156 => 
+    array (
+      'id' => 'optical-audio-outline',
+      'name' => 'Optical Audio',
+      'value' => 'bi-optical-audio',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'optical',
+        1 => 'audio',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
+      'id' => 'cassette-fill-solid',
+      'name' => 'Cassette Fill',
+      'value' => 'bi-cassette-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cassette',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    158 => 
+    array (
+      'id' => 'cassette-fill-outline',
+      'name' => 'Cassette Fill',
+      'value' => 'bi-cassette',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cassette',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    159 => 
+    array (
+      'id' => 'cassette-outline',
+      'name' => 'Cassette',
+      'value' => 'bi-cassette',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'cassette',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    160 => 
+    array (
+      'id' => 'fast-forward-btn-fill-solid',
+      'name' => 'Fast Forward Btn Fill',
+      'value' => 'bi-fast-forward-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    161 => 
+    array (
+      'id' => 'fast-forward-btn-fill-outline',
+      'name' => 'Fast Forward Btn Fill',
+      'value' => 'bi-fast-forward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'btn',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    162 => 
+    array (
+      'id' => 'fast-forward-btn-outline',
+      'name' => 'Fast Forward Btn',
+      'value' => 'bi-fast-forward-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    163 => 
+    array (
+      'id' => 'fast-forward-circle-fill-solid',
+      'name' => 'Fast Forward Circle Fill',
+      'value' => 'bi-fast-forward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    164 => 
+    array (
+      'id' => 'fast-forward-circle-fill-outline',
+      'name' => 'Fast Forward Circle Fill',
+      'value' => 'bi-fast-forward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'circle',
+        3 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    165 => 
+    array (
+      'id' => 'fast-forward-circle-outline',
+      'name' => 'Fast Forward Circle',
+      'value' => 'bi-fast-forward-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    166 => 
+    array (
+      'id' => 'fast-forward-circle-solid',
+      'name' => 'Fast Forward Circle',
+      'value' => 'bi-fast-forward-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    167 => 
+    array (
+      'id' => 'fast-forward-fill-solid',
+      'name' => 'Fast Forward Fill',
+      'value' => 'bi-fast-forward-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    168 => 
+    array (
+      'id' => 'fast-forward-fill-outline',
+      'name' => 'Fast Forward Fill',
+      'value' => 'bi-fast-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    169 => 
+    array (
+      'id' => 'fast-forward-outline',
+      'name' => 'Fast Forward',
+      'value' => 'bi-fast-forward',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'fast',
+        1 => 'forward',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    170 => 
+    array (
+      'id' => 'repeat-1-outline',
+      'name' => 'Repeat 1',
+      'value' => 'bi-repeat-1',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'repeat',
+        1 => '1',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    171 => 
+    array (
+      'id' => 'repeat-outline',
+      'name' => 'Repeat',
+      'value' => 'bi-repeat',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'repeat',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    172 => 
+    array (
+      'id' => 'rewind-btn-fill-solid',
+      'name' => 'Rewind Btn Fill',
+      'value' => 'bi-rewind-btn-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    173 => 
+    array (
+      'id' => 'rewind-btn-fill-outline',
+      'name' => 'Rewind Btn Fill',
+      'value' => 'bi-rewind-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'btn',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    174 => 
+    array (
+      'id' => 'rewind-btn-outline',
+      'name' => 'Rewind Btn',
+      'value' => 'bi-rewind-btn',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'btn',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    175 => 
+    array (
+      'id' => 'rewind-circle-fill-solid',
+      'name' => 'Rewind Circle Fill',
+      'value' => 'bi-rewind-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    176 => 
+    array (
+      'id' => 'rewind-circle-fill-outline',
+      'name' => 'Rewind Circle Fill',
+      'value' => 'bi-rewind-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'circle',
+        2 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    177 => 
+    array (
+      'id' => 'rewind-circle-outline',
+      'name' => 'Rewind Circle',
+      'value' => 'bi-rewind-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    178 => 
+    array (
+      'id' => 'rewind-circle-solid',
+      'name' => 'Rewind Circle',
+      'value' => 'bi-rewind-circle-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'circle',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    179 => 
+    array (
+      'id' => 'rewind-fill-solid',
+      'name' => 'Rewind Fill',
+      'value' => 'bi-rewind-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    180 => 
+    array (
+      'id' => 'rewind-fill-outline',
+      'name' => 'Rewind Fill',
+      'value' => 'bi-rewind',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+        1 => 'fill',
+      ),
+      'category' => 'media',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    181 => 
+    array (
+      'id' => 'rewind-outline',
+      'name' => 'Rewind',
+      'value' => 'bi-rewind',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'rewind',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    182 => 
+    array (
+      'id' => 'exposure-outline',
+      'name' => 'Exposure',
+      'value' => 'bi-exposure',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'exposure',
+      ),
+      'category' => 'media',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+  ),
+);

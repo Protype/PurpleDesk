@@ -1,2981 +1,5683 @@
 <?php
 
-return [
-    'id' => 'files',
-    'name' => '檔案格式',
-    'description' => '各種檔案類型圖標',
-    'priority' => 'normal',
-
-    'icons' => [
-        [
-            'name' => 'archive-fill',
-            'displayName' => 'Archive Fill',
-            'class' => 'bi-archive-fill',
-            'keywords' => ["archive","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-archive-fill'],
-                'outline' => ['class' => 'bi-archive'],
-            ]
-        ],
-        [
-            'name' => 'archive',
-            'displayName' => 'Archive',
-            'class' => 'bi-archive',
-            'keywords' => ["archive"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-archive'],
-                'solid' => ['class' => 'bi-archive-fill'],
-            ]
-        ],
-        [
-            'name' => 'back',
-            'displayName' => 'Back',
-            'class' => 'bi-back',
-            'keywords' => ["back"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-back'],
-            ]
-        ],
-        [
-            'name' => 'book-fill',
-            'displayName' => 'Book Fill',
-            'class' => 'bi-book-fill',
-            'keywords' => ["book","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-book-fill'],
-                'outline' => ['class' => 'bi-book'],
-            ]
-        ],
-        [
-            'name' => 'book-half',
-            'displayName' => 'Book Half',
-            'class' => 'bi-book-half',
-            'keywords' => ["book","half"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-book-half'],
-            ]
-        ],
-        [
-            'name' => 'book',
-            'displayName' => 'Book',
-            'class' => 'bi-book',
-            'keywords' => ["book"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-book'],
-                'solid' => ['class' => 'bi-book-fill'],
-            ]
-        ],
-        [
-            'name' => 'bookshelf',
-            'displayName' => 'Bookshelf',
-            'class' => 'bi-bookshelf',
-            'keywords' => ["bookshelf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-bookshelf'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-check',
-            'displayName' => 'Clipboard Check',
-            'class' => 'bi-clipboard-check',
-            'keywords' => ["clipboard","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-check'],
-                'solid' => ['class' => 'bi-clipboard-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-data',
-            'displayName' => 'Clipboard Data',
-            'class' => 'bi-clipboard-data',
-            'keywords' => ["clipboard","data"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-data'],
-                'solid' => ['class' => 'bi-clipboard-data-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-minus',
-            'displayName' => 'Clipboard Minus',
-            'class' => 'bi-clipboard-minus',
-            'keywords' => ["clipboard","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-minus'],
-                'solid' => ['class' => 'bi-clipboard-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-plus',
-            'displayName' => 'Clipboard Plus',
-            'class' => 'bi-clipboard-plus',
-            'keywords' => ["clipboard","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-plus'],
-                'solid' => ['class' => 'bi-clipboard-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-x',
-            'displayName' => 'Clipboard X',
-            'class' => 'bi-clipboard-x',
-            'keywords' => ["clipboard","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-x'],
-                'solid' => ['class' => 'bi-clipboard-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard',
-            'displayName' => 'Clipboard',
-            'class' => 'bi-clipboard',
-            'keywords' => ["clipboard"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard'],
-                'solid' => ['class' => 'bi-clipboard-fill'],
-            ]
-        ],
-        [
-            'name' => 'download',
-            'displayName' => 'Download',
-            'class' => 'bi-download',
-            'keywords' => ["download"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-download'],
-            ]
-        ],
-        [
-            'name' => 'file-arrow-down-fill',
-            'displayName' => 'File Arrow Down Fill',
-            'class' => 'bi-file-arrow-down-fill',
-            'keywords' => ["file","arrow","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-arrow-down-fill'],
-                'outline' => ['class' => 'bi-file-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'file-arrow-down',
-            'displayName' => 'File Arrow Down',
-            'class' => 'bi-file-arrow-down',
-            'keywords' => ["file","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-arrow-down'],
-                'solid' => ['class' => 'bi-file-arrow-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-arrow-up-fill',
-            'displayName' => 'File Arrow Up Fill',
-            'class' => 'bi-file-arrow-up-fill',
-            'keywords' => ["file","arrow","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-arrow-up-fill'],
-                'outline' => ['class' => 'bi-file-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'file-arrow-up',
-            'displayName' => 'File Arrow Up',
-            'class' => 'bi-file-arrow-up',
-            'keywords' => ["file","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-arrow-up'],
-                'solid' => ['class' => 'bi-file-arrow-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-bar-graph-fill',
-            'displayName' => 'File Bar Graph Fill',
-            'class' => 'bi-file-bar-graph-fill',
-            'keywords' => ["file","bar","graph","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-bar-graph-fill'],
-                'outline' => ['class' => 'bi-file-bar-graph'],
-            ]
-        ],
-        [
-            'name' => 'file-bar-graph',
-            'displayName' => 'File Bar Graph',
-            'class' => 'bi-file-bar-graph',
-            'keywords' => ["file","bar","graph"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-bar-graph'],
-                'solid' => ['class' => 'bi-file-bar-graph-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-binary-fill',
-            'displayName' => 'File Binary Fill',
-            'class' => 'bi-file-binary-fill',
-            'keywords' => ["file","binary","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-binary-fill'],
-                'outline' => ['class' => 'bi-file-binary'],
-            ]
-        ],
-        [
-            'name' => 'file-binary',
-            'displayName' => 'File Binary',
-            'class' => 'bi-file-binary',
-            'keywords' => ["file","binary"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-binary'],
-                'solid' => ['class' => 'bi-file-binary-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-break-fill',
-            'displayName' => 'File Break Fill',
-            'class' => 'bi-file-break-fill',
-            'keywords' => ["file","break","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-break-fill'],
-                'outline' => ['class' => 'bi-file-break'],
-            ]
-        ],
-        [
-            'name' => 'file-break',
-            'displayName' => 'File Break',
-            'class' => 'bi-file-break',
-            'keywords' => ["file","break"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-break'],
-                'solid' => ['class' => 'bi-file-break-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-check-fill',
-            'displayName' => 'File Check Fill',
-            'class' => 'bi-file-check-fill',
-            'keywords' => ["file","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-check-fill'],
-                'outline' => ['class' => 'bi-file-check'],
-            ]
-        ],
-        [
-            'name' => 'file-check',
-            'displayName' => 'File Check',
-            'class' => 'bi-file-check',
-            'keywords' => ["file","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-check'],
-                'solid' => ['class' => 'bi-file-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-code-fill',
-            'displayName' => 'File Code Fill',
-            'class' => 'bi-file-code-fill',
-            'keywords' => ["file","code","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-code-fill'],
-                'outline' => ['class' => 'bi-file-code'],
-            ]
-        ],
-        [
-            'name' => 'file-code',
-            'displayName' => 'File Code',
-            'class' => 'bi-file-code',
-            'keywords' => ["file","code"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-code'],
-                'solid' => ['class' => 'bi-file-code-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-diff-fill',
-            'displayName' => 'File Diff Fill',
-            'class' => 'bi-file-diff-fill',
-            'keywords' => ["file","diff","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-diff-fill'],
-                'outline' => ['class' => 'bi-file-diff'],
-            ]
-        ],
-        [
-            'name' => 'file-diff',
-            'displayName' => 'File Diff',
-            'class' => 'bi-file-diff',
-            'keywords' => ["file","diff"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-diff'],
-                'solid' => ['class' => 'bi-file-diff-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-arrow-down-fill',
-            'displayName' => 'File Earmark Arrow Down Fill',
-            'class' => 'bi-file-earmark-arrow-down-fill',
-            'keywords' => ["file","earmark","arrow","down","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-arrow-down-fill'],
-                'outline' => ['class' => 'bi-file-earmark-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-arrow-down',
-            'displayName' => 'File Earmark Arrow Down',
-            'class' => 'bi-file-earmark-arrow-down',
-            'keywords' => ["file","earmark","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-arrow-down'],
-                'solid' => ['class' => 'bi-file-earmark-arrow-down-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-arrow-up-fill',
-            'displayName' => 'File Earmark Arrow Up Fill',
-            'class' => 'bi-file-earmark-arrow-up-fill',
-            'keywords' => ["file","earmark","arrow","up","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-arrow-up-fill'],
-                'outline' => ['class' => 'bi-file-earmark-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-arrow-up',
-            'displayName' => 'File Earmark Arrow Up',
-            'class' => 'bi-file-earmark-arrow-up',
-            'keywords' => ["file","earmark","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-arrow-up'],
-                'solid' => ['class' => 'bi-file-earmark-arrow-up-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-bar-graph-fill',
-            'displayName' => 'File Earmark Bar Graph Fill',
-            'class' => 'bi-file-earmark-bar-graph-fill',
-            'keywords' => ["file","earmark","bar","graph","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-bar-graph-fill'],
-                'outline' => ['class' => 'bi-file-earmark-bar-graph'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-bar-graph',
-            'displayName' => 'File Earmark Bar Graph',
-            'class' => 'bi-file-earmark-bar-graph',
-            'keywords' => ["file","earmark","bar","graph"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-bar-graph'],
-                'solid' => ['class' => 'bi-file-earmark-bar-graph-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-binary-fill',
-            'displayName' => 'File Earmark Binary Fill',
-            'class' => 'bi-file-earmark-binary-fill',
-            'keywords' => ["file","earmark","binary","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-binary-fill'],
-                'outline' => ['class' => 'bi-file-earmark-binary'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-binary',
-            'displayName' => 'File Earmark Binary',
-            'class' => 'bi-file-earmark-binary',
-            'keywords' => ["file","earmark","binary"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-binary'],
-                'solid' => ['class' => 'bi-file-earmark-binary-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-break-fill',
-            'displayName' => 'File Earmark Break Fill',
-            'class' => 'bi-file-earmark-break-fill',
-            'keywords' => ["file","earmark","break","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-break-fill'],
-                'outline' => ['class' => 'bi-file-earmark-break'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-break',
-            'displayName' => 'File Earmark Break',
-            'class' => 'bi-file-earmark-break',
-            'keywords' => ["file","earmark","break"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-break'],
-                'solid' => ['class' => 'bi-file-earmark-break-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-check-fill',
-            'displayName' => 'File Earmark Check Fill',
-            'class' => 'bi-file-earmark-check-fill',
-            'keywords' => ["file","earmark","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-check-fill'],
-                'outline' => ['class' => 'bi-file-earmark-check'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-check',
-            'displayName' => 'File Earmark Check',
-            'class' => 'bi-file-earmark-check',
-            'keywords' => ["file","earmark","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-check'],
-                'solid' => ['class' => 'bi-file-earmark-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-code-fill',
-            'displayName' => 'File Earmark Code Fill',
-            'class' => 'bi-file-earmark-code-fill',
-            'keywords' => ["file","earmark","code","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-code-fill'],
-                'outline' => ['class' => 'bi-file-earmark-code'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-code',
-            'displayName' => 'File Earmark Code',
-            'class' => 'bi-file-earmark-code',
-            'keywords' => ["file","earmark","code"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-code'],
-                'solid' => ['class' => 'bi-file-earmark-code-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-diff-fill',
-            'displayName' => 'File Earmark Diff Fill',
-            'class' => 'bi-file-earmark-diff-fill',
-            'keywords' => ["file","earmark","diff","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-diff-fill'],
-                'outline' => ['class' => 'bi-file-earmark-diff'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-diff',
-            'displayName' => 'File Earmark Diff',
-            'class' => 'bi-file-earmark-diff',
-            'keywords' => ["file","earmark","diff"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-diff'],
-                'solid' => ['class' => 'bi-file-earmark-diff-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-easel-fill',
-            'displayName' => 'File Earmark Easel Fill',
-            'class' => 'bi-file-earmark-easel-fill',
-            'keywords' => ["file","earmark","easel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-easel-fill'],
-                'outline' => ['class' => 'bi-file-earmark-easel'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-easel',
-            'displayName' => 'File Earmark Easel',
-            'class' => 'bi-file-earmark-easel',
-            'keywords' => ["file","earmark","easel"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-easel'],
-                'solid' => ['class' => 'bi-file-earmark-easel-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-excel-fill',
-            'displayName' => 'File Earmark Excel Fill',
-            'class' => 'bi-file-earmark-excel-fill',
-            'keywords' => ["file","earmark","excel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-excel-fill'],
-                'outline' => ['class' => 'bi-file-earmark-excel'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-excel',
-            'displayName' => 'File Earmark Excel',
-            'class' => 'bi-file-earmark-excel',
-            'keywords' => ["file","earmark","excel"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-excel'],
-                'solid' => ['class' => 'bi-file-earmark-excel-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-fill',
-            'displayName' => 'File Earmark Fill',
-            'class' => 'bi-file-earmark-fill',
-            'keywords' => ["file","earmark","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-fill'],
-                'outline' => ['class' => 'bi-file-earmark'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-font-fill',
-            'displayName' => 'File Earmark Font Fill',
-            'class' => 'bi-file-earmark-font-fill',
-            'keywords' => ["file","earmark","font","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-font-fill'],
-                'outline' => ['class' => 'bi-file-earmark-font'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-font',
-            'displayName' => 'File Earmark Font',
-            'class' => 'bi-file-earmark-font',
-            'keywords' => ["file","earmark","font"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-font'],
-                'solid' => ['class' => 'bi-file-earmark-font-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-image-fill',
-            'displayName' => 'File Earmark Image Fill',
-            'class' => 'bi-file-earmark-image-fill',
-            'keywords' => ["file","earmark","image","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-image-fill'],
-                'outline' => ['class' => 'bi-file-earmark-image'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-image',
-            'displayName' => 'File Earmark Image',
-            'class' => 'bi-file-earmark-image',
-            'keywords' => ["file","earmark","image"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-image'],
-                'solid' => ['class' => 'bi-file-earmark-image-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-lock-fill',
-            'displayName' => 'File Earmark Lock Fill',
-            'class' => 'bi-file-earmark-lock-fill',
-            'keywords' => ["file","earmark","lock","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-lock-fill'],
-                'outline' => ['class' => 'bi-file-earmark-lock'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-lock',
-            'displayName' => 'File Earmark Lock',
-            'class' => 'bi-file-earmark-lock',
-            'keywords' => ["file","earmark","lock"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-lock'],
-                'solid' => ['class' => 'bi-file-earmark-lock-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-lock2-fill',
-            'displayName' => 'File Earmark Lock2 Fill',
-            'class' => 'bi-file-earmark-lock2-fill',
-            'keywords' => ["file","earmark","lock2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-lock2-fill'],
-                'outline' => ['class' => 'bi-file-earmark-lock2'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-lock2',
-            'displayName' => 'File Earmark Lock2',
-            'class' => 'bi-file-earmark-lock2',
-            'keywords' => ["file","earmark","lock2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-lock2'],
-                'solid' => ['class' => 'bi-file-earmark-lock2-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-medical-fill',
-            'displayName' => 'File Earmark Medical Fill',
-            'class' => 'bi-file-earmark-medical-fill',
-            'keywords' => ["file","earmark","medical","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-medical-fill'],
-                'outline' => ['class' => 'bi-file-earmark-medical'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-medical',
-            'displayName' => 'File Earmark Medical',
-            'class' => 'bi-file-earmark-medical',
-            'keywords' => ["file","earmark","medical"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-medical'],
-                'solid' => ['class' => 'bi-file-earmark-medical-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-minus-fill',
-            'displayName' => 'File Earmark Minus Fill',
-            'class' => 'bi-file-earmark-minus-fill',
-            'keywords' => ["file","earmark","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-minus-fill'],
-                'outline' => ['class' => 'bi-file-earmark-minus'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-minus',
-            'displayName' => 'File Earmark Minus',
-            'class' => 'bi-file-earmark-minus',
-            'keywords' => ["file","earmark","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-minus'],
-                'solid' => ['class' => 'bi-file-earmark-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-music-fill',
-            'displayName' => 'File Earmark Music Fill',
-            'class' => 'bi-file-earmark-music-fill',
-            'keywords' => ["file","earmark","music","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-music-fill'],
-                'outline' => ['class' => 'bi-file-earmark-music'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-music',
-            'displayName' => 'File Earmark Music',
-            'class' => 'bi-file-earmark-music',
-            'keywords' => ["file","earmark","music"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-music'],
-                'solid' => ['class' => 'bi-file-earmark-music-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-person-fill',
-            'displayName' => 'File Earmark Person Fill',
-            'class' => 'bi-file-earmark-person-fill',
-            'keywords' => ["file","earmark","person","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-person-fill'],
-                'outline' => ['class' => 'bi-file-earmark-person'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-person',
-            'displayName' => 'File Earmark Person',
-            'class' => 'bi-file-earmark-person',
-            'keywords' => ["file","earmark","person"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-person'],
-                'solid' => ['class' => 'bi-file-earmark-person-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-play-fill',
-            'displayName' => 'File Earmark Play Fill',
-            'class' => 'bi-file-earmark-play-fill',
-            'keywords' => ["file","earmark","play","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-play-fill'],
-                'outline' => ['class' => 'bi-file-earmark-play'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-play',
-            'displayName' => 'File Earmark Play',
-            'class' => 'bi-file-earmark-play',
-            'keywords' => ["file","earmark","play"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-play'],
-                'solid' => ['class' => 'bi-file-earmark-play-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-plus-fill',
-            'displayName' => 'File Earmark Plus Fill',
-            'class' => 'bi-file-earmark-plus-fill',
-            'keywords' => ["file","earmark","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-plus-fill'],
-                'outline' => ['class' => 'bi-file-earmark-plus'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-plus',
-            'displayName' => 'File Earmark Plus',
-            'class' => 'bi-file-earmark-plus',
-            'keywords' => ["file","earmark","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-plus'],
-                'solid' => ['class' => 'bi-file-earmark-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-post-fill',
-            'displayName' => 'File Earmark Post Fill',
-            'class' => 'bi-file-earmark-post-fill',
-            'keywords' => ["file","earmark","post","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-post-fill'],
-                'outline' => ['class' => 'bi-file-earmark-post'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-post',
-            'displayName' => 'File Earmark Post',
-            'class' => 'bi-file-earmark-post',
-            'keywords' => ["file","earmark","post"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-post'],
-                'solid' => ['class' => 'bi-file-earmark-post-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-ppt-fill',
-            'displayName' => 'File Earmark Ppt Fill',
-            'class' => 'bi-file-earmark-ppt-fill',
-            'keywords' => ["file","earmark","ppt","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-ppt-fill'],
-                'outline' => ['class' => 'bi-file-earmark-ppt'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-ppt',
-            'displayName' => 'File Earmark Ppt',
-            'class' => 'bi-file-earmark-ppt',
-            'keywords' => ["file","earmark","ppt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-ppt'],
-                'solid' => ['class' => 'bi-file-earmark-ppt-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-richtext-fill',
-            'displayName' => 'File Earmark Richtext Fill',
-            'class' => 'bi-file-earmark-richtext-fill',
-            'keywords' => ["file","earmark","richtext","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-richtext-fill'],
-                'outline' => ['class' => 'bi-file-earmark-richtext'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-richtext',
-            'displayName' => 'File Earmark Richtext',
-            'class' => 'bi-file-earmark-richtext',
-            'keywords' => ["file","earmark","richtext"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-richtext'],
-                'solid' => ['class' => 'bi-file-earmark-richtext-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-ruled-fill',
-            'displayName' => 'File Earmark Ruled Fill',
-            'class' => 'bi-file-earmark-ruled-fill',
-            'keywords' => ["file","earmark","ruled","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-ruled-fill'],
-                'outline' => ['class' => 'bi-file-earmark-ruled'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-ruled',
-            'displayName' => 'File Earmark Ruled',
-            'class' => 'bi-file-earmark-ruled',
-            'keywords' => ["file","earmark","ruled"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-ruled'],
-                'solid' => ['class' => 'bi-file-earmark-ruled-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-slides-fill',
-            'displayName' => 'File Earmark Slides Fill',
-            'class' => 'bi-file-earmark-slides-fill',
-            'keywords' => ["file","earmark","slides","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-slides-fill'],
-                'outline' => ['class' => 'bi-file-earmark-slides'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-slides',
-            'displayName' => 'File Earmark Slides',
-            'class' => 'bi-file-earmark-slides',
-            'keywords' => ["file","earmark","slides"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-slides'],
-                'solid' => ['class' => 'bi-file-earmark-slides-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-spreadsheet-fill',
-            'displayName' => 'File Earmark Spreadsheet Fill',
-            'class' => 'bi-file-earmark-spreadsheet-fill',
-            'keywords' => ["file","earmark","spreadsheet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-spreadsheet-fill'],
-                'outline' => ['class' => 'bi-file-earmark-spreadsheet'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-spreadsheet',
-            'displayName' => 'File Earmark Spreadsheet',
-            'class' => 'bi-file-earmark-spreadsheet',
-            'keywords' => ["file","earmark","spreadsheet"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-spreadsheet'],
-                'solid' => ['class' => 'bi-file-earmark-spreadsheet-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-text-fill',
-            'displayName' => 'File Earmark Text Fill',
-            'class' => 'bi-file-earmark-text-fill',
-            'keywords' => ["file","earmark","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-text-fill'],
-                'outline' => ['class' => 'bi-file-earmark-text'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-text',
-            'displayName' => 'File Earmark Text',
-            'class' => 'bi-file-earmark-text',
-            'keywords' => ["file","earmark","text"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-text'],
-                'solid' => ['class' => 'bi-file-earmark-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-word-fill',
-            'displayName' => 'File Earmark Word Fill',
-            'class' => 'bi-file-earmark-word-fill',
-            'keywords' => ["file","earmark","word","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-word-fill'],
-                'outline' => ['class' => 'bi-file-earmark-word'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-word',
-            'displayName' => 'File Earmark Word',
-            'class' => 'bi-file-earmark-word',
-            'keywords' => ["file","earmark","word"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-word'],
-                'solid' => ['class' => 'bi-file-earmark-word-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-x-fill',
-            'displayName' => 'File Earmark X Fill',
-            'class' => 'bi-file-earmark-x-fill',
-            'keywords' => ["file","earmark","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-x-fill'],
-                'outline' => ['class' => 'bi-file-earmark-x'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-x',
-            'displayName' => 'File Earmark X',
-            'class' => 'bi-file-earmark-x',
-            'keywords' => ["file","earmark","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-x'],
-                'solid' => ['class' => 'bi-file-earmark-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-zip-fill',
-            'displayName' => 'File Earmark Zip Fill',
-            'class' => 'bi-file-earmark-zip-fill',
-            'keywords' => ["file","earmark","zip","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-zip-fill'],
-                'outline' => ['class' => 'bi-file-earmark-zip'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-zip',
-            'displayName' => 'File Earmark Zip',
-            'class' => 'bi-file-earmark-zip',
-            'keywords' => ["file","earmark","zip"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-zip'],
-                'solid' => ['class' => 'bi-file-earmark-zip-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark',
-            'displayName' => 'File Earmark',
-            'class' => 'bi-file-earmark',
-            'keywords' => ["file","earmark"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark'],
-                'solid' => ['class' => 'bi-file-earmark-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-easel-fill',
-            'displayName' => 'File Easel Fill',
-            'class' => 'bi-file-easel-fill',
-            'keywords' => ["file","easel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-easel-fill'],
-                'outline' => ['class' => 'bi-file-easel'],
-            ]
-        ],
-        [
-            'name' => 'file-easel',
-            'displayName' => 'File Easel',
-            'class' => 'bi-file-easel',
-            'keywords' => ["file","easel"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-easel'],
-                'solid' => ['class' => 'bi-file-easel-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-excel-fill',
-            'displayName' => 'File Excel Fill',
-            'class' => 'bi-file-excel-fill',
-            'keywords' => ["file","excel","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-excel-fill'],
-                'outline' => ['class' => 'bi-file-excel'],
-            ]
-        ],
-        [
-            'name' => 'file-excel',
-            'displayName' => 'File Excel',
-            'class' => 'bi-file-excel',
-            'keywords' => ["file","excel"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-excel'],
-                'solid' => ['class' => 'bi-file-excel-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-fill',
-            'displayName' => 'File Fill',
-            'class' => 'bi-file-fill',
-            'keywords' => ["file","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-fill'],
-                'outline' => ['class' => 'bi-file'],
-            ]
-        ],
-        [
-            'name' => 'file-font-fill',
-            'displayName' => 'File Font Fill',
-            'class' => 'bi-file-font-fill',
-            'keywords' => ["file","font","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-font-fill'],
-                'outline' => ['class' => 'bi-file-font'],
-            ]
-        ],
-        [
-            'name' => 'file-font',
-            'displayName' => 'File Font',
-            'class' => 'bi-file-font',
-            'keywords' => ["file","font"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-font'],
-                'solid' => ['class' => 'bi-file-font-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-image-fill',
-            'displayName' => 'File Image Fill',
-            'class' => 'bi-file-image-fill',
-            'keywords' => ["file","image","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-image-fill'],
-                'outline' => ['class' => 'bi-file-image'],
-            ]
-        ],
-        [
-            'name' => 'file-image',
-            'displayName' => 'File Image',
-            'class' => 'bi-file-image',
-            'keywords' => ["file","image"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-image'],
-                'solid' => ['class' => 'bi-file-image-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-lock-fill',
-            'displayName' => 'File Lock Fill',
-            'class' => 'bi-file-lock-fill',
-            'keywords' => ["file","lock","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-lock-fill'],
-                'outline' => ['class' => 'bi-file-lock'],
-            ]
-        ],
-        [
-            'name' => 'file-lock',
-            'displayName' => 'File Lock',
-            'class' => 'bi-file-lock',
-            'keywords' => ["file","lock"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-lock'],
-                'solid' => ['class' => 'bi-file-lock-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-lock2-fill',
-            'displayName' => 'File Lock2 Fill',
-            'class' => 'bi-file-lock2-fill',
-            'keywords' => ["file","lock2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-lock2-fill'],
-                'outline' => ['class' => 'bi-file-lock2'],
-            ]
-        ],
-        [
-            'name' => 'file-lock2',
-            'displayName' => 'File Lock2',
-            'class' => 'bi-file-lock2',
-            'keywords' => ["file","lock2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-lock2'],
-                'solid' => ['class' => 'bi-file-lock2-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-medical-fill',
-            'displayName' => 'File Medical Fill',
-            'class' => 'bi-file-medical-fill',
-            'keywords' => ["file","medical","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-medical-fill'],
-                'outline' => ['class' => 'bi-file-medical'],
-            ]
-        ],
-        [
-            'name' => 'file-medical',
-            'displayName' => 'File Medical',
-            'class' => 'bi-file-medical',
-            'keywords' => ["file","medical"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-medical'],
-                'solid' => ['class' => 'bi-file-medical-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-minus-fill',
-            'displayName' => 'File Minus Fill',
-            'class' => 'bi-file-minus-fill',
-            'keywords' => ["file","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-minus-fill'],
-                'outline' => ['class' => 'bi-file-minus'],
-            ]
-        ],
-        [
-            'name' => 'file-minus',
-            'displayName' => 'File Minus',
-            'class' => 'bi-file-minus',
-            'keywords' => ["file","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-minus'],
-                'solid' => ['class' => 'bi-file-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-music-fill',
-            'displayName' => 'File Music Fill',
-            'class' => 'bi-file-music-fill',
-            'keywords' => ["file","music","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-music-fill'],
-                'outline' => ['class' => 'bi-file-music'],
-            ]
-        ],
-        [
-            'name' => 'file-music',
-            'displayName' => 'File Music',
-            'class' => 'bi-file-music',
-            'keywords' => ["file","music"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-music'],
-                'solid' => ['class' => 'bi-file-music-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-person-fill',
-            'displayName' => 'File Person Fill',
-            'class' => 'bi-file-person-fill',
-            'keywords' => ["file","person","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-person-fill'],
-                'outline' => ['class' => 'bi-file-person'],
-            ]
-        ],
-        [
-            'name' => 'file-person',
-            'displayName' => 'File Person',
-            'class' => 'bi-file-person',
-            'keywords' => ["file","person"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-person'],
-                'solid' => ['class' => 'bi-file-person-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-play-fill',
-            'displayName' => 'File Play Fill',
-            'class' => 'bi-file-play-fill',
-            'keywords' => ["file","play","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-play-fill'],
-                'outline' => ['class' => 'bi-file-play'],
-            ]
-        ],
-        [
-            'name' => 'file-play',
-            'displayName' => 'File Play',
-            'class' => 'bi-file-play',
-            'keywords' => ["file","play"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-play'],
-                'solid' => ['class' => 'bi-file-play-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-plus-fill',
-            'displayName' => 'File Plus Fill',
-            'class' => 'bi-file-plus-fill',
-            'keywords' => ["file","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-plus-fill'],
-                'outline' => ['class' => 'bi-file-plus'],
-            ]
-        ],
-        [
-            'name' => 'file-plus',
-            'displayName' => 'File Plus',
-            'class' => 'bi-file-plus',
-            'keywords' => ["file","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-plus'],
-                'solid' => ['class' => 'bi-file-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-post-fill',
-            'displayName' => 'File Post Fill',
-            'class' => 'bi-file-post-fill',
-            'keywords' => ["file","post","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-post-fill'],
-                'outline' => ['class' => 'bi-file-post'],
-            ]
-        ],
-        [
-            'name' => 'file-post',
-            'displayName' => 'File Post',
-            'class' => 'bi-file-post',
-            'keywords' => ["file","post"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-post'],
-                'solid' => ['class' => 'bi-file-post-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-ppt-fill',
-            'displayName' => 'File Ppt Fill',
-            'class' => 'bi-file-ppt-fill',
-            'keywords' => ["file","ppt","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-ppt-fill'],
-                'outline' => ['class' => 'bi-file-ppt'],
-            ]
-        ],
-        [
-            'name' => 'file-ppt',
-            'displayName' => 'File Ppt',
-            'class' => 'bi-file-ppt',
-            'keywords' => ["file","ppt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-ppt'],
-                'solid' => ['class' => 'bi-file-ppt-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-richtext-fill',
-            'displayName' => 'File Richtext Fill',
-            'class' => 'bi-file-richtext-fill',
-            'keywords' => ["file","richtext","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-richtext-fill'],
-                'outline' => ['class' => 'bi-file-richtext'],
-            ]
-        ],
-        [
-            'name' => 'file-richtext',
-            'displayName' => 'File Richtext',
-            'class' => 'bi-file-richtext',
-            'keywords' => ["file","richtext"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-richtext'],
-                'solid' => ['class' => 'bi-file-richtext-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-ruled-fill',
-            'displayName' => 'File Ruled Fill',
-            'class' => 'bi-file-ruled-fill',
-            'keywords' => ["file","ruled","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-ruled-fill'],
-                'outline' => ['class' => 'bi-file-ruled'],
-            ]
-        ],
-        [
-            'name' => 'file-ruled',
-            'displayName' => 'File Ruled',
-            'class' => 'bi-file-ruled',
-            'keywords' => ["file","ruled"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-ruled'],
-                'solid' => ['class' => 'bi-file-ruled-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-slides-fill',
-            'displayName' => 'File Slides Fill',
-            'class' => 'bi-file-slides-fill',
-            'keywords' => ["file","slides","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-slides-fill'],
-                'outline' => ['class' => 'bi-file-slides'],
-            ]
-        ],
-        [
-            'name' => 'file-slides',
-            'displayName' => 'File Slides',
-            'class' => 'bi-file-slides',
-            'keywords' => ["file","slides"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-slides'],
-                'solid' => ['class' => 'bi-file-slides-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-spreadsheet-fill',
-            'displayName' => 'File Spreadsheet Fill',
-            'class' => 'bi-file-spreadsheet-fill',
-            'keywords' => ["file","spreadsheet","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-spreadsheet-fill'],
-                'outline' => ['class' => 'bi-file-spreadsheet'],
-            ]
-        ],
-        [
-            'name' => 'file-spreadsheet',
-            'displayName' => 'File Spreadsheet',
-            'class' => 'bi-file-spreadsheet',
-            'keywords' => ["file","spreadsheet"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-spreadsheet'],
-                'solid' => ['class' => 'bi-file-spreadsheet-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-text-fill',
-            'displayName' => 'File Text Fill',
-            'class' => 'bi-file-text-fill',
-            'keywords' => ["file","text","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-text-fill'],
-                'outline' => ['class' => 'bi-file-text'],
-            ]
-        ],
-        [
-            'name' => 'file-text',
-            'displayName' => 'File Text',
-            'class' => 'bi-file-text',
-            'keywords' => ["file","text"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-text'],
-                'solid' => ['class' => 'bi-file-text-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-word-fill',
-            'displayName' => 'File Word Fill',
-            'class' => 'bi-file-word-fill',
-            'keywords' => ["file","word","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-word-fill'],
-                'outline' => ['class' => 'bi-file-word'],
-            ]
-        ],
-        [
-            'name' => 'file-word',
-            'displayName' => 'File Word',
-            'class' => 'bi-file-word',
-            'keywords' => ["file","word"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-word'],
-                'solid' => ['class' => 'bi-file-word-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-x-fill',
-            'displayName' => 'File X Fill',
-            'class' => 'bi-file-x-fill',
-            'keywords' => ["file","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-x-fill'],
-                'outline' => ['class' => 'bi-file-x'],
-            ]
-        ],
-        [
-            'name' => 'file-x',
-            'displayName' => 'File X',
-            'class' => 'bi-file-x',
-            'keywords' => ["file","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-x'],
-                'solid' => ['class' => 'bi-file-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-zip-fill',
-            'displayName' => 'File Zip Fill',
-            'class' => 'bi-file-zip-fill',
-            'keywords' => ["file","zip","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-zip-fill'],
-                'outline' => ['class' => 'bi-file-zip'],
-            ]
-        ],
-        [
-            'name' => 'file-zip',
-            'displayName' => 'File Zip',
-            'class' => 'bi-file-zip',
-            'keywords' => ["file","zip"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-zip'],
-                'solid' => ['class' => 'bi-file-zip-fill'],
-            ]
-        ],
-        [
-            'name' => 'file',
-            'displayName' => 'File',
-            'class' => 'bi-file',
-            'keywords' => ["file"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file'],
-                'solid' => ['class' => 'bi-file-fill'],
-            ]
-        ],
-        [
-            'name' => 'files-alt',
-            'displayName' => 'Files Alt',
-            'class' => 'bi-files-alt',
-            'keywords' => ["files","alt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-files-alt'],
-            ]
-        ],
-        [
-            'name' => 'files',
-            'displayName' => 'Files',
-            'class' => 'bi-files',
-            'keywords' => ["files"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-files'],
-            ]
-        ],
-        [
-            'name' => 'folder-check',
-            'displayName' => 'Folder Check',
-            'class' => 'bi-folder-check',
-            'keywords' => ["folder","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder-check'],
-            ]
-        ],
-        [
-            'name' => 'folder-fill',
-            'displayName' => 'Folder Fill',
-            'class' => 'bi-folder-fill',
-            'keywords' => ["folder","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-folder-fill'],
-                'outline' => ['class' => 'bi-folder'],
-            ]
-        ],
-        [
-            'name' => 'folder-minus',
-            'displayName' => 'Folder Minus',
-            'class' => 'bi-folder-minus',
-            'keywords' => ["folder","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder-minus'],
-            ]
-        ],
-        [
-            'name' => 'folder-plus',
-            'displayName' => 'Folder Plus',
-            'class' => 'bi-folder-plus',
-            'keywords' => ["folder","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder-plus'],
-            ]
-        ],
-        [
-            'name' => 'folder-symlink-fill',
-            'displayName' => 'Folder Symlink Fill',
-            'class' => 'bi-folder-symlink-fill',
-            'keywords' => ["folder","symlink","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-folder-symlink-fill'],
-                'outline' => ['class' => 'bi-folder-symlink'],
-            ]
-        ],
-        [
-            'name' => 'folder-symlink',
-            'displayName' => 'Folder Symlink',
-            'class' => 'bi-folder-symlink',
-            'keywords' => ["folder","symlink"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder-symlink'],
-                'solid' => ['class' => 'bi-folder-symlink-fill'],
-            ]
-        ],
-        [
-            'name' => 'folder-x',
-            'displayName' => 'Folder X',
-            'class' => 'bi-folder-x',
-            'keywords' => ["folder","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder-x'],
-            ]
-        ],
-        [
-            'name' => 'folder',
-            'displayName' => 'Folder',
-            'class' => 'bi-folder',
-            'keywords' => ["folder"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder'],
-                'solid' => ['class' => 'bi-folder-fill'],
-            ]
-        ],
-        [
-            'name' => 'folder2-open',
-            'displayName' => 'Folder2 Open',
-            'class' => 'bi-folder2-open',
-            'keywords' => ["folder2","open"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder2-open'],
-            ]
-        ],
-        [
-            'name' => 'folder2',
-            'displayName' => 'Folder2',
-            'class' => 'bi-folder2',
-            'keywords' => ["folder2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-folder2'],
-            ]
-        ],
-        [
-            'name' => 'journal-album',
-            'displayName' => 'Journal Album',
-            'class' => 'bi-journal-album',
-            'keywords' => ["journal","album"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-album'],
-            ]
-        ],
-        [
-            'name' => 'journal-arrow-down',
-            'displayName' => 'Journal Arrow Down',
-            'class' => 'bi-journal-arrow-down',
-            'keywords' => ["journal","arrow","down"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-arrow-down'],
-            ]
-        ],
-        [
-            'name' => 'journal-arrow-up',
-            'displayName' => 'Journal Arrow Up',
-            'class' => 'bi-journal-arrow-up',
-            'keywords' => ["journal","arrow","up"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-arrow-up'],
-            ]
-        ],
-        [
-            'name' => 'journal-bookmark-fill',
-            'displayName' => 'Journal Bookmark Fill',
-            'class' => 'bi-journal-bookmark-fill',
-            'keywords' => ["journal","bookmark","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-journal-bookmark-fill'],
-                'outline' => ['class' => 'bi-journal-bookmark'],
-            ]
-        ],
-        [
-            'name' => 'journal-bookmark',
-            'displayName' => 'Journal Bookmark',
-            'class' => 'bi-journal-bookmark',
-            'keywords' => ["journal","bookmark"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-bookmark'],
-                'solid' => ['class' => 'bi-journal-bookmark-fill'],
-            ]
-        ],
-        [
-            'name' => 'journal-check',
-            'displayName' => 'Journal Check',
-            'class' => 'bi-journal-check',
-            'keywords' => ["journal","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-check'],
-            ]
-        ],
-        [
-            'name' => 'journal-code',
-            'displayName' => 'Journal Code',
-            'class' => 'bi-journal-code',
-            'keywords' => ["journal","code"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-code'],
-            ]
-        ],
-        [
-            'name' => 'journal-medical',
-            'displayName' => 'Journal Medical',
-            'class' => 'bi-journal-medical',
-            'keywords' => ["journal","medical"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-medical'],
-            ]
-        ],
-        [
-            'name' => 'journal-minus',
-            'displayName' => 'Journal Minus',
-            'class' => 'bi-journal-minus',
-            'keywords' => ["journal","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-minus'],
-            ]
-        ],
-        [
-            'name' => 'journal-plus',
-            'displayName' => 'Journal Plus',
-            'class' => 'bi-journal-plus',
-            'keywords' => ["journal","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-plus'],
-            ]
-        ],
-        [
-            'name' => 'journal-richtext',
-            'displayName' => 'Journal Richtext',
-            'class' => 'bi-journal-richtext',
-            'keywords' => ["journal","richtext"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-richtext'],
-            ]
-        ],
-        [
-            'name' => 'journal-text',
-            'displayName' => 'Journal Text',
-            'class' => 'bi-journal-text',
-            'keywords' => ["journal","text"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-text'],
-            ]
-        ],
-        [
-            'name' => 'journal-x',
-            'displayName' => 'Journal X',
-            'class' => 'bi-journal-x',
-            'keywords' => ["journal","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal-x'],
-            ]
-        ],
-        [
-            'name' => 'journal',
-            'displayName' => 'Journal',
-            'class' => 'bi-journal',
-            'keywords' => ["journal"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journal'],
-            ]
-        ],
-        [
-            'name' => 'journals',
-            'displayName' => 'Journals',
-            'class' => 'bi-journals',
-            'keywords' => ["journals"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-journals'],
-            ]
-        ],
-        [
-            'name' => 'receipt-cutoff',
-            'displayName' => 'Receipt Cutoff',
-            'class' => 'bi-receipt-cutoff',
-            'keywords' => ["receipt","cutoff"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-receipt-cutoff'],
-            ]
-        ],
-        [
-            'name' => 'receipt',
-            'displayName' => 'Receipt',
-            'class' => 'bi-receipt',
-            'keywords' => ["receipt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-receipt'],
-            ]
-        ],
-        [
-            'name' => 'save-fill',
-            'displayName' => 'Save Fill',
-            'class' => 'bi-save-fill',
-            'keywords' => ["save","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-save-fill'],
-                'outline' => ['class' => 'bi-save'],
-            ]
-        ],
-        [
-            'name' => 'save',
-            'displayName' => 'Save',
-            'class' => 'bi-save',
-            'keywords' => ["save"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-save'],
-                'solid' => ['class' => 'bi-save-fill'],
-            ]
-        ],
-        [
-            'name' => 'save2-fill',
-            'displayName' => 'Save2 Fill',
-            'class' => 'bi-save2-fill',
-            'keywords' => ["save2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-save2-fill'],
-                'outline' => ['class' => 'bi-save2'],
-            ]
-        ],
-        [
-            'name' => 'save2',
-            'displayName' => 'Save2',
-            'class' => 'bi-save2',
-            'keywords' => ["save2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-save2'],
-                'solid' => ['class' => 'bi-save2-fill'],
-            ]
-        ],
-        [
-            'name' => 'upload',
-            'displayName' => 'Upload',
-            'class' => 'bi-upload',
-            'keywords' => ["upload"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-upload'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-pdf-fill',
-            'displayName' => 'File Earmark Pdf Fill',
-            'class' => 'bi-file-earmark-pdf-fill',
-            'keywords' => ["file","earmark","pdf","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-earmark-pdf-fill'],
-                'outline' => ['class' => 'bi-file-earmark-pdf'],
-            ]
-        ],
-        [
-            'name' => 'file-earmark-pdf',
-            'displayName' => 'File Earmark Pdf',
-            'class' => 'bi-file-earmark-pdf',
-            'keywords' => ["file","earmark","pdf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-earmark-pdf'],
-                'solid' => ['class' => 'bi-file-earmark-pdf-fill'],
-            ]
-        ],
-        [
-            'name' => 'file-pdf-fill',
-            'displayName' => 'File Pdf Fill',
-            'class' => 'bi-file-pdf-fill',
-            'keywords' => ["file","pdf","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-file-pdf-fill'],
-                'outline' => ['class' => 'bi-file-pdf'],
-            ]
-        ],
-        [
-            'name' => 'file-pdf',
-            'displayName' => 'File Pdf',
-            'class' => 'bi-file-pdf',
-            'keywords' => ["file","pdf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-file-pdf'],
-                'solid' => ['class' => 'bi-file-pdf-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-check-fill',
-            'displayName' => 'Clipboard Check Fill',
-            'class' => 'bi-clipboard-check-fill',
-            'keywords' => ["clipboard","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-check-fill'],
-                'outline' => ['class' => 'bi-clipboard-check'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-data-fill',
-            'displayName' => 'Clipboard Data Fill',
-            'class' => 'bi-clipboard-data-fill',
-            'keywords' => ["clipboard","data","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-data-fill'],
-                'outline' => ['class' => 'bi-clipboard-data'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-fill',
-            'displayName' => 'Clipboard Fill',
-            'class' => 'bi-clipboard-fill',
-            'keywords' => ["clipboard","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-fill'],
-                'outline' => ['class' => 'bi-clipboard'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-heart-fill',
-            'displayName' => 'Clipboard Heart Fill',
-            'class' => 'bi-clipboard-heart-fill',
-            'keywords' => ["clipboard","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-heart-fill'],
-                'outline' => ['class' => 'bi-clipboard-heart'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-heart',
-            'displayName' => 'Clipboard Heart',
-            'class' => 'bi-clipboard-heart',
-            'keywords' => ["clipboard","heart"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-heart'],
-                'solid' => ['class' => 'bi-clipboard-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-minus-fill',
-            'displayName' => 'Clipboard Minus Fill',
-            'class' => 'bi-clipboard-minus-fill',
-            'keywords' => ["clipboard","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-minus-fill'],
-                'outline' => ['class' => 'bi-clipboard-minus'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-plus-fill',
-            'displayName' => 'Clipboard Plus Fill',
-            'class' => 'bi-clipboard-plus-fill',
-            'keywords' => ["clipboard","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-plus-fill'],
-                'outline' => ['class' => 'bi-clipboard-plus'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-pulse',
-            'displayName' => 'Clipboard Pulse',
-            'class' => 'bi-clipboard-pulse',
-            'keywords' => ["clipboard","pulse"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard-pulse'],
-            ]
-        ],
-        [
-            'name' => 'clipboard-x-fill',
-            'displayName' => 'Clipboard X Fill',
-            'class' => 'bi-clipboard-x-fill',
-            'keywords' => ["clipboard","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard-x-fill'],
-                'outline' => ['class' => 'bi-clipboard-x'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-check-fill',
-            'displayName' => 'Clipboard2 Check Fill',
-            'class' => 'bi-clipboard2-check-fill',
-            'keywords' => ["clipboard2","check","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-check-fill'],
-                'outline' => ['class' => 'bi-clipboard2-check'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-check',
-            'displayName' => 'Clipboard2 Check',
-            'class' => 'bi-clipboard2-check',
-            'keywords' => ["clipboard2","check"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-check'],
-                'solid' => ['class' => 'bi-clipboard2-check-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-data-fill',
-            'displayName' => 'Clipboard2 Data Fill',
-            'class' => 'bi-clipboard2-data-fill',
-            'keywords' => ["clipboard2","data","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-data-fill'],
-                'outline' => ['class' => 'bi-clipboard2-data'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-data',
-            'displayName' => 'Clipboard2 Data',
-            'class' => 'bi-clipboard2-data',
-            'keywords' => ["clipboard2","data"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-data'],
-                'solid' => ['class' => 'bi-clipboard2-data-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-fill',
-            'displayName' => 'Clipboard2 Fill',
-            'class' => 'bi-clipboard2-fill',
-            'keywords' => ["clipboard2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-fill'],
-                'outline' => ['class' => 'bi-clipboard2'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-heart-fill',
-            'displayName' => 'Clipboard2 Heart Fill',
-            'class' => 'bi-clipboard2-heart-fill',
-            'keywords' => ["clipboard2","heart","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-heart-fill'],
-                'outline' => ['class' => 'bi-clipboard2-heart'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-heart',
-            'displayName' => 'Clipboard2 Heart',
-            'class' => 'bi-clipboard2-heart',
-            'keywords' => ["clipboard2","heart"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-heart'],
-                'solid' => ['class' => 'bi-clipboard2-heart-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-minus-fill',
-            'displayName' => 'Clipboard2 Minus Fill',
-            'class' => 'bi-clipboard2-minus-fill',
-            'keywords' => ["clipboard2","minus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-minus-fill'],
-                'outline' => ['class' => 'bi-clipboard2-minus'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-minus',
-            'displayName' => 'Clipboard2 Minus',
-            'class' => 'bi-clipboard2-minus',
-            'keywords' => ["clipboard2","minus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-minus'],
-                'solid' => ['class' => 'bi-clipboard2-minus-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-plus-fill',
-            'displayName' => 'Clipboard2 Plus Fill',
-            'class' => 'bi-clipboard2-plus-fill',
-            'keywords' => ["clipboard2","plus","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-plus-fill'],
-                'outline' => ['class' => 'bi-clipboard2-plus'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-plus',
-            'displayName' => 'Clipboard2 Plus',
-            'class' => 'bi-clipboard2-plus',
-            'keywords' => ["clipboard2","plus"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-plus'],
-                'solid' => ['class' => 'bi-clipboard2-plus-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-pulse-fill',
-            'displayName' => 'Clipboard2 Pulse Fill',
-            'class' => 'bi-clipboard2-pulse-fill',
-            'keywords' => ["clipboard2","pulse","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-pulse-fill'],
-                'outline' => ['class' => 'bi-clipboard2-pulse'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-pulse',
-            'displayName' => 'Clipboard2 Pulse',
-            'class' => 'bi-clipboard2-pulse',
-            'keywords' => ["clipboard2","pulse"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-pulse'],
-                'solid' => ['class' => 'bi-clipboard2-pulse-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-x-fill',
-            'displayName' => 'Clipboard2 X Fill',
-            'class' => 'bi-clipboard2-x-fill',
-            'keywords' => ["clipboard2","x","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-clipboard2-x-fill'],
-                'outline' => ['class' => 'bi-clipboard2-x'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2-x',
-            'displayName' => 'Clipboard2 X',
-            'class' => 'bi-clipboard2-x',
-            'keywords' => ["clipboard2","x"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2-x'],
-                'solid' => ['class' => 'bi-clipboard2-x-fill'],
-            ]
-        ],
-        [
-            'name' => 'clipboard2',
-            'displayName' => 'Clipboard2',
-            'class' => 'bi-clipboard2',
-            'keywords' => ["clipboard2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-clipboard2'],
-                'solid' => ['class' => 'bi-clipboard2-fill'],
-            ]
-        ],
-        [
-            'name' => 'filetype-aac',
-            'displayName' => 'Filetype Aac',
-            'class' => 'bi-filetype-aac',
-            'keywords' => ["filetype","aac"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-aac'],
-            ]
-        ],
-        [
-            'name' => 'filetype-ai',
-            'displayName' => 'Filetype Ai',
-            'class' => 'bi-filetype-ai',
-            'keywords' => ["filetype","ai"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-ai'],
-            ]
-        ],
-        [
-            'name' => 'filetype-bmp',
-            'displayName' => 'Filetype Bmp',
-            'class' => 'bi-filetype-bmp',
-            'keywords' => ["filetype","bmp"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-bmp'],
-            ]
-        ],
-        [
-            'name' => 'filetype-cs',
-            'displayName' => 'Filetype Cs',
-            'class' => 'bi-filetype-cs',
-            'keywords' => ["filetype","cs"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-cs'],
-            ]
-        ],
-        [
-            'name' => 'filetype-css',
-            'displayName' => 'Filetype Css',
-            'class' => 'bi-filetype-css',
-            'keywords' => ["filetype","css"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-css'],
-            ]
-        ],
-        [
-            'name' => 'filetype-csv',
-            'displayName' => 'Filetype Csv',
-            'class' => 'bi-filetype-csv',
-            'keywords' => ["filetype","csv"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-csv'],
-            ]
-        ],
-        [
-            'name' => 'filetype-doc',
-            'displayName' => 'Filetype Doc',
-            'class' => 'bi-filetype-doc',
-            'keywords' => ["filetype","doc"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-doc'],
-            ]
-        ],
-        [
-            'name' => 'filetype-docx',
-            'displayName' => 'Filetype Docx',
-            'class' => 'bi-filetype-docx',
-            'keywords' => ["filetype","docx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-docx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-exe',
-            'displayName' => 'Filetype Exe',
-            'class' => 'bi-filetype-exe',
-            'keywords' => ["filetype","exe"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-exe'],
-            ]
-        ],
-        [
-            'name' => 'filetype-gif',
-            'displayName' => 'Filetype Gif',
-            'class' => 'bi-filetype-gif',
-            'keywords' => ["filetype","gif"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-gif'],
-            ]
-        ],
-        [
-            'name' => 'filetype-heic',
-            'displayName' => 'Filetype Heic',
-            'class' => 'bi-filetype-heic',
-            'keywords' => ["filetype","heic"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-heic'],
-            ]
-        ],
-        [
-            'name' => 'filetype-html',
-            'displayName' => 'Filetype Html',
-            'class' => 'bi-filetype-html',
-            'keywords' => ["filetype","html"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-html'],
-            ]
-        ],
-        [
-            'name' => 'filetype-java',
-            'displayName' => 'Filetype Java',
-            'class' => 'bi-filetype-java',
-            'keywords' => ["filetype","java"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-java'],
-            ]
-        ],
-        [
-            'name' => 'filetype-jpg',
-            'displayName' => 'Filetype Jpg',
-            'class' => 'bi-filetype-jpg',
-            'keywords' => ["filetype","jpg"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-jpg'],
-            ]
-        ],
-        [
-            'name' => 'filetype-js',
-            'displayName' => 'Filetype Js',
-            'class' => 'bi-filetype-js',
-            'keywords' => ["filetype","js"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-js'],
-            ]
-        ],
-        [
-            'name' => 'filetype-jsx',
-            'displayName' => 'Filetype Jsx',
-            'class' => 'bi-filetype-jsx',
-            'keywords' => ["filetype","jsx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-jsx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-key',
-            'displayName' => 'Filetype Key',
-            'class' => 'bi-filetype-key',
-            'keywords' => ["filetype","key"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-key'],
-            ]
-        ],
-        [
-            'name' => 'filetype-m4p',
-            'displayName' => 'Filetype M4p',
-            'class' => 'bi-filetype-m4p',
-            'keywords' => ["filetype","m4p"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-m4p'],
-            ]
-        ],
-        [
-            'name' => 'filetype-md',
-            'displayName' => 'Filetype Md',
-            'class' => 'bi-filetype-md',
-            'keywords' => ["filetype","md"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-md'],
-            ]
-        ],
-        [
-            'name' => 'filetype-mdx',
-            'displayName' => 'Filetype Mdx',
-            'class' => 'bi-filetype-mdx',
-            'keywords' => ["filetype","mdx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-mdx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-mov',
-            'displayName' => 'Filetype Mov',
-            'class' => 'bi-filetype-mov',
-            'keywords' => ["filetype","mov"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-mov'],
-            ]
-        ],
-        [
-            'name' => 'filetype-mp3',
-            'displayName' => 'Filetype Mp3',
-            'class' => 'bi-filetype-mp3',
-            'keywords' => ["filetype","mp3"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-mp3'],
-            ]
-        ],
-        [
-            'name' => 'filetype-mp4',
-            'displayName' => 'Filetype Mp4',
-            'class' => 'bi-filetype-mp4',
-            'keywords' => ["filetype","mp4"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-mp4'],
-            ]
-        ],
-        [
-            'name' => 'filetype-otf',
-            'displayName' => 'Filetype Otf',
-            'class' => 'bi-filetype-otf',
-            'keywords' => ["filetype","otf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-otf'],
-            ]
-        ],
-        [
-            'name' => 'filetype-pdf',
-            'displayName' => 'Filetype Pdf',
-            'class' => 'bi-filetype-pdf',
-            'keywords' => ["filetype","pdf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-pdf'],
-            ]
-        ],
-        [
-            'name' => 'filetype-php',
-            'displayName' => 'Filetype Php',
-            'class' => 'bi-filetype-php',
-            'keywords' => ["filetype","php"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-php'],
-            ]
-        ],
-        [
-            'name' => 'filetype-png',
-            'displayName' => 'Filetype Png',
-            'class' => 'bi-filetype-png',
-            'keywords' => ["filetype","png"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-png'],
-            ]
-        ],
-        [
-            'name' => 'filetype-ppt',
-            'displayName' => 'Filetype Ppt',
-            'class' => 'bi-filetype-ppt',
-            'keywords' => ["filetype","ppt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-ppt'],
-            ]
-        ],
-        [
-            'name' => 'filetype-psd',
-            'displayName' => 'Filetype Psd',
-            'class' => 'bi-filetype-psd',
-            'keywords' => ["filetype","psd"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-psd'],
-            ]
-        ],
-        [
-            'name' => 'filetype-py',
-            'displayName' => 'Filetype Py',
-            'class' => 'bi-filetype-py',
-            'keywords' => ["filetype","py"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-py'],
-            ]
-        ],
-        [
-            'name' => 'filetype-raw',
-            'displayName' => 'Filetype Raw',
-            'class' => 'bi-filetype-raw',
-            'keywords' => ["filetype","raw"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-raw'],
-            ]
-        ],
-        [
-            'name' => 'filetype-rb',
-            'displayName' => 'Filetype Rb',
-            'class' => 'bi-filetype-rb',
-            'keywords' => ["filetype","rb"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-rb'],
-            ]
-        ],
-        [
-            'name' => 'filetype-sass',
-            'displayName' => 'Filetype Sass',
-            'class' => 'bi-filetype-sass',
-            'keywords' => ["filetype","sass"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-sass'],
-            ]
-        ],
-        [
-            'name' => 'filetype-scss',
-            'displayName' => 'Filetype Scss',
-            'class' => 'bi-filetype-scss',
-            'keywords' => ["filetype","scss"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-scss'],
-            ]
-        ],
-        [
-            'name' => 'filetype-sh',
-            'displayName' => 'Filetype Sh',
-            'class' => 'bi-filetype-sh',
-            'keywords' => ["filetype","sh"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-sh'],
-            ]
-        ],
-        [
-            'name' => 'filetype-svg',
-            'displayName' => 'Filetype Svg',
-            'class' => 'bi-filetype-svg',
-            'keywords' => ["filetype","svg"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-svg'],
-            ]
-        ],
-        [
-            'name' => 'filetype-tiff',
-            'displayName' => 'Filetype Tiff',
-            'class' => 'bi-filetype-tiff',
-            'keywords' => ["filetype","tiff"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-tiff'],
-            ]
-        ],
-        [
-            'name' => 'filetype-tsx',
-            'displayName' => 'Filetype Tsx',
-            'class' => 'bi-filetype-tsx',
-            'keywords' => ["filetype","tsx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-tsx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-ttf',
-            'displayName' => 'Filetype Ttf',
-            'class' => 'bi-filetype-ttf',
-            'keywords' => ["filetype","ttf"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-ttf'],
-            ]
-        ],
-        [
-            'name' => 'filetype-txt',
-            'displayName' => 'Filetype Txt',
-            'class' => 'bi-filetype-txt',
-            'keywords' => ["filetype","txt"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-txt'],
-            ]
-        ],
-        [
-            'name' => 'filetype-wav',
-            'displayName' => 'Filetype Wav',
-            'class' => 'bi-filetype-wav',
-            'keywords' => ["filetype","wav"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-wav'],
-            ]
-        ],
-        [
-            'name' => 'filetype-woff',
-            'displayName' => 'Filetype Woff',
-            'class' => 'bi-filetype-woff',
-            'keywords' => ["filetype","woff"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-woff'],
-            ]
-        ],
-        [
-            'name' => 'filetype-xls',
-            'displayName' => 'Filetype Xls',
-            'class' => 'bi-filetype-xls',
-            'keywords' => ["filetype","xls"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-xls'],
-            ]
-        ],
-        [
-            'name' => 'filetype-xml',
-            'displayName' => 'Filetype Xml',
-            'class' => 'bi-filetype-xml',
-            'keywords' => ["filetype","xml"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-xml'],
-            ]
-        ],
-        [
-            'name' => 'filetype-yml',
-            'displayName' => 'Filetype Yml',
-            'class' => 'bi-filetype-yml',
-            'keywords' => ["filetype","yml"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-yml'],
-            ]
-        ],
-        [
-            'name' => 'filetype-json',
-            'displayName' => 'Filetype Json',
-            'class' => 'bi-filetype-json',
-            'keywords' => ["filetype","json"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-json'],
-            ]
-        ],
-        [
-            'name' => 'filetype-pptx',
-            'displayName' => 'Filetype Pptx',
-            'class' => 'bi-filetype-pptx',
-            'keywords' => ["filetype","pptx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-pptx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-xlsx',
-            'displayName' => 'Filetype Xlsx',
-            'class' => 'bi-filetype-xlsx',
-            'keywords' => ["filetype","xlsx"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-xlsx'],
-            ]
-        ],
-        [
-            'name' => 'filetype-sql',
-            'displayName' => 'Filetype Sql',
-            'class' => 'bi-filetype-sql',
-            'keywords' => ["filetype","sql"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-filetype-sql'],
-            ]
-        ],
-        [
-            'name' => 'floppy-fill',
-            'displayName' => 'Floppy Fill',
-            'class' => 'bi-floppy-fill',
-            'keywords' => ["floppy","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-floppy-fill'],
-                'outline' => ['class' => 'bi-floppy'],
-            ]
-        ],
-        [
-            'name' => 'floppy',
-            'displayName' => 'Floppy',
-            'class' => 'bi-floppy',
-            'keywords' => ["floppy"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-floppy'],
-                'solid' => ['class' => 'bi-floppy-fill'],
-            ]
-        ],
-        [
-            'name' => 'floppy2-fill',
-            'displayName' => 'Floppy2 Fill',
-            'class' => 'bi-floppy2-fill',
-            'keywords' => ["floppy2","fill"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'solid' => ['class' => 'bi-floppy2-fill'],
-                'outline' => ['class' => 'bi-floppy2'],
-            ]
-        ],
-        [
-            'name' => 'floppy2',
-            'displayName' => 'Floppy2',
-            'class' => 'bi-floppy2',
-            'keywords' => ["floppy2"],
-            'type' => 'bootstrap',
-            'category' => 'files',
-            'variants' => [
-                'outline' => ['class' => 'bi-floppy2'],
-                'solid' => ['class' => 'bi-floppy2-fill'],
-            ]
-        ],
-    ]
-];
+return array (
+  'id' => 'files',
+  'name' => '檔案',
+  'description' => '檔案和文件相關圖標',
+  'priority' => 'normal',
+  'icons' => 
+  array (
+    0 => 
+    array (
+      'id' => 'archive-fill-solid',
+      'name' => 'Archive Fill',
+      'value' => 'bi-archive-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'archive',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    1 => 
+    array (
+      'id' => 'archive-fill-outline',
+      'name' => 'Archive Fill',
+      'value' => 'bi-archive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'archive',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    2 => 
+    array (
+      'id' => 'archive-outline',
+      'name' => 'Archive',
+      'value' => 'bi-archive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'archive',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    3 => 
+    array (
+      'id' => 'back-outline',
+      'name' => 'Back',
+      'value' => 'bi-back',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'back',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    4 => 
+    array (
+      'id' => 'book-fill-solid',
+      'name' => 'Book Fill',
+      'value' => 'bi-book-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'book',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    5 => 
+    array (
+      'id' => 'book-fill-outline',
+      'name' => 'Book Fill',
+      'value' => 'bi-book',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'book',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    6 => 
+    array (
+      'id' => 'book-half-outline',
+      'name' => 'Book Half',
+      'value' => 'bi-book-half',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'book',
+        1 => 'half',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    7 => 
+    array (
+      'id' => 'book-outline',
+      'name' => 'Book',
+      'value' => 'bi-book',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'book',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    8 => 
+    array (
+      'id' => 'bookshelf-outline',
+      'name' => 'Bookshelf',
+      'value' => 'bi-bookshelf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bookshelf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    9 => 
+    array (
+      'id' => 'clipboard-check-outline',
+      'name' => 'Clipboard Check',
+      'value' => 'bi-clipboard-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    10 => 
+    array (
+      'id' => 'clipboard-data-outline',
+      'name' => 'Clipboard Data',
+      'value' => 'bi-clipboard-data',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'data',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    11 => 
+    array (
+      'id' => 'clipboard-minus-outline',
+      'name' => 'Clipboard Minus',
+      'value' => 'bi-clipboard-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    12 => 
+    array (
+      'id' => 'clipboard-plus-outline',
+      'name' => 'Clipboard Plus',
+      'value' => 'bi-clipboard-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    13 => 
+    array (
+      'id' => 'clipboard-x-outline',
+      'name' => 'Clipboard X',
+      'value' => 'bi-clipboard-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    14 => 
+    array (
+      'id' => 'clipboard-outline',
+      'name' => 'Clipboard',
+      'value' => 'bi-clipboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    15 => 
+    array (
+      'id' => 'download-outline',
+      'name' => 'Download',
+      'value' => 'bi-download',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'download',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    16 => 
+    array (
+      'id' => 'file-arrow-down-fill-solid',
+      'name' => 'File Arrow Down Fill',
+      'value' => 'bi-file-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    17 => 
+    array (
+      'id' => 'file-arrow-down-fill-outline',
+      'name' => 'File Arrow Down Fill',
+      'value' => 'bi-file-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'down',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    18 => 
+    array (
+      'id' => 'file-arrow-down-outline',
+      'name' => 'File Arrow Down',
+      'value' => 'bi-file-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    19 => 
+    array (
+      'id' => 'file-arrow-down-solid',
+      'name' => 'File Arrow Down',
+      'value' => 'bi-file-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    20 => 
+    array (
+      'id' => 'file-arrow-up-fill-solid',
+      'name' => 'File Arrow Up Fill',
+      'value' => 'bi-file-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    21 => 
+    array (
+      'id' => 'file-arrow-up-fill-outline',
+      'name' => 'File Arrow Up Fill',
+      'value' => 'bi-file-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'up',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    22 => 
+    array (
+      'id' => 'file-arrow-up-outline',
+      'name' => 'File Arrow Up',
+      'value' => 'bi-file-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    23 => 
+    array (
+      'id' => 'file-arrow-up-solid',
+      'name' => 'File Arrow Up',
+      'value' => 'bi-file-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    24 => 
+    array (
+      'id' => 'file-bar-graph-fill-solid',
+      'name' => 'File Bar Graph Fill',
+      'value' => 'bi-file-bar-graph-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'bar',
+        2 => 'graph',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    25 => 
+    array (
+      'id' => 'file-bar-graph-fill-outline',
+      'name' => 'File Bar Graph Fill',
+      'value' => 'bi-file-bar-graph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'bar',
+        2 => 'graph',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    26 => 
+    array (
+      'id' => 'file-bar-graph-outline',
+      'name' => 'File Bar Graph',
+      'value' => 'bi-file-bar-graph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'bar',
+        2 => 'graph',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    27 => 
+    array (
+      'id' => 'file-binary-fill-solid',
+      'name' => 'File Binary Fill',
+      'value' => 'bi-file-binary-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'binary',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    28 => 
+    array (
+      'id' => 'file-binary-fill-outline',
+      'name' => 'File Binary Fill',
+      'value' => 'bi-file-binary',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'binary',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    29 => 
+    array (
+      'id' => 'file-binary-outline',
+      'name' => 'File Binary',
+      'value' => 'bi-file-binary',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'binary',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    30 => 
+    array (
+      'id' => 'file-break-fill-solid',
+      'name' => 'File Break Fill',
+      'value' => 'bi-file-break-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'break',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    31 => 
+    array (
+      'id' => 'file-break-fill-outline',
+      'name' => 'File Break Fill',
+      'value' => 'bi-file-break',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'break',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    32 => 
+    array (
+      'id' => 'file-break-outline',
+      'name' => 'File Break',
+      'value' => 'bi-file-break',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'break',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    33 => 
+    array (
+      'id' => 'file-check-fill-solid',
+      'name' => 'File Check Fill',
+      'value' => 'bi-file-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    34 => 
+    array (
+      'id' => 'file-check-fill-outline',
+      'name' => 'File Check Fill',
+      'value' => 'bi-file-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    35 => 
+    array (
+      'id' => 'file-check-outline',
+      'name' => 'File Check',
+      'value' => 'bi-file-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    36 => 
+    array (
+      'id' => 'file-code-fill-solid',
+      'name' => 'File Code Fill',
+      'value' => 'bi-file-code-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'code',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    37 => 
+    array (
+      'id' => 'file-code-fill-outline',
+      'name' => 'File Code Fill',
+      'value' => 'bi-file-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'code',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    38 => 
+    array (
+      'id' => 'file-code-outline',
+      'name' => 'File Code',
+      'value' => 'bi-file-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'code',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    39 => 
+    array (
+      'id' => 'file-diff-fill-solid',
+      'name' => 'File Diff Fill',
+      'value' => 'bi-file-diff-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'diff',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    40 => 
+    array (
+      'id' => 'file-diff-fill-outline',
+      'name' => 'File Diff Fill',
+      'value' => 'bi-file-diff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'diff',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    41 => 
+    array (
+      'id' => 'file-diff-outline',
+      'name' => 'File Diff',
+      'value' => 'bi-file-diff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'diff',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    42 => 
+    array (
+      'id' => 'file-earmark-arrow-down-fill-solid',
+      'name' => 'File Earmark Arrow Down Fill',
+      'value' => 'bi-file-earmark-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'down',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    43 => 
+    array (
+      'id' => 'file-earmark-arrow-down-fill-outline',
+      'name' => 'File Earmark Arrow Down Fill',
+      'value' => 'bi-file-earmark-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'down',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    44 => 
+    array (
+      'id' => 'file-earmark-arrow-down-outline',
+      'name' => 'File Earmark Arrow Down',
+      'value' => 'bi-file-earmark-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    45 => 
+    array (
+      'id' => 'file-earmark-arrow-down-solid',
+      'name' => 'File Earmark Arrow Down',
+      'value' => 'bi-file-earmark-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    46 => 
+    array (
+      'id' => 'file-earmark-arrow-up-fill-solid',
+      'name' => 'File Earmark Arrow Up Fill',
+      'value' => 'bi-file-earmark-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'up',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    47 => 
+    array (
+      'id' => 'file-earmark-arrow-up-fill-outline',
+      'name' => 'File Earmark Arrow Up Fill',
+      'value' => 'bi-file-earmark-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'up',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    48 => 
+    array (
+      'id' => 'file-earmark-arrow-up-outline',
+      'name' => 'File Earmark Arrow Up',
+      'value' => 'bi-file-earmark-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    49 => 
+    array (
+      'id' => 'file-earmark-arrow-up-solid',
+      'name' => 'File Earmark Arrow Up',
+      'value' => 'bi-file-earmark-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'arrow',
+        3 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    50 => 
+    array (
+      'id' => 'file-earmark-bar-graph-fill-solid',
+      'name' => 'File Earmark Bar Graph Fill',
+      'value' => 'bi-file-earmark-bar-graph-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'bar',
+        3 => 'graph',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    51 => 
+    array (
+      'id' => 'file-earmark-bar-graph-fill-outline',
+      'name' => 'File Earmark Bar Graph Fill',
+      'value' => 'bi-file-earmark-bar-graph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'bar',
+        3 => 'graph',
+        4 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    52 => 
+    array (
+      'id' => 'file-earmark-bar-graph-outline',
+      'name' => 'File Earmark Bar Graph',
+      'value' => 'bi-file-earmark-bar-graph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'bar',
+        3 => 'graph',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    53 => 
+    array (
+      'id' => 'file-earmark-binary-fill-solid',
+      'name' => 'File Earmark Binary Fill',
+      'value' => 'bi-file-earmark-binary-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'binary',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    54 => 
+    array (
+      'id' => 'file-earmark-binary-fill-outline',
+      'name' => 'File Earmark Binary Fill',
+      'value' => 'bi-file-earmark-binary',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'binary',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    55 => 
+    array (
+      'id' => 'file-earmark-binary-outline',
+      'name' => 'File Earmark Binary',
+      'value' => 'bi-file-earmark-binary',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'binary',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    56 => 
+    array (
+      'id' => 'file-earmark-break-fill-solid',
+      'name' => 'File Earmark Break Fill',
+      'value' => 'bi-file-earmark-break-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'break',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    57 => 
+    array (
+      'id' => 'file-earmark-break-fill-outline',
+      'name' => 'File Earmark Break Fill',
+      'value' => 'bi-file-earmark-break',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'break',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    58 => 
+    array (
+      'id' => 'file-earmark-break-outline',
+      'name' => 'File Earmark Break',
+      'value' => 'bi-file-earmark-break',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'break',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    59 => 
+    array (
+      'id' => 'file-earmark-check-fill-solid',
+      'name' => 'File Earmark Check Fill',
+      'value' => 'bi-file-earmark-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'check',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    60 => 
+    array (
+      'id' => 'file-earmark-check-fill-outline',
+      'name' => 'File Earmark Check Fill',
+      'value' => 'bi-file-earmark-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'check',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    61 => 
+    array (
+      'id' => 'file-earmark-check-outline',
+      'name' => 'File Earmark Check',
+      'value' => 'bi-file-earmark-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    62 => 
+    array (
+      'id' => 'file-earmark-code-fill-solid',
+      'name' => 'File Earmark Code Fill',
+      'value' => 'bi-file-earmark-code-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'code',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    63 => 
+    array (
+      'id' => 'file-earmark-code-fill-outline',
+      'name' => 'File Earmark Code Fill',
+      'value' => 'bi-file-earmark-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'code',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    64 => 
+    array (
+      'id' => 'file-earmark-code-outline',
+      'name' => 'File Earmark Code',
+      'value' => 'bi-file-earmark-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'code',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    65 => 
+    array (
+      'id' => 'file-earmark-diff-fill-solid',
+      'name' => 'File Earmark Diff Fill',
+      'value' => 'bi-file-earmark-diff-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'diff',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    66 => 
+    array (
+      'id' => 'file-earmark-diff-fill-outline',
+      'name' => 'File Earmark Diff Fill',
+      'value' => 'bi-file-earmark-diff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'diff',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    67 => 
+    array (
+      'id' => 'file-earmark-diff-outline',
+      'name' => 'File Earmark Diff',
+      'value' => 'bi-file-earmark-diff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'diff',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    68 => 
+    array (
+      'id' => 'file-earmark-easel-fill-solid',
+      'name' => 'File Earmark Easel Fill',
+      'value' => 'bi-file-earmark-easel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'easel',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    69 => 
+    array (
+      'id' => 'file-earmark-easel-fill-outline',
+      'name' => 'File Earmark Easel Fill',
+      'value' => 'bi-file-earmark-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'easel',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    70 => 
+    array (
+      'id' => 'file-earmark-easel-outline',
+      'name' => 'File Earmark Easel',
+      'value' => 'bi-file-earmark-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'easel',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    71 => 
+    array (
+      'id' => 'file-earmark-excel-fill-solid',
+      'name' => 'File Earmark Excel Fill',
+      'value' => 'bi-file-earmark-excel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'excel',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    72 => 
+    array (
+      'id' => 'file-earmark-excel-fill-outline',
+      'name' => 'File Earmark Excel Fill',
+      'value' => 'bi-file-earmark-excel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'excel',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    73 => 
+    array (
+      'id' => 'file-earmark-excel-outline',
+      'name' => 'File Earmark Excel',
+      'value' => 'bi-file-earmark-excel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'excel',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    74 => 
+    array (
+      'id' => 'file-earmark-fill-solid',
+      'name' => 'File Earmark Fill',
+      'value' => 'bi-file-earmark-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    75 => 
+    array (
+      'id' => 'file-earmark-fill-outline',
+      'name' => 'File Earmark Fill',
+      'value' => 'bi-file-earmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
+      'id' => 'file-earmark-font-fill-solid',
+      'name' => 'File Earmark Font Fill',
+      'value' => 'bi-file-earmark-font-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'font',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    77 => 
+    array (
+      'id' => 'file-earmark-font-fill-outline',
+      'name' => 'File Earmark Font Fill',
+      'value' => 'bi-file-earmark-font',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'font',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    78 => 
+    array (
+      'id' => 'file-earmark-font-outline',
+      'name' => 'File Earmark Font',
+      'value' => 'bi-file-earmark-font',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'font',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    79 => 
+    array (
+      'id' => 'file-earmark-image-fill-solid',
+      'name' => 'File Earmark Image Fill',
+      'value' => 'bi-file-earmark-image-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'image',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    80 => 
+    array (
+      'id' => 'file-earmark-image-fill-outline',
+      'name' => 'File Earmark Image Fill',
+      'value' => 'bi-file-earmark-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'image',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    81 => 
+    array (
+      'id' => 'file-earmark-image-outline',
+      'name' => 'File Earmark Image',
+      'value' => 'bi-file-earmark-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'image',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    82 => 
+    array (
+      'id' => 'file-earmark-lock-fill-solid',
+      'name' => 'File Earmark Lock Fill',
+      'value' => 'bi-file-earmark-lock-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    83 => 
+    array (
+      'id' => 'file-earmark-lock-fill-outline',
+      'name' => 'File Earmark Lock Fill',
+      'value' => 'bi-file-earmark-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    84 => 
+    array (
+      'id' => 'file-earmark-lock-outline',
+      'name' => 'File Earmark Lock',
+      'value' => 'bi-file-earmark-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    85 => 
+    array (
+      'id' => 'file-earmark-lock2-fill-solid',
+      'name' => 'File Earmark Lock2 Fill',
+      'value' => 'bi-file-earmark-lock2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock2',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    86 => 
+    array (
+      'id' => 'file-earmark-lock2-fill-outline',
+      'name' => 'File Earmark Lock2 Fill',
+      'value' => 'bi-file-earmark-lock2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock2',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    87 => 
+    array (
+      'id' => 'file-earmark-lock2-outline',
+      'name' => 'File Earmark Lock2',
+      'value' => 'bi-file-earmark-lock2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'lock2',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    88 => 
+    array (
+      'id' => 'file-earmark-medical-fill-solid',
+      'name' => 'File Earmark Medical Fill',
+      'value' => 'bi-file-earmark-medical-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'medical',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    89 => 
+    array (
+      'id' => 'file-earmark-medical-fill-outline',
+      'name' => 'File Earmark Medical Fill',
+      'value' => 'bi-file-earmark-medical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'medical',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    90 => 
+    array (
+      'id' => 'file-earmark-medical-outline',
+      'name' => 'File Earmark Medical',
+      'value' => 'bi-file-earmark-medical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'medical',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    91 => 
+    array (
+      'id' => 'file-earmark-minus-fill-solid',
+      'name' => 'File Earmark Minus Fill',
+      'value' => 'bi-file-earmark-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'minus',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    92 => 
+    array (
+      'id' => 'file-earmark-minus-fill-outline',
+      'name' => 'File Earmark Minus Fill',
+      'value' => 'bi-file-earmark-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'minus',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    93 => 
+    array (
+      'id' => 'file-earmark-minus-outline',
+      'name' => 'File Earmark Minus',
+      'value' => 'bi-file-earmark-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    94 => 
+    array (
+      'id' => 'file-earmark-music-fill-solid',
+      'name' => 'File Earmark Music Fill',
+      'value' => 'bi-file-earmark-music-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'music',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    95 => 
+    array (
+      'id' => 'file-earmark-music-fill-outline',
+      'name' => 'File Earmark Music Fill',
+      'value' => 'bi-file-earmark-music',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'music',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    96 => 
+    array (
+      'id' => 'file-earmark-music-outline',
+      'name' => 'File Earmark Music',
+      'value' => 'bi-file-earmark-music',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'music',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    97 => 
+    array (
+      'id' => 'file-earmark-person-fill-solid',
+      'name' => 'File Earmark Person Fill',
+      'value' => 'bi-file-earmark-person-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'person',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    98 => 
+    array (
+      'id' => 'file-earmark-person-fill-outline',
+      'name' => 'File Earmark Person Fill',
+      'value' => 'bi-file-earmark-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'person',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    99 => 
+    array (
+      'id' => 'file-earmark-person-outline',
+      'name' => 'File Earmark Person',
+      'value' => 'bi-file-earmark-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    100 => 
+    array (
+      'id' => 'file-earmark-person-solid',
+      'name' => 'File Earmark Person',
+      'value' => 'bi-file-earmark-person-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    101 => 
+    array (
+      'id' => 'file-earmark-play-fill-solid',
+      'name' => 'File Earmark Play Fill',
+      'value' => 'bi-file-earmark-play-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'play',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    102 => 
+    array (
+      'id' => 'file-earmark-play-fill-outline',
+      'name' => 'File Earmark Play Fill',
+      'value' => 'bi-file-earmark-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'play',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    103 => 
+    array (
+      'id' => 'file-earmark-play-outline',
+      'name' => 'File Earmark Play',
+      'value' => 'bi-file-earmark-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'play',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    104 => 
+    array (
+      'id' => 'file-earmark-plus-fill-solid',
+      'name' => 'File Earmark Plus Fill',
+      'value' => 'bi-file-earmark-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'plus',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    105 => 
+    array (
+      'id' => 'file-earmark-plus-fill-outline',
+      'name' => 'File Earmark Plus Fill',
+      'value' => 'bi-file-earmark-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'plus',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    106 => 
+    array (
+      'id' => 'file-earmark-plus-outline',
+      'name' => 'File Earmark Plus',
+      'value' => 'bi-file-earmark-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    107 => 
+    array (
+      'id' => 'file-earmark-post-fill-solid',
+      'name' => 'File Earmark Post Fill',
+      'value' => 'bi-file-earmark-post-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'post',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    108 => 
+    array (
+      'id' => 'file-earmark-post-fill-outline',
+      'name' => 'File Earmark Post Fill',
+      'value' => 'bi-file-earmark-post',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'post',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    109 => 
+    array (
+      'id' => 'file-earmark-post-outline',
+      'name' => 'File Earmark Post',
+      'value' => 'bi-file-earmark-post',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'post',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    110 => 
+    array (
+      'id' => 'file-earmark-ppt-fill-solid',
+      'name' => 'File Earmark Ppt Fill',
+      'value' => 'bi-file-earmark-ppt-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ppt',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    111 => 
+    array (
+      'id' => 'file-earmark-ppt-fill-outline',
+      'name' => 'File Earmark Ppt Fill',
+      'value' => 'bi-file-earmark-ppt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ppt',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    112 => 
+    array (
+      'id' => 'file-earmark-ppt-outline',
+      'name' => 'File Earmark Ppt',
+      'value' => 'bi-file-earmark-ppt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ppt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    113 => 
+    array (
+      'id' => 'file-earmark-richtext-fill-solid',
+      'name' => 'File Earmark Richtext Fill',
+      'value' => 'bi-file-earmark-richtext-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'richtext',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    114 => 
+    array (
+      'id' => 'file-earmark-richtext-fill-outline',
+      'name' => 'File Earmark Richtext Fill',
+      'value' => 'bi-file-earmark-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'richtext',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    115 => 
+    array (
+      'id' => 'file-earmark-richtext-outline',
+      'name' => 'File Earmark Richtext',
+      'value' => 'bi-file-earmark-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'richtext',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    116 => 
+    array (
+      'id' => 'file-earmark-ruled-fill-solid',
+      'name' => 'File Earmark Ruled Fill',
+      'value' => 'bi-file-earmark-ruled-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ruled',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    117 => 
+    array (
+      'id' => 'file-earmark-ruled-fill-outline',
+      'name' => 'File Earmark Ruled Fill',
+      'value' => 'bi-file-earmark-ruled',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ruled',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    118 => 
+    array (
+      'id' => 'file-earmark-ruled-outline',
+      'name' => 'File Earmark Ruled',
+      'value' => 'bi-file-earmark-ruled',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'ruled',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    119 => 
+    array (
+      'id' => 'file-earmark-slides-fill-solid',
+      'name' => 'File Earmark Slides Fill',
+      'value' => 'bi-file-earmark-slides-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'slides',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    120 => 
+    array (
+      'id' => 'file-earmark-slides-fill-outline',
+      'name' => 'File Earmark Slides Fill',
+      'value' => 'bi-file-earmark-slides',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'slides',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    121 => 
+    array (
+      'id' => 'file-earmark-slides-outline',
+      'name' => 'File Earmark Slides',
+      'value' => 'bi-file-earmark-slides',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'slides',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    122 => 
+    array (
+      'id' => 'file-earmark-spreadsheet-fill-solid',
+      'name' => 'File Earmark Spreadsheet Fill',
+      'value' => 'bi-file-earmark-spreadsheet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'spreadsheet',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    123 => 
+    array (
+      'id' => 'file-earmark-spreadsheet-fill-outline',
+      'name' => 'File Earmark Spreadsheet Fill',
+      'value' => 'bi-file-earmark-spreadsheet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'spreadsheet',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    124 => 
+    array (
+      'id' => 'file-earmark-spreadsheet-outline',
+      'name' => 'File Earmark Spreadsheet',
+      'value' => 'bi-file-earmark-spreadsheet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'spreadsheet',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    125 => 
+    array (
+      'id' => 'file-earmark-text-fill-solid',
+      'name' => 'File Earmark Text Fill',
+      'value' => 'bi-file-earmark-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    126 => 
+    array (
+      'id' => 'file-earmark-text-fill-outline',
+      'name' => 'File Earmark Text Fill',
+      'value' => 'bi-file-earmark-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'text',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    127 => 
+    array (
+      'id' => 'file-earmark-text-outline',
+      'name' => 'File Earmark Text',
+      'value' => 'bi-file-earmark-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'text',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    128 => 
+    array (
+      'id' => 'file-earmark-word-fill-solid',
+      'name' => 'File Earmark Word Fill',
+      'value' => 'bi-file-earmark-word-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'word',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    129 => 
+    array (
+      'id' => 'file-earmark-word-fill-outline',
+      'name' => 'File Earmark Word Fill',
+      'value' => 'bi-file-earmark-word',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'word',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
+      'id' => 'file-earmark-word-outline',
+      'name' => 'File Earmark Word',
+      'value' => 'bi-file-earmark-word',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'word',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    131 => 
+    array (
+      'id' => 'file-earmark-x-fill-solid',
+      'name' => 'File Earmark X Fill',
+      'value' => 'bi-file-earmark-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'x',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    132 => 
+    array (
+      'id' => 'file-earmark-x-fill-outline',
+      'name' => 'File Earmark X Fill',
+      'value' => 'bi-file-earmark-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'x',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    133 => 
+    array (
+      'id' => 'file-earmark-x-outline',
+      'name' => 'File Earmark X',
+      'value' => 'bi-file-earmark-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    134 => 
+    array (
+      'id' => 'file-earmark-zip-fill-solid',
+      'name' => 'File Earmark Zip Fill',
+      'value' => 'bi-file-earmark-zip-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'zip',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    135 => 
+    array (
+      'id' => 'file-earmark-zip-fill-outline',
+      'name' => 'File Earmark Zip Fill',
+      'value' => 'bi-file-earmark-zip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'zip',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    136 => 
+    array (
+      'id' => 'file-earmark-zip-outline',
+      'name' => 'File Earmark Zip',
+      'value' => 'bi-file-earmark-zip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'zip',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    137 => 
+    array (
+      'id' => 'file-earmark-outline',
+      'name' => 'File Earmark',
+      'value' => 'bi-file-earmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    138 => 
+    array (
+      'id' => 'file-easel-fill-solid',
+      'name' => 'File Easel Fill',
+      'value' => 'bi-file-easel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'easel',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    139 => 
+    array (
+      'id' => 'file-easel-fill-outline',
+      'name' => 'File Easel Fill',
+      'value' => 'bi-file-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'easel',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    140 => 
+    array (
+      'id' => 'file-easel-outline',
+      'name' => 'File Easel',
+      'value' => 'bi-file-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'easel',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    141 => 
+    array (
+      'id' => 'file-excel-fill-solid',
+      'name' => 'File Excel Fill',
+      'value' => 'bi-file-excel-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'excel',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    142 => 
+    array (
+      'id' => 'file-excel-fill-outline',
+      'name' => 'File Excel Fill',
+      'value' => 'bi-file-excel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'excel',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    143 => 
+    array (
+      'id' => 'file-excel-outline',
+      'name' => 'File Excel',
+      'value' => 'bi-file-excel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'excel',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    144 => 
+    array (
+      'id' => 'file-fill-solid',
+      'name' => 'File Fill',
+      'value' => 'bi-file-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    145 => 
+    array (
+      'id' => 'file-fill-outline',
+      'name' => 'File Fill',
+      'value' => 'bi-file',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    146 => 
+    array (
+      'id' => 'file-font-fill-solid',
+      'name' => 'File Font Fill',
+      'value' => 'bi-file-font-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'font',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    147 => 
+    array (
+      'id' => 'file-font-fill-outline',
+      'name' => 'File Font Fill',
+      'value' => 'bi-file-font',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'font',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    148 => 
+    array (
+      'id' => 'file-font-outline',
+      'name' => 'File Font',
+      'value' => 'bi-file-font',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'font',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    149 => 
+    array (
+      'id' => 'file-image-fill-solid',
+      'name' => 'File Image Fill',
+      'value' => 'bi-file-image-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'image',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    150 => 
+    array (
+      'id' => 'file-image-fill-outline',
+      'name' => 'File Image Fill',
+      'value' => 'bi-file-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'image',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    151 => 
+    array (
+      'id' => 'file-image-outline',
+      'name' => 'File Image',
+      'value' => 'bi-file-image',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'image',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    152 => 
+    array (
+      'id' => 'file-lock-fill-solid',
+      'name' => 'File Lock Fill',
+      'value' => 'bi-file-lock-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    153 => 
+    array (
+      'id' => 'file-lock-fill-outline',
+      'name' => 'File Lock Fill',
+      'value' => 'bi-file-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    154 => 
+    array (
+      'id' => 'file-lock-outline',
+      'name' => 'File Lock',
+      'value' => 'bi-file-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    155 => 
+    array (
+      'id' => 'file-lock2-fill-solid',
+      'name' => 'File Lock2 Fill',
+      'value' => 'bi-file-lock2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock2',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    156 => 
+    array (
+      'id' => 'file-lock2-fill-outline',
+      'name' => 'File Lock2 Fill',
+      'value' => 'bi-file-lock2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock2',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
+      'id' => 'file-lock2-outline',
+      'name' => 'File Lock2',
+      'value' => 'bi-file-lock2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock2',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    158 => 
+    array (
+      'id' => 'file-medical-fill-solid',
+      'name' => 'File Medical Fill',
+      'value' => 'bi-file-medical-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'medical',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    159 => 
+    array (
+      'id' => 'file-medical-fill-outline',
+      'name' => 'File Medical Fill',
+      'value' => 'bi-file-medical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'medical',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    160 => 
+    array (
+      'id' => 'file-medical-outline',
+      'name' => 'File Medical',
+      'value' => 'bi-file-medical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'medical',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    161 => 
+    array (
+      'id' => 'file-minus-fill-solid',
+      'name' => 'File Minus Fill',
+      'value' => 'bi-file-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    162 => 
+    array (
+      'id' => 'file-minus-fill-outline',
+      'name' => 'File Minus Fill',
+      'value' => 'bi-file-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    163 => 
+    array (
+      'id' => 'file-minus-outline',
+      'name' => 'File Minus',
+      'value' => 'bi-file-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    164 => 
+    array (
+      'id' => 'file-music-fill-solid',
+      'name' => 'File Music Fill',
+      'value' => 'bi-file-music-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'music',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    165 => 
+    array (
+      'id' => 'file-music-fill-outline',
+      'name' => 'File Music Fill',
+      'value' => 'bi-file-music',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'music',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    166 => 
+    array (
+      'id' => 'file-music-outline',
+      'name' => 'File Music',
+      'value' => 'bi-file-music',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'music',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    167 => 
+    array (
+      'id' => 'file-person-fill-solid',
+      'name' => 'File Person Fill',
+      'value' => 'bi-file-person-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'person',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    168 => 
+    array (
+      'id' => 'file-person-fill-outline',
+      'name' => 'File Person Fill',
+      'value' => 'bi-file-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'person',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    169 => 
+    array (
+      'id' => 'file-person-outline',
+      'name' => 'File Person',
+      'value' => 'bi-file-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    170 => 
+    array (
+      'id' => 'file-person-solid',
+      'name' => 'File Person',
+      'value' => 'bi-file-person-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    171 => 
+    array (
+      'id' => 'file-play-fill-solid',
+      'name' => 'File Play Fill',
+      'value' => 'bi-file-play-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'play',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    172 => 
+    array (
+      'id' => 'file-play-fill-outline',
+      'name' => 'File Play Fill',
+      'value' => 'bi-file-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'play',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    173 => 
+    array (
+      'id' => 'file-play-outline',
+      'name' => 'File Play',
+      'value' => 'bi-file-play',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'play',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    174 => 
+    array (
+      'id' => 'file-plus-fill-solid',
+      'name' => 'File Plus Fill',
+      'value' => 'bi-file-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    175 => 
+    array (
+      'id' => 'file-plus-fill-outline',
+      'name' => 'File Plus Fill',
+      'value' => 'bi-file-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    176 => 
+    array (
+      'id' => 'file-plus-outline',
+      'name' => 'File Plus',
+      'value' => 'bi-file-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    177 => 
+    array (
+      'id' => 'file-post-fill-solid',
+      'name' => 'File Post Fill',
+      'value' => 'bi-file-post-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'post',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    178 => 
+    array (
+      'id' => 'file-post-fill-outline',
+      'name' => 'File Post Fill',
+      'value' => 'bi-file-post',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'post',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    179 => 
+    array (
+      'id' => 'file-post-outline',
+      'name' => 'File Post',
+      'value' => 'bi-file-post',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'post',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    180 => 
+    array (
+      'id' => 'file-ppt-fill-solid',
+      'name' => 'File Ppt Fill',
+      'value' => 'bi-file-ppt-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ppt',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    181 => 
+    array (
+      'id' => 'file-ppt-fill-outline',
+      'name' => 'File Ppt Fill',
+      'value' => 'bi-file-ppt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ppt',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    182 => 
+    array (
+      'id' => 'file-ppt-outline',
+      'name' => 'File Ppt',
+      'value' => 'bi-file-ppt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ppt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    183 => 
+    array (
+      'id' => 'file-richtext-fill-solid',
+      'name' => 'File Richtext Fill',
+      'value' => 'bi-file-richtext-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'richtext',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    184 => 
+    array (
+      'id' => 'file-richtext-fill-outline',
+      'name' => 'File Richtext Fill',
+      'value' => 'bi-file-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'richtext',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    185 => 
+    array (
+      'id' => 'file-richtext-outline',
+      'name' => 'File Richtext',
+      'value' => 'bi-file-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'richtext',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    186 => 
+    array (
+      'id' => 'file-ruled-fill-solid',
+      'name' => 'File Ruled Fill',
+      'value' => 'bi-file-ruled-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ruled',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    187 => 
+    array (
+      'id' => 'file-ruled-fill-outline',
+      'name' => 'File Ruled Fill',
+      'value' => 'bi-file-ruled',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ruled',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    188 => 
+    array (
+      'id' => 'file-ruled-outline',
+      'name' => 'File Ruled',
+      'value' => 'bi-file-ruled',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'ruled',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    189 => 
+    array (
+      'id' => 'file-slides-fill-solid',
+      'name' => 'File Slides Fill',
+      'value' => 'bi-file-slides-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'slides',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    190 => 
+    array (
+      'id' => 'file-slides-fill-outline',
+      'name' => 'File Slides Fill',
+      'value' => 'bi-file-slides',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'slides',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    191 => 
+    array (
+      'id' => 'file-slides-outline',
+      'name' => 'File Slides',
+      'value' => 'bi-file-slides',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'slides',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    192 => 
+    array (
+      'id' => 'file-spreadsheet-fill-solid',
+      'name' => 'File Spreadsheet Fill',
+      'value' => 'bi-file-spreadsheet-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'spreadsheet',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    193 => 
+    array (
+      'id' => 'file-spreadsheet-fill-outline',
+      'name' => 'File Spreadsheet Fill',
+      'value' => 'bi-file-spreadsheet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'spreadsheet',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    194 => 
+    array (
+      'id' => 'file-spreadsheet-outline',
+      'name' => 'File Spreadsheet',
+      'value' => 'bi-file-spreadsheet',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'spreadsheet',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    195 => 
+    array (
+      'id' => 'file-text-fill-solid',
+      'name' => 'File Text Fill',
+      'value' => 'bi-file-text-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'text',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    196 => 
+    array (
+      'id' => 'file-text-fill-outline',
+      'name' => 'File Text Fill',
+      'value' => 'bi-file-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'text',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    197 => 
+    array (
+      'id' => 'file-text-outline',
+      'name' => 'File Text',
+      'value' => 'bi-file-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'text',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    198 => 
+    array (
+      'id' => 'file-word-fill-solid',
+      'name' => 'File Word Fill',
+      'value' => 'bi-file-word-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'word',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    199 => 
+    array (
+      'id' => 'file-word-fill-outline',
+      'name' => 'File Word Fill',
+      'value' => 'bi-file-word',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'word',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    200 => 
+    array (
+      'id' => 'file-word-outline',
+      'name' => 'File Word',
+      'value' => 'bi-file-word',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'word',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    201 => 
+    array (
+      'id' => 'file-x-fill-solid',
+      'name' => 'File X Fill',
+      'value' => 'bi-file-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    202 => 
+    array (
+      'id' => 'file-x-fill-outline',
+      'name' => 'File X Fill',
+      'value' => 'bi-file-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    203 => 
+    array (
+      'id' => 'file-x-outline',
+      'name' => 'File X',
+      'value' => 'bi-file-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    204 => 
+    array (
+      'id' => 'file-zip-fill-solid',
+      'name' => 'File Zip Fill',
+      'value' => 'bi-file-zip-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'zip',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    205 => 
+    array (
+      'id' => 'file-zip-fill-outline',
+      'name' => 'File Zip Fill',
+      'value' => 'bi-file-zip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'zip',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    206 => 
+    array (
+      'id' => 'file-zip-outline',
+      'name' => 'File Zip',
+      'value' => 'bi-file-zip',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'zip',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    207 => 
+    array (
+      'id' => 'file-outline',
+      'name' => 'File',
+      'value' => 'bi-file',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    208 => 
+    array (
+      'id' => 'files-alt-outline',
+      'name' => 'Files Alt',
+      'value' => 'bi-files-alt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'files',
+        1 => 'alt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    209 => 
+    array (
+      'id' => 'files-outline',
+      'name' => 'Files',
+      'value' => 'bi-files',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'files',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    210 => 
+    array (
+      'id' => 'folder-check-outline',
+      'name' => 'Folder Check',
+      'value' => 'bi-folder-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    211 => 
+    array (
+      'id' => 'folder-check-solid',
+      'name' => 'Folder Check',
+      'value' => 'bi-folder-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    212 => 
+    array (
+      'id' => 'folder-fill-solid',
+      'name' => 'Folder Fill',
+      'value' => 'bi-folder-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    213 => 
+    array (
+      'id' => 'folder-fill-outline',
+      'name' => 'Folder Fill',
+      'value' => 'bi-folder',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    214 => 
+    array (
+      'id' => 'folder-minus-outline',
+      'name' => 'Folder Minus',
+      'value' => 'bi-folder-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    215 => 
+    array (
+      'id' => 'folder-minus-solid',
+      'name' => 'Folder Minus',
+      'value' => 'bi-folder-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    216 => 
+    array (
+      'id' => 'folder-plus-outline',
+      'name' => 'Folder Plus',
+      'value' => 'bi-folder-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    217 => 
+    array (
+      'id' => 'folder-plus-solid',
+      'name' => 'Folder Plus',
+      'value' => 'bi-folder-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    218 => 
+    array (
+      'id' => 'folder-symlink-fill-solid',
+      'name' => 'Folder Symlink Fill',
+      'value' => 'bi-folder-symlink-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'symlink',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    219 => 
+    array (
+      'id' => 'folder-symlink-fill-outline',
+      'name' => 'Folder Symlink Fill',
+      'value' => 'bi-folder-symlink',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'symlink',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    220 => 
+    array (
+      'id' => 'folder-symlink-outline',
+      'name' => 'Folder Symlink',
+      'value' => 'bi-folder-symlink',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'symlink',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    221 => 
+    array (
+      'id' => 'folder-symlink-solid',
+      'name' => 'Folder Symlink',
+      'value' => 'bi-folder-symlink-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'symlink',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    222 => 
+    array (
+      'id' => 'folder-x-outline',
+      'name' => 'Folder X',
+      'value' => 'bi-folder-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    223 => 
+    array (
+      'id' => 'folder-x-solid',
+      'name' => 'Folder X',
+      'value' => 'bi-folder-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    224 => 
+    array (
+      'id' => 'folder-outline',
+      'name' => 'Folder',
+      'value' => 'bi-folder',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    225 => 
+    array (
+      'id' => 'folder-solid',
+      'name' => 'Folder',
+      'value' => 'bi-folder-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    226 => 
+    array (
+      'id' => 'folder2-open-outline',
+      'name' => 'Folder2 Open',
+      'value' => 'bi-folder2-open',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder2',
+        1 => 'open',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    227 => 
+    array (
+      'id' => 'folder2-open-solid',
+      'name' => 'Folder2 Open',
+      'value' => 'bi-folder2-open-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder2',
+        1 => 'open',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    228 => 
+    array (
+      'id' => 'folder2-outline',
+      'name' => 'Folder2',
+      'value' => 'bi-folder2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder2',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    229 => 
+    array (
+      'id' => 'folder2-solid',
+      'name' => 'Folder2',
+      'value' => 'bi-folder2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'folder2',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    230 => 
+    array (
+      'id' => 'journal-album-outline',
+      'name' => 'Journal Album',
+      'value' => 'bi-journal-album',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'album',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    231 => 
+    array (
+      'id' => 'journal-arrow-down-outline',
+      'name' => 'Journal Arrow Down',
+      'value' => 'bi-journal-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    232 => 
+    array (
+      'id' => 'journal-arrow-down-solid',
+      'name' => 'Journal Arrow Down',
+      'value' => 'bi-journal-arrow-down-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    233 => 
+    array (
+      'id' => 'journal-arrow-up-outline',
+      'name' => 'Journal Arrow Up',
+      'value' => 'bi-journal-arrow-up',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    234 => 
+    array (
+      'id' => 'journal-arrow-up-solid',
+      'name' => 'Journal Arrow Up',
+      'value' => 'bi-journal-arrow-up-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'arrow',
+        2 => 'up',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    235 => 
+    array (
+      'id' => 'journal-bookmark-fill-solid',
+      'name' => 'Journal Bookmark Fill',
+      'value' => 'bi-journal-bookmark-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'bookmark',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    236 => 
+    array (
+      'id' => 'journal-bookmark-fill-outline',
+      'name' => 'Journal Bookmark Fill',
+      'value' => 'bi-journal-bookmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'bookmark',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    237 => 
+    array (
+      'id' => 'journal-bookmark-outline',
+      'name' => 'Journal Bookmark',
+      'value' => 'bi-journal-bookmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'bookmark',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    238 => 
+    array (
+      'id' => 'journal-bookmark-solid',
+      'name' => 'Journal Bookmark',
+      'value' => 'bi-journal-bookmark-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'bookmark',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    239 => 
+    array (
+      'id' => 'journal-check-outline',
+      'name' => 'Journal Check',
+      'value' => 'bi-journal-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    240 => 
+    array (
+      'id' => 'journal-code-outline',
+      'name' => 'Journal Code',
+      'value' => 'bi-journal-code',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'code',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    241 => 
+    array (
+      'id' => 'journal-medical-outline',
+      'name' => 'Journal Medical',
+      'value' => 'bi-journal-medical',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'medical',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    242 => 
+    array (
+      'id' => 'journal-minus-outline',
+      'name' => 'Journal Minus',
+      'value' => 'bi-journal-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    243 => 
+    array (
+      'id' => 'journal-plus-outline',
+      'name' => 'Journal Plus',
+      'value' => 'bi-journal-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    244 => 
+    array (
+      'id' => 'journal-richtext-outline',
+      'name' => 'Journal Richtext',
+      'value' => 'bi-journal-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'richtext',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    245 => 
+    array (
+      'id' => 'journal-text-outline',
+      'name' => 'Journal Text',
+      'value' => 'bi-journal-text',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'text',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    246 => 
+    array (
+      'id' => 'journal-x-outline',
+      'name' => 'Journal X',
+      'value' => 'bi-journal-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    247 => 
+    array (
+      'id' => 'journal-outline',
+      'name' => 'Journal',
+      'value' => 'bi-journal',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    248 => 
+    array (
+      'id' => 'journals-outline',
+      'name' => 'Journals',
+      'value' => 'bi-journals',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journals',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    249 => 
+    array (
+      'id' => 'receipt-cutoff-outline',
+      'name' => 'Receipt Cutoff',
+      'value' => 'bi-receipt-cutoff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'receipt',
+        1 => 'cutoff',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    250 => 
+    array (
+      'id' => 'receipt-outline',
+      'name' => 'Receipt',
+      'value' => 'bi-receipt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'receipt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    251 => 
+    array (
+      'id' => 'save-fill-solid',
+      'name' => 'Save Fill',
+      'value' => 'bi-save-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    252 => 
+    array (
+      'id' => 'save-fill-outline',
+      'name' => 'Save Fill',
+      'value' => 'bi-save',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    253 => 
+    array (
+      'id' => 'save-outline',
+      'name' => 'Save',
+      'value' => 'bi-save',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    254 => 
+    array (
+      'id' => 'save2-fill-solid',
+      'name' => 'Save2 Fill',
+      'value' => 'bi-save2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    255 => 
+    array (
+      'id' => 'save2-fill-outline',
+      'name' => 'Save2 Fill',
+      'value' => 'bi-save2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    256 => 
+    array (
+      'id' => 'save2-outline',
+      'name' => 'Save2',
+      'value' => 'bi-save2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save2',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    257 => 
+    array (
+      'id' => 'upload-outline',
+      'name' => 'Upload',
+      'value' => 'bi-upload',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'upload',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    258 => 
+    array (
+      'id' => 'file-earmark-pdf-fill-solid',
+      'name' => 'File Earmark Pdf Fill',
+      'value' => 'bi-file-earmark-pdf-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'pdf',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    259 => 
+    array (
+      'id' => 'file-earmark-pdf-fill-outline',
+      'name' => 'File Earmark Pdf Fill',
+      'value' => 'bi-file-earmark-pdf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'pdf',
+        3 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    260 => 
+    array (
+      'id' => 'file-earmark-pdf-outline',
+      'name' => 'File Earmark Pdf',
+      'value' => 'bi-file-earmark-pdf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'pdf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    261 => 
+    array (
+      'id' => 'file-pdf-fill-solid',
+      'name' => 'File Pdf Fill',
+      'value' => 'bi-file-pdf-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'pdf',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    262 => 
+    array (
+      'id' => 'file-pdf-fill-outline',
+      'name' => 'File Pdf Fill',
+      'value' => 'bi-file-pdf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'pdf',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    263 => 
+    array (
+      'id' => 'file-pdf-outline',
+      'name' => 'File Pdf',
+      'value' => 'bi-file-pdf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'pdf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    264 => 
+    array (
+      'id' => 'clipboard-check-fill-solid',
+      'name' => 'Clipboard Check Fill',
+      'value' => 'bi-clipboard-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    265 => 
+    array (
+      'id' => 'clipboard-check-fill-outline',
+      'name' => 'Clipboard Check Fill',
+      'value' => 'bi-clipboard-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    266 => 
+    array (
+      'id' => 'clipboard-data-fill-solid',
+      'name' => 'Clipboard Data Fill',
+      'value' => 'bi-clipboard-data-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'data',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    267 => 
+    array (
+      'id' => 'clipboard-data-fill-outline',
+      'name' => 'Clipboard Data Fill',
+      'value' => 'bi-clipboard-data',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'data',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    268 => 
+    array (
+      'id' => 'clipboard-fill-solid',
+      'name' => 'Clipboard Fill',
+      'value' => 'bi-clipboard-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    269 => 
+    array (
+      'id' => 'clipboard-fill-outline',
+      'name' => 'Clipboard Fill',
+      'value' => 'bi-clipboard',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    270 => 
+    array (
+      'id' => 'clipboard-heart-fill-solid',
+      'name' => 'Clipboard Heart Fill',
+      'value' => 'bi-clipboard-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    271 => 
+    array (
+      'id' => 'clipboard-heart-fill-outline',
+      'name' => 'Clipboard Heart Fill',
+      'value' => 'bi-clipboard-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    272 => 
+    array (
+      'id' => 'clipboard-heart-outline',
+      'name' => 'Clipboard Heart',
+      'value' => 'bi-clipboard-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'heart',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    273 => 
+    array (
+      'id' => 'clipboard-heart-solid',
+      'name' => 'Clipboard Heart',
+      'value' => 'bi-clipboard-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'heart',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    274 => 
+    array (
+      'id' => 'clipboard-minus-fill-solid',
+      'name' => 'Clipboard Minus Fill',
+      'value' => 'bi-clipboard-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    275 => 
+    array (
+      'id' => 'clipboard-minus-fill-outline',
+      'name' => 'Clipboard Minus Fill',
+      'value' => 'bi-clipboard-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    276 => 
+    array (
+      'id' => 'clipboard-plus-fill-solid',
+      'name' => 'Clipboard Plus Fill',
+      'value' => 'bi-clipboard-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    277 => 
+    array (
+      'id' => 'clipboard-plus-fill-outline',
+      'name' => 'Clipboard Plus Fill',
+      'value' => 'bi-clipboard-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    278 => 
+    array (
+      'id' => 'clipboard-pulse-outline',
+      'name' => 'Clipboard Pulse',
+      'value' => 'bi-clipboard-pulse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'pulse',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    279 => 
+    array (
+      'id' => 'clipboard-x-fill-solid',
+      'name' => 'Clipboard X Fill',
+      'value' => 'bi-clipboard-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    280 => 
+    array (
+      'id' => 'clipboard-x-fill-outline',
+      'name' => 'Clipboard X Fill',
+      'value' => 'bi-clipboard-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    281 => 
+    array (
+      'id' => 'clipboard2-check-fill-solid',
+      'name' => 'Clipboard2 Check Fill',
+      'value' => 'bi-clipboard2-check-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    282 => 
+    array (
+      'id' => 'clipboard2-check-fill-outline',
+      'name' => 'Clipboard2 Check Fill',
+      'value' => 'bi-clipboard2-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'check',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    283 => 
+    array (
+      'id' => 'clipboard2-check-outline',
+      'name' => 'Clipboard2 Check',
+      'value' => 'bi-clipboard2-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    284 => 
+    array (
+      'id' => 'clipboard2-data-fill-solid',
+      'name' => 'Clipboard2 Data Fill',
+      'value' => 'bi-clipboard2-data-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'data',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    285 => 
+    array (
+      'id' => 'clipboard2-data-fill-outline',
+      'name' => 'Clipboard2 Data Fill',
+      'value' => 'bi-clipboard2-data',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'data',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    286 => 
+    array (
+      'id' => 'clipboard2-data-outline',
+      'name' => 'Clipboard2 Data',
+      'value' => 'bi-clipboard2-data',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'data',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    287 => 
+    array (
+      'id' => 'clipboard2-fill-solid',
+      'name' => 'Clipboard2 Fill',
+      'value' => 'bi-clipboard2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    288 => 
+    array (
+      'id' => 'clipboard2-fill-outline',
+      'name' => 'Clipboard2 Fill',
+      'value' => 'bi-clipboard2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    289 => 
+    array (
+      'id' => 'clipboard2-heart-fill-solid',
+      'name' => 'Clipboard2 Heart Fill',
+      'value' => 'bi-clipboard2-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    290 => 
+    array (
+      'id' => 'clipboard2-heart-fill-outline',
+      'name' => 'Clipboard2 Heart Fill',
+      'value' => 'bi-clipboard2-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'heart',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    291 => 
+    array (
+      'id' => 'clipboard2-heart-outline',
+      'name' => 'Clipboard2 Heart',
+      'value' => 'bi-clipboard2-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'heart',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    292 => 
+    array (
+      'id' => 'clipboard2-heart-solid',
+      'name' => 'Clipboard2 Heart',
+      'value' => 'bi-clipboard2-heart-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'heart',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    293 => 
+    array (
+      'id' => 'clipboard2-minus-fill-solid',
+      'name' => 'Clipboard2 Minus Fill',
+      'value' => 'bi-clipboard2-minus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    294 => 
+    array (
+      'id' => 'clipboard2-minus-fill-outline',
+      'name' => 'Clipboard2 Minus Fill',
+      'value' => 'bi-clipboard2-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'minus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    295 => 
+    array (
+      'id' => 'clipboard2-minus-outline',
+      'name' => 'Clipboard2 Minus',
+      'value' => 'bi-clipboard2-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'minus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    296 => 
+    array (
+      'id' => 'clipboard2-plus-fill-solid',
+      'name' => 'Clipboard2 Plus Fill',
+      'value' => 'bi-clipboard2-plus-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    297 => 
+    array (
+      'id' => 'clipboard2-plus-fill-outline',
+      'name' => 'Clipboard2 Plus Fill',
+      'value' => 'bi-clipboard2-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'plus',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    298 => 
+    array (
+      'id' => 'clipboard2-plus-outline',
+      'name' => 'Clipboard2 Plus',
+      'value' => 'bi-clipboard2-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    299 => 
+    array (
+      'id' => 'clipboard2-pulse-fill-solid',
+      'name' => 'Clipboard2 Pulse Fill',
+      'value' => 'bi-clipboard2-pulse-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'pulse',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    300 => 
+    array (
+      'id' => 'clipboard2-pulse-fill-outline',
+      'name' => 'Clipboard2 Pulse Fill',
+      'value' => 'bi-clipboard2-pulse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'pulse',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    301 => 
+    array (
+      'id' => 'clipboard2-pulse-outline',
+      'name' => 'Clipboard2 Pulse',
+      'value' => 'bi-clipboard2-pulse',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'pulse',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    302 => 
+    array (
+      'id' => 'clipboard2-x-fill-solid',
+      'name' => 'Clipboard2 X Fill',
+      'value' => 'bi-clipboard2-x-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    303 => 
+    array (
+      'id' => 'clipboard2-x-fill-outline',
+      'name' => 'Clipboard2 X Fill',
+      'value' => 'bi-clipboard2-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'x',
+        2 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    304 => 
+    array (
+      'id' => 'clipboard2-x-outline',
+      'name' => 'Clipboard2 X',
+      'value' => 'bi-clipboard2-x',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'x',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    305 => 
+    array (
+      'id' => 'clipboard2-outline',
+      'name' => 'Clipboard2',
+      'value' => 'bi-clipboard2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    306 => 
+    array (
+      'id' => 'filetype-aac-outline',
+      'name' => 'Filetype Aac',
+      'value' => 'bi-filetype-aac',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'aac',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    307 => 
+    array (
+      'id' => 'filetype-ai-outline',
+      'name' => 'Filetype Ai',
+      'value' => 'bi-filetype-ai',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'ai',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    308 => 
+    array (
+      'id' => 'filetype-bmp-outline',
+      'name' => 'Filetype Bmp',
+      'value' => 'bi-filetype-bmp',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'bmp',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    309 => 
+    array (
+      'id' => 'filetype-cs-outline',
+      'name' => 'Filetype Cs',
+      'value' => 'bi-filetype-cs',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'cs',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    310 => 
+    array (
+      'id' => 'filetype-css-outline',
+      'name' => 'Filetype Css',
+      'value' => 'bi-filetype-css',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'css',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    311 => 
+    array (
+      'id' => 'filetype-csv-outline',
+      'name' => 'Filetype Csv',
+      'value' => 'bi-filetype-csv',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'csv',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    312 => 
+    array (
+      'id' => 'filetype-doc-outline',
+      'name' => 'Filetype Doc',
+      'value' => 'bi-filetype-doc',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'doc',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    313 => 
+    array (
+      'id' => 'filetype-docx-outline',
+      'name' => 'Filetype Docx',
+      'value' => 'bi-filetype-docx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'docx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    314 => 
+    array (
+      'id' => 'filetype-exe-outline',
+      'name' => 'Filetype Exe',
+      'value' => 'bi-filetype-exe',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'exe',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    315 => 
+    array (
+      'id' => 'filetype-gif-outline',
+      'name' => 'Filetype Gif',
+      'value' => 'bi-filetype-gif',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'gif',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    316 => 
+    array (
+      'id' => 'filetype-heic-outline',
+      'name' => 'Filetype Heic',
+      'value' => 'bi-filetype-heic',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'heic',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    317 => 
+    array (
+      'id' => 'filetype-html-outline',
+      'name' => 'Filetype Html',
+      'value' => 'bi-filetype-html',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'html',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    318 => 
+    array (
+      'id' => 'filetype-java-outline',
+      'name' => 'Filetype Java',
+      'value' => 'bi-filetype-java',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'java',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    319 => 
+    array (
+      'id' => 'filetype-jpg-outline',
+      'name' => 'Filetype Jpg',
+      'value' => 'bi-filetype-jpg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'jpg',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    320 => 
+    array (
+      'id' => 'filetype-js-outline',
+      'name' => 'Filetype Js',
+      'value' => 'bi-filetype-js',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'js',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    321 => 
+    array (
+      'id' => 'filetype-jsx-outline',
+      'name' => 'Filetype Jsx',
+      'value' => 'bi-filetype-jsx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'jsx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    322 => 
+    array (
+      'id' => 'filetype-key-outline',
+      'name' => 'Filetype Key',
+      'value' => 'bi-filetype-key',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'key',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    323 => 
+    array (
+      'id' => 'filetype-m4p-outline',
+      'name' => 'Filetype M4p',
+      'value' => 'bi-filetype-m4p',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'm4p',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    324 => 
+    array (
+      'id' => 'filetype-md-outline',
+      'name' => 'Filetype Md',
+      'value' => 'bi-filetype-md',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'md',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    325 => 
+    array (
+      'id' => 'filetype-mdx-outline',
+      'name' => 'Filetype Mdx',
+      'value' => 'bi-filetype-mdx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'mdx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    326 => 
+    array (
+      'id' => 'filetype-mov-outline',
+      'name' => 'Filetype Mov',
+      'value' => 'bi-filetype-mov',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'mov',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    327 => 
+    array (
+      'id' => 'filetype-mp3-outline',
+      'name' => 'Filetype Mp3',
+      'value' => 'bi-filetype-mp3',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'mp3',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    328 => 
+    array (
+      'id' => 'filetype-mp4-outline',
+      'name' => 'Filetype Mp4',
+      'value' => 'bi-filetype-mp4',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'mp4',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    329 => 
+    array (
+      'id' => 'filetype-otf-outline',
+      'name' => 'Filetype Otf',
+      'value' => 'bi-filetype-otf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'otf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    330 => 
+    array (
+      'id' => 'filetype-pdf-outline',
+      'name' => 'Filetype Pdf',
+      'value' => 'bi-filetype-pdf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'pdf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    331 => 
+    array (
+      'id' => 'filetype-php-outline',
+      'name' => 'Filetype Php',
+      'value' => 'bi-filetype-php',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'php',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    332 => 
+    array (
+      'id' => 'filetype-png-outline',
+      'name' => 'Filetype Png',
+      'value' => 'bi-filetype-png',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'png',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    333 => 
+    array (
+      'id' => 'filetype-ppt-outline',
+      'name' => 'Filetype Ppt',
+      'value' => 'bi-filetype-ppt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'ppt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    334 => 
+    array (
+      'id' => 'filetype-psd-outline',
+      'name' => 'Filetype Psd',
+      'value' => 'bi-filetype-psd',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'psd',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    335 => 
+    array (
+      'id' => 'filetype-py-outline',
+      'name' => 'Filetype Py',
+      'value' => 'bi-filetype-py',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'py',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    336 => 
+    array (
+      'id' => 'filetype-raw-outline',
+      'name' => 'Filetype Raw',
+      'value' => 'bi-filetype-raw',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'raw',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    337 => 
+    array (
+      'id' => 'filetype-rb-outline',
+      'name' => 'Filetype Rb',
+      'value' => 'bi-filetype-rb',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'rb',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    338 => 
+    array (
+      'id' => 'filetype-sass-outline',
+      'name' => 'Filetype Sass',
+      'value' => 'bi-filetype-sass',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'sass',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    339 => 
+    array (
+      'id' => 'filetype-scss-outline',
+      'name' => 'Filetype Scss',
+      'value' => 'bi-filetype-scss',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'scss',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    340 => 
+    array (
+      'id' => 'filetype-sh-outline',
+      'name' => 'Filetype Sh',
+      'value' => 'bi-filetype-sh',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'sh',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    341 => 
+    array (
+      'id' => 'filetype-svg-outline',
+      'name' => 'Filetype Svg',
+      'value' => 'bi-filetype-svg',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'svg',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    342 => 
+    array (
+      'id' => 'filetype-tiff-outline',
+      'name' => 'Filetype Tiff',
+      'value' => 'bi-filetype-tiff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'tiff',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    343 => 
+    array (
+      'id' => 'filetype-tsx-outline',
+      'name' => 'Filetype Tsx',
+      'value' => 'bi-filetype-tsx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'tsx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    344 => 
+    array (
+      'id' => 'filetype-ttf-outline',
+      'name' => 'Filetype Ttf',
+      'value' => 'bi-filetype-ttf',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'ttf',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    345 => 
+    array (
+      'id' => 'filetype-txt-outline',
+      'name' => 'Filetype Txt',
+      'value' => 'bi-filetype-txt',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'txt',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    346 => 
+    array (
+      'id' => 'filetype-wav-outline',
+      'name' => 'Filetype Wav',
+      'value' => 'bi-filetype-wav',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'wav',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    347 => 
+    array (
+      'id' => 'filetype-woff-outline',
+      'name' => 'Filetype Woff',
+      'value' => 'bi-filetype-woff',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'woff',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    348 => 
+    array (
+      'id' => 'filetype-xls-outline',
+      'name' => 'Filetype Xls',
+      'value' => 'bi-filetype-xls',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'xls',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    349 => 
+    array (
+      'id' => 'filetype-xml-outline',
+      'name' => 'Filetype Xml',
+      'value' => 'bi-filetype-xml',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'xml',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    350 => 
+    array (
+      'id' => 'filetype-yml-outline',
+      'name' => 'Filetype Yml',
+      'value' => 'bi-filetype-yml',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'yml',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    351 => 
+    array (
+      'id' => 'filetype-json-outline',
+      'name' => 'Filetype Json',
+      'value' => 'bi-filetype-json',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'json',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    352 => 
+    array (
+      'id' => 'filetype-pptx-outline',
+      'name' => 'Filetype Pptx',
+      'value' => 'bi-filetype-pptx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'pptx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    353 => 
+    array (
+      'id' => 'filetype-xlsx-outline',
+      'name' => 'Filetype Xlsx',
+      'value' => 'bi-filetype-xlsx',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'xlsx',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    354 => 
+    array (
+      'id' => 'filetype-sql-outline',
+      'name' => 'Filetype Sql',
+      'value' => 'bi-filetype-sql',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'filetype',
+        1 => 'sql',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    355 => 
+    array (
+      'id' => 'floppy-fill-solid',
+      'name' => 'Floppy Fill',
+      'value' => 'bi-floppy-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    356 => 
+    array (
+      'id' => 'floppy-fill-outline',
+      'name' => 'Floppy Fill',
+      'value' => 'bi-floppy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    357 => 
+    array (
+      'id' => 'floppy-outline',
+      'name' => 'Floppy',
+      'value' => 'bi-floppy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+    358 => 
+    array (
+      'id' => 'floppy2-fill-solid',
+      'name' => 'Floppy2 Fill',
+      'value' => 'bi-floppy2-fill',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'solid',
+    ),
+    359 => 
+    array (
+      'id' => 'floppy2-fill-outline',
+      'name' => 'Floppy2 Fill',
+      'value' => 'bi-floppy2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy2',
+        1 => 'fill',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    360 => 
+    array (
+      'id' => 'floppy2-outline',
+      'name' => 'Floppy2',
+      'value' => 'bi-floppy2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy2',
+      ),
+      'category' => 'files',
+      'has_variants' => false,
+      'variant_type' => 'outline',
+    ),
+  ),
+);
