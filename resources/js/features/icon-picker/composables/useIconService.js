@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useAsyncState } from './useAsyncState.js'
-import { shouldFilterEmoji } from '../../../utils/emojiFilter.js'
 
 /**
  * 圖標服務 Composable - 適配新的扁平化 API 格式
@@ -276,17 +275,12 @@ export function useIconService() {
     
     Object.entries(data).forEach(([categoryId, emojis]) => {
       if (Array.isArray(emojis) && emojis.length > 0) {
-        // 對每個分類的 emoji 進行過濾和清理
-        const filteredEmojis = filterAndCleanEmojis(emojis)
-        
-        // 只有當還有 emoji 時才添加分類
-        if (filteredEmojis.length > 0) {
-          result.push({
-            categoryId,
-            categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
-            emojis: filteredEmojis
-          })
-        }
+        // API 端已經處理過濾，直接使用
+        result.push({
+          categoryId,
+          categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
+          emojis: emojis
+        })
       }
     })
     
@@ -326,8 +320,8 @@ export function useIconService() {
         }
       })
       
-      // 過濾和清理 emoji
-      const cleanedEmojis = filterAndCleanEmojis(allEmojis)
+      // API 端已經處理過濾，直接使用
+      const cleanedEmojis = allEmojis
       
       // 只有當有 emoji 時才新增分類
       if (cleanedEmojis.length > 0) {
@@ -342,54 +336,6 @@ export function useIconService() {
     return result
   }
 
-  /**
-   * 過濾和清理 emoji，移除複合 emoji、膚色變體和黑名單 emoji
-   */
-  const filterAndCleanEmojis = (emojis) => {
-    const seen = new Set()
-    const result = []
-    
-    emojis.forEach(emojiData => {
-      if (!emojiData.emoji) return
-      
-      // 檢查黑名單過濾
-      const filterResult = shouldFilterEmoji(emojiData)
-      if (filterResult.shouldFilter) {
-        console.log(`過濾黑名單 emoji: ${emojiData.emoji} - ${filterResult.reason}`)
-        return // 跳過黑名單中的 emoji
-      }
-      
-      // 移除膚色修飾符和變化選擇器
-      const baseEmoji = emojiData.emoji
-        .replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '') // 移除膚色修飾符
-        .replace(/\uFE0F/g, '') // 移除變化選擇器
-        .replace(/\u200D.*$/g, '') // 移除 ZWJ 序列（複合 emoji）
-        .trim()
-      
-      // 跳過空字符串或已經處理過的基礎 emoji
-      if (!baseEmoji || seen.has(baseEmoji)) {
-        return
-      }
-      
-      // 跳過複合 emoji（包含 ZWJ 的 emoji）
-      if (emojiData.emoji.includes('\u200D')) {
-        return
-      }
-      
-      // 跳過膚色變體（保留基礎版本）
-      if (/[\u{1F3FB}-\u{1F3FF}]/u.test(emojiData.emoji)) {
-        return
-      }
-      
-      seen.add(baseEmoji)
-      result.push({
-        ...emojiData,
-        emoji: baseEmoji
-      })
-    })
-    
-    return result
-  }
 
   /**
    * 快取相關輔助函數

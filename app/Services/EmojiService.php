@@ -8,10 +8,12 @@ use Illuminate\Support\Facades\File;
 class EmojiService
 {
     private EmojiSkinToneService $skinToneService;
+    private EmojiFilterService $filterService;
 
-    public function __construct(EmojiSkinToneService $skinToneService)
+    public function __construct(EmojiSkinToneService $skinToneService, EmojiFilterService $filterService)
     {
         $this->skinToneService = $skinToneService;
+        $this->filterService = $filterService;
     }
 
     /**
@@ -76,10 +78,13 @@ class EmojiService
                     }
                 }
                 
+                // 應用黑名單過濾
+                $filteredEmojis = $this->filterService->filterAndCleanEmojis($categoryEmojis);
+                
                 // 只有當有 emoji 時才加入分類
-                if (!empty($categoryEmojis)) {
-                    $result['data'][$categoryId] = $categoryEmojis;
-                    $result['meta']['total'] += count($categoryEmojis);
+                if (!empty($filteredEmojis)) {
+                    $result['data'][$categoryId] = $filteredEmojis;
+                    $result['meta']['total'] += count($filteredEmojis);
                     
                     // 添加分類資訊到 meta
                     $result['meta']['categories'][$categoryId] = [
