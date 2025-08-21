@@ -39,11 +39,7 @@ class BootstrapIconService
                 
                 // 處理該分類下的每個 icon (新的扁平結構)
                 foreach ($categoryData['icons'] as $icon) {
-                    // 確保所有圖標都有 variant_type 欄位
-                    if (!isset($icon['variant_type'])) {
-                        $icon['variant_type'] = 'outline'; // 預設為 outline
-                    }
-                    
+                    // 新結構中每個 icon 已經是完整的項目，直接使用
                     $expandedIcons[] = $icon;
                 }
             }
