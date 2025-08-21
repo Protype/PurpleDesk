@@ -157,20 +157,8 @@ const processedIconsData = computed(() => {
   
   // 新的扁平化格式：資料已經是展開的，不需要再展開變體
   const processedIcons = allIconsList.map(icon => {
-    // 為每個圖標添加 isSolid 標記以供樣式篩選使用
-    let isSolid = false
-    
-    if (icon.type === 'heroicons') {
-      // HeroIcons：根據 variant_type 欄位判斷
-      isSolid = icon.variant_type === 'solid'
-    } else if (icon.type === 'bootstrap-icons' || icon.type === 'bootstrap') {
-      // Bootstrap Icons：根據 value 是否包含 '-fill' 後綴判斷
-      isSolid = icon.value?.endsWith('-fill') || false
-    }
-    
     return {
       ...icon,
-      isSolid,
       displayName: icon.name || icon.value || icon.class || icon.component
     }
   })
@@ -192,7 +180,7 @@ const processedIconsData = computed(() => {
   })
 })
 
-// 樣式篩選功能 - 簡化版本，適配扁平化 API
+// 樣式篩選功能 - 根據 has_variants 和 variant_type 篩選
 const styleFilteredIcons = computed(() => {
   const style = selectedStyle.value
   
@@ -200,13 +188,33 @@ const styleFilteredIcons = computed(() => {
     return processedIconsData.value
   }
   
-  // 根據 isSolid 標記篩選圖標
   return processedIconsData.value.filter(icon => {
-    if (style === 'outline') {
-      return !icon.isSolid
-    } else if (style === 'solid') {
-      return icon.isSolid
+    // HeroIcons 篩選邏輯
+    if (icon.type === 'heroicons') {
+      if (style === 'outline') {
+        // outline 模式：有變體且是 outline，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'outline') ||
+               (icon.has_variants === false)
+      } else if (style === 'solid') {
+        // solid 模式：有變體且是 solid，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'solid') ||
+               (icon.has_variants === false)
+      }
     }
+    
+    // Bootstrap Icons 篩選邏輯
+    if (icon.type === 'bootstrap-icons') {
+      if (style === 'outline') {
+        // outline 模式：有變體且是 outline，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'outline') ||
+               (icon.has_variants === false)
+      } else if (style === 'solid') {
+        // solid 模式：有變體且是 solid，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'solid') ||
+               (icon.has_variants === false)
+      }
+    }
+    
     return true
   })
 })

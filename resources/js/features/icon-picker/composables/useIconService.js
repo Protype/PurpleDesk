@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useAsyncState } from './useAsyncState.js'
+import { shouldFilterEmoji } from '../../../utils/emojiFilter.js'
 
 /**
  * 圖標服務 Composable - 適配新的扁平化 API 格式
@@ -336,7 +337,7 @@ export function useIconService() {
   }
 
   /**
-   * 過濾和清理 emoji，移除複合 emoji 和膚色變體
+   * 過濾和清理 emoji，移除複合 emoji、膚色變體和黑名單 emoji
    */
   const filterAndCleanEmojis = (emojis) => {
     const seen = new Set()
@@ -344,6 +345,12 @@ export function useIconService() {
     
     emojis.forEach(emojiData => {
       if (!emojiData.emoji) return
+      
+      // 檢查黑名單過濾
+      const filterResult = shouldFilterEmoji(emojiData)
+      if (filterResult.shouldFilter) {
+        return // 跳過黑名單中的 emoji
+      }
       
       // 移除膚色修飾符和變化選擇器
       const baseEmoji = emojiData.emoji

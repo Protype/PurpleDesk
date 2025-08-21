@@ -214,16 +214,21 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
 
       const filteredIcons = wrapper.vm.styleFilteredIcons
       
-      // HeroIcons: 只顯示 variant_type === 'outline' 的
+      // HeroIcons: 只顯示有變體且是 outline 的，或無變體的
       const heroIcons = filteredIcons.filter(icon => icon.type === 'heroicons')
       heroIcons.forEach(icon => {
-        expect(icon.variant_type || icon.actualVariant).toBe('outline')
+        const isValidOutline = (icon.has_variants === true && icon.variant_type === 'outline') ||
+                              (icon.has_variants === false)
+        expect(isValidOutline).toBe(true)
       })
 
-      // Bootstrap Icons: 不包含 -fill 後綴的
+      // Bootstrap Icons: 只顯示有變體且是 outline 的，或無變體的  
       const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
-      const fillIcons = bootstrapIcons.filter(icon => icon.value && icon.value.endsWith('-fill'))
-      expect(fillIcons.length).toBe(0)
+      bootstrapIcons.forEach(icon => {
+        const isValidOutline = (icon.has_variants === true && icon.variant_type === 'outline') ||
+                              (icon.has_variants === false)
+        expect(isValidOutline).toBe(true)
+      })
     })
 
     it('solid 模式應該只顯示 solid 圖標', async () => {
@@ -232,18 +237,20 @@ describe('IconLibraryPanel - 新 API 格式適配', () => {
 
       const filteredIcons = wrapper.vm.styleFilteredIcons
       
-      // HeroIcons: 只顯示 variant_type === 'solid' 的
+      // HeroIcons: 只顯示有變體且是 solid 的，或無變體的
       const heroIcons = filteredIcons.filter(icon => icon.type === 'heroicons')
       heroIcons.forEach(icon => {
-        expect(icon.variant_type || icon.actualVariant).toBe('solid')
+        const isValidSolid = (icon.has_variants === true && icon.variant_type === 'solid') ||
+                            (icon.has_variants === false)
+        expect(isValidSolid).toBe(true)
       })
 
-      // Bootstrap Icons: 只包含 -fill 後綴的或單一變體的
+      // Bootstrap Icons: 只顯示有變體且是 solid 的，或無變體的
       const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
       bootstrapIcons.forEach(icon => {
-        const isFillIcon = icon.value && icon.value.endsWith('-fill')
-        const isSingleVariant = !icon.has_variants
-        expect(isFillIcon || isSingleVariant).toBe(true)
+        const isValidSolid = (icon.has_variants === true && icon.variant_type === 'solid') ||
+                            (icon.has_variants === false)
+        expect(isValidSolid).toBe(true)
       })
     })
 
