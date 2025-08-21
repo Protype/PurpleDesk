@@ -4,12 +4,10 @@ return array (
   'id' => 'general',
   'name' => '通用圖標',
   'description' => '常用的通用圖標',
-  'priority' => 'normal',
   'icons' => 
   array (
     0 => 
     array (
-      'id' => 'activity-outline',
       'name' => 'Activity',
       'value' => 'bi-activity',
       'type' => 'bootstrap-icons',
@@ -19,11 +17,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     1 => 
     array (
-      'id' => 'alarm-fill-solid',
+      'name' => 'Alarm',
+      'value' => 'bi-alarm',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'alarm',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    2 => 
+    array (
       'name' => 'Alarm Fill',
       'value' => 'bi-alarm-fill',
       'type' => 'bootstrap-icons',
@@ -36,25 +45,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    2 => 
-    array (
-      'id' => 'alarm-outline',
-      'name' => 'Alarm Fill',
-      'value' => 'bi-alarm',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'alarm',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     3 => 
     array (
-      'id' => 'arrow-through-heart-outline',
-      'name' => 'Arrow Through Heart Fill',
+      'name' => 'Arrow Through Heart',
       'value' => 'bi-arrow-through-heart',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -62,7 +55,6 @@ return array (
         0 => 'arrow',
         1 => 'through',
         2 => 'heart',
-        3 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -70,7 +62,6 @@ return array (
     ),
     4 => 
     array (
-      'id' => 'arrow-through-heart-fill-solid',
       'name' => 'Arrow Through Heart Fill',
       'value' => 'bi-arrow-through-heart-fill',
       'type' => 'bootstrap-icons',
@@ -87,7 +78,6 @@ return array (
     ),
     5 => 
     array (
-      'id' => 'at-outline',
       'name' => 'At',
       'value' => 'bi-at',
       'type' => 'bootstrap-icons',
@@ -97,11 +87,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     6 => 
     array (
-      'id' => 'ban-fill-solid',
+      'name' => 'Ban',
+      'value' => 'bi-ban',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'ban',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    7 => 
+    array (
       'name' => 'Ban Fill',
       'value' => 'bi-ban-fill',
       'type' => 'bootstrap-icons',
@@ -114,31 +115,14 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    7 => 
-    array (
-      'id' => 'ban-outline',
-      'name' => 'Ban Fill',
-      'value' => 'bi-ban',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'ban',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     8 => 
     array (
-      'id' => 'bell-outline',
-      'name' => 'Bell Fill',
+      'name' => 'Bell',
       'value' => 'bi-bell',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bell',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -146,7 +130,6 @@ return array (
     ),
     9 => 
     array (
-      'id' => 'bell-fill-solid',
       'name' => 'Bell Fill',
       'value' => 'bi-bell-fill',
       'type' => 'bootstrap-icons',
@@ -161,7 +144,33 @@ return array (
     ),
     10 => 
     array (
-      'id' => 'bookmark-check-fill-solid',
+      'name' => 'Bookmark',
+      'value' => 'bi-bookmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bookmark',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    11 => 
+    array (
+      'name' => 'Bookmark Check',
+      'value' => 'bi-bookmark-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bookmark',
+        1 => 'check',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    12 => 
+    array (
       'name' => 'Bookmark Check Fill',
       'value' => 'bi-bookmark-check-fill',
       'type' => 'bootstrap-icons',
@@ -175,25 +184,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    11 => 
+    13 => 
     array (
-      'id' => 'bookmark-check-outline',
-      'name' => 'Bookmark Check Fill',
-      'value' => 'bi-bookmark-check',
+      'name' => 'Bookmark Dash',
+      'value' => 'bi-bookmark-dash',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bookmark',
-        1 => 'check',
-        2 => 'fill',
+        1 => 'dash',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    12 => 
+    14 => 
     array (
-      'id' => 'bookmark-dash-fill-solid',
       'name' => 'Bookmark Dash Fill',
       'value' => 'bi-bookmark-dash-fill',
       'type' => 'bootstrap-icons',
@@ -207,40 +213,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    13 => 
-    array (
-      'id' => 'bookmark-dash-outline',
-      'name' => 'Bookmark Dash Fill',
-      'value' => 'bi-bookmark-dash',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'bookmark',
-        1 => 'dash',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    14 => 
-    array (
-      'id' => 'bookmark-outline',
-      'name' => 'Bookmark Fill',
-      'value' => 'bi-bookmark',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'bookmark',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     15 => 
     array (
-      'id' => 'bookmark-fill-solid',
       'name' => 'Bookmark Fill',
       'value' => 'bi-bookmark-fill',
       'type' => 'bootstrap-icons',
@@ -255,7 +229,20 @@ return array (
     ),
     16 => 
     array (
-      'id' => 'bookmark-heart-fill-solid',
+      'name' => 'Bookmark Heart',
+      'value' => 'bi-bookmark-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'bookmark',
+        1 => 'heart',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    17 => 
+    array (
       'name' => 'Bookmark Heart Fill',
       'value' => 'bi-bookmark-heart-fill',
       'type' => 'bootstrap-icons',
@@ -269,25 +256,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    17 => 
+    18 => 
     array (
-      'id' => 'bookmark-heart-outline',
-      'name' => 'Bookmark Heart Fill',
-      'value' => 'bi-bookmark-heart',
+      'name' => 'Bookmark Plus',
+      'value' => 'bi-bookmark-plus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bookmark',
-        1 => 'heart',
-        2 => 'fill',
+        1 => 'plus',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    18 => 
+    19 => 
     array (
-      'id' => 'bookmark-plus-fill-solid',
       'name' => 'Bookmark Plus Fill',
       'value' => 'bi-bookmark-plus-fill',
       'type' => 'bootstrap-icons',
@@ -301,25 +285,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    19 => 
+    20 => 
     array (
-      'id' => 'bookmark-plus-outline',
-      'name' => 'Bookmark Plus Fill',
-      'value' => 'bi-bookmark-plus',
+      'name' => 'Bookmark Star',
+      'value' => 'bi-bookmark-star',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bookmark',
-        1 => 'plus',
-        2 => 'fill',
+        1 => 'star',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    20 => 
+    21 => 
     array (
-      'id' => 'bookmark-star-fill-solid',
       'name' => 'Bookmark Star Fill',
       'value' => 'bi-bookmark-star-fill',
       'type' => 'bootstrap-icons',
@@ -333,25 +314,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    21 => 
+    22 => 
     array (
-      'id' => 'bookmark-star-outline',
-      'name' => 'Bookmark Star Fill',
-      'value' => 'bi-bookmark-star',
+      'name' => 'Bookmark X',
+      'value' => 'bi-bookmark-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bookmark',
-        1 => 'star',
-        2 => 'fill',
+        1 => 'x',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    22 => 
+    23 => 
     array (
-      'id' => 'bookmark-x-fill-solid',
       'name' => 'Bookmark X Fill',
       'value' => 'bi-bookmark-x-fill',
       'type' => 'bootstrap-icons',
@@ -365,32 +343,14 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    23 => 
-    array (
-      'id' => 'bookmark-x-outline',
-      'name' => 'Bookmark X Fill',
-      'value' => 'bi-bookmark-x',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'bookmark',
-        1 => 'x',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     24 => 
     array (
-      'id' => 'bookmarks-outline',
-      'name' => 'Bookmarks Fill',
+      'name' => 'Bookmarks',
       'value' => 'bi-bookmarks',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'bookmarks',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -398,7 +358,6 @@ return array (
     ),
     25 => 
     array (
-      'id' => 'bookmarks-fill-solid',
       'name' => 'Bookmarks Fill',
       'value' => 'bi-bookmarks-fill',
       'type' => 'bootstrap-icons',
@@ -413,7 +372,33 @@ return array (
     ),
     26 => 
     array (
-      'id' => 'calendar-check-fill-solid',
+      'name' => 'Calendar',
+      'value' => 'bi-calendar',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    27 => 
+    array (
+      'name' => 'Calendar Check',
+      'value' => 'bi-calendar-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar',
+        1 => 'check',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    28 => 
+    array (
       'name' => 'Calendar Check Fill',
       'value' => 'bi-calendar-check-fill',
       'type' => 'bootstrap-icons',
@@ -427,25 +412,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    27 => 
+    29 => 
     array (
-      'id' => 'calendar-check-outline',
-      'name' => 'Calendar Check Fill',
-      'value' => 'bi-calendar-check',
+      'name' => 'Calendar Date',
+      'value' => 'bi-calendar-date',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'check',
-        2 => 'fill',
+        1 => 'date',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    28 => 
+    30 => 
     array (
-      'id' => 'calendar-date-fill-solid',
       'name' => 'Calendar Date Fill',
       'value' => 'bi-calendar-date-fill',
       'type' => 'bootstrap-icons',
@@ -459,25 +441,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
+    31 => 
     array (
-      'id' => 'calendar-date-outline',
-      'name' => 'Calendar Date Fill',
-      'value' => 'bi-calendar-date',
+      'name' => 'Calendar Day',
+      'value' => 'bi-calendar-day',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'date',
-        2 => 'fill',
+        1 => 'day',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    30 => 
+    32 => 
     array (
-      'id' => 'calendar-day-fill-solid',
       'name' => 'Calendar Day Fill',
       'value' => 'bi-calendar-day-fill',
       'type' => 'bootstrap-icons',
@@ -491,25 +470,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    31 => 
+    33 => 
     array (
-      'id' => 'calendar-day-outline',
-      'name' => 'Calendar Day Fill',
-      'value' => 'bi-calendar-day',
+      'name' => 'Calendar Event',
+      'value' => 'bi-calendar-event',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'day',
-        2 => 'fill',
+        1 => 'event',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    32 => 
+    34 => 
     array (
-      'id' => 'calendar-event-fill-solid',
       'name' => 'Calendar Event Fill',
       'value' => 'bi-calendar-event-fill',
       'type' => 'bootstrap-icons',
@@ -523,25 +499,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    33 => 
+    35 => 
     array (
-      'id' => 'calendar-event-outline',
-      'name' => 'Calendar Event Fill',
-      'value' => 'bi-calendar-event',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar',
-        1 => 'event',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    34 => 
-    array (
-      'id' => 'calendar-fill-solid',
       'name' => 'Calendar Fill',
       'value' => 'bi-calendar-fill',
       'type' => 'bootstrap-icons',
@@ -554,32 +513,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    35 => 
-    array (
-      'id' => 'calendar-outline',
-      'name' => 'Calendar Fill',
-      'value' => 'bi-calendar',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     36 => 
     array (
-      'id' => 'calendar-heart-outline',
-      'name' => 'Calendar Heart Fill',
+      'name' => 'Calendar Heart',
       'value' => 'bi-calendar-heart',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
         1 => 'heart',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -587,7 +529,6 @@ return array (
     ),
     37 => 
     array (
-      'id' => 'calendar-heart-fill-solid',
       'name' => 'Calendar Heart Fill',
       'value' => 'bi-calendar-heart-fill',
       'type' => 'bootstrap-icons',
@@ -603,7 +544,20 @@ return array (
     ),
     38 => 
     array (
-      'id' => 'calendar-minus-fill-solid',
+      'name' => 'Calendar Minus',
+      'value' => 'bi-calendar-minus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar',
+        1 => 'minus',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    39 => 
+    array (
       'name' => 'Calendar Minus Fill',
       'value' => 'bi-calendar-minus-fill',
       'type' => 'bootstrap-icons',
@@ -617,33 +571,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    39 => 
-    array (
-      'id' => 'calendar-minus-outline',
-      'name' => 'Calendar Minus Fill',
-      'value' => 'bi-calendar-minus',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar',
-        1 => 'minus',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     40 => 
     array (
-      'id' => 'calendar-month-outline',
-      'name' => 'Calendar Month Fill',
+      'name' => 'Calendar Month',
       'value' => 'bi-calendar-month',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
         1 => 'month',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -651,7 +587,6 @@ return array (
     ),
     41 => 
     array (
-      'id' => 'calendar-month-fill-solid',
       'name' => 'Calendar Month Fill',
       'value' => 'bi-calendar-month-fill',
       'type' => 'bootstrap-icons',
@@ -667,7 +602,20 @@ return array (
     ),
     42 => 
     array (
-      'id' => 'calendar-plus-fill-solid',
+      'name' => 'Calendar Plus',
+      'value' => 'bi-calendar-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar',
+        1 => 'plus',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    43 => 
+    array (
       'name' => 'Calendar Plus Fill',
       'value' => 'bi-calendar-plus-fill',
       'type' => 'bootstrap-icons',
@@ -681,25 +629,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    43 => 
+    44 => 
     array (
-      'id' => 'calendar-plus-outline',
-      'name' => 'Calendar Plus Fill',
-      'value' => 'bi-calendar-plus',
+      'name' => 'Calendar Range',
+      'value' => 'bi-calendar-range',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'plus',
-        2 => 'fill',
+        1 => 'range',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    44 => 
+    45 => 
     array (
-      'id' => 'calendar-range-fill-solid',
       'name' => 'Calendar Range Fill',
       'value' => 'bi-calendar-range-fill',
       'type' => 'bootstrap-icons',
@@ -713,25 +658,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    45 => 
+    46 => 
     array (
-      'id' => 'calendar-range-outline',
-      'name' => 'Calendar Range Fill',
-      'value' => 'bi-calendar-range',
+      'name' => 'Calendar Week',
+      'value' => 'bi-calendar-week',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'range',
-        2 => 'fill',
+        1 => 'week',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    46 => 
+    47 => 
     array (
-      'id' => 'calendar-week-fill-solid',
       'name' => 'Calendar Week Fill',
       'value' => 'bi-calendar-week-fill',
       'type' => 'bootstrap-icons',
@@ -745,25 +687,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    47 => 
+    48 => 
     array (
-      'id' => 'calendar-week-outline',
-      'name' => 'Calendar Week Fill',
-      'value' => 'bi-calendar-week',
+      'name' => 'Calendar X',
+      'value' => 'bi-calendar-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar',
-        1 => 'week',
-        2 => 'fill',
+        1 => 'x',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    48 => 
+    49 => 
     array (
-      'id' => 'calendar-x-fill-solid',
       'name' => 'Calendar X Fill',
       'value' => 'bi-calendar-x-fill',
       'type' => 'bootstrap-icons',
@@ -777,33 +716,14 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    49 => 
-    array (
-      'id' => 'calendar-x-outline',
-      'name' => 'Calendar X Fill',
-      'value' => 'bi-calendar-x',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar',
-        1 => 'x',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     50 => 
     array (
-      'id' => 'calendar2-check-outline',
-      'name' => 'Calendar2 Check Fill',
-      'value' => 'bi-calendar2-check',
+      'name' => 'Calendar2',
+      'value' => 'bi-calendar2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
-        1 => 'check',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -811,7 +731,20 @@ return array (
     ),
     51 => 
     array (
-      'id' => 'calendar2-check-fill-solid',
+      'name' => 'Calendar2 Check',
+      'value' => 'bi-calendar2-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar2',
+        1 => 'check',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    52 => 
+    array (
       'name' => 'Calendar2 Check Fill',
       'value' => 'bi-calendar2-check-fill',
       'type' => 'bootstrap-icons',
@@ -825,9 +758,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    52 => 
+    53 => 
     array (
-      'id' => 'calendar2-date-fill-solid',
+      'name' => 'Calendar2 Date',
+      'value' => 'bi-calendar2-date',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar2',
+        1 => 'date',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    54 => 
+    array (
       'name' => 'Calendar2 Date Fill',
       'value' => 'bi-calendar2-date-fill',
       'type' => 'bootstrap-icons',
@@ -841,41 +787,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
+    55 => 
     array (
-      'id' => 'calendar2-date-outline',
-      'name' => 'Calendar2 Date Fill',
-      'value' => 'bi-calendar2-date',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar2',
-        1 => 'date',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    54 => 
-    array (
-      'id' => 'calendar2-day-outline',
-      'name' => 'Calendar2 Day Fill',
+      'name' => 'Calendar2 Day',
       'value' => 'bi-calendar2-day',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'day',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    55 => 
+    56 => 
     array (
-      'id' => 'calendar2-day-fill-solid',
       'name' => 'Calendar2 Day Fill',
       'value' => 'bi-calendar2-day-fill',
       'type' => 'bootstrap-icons',
@@ -889,9 +816,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    56 => 
+    57 => 
     array (
-      'id' => 'calendar2-event-fill-solid',
+      'name' => 'Calendar2 Event',
+      'value' => 'bi-calendar2-event',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar2',
+        1 => 'event',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    58 => 
+    array (
       'name' => 'Calendar2 Event Fill',
       'value' => 'bi-calendar2-event-fill',
       'type' => 'bootstrap-icons',
@@ -905,40 +845,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
-    array (
-      'id' => 'calendar2-event-outline',
-      'name' => 'Calendar2 Event Fill',
-      'value' => 'bi-calendar2-event',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar2',
-        1 => 'event',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    58 => 
-    array (
-      'id' => 'calendar2-outline',
-      'name' => 'Calendar2 Fill',
-      'value' => 'bi-calendar2',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar2',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     59 => 
     array (
-      'id' => 'calendar2-fill-solid',
       'name' => 'Calendar2 Fill',
       'value' => 'bi-calendar2-fill',
       'type' => 'bootstrap-icons',
@@ -953,15 +861,13 @@ return array (
     ),
     60 => 
     array (
-      'id' => 'calendar2-heart-outline',
-      'name' => 'Calendar2 Heart Fill',
+      'name' => 'Calendar2 Heart',
       'value' => 'bi-calendar2-heart',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'heart',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -969,7 +875,6 @@ return array (
     ),
     61 => 
     array (
-      'id' => 'calendar2-heart-fill-solid',
       'name' => 'Calendar2 Heart Fill',
       'value' => 'bi-calendar2-heart-fill',
       'type' => 'bootstrap-icons',
@@ -985,15 +890,13 @@ return array (
     ),
     62 => 
     array (
-      'id' => 'calendar2-minus-outline',
-      'name' => 'Calendar2 Minus Fill',
+      'name' => 'Calendar2 Minus',
       'value' => 'bi-calendar2-minus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'minus',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1001,7 +904,6 @@ return array (
     ),
     63 => 
     array (
-      'id' => 'calendar2-minus-fill-solid',
       'name' => 'Calendar2 Minus Fill',
       'value' => 'bi-calendar2-minus-fill',
       'type' => 'bootstrap-icons',
@@ -1017,15 +919,13 @@ return array (
     ),
     64 => 
     array (
-      'id' => 'calendar2-month-outline',
-      'name' => 'Calendar2 Month Fill',
+      'name' => 'Calendar2 Month',
       'value' => 'bi-calendar2-month',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'month',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1033,7 +933,6 @@ return array (
     ),
     65 => 
     array (
-      'id' => 'calendar2-month-fill-solid',
       'name' => 'Calendar2 Month Fill',
       'value' => 'bi-calendar2-month-fill',
       'type' => 'bootstrap-icons',
@@ -1049,15 +948,13 @@ return array (
     ),
     66 => 
     array (
-      'id' => 'calendar2-plus-outline',
-      'name' => 'Calendar2 Plus Fill',
+      'name' => 'Calendar2 Plus',
       'value' => 'bi-calendar2-plus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'plus',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1065,7 +962,6 @@ return array (
     ),
     67 => 
     array (
-      'id' => 'calendar2-plus-fill-solid',
       'name' => 'Calendar2 Plus Fill',
       'value' => 'bi-calendar2-plus-fill',
       'type' => 'bootstrap-icons',
@@ -1081,15 +977,13 @@ return array (
     ),
     68 => 
     array (
-      'id' => 'calendar2-range-outline',
-      'name' => 'Calendar2 Range Fill',
+      'name' => 'Calendar2 Range',
       'value' => 'bi-calendar2-range',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'range',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1097,7 +991,6 @@ return array (
     ),
     69 => 
     array (
-      'id' => 'calendar2-range-fill-solid',
       'name' => 'Calendar2 Range Fill',
       'value' => 'bi-calendar2-range-fill',
       'type' => 'bootstrap-icons',
@@ -1113,7 +1006,20 @@ return array (
     ),
     70 => 
     array (
-      'id' => 'calendar2-week-fill-solid',
+      'name' => 'Calendar2 Week',
+      'value' => 'bi-calendar2-week',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar2',
+        1 => 'week',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    71 => 
+    array (
       'name' => 'Calendar2 Week Fill',
       'value' => 'bi-calendar2-week-fill',
       'type' => 'bootstrap-icons',
@@ -1127,33 +1033,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
-    array (
-      'id' => 'calendar2-week-outline',
-      'name' => 'Calendar2 Week Fill',
-      'value' => 'bi-calendar2-week',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar2',
-        1 => 'week',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     72 => 
     array (
-      'id' => 'calendar2-x-outline',
-      'name' => 'Calendar2 X Fill',
+      'name' => 'Calendar2 X',
       'value' => 'bi-calendar2-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar2',
         1 => 'x',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1161,7 +1049,6 @@ return array (
     ),
     73 => 
     array (
-      'id' => 'calendar2-x-fill-solid',
       'name' => 'Calendar2 X Fill',
       'value' => 'bi-calendar2-x-fill',
       'type' => 'bootstrap-icons',
@@ -1177,15 +1064,12 @@ return array (
     ),
     74 => 
     array (
-      'id' => 'calendar3-event-outline',
-      'name' => 'Calendar3 Event Fill',
-      'value' => 'bi-calendar3-event',
+      'name' => 'Calendar3',
+      'value' => 'bi-calendar3',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar3',
-        1 => 'event',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
@@ -1193,7 +1077,20 @@ return array (
     ),
     75 => 
     array (
-      'id' => 'calendar3-event-fill-solid',
+      'name' => 'Calendar3 Event',
+      'value' => 'bi-calendar3-event',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar3',
+        1 => 'event',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    76 => 
+    array (
       'name' => 'Calendar3 Event Fill',
       'value' => 'bi-calendar3-event-fill',
       'type' => 'bootstrap-icons',
@@ -1207,24 +1104,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    76 => 
-    array (
-      'id' => 'calendar3-outline',
-      'name' => 'Calendar3 Fill',
-      'value' => 'bi-calendar3',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar3',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     77 => 
     array (
-      'id' => 'calendar3-fill-solid',
       'name' => 'Calendar3 Fill',
       'value' => 'bi-calendar3-fill',
       'type' => 'bootstrap-icons',
@@ -1239,7 +1120,20 @@ return array (
     ),
     78 => 
     array (
-      'id' => 'calendar3-range-fill-solid',
+      'name' => 'Calendar3 Range',
+      'value' => 'bi-calendar3-range',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'calendar3',
+        1 => 'range',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    79 => 
+    array (
       'name' => 'Calendar3 Range Fill',
       'value' => 'bi-calendar3-range-fill',
       'type' => 'bootstrap-icons',
@@ -1253,25 +1147,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    79 => 
+    80 => 
     array (
-      'id' => 'calendar3-range-outline',
-      'name' => 'Calendar3 Range Fill',
-      'value' => 'bi-calendar3-range',
+      'name' => 'Calendar3 Week',
+      'value' => 'bi-calendar3-week',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'calendar3',
-        1 => 'range',
-        2 => 'fill',
+        1 => 'week',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    80 => 
+    81 => 
     array (
-      'id' => 'calendar3-week-fill-solid',
       'name' => 'Calendar3 Week Fill',
       'value' => 'bi-calendar3-week-fill',
       'type' => 'bootstrap-icons',
@@ -1285,25 +1176,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    81 => 
-    array (
-      'id' => 'calendar3-week-outline',
-      'name' => 'Calendar3 Week Fill',
-      'value' => 'bi-calendar3-week',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar3',
-        1 => 'week',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     82 => 
     array (
-      'id' => 'calendar4-outline',
       'name' => 'Calendar4',
       'value' => 'bi-calendar4',
       'type' => 'bootstrap-icons',
@@ -1312,26 +1186,10 @@ return array (
         0 => 'calendar4',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
     83 => 
     array (
-      'id' => 'calendar4-fill-solid',
-      'name' => 'Calendar4',
-      'value' => 'bi-calendar4-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar4',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    84 => 
-    array (
-      'id' => 'calendar4-event-outline',
       'name' => 'Calendar4 Event',
       'value' => 'bi-calendar4-event',
       'type' => 'bootstrap-icons',
@@ -1341,42 +1199,10 @@ return array (
         1 => 'event',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    85 => 
+    84 => 
     array (
-      'id' => 'calendar4-event-fill-solid',
-      'name' => 'Calendar4 Event',
-      'value' => 'bi-calendar4-event-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar4',
-        1 => 'event',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    86 => 
-    array (
-      'id' => 'calendar4-range-fill-solid',
-      'name' => 'Calendar4 Range',
-      'value' => 'bi-calendar4-range-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar4',
-        1 => 'range',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    87 => 
-    array (
-      'id' => 'calendar4-range-outline',
       'name' => 'Calendar4 Range',
       'value' => 'bi-calendar4-range',
       'type' => 'bootstrap-icons',
@@ -1386,27 +1212,10 @@ return array (
         1 => 'range',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    88 => 
+    85 => 
     array (
-      'id' => 'calendar4-week-fill-solid',
-      'name' => 'Calendar4 Week',
-      'value' => 'bi-calendar4-week-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'calendar4',
-        1 => 'week',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    89 => 
-    array (
-      'id' => 'calendar4-week-outline',
       'name' => 'Calendar4 Week',
       'value' => 'bi-calendar4-week',
       'type' => 'bootstrap-icons',
@@ -1416,12 +1225,10 @@ return array (
         1 => 'week',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    90 => 
+    86 => 
     array (
-      'id' => 'check-outline',
       'name' => 'Check',
       'value' => 'bi-check',
       'type' => 'bootstrap-icons',
@@ -1431,11 +1238,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    91 => 
+    87 => 
     array (
-      'id' => 'check-all-outline',
       'name' => 'Check All',
       'value' => 'bi-check-all',
       'type' => 'bootstrap-icons',
@@ -1446,27 +1251,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    92 => 
+    88 => 
     array (
-      'id' => 'check-circle-outline',
-      'name' => 'Check Circle Fill',
+      'name' => 'Check Circle',
       'value' => 'bi-check-circle',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'check',
         1 => 'circle',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    93 => 
+    89 => 
     array (
-      'id' => 'check-circle-fill-solid',
       'name' => 'Check Circle Fill',
       'value' => 'bi-check-circle-fill',
       'type' => 'bootstrap-icons',
@@ -1480,9 +1281,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    94 => 
+    90 => 
     array (
-      'id' => 'check-lg-outline',
       'name' => 'Check Lg',
       'value' => 'bi-check-lg',
       'type' => 'bootstrap-icons',
@@ -1493,27 +1293,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    95 => 
+    91 => 
     array (
-      'id' => 'check-square-outline',
-      'name' => 'Check Square Fill',
+      'name' => 'Check Square',
       'value' => 'bi-check-square',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'check',
         1 => 'square',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    96 => 
+    92 => 
     array (
-      'id' => 'check-square-fill-solid',
       'name' => 'Check Square Fill',
       'value' => 'bi-check-square-fill',
       'type' => 'bootstrap-icons',
@@ -1527,9 +1323,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    97 => 
+    93 => 
     array (
-      'id' => 'check2-outline',
       'name' => 'Check2',
       'value' => 'bi-check2',
       'type' => 'bootstrap-icons',
@@ -1539,11 +1334,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    98 => 
+    94 => 
     array (
-      'id' => 'check2-all-outline',
       'name' => 'Check2 All',
       'value' => 'bi-check2-all',
       'type' => 'bootstrap-icons',
@@ -1554,26 +1347,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    99 => 
+    95 => 
     array (
-      'id' => 'check2-circle-fill-solid',
-      'name' => 'Check2 Circle',
-      'value' => 'bi-check2-circle-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'check2',
-        1 => 'circle',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    100 => 
-    array (
-      'id' => 'check2-circle-outline',
       'name' => 'Check2 Circle',
       'value' => 'bi-check2-circle',
       'type' => 'bootstrap-icons',
@@ -1583,12 +1359,10 @@ return array (
         1 => 'circle',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    101 => 
+    96 => 
     array (
-      'id' => 'check2-square-outline',
       'name' => 'Check2 Square',
       'value' => 'bi-check2-square',
       'type' => 'bootstrap-icons',
@@ -1598,42 +1372,23 @@ return array (
         1 => 'square',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    102 => 
+    97 => 
     array (
-      'id' => 'check2-square-fill-solid',
-      'name' => 'Check2 Square',
-      'value' => 'bi-check2-square-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'check2',
-        1 => 'square',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    103 => 
-    array (
-      'id' => 'clock-outline',
-      'name' => 'Clock Fill',
+      'name' => 'Clock',
       'value' => 'bi-clock',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clock',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    104 => 
+    98 => 
     array (
-      'id' => 'clock-fill-solid',
       'name' => 'Clock Fill',
       'value' => 'bi-clock-fill',
       'type' => 'bootstrap-icons',
@@ -1646,24 +1401,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    105 => 
+    99 => 
     array (
-      'id' => 'clock-history-fill-solid',
-      'name' => 'Clock History',
-      'value' => 'bi-clock-history-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'clock',
-        1 => 'history',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    106 => 
-    array (
-      'id' => 'clock-history-outline',
       'name' => 'Clock History',
       'value' => 'bi-clock-history',
       'type' => 'bootstrap-icons',
@@ -1673,27 +1412,23 @@ return array (
         1 => 'history',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    107 => 
+    100 => 
     array (
-      'id' => 'collection-outline',
-      'name' => 'Collection Fill',
+      'name' => 'Collection',
       'value' => 'bi-collection',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'collection',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    108 => 
+    101 => 
     array (
-      'id' => 'collection-fill-solid',
       'name' => 'Collection Fill',
       'value' => 'bi-collection-fill',
       'type' => 'bootstrap-icons',
@@ -1706,25 +1441,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    109 => 
+    102 => 
     array (
-      'id' => 'collection-play-outline',
-      'name' => 'Collection Play Fill',
+      'name' => 'Collection Play',
       'value' => 'bi-collection-play',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'collection',
         1 => 'play',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    110 => 
+    103 => 
     array (
-      'id' => 'collection-play-fill-solid',
       'name' => 'Collection Play Fill',
       'value' => 'bi-collection-play-fill',
       'type' => 'bootstrap-icons',
@@ -1738,9 +1470,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    111 => 
+    104 => 
     array (
-      'id' => 'copy-outline',
       'name' => 'Copy',
       'value' => 'bi-copy',
       'type' => 'bootstrap-icons',
@@ -1750,11 +1481,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    112 => 
+    105 => 
     array (
-      'id' => 'exclamation-outline',
       'name' => 'Exclamation',
       'value' => 'bi-exclamation',
       'type' => 'bootstrap-icons',
@@ -1764,11 +1493,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    106 => 
+    array (
+      'name' => 'Exclamation Circle',
+      'value' => 'bi-exclamation-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'exclamation',
+        1 => 'circle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    113 => 
+    107 => 
     array (
-      'id' => 'exclamation-circle-fill-solid',
       'name' => 'Exclamation Circle Fill',
       'value' => 'bi-exclamation-circle-fill',
       'type' => 'bootstrap-icons',
@@ -1782,41 +1523,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    114 => 
+    108 => 
     array (
-      'id' => 'exclamation-circle-outline',
-      'name' => 'Exclamation Circle Fill',
-      'value' => 'bi-exclamation-circle',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'exclamation',
-        1 => 'circle',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    115 => 
-    array (
-      'id' => 'exclamation-diamond-outline',
-      'name' => 'Exclamation Diamond Fill',
+      'name' => 'Exclamation Diamond',
       'value' => 'bi-exclamation-diamond',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'exclamation',
         1 => 'diamond',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    116 => 
+    109 => 
     array (
-      'id' => 'exclamation-diamond-fill-solid',
       'name' => 'Exclamation Diamond Fill',
       'value' => 'bi-exclamation-diamond-fill',
       'type' => 'bootstrap-icons',
@@ -1830,9 +1552,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    117 => 
+    110 => 
     array (
-      'id' => 'exclamation-lg-outline',
       'name' => 'Exclamation Lg',
       'value' => 'bi-exclamation-lg',
       'type' => 'bootstrap-icons',
@@ -1843,27 +1564,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    118 => 
+    111 => 
     array (
-      'id' => 'exclamation-octagon-outline',
-      'name' => 'Exclamation Octagon Fill',
+      'name' => 'Exclamation Octagon',
       'value' => 'bi-exclamation-octagon',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'exclamation',
         1 => 'octagon',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    119 => 
+    112 => 
     array (
-      'id' => 'exclamation-octagon-fill-solid',
       'name' => 'Exclamation Octagon Fill',
       'value' => 'bi-exclamation-octagon-fill',
       'type' => 'bootstrap-icons',
@@ -1877,25 +1594,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    120 => 
+    113 => 
     array (
-      'id' => 'exclamation-square-outline',
-      'name' => 'Exclamation Square Fill',
+      'name' => 'Exclamation Square',
       'value' => 'bi-exclamation-square',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'exclamation',
         1 => 'square',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    121 => 
+    114 => 
     array (
-      'id' => 'exclamation-square-fill-solid',
       'name' => 'Exclamation Square Fill',
       'value' => 'bi-exclamation-square-fill',
       'type' => 'bootstrap-icons',
@@ -1909,25 +1623,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    122 => 
+    115 => 
     array (
-      'id' => 'exclamation-triangle-outline',
-      'name' => 'Exclamation Triangle Fill',
+      'name' => 'Exclamation Triangle',
       'value' => 'bi-exclamation-triangle',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'exclamation',
         1 => 'triangle',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    123 => 
+    116 => 
     array (
-      'id' => 'exclamation-triangle-fill-solid',
       'name' => 'Exclamation Triangle Fill',
       'value' => 'bi-exclamation-triangle-fill',
       'type' => 'bootstrap-icons',
@@ -1941,9 +1652,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    124 => 
+    117 => 
     array (
-      'id' => 'eye-fill-solid',
+      'name' => 'Eye',
+      'value' => 'bi-eye',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'eye',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    118 => 
+    array (
       'name' => 'Eye Fill',
       'value' => 'bi-eye-fill',
       'type' => 'bootstrap-icons',
@@ -1956,40 +1679,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    125 => 
+    119 => 
     array (
-      'id' => 'eye-outline',
-      'name' => 'Eye Fill',
-      'value' => 'bi-eye',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'eye',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    126 => 
-    array (
-      'id' => 'eye-slash-outline',
-      'name' => 'Eye Slash Fill',
+      'name' => 'Eye Slash',
       'value' => 'bi-eye-slash',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'eye',
         1 => 'slash',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    127 => 
+    120 => 
     array (
-      'id' => 'eye-slash-fill-solid',
       'name' => 'Eye Slash Fill',
       'value' => 'bi-eye-slash-fill',
       'type' => 'bootstrap-icons',
@@ -2003,9 +1708,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    128 => 
+    121 => 
     array (
-      'id' => 'fingerprint-outline',
       'name' => 'Fingerprint',
       'value' => 'bi-fingerprint',
       'type' => 'bootstrap-icons',
@@ -2015,27 +1719,36 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    122 => 
+    array (
+      'name' => 'Geo',
+      'value' => 'bi-geo',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'geo',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    129 => 
+    123 => 
     array (
-      'id' => 'geo-alt-outline',
-      'name' => 'Geo Alt Fill',
+      'name' => 'Geo Alt',
       'value' => 'bi-geo-alt',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'geo',
         1 => 'alt',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    130 => 
+    124 => 
     array (
-      'id' => 'geo-alt-fill-solid',
       'name' => 'Geo Alt Fill',
       'value' => 'bi-geo-alt-fill',
       'type' => 'bootstrap-icons',
@@ -2049,24 +1762,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    131 => 
+    125 => 
     array (
-      'id' => 'geo-outline',
-      'name' => 'Geo Fill',
-      'value' => 'bi-geo',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'geo',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    132 => 
-    array (
-      'id' => 'geo-fill-solid',
       'name' => 'Geo Fill',
       'value' => 'bi-geo-fill',
       'type' => 'bootstrap-icons',
@@ -2079,9 +1776,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    133 => 
+    126 => 
     array (
-      'id' => 'heart-arrow-outline',
+      'name' => 'Heart',
+      'value' => 'bi-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'heart',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    127 => 
+    array (
       'name' => 'Heart Arrow',
       'value' => 'bi-heart-arrow',
       'type' => 'bootstrap-icons',
@@ -2091,42 +1800,10 @@ return array (
         1 => 'arrow',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    134 => 
+    128 => 
     array (
-      'id' => 'heart-arrow-fill-solid',
-      'name' => 'Heart Arrow',
-      'value' => 'bi-heart-arrow-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'heart',
-        1 => 'arrow',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    135 => 
-    array (
-      'id' => 'heart-outline',
-      'name' => 'Heart Fill',
-      'value' => 'bi-heart',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'heart',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    136 => 
-    array (
-      'id' => 'heart-fill-solid',
       'name' => 'Heart Fill',
       'value' => 'bi-heart-fill',
       'type' => 'bootstrap-icons',
@@ -2139,24 +1816,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    137 => 
+    129 => 
     array (
-      'id' => 'heart-half-fill-solid',
-      'name' => 'Heart Half',
-      'value' => 'bi-heart-half-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'heart',
-        1 => 'half',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    138 => 
-    array (
-      'id' => 'heart-half-outline',
       'name' => 'Heart Half',
       'value' => 'bi-heart-half',
       'type' => 'bootstrap-icons',
@@ -2166,28 +1827,24 @@ return array (
         1 => 'half',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    139 => 
+    130 => 
     array (
-      'id' => 'heart-pulse-outline',
-      'name' => 'Heart Pulse Fill',
+      'name' => 'Heart Pulse',
       'value' => 'bi-heart-pulse',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'heart',
         1 => 'pulse',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    140 => 
+    131 => 
     array (
-      'id' => 'heart-pulse-fill-solid',
       'name' => 'Heart Pulse Fill',
       'value' => 'bi-heart-pulse-fill',
       'type' => 'bootstrap-icons',
@@ -2201,24 +1858,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    141 => 
+    132 => 
     array (
-      'id' => 'heartbreak-outline',
-      'name' => 'Heartbreak Fill',
+      'name' => 'Heartbreak',
       'value' => 'bi-heartbreak',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'heartbreak',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    142 => 
+    133 => 
     array (
-      'id' => 'heartbreak-fill-solid',
       'name' => 'Heartbreak Fill',
       'value' => 'bi-heartbreak-fill',
       'type' => 'bootstrap-icons',
@@ -2231,23 +1885,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    143 => 
+    134 => 
     array (
-      'id' => 'hearts-fill-solid',
-      'name' => 'Hearts',
-      'value' => 'bi-hearts-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'hearts',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    144 => 
-    array (
-      'id' => 'hearts-outline',
       'name' => 'Hearts',
       'value' => 'bi-hearts',
       'type' => 'bootstrap-icons',
@@ -2256,12 +1895,10 @@ return array (
         0 => 'hearts',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    145 => 
+    135 => 
     array (
-      'id' => 'hourglass-outline',
       'name' => 'Hourglass',
       'value' => 'bi-hourglass',
       'type' => 'bootstrap-icons',
@@ -2271,11 +1908,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    146 => 
+    136 => 
     array (
-      'id' => 'hourglass-bottom-outline',
       'name' => 'Hourglass Bottom',
       'value' => 'bi-hourglass-bottom',
       'type' => 'bootstrap-icons',
@@ -2286,11 +1921,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    147 => 
+    137 => 
     array (
-      'id' => 'hourglass-split-outline',
       'name' => 'Hourglass Split',
       'value' => 'bi-hourglass-split',
       'type' => 'bootstrap-icons',
@@ -2301,11 +1934,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    148 => 
+    138 => 
     array (
-      'id' => 'hourglass-top-outline',
       'name' => 'Hourglass Top',
       'value' => 'bi-hourglass-top',
       'type' => 'bootstrap-icons',
@@ -2316,11 +1947,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    149 => 
+    139 => 
     array (
-      'id' => 'incognito-outline',
       'name' => 'Incognito',
       'value' => 'bi-incognito',
       'type' => 'bootstrap-icons',
@@ -2330,11 +1959,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    150 => 
+    140 => 
     array (
-      'id' => 'infinity-outline',
       'name' => 'Infinity',
       'value' => 'bi-infinity',
       'type' => 'bootstrap-icons',
@@ -2344,11 +1971,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    151 => 
+    141 => 
     array (
-      'id' => 'info-outline',
       'name' => 'Info',
       'value' => 'bi-info',
       'type' => 'bootstrap-icons',
@@ -2358,11 +1983,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    142 => 
+    array (
+      'name' => 'Info Circle',
+      'value' => 'bi-info-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'info',
+        1 => 'circle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    152 => 
+    143 => 
     array (
-      'id' => 'info-circle-fill-solid',
       'name' => 'Info Circle Fill',
       'value' => 'bi-info-circle-fill',
       'type' => 'bootstrap-icons',
@@ -2376,25 +2013,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    153 => 
+    144 => 
     array (
-      'id' => 'info-circle-outline',
-      'name' => 'Info Circle Fill',
-      'value' => 'bi-info-circle',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'info',
-        1 => 'circle',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    154 => 
-    array (
-      'id' => 'info-lg-outline',
       'name' => 'Info Lg',
       'value' => 'bi-info-lg',
       'type' => 'bootstrap-icons',
@@ -2405,11 +2025,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    145 => 
+    array (
+      'name' => 'Info Square',
+      'value' => 'bi-info-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'info',
+        1 => 'square',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    155 => 
+    146 => 
     array (
-      'id' => 'info-square-fill-solid',
       'name' => 'Info Square Fill',
       'value' => 'bi-info-square-fill',
       'type' => 'bootstrap-icons',
@@ -2423,25 +2055,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    156 => 
+    147 => 
     array (
-      'id' => 'info-square-outline',
-      'name' => 'Info Square Fill',
-      'value' => 'bi-info-square',
+      'name' => 'Key',
+      'value' => 'bi-key',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'info',
-        1 => 'square',
-        2 => 'fill',
+        0 => 'key',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    157 => 
+    148 => 
     array (
-      'id' => 'key-fill-solid',
       'name' => 'Key Fill',
       'value' => 'bi-key-fill',
       'type' => 'bootstrap-icons',
@@ -2454,24 +2082,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    158 => 
+    149 => 
     array (
-      'id' => 'key-outline',
-      'name' => 'Key Fill',
-      'value' => 'bi-key',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'key',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    159 => 
-    array (
-      'id' => 'link-outline',
       'name' => 'Link',
       'value' => 'bi-link',
       'type' => 'bootstrap-icons',
@@ -2481,11 +2093,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    160 => 
+    150 => 
     array (
-      'id' => 'link-45deg-outline',
       'name' => 'Link 45deg',
       'value' => 'bi-link-45deg',
       'type' => 'bootstrap-icons',
@@ -2496,11 +2106,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    151 => 
+    array (
+      'name' => 'Lock',
+      'value' => 'bi-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'lock',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    161 => 
+    152 => 
     array (
-      'id' => 'lock-fill-solid',
       'name' => 'Lock Fill',
       'value' => 'bi-lock-fill',
       'type' => 'bootstrap-icons',
@@ -2513,24 +2134,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    162 => 
+    153 => 
     array (
-      'id' => 'lock-outline',
-      'name' => 'Lock Fill',
-      'value' => 'bi-lock',
+      'name' => 'Map',
+      'value' => 'bi-map',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'lock',
-        1 => 'fill',
+        0 => 'map',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    163 => 
+    154 => 
     array (
-      'id' => 'map-fill-solid',
       'name' => 'Map Fill',
       'value' => 'bi-map-fill',
       'type' => 'bootstrap-icons',
@@ -2543,24 +2161,35 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    164 => 
+    155 => 
     array (
-      'id' => 'map-outline',
-      'name' => 'Map Fill',
-      'value' => 'bi-map',
+      'name' => 'Pin',
+      'value' => 'bi-pin',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'map',
-        1 => 'fill',
+        0 => 'pin',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    165 => 
+    156 => 
     array (
-      'id' => 'pin-angle-fill-solid',
+      'name' => 'Pin Angle',
+      'value' => 'bi-pin-angle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'pin',
+        1 => 'angle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    157 => 
+    array (
       'name' => 'Pin Angle Fill',
       'value' => 'bi-pin-angle-fill',
       'type' => 'bootstrap-icons',
@@ -2574,25 +2203,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    166 => 
+    158 => 
     array (
-      'id' => 'pin-angle-outline',
-      'name' => 'Pin Angle Fill',
-      'value' => 'bi-pin-angle',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'pin',
-        1 => 'angle',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    167 => 
-    array (
-      'id' => 'pin-fill-solid',
       'name' => 'Pin Fill',
       'value' => 'bi-pin-fill',
       'type' => 'bootstrap-icons',
@@ -2605,40 +2217,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    168 => 
+    159 => 
     array (
-      'id' => 'pin-outline',
-      'name' => 'Pin Fill',
-      'value' => 'bi-pin',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'pin',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    169 => 
-    array (
-      'id' => 'pin-map-outline',
-      'name' => 'Pin Map Fill',
+      'name' => 'Pin Map',
       'value' => 'bi-pin-map',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'pin',
         1 => 'map',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    170 => 
+    160 => 
     array (
-      'id' => 'pin-map-fill-solid',
       'name' => 'Pin Map Fill',
       'value' => 'bi-pin-map-fill',
       'type' => 'bootstrap-icons',
@@ -2652,9 +2246,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    171 => 
+    161 => 
     array (
-      'id' => 'plus-outline',
       'name' => 'Plus',
       'value' => 'bi-plus',
       'type' => 'bootstrap-icons',
@@ -2664,11 +2257,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    162 => 
+    array (
+      'name' => 'Plus Circle',
+      'value' => 'bi-plus-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'plus',
+        1 => 'circle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    172 => 
+    163 => 
     array (
-      'id' => 'plus-circle-dotted-outline',
       'name' => 'Plus Circle Dotted',
       'value' => 'bi-plus-circle-dotted',
       'type' => 'bootstrap-icons',
@@ -2679,44 +2284,10 @@ return array (
         2 => 'dotted',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    173 => 
+    164 => 
     array (
-      'id' => 'plus-circle-dotted-fill-solid',
-      'name' => 'Plus Circle Dotted',
-      'value' => 'bi-plus-circle-dotted-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'plus',
-        1 => 'circle',
-        2 => 'dotted',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    174 => 
-    array (
-      'id' => 'plus-circle-outline',
-      'name' => 'Plus Circle Fill',
-      'value' => 'bi-plus-circle',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'plus',
-        1 => 'circle',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    175 => 
-    array (
-      'id' => 'plus-circle-fill-solid',
       'name' => 'Plus Circle Fill',
       'value' => 'bi-plus-circle-fill',
       'type' => 'bootstrap-icons',
@@ -2730,9 +2301,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    176 => 
+    165 => 
     array (
-      'id' => 'plus-lg-outline',
       'name' => 'Plus Lg',
       'value' => 'bi-plus-lg',
       'type' => 'bootstrap-icons',
@@ -2743,11 +2313,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    177 => 
+    166 => 
     array (
-      'id' => 'plus-slash-minus-outline',
       'name' => 'Plus Slash Minus',
       'value' => 'bi-plus-slash-minus',
       'type' => 'bootstrap-icons',
@@ -2759,27 +2327,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    178 => 
+    167 => 
     array (
-      'id' => 'plus-square-dotted-fill-solid',
-      'name' => 'Plus Square Dotted',
-      'value' => 'bi-plus-square-dotted-fill',
+      'name' => 'Plus Square',
+      'value' => 'bi-plus-square',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'plus',
         1 => 'square',
-        2 => 'dotted',
       ),
       'category' => 'general',
       'has_variants' => true,
-      'variant_type' => 'solid',
+      'variant_type' => 'outline',
     ),
-    179 => 
+    168 => 
     array (
-      'id' => 'plus-square-dotted-outline',
       'name' => 'Plus Square Dotted',
       'value' => 'bi-plus-square-dotted',
       'type' => 'bootstrap-icons',
@@ -2790,28 +2354,10 @@ return array (
         2 => 'dotted',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    180 => 
+    169 => 
     array (
-      'id' => 'plus-square-outline',
-      'name' => 'Plus Square Fill',
-      'value' => 'bi-plus-square',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'plus',
-        1 => 'square',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    181 => 
-    array (
-      'id' => 'plus-square-fill-solid',
       'name' => 'Plus Square Fill',
       'value' => 'bi-plus-square-fill',
       'type' => 'bootstrap-icons',
@@ -2825,9 +2371,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    182 => 
+    170 => 
     array (
-      'id' => 'question-outline',
       'name' => 'Question',
       'value' => 'bi-question',
       'type' => 'bootstrap-icons',
@@ -2837,11 +2382,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    171 => 
+    array (
+      'name' => 'Question Circle',
+      'value' => 'bi-question-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'question',
+        1 => 'circle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    183 => 
+    172 => 
     array (
-      'id' => 'question-circle-fill-solid',
       'name' => 'Question Circle Fill',
       'value' => 'bi-question-circle-fill',
       'type' => 'bootstrap-icons',
@@ -2855,41 +2412,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    184 => 
+    173 => 
     array (
-      'id' => 'question-circle-outline',
-      'name' => 'Question Circle Fill',
-      'value' => 'bi-question-circle',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'question',
-        1 => 'circle',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    185 => 
-    array (
-      'id' => 'question-diamond-outline',
-      'name' => 'Question Diamond Fill',
+      'name' => 'Question Diamond',
       'value' => 'bi-question-diamond',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'question',
         1 => 'diamond',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    186 => 
+    174 => 
     array (
-      'id' => 'question-diamond-fill-solid',
       'name' => 'Question Diamond Fill',
       'value' => 'bi-question-diamond-fill',
       'type' => 'bootstrap-icons',
@@ -2903,9 +2441,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    187 => 
+    175 => 
     array (
-      'id' => 'question-lg-outline',
       'name' => 'Question Lg',
       'value' => 'bi-question-lg',
       'type' => 'bootstrap-icons',
@@ -2916,27 +2453,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    188 => 
+    176 => 
     array (
-      'id' => 'question-octagon-outline',
-      'name' => 'Question Octagon Fill',
+      'name' => 'Question Octagon',
       'value' => 'bi-question-octagon',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'question',
         1 => 'octagon',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    189 => 
+    177 => 
     array (
-      'id' => 'question-octagon-fill-solid',
       'name' => 'Question Octagon Fill',
       'value' => 'bi-question-octagon-fill',
       'type' => 'bootstrap-icons',
@@ -2950,9 +2483,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    190 => 
+    178 => 
     array (
-      'id' => 'question-square-fill-solid',
+      'name' => 'Question Square',
+      'value' => 'bi-question-square',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'question',
+        1 => 'square',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    179 => 
+    array (
       'name' => 'Question Square Fill',
       'value' => 'bi-question-square-fill',
       'type' => 'bootstrap-icons',
@@ -2966,25 +2512,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    191 => 
+    180 => 
     array (
-      'id' => 'question-square-outline',
-      'name' => 'Question Square Fill',
-      'value' => 'bi-question-square',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'question',
-        1 => 'square',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    192 => 
-    array (
-      'id' => 'search-outline',
       'name' => 'Search',
       'value' => 'bi-search',
       'type' => 'bootstrap-icons',
@@ -2994,11 +2523,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    181 => 
+    array (
+      'name' => 'Search Heart',
+      'value' => 'bi-search-heart',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'search',
+        1 => 'heart',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    193 => 
+    182 => 
     array (
-      'id' => 'search-heart-fill-solid',
       'name' => 'Search Heart Fill',
       'value' => 'bi-search-heart-fill',
       'type' => 'bootstrap-icons',
@@ -3012,25 +2553,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    194 => 
+    183 => 
     array (
-      'id' => 'search-heart-outline',
-      'name' => 'Search Heart Fill',
-      'value' => 'bi-search-heart',
+      'name' => 'Shield',
+      'value' => 'bi-shield',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'search',
-        1 => 'heart',
-        2 => 'fill',
+        0 => 'shield',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    195 => 
+    184 => 
     array (
-      'id' => 'shield-check-outline',
       'name' => 'Shield Check',
       'value' => 'bi-shield-check',
       'type' => 'bootstrap-icons',
@@ -3043,24 +2580,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    196 => 
+    185 => 
     array (
-      'id' => 'shield-check-fill-solid',
-      'name' => 'Shield Check',
-      'value' => 'bi-shield-check-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'check',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    197 => 
-    array (
-      'id' => 'shield-exclamation-outline',
       'name' => 'Shield Exclamation',
       'value' => 'bi-shield-exclamation',
       'type' => 'bootstrap-icons',
@@ -3073,24 +2594,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    198 => 
+    186 => 
     array (
-      'id' => 'shield-exclamation-fill-solid',
-      'name' => 'Shield Exclamation',
-      'value' => 'bi-shield-exclamation-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'exclamation',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    199 => 
-    array (
-      'id' => 'shield-fill-solid',
       'name' => 'Shield Fill',
       'value' => 'bi-shield-fill',
       'type' => 'bootstrap-icons',
@@ -3103,40 +2608,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    200 => 
+    187 => 
     array (
-      'id' => 'shield-outline',
-      'name' => 'Shield Fill',
-      'value' => 'bi-shield',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    201 => 
-    array (
-      'id' => 'shield-fill-check-fill-solid',
-      'name' => 'Shield Fill Check',
-      'value' => 'bi-shield-fill-check-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-        2 => 'check',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    202 => 
-    array (
-      'id' => 'shield-fill-check-solid',
       'name' => 'Shield Fill Check',
       'value' => 'bi-shield-fill-check',
       'type' => 'bootstrap-icons',
@@ -3150,9 +2623,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    203 => 
+    188 => 
     array (
-      'id' => 'shield-fill-exclamation-solid',
       'name' => 'Shield Fill Exclamation',
       'value' => 'bi-shield-fill-exclamation',
       'type' => 'bootstrap-icons',
@@ -3166,25 +2638,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    204 => 
+    189 => 
     array (
-      'id' => 'shield-fill-exclamation-fill-solid',
-      'name' => 'Shield Fill Exclamation',
-      'value' => 'bi-shield-fill-exclamation-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-        2 => 'exclamation',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    205 => 
-    array (
-      'id' => 'shield-fill-minus-solid',
       'name' => 'Shield Fill Minus',
       'value' => 'bi-shield-fill-minus',
       'type' => 'bootstrap-icons',
@@ -3198,25 +2653,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    206 => 
+    190 => 
     array (
-      'id' => 'shield-fill-minus-fill-solid',
-      'name' => 'Shield Fill Minus',
-      'value' => 'bi-shield-fill-minus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-        2 => 'minus',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    207 => 
-    array (
-      'id' => 'shield-fill-plus-solid',
       'name' => 'Shield Fill Plus',
       'value' => 'bi-shield-fill-plus',
       'type' => 'bootstrap-icons',
@@ -3230,25 +2668,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    208 => 
+    191 => 
     array (
-      'id' => 'shield-fill-plus-fill-solid',
-      'name' => 'Shield Fill Plus',
-      'value' => 'bi-shield-fill-plus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-        2 => 'plus',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    209 => 
-    array (
-      'id' => 'shield-fill-x-solid',
       'name' => 'Shield Fill X',
       'value' => 'bi-shield-fill-x',
       'type' => 'bootstrap-icons',
@@ -3262,41 +2683,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    210 => 
+    192 => 
     array (
-      'id' => 'shield-fill-x-fill-solid',
-      'name' => 'Shield Fill X',
-      'value' => 'bi-shield-fill-x-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'fill',
-        2 => 'x',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    211 => 
-    array (
-      'id' => 'shield-lock-outline',
-      'name' => 'Shield Lock Fill',
+      'name' => 'Shield Lock',
       'value' => 'bi-shield-lock',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'shield',
         1 => 'lock',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    212 => 
+    193 => 
     array (
-      'id' => 'shield-lock-fill-solid',
       'name' => 'Shield Lock Fill',
       'value' => 'bi-shield-lock-fill',
       'type' => 'bootstrap-icons',
@@ -3310,24 +2712,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    213 => 
+    194 => 
     array (
-      'id' => 'shield-minus-fill-solid',
-      'name' => 'Shield Minus',
-      'value' => 'bi-shield-minus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'minus',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    214 => 
-    array (
-      'id' => 'shield-minus-outline',
       'name' => 'Shield Minus',
       'value' => 'bi-shield-minus',
       'type' => 'bootstrap-icons',
@@ -3340,24 +2726,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    215 => 
+    195 => 
     array (
-      'id' => 'shield-plus-fill-solid',
-      'name' => 'Shield Plus',
-      'value' => 'bi-shield-plus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'plus',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    216 => 
-    array (
-      'id' => 'shield-plus-outline',
       'name' => 'Shield Plus',
       'value' => 'bi-shield-plus',
       'type' => 'bootstrap-icons',
@@ -3370,24 +2740,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    217 => 
+    196 => 
     array (
-      'id' => 'shield-shaded-fill-solid',
-      'name' => 'Shield Shaded',
-      'value' => 'bi-shield-shaded-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'shaded',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    218 => 
-    array (
-      'id' => 'shield-shaded-outline',
       'name' => 'Shield Shaded',
       'value' => 'bi-shield-shaded',
       'type' => 'bootstrap-icons',
@@ -3397,12 +2751,24 @@ return array (
         1 => 'shaded',
       ),
       'category' => 'general',
+      'has_variants' => false,
+    ),
+    197 => 
+    array (
+      'name' => 'Shield Slash',
+      'value' => 'bi-shield-slash',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'shield',
+        1 => 'slash',
+      ),
+      'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    219 => 
+    198 => 
     array (
-      'id' => 'shield-slash-fill-solid',
       'name' => 'Shield Slash Fill',
       'value' => 'bi-shield-slash-fill',
       'type' => 'bootstrap-icons',
@@ -3416,25 +2782,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    220 => 
+    199 => 
     array (
-      'id' => 'shield-slash-outline',
-      'name' => 'Shield Slash Fill',
-      'value' => 'bi-shield-slash',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'shield',
-        1 => 'slash',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    221 => 
-    array (
-      'id' => 'shield-x-outline',
       'name' => 'Shield X',
       'value' => 'bi-shield-x',
       'type' => 'bootstrap-icons',
@@ -3447,24 +2796,35 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    222 => 
+    200 => 
     array (
-      'id' => 'shield-x-fill-solid',
-      'name' => 'Shield X',
-      'value' => 'bi-shield-x-fill',
+      'name' => 'Signpost',
+      'value' => 'bi-signpost',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'shield',
-        1 => 'x',
+        0 => 'signpost',
       ),
       'category' => 'general',
       'has_variants' => true,
-      'variant_type' => 'solid',
+      'variant_type' => 'outline',
     ),
-    223 => 
+    201 => 
     array (
-      'id' => 'signpost-2-fill-solid',
+      'name' => 'Signpost 2',
+      'value' => 'bi-signpost-2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'signpost',
+        1 => '2',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    202 => 
+    array (
       'name' => 'Signpost 2 Fill',
       'value' => 'bi-signpost-2-fill',
       'type' => 'bootstrap-icons',
@@ -3478,25 +2838,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    224 => 
+    203 => 
     array (
-      'id' => 'signpost-2-outline',
-      'name' => 'Signpost 2 Fill',
-      'value' => 'bi-signpost-2',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'signpost',
-        1 => '2',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    225 => 
-    array (
-      'id' => 'signpost-fill-solid',
       'name' => 'Signpost Fill',
       'value' => 'bi-signpost-fill',
       'type' => 'bootstrap-icons',
@@ -3509,40 +2852,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    226 => 
+    204 => 
     array (
-      'id' => 'signpost-outline',
-      'name' => 'Signpost Fill',
-      'value' => 'bi-signpost',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'signpost',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    227 => 
-    array (
-      'id' => 'signpost-split-outline',
-      'name' => 'Signpost Split Fill',
+      'name' => 'Signpost Split',
       'value' => 'bi-signpost-split',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'signpost',
         1 => 'split',
-        2 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    228 => 
+    205 => 
     array (
-      'id' => 'signpost-split-fill-solid',
       'name' => 'Signpost Split Fill',
       'value' => 'bi-signpost-split-fill',
       'type' => 'bootstrap-icons',
@@ -3556,9 +2881,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    229 => 
+    206 => 
     array (
-      'id' => 'slash-lg-outline',
       'name' => 'Slash Lg',
       'value' => 'bi-slash-lg',
       'type' => 'bootstrap-icons',
@@ -3569,11 +2893,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    207 => 
+    array (
+      'name' => 'Star',
+      'value' => 'bi-star',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'star',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    230 => 
+    208 => 
     array (
-      'id' => 'star-fill-solid',
       'name' => 'Star Fill',
       'value' => 'bi-star-fill',
       'type' => 'bootstrap-icons',
@@ -3586,24 +2921,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    231 => 
+    209 => 
     array (
-      'id' => 'star-outline',
-      'name' => 'Star Fill',
-      'value' => 'bi-star',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'star',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    232 => 
-    array (
-      'id' => 'star-half-outline',
       'name' => 'Star Half',
       'value' => 'bi-star-half',
       'type' => 'bootstrap-icons',
@@ -3613,41 +2932,10 @@ return array (
         1 => 'half',
       ),
       'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    233 => 
+    210 => 
     array (
-      'id' => 'star-half-fill-solid',
-      'name' => 'Star Half',
-      'value' => 'bi-star-half-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'star',
-        1 => 'half',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    234 => 
-    array (
-      'id' => 'stars-fill-solid',
-      'name' => 'Stars',
-      'value' => 'bi-stars-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'stars',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    235 => 
-    array (
-      'id' => 'stars-outline',
       'name' => 'Stars',
       'value' => 'bi-stars',
       'type' => 'bootstrap-icons',
@@ -3656,12 +2944,23 @@ return array (
         0 => 'stars',
       ),
       'category' => 'general',
+      'has_variants' => false,
+    ),
+    211 => 
+    array (
+      'name' => 'Stopwatch',
+      'value' => 'bi-stopwatch',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'stopwatch',
+      ),
+      'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    236 => 
+    212 => 
     array (
-      'id' => 'stopwatch-fill-solid',
       'name' => 'Stopwatch Fill',
       'value' => 'bi-stopwatch-fill',
       'type' => 'bootstrap-icons',
@@ -3674,24 +2973,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    237 => 
+    213 => 
     array (
-      'id' => 'stopwatch-outline',
-      'name' => 'Stopwatch Fill',
-      'value' => 'bi-stopwatch',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'stopwatch',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    238 => 
-    array (
-      'id' => 'subtract-outline',
       'name' => 'Subtract',
       'value' => 'bi-subtract',
       'type' => 'bootstrap-icons',
@@ -3701,11 +2984,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    214 => 
+    array (
+      'name' => 'Tag',
+      'value' => 'bi-tag',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'tag',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    239 => 
+    215 => 
     array (
-      'id' => 'tag-fill-solid',
       'name' => 'Tag Fill',
       'value' => 'bi-tag-fill',
       'type' => 'bootstrap-icons',
@@ -3718,39 +3012,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    240 => 
+    216 => 
     array (
-      'id' => 'tag-outline',
-      'name' => 'Tag Fill',
-      'value' => 'bi-tag',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'tag',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    241 => 
-    array (
-      'id' => 'tags-outline',
-      'name' => 'Tags Fill',
+      'name' => 'Tags',
       'value' => 'bi-tags',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'tags',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    242 => 
+    217 => 
     array (
-      'id' => 'tags-fill-solid',
       'name' => 'Tags Fill',
       'value' => 'bi-tags-fill',
       'type' => 'bootstrap-icons',
@@ -3763,9 +3039,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    243 => 
+    218 => 
     array (
-      'id' => 'translate-outline',
       'name' => 'Translate',
       'value' => 'bi-translate',
       'type' => 'bootstrap-icons',
@@ -3775,26 +3050,22 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    244 => 
+    219 => 
     array (
-      'id' => 'trash-outline',
-      'name' => 'Trash Fill',
+      'name' => 'Trash',
       'value' => 'bi-trash',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'trash',
-        1 => 'fill',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    245 => 
+    220 => 
     array (
-      'id' => 'trash-fill-solid',
       'name' => 'Trash Fill',
       'value' => 'bi-trash-fill',
       'type' => 'bootstrap-icons',
@@ -3807,9 +3078,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    246 => 
+    221 => 
     array (
-      'id' => 'trash2-fill-solid',
+      'name' => 'Trash2',
+      'value' => 'bi-trash2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'trash2',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    222 => 
+    array (
       'name' => 'Trash2 Fill',
       'value' => 'bi-trash2-fill',
       'type' => 'bootstrap-icons',
@@ -3822,24 +3105,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    247 => 
+    223 => 
     array (
-      'id' => 'trash2-outline',
-      'name' => 'Trash2 Fill',
-      'value' => 'bi-trash2',
+      'name' => 'Trash3',
+      'value' => 'bi-trash3',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'trash2',
-        1 => 'fill',
+        0 => 'trash3',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    248 => 
+    224 => 
     array (
-      'id' => 'trash3-fill-solid',
       'name' => 'Trash3 Fill',
       'value' => 'bi-trash3-fill',
       'type' => 'bootstrap-icons',
@@ -3852,24 +3132,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    249 => 
+    225 => 
     array (
-      'id' => 'trash3-outline',
-      'name' => 'Trash3 Fill',
-      'value' => 'bi-trash3',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'trash3',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    250 => 
-    array (
-      'id' => 'universal-access-outline',
       'name' => 'Universal Access',
       'value' => 'bi-universal-access',
       'type' => 'bootstrap-icons',
@@ -3880,27 +3144,9 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    251 => 
+    226 => 
     array (
-      'id' => 'universal-access-circle-fill-solid',
-      'name' => 'Universal Access Circle',
-      'value' => 'bi-universal-access-circle-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'universal',
-        1 => 'access',
-        2 => 'circle',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    252 => 
-    array (
-      'id' => 'universal-access-circle-outline',
       'name' => 'Universal Access Circle',
       'value' => 'bi-universal-access-circle',
       'type' => 'bootstrap-icons',
@@ -3911,12 +3157,23 @@ return array (
         2 => 'circle',
       ),
       'category' => 'general',
+      'has_variants' => false,
+    ),
+    227 => 
+    array (
+      'name' => 'Unlock',
+      'value' => 'bi-unlock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'unlock',
+      ),
+      'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    253 => 
+    228 => 
     array (
-      'id' => 'unlock-fill-solid',
       'name' => 'Unlock Fill',
       'value' => 'bi-unlock-fill',
       'type' => 'bootstrap-icons',
@@ -3929,24 +3186,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    254 => 
+    229 => 
     array (
-      'id' => 'unlock-outline',
-      'name' => 'Unlock Fill',
-      'value' => 'bi-unlock',
+      'name' => 'Unlock2',
+      'value' => 'bi-unlock2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'unlock',
-        1 => 'fill',
+        0 => 'unlock2',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    255 => 
+    230 => 
     array (
-      'id' => 'unlock2-fill-solid',
       'name' => 'Unlock2 Fill',
       'value' => 'bi-unlock2-fill',
       'type' => 'bootstrap-icons',
@@ -3959,24 +3213,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    256 => 
+    231 => 
     array (
-      'id' => 'unlock2-outline',
-      'name' => 'Unlock2 Fill',
-      'value' => 'bi-unlock2',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'unlock2',
-        1 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    257 => 
-    array (
-      'id' => 'x-outline',
       'name' => 'X',
       'value' => 'bi-x',
       'type' => 'bootstrap-icons',
@@ -3986,11 +3224,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    232 => 
+    array (
+      'name' => 'X Circle',
+      'value' => 'bi-x-circle',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'x',
+        1 => 'circle',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    258 => 
+    233 => 
     array (
-      'id' => 'x-circle-fill-solid',
       'name' => 'X Circle Fill',
       'value' => 'bi-x-circle-fill',
       'type' => 'bootstrap-icons',
@@ -4004,25 +3254,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    259 => 
+    234 => 
     array (
-      'id' => 'x-circle-outline',
-      'name' => 'X Circle Fill',
-      'value' => 'bi-x-circle',
+      'name' => 'X Diamond',
+      'value' => 'bi-x-diamond',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'x',
-        1 => 'circle',
-        2 => 'fill',
+        1 => 'diamond',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    260 => 
+    235 => 
     array (
-      'id' => 'x-diamond-fill-solid',
       'name' => 'X Diamond Fill',
       'value' => 'bi-x-diamond-fill',
       'type' => 'bootstrap-icons',
@@ -4036,25 +3283,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    261 => 
+    236 => 
     array (
-      'id' => 'x-diamond-outline',
-      'name' => 'X Diamond Fill',
-      'value' => 'bi-x-diamond',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'x',
-        1 => 'diamond',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    262 => 
-    array (
-      'id' => 'x-lg-outline',
       'name' => 'X Lg',
       'value' => 'bi-x-lg',
       'type' => 'bootstrap-icons',
@@ -4065,11 +3295,23 @@ return array (
       ),
       'category' => 'general',
       'has_variants' => false,
+    ),
+    237 => 
+    array (
+      'name' => 'X Octagon',
+      'value' => 'bi-x-octagon',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'x',
+        1 => 'octagon',
+      ),
+      'category' => 'general',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    263 => 
+    238 => 
     array (
-      'id' => 'x-octagon-fill-solid',
       'name' => 'X Octagon Fill',
       'value' => 'bi-x-octagon-fill',
       'type' => 'bootstrap-icons',
@@ -4083,25 +3325,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    264 => 
+    239 => 
     array (
-      'id' => 'x-octagon-outline',
-      'name' => 'X Octagon Fill',
-      'value' => 'bi-x-octagon',
+      'name' => 'X Square',
+      'value' => 'bi-x-square',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'x',
-        1 => 'octagon',
-        2 => 'fill',
+        1 => 'square',
       ),
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    265 => 
+    240 => 
     array (
-      'id' => 'x-square-fill-solid',
       'name' => 'X Square Fill',
       'value' => 'bi-x-square-fill',
       'type' => 'bootstrap-icons',
@@ -4114,22 +3353,6 @@ return array (
       'category' => 'general',
       'has_variants' => true,
       'variant_type' => 'solid',
-    ),
-    266 => 
-    array (
-      'id' => 'x-square-outline',
-      'name' => 'X Square Fill',
-      'value' => 'bi-x-square',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'x',
-        1 => 'square',
-        2 => 'fill',
-      ),
-      'category' => 'general',
-      'has_variants' => true,
-      'variant_type' => 'outline',
     ),
   ),
 );

@@ -2,14 +2,25 @@
 
 return array (
   'id' => 'files',
-  'name' => '檔案',
-  'description' => '檔案和文件相關圖標',
-  'priority' => 'normal',
+  'name' => '檔案文件',
+  'description' => '檔案、文件相關的圖標',
   'icons' => 
   array (
     0 => 
     array (
-      'id' => 'archive-fill-solid',
+      'name' => 'Archive',
+      'value' => 'bi-archive',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'archive',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    1 => 
+    array (
       'name' => 'Archive Fill',
       'value' => 'bi-archive-fill',
       'type' => 'bootstrap-icons',
@@ -22,24 +33,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    1 => 
-    array (
-      'id' => 'archive-outline',
-      'name' => 'Archive Fill',
-      'value' => 'bi-archive',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'archive',
-        1 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     2 => 
     array (
-      'id' => 'back-outline',
       'name' => 'Back',
       'value' => 'bi-back',
       'type' => 'bootstrap-icons',
@@ -49,18 +44,15 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     3 => 
     array (
-      'id' => 'book-outline',
-      'name' => 'Book Fill',
+      'name' => 'Book',
       'value' => 'bi-book',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'book',
-        1 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -68,7 +60,6 @@ return array (
     ),
     4 => 
     array (
-      'id' => 'book-fill-solid',
       'name' => 'Book Fill',
       'value' => 'bi-book-fill',
       'type' => 'bootstrap-icons',
@@ -83,7 +74,6 @@ return array (
     ),
     5 => 
     array (
-      'id' => 'book-half-outline',
       'name' => 'Book Half',
       'value' => 'bi-book-half',
       'type' => 'bootstrap-icons',
@@ -94,11 +84,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     6 => 
     array (
-      'id' => 'bookshelf-outline',
       'name' => 'Bookshelf',
       'value' => 'bi-bookshelf',
       'type' => 'bootstrap-icons',
@@ -108,11 +96,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     7 => 
     array (
-      'id' => 'clipboard-outline',
       'name' => 'Clipboard',
       'value' => 'bi-clipboard',
       'type' => 'bootstrap-icons',
@@ -126,7 +112,6 @@ return array (
     ),
     8 => 
     array (
-      'id' => 'clipboard-check-outline',
       'name' => 'Clipboard Check',
       'value' => 'bi-clipboard-check',
       'type' => 'bootstrap-icons',
@@ -141,7 +126,6 @@ return array (
     ),
     9 => 
     array (
-      'id' => 'clipboard-check-fill-solid',
       'name' => 'Clipboard Check Fill',
       'value' => 'bi-clipboard-check-fill',
       'type' => 'bootstrap-icons',
@@ -157,7 +141,6 @@ return array (
     ),
     10 => 
     array (
-      'id' => 'clipboard-data-outline',
       'name' => 'Clipboard Data',
       'value' => 'bi-clipboard-data',
       'type' => 'bootstrap-icons',
@@ -172,7 +155,6 @@ return array (
     ),
     11 => 
     array (
-      'id' => 'clipboard-data-fill-solid',
       'name' => 'Clipboard Data Fill',
       'value' => 'bi-clipboard-data-fill',
       'type' => 'bootstrap-icons',
@@ -188,7 +170,6 @@ return array (
     ),
     12 => 
     array (
-      'id' => 'clipboard-fill-solid',
       'name' => 'Clipboard Fill',
       'value' => 'bi-clipboard-fill',
       'type' => 'bootstrap-icons',
@@ -203,15 +184,13 @@ return array (
     ),
     13 => 
     array (
-      'id' => 'clipboard-heart-outline',
-      'name' => 'Clipboard Heart Fill',
+      'name' => 'Clipboard Heart',
       'value' => 'bi-clipboard-heart',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard',
         1 => 'heart',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -219,7 +198,6 @@ return array (
     ),
     14 => 
     array (
-      'id' => 'clipboard-heart-fill-solid',
       'name' => 'Clipboard Heart Fill',
       'value' => 'bi-clipboard-heart-fill',
       'type' => 'bootstrap-icons',
@@ -235,7 +213,6 @@ return array (
     ),
     15 => 
     array (
-      'id' => 'clipboard-minus-outline',
       'name' => 'Clipboard Minus',
       'value' => 'bi-clipboard-minus',
       'type' => 'bootstrap-icons',
@@ -250,7 +227,6 @@ return array (
     ),
     16 => 
     array (
-      'id' => 'clipboard-minus-fill-solid',
       'name' => 'Clipboard Minus Fill',
       'value' => 'bi-clipboard-minus-fill',
       'type' => 'bootstrap-icons',
@@ -266,7 +242,6 @@ return array (
     ),
     17 => 
     array (
-      'id' => 'clipboard-plus-outline',
       'name' => 'Clipboard Plus',
       'value' => 'bi-clipboard-plus',
       'type' => 'bootstrap-icons',
@@ -281,7 +256,6 @@ return array (
     ),
     18 => 
     array (
-      'id' => 'clipboard-plus-fill-solid',
       'name' => 'Clipboard Plus Fill',
       'value' => 'bi-clipboard-plus-fill',
       'type' => 'bootstrap-icons',
@@ -297,7 +271,6 @@ return array (
     ),
     19 => 
     array (
-      'id' => 'clipboard-pulse-outline',
       'name' => 'Clipboard Pulse',
       'value' => 'bi-clipboard-pulse',
       'type' => 'bootstrap-icons',
@@ -308,11 +281,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     20 => 
     array (
-      'id' => 'clipboard-x-outline',
       'name' => 'Clipboard X',
       'value' => 'bi-clipboard-x',
       'type' => 'bootstrap-icons',
@@ -327,7 +298,6 @@ return array (
     ),
     21 => 
     array (
-      'id' => 'clipboard-x-fill-solid',
       'name' => 'Clipboard X Fill',
       'value' => 'bi-clipboard-x-fill',
       'type' => 'bootstrap-icons',
@@ -343,7 +313,33 @@ return array (
     ),
     22 => 
     array (
-      'id' => 'clipboard2-check-fill-solid',
+      'name' => 'Clipboard2',
+      'value' => 'bi-clipboard2',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    23 => 
+    array (
+      'name' => 'Clipboard2 Check',
+      'value' => 'bi-clipboard2-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    24 => 
+    array (
       'name' => 'Clipboard2 Check Fill',
       'value' => 'bi-clipboard2-check-fill',
       'type' => 'bootstrap-icons',
@@ -357,41 +353,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    23 => 
+    25 => 
     array (
-      'id' => 'clipboard2-check-outline',
-      'name' => 'Clipboard2 Check Fill',
-      'value' => 'bi-clipboard2-check',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'clipboard2',
-        1 => 'check',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    24 => 
-    array (
-      'id' => 'clipboard2-data-outline',
-      'name' => 'Clipboard2 Data Fill',
+      'name' => 'Clipboard2 Data',
       'value' => 'bi-clipboard2-data',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard2',
         1 => 'data',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    25 => 
+    26 => 
     array (
-      'id' => 'clipboard2-data-fill-solid',
       'name' => 'Clipboard2 Data Fill',
       'value' => 'bi-clipboard2-data-fill',
       'type' => 'bootstrap-icons',
@@ -405,9 +382,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    26 => 
+    27 => 
     array (
-      'id' => 'clipboard2-fill-solid',
       'name' => 'Clipboard2 Fill',
       'value' => 'bi-clipboard2-fill',
       'type' => 'bootstrap-icons',
@@ -420,24 +396,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    27 => 
+    28 => 
     array (
-      'id' => 'clipboard2-outline',
-      'name' => 'Clipboard2 Fill',
-      'value' => 'bi-clipboard2',
+      'name' => 'Clipboard2 Heart',
+      'value' => 'bi-clipboard2-heart',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard2',
-        1 => 'fill',
+        1 => 'heart',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    28 => 
+    29 => 
     array (
-      'id' => 'clipboard2-heart-fill-solid',
       'name' => 'Clipboard2 Heart Fill',
       'value' => 'bi-clipboard2-heart-fill',
       'type' => 'bootstrap-icons',
@@ -451,33 +425,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
-    array (
-      'id' => 'clipboard2-heart-outline',
-      'name' => 'Clipboard2 Heart Fill',
-      'value' => 'bi-clipboard2-heart',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'clipboard2',
-        1 => 'heart',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     30 => 
     array (
-      'id' => 'clipboard2-minus-outline',
-      'name' => 'Clipboard2 Minus Fill',
+      'name' => 'Clipboard2 Minus',
       'value' => 'bi-clipboard2-minus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard2',
         1 => 'minus',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -485,7 +441,6 @@ return array (
     ),
     31 => 
     array (
-      'id' => 'clipboard2-minus-fill-solid',
       'name' => 'Clipboard2 Minus Fill',
       'value' => 'bi-clipboard2-minus-fill',
       'type' => 'bootstrap-icons',
@@ -501,7 +456,20 @@ return array (
     ),
     32 => 
     array (
-      'id' => 'clipboard2-plus-fill-solid',
+      'name' => 'Clipboard2 Plus',
+      'value' => 'bi-clipboard2-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'clipboard2',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    33 => 
+    array (
       'name' => 'Clipboard2 Plus Fill',
       'value' => 'bi-clipboard2-plus-fill',
       'type' => 'bootstrap-icons',
@@ -515,25 +483,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    33 => 
+    34 => 
     array (
-      'id' => 'clipboard2-plus-outline',
-      'name' => 'Clipboard2 Plus Fill',
-      'value' => 'bi-clipboard2-plus',
+      'name' => 'Clipboard2 Pulse',
+      'value' => 'bi-clipboard2-pulse',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard2',
-        1 => 'plus',
-        2 => 'fill',
+        1 => 'pulse',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    34 => 
+    35 => 
     array (
-      'id' => 'clipboard2-pulse-fill-solid',
       'name' => 'Clipboard2 Pulse Fill',
       'value' => 'bi-clipboard2-pulse-fill',
       'type' => 'bootstrap-icons',
@@ -547,33 +512,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    35 => 
-    array (
-      'id' => 'clipboard2-pulse-outline',
-      'name' => 'Clipboard2 Pulse Fill',
-      'value' => 'bi-clipboard2-pulse',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'clipboard2',
-        1 => 'pulse',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     36 => 
     array (
-      'id' => 'clipboard2-x-outline',
-      'name' => 'Clipboard2 X Fill',
+      'name' => 'Clipboard2 X',
       'value' => 'bi-clipboard2-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'clipboard2',
         1 => 'x',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -581,7 +528,6 @@ return array (
     ),
     37 => 
     array (
-      'id' => 'clipboard2-x-fill-solid',
       'name' => 'Clipboard2 X Fill',
       'value' => 'bi-clipboard2-x-fill',
       'type' => 'bootstrap-icons',
@@ -597,7 +543,6 @@ return array (
     ),
     38 => 
     array (
-      'id' => 'download-outline',
       'name' => 'Download',
       'value' => 'bi-download',
       'type' => 'bootstrap-icons',
@@ -607,20 +552,15 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     39 => 
     array (
-      'id' => 'file-arrow-down-outline',
-      'name' => 'File Arrow Down Fill',
-      'value' => 'bi-file-arrow-down',
+      'name' => 'File',
+      'value' => 'bi-file',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'arrow',
-        2 => 'down',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -628,7 +568,21 @@ return array (
     ),
     40 => 
     array (
-      'id' => 'file-arrow-down-fill-solid',
+      'name' => 'File Arrow Down',
+      'value' => 'bi-file-arrow-down',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'arrow',
+        2 => 'down',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    41 => 
+    array (
       'name' => 'File Arrow Down Fill',
       'value' => 'bi-file-arrow-down-fill',
       'type' => 'bootstrap-icons',
@@ -643,10 +597,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    41 => 
+    42 => 
     array (
-      'id' => 'file-arrow-up-outline',
-      'name' => 'File Arrow Up Fill',
+      'name' => 'File Arrow Up',
       'value' => 'bi-file-arrow-up',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -654,15 +607,13 @@ return array (
         0 => 'file',
         1 => 'arrow',
         2 => 'up',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    42 => 
+    43 => 
     array (
-      'id' => 'file-arrow-up-fill-solid',
       'name' => 'File Arrow Up Fill',
       'value' => 'bi-file-arrow-up-fill',
       'type' => 'bootstrap-icons',
@@ -677,9 +628,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    43 => 
+    44 => 
     array (
-      'id' => 'file-bar-graph-fill-solid',
+      'name' => 'File Bar Graph',
+      'value' => 'bi-file-bar-graph',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'bar',
+        2 => 'graph',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    45 => 
+    array (
       'name' => 'File Bar Graph Fill',
       'value' => 'bi-file-bar-graph-fill',
       'type' => 'bootstrap-icons',
@@ -694,26 +659,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    44 => 
+    46 => 
     array (
-      'id' => 'file-bar-graph-outline',
-      'name' => 'File Bar Graph Fill',
-      'value' => 'bi-file-bar-graph',
+      'name' => 'File Binary',
+      'value' => 'bi-file-binary',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'bar',
-        2 => 'graph',
-        3 => 'fill',
+        1 => 'binary',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    45 => 
+    47 => 
     array (
-      'id' => 'file-binary-fill-solid',
       'name' => 'File Binary Fill',
       'value' => 'bi-file-binary-fill',
       'type' => 'bootstrap-icons',
@@ -727,25 +688,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    46 => 
+    48 => 
     array (
-      'id' => 'file-binary-outline',
-      'name' => 'File Binary Fill',
-      'value' => 'bi-file-binary',
+      'name' => 'File Break',
+      'value' => 'bi-file-break',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'binary',
-        2 => 'fill',
+        1 => 'break',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    47 => 
+    49 => 
     array (
-      'id' => 'file-break-fill-solid',
       'name' => 'File Break Fill',
       'value' => 'bi-file-break-fill',
       'type' => 'bootstrap-icons',
@@ -759,25 +717,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    48 => 
+    50 => 
     array (
-      'id' => 'file-break-outline',
-      'name' => 'File Break Fill',
-      'value' => 'bi-file-break',
+      'name' => 'File Check',
+      'value' => 'bi-file-check',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'break',
-        2 => 'fill',
+        1 => 'check',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
+    51 => 
     array (
-      'id' => 'file-check-fill-solid',
       'name' => 'File Check Fill',
       'value' => 'bi-file-check-fill',
       'type' => 'bootstrap-icons',
@@ -791,41 +746,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    50 => 
+    52 => 
     array (
-      'id' => 'file-check-outline',
-      'name' => 'File Check Fill',
-      'value' => 'bi-file-check',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'check',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    51 => 
-    array (
-      'id' => 'file-code-outline',
-      'name' => 'File Code Fill',
+      'name' => 'File Code',
       'value' => 'bi-file-code',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'code',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    52 => 
+    53 => 
     array (
-      'id' => 'file-code-fill-solid',
       'name' => 'File Code Fill',
       'value' => 'bi-file-code-fill',
       'type' => 'bootstrap-icons',
@@ -839,25 +775,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
+    54 => 
     array (
-      'id' => 'file-diff-outline',
-      'name' => 'File Diff Fill',
+      'name' => 'File Diff',
       'value' => 'bi-file-diff',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'diff',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    54 => 
+    55 => 
     array (
-      'id' => 'file-diff-fill-solid',
       'name' => 'File Diff Fill',
       'value' => 'bi-file-diff-fill',
       'type' => 'bootstrap-icons',
@@ -871,10 +804,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    55 => 
+    56 => 
     array (
-      'id' => 'file-earmark-arrow-down-outline',
-      'name' => 'File Earmark Arrow Down Fill',
+      'name' => 'File Earmark',
+      'value' => 'bi-file-earmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    57 => 
+    array (
+      'name' => 'File Earmark Arrow Down',
       'value' => 'bi-file-earmark-arrow-down',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -883,15 +829,13 @@ return array (
         1 => 'earmark',
         2 => 'arrow',
         3 => 'down',
-        4 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    56 => 
+    58 => 
     array (
-      'id' => 'file-earmark-arrow-down-fill-solid',
       'name' => 'File Earmark Arrow Down Fill',
       'value' => 'bi-file-earmark-arrow-down-fill',
       'type' => 'bootstrap-icons',
@@ -907,10 +851,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
+    59 => 
     array (
-      'id' => 'file-earmark-arrow-up-outline',
-      'name' => 'File Earmark Arrow Up Fill',
+      'name' => 'File Earmark Arrow Up',
       'value' => 'bi-file-earmark-arrow-up',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -919,15 +862,13 @@ return array (
         1 => 'earmark',
         2 => 'arrow',
         3 => 'up',
-        4 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    58 => 
+    60 => 
     array (
-      'id' => 'file-earmark-arrow-up-fill-solid',
       'name' => 'File Earmark Arrow Up Fill',
       'value' => 'bi-file-earmark-arrow-up-fill',
       'type' => 'bootstrap-icons',
@@ -943,10 +884,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    59 => 
+    61 => 
     array (
-      'id' => 'file-earmark-bar-graph-outline',
-      'name' => 'File Earmark Bar Graph Fill',
+      'name' => 'File Earmark Bar Graph',
       'value' => 'bi-file-earmark-bar-graph',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -955,15 +895,13 @@ return array (
         1 => 'earmark',
         2 => 'bar',
         3 => 'graph',
-        4 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    60 => 
+    62 => 
     array (
-      'id' => 'file-earmark-bar-graph-fill-solid',
       'name' => 'File Earmark Bar Graph Fill',
       'value' => 'bi-file-earmark-bar-graph-fill',
       'type' => 'bootstrap-icons',
@@ -979,9 +917,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    61 => 
+    63 => 
     array (
-      'id' => 'file-earmark-binary-fill-solid',
+      'name' => 'File Earmark Binary',
+      'value' => 'bi-file-earmark-binary',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'binary',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    64 => 
+    array (
       'name' => 'File Earmark Binary Fill',
       'value' => 'bi-file-earmark-binary-fill',
       'type' => 'bootstrap-icons',
@@ -996,27 +948,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    62 => 
+    65 => 
     array (
-      'id' => 'file-earmark-binary-outline',
-      'name' => 'File Earmark Binary Fill',
-      'value' => 'bi-file-earmark-binary',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'binary',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    63 => 
-    array (
-      'id' => 'file-earmark-break-outline',
-      'name' => 'File Earmark Break Fill',
+      'name' => 'File Earmark Break',
       'value' => 'bi-file-earmark-break',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -1024,15 +958,13 @@ return array (
         0 => 'file',
         1 => 'earmark',
         2 => 'break',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    64 => 
+    66 => 
     array (
-      'id' => 'file-earmark-break-fill-solid',
       'name' => 'File Earmark Break Fill',
       'value' => 'bi-file-earmark-break-fill',
       'type' => 'bootstrap-icons',
@@ -1047,9 +979,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    65 => 
+    67 => 
     array (
-      'id' => 'file-earmark-check-fill-solid',
+      'name' => 'File Earmark Check',
+      'value' => 'bi-file-earmark-check',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'check',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    68 => 
+    array (
       'name' => 'File Earmark Check Fill',
       'value' => 'bi-file-earmark-check-fill',
       'type' => 'bootstrap-icons',
@@ -1064,27 +1010,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    66 => 
+    69 => 
     array (
-      'id' => 'file-earmark-check-outline',
-      'name' => 'File Earmark Check Fill',
-      'value' => 'bi-file-earmark-check',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'check',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    67 => 
-    array (
-      'id' => 'file-earmark-code-outline',
-      'name' => 'File Earmark Code Fill',
+      'name' => 'File Earmark Code',
       'value' => 'bi-file-earmark-code',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -1092,15 +1020,13 @@ return array (
         0 => 'file',
         1 => 'earmark',
         2 => 'code',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    68 => 
+    70 => 
     array (
-      'id' => 'file-earmark-code-fill-solid',
       'name' => 'File Earmark Code Fill',
       'value' => 'bi-file-earmark-code-fill',
       'type' => 'bootstrap-icons',
@@ -1115,10 +1041,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    69 => 
+    71 => 
     array (
-      'id' => 'file-earmark-diff-outline',
-      'name' => 'File Earmark Diff Fill',
+      'name' => 'File Earmark Diff',
       'value' => 'bi-file-earmark-diff',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -1126,15 +1051,13 @@ return array (
         0 => 'file',
         1 => 'earmark',
         2 => 'diff',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    70 => 
+    72 => 
     array (
-      'id' => 'file-earmark-diff-fill-solid',
       'name' => 'File Earmark Diff Fill',
       'value' => 'bi-file-earmark-diff-fill',
       'type' => 'bootstrap-icons',
@@ -1149,9 +1072,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
+    73 => 
     array (
-      'id' => 'file-earmark-easel-fill-solid',
+      'name' => 'File Earmark Easel',
+      'value' => 'bi-file-earmark-easel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'easel',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    74 => 
+    array (
       'name' => 'File Earmark Easel Fill',
       'value' => 'bi-file-earmark-easel-fill',
       'type' => 'bootstrap-icons',
@@ -1166,26 +1103,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    72 => 
+    75 => 
     array (
-      'id' => 'file-earmark-easel-outline',
-      'name' => 'File Earmark Easel Fill',
-      'value' => 'bi-file-earmark-easel',
+      'name' => 'File Earmark Excel',
+      'value' => 'bi-file-earmark-excel',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'easel',
-        3 => 'fill',
+        2 => 'excel',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    73 => 
+    76 => 
     array (
-      'id' => 'file-earmark-excel-fill-solid',
       'name' => 'File Earmark Excel Fill',
       'value' => 'bi-file-earmark-excel-fill',
       'type' => 'bootstrap-icons',
@@ -1200,26 +1134,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    74 => 
+    77 => 
     array (
-      'id' => 'file-earmark-excel-outline',
-      'name' => 'File Earmark Excel Fill',
-      'value' => 'bi-file-earmark-excel',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'excel',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    75 => 
-    array (
-      'id' => 'file-earmark-fill-solid',
       'name' => 'File Earmark Fill',
       'value' => 'bi-file-earmark-fill',
       'type' => 'bootstrap-icons',
@@ -1233,25 +1149,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    76 => 
+    78 => 
     array (
-      'id' => 'file-earmark-outline',
-      'name' => 'File Earmark Fill',
-      'value' => 'bi-file-earmark',
+      'name' => 'File Earmark Font',
+      'value' => 'bi-file-earmark-font',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'fill',
+        2 => 'font',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    77 => 
+    79 => 
     array (
-      'id' => 'file-earmark-font-fill-solid',
       'name' => 'File Earmark Font Fill',
       'value' => 'bi-file-earmark-font-fill',
       'type' => 'bootstrap-icons',
@@ -1266,26 +1180,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    78 => 
+    80 => 
     array (
-      'id' => 'file-earmark-font-outline',
-      'name' => 'File Earmark Font Fill',
-      'value' => 'bi-file-earmark-font',
+      'name' => 'File Earmark Image',
+      'value' => 'bi-file-earmark-image',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'font',
-        3 => 'fill',
+        2 => 'image',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    79 => 
+    81 => 
     array (
-      'id' => 'file-earmark-image-fill-solid',
       'name' => 'File Earmark Image Fill',
       'value' => 'bi-file-earmark-image-fill',
       'type' => 'bootstrap-icons',
@@ -1300,26 +1211,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    80 => 
+    82 => 
     array (
-      'id' => 'file-earmark-image-outline',
-      'name' => 'File Earmark Image Fill',
-      'value' => 'bi-file-earmark-image',
+      'name' => 'File Earmark Lock',
+      'value' => 'bi-file-earmark-lock',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'image',
-        3 => 'fill',
+        2 => 'lock',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    81 => 
+    83 => 
     array (
-      'id' => 'file-earmark-lock-fill-solid',
       'name' => 'File Earmark Lock Fill',
       'value' => 'bi-file-earmark-lock-fill',
       'type' => 'bootstrap-icons',
@@ -1334,26 +1242,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    82 => 
+    84 => 
     array (
-      'id' => 'file-earmark-lock-outline',
-      'name' => 'File Earmark Lock Fill',
-      'value' => 'bi-file-earmark-lock',
+      'name' => 'File Earmark Lock2',
+      'value' => 'bi-file-earmark-lock2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'lock',
-        3 => 'fill',
+        2 => 'lock2',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    83 => 
+    85 => 
     array (
-      'id' => 'file-earmark-lock2-fill-solid',
       'name' => 'File Earmark Lock2 Fill',
       'value' => 'bi-file-earmark-lock2-fill',
       'type' => 'bootstrap-icons',
@@ -1368,26 +1273,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    84 => 
+    86 => 
     array (
-      'id' => 'file-earmark-lock2-outline',
-      'name' => 'File Earmark Lock2 Fill',
-      'value' => 'bi-file-earmark-lock2',
+      'name' => 'File Earmark Medical',
+      'value' => 'bi-file-earmark-medical',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'lock2',
-        3 => 'fill',
+        2 => 'medical',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    85 => 
+    87 => 
     array (
-      'id' => 'file-earmark-medical-fill-solid',
       'name' => 'File Earmark Medical Fill',
       'value' => 'bi-file-earmark-medical-fill',
       'type' => 'bootstrap-icons',
@@ -1402,26 +1304,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    86 => 
+    88 => 
     array (
-      'id' => 'file-earmark-medical-outline',
-      'name' => 'File Earmark Medical Fill',
-      'value' => 'bi-file-earmark-medical',
+      'name' => 'File Earmark Minus',
+      'value' => 'bi-file-earmark-minus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'medical',
-        3 => 'fill',
+        2 => 'minus',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    87 => 
+    89 => 
     array (
-      'id' => 'file-earmark-minus-fill-solid',
       'name' => 'File Earmark Minus Fill',
       'value' => 'bi-file-earmark-minus-fill',
       'type' => 'bootstrap-icons',
@@ -1436,26 +1335,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    88 => 
+    90 => 
     array (
-      'id' => 'file-earmark-minus-outline',
-      'name' => 'File Earmark Minus Fill',
-      'value' => 'bi-file-earmark-minus',
+      'name' => 'File Earmark Music',
+      'value' => 'bi-file-earmark-music',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'minus',
-        3 => 'fill',
+        2 => 'music',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    89 => 
+    91 => 
     array (
-      'id' => 'file-earmark-music-fill-solid',
       'name' => 'File Earmark Music Fill',
       'value' => 'bi-file-earmark-music-fill',
       'type' => 'bootstrap-icons',
@@ -1470,27 +1366,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    90 => 
+    92 => 
     array (
-      'id' => 'file-earmark-music-outline',
-      'name' => 'File Earmark Music Fill',
-      'value' => 'bi-file-earmark-music',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'music',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    91 => 
-    array (
-      'id' => 'file-earmark-pdf-outline',
-      'name' => 'File Earmark Pdf Fill',
+      'name' => 'File Earmark Pdf',
       'value' => 'bi-file-earmark-pdf',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -1498,15 +1376,13 @@ return array (
         0 => 'file',
         1 => 'earmark',
         2 => 'pdf',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    92 => 
+    93 => 
     array (
-      'id' => 'file-earmark-pdf-fill-solid',
       'name' => 'File Earmark Pdf Fill',
       'value' => 'bi-file-earmark-pdf-fill',
       'type' => 'bootstrap-icons',
@@ -1521,9 +1397,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    93 => 
+    94 => 
     array (
-      'id' => 'file-earmark-person-fill-solid',
+      'name' => 'File Earmark Person',
+      'value' => 'bi-file-earmark-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    95 => 
+    array (
       'name' => 'File Earmark Person Fill',
       'value' => 'bi-file-earmark-person-fill',
       'type' => 'bootstrap-icons',
@@ -1538,26 +1428,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    94 => 
+    96 => 
     array (
-      'id' => 'file-earmark-person-outline',
-      'name' => 'File Earmark Person Fill',
-      'value' => 'bi-file-earmark-person',
+      'name' => 'File Earmark Play',
+      'value' => 'bi-file-earmark-play',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'person',
-        3 => 'fill',
+        2 => 'play',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    95 => 
+    97 => 
     array (
-      'id' => 'file-earmark-play-fill-solid',
       'name' => 'File Earmark Play Fill',
       'value' => 'bi-file-earmark-play-fill',
       'type' => 'bootstrap-icons',
@@ -1572,26 +1459,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    96 => 
+    98 => 
     array (
-      'id' => 'file-earmark-play-outline',
-      'name' => 'File Earmark Play Fill',
-      'value' => 'bi-file-earmark-play',
+      'name' => 'File Earmark Plus',
+      'value' => 'bi-file-earmark-plus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'play',
-        3 => 'fill',
+        2 => 'plus',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    97 => 
+    99 => 
     array (
-      'id' => 'file-earmark-plus-fill-solid',
       'name' => 'File Earmark Plus Fill',
       'value' => 'bi-file-earmark-plus-fill',
       'type' => 'bootstrap-icons',
@@ -1606,26 +1490,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    98 => 
+    100 => 
     array (
-      'id' => 'file-earmark-plus-outline',
-      'name' => 'File Earmark Plus Fill',
-      'value' => 'bi-file-earmark-plus',
+      'name' => 'File Earmark Post',
+      'value' => 'bi-file-earmark-post',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'plus',
-        3 => 'fill',
+        2 => 'post',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    99 => 
+    101 => 
     array (
-      'id' => 'file-earmark-post-fill-solid',
       'name' => 'File Earmark Post Fill',
       'value' => 'bi-file-earmark-post-fill',
       'type' => 'bootstrap-icons',
@@ -1640,26 +1521,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    100 => 
+    102 => 
     array (
-      'id' => 'file-earmark-post-outline',
-      'name' => 'File Earmark Post Fill',
-      'value' => 'bi-file-earmark-post',
+      'name' => 'File Earmark Ppt',
+      'value' => 'bi-file-earmark-ppt',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'post',
-        3 => 'fill',
+        2 => 'ppt',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    101 => 
+    103 => 
     array (
-      'id' => 'file-earmark-ppt-fill-solid',
       'name' => 'File Earmark Ppt Fill',
       'value' => 'bi-file-earmark-ppt-fill',
       'type' => 'bootstrap-icons',
@@ -1674,26 +1552,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    102 => 
+    104 => 
     array (
-      'id' => 'file-earmark-ppt-outline',
-      'name' => 'File Earmark Ppt Fill',
-      'value' => 'bi-file-earmark-ppt',
+      'name' => 'File Earmark Richtext',
+      'value' => 'bi-file-earmark-richtext',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'ppt',
-        3 => 'fill',
+        2 => 'richtext',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    103 => 
+    105 => 
     array (
-      'id' => 'file-earmark-richtext-fill-solid',
       'name' => 'File Earmark Richtext Fill',
       'value' => 'bi-file-earmark-richtext-fill',
       'type' => 'bootstrap-icons',
@@ -1708,27 +1583,9 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    104 => 
+    106 => 
     array (
-      'id' => 'file-earmark-richtext-outline',
-      'name' => 'File Earmark Richtext Fill',
-      'value' => 'bi-file-earmark-richtext',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'richtext',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    105 => 
-    array (
-      'id' => 'file-earmark-ruled-outline',
-      'name' => 'File Earmark Ruled Fill',
+      'name' => 'File Earmark Ruled',
       'value' => 'bi-file-earmark-ruled',
       'type' => 'bootstrap-icons',
       'keywords' => 
@@ -1736,15 +1593,13 @@ return array (
         0 => 'file',
         1 => 'earmark',
         2 => 'ruled',
-        3 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    106 => 
+    107 => 
     array (
-      'id' => 'file-earmark-ruled-fill-solid',
       'name' => 'File Earmark Ruled Fill',
       'value' => 'bi-file-earmark-ruled-fill',
       'type' => 'bootstrap-icons',
@@ -1759,9 +1614,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    107 => 
+    108 => 
     array (
-      'id' => 'file-earmark-slides-fill-solid',
+      'name' => 'File Earmark Slides',
+      'value' => 'bi-file-earmark-slides',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'earmark',
+        2 => 'slides',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    109 => 
+    array (
       'name' => 'File Earmark Slides Fill',
       'value' => 'bi-file-earmark-slides-fill',
       'type' => 'bootstrap-icons',
@@ -1776,26 +1645,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    108 => 
+    110 => 
     array (
-      'id' => 'file-earmark-slides-outline',
-      'name' => 'File Earmark Slides Fill',
-      'value' => 'bi-file-earmark-slides',
+      'name' => 'File Earmark Spreadsheet',
+      'value' => 'bi-file-earmark-spreadsheet',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'slides',
-        3 => 'fill',
+        2 => 'spreadsheet',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    109 => 
+    111 => 
     array (
-      'id' => 'file-earmark-spreadsheet-fill-solid',
       'name' => 'File Earmark Spreadsheet Fill',
       'value' => 'bi-file-earmark-spreadsheet-fill',
       'type' => 'bootstrap-icons',
@@ -1810,26 +1676,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    110 => 
+    112 => 
     array (
-      'id' => 'file-earmark-spreadsheet-outline',
-      'name' => 'File Earmark Spreadsheet Fill',
-      'value' => 'bi-file-earmark-spreadsheet',
+      'name' => 'File Earmark Text',
+      'value' => 'bi-file-earmark-text',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'spreadsheet',
-        3 => 'fill',
+        2 => 'text',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    111 => 
+    113 => 
     array (
-      'id' => 'file-earmark-text-fill-solid',
       'name' => 'File Earmark Text Fill',
       'value' => 'bi-file-earmark-text-fill',
       'type' => 'bootstrap-icons',
@@ -1844,26 +1707,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    112 => 
+    114 => 
     array (
-      'id' => 'file-earmark-text-outline',
-      'name' => 'File Earmark Text Fill',
-      'value' => 'bi-file-earmark-text',
+      'name' => 'File Earmark Word',
+      'value' => 'bi-file-earmark-word',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'text',
-        3 => 'fill',
+        2 => 'word',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    113 => 
+    115 => 
     array (
-      'id' => 'file-earmark-word-fill-solid',
       'name' => 'File Earmark Word Fill',
       'value' => 'bi-file-earmark-word-fill',
       'type' => 'bootstrap-icons',
@@ -1878,26 +1738,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    114 => 
+    116 => 
     array (
-      'id' => 'file-earmark-word-outline',
-      'name' => 'File Earmark Word Fill',
-      'value' => 'bi-file-earmark-word',
+      'name' => 'File Earmark X',
+      'value' => 'bi-file-earmark-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'word',
-        3 => 'fill',
+        2 => 'x',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    115 => 
+    117 => 
     array (
-      'id' => 'file-earmark-x-fill-solid',
       'name' => 'File Earmark X Fill',
       'value' => 'bi-file-earmark-x-fill',
       'type' => 'bootstrap-icons',
@@ -1912,26 +1769,23 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    116 => 
+    118 => 
     array (
-      'id' => 'file-earmark-x-outline',
-      'name' => 'File Earmark X Fill',
-      'value' => 'bi-file-earmark-x',
+      'name' => 'File Earmark Zip',
+      'value' => 'bi-file-earmark-zip',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'earmark',
-        2 => 'x',
-        3 => 'fill',
+        2 => 'zip',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    117 => 
+    119 => 
     array (
-      'id' => 'file-earmark-zip-fill-solid',
       'name' => 'File Earmark Zip Fill',
       'value' => 'bi-file-earmark-zip-fill',
       'type' => 'bootstrap-icons',
@@ -1946,42 +1800,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    118 => 
+    120 => 
     array (
-      'id' => 'file-earmark-zip-outline',
-      'name' => 'File Earmark Zip Fill',
-      'value' => 'bi-file-earmark-zip',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'earmark',
-        2 => 'zip',
-        3 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    119 => 
-    array (
-      'id' => 'file-easel-outline',
-      'name' => 'File Easel Fill',
+      'name' => 'File Easel',
       'value' => 'bi-file-easel',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'easel',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    120 => 
+    121 => 
     array (
-      'id' => 'file-easel-fill-solid',
       'name' => 'File Easel Fill',
       'value' => 'bi-file-easel-fill',
       'type' => 'bootstrap-icons',
@@ -1995,9 +1829,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    121 => 
+    122 => 
     array (
-      'id' => 'file-excel-fill-solid',
+      'name' => 'File Excel',
+      'value' => 'bi-file-excel',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'excel',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    123 => 
+    array (
       'name' => 'File Excel Fill',
       'value' => 'bi-file-excel-fill',
       'type' => 'bootstrap-icons',
@@ -2011,25 +1858,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    122 => 
+    124 => 
     array (
-      'id' => 'file-excel-outline',
-      'name' => 'File Excel Fill',
-      'value' => 'bi-file-excel',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'excel',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    123 => 
-    array (
-      'id' => 'file-fill-solid',
       'name' => 'File Fill',
       'value' => 'bi-file-fill',
       'type' => 'bootstrap-icons',
@@ -2042,32 +1872,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    124 => 
-    array (
-      'id' => 'file-outline',
-      'name' => 'File Fill',
-      'value' => 'bi-file',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     125 => 
     array (
-      'id' => 'file-font-outline',
-      'name' => 'File Font Fill',
+      'name' => 'File Font',
       'value' => 'bi-file-font',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'font',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2075,7 +1888,6 @@ return array (
     ),
     126 => 
     array (
-      'id' => 'file-font-fill-solid',
       'name' => 'File Font Fill',
       'value' => 'bi-file-font-fill',
       'type' => 'bootstrap-icons',
@@ -2091,15 +1903,13 @@ return array (
     ),
     127 => 
     array (
-      'id' => 'file-image-outline',
-      'name' => 'File Image Fill',
+      'name' => 'File Image',
       'value' => 'bi-file-image',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'image',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2107,7 +1917,6 @@ return array (
     ),
     128 => 
     array (
-      'id' => 'file-image-fill-solid',
       'name' => 'File Image Fill',
       'value' => 'bi-file-image-fill',
       'type' => 'bootstrap-icons',
@@ -2123,7 +1932,20 @@ return array (
     ),
     129 => 
     array (
-      'id' => 'file-lock-fill-solid',
+      'name' => 'File Lock',
+      'value' => 'bi-file-lock',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'lock',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    130 => 
+    array (
       'name' => 'File Lock Fill',
       'value' => 'bi-file-lock-fill',
       'type' => 'bootstrap-icons',
@@ -2137,25 +1959,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    130 => 
+    131 => 
     array (
-      'id' => 'file-lock-outline',
-      'name' => 'File Lock Fill',
-      'value' => 'bi-file-lock',
+      'name' => 'File Lock2',
+      'value' => 'bi-file-lock2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'lock',
-        2 => 'fill',
+        1 => 'lock2',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    131 => 
+    132 => 
     array (
-      'id' => 'file-lock2-fill-solid',
       'name' => 'File Lock2 Fill',
       'value' => 'bi-file-lock2-fill',
       'type' => 'bootstrap-icons',
@@ -2169,25 +1988,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    132 => 
+    133 => 
     array (
-      'id' => 'file-lock2-outline',
-      'name' => 'File Lock2 Fill',
-      'value' => 'bi-file-lock2',
+      'name' => 'File Medical',
+      'value' => 'bi-file-medical',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'lock2',
-        2 => 'fill',
+        1 => 'medical',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    133 => 
+    134 => 
     array (
-      'id' => 'file-medical-fill-solid',
       'name' => 'File Medical Fill',
       'value' => 'bi-file-medical-fill',
       'type' => 'bootstrap-icons',
@@ -2201,25 +2017,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    134 => 
+    135 => 
     array (
-      'id' => 'file-medical-outline',
-      'name' => 'File Medical Fill',
-      'value' => 'bi-file-medical',
+      'name' => 'File Minus',
+      'value' => 'bi-file-minus',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'medical',
-        2 => 'fill',
+        1 => 'minus',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    135 => 
+    136 => 
     array (
-      'id' => 'file-minus-fill-solid',
       'name' => 'File Minus Fill',
       'value' => 'bi-file-minus-fill',
       'type' => 'bootstrap-icons',
@@ -2233,33 +2046,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    136 => 
-    array (
-      'id' => 'file-minus-outline',
-      'name' => 'File Minus Fill',
-      'value' => 'bi-file-minus',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'minus',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     137 => 
     array (
-      'id' => 'file-music-outline',
-      'name' => 'File Music Fill',
+      'name' => 'File Music',
       'value' => 'bi-file-music',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'music',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2267,7 +2062,6 @@ return array (
     ),
     138 => 
     array (
-      'id' => 'file-music-fill-solid',
       'name' => 'File Music Fill',
       'value' => 'bi-file-music-fill',
       'type' => 'bootstrap-icons',
@@ -2283,15 +2077,13 @@ return array (
     ),
     139 => 
     array (
-      'id' => 'file-pdf-outline',
-      'name' => 'File Pdf Fill',
+      'name' => 'File Pdf',
       'value' => 'bi-file-pdf',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'pdf',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2299,7 +2091,6 @@ return array (
     ),
     140 => 
     array (
-      'id' => 'file-pdf-fill-solid',
       'name' => 'File Pdf Fill',
       'value' => 'bi-file-pdf-fill',
       'type' => 'bootstrap-icons',
@@ -2315,7 +2106,20 @@ return array (
     ),
     141 => 
     array (
-      'id' => 'file-person-fill-solid',
+      'name' => 'File Person',
+      'value' => 'bi-file-person',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'person',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    142 => 
+    array (
       'name' => 'File Person Fill',
       'value' => 'bi-file-person-fill',
       'type' => 'bootstrap-icons',
@@ -2329,33 +2133,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    142 => 
-    array (
-      'id' => 'file-person-outline',
-      'name' => 'File Person Fill',
-      'value' => 'bi-file-person',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'person',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     143 => 
     array (
-      'id' => 'file-play-outline',
-      'name' => 'File Play Fill',
+      'name' => 'File Play',
       'value' => 'bi-file-play',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'play',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2363,7 +2149,6 @@ return array (
     ),
     144 => 
     array (
-      'id' => 'file-play-fill-solid',
       'name' => 'File Play Fill',
       'value' => 'bi-file-play-fill',
       'type' => 'bootstrap-icons',
@@ -2379,7 +2164,20 @@ return array (
     ),
     145 => 
     array (
-      'id' => 'file-plus-fill-solid',
+      'name' => 'File Plus',
+      'value' => 'bi-file-plus',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'plus',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    146 => 
+    array (
       'name' => 'File Plus Fill',
       'value' => 'bi-file-plus-fill',
       'type' => 'bootstrap-icons',
@@ -2393,25 +2191,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    146 => 
+    147 => 
     array (
-      'id' => 'file-plus-outline',
-      'name' => 'File Plus Fill',
-      'value' => 'bi-file-plus',
+      'name' => 'File Post',
+      'value' => 'bi-file-post',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'plus',
-        2 => 'fill',
+        1 => 'post',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    147 => 
+    148 => 
     array (
-      'id' => 'file-post-fill-solid',
       'name' => 'File Post Fill',
       'value' => 'bi-file-post-fill',
       'type' => 'bootstrap-icons',
@@ -2425,33 +2220,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    148 => 
-    array (
-      'id' => 'file-post-outline',
-      'name' => 'File Post Fill',
-      'value' => 'bi-file-post',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'post',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     149 => 
     array (
-      'id' => 'file-ppt-outline',
-      'name' => 'File Ppt Fill',
+      'name' => 'File Ppt',
       'value' => 'bi-file-ppt',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'ppt',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2459,7 +2236,6 @@ return array (
     ),
     150 => 
     array (
-      'id' => 'file-ppt-fill-solid',
       'name' => 'File Ppt Fill',
       'value' => 'bi-file-ppt-fill',
       'type' => 'bootstrap-icons',
@@ -2475,7 +2251,20 @@ return array (
     ),
     151 => 
     array (
-      'id' => 'file-richtext-fill-solid',
+      'name' => 'File Richtext',
+      'value' => 'bi-file-richtext',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'file',
+        1 => 'richtext',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    152 => 
+    array (
       'name' => 'File Richtext Fill',
       'value' => 'bi-file-richtext-fill',
       'type' => 'bootstrap-icons',
@@ -2489,25 +2278,22 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    152 => 
+    153 => 
     array (
-      'id' => 'file-richtext-outline',
-      'name' => 'File Richtext Fill',
-      'value' => 'bi-file-richtext',
+      'name' => 'File Ruled',
+      'value' => 'bi-file-ruled',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
-        1 => 'richtext',
-        2 => 'fill',
+        1 => 'ruled',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    153 => 
+    154 => 
     array (
-      'id' => 'file-ruled-fill-solid',
       'name' => 'File Ruled Fill',
       'value' => 'bi-file-ruled-fill',
       'type' => 'bootstrap-icons',
@@ -2521,33 +2307,15 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    154 => 
-    array (
-      'id' => 'file-ruled-outline',
-      'name' => 'File Ruled Fill',
-      'value' => 'bi-file-ruled',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'file',
-        1 => 'ruled',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
     155 => 
     array (
-      'id' => 'file-slides-outline',
-      'name' => 'File Slides Fill',
+      'name' => 'File Slides',
       'value' => 'bi-file-slides',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'slides',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2555,7 +2323,6 @@ return array (
     ),
     156 => 
     array (
-      'id' => 'file-slides-fill-solid',
       'name' => 'File Slides Fill',
       'value' => 'bi-file-slides-fill',
       'type' => 'bootstrap-icons',
@@ -2571,15 +2338,13 @@ return array (
     ),
     157 => 
     array (
-      'id' => 'file-spreadsheet-outline',
-      'name' => 'File Spreadsheet Fill',
+      'name' => 'File Spreadsheet',
       'value' => 'bi-file-spreadsheet',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'spreadsheet',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2587,7 +2352,6 @@ return array (
     ),
     158 => 
     array (
-      'id' => 'file-spreadsheet-fill-solid',
       'name' => 'File Spreadsheet Fill',
       'value' => 'bi-file-spreadsheet-fill',
       'type' => 'bootstrap-icons',
@@ -2603,15 +2367,13 @@ return array (
     ),
     159 => 
     array (
-      'id' => 'file-text-outline',
-      'name' => 'File Text Fill',
+      'name' => 'File Text',
       'value' => 'bi-file-text',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'text',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2619,7 +2381,6 @@ return array (
     ),
     160 => 
     array (
-      'id' => 'file-text-fill-solid',
       'name' => 'File Text Fill',
       'value' => 'bi-file-text-fill',
       'type' => 'bootstrap-icons',
@@ -2635,15 +2396,13 @@ return array (
     ),
     161 => 
     array (
-      'id' => 'file-word-outline',
-      'name' => 'File Word Fill',
+      'name' => 'File Word',
       'value' => 'bi-file-word',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'word',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2651,7 +2410,6 @@ return array (
     ),
     162 => 
     array (
-      'id' => 'file-word-fill-solid',
       'name' => 'File Word Fill',
       'value' => 'bi-file-word-fill',
       'type' => 'bootstrap-icons',
@@ -2667,15 +2425,13 @@ return array (
     ),
     163 => 
     array (
-      'id' => 'file-x-outline',
-      'name' => 'File X Fill',
+      'name' => 'File X',
       'value' => 'bi-file-x',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'x',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2683,7 +2439,6 @@ return array (
     ),
     164 => 
     array (
-      'id' => 'file-x-fill-solid',
       'name' => 'File X Fill',
       'value' => 'bi-file-x-fill',
       'type' => 'bootstrap-icons',
@@ -2699,15 +2454,13 @@ return array (
     ),
     165 => 
     array (
-      'id' => 'file-zip-outline',
-      'name' => 'File Zip Fill',
+      'name' => 'File Zip',
       'value' => 'bi-file-zip',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'file',
         1 => 'zip',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
@@ -2715,7 +2468,6 @@ return array (
     ),
     166 => 
     array (
-      'id' => 'file-zip-fill-solid',
       'name' => 'File Zip Fill',
       'value' => 'bi-file-zip-fill',
       'type' => 'bootstrap-icons',
@@ -2731,7 +2483,6 @@ return array (
     ),
     167 => 
     array (
-      'id' => 'files-outline',
       'name' => 'Files',
       'value' => 'bi-files',
       'type' => 'bootstrap-icons',
@@ -2741,11 +2492,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     168 => 
     array (
-      'id' => 'files-alt-outline',
       'name' => 'Files Alt',
       'value' => 'bi-files-alt',
       'type' => 'bootstrap-icons',
@@ -2756,11 +2505,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     169 => 
     array (
-      'id' => 'filetype-aac-outline',
       'name' => 'Filetype Aac',
       'value' => 'bi-filetype-aac',
       'type' => 'bootstrap-icons',
@@ -2771,11 +2518,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     170 => 
     array (
-      'id' => 'filetype-ai-outline',
       'name' => 'Filetype Ai',
       'value' => 'bi-filetype-ai',
       'type' => 'bootstrap-icons',
@@ -2786,11 +2531,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     171 => 
     array (
-      'id' => 'filetype-bmp-outline',
       'name' => 'Filetype Bmp',
       'value' => 'bi-filetype-bmp',
       'type' => 'bootstrap-icons',
@@ -2801,11 +2544,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     172 => 
     array (
-      'id' => 'filetype-cs-outline',
       'name' => 'Filetype Cs',
       'value' => 'bi-filetype-cs',
       'type' => 'bootstrap-icons',
@@ -2816,11 +2557,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     173 => 
     array (
-      'id' => 'filetype-css-outline',
       'name' => 'Filetype Css',
       'value' => 'bi-filetype-css',
       'type' => 'bootstrap-icons',
@@ -2831,11 +2570,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     174 => 
     array (
-      'id' => 'filetype-csv-outline',
       'name' => 'Filetype Csv',
       'value' => 'bi-filetype-csv',
       'type' => 'bootstrap-icons',
@@ -2846,11 +2583,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     175 => 
     array (
-      'id' => 'filetype-doc-outline',
       'name' => 'Filetype Doc',
       'value' => 'bi-filetype-doc',
       'type' => 'bootstrap-icons',
@@ -2861,11 +2596,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     176 => 
     array (
-      'id' => 'filetype-docx-outline',
       'name' => 'Filetype Docx',
       'value' => 'bi-filetype-docx',
       'type' => 'bootstrap-icons',
@@ -2876,11 +2609,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     177 => 
     array (
-      'id' => 'filetype-exe-outline',
       'name' => 'Filetype Exe',
       'value' => 'bi-filetype-exe',
       'type' => 'bootstrap-icons',
@@ -2891,11 +2622,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     178 => 
     array (
-      'id' => 'filetype-gif-outline',
       'name' => 'Filetype Gif',
       'value' => 'bi-filetype-gif',
       'type' => 'bootstrap-icons',
@@ -2906,11 +2635,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     179 => 
     array (
-      'id' => 'filetype-heic-outline',
       'name' => 'Filetype Heic',
       'value' => 'bi-filetype-heic',
       'type' => 'bootstrap-icons',
@@ -2921,11 +2648,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     180 => 
     array (
-      'id' => 'filetype-html-outline',
       'name' => 'Filetype Html',
       'value' => 'bi-filetype-html',
       'type' => 'bootstrap-icons',
@@ -2936,11 +2661,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     181 => 
     array (
-      'id' => 'filetype-java-outline',
       'name' => 'Filetype Java',
       'value' => 'bi-filetype-java',
       'type' => 'bootstrap-icons',
@@ -2951,11 +2674,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     182 => 
     array (
-      'id' => 'filetype-jpg-outline',
       'name' => 'Filetype Jpg',
       'value' => 'bi-filetype-jpg',
       'type' => 'bootstrap-icons',
@@ -2966,11 +2687,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     183 => 
     array (
-      'id' => 'filetype-js-outline',
       'name' => 'Filetype Js',
       'value' => 'bi-filetype-js',
       'type' => 'bootstrap-icons',
@@ -2981,11 +2700,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     184 => 
     array (
-      'id' => 'filetype-json-outline',
       'name' => 'Filetype Json',
       'value' => 'bi-filetype-json',
       'type' => 'bootstrap-icons',
@@ -2996,11 +2713,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     185 => 
     array (
-      'id' => 'filetype-jsx-outline',
       'name' => 'Filetype Jsx',
       'value' => 'bi-filetype-jsx',
       'type' => 'bootstrap-icons',
@@ -3011,11 +2726,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     186 => 
     array (
-      'id' => 'filetype-key-outline',
       'name' => 'Filetype Key',
       'value' => 'bi-filetype-key',
       'type' => 'bootstrap-icons',
@@ -3026,11 +2739,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     187 => 
     array (
-      'id' => 'filetype-m4p-outline',
       'name' => 'Filetype M4p',
       'value' => 'bi-filetype-m4p',
       'type' => 'bootstrap-icons',
@@ -3041,11 +2752,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     188 => 
     array (
-      'id' => 'filetype-md-outline',
       'name' => 'Filetype Md',
       'value' => 'bi-filetype-md',
       'type' => 'bootstrap-icons',
@@ -3056,11 +2765,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     189 => 
     array (
-      'id' => 'filetype-mdx-outline',
       'name' => 'Filetype Mdx',
       'value' => 'bi-filetype-mdx',
       'type' => 'bootstrap-icons',
@@ -3071,11 +2778,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     190 => 
     array (
-      'id' => 'filetype-mov-outline',
       'name' => 'Filetype Mov',
       'value' => 'bi-filetype-mov',
       'type' => 'bootstrap-icons',
@@ -3086,11 +2791,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     191 => 
     array (
-      'id' => 'filetype-mp3-outline',
       'name' => 'Filetype Mp3',
       'value' => 'bi-filetype-mp3',
       'type' => 'bootstrap-icons',
@@ -3101,11 +2804,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     192 => 
     array (
-      'id' => 'filetype-mp4-outline',
       'name' => 'Filetype Mp4',
       'value' => 'bi-filetype-mp4',
       'type' => 'bootstrap-icons',
@@ -3116,11 +2817,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     193 => 
     array (
-      'id' => 'filetype-otf-outline',
       'name' => 'Filetype Otf',
       'value' => 'bi-filetype-otf',
       'type' => 'bootstrap-icons',
@@ -3131,11 +2830,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     194 => 
     array (
-      'id' => 'filetype-pdf-outline',
       'name' => 'Filetype Pdf',
       'value' => 'bi-filetype-pdf',
       'type' => 'bootstrap-icons',
@@ -3146,11 +2843,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     195 => 
     array (
-      'id' => 'filetype-php-outline',
       'name' => 'Filetype Php',
       'value' => 'bi-filetype-php',
       'type' => 'bootstrap-icons',
@@ -3161,11 +2856,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     196 => 
     array (
-      'id' => 'filetype-png-outline',
       'name' => 'Filetype Png',
       'value' => 'bi-filetype-png',
       'type' => 'bootstrap-icons',
@@ -3176,11 +2869,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     197 => 
     array (
-      'id' => 'filetype-ppt-outline',
       'name' => 'Filetype Ppt',
       'value' => 'bi-filetype-ppt',
       'type' => 'bootstrap-icons',
@@ -3191,11 +2882,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     198 => 
     array (
-      'id' => 'filetype-pptx-outline',
       'name' => 'Filetype Pptx',
       'value' => 'bi-filetype-pptx',
       'type' => 'bootstrap-icons',
@@ -3206,11 +2895,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     199 => 
     array (
-      'id' => 'filetype-psd-outline',
       'name' => 'Filetype Psd',
       'value' => 'bi-filetype-psd',
       'type' => 'bootstrap-icons',
@@ -3221,11 +2908,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     200 => 
     array (
-      'id' => 'filetype-py-outline',
       'name' => 'Filetype Py',
       'value' => 'bi-filetype-py',
       'type' => 'bootstrap-icons',
@@ -3236,11 +2921,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     201 => 
     array (
-      'id' => 'filetype-raw-outline',
       'name' => 'Filetype Raw',
       'value' => 'bi-filetype-raw',
       'type' => 'bootstrap-icons',
@@ -3251,11 +2934,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     202 => 
     array (
-      'id' => 'filetype-rb-outline',
       'name' => 'Filetype Rb',
       'value' => 'bi-filetype-rb',
       'type' => 'bootstrap-icons',
@@ -3266,11 +2947,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     203 => 
     array (
-      'id' => 'filetype-sass-outline',
       'name' => 'Filetype Sass',
       'value' => 'bi-filetype-sass',
       'type' => 'bootstrap-icons',
@@ -3281,11 +2960,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     204 => 
     array (
-      'id' => 'filetype-scss-outline',
       'name' => 'Filetype Scss',
       'value' => 'bi-filetype-scss',
       'type' => 'bootstrap-icons',
@@ -3296,11 +2973,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     205 => 
     array (
-      'id' => 'filetype-sh-outline',
       'name' => 'Filetype Sh',
       'value' => 'bi-filetype-sh',
       'type' => 'bootstrap-icons',
@@ -3311,11 +2986,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     206 => 
     array (
-      'id' => 'filetype-sql-outline',
       'name' => 'Filetype Sql',
       'value' => 'bi-filetype-sql',
       'type' => 'bootstrap-icons',
@@ -3326,11 +2999,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     207 => 
     array (
-      'id' => 'filetype-svg-outline',
       'name' => 'Filetype Svg',
       'value' => 'bi-filetype-svg',
       'type' => 'bootstrap-icons',
@@ -3341,11 +3012,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     208 => 
     array (
-      'id' => 'filetype-tiff-outline',
       'name' => 'Filetype Tiff',
       'value' => 'bi-filetype-tiff',
       'type' => 'bootstrap-icons',
@@ -3356,11 +3025,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     209 => 
     array (
-      'id' => 'filetype-tsx-outline',
       'name' => 'Filetype Tsx',
       'value' => 'bi-filetype-tsx',
       'type' => 'bootstrap-icons',
@@ -3371,11 +3038,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     210 => 
     array (
-      'id' => 'filetype-ttf-outline',
       'name' => 'Filetype Ttf',
       'value' => 'bi-filetype-ttf',
       'type' => 'bootstrap-icons',
@@ -3386,11 +3051,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     211 => 
     array (
-      'id' => 'filetype-txt-outline',
       'name' => 'Filetype Txt',
       'value' => 'bi-filetype-txt',
       'type' => 'bootstrap-icons',
@@ -3401,11 +3064,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     212 => 
     array (
-      'id' => 'filetype-wav-outline',
       'name' => 'Filetype Wav',
       'value' => 'bi-filetype-wav',
       'type' => 'bootstrap-icons',
@@ -3416,11 +3077,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     213 => 
     array (
-      'id' => 'filetype-woff-outline',
       'name' => 'Filetype Woff',
       'value' => 'bi-filetype-woff',
       'type' => 'bootstrap-icons',
@@ -3431,11 +3090,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     214 => 
     array (
-      'id' => 'filetype-xls-outline',
       'name' => 'Filetype Xls',
       'value' => 'bi-filetype-xls',
       'type' => 'bootstrap-icons',
@@ -3446,11 +3103,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     215 => 
     array (
-      'id' => 'filetype-xlsx-outline',
       'name' => 'Filetype Xlsx',
       'value' => 'bi-filetype-xlsx',
       'type' => 'bootstrap-icons',
@@ -3461,11 +3116,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     216 => 
     array (
-      'id' => 'filetype-xml-outline',
       'name' => 'Filetype Xml',
       'value' => 'bi-filetype-xml',
       'type' => 'bootstrap-icons',
@@ -3476,11 +3129,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     217 => 
     array (
-      'id' => 'filetype-yml-outline',
       'name' => 'Filetype Yml',
       'value' => 'bi-filetype-yml',
       'type' => 'bootstrap-icons',
@@ -3491,11 +3142,22 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
     218 => 
     array (
-      'id' => 'floppy-fill-solid',
+      'name' => 'Floppy',
+      'value' => 'bi-floppy',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'floppy',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
+      'variant_type' => 'outline',
+    ),
+    219 => 
+    array (
       'name' => 'Floppy Fill',
       'value' => 'bi-floppy-fill',
       'type' => 'bootstrap-icons',
@@ -3508,24 +3170,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    219 => 
+    220 => 
     array (
-      'id' => 'floppy-outline',
-      'name' => 'Floppy Fill',
-      'value' => 'bi-floppy',
+      'name' => 'Floppy2',
+      'value' => 'bi-floppy2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'floppy',
-        1 => 'fill',
+        0 => 'floppy2',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    220 => 
+    221 => 
     array (
-      'id' => 'floppy2-fill-solid',
       'name' => 'Floppy2 Fill',
       'value' => 'bi-floppy2-fill',
       'type' => 'bootstrap-icons',
@@ -3538,24 +3197,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    221 => 
+    222 => 
     array (
-      'id' => 'floppy2-outline',
-      'name' => 'Floppy2 Fill',
-      'value' => 'bi-floppy2',
+      'name' => 'Folder',
+      'value' => 'bi-folder',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'floppy2',
-        1 => 'fill',
+        0 => 'folder',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    222 => 
+    223 => 
     array (
-      'id' => 'folder-check-outline',
       'name' => 'Folder Check',
       'value' => 'bi-folder-check',
       'type' => 'bootstrap-icons',
@@ -3565,27 +3221,10 @@ return array (
         1 => 'check',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    223 => 
-    array (
-      'id' => 'folder-check-fill-solid',
-      'name' => 'Folder Check',
-      'value' => 'bi-folder-check-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder',
-        1 => 'check',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
+      'has_variants' => false,
     ),
     224 => 
     array (
-      'id' => 'folder-fill-solid',
       'name' => 'Folder Fill',
       'value' => 'bi-folder-fill',
       'type' => 'bootstrap-icons',
@@ -3600,22 +3239,6 @@ return array (
     ),
     225 => 
     array (
-      'id' => 'folder-outline',
-      'name' => 'Folder Fill',
-      'value' => 'bi-folder',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder',
-        1 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    226 => 
-    array (
-      'id' => 'folder-minus-outline',
       'name' => 'Folder Minus',
       'value' => 'bi-folder-minus',
       'type' => 'bootstrap-icons',
@@ -3625,42 +3248,10 @@ return array (
         1 => 'minus',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    227 => 
+    226 => 
     array (
-      'id' => 'folder-minus-fill-solid',
-      'name' => 'Folder Minus',
-      'value' => 'bi-folder-minus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder',
-        1 => 'minus',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    228 => 
-    array (
-      'id' => 'folder-plus-fill-solid',
-      'name' => 'Folder Plus',
-      'value' => 'bi-folder-plus-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder',
-        1 => 'plus',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    229 => 
-    array (
-      'id' => 'folder-plus-outline',
       'name' => 'Folder Plus',
       'value' => 'bi-folder-plus',
       'type' => 'bootstrap-icons',
@@ -3670,28 +3261,24 @@ return array (
         1 => 'plus',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    230 => 
+    227 => 
     array (
-      'id' => 'folder-symlink-outline',
-      'name' => 'Folder Symlink Fill',
+      'name' => 'Folder Symlink',
       'value' => 'bi-folder-symlink',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
         0 => 'folder',
         1 => 'symlink',
-        2 => 'fill',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    231 => 
+    228 => 
     array (
-      'id' => 'folder-symlink-fill-solid',
       'name' => 'Folder Symlink Fill',
       'value' => 'bi-folder-symlink-fill',
       'type' => 'bootstrap-icons',
@@ -3705,9 +3292,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    232 => 
+    229 => 
     array (
-      'id' => 'folder-x-outline',
       'name' => 'Folder X',
       'value' => 'bi-folder-x',
       'type' => 'bootstrap-icons',
@@ -3717,27 +3303,10 @@ return array (
         1 => 'x',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    233 => 
+    230 => 
     array (
-      'id' => 'folder-x-fill-solid',
-      'name' => 'Folder X',
-      'value' => 'bi-folder-x-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder',
-        1 => 'x',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    234 => 
-    array (
-      'id' => 'folder2-outline',
       'name' => 'Folder2',
       'value' => 'bi-folder2',
       'type' => 'bootstrap-icons',
@@ -3746,26 +3315,10 @@ return array (
         0 => 'folder2',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    235 => 
+    231 => 
     array (
-      'id' => 'folder2-fill-solid',
-      'name' => 'Folder2',
-      'value' => 'bi-folder2-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder2',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    236 => 
-    array (
-      'id' => 'folder2-open-outline',
       'name' => 'Folder2 Open',
       'value' => 'bi-folder2-open',
       'type' => 'bootstrap-icons',
@@ -3775,27 +3328,10 @@ return array (
         1 => 'open',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    237 => 
+    232 => 
     array (
-      'id' => 'folder2-open-fill-solid',
-      'name' => 'Folder2 Open',
-      'value' => 'bi-folder2-open-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'folder2',
-        1 => 'open',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    238 => 
-    array (
-      'id' => 'journal-outline',
       'name' => 'Journal',
       'value' => 'bi-journal',
       'type' => 'bootstrap-icons',
@@ -3805,11 +3341,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    239 => 
+    233 => 
     array (
-      'id' => 'journal-album-outline',
       'name' => 'Journal Album',
       'value' => 'bi-journal-album',
       'type' => 'bootstrap-icons',
@@ -3820,11 +3354,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    240 => 
+    234 => 
     array (
-      'id' => 'journal-arrow-down-outline',
       'name' => 'Journal Arrow Down',
       'value' => 'bi-journal-arrow-down',
       'type' => 'bootstrap-icons',
@@ -3835,44 +3367,10 @@ return array (
         2 => 'down',
       ),
       'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
+      'has_variants' => false,
     ),
-    241 => 
+    235 => 
     array (
-      'id' => 'journal-arrow-down-fill-solid',
-      'name' => 'Journal Arrow Down',
-      'value' => 'bi-journal-arrow-down-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'journal',
-        1 => 'arrow',
-        2 => 'down',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    242 => 
-    array (
-      'id' => 'journal-arrow-up-fill-solid',
-      'name' => 'Journal Arrow Up',
-      'value' => 'bi-journal-arrow-up-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'journal',
-        1 => 'arrow',
-        2 => 'up',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    243 => 
-    array (
-      'id' => 'journal-arrow-up-outline',
       'name' => 'Journal Arrow Up',
       'value' => 'bi-journal-arrow-up',
       'type' => 'bootstrap-icons',
@@ -3883,12 +3381,24 @@ return array (
         2 => 'up',
       ),
       'category' => 'files',
+      'has_variants' => false,
+    ),
+    236 => 
+    array (
+      'name' => 'Journal Bookmark',
+      'value' => 'bi-journal-bookmark',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'journal',
+        1 => 'bookmark',
+      ),
+      'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    244 => 
+    237 => 
     array (
-      'id' => 'journal-bookmark-fill-solid',
       'name' => 'Journal Bookmark Fill',
       'value' => 'bi-journal-bookmark-fill',
       'type' => 'bootstrap-icons',
@@ -3902,25 +3412,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    245 => 
+    238 => 
     array (
-      'id' => 'journal-bookmark-outline',
-      'name' => 'Journal Bookmark Fill',
-      'value' => 'bi-journal-bookmark',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'journal',
-        1 => 'bookmark',
-        2 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    246 => 
-    array (
-      'id' => 'journal-check-outline',
       'name' => 'Journal Check',
       'value' => 'bi-journal-check',
       'type' => 'bootstrap-icons',
@@ -3931,11 +3424,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    247 => 
+    239 => 
     array (
-      'id' => 'journal-code-outline',
       'name' => 'Journal Code',
       'value' => 'bi-journal-code',
       'type' => 'bootstrap-icons',
@@ -3946,11 +3437,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    248 => 
+    240 => 
     array (
-      'id' => 'journal-medical-outline',
       'name' => 'Journal Medical',
       'value' => 'bi-journal-medical',
       'type' => 'bootstrap-icons',
@@ -3961,11 +3450,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    249 => 
+    241 => 
     array (
-      'id' => 'journal-minus-outline',
       'name' => 'Journal Minus',
       'value' => 'bi-journal-minus',
       'type' => 'bootstrap-icons',
@@ -3976,11 +3463,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    250 => 
+    242 => 
     array (
-      'id' => 'journal-plus-outline',
       'name' => 'Journal Plus',
       'value' => 'bi-journal-plus',
       'type' => 'bootstrap-icons',
@@ -3991,11 +3476,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    251 => 
+    243 => 
     array (
-      'id' => 'journal-richtext-outline',
       'name' => 'Journal Richtext',
       'value' => 'bi-journal-richtext',
       'type' => 'bootstrap-icons',
@@ -4006,11 +3489,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    252 => 
+    244 => 
     array (
-      'id' => 'journal-text-outline',
       'name' => 'Journal Text',
       'value' => 'bi-journal-text',
       'type' => 'bootstrap-icons',
@@ -4021,11 +3502,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    253 => 
+    245 => 
     array (
-      'id' => 'journal-x-outline',
       'name' => 'Journal X',
       'value' => 'bi-journal-x',
       'type' => 'bootstrap-icons',
@@ -4036,11 +3515,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    254 => 
+    246 => 
     array (
-      'id' => 'journals-outline',
       'name' => 'Journals',
       'value' => 'bi-journals',
       'type' => 'bootstrap-icons',
@@ -4050,11 +3527,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    255 => 
+    247 => 
     array (
-      'id' => 'receipt-outline',
       'name' => 'Receipt',
       'value' => 'bi-receipt',
       'type' => 'bootstrap-icons',
@@ -4064,11 +3539,9 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
-    256 => 
+    248 => 
     array (
-      'id' => 'receipt-cutoff-outline',
       'name' => 'Receipt Cutoff',
       'value' => 'bi-receipt-cutoff',
       'type' => 'bootstrap-icons',
@@ -4079,11 +3552,22 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
+    ),
+    249 => 
+    array (
+      'name' => 'Save',
+      'value' => 'bi-save',
+      'type' => 'bootstrap-icons',
+      'keywords' => 
+      array (
+        0 => 'save',
+      ),
+      'category' => 'files',
+      'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    257 => 
+    250 => 
     array (
-      'id' => 'save-fill-solid',
       'name' => 'Save Fill',
       'value' => 'bi-save-fill',
       'type' => 'bootstrap-icons',
@@ -4096,24 +3580,21 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    258 => 
+    251 => 
     array (
-      'id' => 'save-outline',
-      'name' => 'Save Fill',
-      'value' => 'bi-save',
+      'name' => 'Save2',
+      'value' => 'bi-save2',
       'type' => 'bootstrap-icons',
       'keywords' => 
       array (
-        0 => 'save',
-        1 => 'fill',
+        0 => 'save2',
       ),
       'category' => 'files',
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    259 => 
+    252 => 
     array (
-      'id' => 'save2-fill-solid',
       'name' => 'Save2 Fill',
       'value' => 'bi-save2-fill',
       'type' => 'bootstrap-icons',
@@ -4126,24 +3607,8 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    260 => 
+    253 => 
     array (
-      'id' => 'save2-outline',
-      'name' => 'Save2 Fill',
-      'value' => 'bi-save2',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'save2',
-        1 => 'fill',
-      ),
-      'category' => 'files',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    261 => 
-    array (
-      'id' => 'upload-outline',
       'name' => 'Upload',
       'value' => 'bi-upload',
       'type' => 'bootstrap-icons',
@@ -4153,7 +3618,6 @@ return array (
       ),
       'category' => 'files',
       'has_variants' => false,
-      'variant_type' => 'outline',
     ),
   ),
 );
