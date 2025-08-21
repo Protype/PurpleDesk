@@ -4,93 +4,18 @@ namespace App\Services;
 
 /**
  * Emoji 相容性過濾服務
- * 基於用戶確認結果自動生成
- * 
- * 統計資料:
- * - 總測試: 383 個 emoji
- * - 實際問題: 57 個 (14.9%)
- * - 預測準確度: 100.0%
+ * 使用 config/emoji-filter.php 進行設定管理
  */
 class EmojiFilterService
 {
-    /**
-     * 確認有問題的 emoji 黑名單 (57 個)
-     */
-    private const PROBLEMATIC_EMOJIS = [
-        "🇨🇶",
-        "🫩",
-        "🫆",
-        "🪾",
-        "🫜",
-        "🪉",
-        "🪏",
-        "🫟",
-        "🚶‍♀️‍➡️",
-        "🚶‍♂️‍➡️",
-        "🧎‍♀️‍➡️",
-        "🧎‍♂️‍➡️",
-        "🏃‍♀️‍➡️",
-        "🏃‍♂️‍➡️",
-        "🧑‍🦯‍➡️",
-        "👨‍🦯‍➡️",
-        "👩‍🦯‍➡️",
-        "🧑‍🦼‍➡️",
-        "👨‍🦼‍➡️",
-        "👩‍🦼‍➡️",
-        "🧑‍🦽‍➡️",
-        "👨‍🦽‍➡️",
-        "👩‍🦽‍➡️",
-        "🧑‍🧑‍🧒‍🧒",
-        "🙂‍↔️",
-        "🙂‍↕️",
-        "🚶‍➡️",
-        "🧎‍➡️",
-        "🏃‍➡️",
-        "🧑‍🧑‍🧒",
-        "🧑‍🧒‍🧒",
-        "⛓️‍💥",
-        "🧑‍🧒",
-        "🐦‍🔥",
-        "🍋‍🟩",
-        "🍄‍🟫",
-        "🐦‍⬛",
-        "🫨",
-        "🩷",
-        "🩵",
-        "🩶",
-        "🫷",
-        "🫸",
-        "🫎",
-        "🫏",
-        "🪽",
-        "🪿",
-        "🪼",
-        "🪻",
-        "🫚",
-        "🫛",
-        "🪭",
-        "🪮",
-        "🪇",
-        "🪈",
-        "🪯",
-        "🛜"
-    ];
 
     /**
-     * 版本過濾規則
+     * 檢查過濾功能是否啟用
      */
-    private const VERSION_RULES = [
-        "15" => "block",
-        "16" => "block",
-        "15.1" => "block"
-    ];
-
-    /**
-     * 風險因子規則
-     */
-    private const FACTOR_RULES = [
-        "FLAG_SEQUENCE" => "high_risk"
-    ];
+    public function isFilteringEnabled(): bool
+    {
+        return config('emoji-filter.enabled', true);
+    }
 
     /**
      * 檢查 emoji 是否應該過濾
@@ -100,10 +25,20 @@ class EmojiFilterService
      */
     public function shouldFilterEmoji(array $emojiData): array
     {
+        // 如果過濾功能未啟用，直接通過
+        if (!$this->isFilteringEnabled()) {
+            return [
+                'shouldFilter' => false,
+                'reason' => '過濾功能已停用',
+                'riskLevel' => 'disabled'
+            ];
+        }
+
         $emoji = $emojiData['emoji'] ?? '';
         
         // 檢查黑名單
-        if (in_array($emoji, self::PROBLEMATIC_EMOJIS)) {
+        $blacklist = config('emoji-filter.blacklist', []);
+        if (in_array($emoji, $blacklist)) {
             return [
                 'shouldFilter' => true,
                 'reason' => '用戶確認有顯示問題',
@@ -112,8 +47,9 @@ class EmojiFilterService
         }
         
         // 檢查版本規則
-        if (isset($emojiData['version']) && isset(self::VERSION_RULES[$emojiData['version']])) {
-            $rule = self::VERSION_RULES[$emojiData['version']];
+        $versionRules = config('emoji-filter.version_rules', []);
+        if (isset($emojiData['version']) && isset($versionRules[$emojiData['version']])) {
+            $rule = $versionRules[$emojiData['version']];
             if ($rule === 'block') {
                 return [
                     'shouldFilter' => true,
@@ -130,9 +66,10 @@ class EmojiFilterService
         }
         
         // 檢查因子規則
+        $factorRules = config('emoji-filter.factor_rules', []);
         if (isset($emojiData['factors']) && is_array($emojiData['factors'])) {
             foreach ($emojiData['factors'] as $factor) {
-                if (isset(self::FACTOR_RULES[$factor]) && self::FACTOR_RULES[$factor] === 'high_risk') {
+                if (isset($factorRules[$factor]) && $factorRules[$factor] === 'high_risk') {
                     return [
                         'shouldFilter' => false,
                         'reason' => "包含高風險因子: {$factor}",
@@ -157,9 +94,15 @@ class EmojiFilterService
      */
     public function filterEmojis(array $emojis): array
     {
-        return array_filter($emojis, function ($emoji) {
+        if (!$this->isFilteringEnabled()) {
+            return $emojis;
+        }
+
+        $blacklist = config('emoji-filter.blacklist', []);
+        
+        return array_filter($emojis, function ($emoji) use ($blacklist) {
             $emojiStr = is_string($emoji) ? $emoji : ($emoji['emoji'] ?? '');
-            return !in_array($emojiStr, self::PROBLEMATIC_EMOJIS);
+            return !in_array($emojiStr, $blacklist);
         });
     }
 
@@ -171,8 +114,18 @@ class EmojiFilterService
      */
     public function filterAndCleanEmojis(array $emojis): array
     {
+        if (!$this->isFilteringEnabled()) {
+            return $emojis;
+        }
+
         $seen = [];
         $result = [];
+        
+        // 取得設定
+        $filterCompound = config('emoji-filter.filter_compound_emojis', true);
+        $filterSkinTones = config('emoji-filter.filter_skin_tone_variants', true);
+        $filterDuplicates = config('emoji-filter.filter_duplicates', true);
+        $logFiltering = config('emoji-filter.log_filtering', true) && config('app.debug');
         
         foreach ($emojis as $emojiData) {
             if (!isset($emojiData['emoji']) || empty($emojiData['emoji'])) {
@@ -183,7 +136,7 @@ class EmojiFilterService
             $filterResult = $this->shouldFilterEmoji($emojiData);
             if ($filterResult['shouldFilter']) {
                 // 在開發環境可以記錄過濾資訊
-                if (config('app.debug')) {
+                if ($logFiltering) {
                     \Log::info("過濾黑名單 emoji: {$emojiData['emoji']} - {$filterResult['reason']}");
                 }
                 continue; // 跳過黑名單中的 emoji
@@ -192,18 +145,23 @@ class EmojiFilterService
             // 移除膚色修飾符和變化選擇器
             $baseEmoji = $this->cleanEmoji($emojiData['emoji']);
             
-            // 跳過空字符串或已經處理過的基礎 emoji
-            if (empty($baseEmoji) || isset($seen[$baseEmoji])) {
+            // 跳過空字符串
+            if (empty($baseEmoji)) {
+                continue;
+            }
+
+            // 檢查是否過濾重複項
+            if ($filterDuplicates && isset($seen[$baseEmoji])) {
                 continue;
             }
             
-            // 跳過複合 emoji（包含 ZWJ 的 emoji）
-            if (strpos($emojiData['emoji'], "\u{200D}") !== false) {
+            // 檢查是否過濾複合 emoji（包含 ZWJ 的 emoji）
+            if ($filterCompound && strpos($emojiData['emoji'], "\u{200D}") !== false) {
                 continue;
             }
             
-            // 跳過膚色變體（保留基礎版本）
-            if (preg_match('/[\x{1F3FB}-\x{1F3FF}]/u', $emojiData['emoji'])) {
+            // 檢查是否過濾膚色變體（保留基礎版本）
+            if ($filterSkinTones && preg_match('/[\x{1F3FB}-\x{1F3FF}]/u', $emojiData['emoji'])) {
                 continue;
             }
             
@@ -238,12 +196,29 @@ class EmojiFilterService
      */
     public function getFilterStats(): array
     {
+        $stats = config('emoji-filter.stats', []);
+        $blacklist = config('emoji-filter.blacklist', []);
+        
+        return array_merge($stats, [
+            'current_blacklist_count' => count($blacklist),
+            'filtering_enabled' => $this->isFilteringEnabled()
+        ]);
+    }
+
+    /**
+     * 取得目前設定摘要
+     */
+    public function getConfigSummary(): array
+    {
         return [
-            "totalTested" => 383,
-            "actualProblems" => count(self::PROBLEMATIC_EMOJIS),
-            "problemRate" => 14.9,
-            "predictionAccuracy" => 100,
-            "generatedAt" => "2025-08-21T13:43:00.000Z"
+            'enabled' => $this->isFilteringEnabled(),
+            'blacklist_count' => count(config('emoji-filter.blacklist', [])),
+            'version_rules' => config('emoji-filter.version_rules', []),
+            'factor_rules' => config('emoji-filter.factor_rules', []),
+            'filter_compound_emojis' => config('emoji-filter.filter_compound_emojis', true),
+            'filter_skin_tone_variants' => config('emoji-filter.filter_skin_tone_variants', true),
+            'filter_duplicates' => config('emoji-filter.filter_duplicates', true),
+            'log_filtering' => config('emoji-filter.log_filtering', true),
         ];
     }
 }
