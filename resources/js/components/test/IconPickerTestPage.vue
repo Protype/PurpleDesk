@@ -152,6 +152,119 @@
       @update:modelValue="handleIconSelected"
     />
 
+    <!-- 版本對比區塊 -->
+    <div class="version-comparison mt-8 mb-8">
+      <h3 class="text-lg font-semibold text-gray-800 mb-4">🔬 版本對比測試</h3>
+      <div class="comparison-grid grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- 當前版本 -->
+        <div class="comparison-item border border-gray-200 rounded-lg p-4 bg-blue-50">
+          <h4 class="text-md font-semibold text-blue-800 mb-3 flex items-center">
+            <span class="mr-2">🆕</span>
+            當前版本 ({{ currentVersion }})
+          </h4>
+          
+          <!-- 預覽區域 -->
+          <div class="icon-preview-small bg-white border-2 border-dashed border-blue-300 rounded-lg p-4 text-center mb-3 min-h-24 flex items-center justify-center">
+            <div v-if="selectedIcon">
+              <IconDisplay 
+                :icon-data="selectedIcon" 
+                size="lg"
+                class="mx-auto mb-2"
+              />
+              <div class="text-xs text-gray-600">
+                {{ selectedIcon.type || 'unknown' }}
+              </div>
+            </div>
+            <div v-else class="text-gray-400 text-sm">
+              <div class="text-xl mb-1">🎯</div>
+              <div>未選擇</div>
+            </div>
+          </div>
+          
+          <!-- 操作按鈕 -->
+          <button 
+            @click="openIconPicker"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+          >
+            選擇圖標
+          </button>
+          
+          <!-- 資料顯示 -->
+          <details v-if="selectedIcon" class="mt-3">
+            <summary class="cursor-pointer text-xs text-blue-600 hover:text-blue-800">查看資料結構</summary>
+            <pre class="text-xs bg-gray-100 p-2 mt-1 rounded overflow-auto max-h-32">{{ JSON.stringify(selectedIcon, null, 2) }}</pre>
+          </details>
+        </div>
+
+        <!-- 舊版本 -->
+        <div class="comparison-item border border-gray-200 rounded-lg p-4 bg-orange-50">
+          <h4 class="text-md font-semibold text-orange-800 mb-3 flex items-center">
+            <span class="mr-2">📦</span>
+            舊版 (IconPickerOri)
+          </h4>
+          
+          <!-- 預覽區域 -->
+          <div class="icon-preview-small bg-white border-2 border-dashed border-orange-300 rounded-lg p-4 text-center mb-3 min-h-24 flex items-center justify-center">
+            <div v-if="selectedIconOld && iconTypeOld">
+              <IconDisplay 
+                :icon-data="convertOldIconData(selectedIconOld)" 
+                size="lg"
+                class="mx-auto mb-2"
+              />
+              <div class="text-xs text-gray-600">
+                {{ iconTypeOld }} → {{ convertOldIconData(selectedIconOld)?.type || 'unknown' }}
+              </div>
+            </div>
+            <div v-else class="text-gray-400 text-sm">
+              <div class="text-xl mb-1">🎯</div>
+              <div>未選擇</div>
+            </div>
+          </div>
+          
+          <!-- 操作按鈕 -->
+          <button 
+            @click="openIconPickerOld"
+            class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+          >
+            選擇圖標
+          </button>
+          
+          <!-- 資料顯示 -->
+          <div v-if="selectedIconOld && iconTypeOld" class="mt-3 space-y-2">
+            <details>
+              <summary class="cursor-pointer text-xs text-orange-600 hover:text-orange-800">查看原始資料</summary>
+              <pre class="text-xs bg-gray-100 p-2 mt-1 rounded overflow-auto max-h-24">原始: {{ selectedIconOld }}
+類型: {{ iconTypeOld }}</pre>
+            </details>
+            <details>
+              <summary class="cursor-pointer text-xs text-orange-600 hover:text-orange-800">查看轉換後資料</summary>
+              <pre class="text-xs bg-gray-100 p-2 mt-1 rounded overflow-auto max-h-24">{{ JSON.stringify(convertOldIconData(selectedIconOld), null, 2) }}</pre>
+            </details>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 對比說明 -->
+      <div class="comparison-note mt-4 p-3 bg-gray-50 rounded-lg">
+        <div class="text-sm text-gray-600">
+          <strong>💡 對比重點：</strong>
+          兩個版本都使用相同的 IconDisplay 元件進行顯示，可以比較選取後的視覺效果是否一致。
+          舊版會返回簡單的字串和類型，新版返回統一的物件格式。
+        </div>
+      </div>
+    </div>
+
+    <!-- 舊版 IconPickerOri (隱藏預覽按鈕) -->
+    <IconPickerOri 
+      v-model="selectedIconOld"
+      v-model:iconType="iconTypeOld"
+      :is-open="isPickerOpenOld"
+      :hide-preview="true"
+      @close="closeIconPickerOld"
+      @update:modelValue="handleIconSelectedOld"
+    />
+
     <!-- 測試功能區域 -->
     <div class="test-actions">
       <h3 class="text-lg font-semibold text-gray-800 mb-3">🧪 測試功能</h3>
@@ -219,6 +332,7 @@
 import { ref, computed } from 'vue'
 import IconPickerProxy from '@/features/icon-picker/demo/IconPickerProxy.vue'
 import IconPickerDevTool from '@/features/icon-picker/demo/IconPickerDevTool.vue'
+import IconPickerOri from '@/components/common/IconPickerOri.vue'
 import IconDisplay from '@/components/common/IconDisplay.vue'
 import { HomeIcon } from '@heroicons/vue/outline'
 import { HomeIcon as HomeIconSolid } from '@heroicons/vue/solid'
@@ -228,6 +342,7 @@ export default {
   components: {
     IconPickerProxy,
     IconPickerDevTool,
+    IconPickerOri,
     IconDisplay,
     HomeIcon,
     HomeIconSolid
@@ -241,6 +356,11 @@ export default {
     const testingHeroIcon = ref(false)
     const testingFormat = ref(false)
     const testResult = ref('')
+    
+    // 舊版 IconPicker 狀態
+    const selectedIconOld = ref('')
+    const iconTypeOld = ref('')
+    const isPickerOpenOld = ref(false)
     
     // 動態載入測試
     const dynamicIconComponent = ref(null)
@@ -284,6 +404,57 @@ export default {
       
       return 'IconPickerOri (原版，預設)'
     })
+    
+    // 舊版資料轉換函數
+    const convertOldIconData = (oldData) => {
+      if (!oldData || !iconTypeOld.value) return null
+      
+      // 根據 iconTypeOld 轉換為新的 IconData 格式
+      switch (iconTypeOld.value) {
+        case 'emoji':
+          return {
+            type: 'emoji',
+            emoji: oldData
+          }
+        case 'initials':
+          return {
+            type: 'text',
+            text: oldData
+          }
+        case 'heroicons':
+          return {
+            type: 'heroicons',
+            icon: oldData,
+            variant: 'outline' // 預設 outline
+          }
+        case 'bootstrap':
+          return {
+            type: 'bootstrap-icons',
+            icon: oldData
+          }
+        case 'upload':
+          return {
+            type: 'image',
+            url: oldData
+          }
+        default:
+          return null
+      }
+    }
+    
+    // 舊版 IconPicker 事件處理
+    const openIconPickerOld = () => {
+      isPickerOpenOld.value = true
+    }
+    
+    const closeIconPickerOld = () => {
+      isPickerOpenOld.value = false
+    }
+    
+    const handleIconSelectedOld = (icon) => {
+      selectedIconOld.value = icon
+      // closeIconPickerOld() // 舊版會自動關閉
+    }
     
     const openIconPicker = () => {
       isPickerOpen.value = true
@@ -418,6 +589,15 @@ export default {
       testingFormat,
       testResult,
       dynamicIconComponent,
+      // 舊版 IconPicker 相關
+      selectedIconOld,
+      iconTypeOld,
+      isPickerOpenOld,
+      convertOldIconData,
+      openIconPickerOld,
+      closeIconPickerOld,
+      handleIconSelectedOld,
+      // 現有功能
       openIconPicker,
       closeIconPicker,
       handleIconSelected,
