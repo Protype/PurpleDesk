@@ -224,7 +224,7 @@
           
           <!-- 操作按鈕 -->
           <button 
-            @click="openIconPickerOld"
+            @click.stop="openIconPickerOld"
             class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
           >
             選擇圖標
@@ -255,15 +255,16 @@
       </div>
     </div>
 
-    <!-- 舊版 IconPickerOri (隱藏預覽按鈕) -->
-    <IconPickerOri 
-      ref="iconPickerOldRef"
-      v-model="selectedIconOld"
-      v-model:iconType="iconTypeOld"
-      :hide-preview="true"
-      @close="closeIconPickerOld"
-      @update:modelValue="handleIconSelectedOld"
-    />
+    <!-- 舊版 IconPickerOri (嘗試完全顯示用於除錯) -->
+    <div style="opacity: 0.1; position: absolute; top: 0; left: 0; z-index: -1;">
+      <IconPickerOri 
+        ref="iconPickerOldRef"
+        v-model="selectedIconOld"
+        v-model:iconType="iconTypeOld"
+        @close="closeIconPickerOld"
+        @update:modelValue="handleIconSelectedOld"
+      />
+    </div>
 
     <!-- 測試功能區域 -->
     <div class="test-actions">
@@ -422,10 +423,20 @@ export default {
             text: oldData
           }
         case 'heroicons':
+          // 舊版格式: "outline:HomeIcon" 或 "solid:HomeIcon"
+          let iconName = oldData
+          let variant = 'outline'
+          
+          if (oldData.includes(':')) {
+            const parts = oldData.split(':')
+            variant = parts[0] // outline 或 solid
+            iconName = parts[1] // HomeIcon
+          }
+          
           return {
             type: 'heroicons',
-            icon: oldData,
-            variant: 'outline' // 預設 outline
+            icon: iconName,
+            variant: variant
           }
         case 'bootstrap':
           return {
@@ -443,9 +454,35 @@ export default {
     }
     
     // 舊版 IconPicker 事件處理
-    const openIconPickerOld = () => {
+    const openIconPickerOld = async (event) => {
+      console.log('openIconPickerOld called')
+      
+      // 阻止事件冒泡，避免觸發 handleClickOutside
+      if (event) {
+        event.stopPropagation()
+        event.preventDefault()
+      }
+      
       if (iconPickerOldRef.value) {
-        iconPickerOldRef.value.togglePicker()
+        try {
+          console.log('Trying togglePicker...')
+          await iconPickerOldRef.value.togglePicker()
+          console.log('After togglePicker, isOpen:', iconPickerOldRef.value.isOpen)
+          
+          // 延遲檢查，確保面板保持開啟
+          setTimeout(() => {
+            console.log('Final isOpen state:', iconPickerOldRef.value?.isOpen)
+            if (!iconPickerOldRef.value?.isOpen) {
+              console.log('Panel was closed, trying to reopen...')
+              iconPickerOldRef.value.isOpen = true
+            }
+          }, 50)
+          
+        } catch (error) {
+          console.error('Error calling togglePicker:', error)
+        }
+      } else {
+        console.error('iconPickerOldRef is null')
       }
     }
     
@@ -454,6 +491,7 @@ export default {
     }
     
     const handleIconSelectedOld = (icon) => {
+      console.log('handleIconSelectedOld called with:', icon, 'iconType:', iconTypeOld.value)
       selectedIconOld.value = icon
       // closeIconPickerOld() // 舊版會自動關閉
     }
