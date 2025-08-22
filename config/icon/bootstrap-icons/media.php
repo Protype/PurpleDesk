@@ -6,7 +6,6 @@ return array (
   'description' => '媒體、影音相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Boombox',
       'value' => 'bi-boombox',
@@ -19,7 +18,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    1 => 
     array (
       'name' => 'Boombox Fill',
       'value' => 'bi-boombox-fill',
@@ -33,7 +31,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    2 => 
     array (
       'name' => 'Camera',
       'value' => 'bi-camera',
@@ -46,7 +43,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    3 => 
     array (
       'name' => 'Camera Fill',
       'value' => 'bi-camera-fill',
@@ -60,7 +56,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    4 => 
     array (
       'name' => 'Camera Reels',
       'value' => 'bi-camera-reels',
@@ -74,7 +69,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    5 => 
     array (
       'name' => 'Camera Reels Fill',
       'value' => 'bi-camera-reels-fill',
@@ -89,7 +83,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    6 => 
     array (
       'name' => 'Camera Video',
       'value' => 'bi-camera-video',
@@ -103,7 +96,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    7 => 
     array (
       'name' => 'Camera Video Fill',
       'value' => 'bi-camera-video-fill',
@@ -118,7 +110,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    8 => 
     array (
       'name' => 'Camera Video Off',
       'value' => 'bi-camera-video-off',
@@ -133,7 +124,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    9 => 
     array (
       'name' => 'Camera Video Off Fill',
       'value' => 'bi-camera-video-off-fill',
@@ -149,7 +139,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    10 => 
     array (
       'name' => 'Camera2',
       'value' => 'bi-camera2',
@@ -161,7 +150,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    11 => 
     array (
       'name' => 'Cassette',
       'value' => 'bi-cassette',
@@ -174,7 +162,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    12 => 
     array (
       'name' => 'Cassette Fill',
       'value' => 'bi-cassette-fill',
@@ -188,7 +175,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    13 => 
     array (
       'name' => 'Disc',
       'value' => 'bi-disc',
@@ -201,7 +187,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    14 => 
     array (
       'name' => 'Disc Fill',
       'value' => 'bi-disc-fill',
@@ -215,7 +200,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    15 => 
     array (
       'name' => 'Earbuds',
       'value' => 'bi-earbuds',
@@ -227,7 +211,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    16 => 
     array (
       'name' => 'Exposure',
       'value' => 'bi-exposure',
@@ -239,7 +222,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    17 => 
     array (
       'name' => 'Fast Forward',
       'value' => 'bi-fast-forward',
@@ -253,7 +235,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    18 => 
     array (
       'name' => 'Fast Forward Btn',
       'value' => 'bi-fast-forward-btn',
@@ -268,7 +249,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    19 => 
     array (
       'name' => 'Fast Forward Btn Fill',
       'value' => 'bi-fast-forward-btn-fill',
@@ -284,7 +264,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    20 => 
     array (
       'name' => 'Fast Forward Circle',
       'value' => 'bi-fast-forward-circle',
@@ -299,7 +278,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    21 => 
     array (
       'name' => 'Fast Forward Circle Fill',
       'value' => 'bi-fast-forward-circle-fill',
@@ -315,7 +293,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    22 => 
     array (
       'name' => 'Fast Forward Fill',
       'value' => 'bi-fast-forward-fill',
@@ -330,7 +307,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    23 => 
     array (
       'name' => 'Film',
       'value' => 'bi-film',
@@ -342,7 +318,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    24 => 
     array (
       'name' => 'Headphones',
       'value' => 'bi-headphones',
@@ -354,7 +329,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    25 => 
     array (
       'name' => 'Headset',
       'value' => 'bi-headset',
@@ -366,7 +340,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    26 => 
     array (
       'name' => 'Image',
       'value' => 'bi-image',
@@ -379,7 +352,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    27 => 
     array (
       'name' => 'Image Alt',
       'value' => 'bi-image-alt',
@@ -392,7 +364,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    28 => 
     array (
       'name' => 'Image Fill',
       'value' => 'bi-image-fill',
@@ -406,7 +377,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
     array (
       'name' => 'Images',
       'value' => 'bi-images',
@@ -418,7 +388,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    30 => 
     array (
       'name' => 'Mic',
       'value' => 'bi-mic',
@@ -431,7 +400,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    31 => 
     array (
       'name' => 'Mic Fill',
       'value' => 'bi-mic-fill',
@@ -445,7 +413,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    32 => 
     array (
       'name' => 'Mic Mute',
       'value' => 'bi-mic-mute',
@@ -459,7 +426,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    33 => 
     array (
       'name' => 'Mic Mute Fill',
       'value' => 'bi-mic-mute-fill',
@@ -474,7 +440,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    34 => 
     array (
       'name' => 'Music Note',
       'value' => 'bi-music-note',
@@ -487,7 +452,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    35 => 
     array (
       'name' => 'Music Note Beamed',
       'value' => 'bi-music-note-beamed',
@@ -501,7 +465,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    36 => 
     array (
       'name' => 'Music Note List',
       'value' => 'bi-music-note-list',
@@ -515,7 +478,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    37 => 
     array (
       'name' => 'Music Player',
       'value' => 'bi-music-player',
@@ -529,7 +491,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    38 => 
     array (
       'name' => 'Music Player Fill',
       'value' => 'bi-music-player-fill',
@@ -544,7 +505,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    39 => 
     array (
       'name' => 'Optical Audio',
       'value' => 'bi-optical-audio',
@@ -558,7 +518,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    40 => 
     array (
       'name' => 'Optical Audio Fill',
       'value' => 'bi-optical-audio-fill',
@@ -573,7 +532,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    41 => 
     array (
       'name' => 'Pause',
       'value' => 'bi-pause',
@@ -586,7 +544,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    42 => 
     array (
       'name' => 'Pause Btn',
       'value' => 'bi-pause-btn',
@@ -600,7 +557,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    43 => 
     array (
       'name' => 'Pause Btn Fill',
       'value' => 'bi-pause-btn-fill',
@@ -615,7 +571,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    44 => 
     array (
       'name' => 'Pause Circle',
       'value' => 'bi-pause-circle',
@@ -629,7 +584,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    45 => 
     array (
       'name' => 'Pause Circle Fill',
       'value' => 'bi-pause-circle-fill',
@@ -644,7 +598,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    46 => 
     array (
       'name' => 'Pause Fill',
       'value' => 'bi-pause-fill',
@@ -658,7 +611,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    47 => 
     array (
       'name' => 'Play',
       'value' => 'bi-play',
@@ -671,7 +623,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    48 => 
     array (
       'name' => 'Play Btn',
       'value' => 'bi-play-btn',
@@ -685,7 +636,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
     array (
       'name' => 'Play Btn Fill',
       'value' => 'bi-play-btn-fill',
@@ -700,7 +650,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    50 => 
     array (
       'name' => 'Play Circle',
       'value' => 'bi-play-circle',
@@ -714,7 +663,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    51 => 
     array (
       'name' => 'Play Circle Fill',
       'value' => 'bi-play-circle-fill',
@@ -729,7 +677,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    52 => 
     array (
       'name' => 'Play Fill',
       'value' => 'bi-play-fill',
@@ -743,7 +690,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
     array (
       'name' => 'Projector',
       'value' => 'bi-projector',
@@ -756,7 +702,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    54 => 
     array (
       'name' => 'Projector Fill',
       'value' => 'bi-projector-fill',
@@ -770,7 +715,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    55 => 
     array (
       'name' => 'Record',
       'value' => 'bi-record',
@@ -783,7 +727,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    56 => 
     array (
       'name' => 'Record Btn',
       'value' => 'bi-record-btn',
@@ -797,7 +740,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    57 => 
     array (
       'name' => 'Record Btn Fill',
       'value' => 'bi-record-btn-fill',
@@ -812,7 +754,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    58 => 
     array (
       'name' => 'Record Circle',
       'value' => 'bi-record-circle',
@@ -826,7 +767,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    59 => 
     array (
       'name' => 'Record Circle Fill',
       'value' => 'bi-record-circle-fill',
@@ -841,7 +781,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    60 => 
     array (
       'name' => 'Record Fill',
       'value' => 'bi-record-fill',
@@ -855,7 +794,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    61 => 
     array (
       'name' => 'Record2',
       'value' => 'bi-record2',
@@ -868,7 +806,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    62 => 
     array (
       'name' => 'Record2 Fill',
       'value' => 'bi-record2-fill',
@@ -882,7 +819,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    63 => 
     array (
       'name' => 'Repeat',
       'value' => 'bi-repeat',
@@ -894,7 +830,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    64 => 
     array (
       'name' => 'Repeat 1',
       'value' => 'bi-repeat-1',
@@ -907,7 +842,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    65 => 
     array (
       'name' => 'Rewind',
       'value' => 'bi-rewind',
@@ -920,7 +854,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    66 => 
     array (
       'name' => 'Rewind Btn',
       'value' => 'bi-rewind-btn',
@@ -934,7 +867,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    67 => 
     array (
       'name' => 'Rewind Btn Fill',
       'value' => 'bi-rewind-btn-fill',
@@ -949,7 +881,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    68 => 
     array (
       'name' => 'Rewind Circle',
       'value' => 'bi-rewind-circle',
@@ -963,7 +894,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    69 => 
     array (
       'name' => 'Rewind Circle Fill',
       'value' => 'bi-rewind-circle-fill',
@@ -978,7 +908,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    70 => 
     array (
       'name' => 'Rewind Fill',
       'value' => 'bi-rewind-fill',
@@ -992,7 +921,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
     array (
       'name' => 'Shuffle',
       'value' => 'bi-shuffle',
@@ -1004,7 +932,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    72 => 
     array (
       'name' => 'Skip Backward',
       'value' => 'bi-skip-backward',
@@ -1018,7 +945,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    73 => 
     array (
       'name' => 'Skip Backward Btn',
       'value' => 'bi-skip-backward-btn',
@@ -1033,7 +959,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    74 => 
     array (
       'name' => 'Skip Backward Btn Fill',
       'value' => 'bi-skip-backward-btn-fill',
@@ -1049,7 +974,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    75 => 
     array (
       'name' => 'Skip Backward Circle',
       'value' => 'bi-skip-backward-circle',
@@ -1064,7 +988,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    76 => 
     array (
       'name' => 'Skip Backward Circle Fill',
       'value' => 'bi-skip-backward-circle-fill',
@@ -1080,7 +1003,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    77 => 
     array (
       'name' => 'Skip Backward Fill',
       'value' => 'bi-skip-backward-fill',
@@ -1095,7 +1017,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    78 => 
     array (
       'name' => 'Skip End',
       'value' => 'bi-skip-end',
@@ -1109,7 +1030,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    79 => 
     array (
       'name' => 'Skip End Btn',
       'value' => 'bi-skip-end-btn',
@@ -1124,7 +1044,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    80 => 
     array (
       'name' => 'Skip End Btn Fill',
       'value' => 'bi-skip-end-btn-fill',
@@ -1140,7 +1059,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    81 => 
     array (
       'name' => 'Skip End Circle',
       'value' => 'bi-skip-end-circle',
@@ -1155,7 +1073,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    82 => 
     array (
       'name' => 'Skip End Circle Fill',
       'value' => 'bi-skip-end-circle-fill',
@@ -1171,7 +1088,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    83 => 
     array (
       'name' => 'Skip End Fill',
       'value' => 'bi-skip-end-fill',
@@ -1186,7 +1102,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    84 => 
     array (
       'name' => 'Skip Forward',
       'value' => 'bi-skip-forward',
@@ -1200,7 +1115,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    85 => 
     array (
       'name' => 'Skip Forward Btn',
       'value' => 'bi-skip-forward-btn',
@@ -1215,7 +1129,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    86 => 
     array (
       'name' => 'Skip Forward Btn Fill',
       'value' => 'bi-skip-forward-btn-fill',
@@ -1231,7 +1144,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    87 => 
     array (
       'name' => 'Skip Forward Circle',
       'value' => 'bi-skip-forward-circle',
@@ -1246,7 +1158,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    88 => 
     array (
       'name' => 'Skip Forward Circle Fill',
       'value' => 'bi-skip-forward-circle-fill',
@@ -1262,7 +1173,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    89 => 
     array (
       'name' => 'Skip Forward Fill',
       'value' => 'bi-skip-forward-fill',
@@ -1277,7 +1187,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    90 => 
     array (
       'name' => 'Skip Start',
       'value' => 'bi-skip-start',
@@ -1291,7 +1200,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    91 => 
     array (
       'name' => 'Skip Start Btn',
       'value' => 'bi-skip-start-btn',
@@ -1306,7 +1214,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    92 => 
     array (
       'name' => 'Skip Start Btn Fill',
       'value' => 'bi-skip-start-btn-fill',
@@ -1322,7 +1229,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    93 => 
     array (
       'name' => 'Skip Start Circle',
       'value' => 'bi-skip-start-circle',
@@ -1337,7 +1243,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    94 => 
     array (
       'name' => 'Skip Start Circle Fill',
       'value' => 'bi-skip-start-circle-fill',
@@ -1353,7 +1258,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    95 => 
     array (
       'name' => 'Skip Start Fill',
       'value' => 'bi-skip-start-fill',
@@ -1368,7 +1272,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    96 => 
     array (
       'name' => 'Soundwave',
       'value' => 'bi-soundwave',
@@ -1380,7 +1283,6 @@ return array (
       'category' => 'media',
       'has_variants' => false,
     ),
-    97 => 
     array (
       'name' => 'Speaker',
       'value' => 'bi-speaker',
@@ -1393,7 +1295,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    98 => 
     array (
       'name' => 'Speaker Fill',
       'value' => 'bi-speaker-fill',
@@ -1407,7 +1308,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    99 => 
     array (
       'name' => 'Stop',
       'value' => 'bi-stop',
@@ -1420,7 +1320,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    100 => 
     array (
       'name' => 'Stop Btn',
       'value' => 'bi-stop-btn',
@@ -1434,7 +1333,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    101 => 
     array (
       'name' => 'Stop Btn Fill',
       'value' => 'bi-stop-btn-fill',
@@ -1449,7 +1347,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    102 => 
     array (
       'name' => 'Stop Circle',
       'value' => 'bi-stop-circle',
@@ -1463,7 +1360,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    103 => 
     array (
       'name' => 'Stop Circle Fill',
       'value' => 'bi-stop-circle-fill',
@@ -1478,7 +1374,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    104 => 
     array (
       'name' => 'Stop Fill',
       'value' => 'bi-stop-fill',
@@ -1492,7 +1387,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    105 => 
     array (
       'name' => 'Tv',
       'value' => 'bi-tv',
@@ -1505,7 +1399,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    106 => 
     array (
       'name' => 'Tv Fill',
       'value' => 'bi-tv-fill',
@@ -1519,7 +1412,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    107 => 
     array (
       'name' => 'Vinyl',
       'value' => 'bi-vinyl',
@@ -1532,7 +1424,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    108 => 
     array (
       'name' => 'Vinyl Fill',
       'value' => 'bi-vinyl-fill',
@@ -1546,7 +1437,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    109 => 
     array (
       'name' => 'Volume Down',
       'value' => 'bi-volume-down',
@@ -1560,7 +1450,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    110 => 
     array (
       'name' => 'Volume Down Fill',
       'value' => 'bi-volume-down-fill',
@@ -1575,7 +1464,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    111 => 
     array (
       'name' => 'Volume Mute',
       'value' => 'bi-volume-mute',
@@ -1589,7 +1477,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    112 => 
     array (
       'name' => 'Volume Mute Fill',
       'value' => 'bi-volume-mute-fill',
@@ -1604,7 +1491,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    113 => 
     array (
       'name' => 'Volume Off',
       'value' => 'bi-volume-off',
@@ -1618,7 +1504,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    114 => 
     array (
       'name' => 'Volume Off Fill',
       'value' => 'bi-volume-off-fill',
@@ -1633,7 +1518,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    115 => 
     array (
       'name' => 'Volume Up',
       'value' => 'bi-volume-up',
@@ -1647,7 +1531,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    116 => 
     array (
       'name' => 'Volume Up Fill',
       'value' => 'bi-volume-up-fill',
@@ -1662,7 +1545,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    117 => 
     array (
       'name' => 'Webcam',
       'value' => 'bi-webcam',
@@ -1675,7 +1557,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    118 => 
     array (
       'name' => 'Webcam Fill',
       'value' => 'bi-webcam-fill',

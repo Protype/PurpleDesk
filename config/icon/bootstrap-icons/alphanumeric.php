@@ -6,7 +6,6 @@ return array (
   'description' => '數字、字母相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => '0 Circle',
       'value' => 'bi-0-circle',
@@ -20,7 +19,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    1 => 
     array (
       'name' => '0 Circle Fill',
       'value' => 'bi-0-circle-fill',
@@ -35,7 +33,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    2 => 
     array (
       'name' => '0 Square',
       'value' => 'bi-0-square',
@@ -49,7 +46,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    3 => 
     array (
       'name' => '0 Square Fill',
       'value' => 'bi-0-square-fill',
@@ -64,7 +60,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    4 => 
     array (
       'name' => '1 Circle',
       'value' => 'bi-1-circle',
@@ -78,7 +73,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    5 => 
     array (
       'name' => '1 Circle Fill',
       'value' => 'bi-1-circle-fill',
@@ -93,7 +87,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    6 => 
     array (
       'name' => '1 Square',
       'value' => 'bi-1-square',
@@ -107,7 +100,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    7 => 
     array (
       'name' => '1 Square Fill',
       'value' => 'bi-1-square-fill',
@@ -122,7 +114,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    8 => 
     array (
       'name' => '123',
       'value' => 'bi-123',
@@ -134,7 +125,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    9 => 
     array (
       'name' => '2 Circle',
       'value' => 'bi-2-circle',
@@ -148,7 +138,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    10 => 
     array (
       'name' => '2 Circle Fill',
       'value' => 'bi-2-circle-fill',
@@ -163,7 +152,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    11 => 
     array (
       'name' => '2 Square',
       'value' => 'bi-2-square',
@@ -177,7 +165,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    12 => 
     array (
       'name' => '2 Square Fill',
       'value' => 'bi-2-square-fill',
@@ -192,7 +179,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    13 => 
     array (
       'name' => '3 Circle',
       'value' => 'bi-3-circle',
@@ -206,7 +192,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    14 => 
     array (
       'name' => '3 Circle Fill',
       'value' => 'bi-3-circle-fill',
@@ -221,7 +206,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    15 => 
     array (
       'name' => '3 Square',
       'value' => 'bi-3-square',
@@ -235,7 +219,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    16 => 
     array (
       'name' => '3 Square Fill',
       'value' => 'bi-3-square-fill',
@@ -250,7 +233,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    17 => 
     array (
       'name' => '4 Circle',
       'value' => 'bi-4-circle',
@@ -264,7 +246,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    18 => 
     array (
       'name' => '4 Circle Fill',
       'value' => 'bi-4-circle-fill',
@@ -279,7 +260,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    19 => 
     array (
       'name' => '4 Square',
       'value' => 'bi-4-square',
@@ -293,7 +273,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    20 => 
     array (
       'name' => '4 Square Fill',
       'value' => 'bi-4-square-fill',
@@ -308,7 +287,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    21 => 
     array (
       'name' => '5 Circle',
       'value' => 'bi-5-circle',
@@ -322,7 +300,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    22 => 
     array (
       'name' => '5 Circle Fill',
       'value' => 'bi-5-circle-fill',
@@ -337,7 +314,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    23 => 
     array (
       'name' => '5 Square',
       'value' => 'bi-5-square',
@@ -351,7 +327,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    24 => 
     array (
       'name' => '5 Square Fill',
       'value' => 'bi-5-square-fill',
@@ -366,7 +341,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    25 => 
     array (
       'name' => '6 Circle',
       'value' => 'bi-6-circle',
@@ -380,7 +354,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    26 => 
     array (
       'name' => '6 Circle Fill',
       'value' => 'bi-6-circle-fill',
@@ -395,7 +368,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    27 => 
     array (
       'name' => '6 Square',
       'value' => 'bi-6-square',
@@ -409,7 +381,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    28 => 
     array (
       'name' => '6 Square Fill',
       'value' => 'bi-6-square-fill',
@@ -424,7 +395,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
     array (
       'name' => '7 Circle',
       'value' => 'bi-7-circle',
@@ -438,7 +408,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    30 => 
     array (
       'name' => '7 Circle Fill',
       'value' => 'bi-7-circle-fill',
@@ -453,7 +422,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    31 => 
     array (
       'name' => '7 Square',
       'value' => 'bi-7-square',
@@ -467,7 +435,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    32 => 
     array (
       'name' => '7 Square Fill',
       'value' => 'bi-7-square-fill',
@@ -482,7 +449,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    33 => 
     array (
       'name' => '8 Circle',
       'value' => 'bi-8-circle',
@@ -496,7 +462,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    34 => 
     array (
       'name' => '8 Circle Fill',
       'value' => 'bi-8-circle-fill',
@@ -511,7 +476,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    35 => 
     array (
       'name' => '8 Square',
       'value' => 'bi-8-square',
@@ -525,7 +489,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    36 => 
     array (
       'name' => '8 Square Fill',
       'value' => 'bi-8-square-fill',
@@ -540,7 +503,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    37 => 
     array (
       'name' => '9 Circle',
       'value' => 'bi-9-circle',
@@ -554,7 +516,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    38 => 
     array (
       'name' => '9 Circle Fill',
       'value' => 'bi-9-circle-fill',
@@ -569,7 +530,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    39 => 
     array (
       'name' => '9 Square',
       'value' => 'bi-9-square',
@@ -583,7 +543,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    40 => 
     array (
       'name' => '9 Square Fill',
       'value' => 'bi-9-square-fill',
@@ -598,7 +557,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    41 => 
     array (
       'name' => 'Alphabet',
       'value' => 'bi-alphabet',
@@ -610,7 +568,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    42 => 
     array (
       'name' => 'Alphabet Uppercase',
       'value' => 'bi-alphabet-uppercase',
@@ -623,7 +580,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    43 => 
     array (
       'name' => 'Alt',
       'value' => 'bi-alt',
@@ -635,7 +591,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    44 => 
     array (
       'name' => 'Blockquote Left',
       'value' => 'bi-blockquote-left',
@@ -648,7 +603,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    45 => 
     array (
       'name' => 'Blockquote Right',
       'value' => 'bi-blockquote-right',
@@ -661,7 +615,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    46 => 
     array (
       'name' => 'Body Text',
       'value' => 'bi-body-text',
@@ -674,7 +627,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    47 => 
     array (
       'name' => 'Braces',
       'value' => 'bi-braces',
@@ -686,7 +638,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    48 => 
     array (
       'name' => 'Braces Asterisk',
       'value' => 'bi-braces-asterisk',
@@ -699,7 +650,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    49 => 
     array (
       'name' => 'C Circle',
       'value' => 'bi-c-circle',
@@ -713,7 +663,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    50 => 
     array (
       'name' => 'C Circle Fill',
       'value' => 'bi-c-circle-fill',
@@ -728,7 +677,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    51 => 
     array (
       'name' => 'C Square',
       'value' => 'bi-c-square',
@@ -742,7 +690,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    52 => 
     array (
       'name' => 'C Square Fill',
       'value' => 'bi-c-square-fill',
@@ -757,7 +704,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
     array (
       'name' => 'Cc Circle',
       'value' => 'bi-cc-circle',
@@ -771,7 +717,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    54 => 
     array (
       'name' => 'Cc Circle Fill',
       'value' => 'bi-cc-circle-fill',
@@ -786,7 +731,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    55 => 
     array (
       'name' => 'Cc Square',
       'value' => 'bi-cc-square',
@@ -800,7 +744,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    56 => 
     array (
       'name' => 'Cc Square Fill',
       'value' => 'bi-cc-square-fill',
@@ -815,7 +758,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
     array (
       'name' => 'Code',
       'value' => 'bi-code',
@@ -827,7 +769,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    58 => 
     array (
       'name' => 'Code Slash',
       'value' => 'bi-code-slash',
@@ -840,7 +781,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    59 => 
     array (
       'name' => 'Code Square',
       'value' => 'bi-code-square',
@@ -853,7 +793,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    60 => 
     array (
       'name' => 'Css',
       'value' => 'bi-css',
@@ -865,7 +804,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    61 => 
     array (
       'name' => 'Escape',
       'value' => 'bi-escape',
@@ -877,7 +815,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    62 => 
     array (
       'name' => 'Fonts',
       'value' => 'bi-fonts',
@@ -889,7 +826,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    63 => 
     array (
       'name' => 'H Circle',
       'value' => 'bi-h-circle',
@@ -903,7 +839,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    64 => 
     array (
       'name' => 'H Circle Fill',
       'value' => 'bi-h-circle-fill',
@@ -918,7 +853,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    65 => 
     array (
       'name' => 'H Square',
       'value' => 'bi-h-square',
@@ -932,7 +866,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    66 => 
     array (
       'name' => 'H Square Fill',
       'value' => 'bi-h-square-fill',
@@ -947,7 +880,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    67 => 
     array (
       'name' => 'Hash',
       'value' => 'bi-hash',
@@ -959,7 +891,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    68 => 
     array (
       'name' => 'Javascript',
       'value' => 'bi-javascript',
@@ -971,7 +902,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    69 => 
     array (
       'name' => 'Markdown',
       'value' => 'bi-markdown',
@@ -984,7 +914,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    70 => 
     array (
       'name' => 'Markdown Fill',
       'value' => 'bi-markdown-fill',
@@ -998,7 +927,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
     array (
       'name' => 'Option',
       'value' => 'bi-option',
@@ -1010,7 +938,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    72 => 
     array (
       'name' => 'P Circle',
       'value' => 'bi-p-circle',
@@ -1024,7 +951,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    73 => 
     array (
       'name' => 'P Circle Fill',
       'value' => 'bi-p-circle-fill',
@@ -1039,7 +965,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    74 => 
     array (
       'name' => 'P Square',
       'value' => 'bi-p-square',
@@ -1053,7 +978,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    75 => 
     array (
       'name' => 'P Square Fill',
       'value' => 'bi-p-square-fill',
@@ -1068,7 +992,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    76 => 
     array (
       'name' => 'Paragraph',
       'value' => 'bi-paragraph',
@@ -1080,7 +1003,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    77 => 
     array (
       'name' => 'Percent',
       'value' => 'bi-percent',
@@ -1092,7 +1014,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    78 => 
     array (
       'name' => 'Quote',
       'value' => 'bi-quote',
@@ -1104,7 +1025,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    79 => 
     array (
       'name' => 'R Circle',
       'value' => 'bi-r-circle',
@@ -1118,7 +1038,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    80 => 
     array (
       'name' => 'R Circle Fill',
       'value' => 'bi-r-circle-fill',
@@ -1133,7 +1052,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    81 => 
     array (
       'name' => 'R Square',
       'value' => 'bi-r-square',
@@ -1147,7 +1065,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    82 => 
     array (
       'name' => 'R Square Fill',
       'value' => 'bi-r-square-fill',
@@ -1162,7 +1079,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    83 => 
     array (
       'name' => 'Regex',
       'value' => 'bi-regex',
@@ -1174,7 +1090,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    84 => 
     array (
       'name' => 'Shift',
       'value' => 'bi-shift',
@@ -1187,7 +1102,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    85 => 
     array (
       'name' => 'Shift Fill',
       'value' => 'bi-shift-fill',
@@ -1201,7 +1115,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    86 => 
     array (
       'name' => 'Spellcheck',
       'value' => 'bi-spellcheck',
@@ -1213,7 +1126,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    87 => 
     array (
       'name' => 'Subscript',
       'value' => 'bi-subscript',
@@ -1225,7 +1137,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    88 => 
     array (
       'name' => 'Superscript',
       'value' => 'bi-superscript',
@@ -1237,7 +1148,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    89 => 
     array (
       'name' => 'Type',
       'value' => 'bi-type',
@@ -1249,7 +1159,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    90 => 
     array (
       'name' => 'Type Bold',
       'value' => 'bi-type-bold',
@@ -1262,7 +1171,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    91 => 
     array (
       'name' => 'Type H1',
       'value' => 'bi-type-h1',
@@ -1275,7 +1183,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    92 => 
     array (
       'name' => 'Type H2',
       'value' => 'bi-type-h2',
@@ -1288,7 +1195,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    93 => 
     array (
       'name' => 'Type H3',
       'value' => 'bi-type-h3',
@@ -1301,7 +1207,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    94 => 
     array (
       'name' => 'Type Italic',
       'value' => 'bi-type-italic',
@@ -1314,7 +1219,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    95 => 
     array (
       'name' => 'Type Strikethrough',
       'value' => 'bi-type-strikethrough',
@@ -1327,7 +1231,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    96 => 
     array (
       'name' => 'Type Underline',
       'value' => 'bi-type-underline',
@@ -1340,7 +1243,6 @@ return array (
       'category' => 'alphanumeric',
       'has_variants' => false,
     ),
-    97 => 
     array (
       'name' => 'Typescript',
       'value' => 'bi-typescript',

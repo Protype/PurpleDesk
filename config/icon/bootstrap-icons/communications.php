@@ -6,7 +6,6 @@ return array (
   'description' => '通訊、交流相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Alexa',
       'value' => 'bi-alexa',
@@ -18,7 +17,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    1 => 
     array (
       'name' => 'Alipay',
       'value' => 'bi-alipay',
@@ -30,7 +28,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    2 => 
     array (
       'name' => 'Amazon',
       'value' => 'bi-amazon',
@@ -42,7 +39,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    3 => 
     array (
       'name' => 'Amd',
       'value' => 'bi-amd',
@@ -54,7 +50,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    4 => 
     array (
       'name' => 'Android',
       'value' => 'bi-android',
@@ -66,7 +61,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    5 => 
     array (
       'name' => 'Android2',
       'value' => 'bi-android2',
@@ -78,7 +72,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    6 => 
     array (
       'name' => 'Anthropic',
       'value' => 'bi-anthropic',
@@ -90,7 +83,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    7 => 
     array (
       'name' => 'Apple',
       'value' => 'bi-apple',
@@ -102,7 +94,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    8 => 
     array (
       'name' => 'Apple Music',
       'value' => 'bi-apple-music',
@@ -115,7 +106,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    9 => 
     array (
       'name' => 'Behance',
       'value' => 'bi-behance',
@@ -127,7 +117,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    10 => 
     array (
       'name' => 'Bell Slash',
       'value' => 'bi-bell-slash',
@@ -141,7 +130,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    11 => 
     array (
       'name' => 'Bell Slash Fill',
       'value' => 'bi-bell-slash-fill',
@@ -156,7 +144,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    12 => 
     array (
       'name' => 'Bing',
       'value' => 'bi-bing',
@@ -168,7 +155,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    13 => 
     array (
       'name' => 'Bluesky',
       'value' => 'bi-bluesky',
@@ -180,7 +166,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    14 => 
     array (
       'name' => 'Bluetooth',
       'value' => 'bi-bluetooth',
@@ -192,7 +177,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    15 => 
     array (
       'name' => 'Broadcast',
       'value' => 'bi-broadcast',
@@ -204,7 +188,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    16 => 
     array (
       'name' => 'Broadcast Pin',
       'value' => 'bi-broadcast-pin',
@@ -217,7 +200,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    17 => 
     array (
       'name' => 'Browser Chrome',
       'value' => 'bi-browser-chrome',
@@ -230,7 +212,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    18 => 
     array (
       'name' => 'Browser Edge',
       'value' => 'bi-browser-edge',
@@ -243,7 +224,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    19 => 
     array (
       'name' => 'Browser Firefox',
       'value' => 'bi-browser-firefox',
@@ -256,7 +236,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    20 => 
     array (
       'name' => 'Browser Safari',
       'value' => 'bi-browser-safari',
@@ -269,7 +248,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    21 => 
     array (
       'name' => 'Cast',
       'value' => 'bi-cast',
@@ -281,7 +259,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    22 => 
     array (
       'name' => 'Chat',
       'value' => 'bi-chat',
@@ -294,7 +271,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    23 => 
     array (
       'name' => 'Chat Dots',
       'value' => 'bi-chat-dots',
@@ -308,7 +284,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    24 => 
     array (
       'name' => 'Chat Dots Fill',
       'value' => 'bi-chat-dots-fill',
@@ -323,7 +298,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    25 => 
     array (
       'name' => 'Chat Fill',
       'value' => 'bi-chat-fill',
@@ -337,7 +311,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    26 => 
     array (
       'name' => 'Chat Heart',
       'value' => 'bi-chat-heart',
@@ -351,7 +324,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    27 => 
     array (
       'name' => 'Chat Heart Fill',
       'value' => 'bi-chat-heart-fill',
@@ -366,7 +338,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    28 => 
     array (
       'name' => 'Chat Left',
       'value' => 'bi-chat-left',
@@ -380,7 +351,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    29 => 
     array (
       'name' => 'Chat Left Dots',
       'value' => 'bi-chat-left-dots',
@@ -395,7 +365,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    30 => 
     array (
       'name' => 'Chat Left Dots Fill',
       'value' => 'bi-chat-left-dots-fill',
@@ -411,7 +380,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    31 => 
     array (
       'name' => 'Chat Left Fill',
       'value' => 'bi-chat-left-fill',
@@ -426,7 +394,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    32 => 
     array (
       'name' => 'Chat Left Heart',
       'value' => 'bi-chat-left-heart',
@@ -441,7 +408,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    33 => 
     array (
       'name' => 'Chat Left Heart Fill',
       'value' => 'bi-chat-left-heart-fill',
@@ -457,7 +423,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    34 => 
     array (
       'name' => 'Chat Left Quote',
       'value' => 'bi-chat-left-quote',
@@ -472,7 +437,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    35 => 
     array (
       'name' => 'Chat Left Quote Fill',
       'value' => 'bi-chat-left-quote-fill',
@@ -488,7 +452,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    36 => 
     array (
       'name' => 'Chat Left Text',
       'value' => 'bi-chat-left-text',
@@ -503,7 +466,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    37 => 
     array (
       'name' => 'Chat Left Text Fill',
       'value' => 'bi-chat-left-text-fill',
@@ -519,7 +481,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    38 => 
     array (
       'name' => 'Chat Quote',
       'value' => 'bi-chat-quote',
@@ -533,7 +494,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    39 => 
     array (
       'name' => 'Chat Quote Fill',
       'value' => 'bi-chat-quote-fill',
@@ -548,7 +508,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    40 => 
     array (
       'name' => 'Chat Right',
       'value' => 'bi-chat-right',
@@ -562,7 +521,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    41 => 
     array (
       'name' => 'Chat Right Dots',
       'value' => 'bi-chat-right-dots',
@@ -577,7 +535,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    42 => 
     array (
       'name' => 'Chat Right Dots Fill',
       'value' => 'bi-chat-right-dots-fill',
@@ -593,7 +550,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    43 => 
     array (
       'name' => 'Chat Right Fill',
       'value' => 'bi-chat-right-fill',
@@ -608,7 +564,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    44 => 
     array (
       'name' => 'Chat Right Heart',
       'value' => 'bi-chat-right-heart',
@@ -623,7 +578,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    45 => 
     array (
       'name' => 'Chat Right Heart Fill',
       'value' => 'bi-chat-right-heart-fill',
@@ -639,7 +593,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    46 => 
     array (
       'name' => 'Chat Right Quote',
       'value' => 'bi-chat-right-quote',
@@ -654,7 +607,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    47 => 
     array (
       'name' => 'Chat Right Quote Fill',
       'value' => 'bi-chat-right-quote-fill',
@@ -670,7 +622,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    48 => 
     array (
       'name' => 'Chat Right Text',
       'value' => 'bi-chat-right-text',
@@ -685,7 +636,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
     array (
       'name' => 'Chat Right Text Fill',
       'value' => 'bi-chat-right-text-fill',
@@ -701,7 +651,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    50 => 
     array (
       'name' => 'Chat Square',
       'value' => 'bi-chat-square',
@@ -715,7 +664,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    51 => 
     array (
       'name' => 'Chat Square Dots',
       'value' => 'bi-chat-square-dots',
@@ -730,7 +678,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    52 => 
     array (
       'name' => 'Chat Square Dots Fill',
       'value' => 'bi-chat-square-dots-fill',
@@ -746,7 +693,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
     array (
       'name' => 'Chat Square Fill',
       'value' => 'bi-chat-square-fill',
@@ -761,7 +707,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    54 => 
     array (
       'name' => 'Chat Square Heart',
       'value' => 'bi-chat-square-heart',
@@ -776,7 +721,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    55 => 
     array (
       'name' => 'Chat Square Heart Fill',
       'value' => 'bi-chat-square-heart-fill',
@@ -792,7 +736,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    56 => 
     array (
       'name' => 'Chat Square Quote',
       'value' => 'bi-chat-square-quote',
@@ -807,7 +750,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    57 => 
     array (
       'name' => 'Chat Square Quote Fill',
       'value' => 'bi-chat-square-quote-fill',
@@ -823,7 +765,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    58 => 
     array (
       'name' => 'Chat Square Text',
       'value' => 'bi-chat-square-text',
@@ -838,7 +779,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    59 => 
     array (
       'name' => 'Chat Square Text Fill',
       'value' => 'bi-chat-square-text-fill',
@@ -854,7 +794,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    60 => 
     array (
       'name' => 'Chat Text',
       'value' => 'bi-chat-text',
@@ -868,7 +807,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    61 => 
     array (
       'name' => 'Chat Text Fill',
       'value' => 'bi-chat-text-fill',
@@ -883,7 +821,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    62 => 
     array (
       'name' => 'Claude',
       'value' => 'bi-claude',
@@ -895,7 +832,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    63 => 
     array (
       'name' => 'Discord',
       'value' => 'bi-discord',
@@ -907,7 +843,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    64 => 
     array (
       'name' => 'Dribbble',
       'value' => 'bi-dribbble',
@@ -919,7 +854,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    65 => 
     array (
       'name' => 'Dropbox',
       'value' => 'bi-dropbox',
@@ -931,7 +865,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    66 => 
     array (
       'name' => 'Envelope',
       'value' => 'bi-envelope',
@@ -944,7 +877,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    67 => 
     array (
       'name' => 'Envelope Arrow Down',
       'value' => 'bi-envelope-arrow-down',
@@ -959,7 +891,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    68 => 
     array (
       'name' => 'Envelope Arrow Down Fill',
       'value' => 'bi-envelope-arrow-down-fill',
@@ -975,7 +906,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    69 => 
     array (
       'name' => 'Envelope Arrow Up',
       'value' => 'bi-envelope-arrow-up',
@@ -990,7 +920,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    70 => 
     array (
       'name' => 'Envelope Arrow Up Fill',
       'value' => 'bi-envelope-arrow-up-fill',
@@ -1006,7 +935,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
     array (
       'name' => 'Envelope At',
       'value' => 'bi-envelope-at',
@@ -1020,7 +948,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    72 => 
     array (
       'name' => 'Envelope At Fill',
       'value' => 'bi-envelope-at-fill',
@@ -1035,7 +962,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    73 => 
     array (
       'name' => 'Envelope Check',
       'value' => 'bi-envelope-check',
@@ -1049,7 +975,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    74 => 
     array (
       'name' => 'Envelope Check Fill',
       'value' => 'bi-envelope-check-fill',
@@ -1064,7 +989,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    75 => 
     array (
       'name' => 'Envelope Dash',
       'value' => 'bi-envelope-dash',
@@ -1078,7 +1002,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    76 => 
     array (
       'name' => 'Envelope Dash Fill',
       'value' => 'bi-envelope-dash-fill',
@@ -1093,7 +1016,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    77 => 
     array (
       'name' => 'Envelope Exclamation',
       'value' => 'bi-envelope-exclamation',
@@ -1107,7 +1029,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    78 => 
     array (
       'name' => 'Envelope Exclamation Fill',
       'value' => 'bi-envelope-exclamation-fill',
@@ -1122,7 +1043,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    79 => 
     array (
       'name' => 'Envelope Fill',
       'value' => 'bi-envelope-fill',
@@ -1136,7 +1056,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    80 => 
     array (
       'name' => 'Envelope Heart',
       'value' => 'bi-envelope-heart',
@@ -1150,7 +1069,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    81 => 
     array (
       'name' => 'Envelope Heart Fill',
       'value' => 'bi-envelope-heart-fill',
@@ -1165,7 +1083,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    82 => 
     array (
       'name' => 'Envelope Open',
       'value' => 'bi-envelope-open',
@@ -1179,7 +1096,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    83 => 
     array (
       'name' => 'Envelope Open Fill',
       'value' => 'bi-envelope-open-fill',
@@ -1194,7 +1110,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    84 => 
     array (
       'name' => 'Envelope Open Heart',
       'value' => 'bi-envelope-open-heart',
@@ -1209,7 +1124,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    85 => 
     array (
       'name' => 'Envelope Open Heart Fill',
       'value' => 'bi-envelope-open-heart-fill',
@@ -1225,7 +1139,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    86 => 
     array (
       'name' => 'Envelope Paper',
       'value' => 'bi-envelope-paper',
@@ -1239,7 +1152,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    87 => 
     array (
       'name' => 'Envelope Paper Fill',
       'value' => 'bi-envelope-paper-fill',
@@ -1254,7 +1166,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    88 => 
     array (
       'name' => 'Envelope Paper Heart',
       'value' => 'bi-envelope-paper-heart',
@@ -1269,7 +1180,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    89 => 
     array (
       'name' => 'Envelope Paper Heart Fill',
       'value' => 'bi-envelope-paper-heart-fill',
@@ -1285,7 +1195,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    90 => 
     array (
       'name' => 'Envelope Plus',
       'value' => 'bi-envelope-plus',
@@ -1299,7 +1208,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    91 => 
     array (
       'name' => 'Envelope Plus Fill',
       'value' => 'bi-envelope-plus-fill',
@@ -1314,7 +1222,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    92 => 
     array (
       'name' => 'Envelope Slash',
       'value' => 'bi-envelope-slash',
@@ -1328,7 +1235,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    93 => 
     array (
       'name' => 'Envelope Slash Fill',
       'value' => 'bi-envelope-slash-fill',
@@ -1343,7 +1249,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    94 => 
     array (
       'name' => 'Envelope X',
       'value' => 'bi-envelope-x',
@@ -1357,7 +1262,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    95 => 
     array (
       'name' => 'Envelope X Fill',
       'value' => 'bi-envelope-x-fill',
@@ -1372,7 +1276,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    96 => 
     array (
       'name' => 'Facebook',
       'value' => 'bi-facebook',
@@ -1384,7 +1287,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    97 => 
     array (
       'name' => 'Github',
       'value' => 'bi-github',
@@ -1396,7 +1298,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    98 => 
     array (
       'name' => 'Gitlab',
       'value' => 'bi-gitlab',
@@ -1408,7 +1309,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    99 => 
     array (
       'name' => 'Globe',
       'value' => 'bi-globe',
@@ -1420,7 +1320,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    100 => 
     array (
       'name' => 'Globe Americas',
       'value' => 'bi-globe-americas',
@@ -1434,7 +1333,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    101 => 
     array (
       'name' => 'Globe Americas Fill',
       'value' => 'bi-globe-americas-fill',
@@ -1449,7 +1347,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    102 => 
     array (
       'name' => 'Globe Asia Australia',
       'value' => 'bi-globe-asia-australia',
@@ -1464,7 +1361,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    103 => 
     array (
       'name' => 'Globe Asia Australia Fill',
       'value' => 'bi-globe-asia-australia-fill',
@@ -1480,7 +1376,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    104 => 
     array (
       'name' => 'Globe Central South Asia',
       'value' => 'bi-globe-central-south-asia',
@@ -1496,7 +1391,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    105 => 
     array (
       'name' => 'Globe Central South Asia Fill',
       'value' => 'bi-globe-central-south-asia-fill',
@@ -1513,7 +1407,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    106 => 
     array (
       'name' => 'Globe Europe Africa',
       'value' => 'bi-globe-europe-africa',
@@ -1528,7 +1421,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    107 => 
     array (
       'name' => 'Globe Europe Africa Fill',
       'value' => 'bi-globe-europe-africa-fill',
@@ -1544,7 +1436,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    108 => 
     array (
       'name' => 'Globe2',
       'value' => 'bi-globe2',
@@ -1556,7 +1447,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    109 => 
     array (
       'name' => 'Google',
       'value' => 'bi-google',
@@ -1568,7 +1458,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    110 => 
     array (
       'name' => 'Google Play',
       'value' => 'bi-google-play',
@@ -1581,7 +1470,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    111 => 
     array (
       'name' => 'Inbox',
       'value' => 'bi-inbox',
@@ -1594,7 +1482,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    112 => 
     array (
       'name' => 'Inbox Fill',
       'value' => 'bi-inbox-fill',
@@ -1608,7 +1495,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    113 => 
     array (
       'name' => 'Inboxes',
       'value' => 'bi-inboxes',
@@ -1621,7 +1507,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    114 => 
     array (
       'name' => 'Inboxes Fill',
       'value' => 'bi-inboxes-fill',
@@ -1635,7 +1520,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    115 => 
     array (
       'name' => 'Instagram',
       'value' => 'bi-instagram',
@@ -1647,7 +1531,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    116 => 
     array (
       'name' => 'Line',
       'value' => 'bi-line',
@@ -1659,7 +1542,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    117 => 
     array (
       'name' => 'Linkedin',
       'value' => 'bi-linkedin',
@@ -1671,7 +1553,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    118 => 
     array (
       'name' => 'Mailbox',
       'value' => 'bi-mailbox',
@@ -1683,7 +1564,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    119 => 
     array (
       'name' => 'Mailbox Flag',
       'value' => 'bi-mailbox-flag',
@@ -1696,7 +1576,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    120 => 
     array (
       'name' => 'Mailbox2',
       'value' => 'bi-mailbox2',
@@ -1708,7 +1587,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    121 => 
     array (
       'name' => 'Mailbox2 Flag',
       'value' => 'bi-mailbox2-flag',
@@ -1721,7 +1599,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    122 => 
     array (
       'name' => 'Mastodon',
       'value' => 'bi-mastodon',
@@ -1733,7 +1610,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    123 => 
     array (
       'name' => 'Medium',
       'value' => 'bi-medium',
@@ -1745,7 +1621,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    124 => 
     array (
       'name' => 'Megaphone',
       'value' => 'bi-megaphone',
@@ -1758,7 +1633,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    125 => 
     array (
       'name' => 'Megaphone Fill',
       'value' => 'bi-megaphone-fill',
@@ -1772,7 +1646,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    126 => 
     array (
       'name' => 'Messenger',
       'value' => 'bi-messenger',
@@ -1784,7 +1657,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    127 => 
     array (
       'name' => 'Meta',
       'value' => 'bi-meta',
@@ -1796,7 +1668,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    128 => 
     array (
       'name' => 'Microsoft',
       'value' => 'bi-microsoft',
@@ -1808,7 +1679,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    129 => 
     array (
       'name' => 'Microsoft Teams',
       'value' => 'bi-microsoft-teams',
@@ -1821,7 +1691,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    130 => 
     array (
       'name' => 'Newspaper',
       'value' => 'bi-newspaper',
@@ -1833,7 +1702,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    131 => 
     array (
       'name' => 'Nintendo Switch',
       'value' => 'bi-nintendo-switch',
@@ -1846,7 +1714,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    132 => 
     array (
       'name' => 'Nvidia',
       'value' => 'bi-nvidia',
@@ -1858,7 +1725,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    133 => 
     array (
       'name' => 'Openai',
       'value' => 'bi-openai',
@@ -1870,7 +1736,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    134 => 
     array (
       'name' => 'Opencollective',
       'value' => 'bi-opencollective',
@@ -1882,7 +1747,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    135 => 
     array (
       'name' => 'Paypal',
       'value' => 'bi-paypal',
@@ -1894,7 +1758,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    136 => 
     array (
       'name' => 'Perplexity',
       'value' => 'bi-perplexity',
@@ -1906,7 +1769,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    137 => 
     array (
       'name' => 'Phone',
       'value' => 'bi-phone',
@@ -1919,7 +1781,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    138 => 
     array (
       'name' => 'Phone Fill',
       'value' => 'bi-phone-fill',
@@ -1933,7 +1794,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    139 => 
     array (
       'name' => 'Phone Flip',
       'value' => 'bi-phone-flip',
@@ -1946,7 +1806,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    140 => 
     array (
       'name' => 'Phone Landscape',
       'value' => 'bi-phone-landscape',
@@ -1960,7 +1819,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    141 => 
     array (
       'name' => 'Phone Landscape Fill',
       'value' => 'bi-phone-landscape-fill',
@@ -1975,7 +1833,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    142 => 
     array (
       'name' => 'Phone Vibrate',
       'value' => 'bi-phone-vibrate',
@@ -1989,7 +1846,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    143 => 
     array (
       'name' => 'Phone Vibrate Fill',
       'value' => 'bi-phone-vibrate-fill',
@@ -2004,7 +1860,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    144 => 
     array (
       'name' => 'Pinterest',
       'value' => 'bi-pinterest',
@@ -2016,7 +1871,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    145 => 
     array (
       'name' => 'Playstation',
       'value' => 'bi-playstation',
@@ -2028,7 +1882,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    146 => 
     array (
       'name' => 'Postage',
       'value' => 'bi-postage',
@@ -2041,7 +1894,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    147 => 
     array (
       'name' => 'Postage Fill',
       'value' => 'bi-postage-fill',
@@ -2055,7 +1907,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    148 => 
     array (
       'name' => 'Postage Heart',
       'value' => 'bi-postage-heart',
@@ -2069,7 +1920,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    149 => 
     array (
       'name' => 'Postage Heart Fill',
       'value' => 'bi-postage-heart-fill',
@@ -2084,7 +1934,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    150 => 
     array (
       'name' => 'Postcard',
       'value' => 'bi-postcard',
@@ -2097,7 +1946,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    151 => 
     array (
       'name' => 'Postcard Fill',
       'value' => 'bi-postcard-fill',
@@ -2111,7 +1959,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    152 => 
     array (
       'name' => 'Postcard Heart',
       'value' => 'bi-postcard-heart',
@@ -2125,7 +1972,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    153 => 
     array (
       'name' => 'Postcard Heart Fill',
       'value' => 'bi-postcard-heart-fill',
@@ -2140,7 +1986,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    154 => 
     array (
       'name' => 'Quora',
       'value' => 'bi-quora',
@@ -2152,7 +1997,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    155 => 
     array (
       'name' => 'Reception 0',
       'value' => 'bi-reception-0',
@@ -2165,7 +2009,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    156 => 
     array (
       'name' => 'Reception 1',
       'value' => 'bi-reception-1',
@@ -2178,7 +2021,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    157 => 
     array (
       'name' => 'Reception 2',
       'value' => 'bi-reception-2',
@@ -2191,7 +2033,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    158 => 
     array (
       'name' => 'Reception 3',
       'value' => 'bi-reception-3',
@@ -2204,7 +2045,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    159 => 
     array (
       'name' => 'Reception 4',
       'value' => 'bi-reception-4',
@@ -2217,7 +2057,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    160 => 
     array (
       'name' => 'Reddit',
       'value' => 'bi-reddit',
@@ -2229,7 +2068,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    161 => 
     array (
       'name' => 'Reply',
       'value' => 'bi-reply',
@@ -2242,7 +2080,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    162 => 
     array (
       'name' => 'Reply All',
       'value' => 'bi-reply-all',
@@ -2256,7 +2093,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    163 => 
     array (
       'name' => 'Reply All Fill',
       'value' => 'bi-reply-all-fill',
@@ -2271,7 +2107,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    164 => 
     array (
       'name' => 'Reply Fill',
       'value' => 'bi-reply-fill',
@@ -2285,7 +2120,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    165 => 
     array (
       'name' => 'Rss',
       'value' => 'bi-rss',
@@ -2298,7 +2132,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    166 => 
     array (
       'name' => 'Rss Fill',
       'value' => 'bi-rss-fill',
@@ -2312,7 +2145,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    167 => 
     array (
       'name' => 'Send',
       'value' => 'bi-send',
@@ -2325,7 +2157,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    168 => 
     array (
       'name' => 'Send Arrow Down',
       'value' => 'bi-send-arrow-down',
@@ -2340,7 +2171,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    169 => 
     array (
       'name' => 'Send Arrow Down Fill',
       'value' => 'bi-send-arrow-down-fill',
@@ -2356,7 +2186,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    170 => 
     array (
       'name' => 'Send Arrow Up',
       'value' => 'bi-send-arrow-up',
@@ -2371,7 +2200,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    171 => 
     array (
       'name' => 'Send Arrow Up Fill',
       'value' => 'bi-send-arrow-up-fill',
@@ -2387,7 +2215,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    172 => 
     array (
       'name' => 'Send Check',
       'value' => 'bi-send-check',
@@ -2401,7 +2228,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    173 => 
     array (
       'name' => 'Send Check Fill',
       'value' => 'bi-send-check-fill',
@@ -2416,7 +2242,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    174 => 
     array (
       'name' => 'Send Dash',
       'value' => 'bi-send-dash',
@@ -2430,7 +2255,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    175 => 
     array (
       'name' => 'Send Dash Fill',
       'value' => 'bi-send-dash-fill',
@@ -2445,7 +2269,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    176 => 
     array (
       'name' => 'Send Exclamation',
       'value' => 'bi-send-exclamation',
@@ -2459,7 +2282,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    177 => 
     array (
       'name' => 'Send Exclamation Fill',
       'value' => 'bi-send-exclamation-fill',
@@ -2474,7 +2296,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    178 => 
     array (
       'name' => 'Send Fill',
       'value' => 'bi-send-fill',
@@ -2488,7 +2309,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    179 => 
     array (
       'name' => 'Send Plus',
       'value' => 'bi-send-plus',
@@ -2502,7 +2322,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    180 => 
     array (
       'name' => 'Send Plus Fill',
       'value' => 'bi-send-plus-fill',
@@ -2517,7 +2336,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    181 => 
     array (
       'name' => 'Send Slash',
       'value' => 'bi-send-slash',
@@ -2531,7 +2349,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    182 => 
     array (
       'name' => 'Send Slash Fill',
       'value' => 'bi-send-slash-fill',
@@ -2546,7 +2363,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    183 => 
     array (
       'name' => 'Send X',
       'value' => 'bi-send-x',
@@ -2560,7 +2376,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    184 => 
     array (
       'name' => 'Send X Fill',
       'value' => 'bi-send-x-fill',
@@ -2575,7 +2390,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    185 => 
     array (
       'name' => 'Share',
       'value' => 'bi-share',
@@ -2588,7 +2402,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    186 => 
     array (
       'name' => 'Share Fill',
       'value' => 'bi-share-fill',
@@ -2602,7 +2415,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    187 => 
     array (
       'name' => 'Signal',
       'value' => 'bi-signal',
@@ -2614,7 +2426,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    188 => 
     array (
       'name' => 'Sim Slash',
       'value' => 'bi-sim-slash',
@@ -2628,7 +2439,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    189 => 
     array (
       'name' => 'Sim Slash Fill',
       'value' => 'bi-sim-slash-fill',
@@ -2643,7 +2453,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    190 => 
     array (
       'name' => 'Sina Weibo',
       'value' => 'bi-sina-weibo',
@@ -2656,7 +2465,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    191 => 
     array (
       'name' => 'Skype',
       'value' => 'bi-skype',
@@ -2668,7 +2476,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    192 => 
     array (
       'name' => 'Slack',
       'value' => 'bi-slack',
@@ -2680,7 +2487,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    193 => 
     array (
       'name' => 'Snapchat',
       'value' => 'bi-snapchat',
@@ -2692,7 +2498,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    194 => 
     array (
       'name' => 'Sourceforge',
       'value' => 'bi-sourceforge',
@@ -2704,7 +2509,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    195 => 
     array (
       'name' => 'Spotify',
       'value' => 'bi-spotify',
@@ -2716,7 +2520,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    196 => 
     array (
       'name' => 'Stack Overflow',
       'value' => 'bi-stack-overflow',
@@ -2729,7 +2532,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    197 => 
     array (
       'name' => 'Steam',
       'value' => 'bi-steam',
@@ -2741,7 +2543,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    198 => 
     array (
       'name' => 'Strava',
       'value' => 'bi-strava',
@@ -2753,7 +2554,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    199 => 
     array (
       'name' => 'Stripe',
       'value' => 'bi-stripe',
@@ -2765,7 +2565,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    200 => 
     array (
       'name' => 'Substack',
       'value' => 'bi-substack',
@@ -2777,7 +2576,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    201 => 
     array (
       'name' => 'Telegram',
       'value' => 'bi-telegram',
@@ -2789,7 +2587,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    202 => 
     array (
       'name' => 'Telephone',
       'value' => 'bi-telephone',
@@ -2802,7 +2599,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    203 => 
     array (
       'name' => 'Telephone Fill',
       'value' => 'bi-telephone-fill',
@@ -2816,7 +2612,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    204 => 
     array (
       'name' => 'Telephone Forward',
       'value' => 'bi-telephone-forward',
@@ -2830,7 +2625,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    205 => 
     array (
       'name' => 'Telephone Forward Fill',
       'value' => 'bi-telephone-forward-fill',
@@ -2845,7 +2639,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    206 => 
     array (
       'name' => 'Telephone Inbound',
       'value' => 'bi-telephone-inbound',
@@ -2859,7 +2652,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    207 => 
     array (
       'name' => 'Telephone Inbound Fill',
       'value' => 'bi-telephone-inbound-fill',
@@ -2874,7 +2666,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    208 => 
     array (
       'name' => 'Telephone Minus',
       'value' => 'bi-telephone-minus',
@@ -2888,7 +2679,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    209 => 
     array (
       'name' => 'Telephone Minus Fill',
       'value' => 'bi-telephone-minus-fill',
@@ -2903,7 +2693,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    210 => 
     array (
       'name' => 'Telephone Outbound',
       'value' => 'bi-telephone-outbound',
@@ -2917,7 +2706,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    211 => 
     array (
       'name' => 'Telephone Outbound Fill',
       'value' => 'bi-telephone-outbound-fill',
@@ -2932,7 +2720,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    212 => 
     array (
       'name' => 'Telephone Plus',
       'value' => 'bi-telephone-plus',
@@ -2946,7 +2733,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    213 => 
     array (
       'name' => 'Telephone Plus Fill',
       'value' => 'bi-telephone-plus-fill',
@@ -2961,7 +2747,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    214 => 
     array (
       'name' => 'Telephone X',
       'value' => 'bi-telephone-x',
@@ -2975,7 +2760,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    215 => 
     array (
       'name' => 'Telephone X Fill',
       'value' => 'bi-telephone-x-fill',
@@ -2990,7 +2774,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    216 => 
     array (
       'name' => 'Tencent Qq',
       'value' => 'bi-tencent-qq',
@@ -3003,7 +2786,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    217 => 
     array (
       'name' => 'Threads',
       'value' => 'bi-threads',
@@ -3016,7 +2798,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    218 => 
     array (
       'name' => 'Threads Fill',
       'value' => 'bi-threads-fill',
@@ -3030,7 +2811,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    219 => 
     array (
       'name' => 'Tiktok',
       'value' => 'bi-tiktok',
@@ -3042,7 +2822,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    220 => 
     array (
       'name' => 'Trello',
       'value' => 'bi-trello',
@@ -3054,7 +2833,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    221 => 
     array (
       'name' => 'Tux',
       'value' => 'bi-tux',
@@ -3066,7 +2844,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    222 => 
     array (
       'name' => 'Twitch',
       'value' => 'bi-twitch',
@@ -3078,7 +2855,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    223 => 
     array (
       'name' => 'Twitter',
       'value' => 'bi-twitter',
@@ -3090,7 +2866,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    224 => 
     array (
       'name' => 'Twitter X',
       'value' => 'bi-twitter-x',
@@ -3103,7 +2878,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    225 => 
     array (
       'name' => 'Ubuntu',
       'value' => 'bi-ubuntu',
@@ -3115,7 +2889,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    226 => 
     array (
       'name' => 'Unity',
       'value' => 'bi-unity',
@@ -3127,7 +2900,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    227 => 
     array (
       'name' => 'Vimeo',
       'value' => 'bi-vimeo',
@@ -3139,7 +2911,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    228 => 
     array (
       'name' => 'Voicemail',
       'value' => 'bi-voicemail',
@@ -3151,7 +2922,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    229 => 
     array (
       'name' => 'Wechat',
       'value' => 'bi-wechat',
@@ -3163,7 +2933,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    230 => 
     array (
       'name' => 'Whatsapp',
       'value' => 'bi-whatsapp',
@@ -3175,7 +2944,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    231 => 
     array (
       'name' => 'Wifi',
       'value' => 'bi-wifi',
@@ -3187,7 +2955,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    232 => 
     array (
       'name' => 'Wifi 1',
       'value' => 'bi-wifi-1',
@@ -3200,7 +2967,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    233 => 
     array (
       'name' => 'Wifi 2',
       'value' => 'bi-wifi-2',
@@ -3213,7 +2979,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    234 => 
     array (
       'name' => 'Wifi Off',
       'value' => 'bi-wifi-off',
@@ -3226,7 +2991,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    235 => 
     array (
       'name' => 'Wikipedia',
       'value' => 'bi-wikipedia',
@@ -3238,7 +3002,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    236 => 
     array (
       'name' => 'Windows',
       'value' => 'bi-windows',
@@ -3250,7 +3013,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    237 => 
     array (
       'name' => 'Wordpress',
       'value' => 'bi-wordpress',
@@ -3262,7 +3024,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    238 => 
     array (
       'name' => 'Xbox',
       'value' => 'bi-xbox',
@@ -3274,7 +3035,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    239 => 
     array (
       'name' => 'Yelp',
       'value' => 'bi-yelp',
@@ -3286,7 +3046,6 @@ return array (
       'category' => 'communications',
       'has_variants' => false,
     ),
-    240 => 
     array (
       'name' => 'Youtube',
       'value' => 'bi-youtube',
