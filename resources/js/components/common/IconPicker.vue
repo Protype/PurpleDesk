@@ -285,23 +285,12 @@
           </div>
           
           <!-- Upload 標籤頁 -->
-          <div 
+          <ImageUploadPanel 
             v-else-if="activeTab === 'upload'"
-            @click="triggerFileUpload"
-            @dragover.prevent="handleDragOver"
-            @dragleave.prevent="handleDragLeave"
-            @drop.prevent="handleDrop"
-            :class="isDragging ? 'border-primary-400 bg-primary-50' : 'border-gray-200 bg-gray-50 hover:bg-gray-100'"
-            class="h-48 flex flex-col items-center justify-center border-2 border-dashed rounded-md transition-colors cursor-pointer"
-          >
-            <div class="text-center pointer-events-none space-y-3">
-              <i class="bi bi-cloud-arrow-up-fill text-4xl text-gray-400"></i>
-              <div>
-                <p class="text-sm font-medium text-gray-700">Upload an image</p>
-                <p class="text-xs text-gray-500 mt-1">or drag and drop</p>
-              </div>
-            </div>
-          </div>
+            :selected-icon="selectedIcon"
+            @icon-select="handleImageUpload"
+            @file-selected="handleFileSelected"
+          />
         </div>
 
         <!-- 搜尋結果為空的提示 -->
@@ -420,6 +409,7 @@ import bootstrapIconsIndex, { categoryMap as BOOTSTRAP_CATEGORY_INFO } from '../
 import VirtualScroll from './VirtualScroll.vue'
 import SkinToneSelector from './SkinToneSelector.vue'
 import IconStyleSelector from './IconStyleSelector.vue'
+import ImageUploadPanel from '../../features/icon-picker/components/ImageUploadPanel.vue'
 // 動態導入所有 Heroicons
 import * as HeroiconsOutline from '@heroicons/vue/outline'
 import * as HeroiconsSolid from '@heroicons/vue/solid'
@@ -430,6 +420,7 @@ export default {
     VirtualScroll,
     SkinToneSelector,
     IconStyleSelector,
+    ImageUploadPanel,
     // 註冊所有 Heroicons (Outline 和 Solid)
     ...HeroiconsOutline,
     ...HeroiconsSolid
@@ -929,6 +920,20 @@ export default {
       }
     }
     
+    // 新的 ImageUploadPanel 事件處理函數
+    const handleImageUpload = (iconData) => {
+      selectedIcon.value = iconData.value
+      iconType.value = iconData.iconType
+      
+      emit('update:modelValue', iconData.value)
+      emit('update:iconType', iconData.iconType)
+      closePicker()
+    }
+    
+    const handleFileSelected = (file) => {
+      emit('file-selected', file)
+    }
+    
     
     // 處理字母輸入
     const handleInitialsInput = () => {
@@ -1303,6 +1308,8 @@ export default {
       handleDragOver,
       handleDragLeave,
       handleDrop,
+      handleImageUpload,
+      handleFileSelected,
       backgroundColor,
       localBackgroundColor,
       showColorPicker,
