@@ -189,8 +189,8 @@ defineOptions({
 
 const props = defineProps({
   modelValue: {
-    type: String,
-    default: ''
+    type: [Object, null],
+    default: null
   },
   iconType: {
     type: String,
@@ -353,18 +353,24 @@ const closeColorPicker = () => {
 
 // 清除圖標
 const clearIcon = () => {
-  selectedIcon.value = ''
-  emit('update:modelValue', '')
+  selectedIcon.value = null
+  emit('update:modelValue', null)
   emit('update:iconType', '')
 }
 
 // 文字圖標選擇處理
 const handleTextSelection = (data) => {
-  selectedIcon.value = data.text
+  const textObject = {
+    type: 'text',
+    text: data.text,
+    backgroundColor: data.backgroundColor
+  }
+  
+  selectedIcon.value = textObject
   localBackgroundColor.value = data.backgroundColor
   
-  emit('update:modelValue', data.text)
-  emit('update:iconType', 'initials')
+  emit('update:modelValue', textObject)
+  emit('update:iconType', 'text')
   emit('background-color-change', data.backgroundColor)
   
   closePicker()
@@ -372,10 +378,16 @@ const handleTextSelection = (data) => {
 
 // Emoji 選擇處理
 const handleEmojiSelection = (data) => {
-  selectedIcon.value = data.emoji
+  const emojiObject = {
+    type: 'emoji',
+    emoji: data.emoji,
+    name: data.name || 'emoji'
+  }
+  
+  selectedIcon.value = emojiObject
   iconType.value = 'emoji'
   
-  emit('update:modelValue', data.emoji)
+  emit('update:modelValue', emojiObject)
   emit('update:iconType', 'emoji')
   
   closePicker()
@@ -383,14 +395,32 @@ const handleEmojiSelection = (data) => {
 
 // 圖標選擇處理
 const handleIconSelection = (icon) => {
-  const iconData = icon.component || icon.class || icon.name
-  const iconTypeValue = icon.type || 'heroicons'
+  let iconObject
   
-  selectedIcon.value = iconData
-  iconType.value = iconTypeValue
+  if (icon.type === 'heroicons') {
+    iconObject = {
+      type: 'heroicons',
+      icon: icon.value,
+      variant: icon.variant_type || 'outline'
+    }
+  } else if (icon.type === 'bootstrap-icons') {
+    iconObject = {
+      type: 'bootstrap-icons',
+      icon: icon.value
+    }
+  } else {
+    // 預設處理
+    iconObject = {
+      type: icon.type || 'heroicons',
+      icon: icon.value || icon.name
+    }
+  }
   
-  emit('update:modelValue', iconData)
-  emit('update:iconType', iconTypeValue)
+  selectedIcon.value = iconObject
+  iconType.value = icon.type
+  
+  emit('update:modelValue', iconObject)
+  emit('update:iconType', icon.type)
   
   closePicker()
 }

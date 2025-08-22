@@ -2,9 +2,8 @@ import axios from 'axios'
 import { useAsyncState } from './useAsyncState.js'
 
 /**
- * 圖標服務 Composable
+ * 圖標服務 Composable - 適配新的扁平化 API 格式
  * 
- * 整合並簡化了原有的 IconService 和 IconDataLoader 功能
  * 提供統一的圖標資料載入介面，包含 emoji 和圖標庫資料
  */
 export function useIconService() {
@@ -47,13 +46,54 @@ export function useIconService() {
   }
 
   /**
-   * 載入圖標庫資料
+   * 載入 HeroIcons 資料 - 新的扁平化格式
+   */
+  const loadHeroIcons = async () => {
+    const cacheKey = 'heroicons'
+    
+    if (hasValidCache(cacheKey)) {
+      return getCache(cacheKey)
+    }
+
+    try {
+      const response = await axios.get(`${apiBaseUrl}/heroicons`)
+      validateResponseData(response.data)
+      
+      setCache(cacheKey, response.data)
+      return response.data
+    } catch (error) {
+      throw handleError('Failed to load HeroIcons', error)
+    }
+  }
+
+  /**
+   * 載入 Bootstrap Icons 資料 - 新的扁平化格式
+   */
+  const loadBootstrapIcons = async () => {
+    const cacheKey = 'bootstrap-icons'
+    
+    if (hasValidCache(cacheKey)) {
+      return getCache(cacheKey)
+    }
+
+    try {
+      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons`)
+      validateResponseData(response.data)
+      
+      setCache(cacheKey, response.data)
+      return response.data
+    } catch (error) {
+      throw handleError('Failed to load Bootstrap Icons', error)
+    }
+  }
+
+  /**
+   * 載入圖標庫資料 - 簡化版本，直接合併扁平化資料
    * 
-   * @param {string} [style='outline'] - 圖標樣式
    * @returns {Promise<Object>} 合併的圖標庫資料
    */
-  const loadIconLibraryData = async (style = 'outline') => {
-    const cacheKey = `icon-library-${style}`
+  const loadIconLibraryData = async () => {
+    const cacheKey = 'icon-library-data'
     
     // 檢查快取
     if (hasValidCache(cacheKey)) {
@@ -61,24 +101,14 @@ export function useIconService() {
     }
 
     try {
-      // 並行載入圖標資料和變體資訊
-      const [heroIconsData, bootstrapIconsData, bootstrapCategories, heroVariants, bootstrapVariants] = await Promise.all([
+      // 並行載入兩種圖標資料
+      const [heroIconsData, bootstrapIconsData] = await Promise.all([
         loadHeroIcons(),
-        loadBootstrapIcons(),
-        loadBootstrapIconCategories(),
-        loadHeroIconVariants(),
-        loadBootstrapIconVariants()
+        loadBootstrapIcons()
       ])
       
-      // 合併資料
-      const mergedData = mergeIconLibraryData(
-        heroIconsData, 
-        bootstrapIconsData, 
-        bootstrapCategories,
-        heroVariants, 
-        bootstrapVariants,
-        style
-      )
+      // 合併資料 - 新的簡化合併邏輯
+      const mergedData = mergeIconLibraryData(heroIconsData, bootstrapIconsData)
       
       // 儲存到快取
       setCache(cacheKey, mergedData)
@@ -90,129 +120,9 @@ export function useIconService() {
   }
 
   /**
-   * 取得快取狀態
-   * 
-   * @returns {Object} 快取狀態資訊
+   * 合併圖標庫資料 - 簡化版本，適配扁平化 API
    */
-  const getCacheStatus = () => {
-    const now = Date.now()
-    
-    return {
-      emoji: {
-        cached: cache.has('emojis'),
-        expired: cacheExpiry.has('emojis') && now > cacheExpiry.get('emojis'),
-        size: cache.has('emojis') ? JSON.stringify(cache.get('emojis')).length : 0
-      },
-      iconLibrary: {
-        cached: Array.from(cache.keys()).some(key => key.startsWith('icon-library-')),
-        expired: false, // 簡化實現
-        size: Array.from(cache.keys())
-          .filter(key => key.startsWith('icon-library-'))
-          .reduce((total, key) => total + JSON.stringify(cache.get(key)).length, 0)
-      }
-    }
-  }
-
-  /**
-   * 清除快取
-   * 
-   * @param {string} [type] - 快取類型 ('emoji' | 'iconLibrary') 或留空清除全部
-   */
-  const clearCache = (type = null) => {
-    if (type === 'emoji') {
-      cache.delete('emojis')
-      cacheExpiry.delete('emojis')
-    } else if (type === 'iconLibrary') {
-      // 清除所有圖標庫快取
-      Array.from(cache.keys())
-        .filter(key => key.startsWith('icon-library-'))
-        .forEach(key => {
-          cache.delete(key)
-          cacheExpiry.delete(key)
-        })
-    } else {
-      // 清除所有快取
-      cache.clear()
-      cacheExpiry.clear()
-    }
-  }
-
-  // ===== 私有輔助函數 =====
-
-  /**
-   * 載入 HeroIcons 資料
-   */
-  const loadHeroIcons = async () => {
-    try {
-      const response = await axios.get(`${apiBaseUrl}/heroicons`)
-      validateResponseData(response.data)
-      return response.data
-    } catch (error) {
-      console.warn('Failed to load HeroIcons:', error.message)
-      return { data: [], meta: { total: 0 } }
-    }
-  }
-
-  /**
-   * 載入 Bootstrap Icons 資料
-   */
-  const loadBootstrapIcons = async () => {
-    try {
-      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons`)
-      validateResponseData(response.data)
-      return response.data
-    } catch (error) {
-      console.warn('Failed to load Bootstrap Icons:', error.message)
-      return { data: {}, meta: { total: 0 } }
-    }
-  }
-
-  /**
-   * 載入 Bootstrap Icons 分類資訊
-   */
-  const loadBootstrapIconCategories = async () => {
-    try {
-      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons/categories`)
-      validateResponseData(response.data)
-      return response.data
-    } catch (error) {
-      console.warn('Failed to load Bootstrap Icons categories:', error.message)
-      return { data: {} }
-    }
-  }
-
-  /**
-   * 載入 HeroIcons 變體資訊
-   */
-  const loadHeroIconVariants = async () => {
-    try {
-      const response = await axios.get(`${apiBaseUrl}/heroicons/variants`)
-      validateResponseData(response.data)
-      return response.data
-    } catch (error) {
-      console.warn('Failed to load HeroIcons variants:', error.message)
-      return { data: {} }
-    }
-  }
-
-  /**
-   * 載入 Bootstrap Icons 變體資訊
-   */
-  const loadBootstrapIconVariants = async () => {
-    try {
-      const response = await axios.get(`${apiBaseUrl}/bootstrap-icons/variants`)
-      validateResponseData(response.data)
-      return response.data
-    } catch (error) {
-      console.warn('Failed to load Bootstrap Icons variants:', error.message)
-      return { data: {} }
-    }
-  }
-
-  /**
-   * 合併圖標庫資料
-   */
-  const mergeIconLibraryData = (heroIconsData, bootstrapIconsData, bootstrapCategories, heroVariants, bootstrapVariants, currentStyle) => {
+  const mergeIconLibraryData = (heroIconsData, bootstrapIconsData) => {
     const result = {
       data: {
         heroicons: [],
@@ -220,61 +130,41 @@ export function useIconService() {
       },
       meta: {
         total: 0,
-        currentStyle: currentStyle,
-        variants: {
-          heroicons: heroVariants?.data || {},
-          bootstrap: bootstrapVariants?.data || {}
-        },
-        libraries: {
-          heroicons: heroIconsData?.meta || {},
-          bootstrap: bootstrapIconsData?.meta || {}
-        },
-        categories: {
-          bootstrap: bootstrapCategories?.data || {}
-        }
+        type: 'mixed'
       }
     }
     
-    // 處理 HeroIcons 資料
-    if (heroIconsData?.data && Array.isArray(heroIconsData.data)) {
-      result.data.heroicons = heroIconsData.data.map(icon => ({
+    // 處理 HeroIcons 資料 - 扁平化結構
+    if (heroIconsData?.data) {
+      // 新的 API 格式可能是物件（按分類）或陣列
+      let heroIconsList = []
+      
+      if (Array.isArray(heroIconsData.data)) {
+        heroIconsList = heroIconsData.data
+      } else {
+        // 如果是物件，展開所有分類
+        heroIconsList = Object.values(heroIconsData.data).flat()
+      }
+      
+      result.data.heroicons = heroIconsList.map(icon => ({
         ...icon,
         type: 'heroicons',
-        source: 'heroicons',
-        currentStyle: currentStyle,
-        hasVariants: true,
-        variantInfo: buildHeroIconVariantInfo(icon, heroVariants?.data)
+        source: 'heroicons'
       }))
-      result.meta.total += heroIconsData.data.length
+      result.meta.total += heroIconsList.length
     }
     
-    // 處理 Bootstrap Icons 資料 - 按分類優先級排序
+    // 處理 Bootstrap Icons 資料 - 扁平化結構
     if (bootstrapIconsData?.data && typeof bootstrapIconsData.data === 'object') {
       let bootstrapTotal = 0
-      const categories = bootstrapCategories?.data || {}
       
-      // 定義優先級排序
-      const priorityOrder = { immediate: 1, high: 2, medium: 3, low: 4 }
-      
-      // 按優先級排序分類
-      const sortedCategories = Object.entries(bootstrapIconsData.data)
-        .sort(([catA], [catB]) => {
-          const priorityA = categories[catA]?.priority || 'low'
-          const priorityB = categories[catB]?.priority || 'low'
-          return priorityOrder[priorityA] - priorityOrder[priorityB]
-        })
-      
-      // 按排序後的順序處理分類
-      sortedCategories.forEach(([categoryName, categoryIcons]) => {
+      // 直接使用 API 返回的分類結構
+      Object.entries(bootstrapIconsData.data).forEach(([categoryName, categoryIcons]) => {
         if (Array.isArray(categoryIcons)) {
           result.data.bootstrap[categoryName] = categoryIcons.map(icon => ({
             ...icon,
-            type: 'bootstrap',
-            source: 'bootstrap-icons',
-            currentStyle: currentStyle,
-            hasVariants: icon.variants && Object.keys(icon.variants).length > 0,
-            variantInfo: buildBootstrapIconVariantInfo(icon, bootstrapVariants?.data),
-            categoryInfo: categories[categoryName] || {}
+            type: 'bootstrap-icons',
+            source: 'bootstrap-icons'
           }))
           bootstrapTotal += categoryIcons.length
         }
@@ -287,45 +177,50 @@ export function useIconService() {
   }
 
   /**
-   * 建立 HeroIcon 變體資訊
+   * 取得快取狀態
    */
-  const buildHeroIconVariantInfo = (icon, variantData) => {
-    if (!variantData || !variantData.mapping) {
-      return {
-        available: ['outline', 'solid'],
-        current: icon.currentStyle || 'outline',
-        mapping: {}
-      }
-    }
+  const getCacheStatus = () => {
+    const now = Date.now()
     
     return {
-      available: Object.keys(variantData.mapping),
-      current: icon.currentStyle || 'outline',
-      mapping: variantData.mapping
+      emoji: {
+        cached: cache.has('emojis'),
+        expired: cacheExpiry.has('emojis') && now > cacheExpiry.get('emojis'),
+        size: cache.has('emojis') ? JSON.stringify(cache.get('emojis')).length : 0
+      },
+      iconLibrary: {
+        cached: cache.has('icon-library-data'),
+        expired: cacheExpiry.has('icon-library-data') && now > cacheExpiry.get('icon-library-data'),
+        size: cache.has('icon-library-data') ? JSON.stringify(cache.get('icon-library-data')).length : 0
+      }
     }
   }
 
   /**
-   * 建立 Bootstrap Icon 變體資訊
+   * 清除快取
    */
-  const buildBootstrapIconVariantInfo = (icon, variantData) => {
-    if (!variantData || !variantData.mapping) {
-      return {
-        available: icon.variants ? Object.keys(icon.variants) : ['outline'],
-        current: icon.currentStyle || 'outline',
-        mapping: icon.variants || {}
-      }
-    }
-    
-    return {
-      available: icon.variants ? Object.keys(icon.variants) : Object.keys(variantData.mapping),
-      current: icon.currentStyle || 'outline',
-      mapping: icon.variants || variantData.mapping
+  const clearCache = (type = null) => {
+    if (type === 'emoji') {
+      cache.delete('emojis')
+      cacheExpiry.delete('emojis')
+    } else if (type === 'iconLibrary') {
+      cache.delete('icon-library-data')
+      cache.delete('heroicons')
+      cache.delete('bootstrap-icons')
+      cacheExpiry.delete('icon-library-data')
+      cacheExpiry.delete('heroicons')
+      cacheExpiry.delete('bootstrap-icons')
+    } else {
+      // 清除所有快取
+      cache.clear()
+      cacheExpiry.clear()
     }
   }
 
+  // ===== 私有輔助函數 =====
+
   /**
-   * 處理 Emoji 資料格式
+   * 處理 Emoji 資料格式 - 適配新的扁平化 API 格式
    */
   const processEmojiData = (rawData) => {
     // 如果資料已經是陣列格式，直接返回
@@ -335,15 +230,17 @@ export function useIconService() {
     
     // 如果是物件，嘗試提取陣列
     if (rawData && typeof rawData === 'object') {
-      // 處理新的 API 格式：{ categories: { categoryId: { subgroups: { subgroupId: { emojis: [...] } } } } }
+      // 新的扁平化 API 格式：{ data: { categoryId: [...] } }
+      if (rawData.data && typeof rawData.data === 'object') {
+        return processNewEmojiFormat(rawData.data)
+      }
+      
+      // 處理舊的 API 格式：{ categories: { categoryId: { subgroups: { subgroupId: { emojis: [...] } } } } }
       if (rawData.categories && typeof rawData.categories === 'object') {
         return processCategoriesFormat(rawData.categories)
       }
       
-      // 檢查常見的資料結構
-      if (rawData.data && Array.isArray(rawData.data)) {
-        return rawData.data
-      }
+      // 檢查其他常見的資料結構
       if (rawData.emojis && Array.isArray(rawData.emojis)) {
         return rawData.emojis
       }
@@ -355,6 +252,39 @@ export function useIconService() {
     // 如果無法識別格式，返回空陣列
     console.warn('Unknown emoji data format, returning empty array')
     return []
+  }
+
+  /**
+   * 處理新的扁平化 emoji 格式
+   */
+  const processNewEmojiFormat = (data) => {
+    const result = []
+    
+    // 分類名稱對應表
+    const categoryNameMap = {
+      'smileys_emotion': '表情符號與人物',
+      'people_body': '人物與身體',
+      'animals_nature': '動物與自然',
+      'food_drink': '食物與飲料',
+      'travel_places': '旅遊與地點',
+      'activities': '活動',
+      'objects': '物品',
+      'symbols': '符號',
+      'flags': '旗幟'
+    }
+    
+    Object.entries(data).forEach(([categoryId, emojis]) => {
+      if (Array.isArray(emojis) && emojis.length > 0) {
+        // API 端已經處理過濾，直接使用
+        result.push({
+          categoryId,
+          categoryName: categoryNameMap[categoryId] || categoryId.replace(/_/g, ' '),
+          emojis: emojis
+        })
+      }
+    })
+    
+    return result
   }
 
   /**
@@ -390,8 +320,8 @@ export function useIconService() {
         }
       })
       
-      // 過濾和清理 emoji
-      const cleanedEmojis = filterAndCleanEmojis(allEmojis)
+      // API 端已經處理過濾，直接使用
+      const cleanedEmojis = allEmojis
       
       // 只有當有 emoji 時才新增分類
       if (cleanedEmojis.length > 0) {
@@ -406,47 +336,6 @@ export function useIconService() {
     return result
   }
 
-  /**
-   * 過濾和清理 emoji，移除複合 emoji 和膚色變體
-   */
-  const filterAndCleanEmojis = (emojis) => {
-    const seen = new Set()
-    const result = []
-    
-    emojis.forEach(emojiData => {
-      if (!emojiData.emoji) return
-      
-      // 移除膚色修飾符和變化選擇器
-      const baseEmoji = emojiData.emoji
-        .replace(/[\u{1F3FB}-\u{1F3FF}]/gu, '') // 移除膚色修飾符
-        .replace(/\uFE0F/g, '') // 移除變化選擇器
-        .replace(/\u200D.*$/g, '') // 移除 ZWJ 序列（複合 emoji）
-        .trim()
-      
-      // 跳過空字符串或已經處理過的基礎 emoji
-      if (!baseEmoji || seen.has(baseEmoji)) {
-        return
-      }
-      
-      // 跳過複合 emoji（包含 ZWJ 的 emoji）
-      if (emojiData.emoji.includes('\u200D')) {
-        return
-      }
-      
-      // 跳過膚色變體（保留基礎版本）
-      if (/[\u{1F3FB}-\u{1F3FF}]/u.test(emojiData.emoji)) {
-        return
-      }
-      
-      seen.add(baseEmoji)
-      result.push({
-        ...emojiData,
-        emoji: baseEmoji
-      })
-    })
-    
-    return result
-  }
 
   /**
    * 快取相關輔助函數
@@ -511,6 +400,8 @@ export function useIconService() {
     // 主要功能
     loadEmojiData,
     loadIconLibraryData,
+    loadHeroIcons,          // 新增：公開這些方法供測試使用
+    loadBootstrapIcons,     // 新增：公開這些方法供測試使用
     
     // 快取管理
     clearCache,

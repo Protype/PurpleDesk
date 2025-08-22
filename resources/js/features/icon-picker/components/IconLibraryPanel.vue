@@ -58,7 +58,7 @@
             />
             <!-- Bootstrap Icon 渲染 -->
             <i
-              v-else-if="item.data.type === 'bootstrap'"
+              v-else-if="item.data.type === 'bootstrap-icons' || item.data.type === 'bootstrap'"
               :class="['bi', getBootstrapIconClass(item.data)]"
               class="text-gray-700"
             />
@@ -146,7 +146,7 @@ const loadError = iconProvider.error
 // 錯誤狀態
 const error = computed(() => loadError.value?.message || null)
 
-// 處理過的圖標資料
+// 處理過的圖標資料 - 適配新的扁平化 API 格式
 const processedIconsData = computed(() => {
   if (!allIcons.value?.data) return []
   
@@ -155,58 +155,32 @@ const processedIconsData = computed(() => {
     ...Object.values(allIcons.value.data.bootstrap || {}).flat()
   ]
   
-  // 展開 HeroIcons 變體，為每個圖標建立 outline 和 solid 版本
-  const expandedIcons = []
-  
-  allIconsList.forEach(icon => {
-    if (icon.type === 'heroicons' && icon.variants) {
-      // HeroIcons：為每個變體建立單獨的圖標項目
-      Object.entries(icon.variants).forEach(([variant, variantInfo]) => {
-        expandedIcons.push({
-          ...icon,
-          variant: variant,
-          isSolid: variant === 'solid',
-          component: variantInfo.component,
-          displayName: `${icon.name} (${variant})`
-        })
-      })
-    } else if (icon.type === 'bootstrap' && icon.variants) {
-      // Bootstrap Icons：為每個變體建立單獨的圖標項目
-      Object.entries(icon.variants).forEach(([variant, variantInfo]) => {
-        expandedIcons.push({
-          ...icon,
-          variant: variant,
-          isSolid: variant === 'solid',
-          class: variantInfo.class,
-          displayName: `${icon.name} (${variant})`
-        })
-      })
-    } else {
-      // 其他圖標類型：保持原樣
-      expandedIcons.push({
-        ...icon,
-        isSolid: icon.class?.endsWith('-fill') || false,
-        displayName: icon.name || icon.class
-      })
+  // 新的扁平化格式：資料已經是展開的，不需要再展開變體
+  const processedIcons = allIconsList.map(icon => {
+    return {
+      ...icon,
+      displayName: icon.name || icon.value || icon.class || icon.component
     }
   })
   
-  return expandedIcons.sort((a, b) => {
+  return processedIcons.sort((a, b) => {
     // 首先按類型排序：HeroIcons 在前，Bootstrap Icons 在後
-    if (a.type !== b.type) {
-      if (a.type === 'heroicons') return -1
-      if (b.type === 'heroicons') return 1
-      // 都是 Bootstrap Icons 的情況會繼續下面的排序
+    const typeA = a.type === 'heroicons' ? 'heroicons' : 'bootstrap-icons'
+    const typeB = b.type === 'heroicons' ? 'heroicons' : 'bootstrap-icons' 
+    
+    if (typeA !== typeB) {
+      if (typeA === 'heroicons') return -1
+      if (typeB === 'heroicons') return 1
     }
     
     // 相同類型內按名稱排序
-    const nameA = a.displayName || a.name || a.class || a.component || ''
-    const nameB = b.displayName || b.name || b.class || b.component || ''
+    const nameA = a.displayName || a.name || a.value || ''
+    const nameB = b.displayName || b.name || b.value || ''
     return nameA.localeCompare(nameB)
   })
 })
 
-// 樣式篩選功能 - 轉換圖標到指定樣式而不是篩選掉圖標
+// 樣式篩選功能 - 根據 has_variants 和 variant_type 篩選
 const styleFilteredIcons = computed(() => {
   const style = selectedStyle.value
   
@@ -214,49 +188,37 @@ const styleFilteredIcons = computed(() => {
     return processedIconsData.value
   }
   
-  // 為每個圖標選擇正確的變體，而不是篩選掉圖標
-  return processedIconsData.value.map(icon => {
-    // 如果圖標有變體資訊，根據選擇的樣式來決定使用哪個變體
-    if (icon.variants && typeof icon.variants === 'object') {
-      const selectedVariant = icon.variants[style] || icon.variants['outline'] || icon.variants[Object.keys(icon.variants)[0]]
-      
-      return {
-        ...icon,
-        // 更新當前使用的變體資訊
-        currentVariant: style,
-        actualVariant: selectedVariant ? Object.keys(icon.variants).find(v => icon.variants[v] === selectedVariant) : style,
-        isSolid: style === 'solid',
-        // 保持顯示名稱一致
-        displayName: icon.displayName || icon.name,
-        // 更新 class 或 component（取決於圖標類型）
-        class: selectedVariant?.class || icon.class,
-        component: selectedVariant?.component || icon.component
+  return processedIconsData.value.filter(icon => {
+    // HeroIcons 篩選邏輯
+    if (icon.type === 'heroicons') {
+      if (style === 'outline') {
+        // outline 模式：有變體且是 outline，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'outline') ||
+               (icon.has_variants === false)
+      } else if (style === 'solid') {
+        // solid 模式：有變體且是 solid，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'solid') ||
+               (icon.has_variants === false)
       }
     }
     
-    // 對於沒有變體資訊的圖標，基於 class 或 component 名稱判斷
-    return {
-      ...icon,
-      currentVariant: style,
-      isSolid: style === 'solid',
-      // 對於 Bootstrap Icons，嘗試根據樣式調整 class
-      class: icon.type === 'bootstrap' ? adjustBootstrapIconClass(icon.class, style) : icon.class
+    // Bootstrap Icons 篩選邏輯
+    if (icon.type === 'bootstrap-icons') {
+      if (style === 'outline') {
+        // outline 模式：有變體且是 outline，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'outline') ||
+               (icon.has_variants === false)
+      } else if (style === 'solid') {
+        // solid 模式：有變體且是 solid，或無變體
+        return (icon.has_variants === true && icon.variant_type === 'solid') ||
+               (icon.has_variants === false)
+      }
     }
+    
+    return true
   })
 })
 
-// 調整 Bootstrap Icon class 名稱以匹配指定樣式
-const adjustBootstrapIconClass = (originalClass, targetStyle) => {
-  if (!originalClass) return originalClass
-  
-  const baseClass = originalClass.replace(/-fill$/, '')
-  
-  if (targetStyle === 'solid') {
-    return baseClass + '-fill'
-  } else {
-    return baseClass
-  }
-}
 
 // 搜尋過濾功能
 const {
@@ -302,7 +264,7 @@ const groupedIcons = computed(() => {
   
   // 正常顯示按分類分組
   const heroIcons = filteredIcons.value.filter(icon => icon.type === 'heroicons')
-  const bootstrapIcons = filteredIcons.value.filter(icon => icon.type === 'bootstrap')
+  const bootstrapIcons = filteredIcons.value.filter(icon => icon.type === 'bootstrap-icons')
 
   const items = []
   
@@ -390,8 +352,8 @@ const bootstrapIconsCount = computed(() => {
 const iconComponentCache = new Map()
 
 const getHeroIconComponent = (icon) => {
-  const componentName = icon.component
-  const variant = icon.variant || 'outline'  // 使用圖標項目中的變體資訊
+  const componentName = icon.value  // 新格式使用 value 欄位
+  const variant = icon.variant_type || 'outline'  // 新格式使用 variant_type 欄位
   
   if (!componentName) return null
   
@@ -421,15 +383,12 @@ const getHeroIconComponent = (icon) => {
 }
 
 const getBootstrapIconClass = (icon) => {
-  const style = selectedStyle.value
-  if (style === 'solid' && icon.variants?.solid?.class) {
-    return icon.variants.solid.class
-  }
-  return icon.class
+  // 新格式直接使用 value 欄位，不需要再處理變體
+  return icon.value || icon.class
 }
 
 const getIconTitle = (icon) => {
-  return icon.name || icon.class || icon.component || '未知圖標'
+  return icon.name || icon.value || icon.class || icon.component || '未知圖標'
 }
 
 const isSelected = (icon) => {

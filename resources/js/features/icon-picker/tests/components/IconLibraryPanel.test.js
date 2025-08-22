@@ -7,8 +7,8 @@ import IconLibraryPanel from '../../components/IconLibraryPanel.vue'
 vi.mock('../../components/shared/VirtualScrollGrid.vue', () => ({
   default: {
     name: 'VirtualScrollGrid',
-    template: '<div class="mock-virtual-grid"><slot name="item" v-for="item in items" :item="item" :key="item.key"></slot></div>',
-    props: ['items', 'itemsPerRow', 'rowHeight', 'containerHeight'],
+    template: '<div class="mock-virtual-grid"><slot name="item" v-for="item in items" :item="item" :itemIndex="index" :key="item.key || index"></slot></div>',
+    props: ['items', 'itemsPerRow', 'rowHeight', 'containerHeight', 'buffer', 'preserveScrollPosition'],
     emits: []
   }
 }))
@@ -22,58 +22,146 @@ vi.mock('../../components/IconPickerSearch.vue', () => ({
   }
 }))
 
-vi.mock('../../components/VariantSelector.vue', () => ({
+vi.mock('../../components/IconStyleSelector.vue', () => ({
   default: {
-    name: 'VariantSelector',
-    template: '<select class="mock-variant-selector" :value="modelValue" @change="$emit(\'variant-change\', { value: $event.target.value })"><option value="outline">Outline</option><option value="solid">Solid</option></select>',
-    props: ['modelValue', 'variantType', 'variants'],
-    emits: ['variant-change']
+    name: 'IconStyleSelector',
+    template: '<select class="mock-style-selector" :value="modelValue" @change="$emit(\'update:modelValue\', $event.target.value)"><option value="outline">Outline</option><option value="solid">Solid</option><option value="all">All</option></select>',
+    props: ['modelValue'],
+    emits: ['update:modelValue']
   }
 }))
 
-// Mock IconDataLoader
-vi.mock('../../services/IconDataLoader.js', () => ({
-  IconDataLoader: vi.fn().mockImplementation(() => ({
-    getIconLibraryData: vi.fn().mockResolvedValue({
-      data: {
-        heroicons: [
-          { component: 'AcademicCapIcon', name: 'academic-cap', type: 'heroicons', variants: { outline: { component: 'AcademicCapIcon' } } },
-          { component: 'AdjustmentsIcon', name: 'adjustments', type: 'heroicons', variants: { outline: { component: 'AdjustmentsIcon' } } }
-        ],
-        bootstrap: {
-          general: [
-            { class: 'bi-alarm', name: 'alarm', type: 'bootstrap', category: 'general' },
-            { class: 'bi-bell', name: 'bell', type: 'bootstrap', category: 'general' }
-          ]
-        }
+// Mock preloaded data provider (新的資料格式)
+const mockIconData = {
+  data: {
+    heroicons: [
+      {
+        id: 'home-outline',
+        name: 'Home',
+        value: 'HomeIcon',
+        type: 'heroicons',
+        keywords: ['home', 'house'],
+        category: 'general',
+        has_variants: true,
+        variant_type: 'outline'
       },
-      meta: {}
-    })
+      {
+        id: 'home-solid',
+        name: 'Home',
+        value: 'HomeIcon',
+        type: 'heroicons',
+        keywords: ['home', 'house'],
+        category: 'general',
+        has_variants: true,
+        variant_type: 'solid'
+      },
+      {
+        id: 'user-outline',
+        name: 'User',
+        value: 'UserIcon',
+        type: 'heroicons',
+        keywords: ['user', 'person'],
+        category: 'people',
+        has_variants: true,
+        variant_type: 'outline'
+      }
+    ],
+    bootstrap: {
+      general: [
+        {
+          name: 'Activity',
+          value: 'bi-activity',
+          type: 'bootstrap-icons',
+          keywords: ['activity'],
+          category: 'general',
+          has_variants: false
+        },
+        {
+          name: 'Alarm',
+          value: 'bi-alarm',
+          type: 'bootstrap-icons',
+          keywords: ['alarm', 'clock'],
+          category: 'general',
+          has_variants: true
+        },
+        {
+          name: 'Alarm Fill',
+          value: 'bi-alarm-fill',
+          type: 'bootstrap-icons',
+          keywords: ['alarm', 'clock'],
+          category: 'general',
+          has_variants: true
+        }
+      ],
+      ui: [
+        {
+          name: 'Arrow Up',
+          value: 'bi-arrow-up',
+          type: 'bootstrap-icons',
+          keywords: ['arrow', 'up'],
+          category: 'ui',
+          has_variants: false
+        }
+      ]
+    }
+  },
+  meta: {
+    total: 6,
+    type: 'mixed'
+  }
+}
+
+// Mock usePreloadedIconData
+vi.mock('../../composables/usePreloadedData.js', () => ({
+  usePreloadedIconData: vi.fn(() => ({
+    data: { value: mockIconData },
+    loading: { value: false },
+    error: { value: null },
+    reload: vi.fn()
   }))
 }))
 
-// Mock useIconVariants composable
+// Mock useIconVariants
 vi.mock('../../composables/useIconVariants.js', () => ({
   useIconVariants: vi.fn(() => ({
     currentIconStyle: { value: 'outline' },
-    getVariantOptions: vi.fn().mockReturnValue([
-      { label: 'Outline', value: 'outline' },
-      { label: 'Solid', value: 'solid' }
-    ]),
     setIconStyle: vi.fn()
   }))
 }))
 
-describe('IconLibraryPanel', () => {
+// Mock useSearchFilter
+vi.mock('../../composables/useSearchFilter.js', () => ({
+  useSearchFilter: vi.fn((data, options) => {
+    const searchQuery = { value: '' }
+    const clearSearch = vi.fn(() => { searchQuery.value = '' })
+    
+    return {
+      searchQuery,
+      filteredData: data,
+      clearSearch
+    }
+  })
+}))
+
+// Mock HeroIcons
+vi.mock('@heroicons/vue/outline', () => ({
+  HomeIcon: { name: 'HomeIcon' },
+  UserIcon: { name: 'UserIcon' }
+}))
+
+vi.mock('@heroicons/vue/solid', () => ({
+  HomeIcon: { name: 'HomeIconSolid' },
+  UserIcon: { name: 'UserIconSolid' }
+}))
+
+describe('IconLibraryPanel - 新 API 格式適配', () => {
   let wrapper
 
   const defaultProps = {
     selectedIcon: null,
     iconType: 'heroicons',
-    itemsPerRow: 8
+    itemsPerRow: 10
   }
-
-  const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0))
 
   beforeEach(() => {
     vi.clearAllMocks()
@@ -89,273 +177,197 @@ describe('IconLibraryPanel', () => {
 
       expect(wrapper.find('.icon-library-panel').exists()).toBe(true)
       expect(wrapper.find('.panel-toolbar').exists()).toBe(true)
-      expect(wrapper.find('.library-tabs').exists()).toBe(true)
-    })
-
-    it('應該正確渲染搜尋欄和變體選擇器', async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-
-      await nextTick()
-
       expect(wrapper.findComponent({ name: 'IconPickerSearch' }).exists()).toBe(true)
-      expect(wrapper.findComponent({ name: 'VariantSelector' }).exists()).toBe(true)
+      expect(wrapper.findComponent({ name: 'IconStyleSelector' }).exists()).toBe(true)
     })
 
-    it('應該正確渲染圖標庫標籤', async () => {
+    it('應該正確載入扁平化的圖標資料', async () => {
       wrapper = mount(IconLibraryPanel, {
         props: defaultProps
       })
 
       await nextTick()
 
-      const buttons = wrapper.findAll('button')
-      const heroButton = buttons.find(btn => btn.text().includes('HeroIcons'))
-      const bootstrapButton = buttons.find(btn => btn.text().includes('Bootstrap Icons'))
+      const processedIcons = wrapper.vm.processedIconsData
+      expect(Array.isArray(processedIcons)).toBe(true)
       
-      expect(heroButton).toBeTruthy()
-      expect(bootstrapButton).toBeTruthy()
+      // 驗證包含所有類型的圖標
+      const heroIcons = processedIcons.filter(icon => icon.type === 'heroicons')
+      const bootstrapIcons = processedIcons.filter(icon => icon.type === 'bootstrap-icons')
+      
+      expect(heroIcons.length).toBe(3) // 3 個 HeroIcons
+      expect(bootstrapIcons.length).toBe(4) // 4 個 Bootstrap Icons
     })
   })
 
-  describe('圖標庫切換功能', () => {
+  describe('樣式篩選功能 - 新邏輯', () => {
     beforeEach(async () => {
       wrapper = mount(IconLibraryPanel, {
         props: defaultProps
       })
       await nextTick()
-      // 等待資料載入
-      await new Promise(resolve => setTimeout(resolve, 50))
     })
 
-    it('預設應該選中 HeroIcons', () => {
-      expect(wrapper.vm.activeLibrary).toBe('heroicons')
-    })
+    it('outline 模式應該只顯示 outline 圖標', async () => {
+      wrapper.vm.selectedStyle = 'outline'
+      await nextTick()
 
-    it('應該能切換到 Bootstrap Icons', async () => {
-      const buttons = wrapper.findAll('button')
-      const bootstrapButton = buttons.find(btn => 
-        btn.text().includes('Bootstrap Icons')
-      )
+      const filteredIcons = wrapper.vm.styleFilteredIcons
       
-      await bootstrapButton.trigger('click')
-      expect(wrapper.vm.activeLibrary).toBe('bootstrap')
+      // HeroIcons: 只顯示有變體且是 outline 的，或無變體的
+      const heroIcons = filteredIcons.filter(icon => icon.type === 'heroicons')
+      heroIcons.forEach(icon => {
+        const isValidOutline = (icon.has_variants === true && icon.variant_type === 'outline') ||
+                              (icon.has_variants === false)
+        expect(isValidOutline).toBe(true)
+      })
+
+      // Bootstrap Icons: 只顯示有變體且是 outline 的，或無變體的  
+      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
+      bootstrapIcons.forEach(icon => {
+        const isValidOutline = (icon.has_variants === true && icon.variant_type === 'outline') ||
+                              (icon.has_variants === false)
+        expect(isValidOutline).toBe(true)
+      })
     })
 
-    it('應該正確顯示圖標數量', async () => {
-      // 等待資料載入完成
-      await new Promise(resolve => setTimeout(resolve, 50))
+    it('solid 模式應該只顯示 solid 圖標', async () => {
+      wrapper.vm.selectedStyle = 'solid'
+      await nextTick()
+
+      const filteredIcons = wrapper.vm.styleFilteredIcons
       
-      expect(wrapper.vm.heroIconsCount).toBe(2)
-      expect(wrapper.vm.bootstrapIconsCount).toBe(2)
+      // HeroIcons: 只顯示有變體且是 solid 的，或無變體的
+      const heroIcons = filteredIcons.filter(icon => icon.type === 'heroicons')
+      heroIcons.forEach(icon => {
+        const isValidSolid = (icon.has_variants === true && icon.variant_type === 'solid') ||
+                            (icon.has_variants === false)
+        expect(isValidSolid).toBe(true)
+      })
+
+      // Bootstrap Icons: 只顯示有變體且是 solid 的，或無變體的
+      const bootstrapIcons = filteredIcons.filter(icon => icon.type === 'bootstrap-icons')
+      bootstrapIcons.forEach(icon => {
+        const isValidSolid = (icon.has_variants === true && icon.variant_type === 'solid') ||
+                            (icon.has_variants === false)
+        expect(isValidSolid).toBe(true)
+      })
+    })
+
+    it('all 模式應該顯示所有圖標', async () => {
+      wrapper.vm.selectedStyle = 'all'
+      await nextTick()
+
+      const filteredIcons = wrapper.vm.styleFilteredIcons
+      const processedIcons = wrapper.vm.processedIconsData
+      
+      expect(filteredIcons.length).toBe(processedIcons.length)
+    })
+
+    it('樣式切換不應該修改原始資料', async () => {
+      const originalLength = wrapper.vm.processedIconsData.length
+      
+      wrapper.vm.selectedStyle = 'outline'
+      await nextTick()
+      
+      wrapper.vm.selectedStyle = 'solid' 
+      await nextTick()
+      
+      wrapper.vm.selectedStyle = 'all'
+      await nextTick()
+
+      expect(wrapper.vm.processedIconsData.length).toBe(originalLength)
     })
   })
 
-  describe('搜尋功能', () => {
+  describe('圖標渲染邏輯', () => {
     beforeEach(async () => {
       wrapper = mount(IconLibraryPanel, {
         props: defaultProps
       })
       await nextTick()
-      await new Promise(resolve => setTimeout(resolve, 50))
     })
 
-    it('應該能更新搜尋查詢', async () => {
-      const searchInput = wrapper.findComponent({ name: 'IconPickerSearch' })
-      
-      await searchInput.vm.$emit('update:modelValue', 'alarm')
-      await nextTick()
-      
-      expect(wrapper.vm.searchQuery).toBe('alarm')
-    })
-
-    it('應該根據搜尋查詢過濾圖標', async () => {
-      // 切換到 bootstrap 庫以測試搜尋功能
-      wrapper.vm.activeLibrary = 'bootstrap'
-      wrapper.vm.searchQuery = 'alarm'
-      await nextTick()
-      
-      const filtered = wrapper.vm.filteredIcons
-      expect(filtered).toHaveLength(1)
-      expect(filtered[0].name).toBe('alarm')
-    })
-
-    it('應該支援清除搜尋', async () => {
-      wrapper.vm.searchQuery = 'test'
-      const searchComponent = wrapper.findComponent({ name: 'IconPickerSearch' })
-      
-      await searchComponent.vm.$emit('clear')
-      await nextTick()
-      
-      expect(wrapper.vm.searchQuery).toBe('')
-    })
-  })
-
-  describe('樣式變體功能', () => {
-    beforeEach(async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      await nextTick()
-      await new Promise(resolve => setTimeout(resolve, 50))
-    })
-
-    it('預設應該選中 outline 樣式', () => {
-      expect(wrapper.vm.selectedStyle).toBe('outline')
-    })
-
-    it('應該能切換樣式變體', async () => {
-      const variantSelector = wrapper.findComponent({ name: 'VariantSelector' })
-      
-      await variantSelector.vm.$emit('variant-change', { value: 'solid' })
-      await nextTick()
-      
-      expect(wrapper.vm.selectedStyle).toBe('solid')
-    })
-  })
-
-  describe('圖標選擇功能', () => {
-    beforeEach(async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      await nextTick()
-      await new Promise(resolve => setTimeout(resolve, 50))
-    })
-
-    it('應該觸發圖標選擇事件', async () => {
-      const mockIcon = { 
-        component: 'AcademicCapIcon', 
-        name: 'academic-cap', 
-        type: 'heroicons' 
+    it('應該正確渲染 Bootstrap Icon 的 class', () => {
+      const bootstrapIcon = {
+        type: 'bootstrap-icons',
+        value: 'bi-activity'
       }
-      
-      wrapper.vm.selectIcon(mockIcon)
-      await nextTick()
-      
-      expect(wrapper.emitted('icon-select')).toBeTruthy()
-      expect(wrapper.emitted('icon-select')[0][0]).toEqual(mockIcon)
-      
-      expect(wrapper.emitted('icon-change')).toBeTruthy()
-      expect(wrapper.emitted('icon-change')[0][0]).toEqual({
-        icon: mockIcon,
+
+      const result = wrapper.vm.getBootstrapIconClass(bootstrapIcon)
+      expect(result).toBe('bi-activity')
+    })
+
+    it('應該正確渲染 HeroIcon 元件', () => {
+      const heroIcon = {
         type: 'heroicons',
-        style: 'outline'
-      })
+        value: 'HomeIcon',
+        variant_type: 'outline'
+      }
+
+      const component = wrapper.vm.getHeroIconComponent(heroIcon)
+      expect(component).toBeTruthy()
     })
 
-    it('應該正確識別選中的圖標', async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: {
-          ...defaultProps,
-          selectedIcon: 'AcademicCapIcon'
-        }
-      })
-      
-      const mockIcon = { component: 'AcademicCapIcon' }
-      expect(wrapper.vm.isSelected(mockIcon)).toBe(true)
-      
-      const otherIcon = { component: 'AdjustmentsIcon' }
-      expect(wrapper.vm.isSelected(otherIcon)).toBe(false)
-    })
-  })
+    it('應該正確處理圖標標題', () => {
+      const iconWithName = { name: 'Home', type: 'heroicons' }
+      expect(wrapper.vm.getIconTitle(iconWithName)).toBe('Home')
 
-  describe('載入狀態', () => {
-    it('應該顯示載入狀態', async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      
-      // 設定載入狀態
-      wrapper.vm.isLoading = true
-      await nextTick()
-      
-      expect(wrapper.find('.flex.items-center.justify-center').exists()).toBe(true)
-      expect(wrapper.text()).toContain('載入圖標...')
-    })
+      const iconWithValue = { value: 'bi-activity', type: 'bootstrap-icons' }
+      expect(wrapper.vm.getIconTitle(iconWithValue)).toBe('bi-activity')
 
-    it('應該顯示錯誤狀態', async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      
-      wrapper.vm.isLoading = false
-      wrapper.vm.error = '載入失敗'
-      await nextTick()
-      
-      expect(wrapper.text()).toContain('載入失敗')
-      const buttons = wrapper.findAll('button')
-      const reloadButton = buttons.find(btn => btn.text().includes('重新載入'))
-      expect(reloadButton).toBeTruthy()
-    })
-
-    it('應該顯示空狀態', async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      
-      wrapper.vm.isLoading = false
-      wrapper.vm.error = null
-      wrapper.vm.searchQuery = 'nonexistent'
-      await nextTick()
-      
-      expect(wrapper.find('.empty-state').exists()).toBe(true)
-      expect(wrapper.text()).toContain('找不到符合')
-    })
-  })
-
-  describe('工具方法', () => {
-    beforeEach(async () => {
-      wrapper = mount(IconLibraryPanel, {
-        props: defaultProps
-      })
-      await nextTick()
-    })
-
-    it('應該正確取得圖標標題', () => {
-      const iconWithName = { name: 'test-icon' }
-      expect(wrapper.vm.getIconTitle(iconWithName)).toBe('test-icon')
-      
-      const iconWithClass = { class: 'bi-test' }
-      expect(wrapper.vm.getIconTitle(iconWithClass)).toBe('bi-test')
-      
-      const iconWithComponent = { component: 'TestIcon' }
-      expect(wrapper.vm.getIconTitle(iconWithComponent)).toBe('TestIcon')
-      
       const emptyIcon = {}
       expect(wrapper.vm.getIconTitle(emptyIcon)).toBe('未知圖標')
     })
+  })
 
-    it('應該正確取得 HeroIcon 元件', () => {
-      const icon = { 
-        component: 'AcademicCapIcon',
-        variants: { 
-          outline: { component: 'AcademicCapIcon' },
-          solid: { component: 'AcademicCapSolidIcon' }
-        }
-      }
-      
-      wrapper.vm.selectedStyle = 'outline'
-      expect(wrapper.vm.getHeroIconComponent(icon)).toBe('AcademicCapIcon')
-      
-      wrapper.vm.selectedStyle = 'solid'
-      expect(wrapper.vm.getHeroIconComponent(icon)).toBe('AcademicCapSolidIcon')
+  describe('分類顯示功能', () => {
+    beforeEach(async () => {
+      wrapper = mount(IconLibraryPanel, {
+        props: defaultProps
+      })
+      await nextTick()
     })
 
-    it('應該正確取得 Bootstrap Icon 類別', () => {
-      const icon = { 
-        class: 'bi-alarm',
-        variants: { 
-          solid: { class: 'bi-alarm-fill' }
-        }
-      }
-      
-      wrapper.vm.selectedStyle = 'outline'
-      expect(wrapper.vm.getBootstrapIconClass(icon)).toBe('bi-alarm')
-      
-      wrapper.vm.selectedStyle = 'solid'
-      expect(wrapper.vm.getBootstrapIconClass(icon)).toBe('bi-alarm-fill')
+    it('應該正確分組顯示圖標', () => {
+      wrapper.vm.searchQuery = '' // 確保不是搜尋模式
+      const groupedIcons = wrapper.vm.groupedIcons
+
+      expect(Array.isArray(groupedIcons)).toBe(true)
+
+      // 檢查是否包含分類標題
+      const hasCategoryHeaders = groupedIcons.some(item => item.type === 'category-header')
+      expect(hasCategoryHeaders).toBe(true)
+
+      // 檢查 HeroIcons 分類
+      const heroHeader = groupedIcons.find(item => 
+        item.type === 'category-header' && 
+        item.data && 
+        item.data.title === 'Heroicons'
+      )
+      expect(heroHeader).toBeTruthy()
+
+      // 檢查 Bootstrap Icons 分類
+      const generalHeader = groupedIcons.find(item =>
+        item.type === 'category-header' &&
+        item.data &&
+        item.data.title === '通用圖標'
+      )
+      expect(generalHeader).toBeTruthy()
+    })
+
+    it('搜尋時應該返回扁平化結果', () => {
+      wrapper.vm.searchQuery = 'home'
+      const groupedIcons = wrapper.vm.groupedIcons
+
+      // 搜尋時不應該有分類標題
+      const hasCategoryHeaders = groupedIcons.some(item => item.type === 'category-header')
+      expect(hasCategoryHeaders).toBe(false)
+
+      // 所有項目都應該是圖標
+      groupedIcons.forEach(item => {
+        expect(['heroicons', 'bootstrap-icons']).toContain(item.type)
+      })
     })
   })
 
@@ -365,167 +377,126 @@ describe('IconLibraryPanel', () => {
         props: defaultProps
       })
       await nextTick()
-      await new Promise(resolve => setTimeout(resolve, 50))
     })
 
-    it('應該正確轉換項目為 VirtualScrollGrid 格式', async () => {
-      const items = wrapper.vm.virtualGridItems
-      expect(Array.isArray(items)).toBe(true)
-      expect(items.length).toBeGreaterThan(0)
+    it('應該正確轉換為 VirtualScrollGrid 格式', () => {
+      const virtualItems = wrapper.vm.virtualGridItems
+
+      expect(Array.isArray(virtualItems)).toBe(true)
       
-      const firstItem = items[0]
-      expect(firstItem).toHaveProperty('key')
-      expect(firstItem).toHaveProperty('type')
-      expect(firstItem).toHaveProperty('data')
+      virtualItems.forEach(item => {
+        expect(item).toHaveProperty('key')
+        expect(item).toHaveProperty('type')
+        expect(item).toHaveProperty('data')
+        
+        if (item.type === 'category') {
+          expect(item).toHaveProperty('fullRow', true)
+          expect(item).toHaveProperty('itemHeight', 40)
+        }
+      })
     })
 
-    it('應該正確渲染 VirtualScrollGrid 元件', () => {
+    it('應該正確設置 VirtualScrollGrid 屬性', () => {
       const virtualGrid = wrapper.findComponent({ name: 'VirtualScrollGrid' })
+      
       expect(virtualGrid.exists()).toBe(true)
-      expect(virtualGrid.props('itemsPerRow')).toBe(8)
-      expect(virtualGrid.props('rowHeight')).toBe(36)
-      expect(virtualGrid.props('containerHeight')).toBe(400)
+      expect(virtualGrid.props('itemsPerRow')).toBe(10)
+      expect(virtualGrid.props('rowHeight')).toBe(34)
+      expect(virtualGrid.props('containerHeight')).toBe(176)
+      expect(virtualGrid.props('buffer')).toBe(2)
+      expect(virtualGrid.props('preserveScrollPosition')).toBe(true)
     })
   })
 
-  // TDD 重構測試 - 架構簡化
-  describe('簡化架構重構', () => {
-    describe('移除標籤切換', () => {
-      it('不應該有 activeLibrary 響應式狀態', () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        expect(wrapper.vm.activeLibrary).toBeUndefined()
-      })
-
-      it('不應該渲染標籤切換 UI', () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        expect(wrapper.find('.library-tabs').exists()).toBe(false)
-      })
-
-      it('不應該有標籤切換按鈕', () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        const buttons = wrapper.findAll('button')
-        const hasLibraryButtons = buttons.some(btn => 
-          btn.text().includes('HeroIcons') || btn.text().includes('Bootstrap Icons')
-        )
-        expect(hasLibraryButtons).toBe(false)
-      })
-    })
-
-    describe('isSolid 標記系統', () => {
-      it('所有圖標都應該有 isSolid 屬性', async () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        await flushPromises()
-        
-        const icons = wrapper.vm.processedIcons || []
-        expect(icons.length).toBeGreaterThan(0)
-        icons.forEach(icon => {
-          expect(icon).toHaveProperty('isSolid')
-          expect(typeof icon.isSolid).toBe('boolean')
-        })
-      })
-
-      it('Bootstrap -fill 圖標應該標記為 isSolid: true', async () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        await flushPromises()
-        
-        const icons = wrapper.vm.processedIcons || []
-        const fillIcons = icons.filter(icon => icon.class?.endsWith('-fill'))
-        fillIcons.forEach(icon => {
-          expect(icon.isSolid).toBe(true)
-        })
-      })
-
-      it('HeroIcons Solid 圖標應該標記為 isSolid: true', async () => {
-        const wrapper = mount(IconLibraryPanel, { props: defaultProps })
-        await flushPromises()
-        
-        const icons = wrapper.vm.processedIcons || []
-        const solidIcons = icons.filter(icon => icon.component?.includes('Solid'))
-        solidIcons.forEach(icon => {
-          expect(icon.isSolid).toBe(true)
-        })
-      })
-    })
-  })
-
-  // TDD 重構測試 - 篩選邏輯
-  describe('篩選邏輯', () => {
-    let wrapper
-
+  describe('圖標選擇功能', () => {
     beforeEach(async () => {
-      wrapper = mount(IconLibraryPanel, { props: defaultProps })
-      await flushPromises()
-    })
-
-    it('all 模式應該顯示所有圖標', () => {
-      wrapper.vm.selectedStyle = 'all'
-      const filtered = wrapper.vm.filteredIcons
-      const processed = wrapper.vm.processedIcons
-      expect(filtered.length).toBe(processed.length)
-    })
-
-    it('outline 模式應該只顯示 isSolid: false 的圖標', () => {
-      wrapper.vm.selectedStyle = 'outline'
-      const filtered = wrapper.vm.filteredIcons
-      filtered.forEach(icon => {
-        expect(icon.isSolid).toBe(false)
+      wrapper = mount(IconLibraryPanel, {
+        props: defaultProps
       })
+      await nextTick()
     })
 
-    it('solid 模式應該只顯示 isSolid: true 的圖標', () => {
-      wrapper.vm.selectedStyle = 'solid'
-      const filtered = wrapper.vm.filteredIcons
-      filtered.forEach(icon => {
-        expect(icon.isSolid).toBe(true)
-      })
-    })
-
-    it('篩選不應該修改原始圖標資料', () => {
-      const originalCount = wrapper.vm.processedIcons.length
-      wrapper.vm.selectedStyle = 'outline'
-      expect(wrapper.vm.processedIcons.length).toBe(originalCount)
-    })
-  })
-
-  // TDD 重構測試 - 排序和分類顯示
-  describe('排序和分類顯示', () => {
-    let wrapper
-
-    beforeEach(async () => {
-      wrapper = mount(IconLibraryPanel, { props: defaultProps })
-      await flushPromises()
-    })
-
-    it('圖標應該按名稱字母順序排序', () => {
-      const icons = wrapper.vm.processedIcons
-      for (let i = 1; i < icons.length; i++) {
-        const nameA = icons[i-1].name || icons[i-1].class || icons[i-1].component || ''
-        const nameB = icons[i].name || icons[i].class || icons[i].component || ''
-        expect(nameA.localeCompare(nameB)).toBeLessThanOrEqual(0)
+    it('應該觸發圖標選擇事件', () => {
+      const mockIcon = {
+        name: 'Home',
+        value: 'HomeIcon',
+        type: 'heroicons'
       }
-    })
 
-    it('搜尋時應該返回扁平化結果（無分類標題）', () => {
-      wrapper.vm.searchQuery = 'heart'
-      const grouped = wrapper.vm.groupedIcons
-      const hasCategoryHeader = grouped.some(item => item.type === 'category-header')
-      expect(hasCategoryHeader).toBe(false)
-    })
+      wrapper.vm.selectIcon(mockIcon)
 
-    it('正常顯示應該包含分類標題', () => {
-      wrapper.vm.searchQuery = ''
-      const grouped = wrapper.vm.groupedIcons
-      const hasCategoryHeader = grouped.some(item => item.type === 'category-header')
-      expect(hasCategoryHeader).toBe(true)
-    })
+      expect(wrapper.emitted('icon-select')).toBeTruthy()
+      expect(wrapper.emitted('icon-select')[0][0]).toEqual(mockIcon)
 
-    it('分類標題應該有 fullRow 屬性', () => {
-      wrapper.vm.searchQuery = ''
-      const grouped = wrapper.vm.groupedIcons
-      const categoryHeaders = grouped.filter(item => item.type === 'category-header')
-      categoryHeaders.forEach(header => {
-        expect(header.fullRow).toBe(true)
+      expect(wrapper.emitted('icon-change')).toBeTruthy()
+      expect(wrapper.emitted('icon-change')[0][0]).toEqual({
+        icon: mockIcon,
+        type: 'heroicons',
+        style: 'outline'
       })
+    })
+
+    it('應該正確識別選中的圖標', () => {
+      wrapper = mount(IconLibraryPanel, {
+        props: {
+          ...defaultProps,
+          selectedIcon: 'HomeIcon'
+        }
+      })
+
+      const selectedIcon = { value: 'HomeIcon' }
+      const otherIcon = { value: 'UserIcon' }
+
+      expect(wrapper.vm.isSelected(selectedIcon)).toBe(true)
+      expect(wrapper.vm.isSelected(otherIcon)).toBe(false)
+    })
+  })
+
+  describe('錯誤和載入狀態', () => {
+    it('應該正確顯示載入狀態', () => {
+      // Mock loading state
+      const mockUsePreloadedIconData = vi.mocked(
+        require('../../composables/usePreloadedData.js').usePreloadedIconData
+      )
+      mockUsePreloadedIconData.mockReturnValueOnce({
+        data: { value: null },
+        loading: { value: true },
+        error: { value: null },
+        reload: vi.fn()
+      })
+
+      wrapper = mount(IconLibraryPanel, { props: defaultProps })
+
+      expect(wrapper.find('.loading').exists()).toBe(true)
+      expect(wrapper.text()).toContain('載入圖標資料中')
+    })
+
+    it('應該正確顯示錯誤狀態', () => {
+      const mockUsePreloadedIconData = vi.mocked(
+        require('../../composables/usePreloadedData.js').usePreloadedIconData
+      )
+      mockUsePreloadedIconData.mockReturnValueOnce({
+        data: { value: null },
+        loading: { value: false },
+        error: { value: { message: '載入失敗' } },
+        reload: vi.fn()
+      })
+
+      wrapper = mount(IconLibraryPanel, { props: defaultProps })
+
+      expect(wrapper.find('.error').exists()).toBe(true)
+      expect(wrapper.text()).toContain('載入失敗')
+    })
+
+    it('應該正確顯示空狀態', async () => {
+      wrapper = mount(IconLibraryPanel, { props: defaultProps })
+
+      // 模擬搜尋無結果
+      wrapper.vm.searchQuery = 'nonexistent-icon'
+      await nextTick()
+
+      expect(wrapper.find('.empty-state').exists()).toBe(true)
+      expect(wrapper.text()).toContain('找不到符合')
     })
   })
 })

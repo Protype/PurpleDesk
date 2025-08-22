@@ -35,44 +35,54 @@ class EmojiApiManager {
           throw new Error('No data received from emoji API');
         }
         
-        if (!response.data.categories || typeof response.data.categories !== 'object') {
-          throw new Error('Invalid emoji data structure: categories missing or invalid');
+        // 新的扁平化 API 格式：{data: {categoryId: [emoji...]}}
+        if (!response.data.data || typeof response.data.data !== 'object') {
+          throw new Error('Invalid emoji data structure: data missing or invalid');
         }
         
         this.allData = response.data;
         this.categoriesInfo = [];
         
-        // 處理分類資料
-        Object.entries(this.allData.categories || {}).forEach(([categoryId, categoryData]) => {
+        // 分類名稱對應表
+        const categoryNameMap = {
+          'smileys_emotion': '表情符號與人物',
+          'people_body': '人物與身體', 
+          'animals_nature': '動物與自然',
+          'food_drink': '食物與飲料',
+          'travel_places': '旅遊與地點',
+          'activities': '活動',
+          'objects': '物品',
+          'symbols': '符號',
+          'flags': '旗幟'
+        };
+        
+        // 處理新的扁平化分類資料
+        Object.entries(this.allData.data || {}).forEach(([categoryId, emojis]) => {
           // 驗證分類資料結構
-          if (!categoryData || typeof categoryData !== 'object') {
-            console.warn(`Invalid category data for ${categoryId}, skipping`);
+          if (!Array.isArray(emojis)) {
+            console.warn(`Invalid category data for ${categoryId}, expected array, skipping`);
             return;
           }
           
+          const categoryName = categoryNameMap[categoryId] || categoryId.replace(/_/g, ' ');
+          
           this.categoriesInfo.push({
             id: categoryId,
-            name: categoryData.name || 'Unknown Category',
-            icon: categoryData.icon || '❓',
-            priority: categoryData.priority || 'low'
+            name: categoryName,
+            icon: emojis[0]?.emoji || '❓', // 使用第一個 emoji 作為圖標
+            priority: 'normal'
           });
           
-          // 建立分類快取
-          const categoryEmojis = {};
-          Object.entries(categoryData.subgroups || {}).forEach(([subgroupKey, subgroupData]) => {
-            // 驗證子群組資料結構
-            if (!subgroupData || !Array.isArray(subgroupData.emojis)) {
-              console.warn(`Invalid subgroup data for ${categoryId}.${subgroupKey}, skipping`);
-              return;
-            }
-            
-            categoryEmojis[subgroupKey] = subgroupData.emojis.map(emoji => ({
+          // 建立分類快取 - 新的扁平化格式直接存儲陣列
+          const categoryEmojis = {
+            main: emojis.map(emoji => ({
               ...emoji,
-              category: categoryData.name || 'Unknown Category',
+              category: categoryName,
               categoryId: categoryId,
-              subgroup: subgroupData.name || 'Unknown Subgroup'
-            }));
-          });
+              subgroup: categoryName
+            }))
+          };
+          
           this.categoryCache.set(categoryId, categoryEmojis);
         });
         
@@ -97,13 +107,14 @@ class EmojiApiManager {
     this.searchIndex = new Map();
     
     this.categoryCache.forEach((categoryData, categoryId) => {
-      const categoryInfo = this.allData.categories[categoryId];
+      // 找到分類資訊
+      const categoryInfo = this.categoriesInfo.find(cat => cat.id === categoryId);
       
       Object.entries(categoryData).forEach(([subgroupKey, emojis]) => {
         emojis.forEach(emoji => {
           // 只索引基礎 emoji
           if (!SKIN_TONE_REGEX.test(emoji.emoji)) {
-            const searchKey = `${emoji.emoji} ${emoji.name} ${categoryInfo.name} ${emoji.subgroup}`.toLowerCase();
+            const searchKey = `${emoji.emoji} ${emoji.name} ${categoryInfo?.name || ''} ${emoji.subgroup || ''}`.toLowerCase();
             this.searchIndex.set(emoji.emoji, {
               ...emoji,
               searchKey
@@ -226,11 +237,19 @@ class EmojiApiManager {
     
     const searchIndexSize = this.searchIndex ? this.searchIndex.size : 0;
     
+    // 計算總 emoji 數量
+    let totalEmojis = 0;
+    this.categoryCache.forEach((categoryData) => {
+      Object.values(categoryData).forEach((emojis) => {
+        totalEmojis += Array.isArray(emojis) ? emojis.length : 0;
+      });
+    });
+    
     return {
       loadedCategories: this.categoriesInfo.length,
-      totalEmojis: this.allData.stats.total_emojis,
+      totalEmojis: totalEmojis,
       searchIndexSize,
-      estimatedMemoryKB: Math.round((this.allData.stats.total_emojis * 150 + searchIndexSize * 50) / 1024)
+      estimatedMemoryKB: Math.round((totalEmojis * 150 + searchIndexSize * 50) / 1024)
     };
   }
 
@@ -258,12 +277,12 @@ export const EMOJI_CATEGORIES = new Proxy({}, {
 // 匯出分類資訊
 export const EMOJI_CATEGORY_INFO = new Proxy({}, {
   get(target, prop) {
-    if (!emojiApiManager.initialized || !emojiApiManager.allData) {
+    if (!emojiApiManager.initialized || !emojiApiManager.categoriesInfo) {
       return undefined;
     }
-    const category = emojiApiManager.allData.categories[prop];
+    const category = emojiApiManager.categoriesInfo.find(cat => cat.id === prop);
     return category ? {
-      id: prop,
+      id: category.id,
       name: category.name,
       icon: category.icon,
       priority: category.priority

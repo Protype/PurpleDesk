@@ -6,7 +6,6 @@ return array (
   'description' => '常用的通用圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Activity',
       'value' => 'bi-activity',
@@ -18,7 +17,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    1 => 
     array (
       'name' => 'Alarm',
       'value' => 'bi-alarm',
@@ -31,7 +29,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    2 => 
     array (
       'name' => 'Alarm Fill',
       'value' => 'bi-alarm-fill',
@@ -45,7 +42,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    3 => 
     array (
       'name' => 'Arrow Through Heart',
       'value' => 'bi-arrow-through-heart',
@@ -60,7 +56,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    4 => 
     array (
       'name' => 'Arrow Through Heart Fill',
       'value' => 'bi-arrow-through-heart-fill',
@@ -76,7 +71,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    5 => 
     array (
       'name' => 'At',
       'value' => 'bi-at',
@@ -88,7 +82,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    6 => 
     array (
       'name' => 'Ban',
       'value' => 'bi-ban',
@@ -101,7 +94,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    7 => 
     array (
       'name' => 'Ban Fill',
       'value' => 'bi-ban-fill',
@@ -115,7 +107,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    8 => 
     array (
       'name' => 'Bell',
       'value' => 'bi-bell',
@@ -128,7 +119,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    9 => 
     array (
       'name' => 'Bell Fill',
       'value' => 'bi-bell-fill',
@@ -142,7 +132,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    10 => 
     array (
       'name' => 'Bookmark',
       'value' => 'bi-bookmark',
@@ -155,7 +144,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    11 => 
     array (
       'name' => 'Bookmark Check',
       'value' => 'bi-bookmark-check',
@@ -169,7 +157,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    12 => 
     array (
       'name' => 'Bookmark Check Fill',
       'value' => 'bi-bookmark-check-fill',
@@ -184,7 +171,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    13 => 
     array (
       'name' => 'Bookmark Dash',
       'value' => 'bi-bookmark-dash',
@@ -198,7 +184,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    14 => 
     array (
       'name' => 'Bookmark Dash Fill',
       'value' => 'bi-bookmark-dash-fill',
@@ -213,7 +198,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    15 => 
     array (
       'name' => 'Bookmark Fill',
       'value' => 'bi-bookmark-fill',
@@ -227,7 +211,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    16 => 
     array (
       'name' => 'Bookmark Heart',
       'value' => 'bi-bookmark-heart',
@@ -241,7 +224,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    17 => 
     array (
       'name' => 'Bookmark Heart Fill',
       'value' => 'bi-bookmark-heart-fill',
@@ -256,7 +238,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    18 => 
     array (
       'name' => 'Bookmark Plus',
       'value' => 'bi-bookmark-plus',
@@ -270,7 +251,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    19 => 
     array (
       'name' => 'Bookmark Plus Fill',
       'value' => 'bi-bookmark-plus-fill',
@@ -285,7 +265,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    20 => 
     array (
       'name' => 'Bookmark Star',
       'value' => 'bi-bookmark-star',
@@ -299,7 +278,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    21 => 
     array (
       'name' => 'Bookmark Star Fill',
       'value' => 'bi-bookmark-star-fill',
@@ -314,7 +292,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    22 => 
     array (
       'name' => 'Bookmark X',
       'value' => 'bi-bookmark-x',
@@ -328,7 +305,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    23 => 
     array (
       'name' => 'Bookmark X Fill',
       'value' => 'bi-bookmark-x-fill',
@@ -343,7 +319,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    24 => 
     array (
       'name' => 'Bookmarks',
       'value' => 'bi-bookmarks',
@@ -356,7 +331,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    25 => 
     array (
       'name' => 'Bookmarks Fill',
       'value' => 'bi-bookmarks-fill',
@@ -370,7 +344,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    26 => 
     array (
       'name' => 'Calendar',
       'value' => 'bi-calendar',
@@ -383,7 +356,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    27 => 
     array (
       'name' => 'Calendar Check',
       'value' => 'bi-calendar-check',
@@ -397,7 +369,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    28 => 
     array (
       'name' => 'Calendar Check Fill',
       'value' => 'bi-calendar-check-fill',
@@ -412,7 +383,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
     array (
       'name' => 'Calendar Date',
       'value' => 'bi-calendar-date',
@@ -426,7 +396,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    30 => 
     array (
       'name' => 'Calendar Date Fill',
       'value' => 'bi-calendar-date-fill',
@@ -441,7 +410,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    31 => 
     array (
       'name' => 'Calendar Day',
       'value' => 'bi-calendar-day',
@@ -455,7 +423,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    32 => 
     array (
       'name' => 'Calendar Day Fill',
       'value' => 'bi-calendar-day-fill',
@@ -470,7 +437,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    33 => 
     array (
       'name' => 'Calendar Event',
       'value' => 'bi-calendar-event',
@@ -484,7 +450,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    34 => 
     array (
       'name' => 'Calendar Event Fill',
       'value' => 'bi-calendar-event-fill',
@@ -499,7 +464,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    35 => 
     array (
       'name' => 'Calendar Fill',
       'value' => 'bi-calendar-fill',
@@ -513,7 +477,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    36 => 
     array (
       'name' => 'Calendar Heart',
       'value' => 'bi-calendar-heart',
@@ -527,7 +490,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    37 => 
     array (
       'name' => 'Calendar Heart Fill',
       'value' => 'bi-calendar-heart-fill',
@@ -542,7 +504,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    38 => 
     array (
       'name' => 'Calendar Minus',
       'value' => 'bi-calendar-minus',
@@ -556,7 +517,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    39 => 
     array (
       'name' => 'Calendar Minus Fill',
       'value' => 'bi-calendar-minus-fill',
@@ -571,7 +531,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    40 => 
     array (
       'name' => 'Calendar Month',
       'value' => 'bi-calendar-month',
@@ -585,7 +544,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    41 => 
     array (
       'name' => 'Calendar Month Fill',
       'value' => 'bi-calendar-month-fill',
@@ -600,7 +558,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    42 => 
     array (
       'name' => 'Calendar Plus',
       'value' => 'bi-calendar-plus',
@@ -614,7 +571,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    43 => 
     array (
       'name' => 'Calendar Plus Fill',
       'value' => 'bi-calendar-plus-fill',
@@ -629,7 +585,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    44 => 
     array (
       'name' => 'Calendar Range',
       'value' => 'bi-calendar-range',
@@ -643,7 +598,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    45 => 
     array (
       'name' => 'Calendar Range Fill',
       'value' => 'bi-calendar-range-fill',
@@ -658,7 +612,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    46 => 
     array (
       'name' => 'Calendar Week',
       'value' => 'bi-calendar-week',
@@ -672,7 +625,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    47 => 
     array (
       'name' => 'Calendar Week Fill',
       'value' => 'bi-calendar-week-fill',
@@ -687,7 +639,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    48 => 
     array (
       'name' => 'Calendar X',
       'value' => 'bi-calendar-x',
@@ -701,7 +652,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
     array (
       'name' => 'Calendar X Fill',
       'value' => 'bi-calendar-x-fill',
@@ -716,7 +666,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    50 => 
     array (
       'name' => 'Calendar2',
       'value' => 'bi-calendar2',
@@ -729,7 +678,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    51 => 
     array (
       'name' => 'Calendar2 Check',
       'value' => 'bi-calendar2-check',
@@ -743,7 +691,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    52 => 
     array (
       'name' => 'Calendar2 Check Fill',
       'value' => 'bi-calendar2-check-fill',
@@ -758,7 +705,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    53 => 
     array (
       'name' => 'Calendar2 Date',
       'value' => 'bi-calendar2-date',
@@ -772,7 +718,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    54 => 
     array (
       'name' => 'Calendar2 Date Fill',
       'value' => 'bi-calendar2-date-fill',
@@ -787,7 +732,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    55 => 
     array (
       'name' => 'Calendar2 Day',
       'value' => 'bi-calendar2-day',
@@ -801,7 +745,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    56 => 
     array (
       'name' => 'Calendar2 Day Fill',
       'value' => 'bi-calendar2-day-fill',
@@ -816,7 +759,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
     array (
       'name' => 'Calendar2 Event',
       'value' => 'bi-calendar2-event',
@@ -830,7 +772,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    58 => 
     array (
       'name' => 'Calendar2 Event Fill',
       'value' => 'bi-calendar2-event-fill',
@@ -845,7 +786,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    59 => 
     array (
       'name' => 'Calendar2 Fill',
       'value' => 'bi-calendar2-fill',
@@ -859,7 +799,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    60 => 
     array (
       'name' => 'Calendar2 Heart',
       'value' => 'bi-calendar2-heart',
@@ -873,7 +812,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    61 => 
     array (
       'name' => 'Calendar2 Heart Fill',
       'value' => 'bi-calendar2-heart-fill',
@@ -888,7 +826,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    62 => 
     array (
       'name' => 'Calendar2 Minus',
       'value' => 'bi-calendar2-minus',
@@ -902,7 +839,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    63 => 
     array (
       'name' => 'Calendar2 Minus Fill',
       'value' => 'bi-calendar2-minus-fill',
@@ -917,7 +853,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    64 => 
     array (
       'name' => 'Calendar2 Month',
       'value' => 'bi-calendar2-month',
@@ -931,7 +866,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    65 => 
     array (
       'name' => 'Calendar2 Month Fill',
       'value' => 'bi-calendar2-month-fill',
@@ -946,7 +880,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    66 => 
     array (
       'name' => 'Calendar2 Plus',
       'value' => 'bi-calendar2-plus',
@@ -960,7 +893,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    67 => 
     array (
       'name' => 'Calendar2 Plus Fill',
       'value' => 'bi-calendar2-plus-fill',
@@ -975,7 +907,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    68 => 
     array (
       'name' => 'Calendar2 Range',
       'value' => 'bi-calendar2-range',
@@ -989,7 +920,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    69 => 
     array (
       'name' => 'Calendar2 Range Fill',
       'value' => 'bi-calendar2-range-fill',
@@ -1004,7 +934,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    70 => 
     array (
       'name' => 'Calendar2 Week',
       'value' => 'bi-calendar2-week',
@@ -1018,7 +947,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    71 => 
     array (
       'name' => 'Calendar2 Week Fill',
       'value' => 'bi-calendar2-week-fill',
@@ -1033,7 +961,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    72 => 
     array (
       'name' => 'Calendar2 X',
       'value' => 'bi-calendar2-x',
@@ -1047,7 +974,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    73 => 
     array (
       'name' => 'Calendar2 X Fill',
       'value' => 'bi-calendar2-x-fill',
@@ -1062,7 +988,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    74 => 
     array (
       'name' => 'Calendar3',
       'value' => 'bi-calendar3',
@@ -1075,7 +1000,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    75 => 
     array (
       'name' => 'Calendar3 Event',
       'value' => 'bi-calendar3-event',
@@ -1089,7 +1013,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    76 => 
     array (
       'name' => 'Calendar3 Event Fill',
       'value' => 'bi-calendar3-event-fill',
@@ -1104,7 +1027,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    77 => 
     array (
       'name' => 'Calendar3 Fill',
       'value' => 'bi-calendar3-fill',
@@ -1118,7 +1040,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    78 => 
     array (
       'name' => 'Calendar3 Range',
       'value' => 'bi-calendar3-range',
@@ -1132,7 +1053,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    79 => 
     array (
       'name' => 'Calendar3 Range Fill',
       'value' => 'bi-calendar3-range-fill',
@@ -1147,7 +1067,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    80 => 
     array (
       'name' => 'Calendar3 Week',
       'value' => 'bi-calendar3-week',
@@ -1161,7 +1080,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    81 => 
     array (
       'name' => 'Calendar3 Week Fill',
       'value' => 'bi-calendar3-week-fill',
@@ -1176,7 +1094,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    82 => 
     array (
       'name' => 'Calendar4',
       'value' => 'bi-calendar4',
@@ -1188,7 +1105,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    83 => 
     array (
       'name' => 'Calendar4 Event',
       'value' => 'bi-calendar4-event',
@@ -1201,7 +1117,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    84 => 
     array (
       'name' => 'Calendar4 Range',
       'value' => 'bi-calendar4-range',
@@ -1214,7 +1129,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    85 => 
     array (
       'name' => 'Calendar4 Week',
       'value' => 'bi-calendar4-week',
@@ -1227,7 +1141,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    86 => 
     array (
       'name' => 'Check',
       'value' => 'bi-check',
@@ -1239,7 +1152,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    87 => 
     array (
       'name' => 'Check All',
       'value' => 'bi-check-all',
@@ -1252,7 +1164,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    88 => 
     array (
       'name' => 'Check Circle',
       'value' => 'bi-check-circle',
@@ -1266,7 +1177,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    89 => 
     array (
       'name' => 'Check Circle Fill',
       'value' => 'bi-check-circle-fill',
@@ -1281,7 +1191,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    90 => 
     array (
       'name' => 'Check Lg',
       'value' => 'bi-check-lg',
@@ -1294,7 +1203,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    91 => 
     array (
       'name' => 'Check Square',
       'value' => 'bi-check-square',
@@ -1308,7 +1216,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    92 => 
     array (
       'name' => 'Check Square Fill',
       'value' => 'bi-check-square-fill',
@@ -1323,7 +1230,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    93 => 
     array (
       'name' => 'Check2',
       'value' => 'bi-check2',
@@ -1335,7 +1241,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    94 => 
     array (
       'name' => 'Check2 All',
       'value' => 'bi-check2-all',
@@ -1348,7 +1253,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    95 => 
     array (
       'name' => 'Check2 Circle',
       'value' => 'bi-check2-circle',
@@ -1361,7 +1265,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    96 => 
     array (
       'name' => 'Check2 Square',
       'value' => 'bi-check2-square',
@@ -1374,7 +1277,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    97 => 
     array (
       'name' => 'Clock',
       'value' => 'bi-clock',
@@ -1387,7 +1289,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    98 => 
     array (
       'name' => 'Clock Fill',
       'value' => 'bi-clock-fill',
@@ -1401,7 +1302,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    99 => 
     array (
       'name' => 'Clock History',
       'value' => 'bi-clock-history',
@@ -1414,7 +1314,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    100 => 
     array (
       'name' => 'Collection',
       'value' => 'bi-collection',
@@ -1427,7 +1326,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    101 => 
     array (
       'name' => 'Collection Fill',
       'value' => 'bi-collection-fill',
@@ -1441,7 +1339,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    102 => 
     array (
       'name' => 'Collection Play',
       'value' => 'bi-collection-play',
@@ -1455,7 +1352,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    103 => 
     array (
       'name' => 'Collection Play Fill',
       'value' => 'bi-collection-play-fill',
@@ -1470,7 +1366,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    104 => 
     array (
       'name' => 'Copy',
       'value' => 'bi-copy',
@@ -1482,7 +1377,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    105 => 
     array (
       'name' => 'Exclamation',
       'value' => 'bi-exclamation',
@@ -1494,7 +1388,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    106 => 
     array (
       'name' => 'Exclamation Circle',
       'value' => 'bi-exclamation-circle',
@@ -1508,7 +1401,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    107 => 
     array (
       'name' => 'Exclamation Circle Fill',
       'value' => 'bi-exclamation-circle-fill',
@@ -1523,7 +1415,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    108 => 
     array (
       'name' => 'Exclamation Diamond',
       'value' => 'bi-exclamation-diamond',
@@ -1537,7 +1428,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    109 => 
     array (
       'name' => 'Exclamation Diamond Fill',
       'value' => 'bi-exclamation-diamond-fill',
@@ -1552,7 +1442,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    110 => 
     array (
       'name' => 'Exclamation Lg',
       'value' => 'bi-exclamation-lg',
@@ -1565,7 +1454,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    111 => 
     array (
       'name' => 'Exclamation Octagon',
       'value' => 'bi-exclamation-octagon',
@@ -1579,7 +1467,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    112 => 
     array (
       'name' => 'Exclamation Octagon Fill',
       'value' => 'bi-exclamation-octagon-fill',
@@ -1594,7 +1481,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    113 => 
     array (
       'name' => 'Exclamation Square',
       'value' => 'bi-exclamation-square',
@@ -1608,7 +1494,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    114 => 
     array (
       'name' => 'Exclamation Square Fill',
       'value' => 'bi-exclamation-square-fill',
@@ -1623,7 +1508,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    115 => 
     array (
       'name' => 'Exclamation Triangle',
       'value' => 'bi-exclamation-triangle',
@@ -1637,7 +1521,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    116 => 
     array (
       'name' => 'Exclamation Triangle Fill',
       'value' => 'bi-exclamation-triangle-fill',
@@ -1652,7 +1535,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    117 => 
     array (
       'name' => 'Eye',
       'value' => 'bi-eye',
@@ -1665,7 +1547,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    118 => 
     array (
       'name' => 'Eye Fill',
       'value' => 'bi-eye-fill',
@@ -1679,7 +1560,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    119 => 
     array (
       'name' => 'Eye Slash',
       'value' => 'bi-eye-slash',
@@ -1693,7 +1573,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    120 => 
     array (
       'name' => 'Eye Slash Fill',
       'value' => 'bi-eye-slash-fill',
@@ -1708,7 +1587,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    121 => 
     array (
       'name' => 'Fingerprint',
       'value' => 'bi-fingerprint',
@@ -1720,7 +1598,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    122 => 
     array (
       'name' => 'Geo',
       'value' => 'bi-geo',
@@ -1733,7 +1610,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    123 => 
     array (
       'name' => 'Geo Alt',
       'value' => 'bi-geo-alt',
@@ -1747,7 +1623,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    124 => 
     array (
       'name' => 'Geo Alt Fill',
       'value' => 'bi-geo-alt-fill',
@@ -1762,7 +1637,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    125 => 
     array (
       'name' => 'Geo Fill',
       'value' => 'bi-geo-fill',
@@ -1776,7 +1650,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    126 => 
     array (
       'name' => 'Heart',
       'value' => 'bi-heart',
@@ -1789,7 +1662,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    127 => 
     array (
       'name' => 'Heart Arrow',
       'value' => 'bi-heart-arrow',
@@ -1802,7 +1674,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    128 => 
     array (
       'name' => 'Heart Fill',
       'value' => 'bi-heart-fill',
@@ -1816,7 +1687,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    129 => 
     array (
       'name' => 'Heart Half',
       'value' => 'bi-heart-half',
@@ -1829,7 +1699,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    130 => 
     array (
       'name' => 'Heart Pulse',
       'value' => 'bi-heart-pulse',
@@ -1843,7 +1712,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    131 => 
     array (
       'name' => 'Heart Pulse Fill',
       'value' => 'bi-heart-pulse-fill',
@@ -1858,7 +1726,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    132 => 
     array (
       'name' => 'Heartbreak',
       'value' => 'bi-heartbreak',
@@ -1871,7 +1738,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    133 => 
     array (
       'name' => 'Heartbreak Fill',
       'value' => 'bi-heartbreak-fill',
@@ -1885,7 +1751,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    134 => 
     array (
       'name' => 'Hearts',
       'value' => 'bi-hearts',
@@ -1897,7 +1762,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    135 => 
     array (
       'name' => 'Hourglass',
       'value' => 'bi-hourglass',
@@ -1909,7 +1773,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    136 => 
     array (
       'name' => 'Hourglass Bottom',
       'value' => 'bi-hourglass-bottom',
@@ -1922,7 +1785,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    137 => 
     array (
       'name' => 'Hourglass Split',
       'value' => 'bi-hourglass-split',
@@ -1935,7 +1797,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    138 => 
     array (
       'name' => 'Hourglass Top',
       'value' => 'bi-hourglass-top',
@@ -1948,7 +1809,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    139 => 
     array (
       'name' => 'Incognito',
       'value' => 'bi-incognito',
@@ -1960,7 +1820,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    140 => 
     array (
       'name' => 'Infinity',
       'value' => 'bi-infinity',
@@ -1972,7 +1831,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    141 => 
     array (
       'name' => 'Info',
       'value' => 'bi-info',
@@ -1984,7 +1842,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    142 => 
     array (
       'name' => 'Info Circle',
       'value' => 'bi-info-circle',
@@ -1998,7 +1855,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    143 => 
     array (
       'name' => 'Info Circle Fill',
       'value' => 'bi-info-circle-fill',
@@ -2013,7 +1869,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    144 => 
     array (
       'name' => 'Info Lg',
       'value' => 'bi-info-lg',
@@ -2026,7 +1881,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    145 => 
     array (
       'name' => 'Info Square',
       'value' => 'bi-info-square',
@@ -2040,7 +1894,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    146 => 
     array (
       'name' => 'Info Square Fill',
       'value' => 'bi-info-square-fill',
@@ -2055,7 +1908,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    147 => 
     array (
       'name' => 'Key',
       'value' => 'bi-key',
@@ -2068,7 +1920,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    148 => 
     array (
       'name' => 'Key Fill',
       'value' => 'bi-key-fill',
@@ -2082,7 +1933,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    149 => 
     array (
       'name' => 'Link',
       'value' => 'bi-link',
@@ -2094,7 +1944,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    150 => 
     array (
       'name' => 'Link 45deg',
       'value' => 'bi-link-45deg',
@@ -2107,7 +1956,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    151 => 
     array (
       'name' => 'Lock',
       'value' => 'bi-lock',
@@ -2120,7 +1968,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    152 => 
     array (
       'name' => 'Lock Fill',
       'value' => 'bi-lock-fill',
@@ -2134,7 +1981,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    153 => 
     array (
       'name' => 'Map',
       'value' => 'bi-map',
@@ -2147,7 +1993,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    154 => 
     array (
       'name' => 'Map Fill',
       'value' => 'bi-map-fill',
@@ -2161,7 +2006,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    155 => 
     array (
       'name' => 'Pin',
       'value' => 'bi-pin',
@@ -2174,7 +2018,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    156 => 
     array (
       'name' => 'Pin Angle',
       'value' => 'bi-pin-angle',
@@ -2188,7 +2031,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    157 => 
     array (
       'name' => 'Pin Angle Fill',
       'value' => 'bi-pin-angle-fill',
@@ -2203,7 +2045,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    158 => 
     array (
       'name' => 'Pin Fill',
       'value' => 'bi-pin-fill',
@@ -2217,7 +2058,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    159 => 
     array (
       'name' => 'Pin Map',
       'value' => 'bi-pin-map',
@@ -2231,7 +2071,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    160 => 
     array (
       'name' => 'Pin Map Fill',
       'value' => 'bi-pin-map-fill',
@@ -2246,7 +2085,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    161 => 
     array (
       'name' => 'Plus',
       'value' => 'bi-plus',
@@ -2258,7 +2096,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    162 => 
     array (
       'name' => 'Plus Circle',
       'value' => 'bi-plus-circle',
@@ -2272,7 +2109,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    163 => 
     array (
       'name' => 'Plus Circle Dotted',
       'value' => 'bi-plus-circle-dotted',
@@ -2286,7 +2122,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    164 => 
     array (
       'name' => 'Plus Circle Fill',
       'value' => 'bi-plus-circle-fill',
@@ -2301,7 +2136,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    165 => 
     array (
       'name' => 'Plus Lg',
       'value' => 'bi-plus-lg',
@@ -2314,7 +2148,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    166 => 
     array (
       'name' => 'Plus Slash Minus',
       'value' => 'bi-plus-slash-minus',
@@ -2328,7 +2161,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    167 => 
     array (
       'name' => 'Plus Square',
       'value' => 'bi-plus-square',
@@ -2342,7 +2174,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    168 => 
     array (
       'name' => 'Plus Square Dotted',
       'value' => 'bi-plus-square-dotted',
@@ -2356,7 +2187,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    169 => 
     array (
       'name' => 'Plus Square Fill',
       'value' => 'bi-plus-square-fill',
@@ -2371,7 +2201,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    170 => 
     array (
       'name' => 'Question',
       'value' => 'bi-question',
@@ -2383,7 +2212,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    171 => 
     array (
       'name' => 'Question Circle',
       'value' => 'bi-question-circle',
@@ -2397,7 +2225,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    172 => 
     array (
       'name' => 'Question Circle Fill',
       'value' => 'bi-question-circle-fill',
@@ -2412,7 +2239,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    173 => 
     array (
       'name' => 'Question Diamond',
       'value' => 'bi-question-diamond',
@@ -2426,7 +2252,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    174 => 
     array (
       'name' => 'Question Diamond Fill',
       'value' => 'bi-question-diamond-fill',
@@ -2441,7 +2266,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    175 => 
     array (
       'name' => 'Question Lg',
       'value' => 'bi-question-lg',
@@ -2454,7 +2278,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    176 => 
     array (
       'name' => 'Question Octagon',
       'value' => 'bi-question-octagon',
@@ -2468,7 +2291,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    177 => 
     array (
       'name' => 'Question Octagon Fill',
       'value' => 'bi-question-octagon-fill',
@@ -2483,7 +2305,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    178 => 
     array (
       'name' => 'Question Square',
       'value' => 'bi-question-square',
@@ -2497,7 +2318,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    179 => 
     array (
       'name' => 'Question Square Fill',
       'value' => 'bi-question-square-fill',
@@ -2512,7 +2332,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    180 => 
     array (
       'name' => 'Search',
       'value' => 'bi-search',
@@ -2524,7 +2343,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    181 => 
     array (
       'name' => 'Search Heart',
       'value' => 'bi-search-heart',
@@ -2538,7 +2356,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    182 => 
     array (
       'name' => 'Search Heart Fill',
       'value' => 'bi-search-heart-fill',
@@ -2553,7 +2370,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    183 => 
     array (
       'name' => 'Shield',
       'value' => 'bi-shield',
@@ -2566,7 +2382,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    184 => 
     array (
       'name' => 'Shield Check',
       'value' => 'bi-shield-check',
@@ -2580,7 +2395,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    185 => 
     array (
       'name' => 'Shield Exclamation',
       'value' => 'bi-shield-exclamation',
@@ -2594,7 +2408,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    186 => 
     array (
       'name' => 'Shield Fill',
       'value' => 'bi-shield-fill',
@@ -2608,7 +2421,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    187 => 
     array (
       'name' => 'Shield Fill Check',
       'value' => 'bi-shield-fill-check',
@@ -2623,7 +2435,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    188 => 
     array (
       'name' => 'Shield Fill Exclamation',
       'value' => 'bi-shield-fill-exclamation',
@@ -2638,7 +2449,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    189 => 
     array (
       'name' => 'Shield Fill Minus',
       'value' => 'bi-shield-fill-minus',
@@ -2653,7 +2463,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    190 => 
     array (
       'name' => 'Shield Fill Plus',
       'value' => 'bi-shield-fill-plus',
@@ -2668,7 +2477,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    191 => 
     array (
       'name' => 'Shield Fill X',
       'value' => 'bi-shield-fill-x',
@@ -2683,7 +2491,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    192 => 
     array (
       'name' => 'Shield Lock',
       'value' => 'bi-shield-lock',
@@ -2697,7 +2504,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    193 => 
     array (
       'name' => 'Shield Lock Fill',
       'value' => 'bi-shield-lock-fill',
@@ -2712,7 +2518,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    194 => 
     array (
       'name' => 'Shield Minus',
       'value' => 'bi-shield-minus',
@@ -2726,7 +2531,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    195 => 
     array (
       'name' => 'Shield Plus',
       'value' => 'bi-shield-plus',
@@ -2740,7 +2544,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    196 => 
     array (
       'name' => 'Shield Shaded',
       'value' => 'bi-shield-shaded',
@@ -2753,7 +2556,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    197 => 
     array (
       'name' => 'Shield Slash',
       'value' => 'bi-shield-slash',
@@ -2767,7 +2569,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    198 => 
     array (
       'name' => 'Shield Slash Fill',
       'value' => 'bi-shield-slash-fill',
@@ -2782,7 +2583,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    199 => 
     array (
       'name' => 'Shield X',
       'value' => 'bi-shield-x',
@@ -2796,7 +2596,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    200 => 
     array (
       'name' => 'Signpost',
       'value' => 'bi-signpost',
@@ -2809,7 +2608,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    201 => 
     array (
       'name' => 'Signpost 2',
       'value' => 'bi-signpost-2',
@@ -2823,7 +2621,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    202 => 
     array (
       'name' => 'Signpost 2 Fill',
       'value' => 'bi-signpost-2-fill',
@@ -2838,7 +2635,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    203 => 
     array (
       'name' => 'Signpost Fill',
       'value' => 'bi-signpost-fill',
@@ -2852,7 +2648,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    204 => 
     array (
       'name' => 'Signpost Split',
       'value' => 'bi-signpost-split',
@@ -2866,7 +2661,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    205 => 
     array (
       'name' => 'Signpost Split Fill',
       'value' => 'bi-signpost-split-fill',
@@ -2881,7 +2675,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    206 => 
     array (
       'name' => 'Slash Lg',
       'value' => 'bi-slash-lg',
@@ -2894,7 +2687,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    207 => 
     array (
       'name' => 'Star',
       'value' => 'bi-star',
@@ -2907,7 +2699,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    208 => 
     array (
       'name' => 'Star Fill',
       'value' => 'bi-star-fill',
@@ -2921,7 +2712,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    209 => 
     array (
       'name' => 'Star Half',
       'value' => 'bi-star-half',
@@ -2934,7 +2724,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    210 => 
     array (
       'name' => 'Stars',
       'value' => 'bi-stars',
@@ -2946,7 +2735,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    211 => 
     array (
       'name' => 'Stopwatch',
       'value' => 'bi-stopwatch',
@@ -2959,7 +2747,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    212 => 
     array (
       'name' => 'Stopwatch Fill',
       'value' => 'bi-stopwatch-fill',
@@ -2973,7 +2760,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    213 => 
     array (
       'name' => 'Subtract',
       'value' => 'bi-subtract',
@@ -2985,7 +2771,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    214 => 
     array (
       'name' => 'Tag',
       'value' => 'bi-tag',
@@ -2998,7 +2783,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    215 => 
     array (
       'name' => 'Tag Fill',
       'value' => 'bi-tag-fill',
@@ -3012,7 +2796,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    216 => 
     array (
       'name' => 'Tags',
       'value' => 'bi-tags',
@@ -3025,7 +2808,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    217 => 
     array (
       'name' => 'Tags Fill',
       'value' => 'bi-tags-fill',
@@ -3039,7 +2821,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    218 => 
     array (
       'name' => 'Translate',
       'value' => 'bi-translate',
@@ -3051,7 +2832,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    219 => 
     array (
       'name' => 'Trash',
       'value' => 'bi-trash',
@@ -3064,7 +2844,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    220 => 
     array (
       'name' => 'Trash Fill',
       'value' => 'bi-trash-fill',
@@ -3078,7 +2857,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    221 => 
     array (
       'name' => 'Trash2',
       'value' => 'bi-trash2',
@@ -3091,7 +2869,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    222 => 
     array (
       'name' => 'Trash2 Fill',
       'value' => 'bi-trash2-fill',
@@ -3105,7 +2882,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    223 => 
     array (
       'name' => 'Trash3',
       'value' => 'bi-trash3',
@@ -3118,7 +2894,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    224 => 
     array (
       'name' => 'Trash3 Fill',
       'value' => 'bi-trash3-fill',
@@ -3132,7 +2907,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    225 => 
     array (
       'name' => 'Universal Access',
       'value' => 'bi-universal-access',
@@ -3145,7 +2919,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    226 => 
     array (
       'name' => 'Universal Access Circle',
       'value' => 'bi-universal-access-circle',
@@ -3159,7 +2932,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    227 => 
     array (
       'name' => 'Unlock',
       'value' => 'bi-unlock',
@@ -3172,7 +2944,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    228 => 
     array (
       'name' => 'Unlock Fill',
       'value' => 'bi-unlock-fill',
@@ -3186,7 +2957,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    229 => 
     array (
       'name' => 'Unlock2',
       'value' => 'bi-unlock2',
@@ -3199,7 +2969,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    230 => 
     array (
       'name' => 'Unlock2 Fill',
       'value' => 'bi-unlock2-fill',
@@ -3213,7 +2982,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    231 => 
     array (
       'name' => 'X',
       'value' => 'bi-x',
@@ -3225,7 +2993,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    232 => 
     array (
       'name' => 'X Circle',
       'value' => 'bi-x-circle',
@@ -3239,7 +3006,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    233 => 
     array (
       'name' => 'X Circle Fill',
       'value' => 'bi-x-circle-fill',
@@ -3254,7 +3020,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    234 => 
     array (
       'name' => 'X Diamond',
       'value' => 'bi-x-diamond',
@@ -3268,7 +3033,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    235 => 
     array (
       'name' => 'X Diamond Fill',
       'value' => 'bi-x-diamond-fill',
@@ -3283,7 +3047,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    236 => 
     array (
       'name' => 'X Lg',
       'value' => 'bi-x-lg',
@@ -3296,7 +3059,6 @@ return array (
       'category' => 'general',
       'has_variants' => false,
     ),
-    237 => 
     array (
       'name' => 'X Octagon',
       'value' => 'bi-x-octagon',
@@ -3310,7 +3072,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    238 => 
     array (
       'name' => 'X Octagon Fill',
       'value' => 'bi-x-octagon-fill',
@@ -3325,7 +3086,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    239 => 
     array (
       'name' => 'X Square',
       'value' => 'bi-x-square',
@@ -3339,7 +3099,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    240 => 
     array (
       'name' => 'X Square Fill',
       'value' => 'bi-x-square-fill',

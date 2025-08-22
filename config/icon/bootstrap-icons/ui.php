@@ -6,7 +6,6 @@ return array (
   'description' => '使用者介面相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Align Bottom',
       'value' => 'bi-align-bottom',
@@ -19,7 +18,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    1 => 
     array (
       'name' => 'Align Center',
       'value' => 'bi-align-center',
@@ -32,7 +30,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    2 => 
     array (
       'name' => 'Align End',
       'value' => 'bi-align-end',
@@ -45,7 +42,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    3 => 
     array (
       'name' => 'Align Middle',
       'value' => 'bi-align-middle',
@@ -58,7 +54,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    4 => 
     array (
       'name' => 'Align Start',
       'value' => 'bi-align-start',
@@ -71,7 +66,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    5 => 
     array (
       'name' => 'Align Top',
       'value' => 'bi-align-top',
@@ -84,7 +78,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    6 => 
     array (
       'name' => 'App',
       'value' => 'bi-app',
@@ -96,7 +89,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    7 => 
     array (
       'name' => 'App Indicator',
       'value' => 'bi-app-indicator',
@@ -109,7 +101,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    8 => 
     array (
       'name' => 'Arrow 90deg Down',
       'value' => 'bi-arrow-90deg-down',
@@ -123,7 +114,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    9 => 
     array (
       'name' => 'Arrow 90deg Left',
       'value' => 'bi-arrow-90deg-left',
@@ -137,7 +127,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    10 => 
     array (
       'name' => 'Arrow 90deg Right',
       'value' => 'bi-arrow-90deg-right',
@@ -151,7 +140,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    11 => 
     array (
       'name' => 'Arrow 90deg Up',
       'value' => 'bi-arrow-90deg-up',
@@ -165,7 +153,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    12 => 
     array (
       'name' => 'Arrow Bar Down',
       'value' => 'bi-arrow-bar-down',
@@ -179,7 +166,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    13 => 
     array (
       'name' => 'Arrow Bar Left',
       'value' => 'bi-arrow-bar-left',
@@ -193,7 +179,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    14 => 
     array (
       'name' => 'Arrow Bar Right',
       'value' => 'bi-arrow-bar-right',
@@ -207,7 +192,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    15 => 
     array (
       'name' => 'Arrow Bar Up',
       'value' => 'bi-arrow-bar-up',
@@ -221,7 +205,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    16 => 
     array (
       'name' => 'Arrow Clockwise',
       'value' => 'bi-arrow-clockwise',
@@ -234,7 +217,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    17 => 
     array (
       'name' => 'Arrow Counterclockwise',
       'value' => 'bi-arrow-counterclockwise',
@@ -247,7 +229,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    18 => 
     array (
       'name' => 'Arrow Down',
       'value' => 'bi-arrow-down',
@@ -260,7 +241,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    19 => 
     array (
       'name' => 'Arrow Down Circle',
       'value' => 'bi-arrow-down-circle',
@@ -275,7 +255,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    20 => 
     array (
       'name' => 'Arrow Down Circle Fill',
       'value' => 'bi-arrow-down-circle-fill',
@@ -291,7 +270,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    21 => 
     array (
       'name' => 'Arrow Down Left',
       'value' => 'bi-arrow-down-left',
@@ -305,7 +283,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    22 => 
     array (
       'name' => 'Arrow Down Left Circle',
       'value' => 'bi-arrow-down-left-circle',
@@ -321,7 +298,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    23 => 
     array (
       'name' => 'Arrow Down Left Circle Fill',
       'value' => 'bi-arrow-down-left-circle-fill',
@@ -338,7 +314,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    24 => 
     array (
       'name' => 'Arrow Down Left Square',
       'value' => 'bi-arrow-down-left-square',
@@ -354,7 +329,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    25 => 
     array (
       'name' => 'Arrow Down Left Square Fill',
       'value' => 'bi-arrow-down-left-square-fill',
@@ -371,7 +345,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    26 => 
     array (
       'name' => 'Arrow Down Right',
       'value' => 'bi-arrow-down-right',
@@ -385,7 +358,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    27 => 
     array (
       'name' => 'Arrow Down Right Circle',
       'value' => 'bi-arrow-down-right-circle',
@@ -401,7 +373,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    28 => 
     array (
       'name' => 'Arrow Down Right Circle Fill',
       'value' => 'bi-arrow-down-right-circle-fill',
@@ -418,7 +389,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    29 => 
     array (
       'name' => 'Arrow Down Right Square',
       'value' => 'bi-arrow-down-right-square',
@@ -434,7 +404,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    30 => 
     array (
       'name' => 'Arrow Down Right Square Fill',
       'value' => 'bi-arrow-down-right-square-fill',
@@ -451,7 +420,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    31 => 
     array (
       'name' => 'Arrow Down Short',
       'value' => 'bi-arrow-down-short',
@@ -465,7 +433,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    32 => 
     array (
       'name' => 'Arrow Down Square',
       'value' => 'bi-arrow-down-square',
@@ -480,7 +447,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    33 => 
     array (
       'name' => 'Arrow Down Square Fill',
       'value' => 'bi-arrow-down-square-fill',
@@ -496,7 +462,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    34 => 
     array (
       'name' => 'Arrow Down Up',
       'value' => 'bi-arrow-down-up',
@@ -510,7 +475,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    35 => 
     array (
       'name' => 'Arrow Left',
       'value' => 'bi-arrow-left',
@@ -523,7 +487,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    36 => 
     array (
       'name' => 'Arrow Left Circle',
       'value' => 'bi-arrow-left-circle',
@@ -538,7 +501,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    37 => 
     array (
       'name' => 'Arrow Left Circle Fill',
       'value' => 'bi-arrow-left-circle-fill',
@@ -554,7 +516,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    38 => 
     array (
       'name' => 'Arrow Left Right',
       'value' => 'bi-arrow-left-right',
@@ -568,7 +529,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    39 => 
     array (
       'name' => 'Arrow Left Short',
       'value' => 'bi-arrow-left-short',
@@ -582,7 +542,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    40 => 
     array (
       'name' => 'Arrow Left Square',
       'value' => 'bi-arrow-left-square',
@@ -597,7 +556,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    41 => 
     array (
       'name' => 'Arrow Left Square Fill',
       'value' => 'bi-arrow-left-square-fill',
@@ -613,7 +571,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    42 => 
     array (
       'name' => 'Arrow Repeat',
       'value' => 'bi-arrow-repeat',
@@ -626,7 +583,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    43 => 
     array (
       'name' => 'Arrow Return Left',
       'value' => 'bi-arrow-return-left',
@@ -640,7 +596,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    44 => 
     array (
       'name' => 'Arrow Return Right',
       'value' => 'bi-arrow-return-right',
@@ -654,7 +609,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    45 => 
     array (
       'name' => 'Arrow Right',
       'value' => 'bi-arrow-right',
@@ -667,7 +621,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    46 => 
     array (
       'name' => 'Arrow Right Circle',
       'value' => 'bi-arrow-right-circle',
@@ -682,7 +635,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    47 => 
     array (
       'name' => 'Arrow Right Circle Fill',
       'value' => 'bi-arrow-right-circle-fill',
@@ -698,7 +650,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    48 => 
     array (
       'name' => 'Arrow Right Short',
       'value' => 'bi-arrow-right-short',
@@ -712,7 +663,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    49 => 
     array (
       'name' => 'Arrow Right Square',
       'value' => 'bi-arrow-right-square',
@@ -727,7 +677,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    50 => 
     array (
       'name' => 'Arrow Right Square Fill',
       'value' => 'bi-arrow-right-square-fill',
@@ -743,7 +692,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    51 => 
     array (
       'name' => 'Arrow Up',
       'value' => 'bi-arrow-up',
@@ -756,7 +704,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    52 => 
     array (
       'name' => 'Arrow Up Circle',
       'value' => 'bi-arrow-up-circle',
@@ -771,7 +718,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    53 => 
     array (
       'name' => 'Arrow Up Circle Fill',
       'value' => 'bi-arrow-up-circle-fill',
@@ -787,7 +733,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    54 => 
     array (
       'name' => 'Arrow Up Left',
       'value' => 'bi-arrow-up-left',
@@ -801,7 +746,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    55 => 
     array (
       'name' => 'Arrow Up Left Circle',
       'value' => 'bi-arrow-up-left-circle',
@@ -817,7 +761,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    56 => 
     array (
       'name' => 'Arrow Up Left Circle Fill',
       'value' => 'bi-arrow-up-left-circle-fill',
@@ -834,7 +777,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
     array (
       'name' => 'Arrow Up Left Square',
       'value' => 'bi-arrow-up-left-square',
@@ -850,7 +792,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    58 => 
     array (
       'name' => 'Arrow Up Left Square Fill',
       'value' => 'bi-arrow-up-left-square-fill',
@@ -867,7 +808,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    59 => 
     array (
       'name' => 'Arrow Up Right',
       'value' => 'bi-arrow-up-right',
@@ -881,7 +821,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    60 => 
     array (
       'name' => 'Arrow Up Right Circle',
       'value' => 'bi-arrow-up-right-circle',
@@ -897,7 +836,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    61 => 
     array (
       'name' => 'Arrow Up Right Circle Fill',
       'value' => 'bi-arrow-up-right-circle-fill',
@@ -914,7 +852,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    62 => 
     array (
       'name' => 'Arrow Up Right Square',
       'value' => 'bi-arrow-up-right-square',
@@ -930,7 +867,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    63 => 
     array (
       'name' => 'Arrow Up Right Square Fill',
       'value' => 'bi-arrow-up-right-square-fill',
@@ -947,7 +883,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    64 => 
     array (
       'name' => 'Arrow Up Short',
       'value' => 'bi-arrow-up-short',
@@ -961,7 +896,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    65 => 
     array (
       'name' => 'Arrow Up Square',
       'value' => 'bi-arrow-up-square',
@@ -976,7 +910,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    66 => 
     array (
       'name' => 'Arrow Up Square Fill',
       'value' => 'bi-arrow-up-square-fill',
@@ -992,7 +925,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    67 => 
     array (
       'name' => 'Arrows',
       'value' => 'bi-arrows',
@@ -1004,7 +936,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    68 => 
     array (
       'name' => 'Arrows Angle Contract',
       'value' => 'bi-arrows-angle-contract',
@@ -1018,7 +949,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    69 => 
     array (
       'name' => 'Arrows Angle Expand',
       'value' => 'bi-arrows-angle-expand',
@@ -1032,7 +962,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    70 => 
     array (
       'name' => 'Arrows Collapse',
       'value' => 'bi-arrows-collapse',
@@ -1045,7 +974,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    71 => 
     array (
       'name' => 'Arrows Collapse Vertical',
       'value' => 'bi-arrows-collapse-vertical',
@@ -1059,7 +987,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    72 => 
     array (
       'name' => 'Arrows Expand',
       'value' => 'bi-arrows-expand',
@@ -1072,7 +999,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    73 => 
     array (
       'name' => 'Arrows Expand Vertical',
       'value' => 'bi-arrows-expand-vertical',
@@ -1086,7 +1012,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    74 => 
     array (
       'name' => 'Arrows Fullscreen',
       'value' => 'bi-arrows-fullscreen',
@@ -1099,7 +1024,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    75 => 
     array (
       'name' => 'Arrows Move',
       'value' => 'bi-arrows-move',
@@ -1112,7 +1036,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    76 => 
     array (
       'name' => 'Arrows Vertical',
       'value' => 'bi-arrows-vertical',
@@ -1125,7 +1048,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    77 => 
     array (
       'name' => 'Aspect Ratio',
       'value' => 'bi-aspect-ratio',
@@ -1139,7 +1061,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    78 => 
     array (
       'name' => 'Aspect Ratio Fill',
       'value' => 'bi-aspect-ratio-fill',
@@ -1154,7 +1075,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    79 => 
     array (
       'name' => 'Badge 3d',
       'value' => 'bi-badge-3d',
@@ -1168,7 +1088,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    80 => 
     array (
       'name' => 'Badge 3d Fill',
       'value' => 'bi-badge-3d-fill',
@@ -1183,7 +1102,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    81 => 
     array (
       'name' => 'Badge 4k',
       'value' => 'bi-badge-4k',
@@ -1197,7 +1115,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    82 => 
     array (
       'name' => 'Badge 4k Fill',
       'value' => 'bi-badge-4k-fill',
@@ -1212,7 +1129,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    83 => 
     array (
       'name' => 'Badge 8k',
       'value' => 'bi-badge-8k',
@@ -1226,7 +1142,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    84 => 
     array (
       'name' => 'Badge 8k Fill',
       'value' => 'bi-badge-8k-fill',
@@ -1241,7 +1156,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    85 => 
     array (
       'name' => 'Badge Ad',
       'value' => 'bi-badge-ad',
@@ -1255,7 +1169,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    86 => 
     array (
       'name' => 'Badge Ad Fill',
       'value' => 'bi-badge-ad-fill',
@@ -1270,7 +1183,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    87 => 
     array (
       'name' => 'Badge Ar',
       'value' => 'bi-badge-ar',
@@ -1284,7 +1196,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    88 => 
     array (
       'name' => 'Badge Ar Fill',
       'value' => 'bi-badge-ar-fill',
@@ -1299,7 +1210,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    89 => 
     array (
       'name' => 'Badge Cc',
       'value' => 'bi-badge-cc',
@@ -1313,7 +1223,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    90 => 
     array (
       'name' => 'Badge Cc Fill',
       'value' => 'bi-badge-cc-fill',
@@ -1328,7 +1237,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    91 => 
     array (
       'name' => 'Badge Hd',
       'value' => 'bi-badge-hd',
@@ -1342,7 +1250,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    92 => 
     array (
       'name' => 'Badge Hd Fill',
       'value' => 'bi-badge-hd-fill',
@@ -1357,7 +1264,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    93 => 
     array (
       'name' => 'Badge Tm',
       'value' => 'bi-badge-tm',
@@ -1371,7 +1277,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    94 => 
     array (
       'name' => 'Badge Tm Fill',
       'value' => 'bi-badge-tm-fill',
@@ -1386,7 +1291,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    95 => 
     array (
       'name' => 'Badge Vo',
       'value' => 'bi-badge-vo',
@@ -1400,7 +1304,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    96 => 
     array (
       'name' => 'Badge Vo Fill',
       'value' => 'bi-badge-vo-fill',
@@ -1415,7 +1318,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    97 => 
     array (
       'name' => 'Badge Vr',
       'value' => 'bi-badge-vr',
@@ -1429,7 +1331,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    98 => 
     array (
       'name' => 'Badge Vr Fill',
       'value' => 'bi-badge-vr-fill',
@@ -1444,7 +1345,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    99 => 
     array (
       'name' => 'Badge Wc',
       'value' => 'bi-badge-wc',
@@ -1458,7 +1358,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    100 => 
     array (
       'name' => 'Badge Wc Fill',
       'value' => 'bi-badge-wc-fill',
@@ -1473,7 +1372,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    101 => 
     array (
       'name' => 'Bar Chart',
       'value' => 'bi-bar-chart',
@@ -1487,7 +1385,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    102 => 
     array (
       'name' => 'Bar Chart Fill',
       'value' => 'bi-bar-chart-fill',
@@ -1502,7 +1399,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    103 => 
     array (
       'name' => 'Bar Chart Line',
       'value' => 'bi-bar-chart-line',
@@ -1517,7 +1413,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    104 => 
     array (
       'name' => 'Bar Chart Line Fill',
       'value' => 'bi-bar-chart-line-fill',
@@ -1533,7 +1428,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    105 => 
     array (
       'name' => 'Bar Chart Steps',
       'value' => 'bi-bar-chart-steps',
@@ -1547,7 +1441,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    106 => 
     array (
       'name' => 'Battery Low',
       'value' => 'bi-battery-low',
@@ -1560,7 +1453,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    107 => 
     array (
       'name' => 'Border',
       'value' => 'bi-border',
@@ -1572,7 +1464,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    108 => 
     array (
       'name' => 'Border All',
       'value' => 'bi-border-all',
@@ -1585,7 +1476,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    109 => 
     array (
       'name' => 'Border Bottom',
       'value' => 'bi-border-bottom',
@@ -1598,7 +1488,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    110 => 
     array (
       'name' => 'Border Center',
       'value' => 'bi-border-center',
@@ -1611,7 +1500,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    111 => 
     array (
       'name' => 'Border Inner',
       'value' => 'bi-border-inner',
@@ -1624,7 +1512,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    112 => 
     array (
       'name' => 'Border Left',
       'value' => 'bi-border-left',
@@ -1637,7 +1524,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    113 => 
     array (
       'name' => 'Border Middle',
       'value' => 'bi-border-middle',
@@ -1650,7 +1536,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    114 => 
     array (
       'name' => 'Border Outer',
       'value' => 'bi-border-outer',
@@ -1663,7 +1548,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    115 => 
     array (
       'name' => 'Border Right',
       'value' => 'bi-border-right',
@@ -1676,7 +1560,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    116 => 
     array (
       'name' => 'Border Style',
       'value' => 'bi-border-style',
@@ -1689,7 +1572,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    117 => 
     array (
       'name' => 'Border Top',
       'value' => 'bi-border-top',
@@ -1702,7 +1584,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    118 => 
     array (
       'name' => 'Border Width',
       'value' => 'bi-border-width',
@@ -1715,7 +1596,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    119 => 
     array (
       'name' => 'Bounding Box',
       'value' => 'bi-bounding-box',
@@ -1728,7 +1608,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    120 => 
     array (
       'name' => 'Bounding Box Circles',
       'value' => 'bi-bounding-box-circles',
@@ -1742,20 +1621,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    121 => 
-    array (
-      'name' => 'Box',
-      'value' => 'bi-box',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'box',
-      ),
-      'category' => 'ui',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    122 => 
     array (
       'name' => 'Box Arrow Down',
       'value' => 'bi-box-arrow-down',
@@ -1769,7 +1634,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    123 => 
     array (
       'name' => 'Box Arrow Down Left',
       'value' => 'bi-box-arrow-down-left',
@@ -1784,7 +1648,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    124 => 
     array (
       'name' => 'Box Arrow Down Right',
       'value' => 'bi-box-arrow-down-right',
@@ -1799,7 +1662,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    125 => 
     array (
       'name' => 'Box Arrow In Down',
       'value' => 'bi-box-arrow-in-down',
@@ -1814,7 +1676,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    126 => 
     array (
       'name' => 'Box Arrow In Down Left',
       'value' => 'bi-box-arrow-in-down-left',
@@ -1830,7 +1691,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    127 => 
     array (
       'name' => 'Box Arrow In Down Right',
       'value' => 'bi-box-arrow-in-down-right',
@@ -1846,7 +1706,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    128 => 
     array (
       'name' => 'Box Arrow In Left',
       'value' => 'bi-box-arrow-in-left',
@@ -1861,7 +1720,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    129 => 
     array (
       'name' => 'Box Arrow In Right',
       'value' => 'bi-box-arrow-in-right',
@@ -1876,7 +1734,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    130 => 
     array (
       'name' => 'Box Arrow In Up',
       'value' => 'bi-box-arrow-in-up',
@@ -1891,7 +1748,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    131 => 
     array (
       'name' => 'Box Arrow In Up Left',
       'value' => 'bi-box-arrow-in-up-left',
@@ -1907,7 +1763,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    132 => 
     array (
       'name' => 'Box Arrow In Up Right',
       'value' => 'bi-box-arrow-in-up-right',
@@ -1923,7 +1778,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    133 => 
     array (
       'name' => 'Box Arrow Left',
       'value' => 'bi-box-arrow-left',
@@ -1937,7 +1791,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    134 => 
     array (
       'name' => 'Box Arrow Right',
       'value' => 'bi-box-arrow-right',
@@ -1951,7 +1804,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    135 => 
     array (
       'name' => 'Box Arrow Up',
       'value' => 'bi-box-arrow-up',
@@ -1965,7 +1817,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    136 => 
     array (
       'name' => 'Box Arrow Up Left',
       'value' => 'bi-box-arrow-up-left',
@@ -1980,7 +1831,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    137 => 
     array (
       'name' => 'Box Arrow Up Right',
       'value' => 'bi-box-arrow-up-right',
@@ -1995,21 +1845,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    138 => 
-    array (
-      'name' => 'Box Seam',
-      'value' => 'bi-box-seam',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'box',
-        1 => 'seam',
-      ),
-      'category' => 'ui',
-      'has_variants' => true,
-      'variant_type' => 'outline',
-    ),
-    139 => 
     array (
       'name' => 'Brightness Alt High',
       'value' => 'bi-brightness-alt-high',
@@ -2024,7 +1859,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    140 => 
     array (
       'name' => 'Brightness Alt High Fill',
       'value' => 'bi-brightness-alt-high-fill',
@@ -2040,7 +1874,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    141 => 
     array (
       'name' => 'Brightness Alt Low',
       'value' => 'bi-brightness-alt-low',
@@ -2055,7 +1888,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    142 => 
     array (
       'name' => 'Brightness Alt Low Fill',
       'value' => 'bi-brightness-alt-low-fill',
@@ -2071,7 +1903,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    143 => 
     array (
       'name' => 'Brightness High',
       'value' => 'bi-brightness-high',
@@ -2085,7 +1916,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    144 => 
     array (
       'name' => 'Brightness High Fill',
       'value' => 'bi-brightness-high-fill',
@@ -2100,7 +1930,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    145 => 
     array (
       'name' => 'Brightness Low',
       'value' => 'bi-brightness-low',
@@ -2114,7 +1943,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    146 => 
     array (
       'name' => 'Brightness Low Fill',
       'value' => 'bi-brightness-low-fill',
@@ -2129,7 +1957,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    147 => 
     array (
       'name' => 'Brilliance',
       'value' => 'bi-brilliance',
@@ -2141,7 +1968,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    148 => 
     array (
       'name' => 'Card Checklist',
       'value' => 'bi-card-checklist',
@@ -2154,7 +1980,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    149 => 
     array (
       'name' => 'Card Heading',
       'value' => 'bi-card-heading',
@@ -2167,7 +1992,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    150 => 
     array (
       'name' => 'Card Image',
       'value' => 'bi-card-image',
@@ -2180,7 +2004,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    151 => 
     array (
       'name' => 'Card List',
       'value' => 'bi-card-list',
@@ -2193,7 +2016,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    152 => 
     array (
       'name' => 'Card Text',
       'value' => 'bi-card-text',
@@ -2206,7 +2028,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    153 => 
     array (
       'name' => 'Caret Down',
       'value' => 'bi-caret-down',
@@ -2220,7 +2041,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    154 => 
     array (
       'name' => 'Caret Down Fill',
       'value' => 'bi-caret-down-fill',
@@ -2235,7 +2055,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    155 => 
     array (
       'name' => 'Caret Down Square',
       'value' => 'bi-caret-down-square',
@@ -2250,7 +2069,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    156 => 
     array (
       'name' => 'Caret Down Square Fill',
       'value' => 'bi-caret-down-square-fill',
@@ -2266,7 +2084,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    157 => 
     array (
       'name' => 'Caret Left',
       'value' => 'bi-caret-left',
@@ -2280,7 +2097,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    158 => 
     array (
       'name' => 'Caret Left Fill',
       'value' => 'bi-caret-left-fill',
@@ -2295,7 +2111,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    159 => 
     array (
       'name' => 'Caret Left Square',
       'value' => 'bi-caret-left-square',
@@ -2310,7 +2125,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    160 => 
     array (
       'name' => 'Caret Left Square Fill',
       'value' => 'bi-caret-left-square-fill',
@@ -2326,7 +2140,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    161 => 
     array (
       'name' => 'Caret Right',
       'value' => 'bi-caret-right',
@@ -2340,7 +2153,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    162 => 
     array (
       'name' => 'Caret Right Fill',
       'value' => 'bi-caret-right-fill',
@@ -2355,7 +2167,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    163 => 
     array (
       'name' => 'Caret Right Square',
       'value' => 'bi-caret-right-square',
@@ -2370,7 +2181,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    164 => 
     array (
       'name' => 'Caret Right Square Fill',
       'value' => 'bi-caret-right-square-fill',
@@ -2386,7 +2196,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    165 => 
     array (
       'name' => 'Caret Up',
       'value' => 'bi-caret-up',
@@ -2400,7 +2209,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    166 => 
     array (
       'name' => 'Caret Up Fill',
       'value' => 'bi-caret-up-fill',
@@ -2415,7 +2223,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    167 => 
     array (
       'name' => 'Caret Up Square',
       'value' => 'bi-caret-up-square',
@@ -2430,7 +2237,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    168 => 
     array (
       'name' => 'Caret Up Square Fill',
       'value' => 'bi-caret-up-square-fill',
@@ -2446,7 +2252,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    169 => 
     array (
       'name' => 'Chevron Bar Contract',
       'value' => 'bi-chevron-bar-contract',
@@ -2460,7 +2265,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    170 => 
     array (
       'name' => 'Chevron Bar Down',
       'value' => 'bi-chevron-bar-down',
@@ -2474,7 +2278,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    171 => 
     array (
       'name' => 'Chevron Bar Expand',
       'value' => 'bi-chevron-bar-expand',
@@ -2488,7 +2291,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    172 => 
     array (
       'name' => 'Chevron Bar Left',
       'value' => 'bi-chevron-bar-left',
@@ -2502,7 +2304,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    173 => 
     array (
       'name' => 'Chevron Bar Right',
       'value' => 'bi-chevron-bar-right',
@@ -2516,7 +2317,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    174 => 
     array (
       'name' => 'Chevron Bar Up',
       'value' => 'bi-chevron-bar-up',
@@ -2530,7 +2330,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    175 => 
     array (
       'name' => 'Chevron Compact Down',
       'value' => 'bi-chevron-compact-down',
@@ -2544,7 +2343,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    176 => 
     array (
       'name' => 'Chevron Compact Left',
       'value' => 'bi-chevron-compact-left',
@@ -2558,7 +2356,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    177 => 
     array (
       'name' => 'Chevron Compact Right',
       'value' => 'bi-chevron-compact-right',
@@ -2572,7 +2369,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    178 => 
     array (
       'name' => 'Chevron Compact Up',
       'value' => 'bi-chevron-compact-up',
@@ -2586,7 +2382,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    179 => 
     array (
       'name' => 'Chevron Contract',
       'value' => 'bi-chevron-contract',
@@ -2599,7 +2394,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    180 => 
     array (
       'name' => 'Chevron Double Down',
       'value' => 'bi-chevron-double-down',
@@ -2613,7 +2407,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    181 => 
     array (
       'name' => 'Chevron Double Left',
       'value' => 'bi-chevron-double-left',
@@ -2627,7 +2420,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    182 => 
     array (
       'name' => 'Chevron Double Right',
       'value' => 'bi-chevron-double-right',
@@ -2641,7 +2433,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    183 => 
     array (
       'name' => 'Chevron Double Up',
       'value' => 'bi-chevron-double-up',
@@ -2655,7 +2446,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    184 => 
     array (
       'name' => 'Chevron Down',
       'value' => 'bi-chevron-down',
@@ -2668,7 +2458,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    185 => 
     array (
       'name' => 'Chevron Expand',
       'value' => 'bi-chevron-expand',
@@ -2681,7 +2470,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    186 => 
     array (
       'name' => 'Chevron Left',
       'value' => 'bi-chevron-left',
@@ -2694,7 +2482,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    187 => 
     array (
       'name' => 'Chevron Right',
       'value' => 'bi-chevron-right',
@@ -2707,7 +2494,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    188 => 
     array (
       'name' => 'Chevron Up',
       'value' => 'bi-chevron-up',
@@ -2720,7 +2506,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    189 => 
     array (
       'name' => 'Circle',
       'value' => 'bi-circle',
@@ -2733,7 +2518,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    190 => 
     array (
       'name' => 'Circle Fill',
       'value' => 'bi-circle-fill',
@@ -2747,7 +2531,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    191 => 
     array (
       'name' => 'Circle Half',
       'value' => 'bi-circle-half',
@@ -2760,7 +2543,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    192 => 
     array (
       'name' => 'Circle Square',
       'value' => 'bi-circle-square',
@@ -2773,7 +2555,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    193 => 
     array (
       'name' => 'Columns',
       'value' => 'bi-columns',
@@ -2785,7 +2566,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    194 => 
     array (
       'name' => 'Columns Gap',
       'value' => 'bi-columns-gap',
@@ -2798,7 +2578,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    195 => 
     array (
       'name' => 'Crosshair',
       'value' => 'bi-crosshair',
@@ -2810,7 +2589,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    196 => 
     array (
       'name' => 'Crosshair2',
       'value' => 'bi-crosshair2',
@@ -2822,7 +2600,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    197 => 
     array (
       'name' => 'Cursor',
       'value' => 'bi-cursor',
@@ -2835,7 +2612,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    198 => 
     array (
       'name' => 'Cursor Fill',
       'value' => 'bi-cursor-fill',
@@ -2849,7 +2625,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    199 => 
     array (
       'name' => 'Cursor Text',
       'value' => 'bi-cursor-text',
@@ -2862,7 +2637,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    200 => 
     array (
       'name' => 'Dash',
       'value' => 'bi-dash',
@@ -2874,7 +2648,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    201 => 
     array (
       'name' => 'Dash Circle',
       'value' => 'bi-dash-circle',
@@ -2888,7 +2661,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    202 => 
     array (
       'name' => 'Dash Circle Dotted',
       'value' => 'bi-dash-circle-dotted',
@@ -2902,7 +2674,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    203 => 
     array (
       'name' => 'Dash Circle Fill',
       'value' => 'bi-dash-circle-fill',
@@ -2917,7 +2688,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    204 => 
     array (
       'name' => 'Dash Lg',
       'value' => 'bi-dash-lg',
@@ -2930,7 +2700,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    205 => 
     array (
       'name' => 'Dash Square',
       'value' => 'bi-dash-square',
@@ -2944,7 +2713,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    206 => 
     array (
       'name' => 'Dash Square Dotted',
       'value' => 'bi-dash-square-dotted',
@@ -2958,7 +2726,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    207 => 
     array (
       'name' => 'Dash Square Fill',
       'value' => 'bi-dash-square-fill',
@@ -2973,7 +2740,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    208 => 
     array (
       'name' => 'Diagram 2',
       'value' => 'bi-diagram-2',
@@ -2987,7 +2753,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    209 => 
     array (
       'name' => 'Diagram 2 Fill',
       'value' => 'bi-diagram-2-fill',
@@ -3002,7 +2767,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    210 => 
     array (
       'name' => 'Diagram 3',
       'value' => 'bi-diagram-3',
@@ -3016,7 +2780,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    211 => 
     array (
       'name' => 'Diagram 3 Fill',
       'value' => 'bi-diagram-3-fill',
@@ -3031,7 +2794,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    212 => 
     array (
       'name' => 'Diamond',
       'value' => 'bi-diamond',
@@ -3044,7 +2806,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    213 => 
     array (
       'name' => 'Diamond Fill',
       'value' => 'bi-diamond-fill',
@@ -3058,7 +2819,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    214 => 
     array (
       'name' => 'Diamond Half',
       'value' => 'bi-diamond-half',
@@ -3071,7 +2831,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    215 => 
     array (
       'name' => 'Display',
       'value' => 'bi-display',
@@ -3084,7 +2843,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    216 => 
     array (
       'name' => 'Display Fill',
       'value' => 'bi-display-fill',
@@ -3098,7 +2856,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    217 => 
     array (
       'name' => 'Distribute Horizontal',
       'value' => 'bi-distribute-horizontal',
@@ -3111,7 +2868,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    218 => 
     array (
       'name' => 'Distribute Vertical',
       'value' => 'bi-distribute-vertical',
@@ -3124,7 +2880,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    219 => 
     array (
       'name' => 'Dot',
       'value' => 'bi-dot',
@@ -3136,7 +2891,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    220 => 
     array (
       'name' => 'Eject',
       'value' => 'bi-eject',
@@ -3149,7 +2903,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    221 => 
     array (
       'name' => 'Eject Fill',
       'value' => 'bi-eject-fill',
@@ -3163,7 +2916,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    222 => 
     array (
       'name' => 'Exclude',
       'value' => 'bi-exclude',
@@ -3175,7 +2927,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    223 => 
     array (
       'name' => 'Filter',
       'value' => 'bi-filter',
@@ -3187,7 +2938,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    224 => 
     array (
       'name' => 'Filter Circle',
       'value' => 'bi-filter-circle',
@@ -3201,7 +2951,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    225 => 
     array (
       'name' => 'Filter Circle Fill',
       'value' => 'bi-filter-circle-fill',
@@ -3216,7 +2965,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    226 => 
     array (
       'name' => 'Filter Left',
       'value' => 'bi-filter-left',
@@ -3229,7 +2977,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    227 => 
     array (
       'name' => 'Filter Right',
       'value' => 'bi-filter-right',
@@ -3242,7 +2989,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    228 => 
     array (
       'name' => 'Filter Square',
       'value' => 'bi-filter-square',
@@ -3256,7 +3002,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    229 => 
     array (
       'name' => 'Filter Square Fill',
       'value' => 'bi-filter-square-fill',
@@ -3271,7 +3016,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    230 => 
     array (
       'name' => 'Forward',
       'value' => 'bi-forward',
@@ -3284,7 +3028,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    231 => 
     array (
       'name' => 'Forward Fill',
       'value' => 'bi-forward-fill',
@@ -3298,7 +3041,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    232 => 
     array (
       'name' => 'Fullscreen',
       'value' => 'bi-fullscreen',
@@ -3310,7 +3052,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    233 => 
     array (
       'name' => 'Fullscreen Exit',
       'value' => 'bi-fullscreen-exit',
@@ -3323,7 +3064,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    234 => 
     array (
       'name' => 'Funnel',
       'value' => 'bi-funnel',
@@ -3336,7 +3076,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    235 => 
     array (
       'name' => 'Funnel Fill',
       'value' => 'bi-funnel-fill',
@@ -3350,7 +3089,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    236 => 
     array (
       'name' => 'Gear',
       'value' => 'bi-gear',
@@ -3363,7 +3101,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    237 => 
     array (
       'name' => 'Gear Fill',
       'value' => 'bi-gear-fill',
@@ -3377,7 +3114,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    238 => 
     array (
       'name' => 'Gear Wide',
       'value' => 'bi-gear-wide',
@@ -3390,7 +3126,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    239 => 
     array (
       'name' => 'Gear Wide Connected',
       'value' => 'bi-gear-wide-connected',
@@ -3404,7 +3139,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    240 => 
     array (
       'name' => 'Graph Down',
       'value' => 'bi-graph-down',
@@ -3417,7 +3151,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    241 => 
     array (
       'name' => 'Graph Down Arrow',
       'value' => 'bi-graph-down-arrow',
@@ -3431,7 +3164,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    242 => 
     array (
       'name' => 'Graph Up',
       'value' => 'bi-graph-up',
@@ -3444,7 +3176,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    243 => 
     array (
       'name' => 'Graph Up Arrow',
       'value' => 'bi-graph-up-arrow',
@@ -3458,7 +3189,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    244 => 
     array (
       'name' => 'Grid',
       'value' => 'bi-grid',
@@ -3471,7 +3201,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    245 => 
     array (
       'name' => 'Grid 1x2',
       'value' => 'bi-grid-1x2',
@@ -3485,7 +3214,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    246 => 
     array (
       'name' => 'Grid 1x2 Fill',
       'value' => 'bi-grid-1x2-fill',
@@ -3500,7 +3228,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    247 => 
     array (
       'name' => 'Grid 3x2',
       'value' => 'bi-grid-3x2',
@@ -3513,7 +3240,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    248 => 
     array (
       'name' => 'Grid 3x2 Gap',
       'value' => 'bi-grid-3x2-gap',
@@ -3528,7 +3254,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    249 => 
     array (
       'name' => 'Grid 3x2 Gap Fill',
       'value' => 'bi-grid-3x2-gap-fill',
@@ -3544,7 +3269,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    250 => 
     array (
       'name' => 'Grid 3x3',
       'value' => 'bi-grid-3x3',
@@ -3557,7 +3281,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    251 => 
     array (
       'name' => 'Grid 3x3 Gap',
       'value' => 'bi-grid-3x3-gap',
@@ -3572,7 +3295,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    252 => 
     array (
       'name' => 'Grid 3x3 Gap Fill',
       'value' => 'bi-grid-3x3-gap-fill',
@@ -3588,7 +3310,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    253 => 
     array (
       'name' => 'Grid Fill',
       'value' => 'bi-grid-fill',
@@ -3602,7 +3323,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    254 => 
     array (
       'name' => 'Grip Horizontal',
       'value' => 'bi-grip-horizontal',
@@ -3615,7 +3335,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    255 => 
     array (
       'name' => 'Grip Vertical',
       'value' => 'bi-grip-vertical',
@@ -3628,7 +3347,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    256 => 
     array (
       'name' => 'Heptagon',
       'value' => 'bi-heptagon',
@@ -3641,7 +3359,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    257 => 
     array (
       'name' => 'Heptagon Fill',
       'value' => 'bi-heptagon-fill',
@@ -3655,7 +3372,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    258 => 
     array (
       'name' => 'Heptagon Half',
       'value' => 'bi-heptagon-half',
@@ -3668,7 +3384,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    259 => 
     array (
       'name' => 'Hexagon',
       'value' => 'bi-hexagon',
@@ -3681,7 +3396,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    260 => 
     array (
       'name' => 'Hexagon Fill',
       'value' => 'bi-hexagon-fill',
@@ -3695,7 +3409,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    261 => 
     array (
       'name' => 'Hexagon Half',
       'value' => 'bi-hexagon-half',
@@ -3708,7 +3421,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    262 => 
     array (
       'name' => 'Highlights',
       'value' => 'bi-highlights',
@@ -3720,7 +3432,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    263 => 
     array (
       'name' => 'Hr',
       'value' => 'bi-hr',
@@ -3732,7 +3443,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    264 => 
     array (
       'name' => 'Indent',
       'value' => 'bi-indent',
@@ -3744,7 +3454,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    265 => 
     array (
       'name' => 'Input Cursor',
       'value' => 'bi-input-cursor',
@@ -3757,7 +3466,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    266 => 
     array (
       'name' => 'Input Cursor Text',
       'value' => 'bi-input-cursor-text',
@@ -3771,7 +3479,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    267 => 
     array (
       'name' => 'Intersect',
       'value' => 'bi-intersect',
@@ -3783,7 +3490,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    268 => 
     array (
       'name' => 'Justify',
       'value' => 'bi-justify',
@@ -3795,7 +3501,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    269 => 
     array (
       'name' => 'Justify Left',
       'value' => 'bi-justify-left',
@@ -3808,7 +3513,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    270 => 
     array (
       'name' => 'Justify Right',
       'value' => 'bi-justify-right',
@@ -3821,7 +3525,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    271 => 
     array (
       'name' => 'Kanban',
       'value' => 'bi-kanban',
@@ -3834,7 +3537,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    272 => 
     array (
       'name' => 'Kanban Fill',
       'value' => 'bi-kanban-fill',
@@ -3848,7 +3550,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    273 => 
     array (
       'name' => 'Layer Backward',
       'value' => 'bi-layer-backward',
@@ -3861,7 +3562,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    274 => 
     array (
       'name' => 'Layer Forward',
       'value' => 'bi-layer-forward',
@@ -3874,7 +3574,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    275 => 
     array (
       'name' => 'Layers',
       'value' => 'bi-layers',
@@ -3887,7 +3586,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    276 => 
     array (
       'name' => 'Layers Fill',
       'value' => 'bi-layers-fill',
@@ -3901,7 +3599,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    277 => 
     array (
       'name' => 'Layers Half',
       'value' => 'bi-layers-half',
@@ -3914,7 +3611,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    278 => 
     array (
       'name' => 'Layout Sidebar',
       'value' => 'bi-layout-sidebar',
@@ -3927,7 +3623,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    279 => 
     array (
       'name' => 'Layout Sidebar Inset',
       'value' => 'bi-layout-sidebar-inset',
@@ -3941,7 +3636,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    280 => 
     array (
       'name' => 'Layout Sidebar Inset Reverse',
       'value' => 'bi-layout-sidebar-inset-reverse',
@@ -3956,7 +3650,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    281 => 
     array (
       'name' => 'Layout Sidebar Reverse',
       'value' => 'bi-layout-sidebar-reverse',
@@ -3970,7 +3663,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    282 => 
     array (
       'name' => 'Layout Split',
       'value' => 'bi-layout-split',
@@ -3983,7 +3675,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    283 => 
     array (
       'name' => 'Layout Text Sidebar',
       'value' => 'bi-layout-text-sidebar',
@@ -3997,7 +3688,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    284 => 
     array (
       'name' => 'Layout Text Sidebar Reverse',
       'value' => 'bi-layout-text-sidebar-reverse',
@@ -4012,7 +3702,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    285 => 
     array (
       'name' => 'Layout Text Window',
       'value' => 'bi-layout-text-window',
@@ -4026,7 +3715,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    286 => 
     array (
       'name' => 'Layout Text Window Reverse',
       'value' => 'bi-layout-text-window-reverse',
@@ -4041,7 +3729,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    287 => 
     array (
       'name' => 'Layout Three Columns',
       'value' => 'bi-layout-three-columns',
@@ -4055,7 +3742,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    288 => 
     array (
       'name' => 'Layout Wtf',
       'value' => 'bi-layout-wtf',
@@ -4068,7 +3754,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    289 => 
     array (
       'name' => 'List',
       'value' => 'bi-list',
@@ -4080,7 +3765,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    290 => 
     array (
       'name' => 'List Check',
       'value' => 'bi-list-check',
@@ -4093,7 +3777,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    291 => 
     array (
       'name' => 'List Columns',
       'value' => 'bi-list-columns',
@@ -4106,7 +3789,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    292 => 
     array (
       'name' => 'List Columns Reverse',
       'value' => 'bi-list-columns-reverse',
@@ -4120,7 +3802,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    293 => 
     array (
       'name' => 'List Nested',
       'value' => 'bi-list-nested',
@@ -4133,7 +3814,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    294 => 
     array (
       'name' => 'List Ol',
       'value' => 'bi-list-ol',
@@ -4146,7 +3826,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    295 => 
     array (
       'name' => 'List Stars',
       'value' => 'bi-list-stars',
@@ -4159,7 +3838,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    296 => 
     array (
       'name' => 'List Task',
       'value' => 'bi-list-task',
@@ -4172,7 +3850,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    297 => 
     array (
       'name' => 'List Ul',
       'value' => 'bi-list-ul',
@@ -4185,7 +3862,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    298 => 
     array (
       'name' => 'Menu App',
       'value' => 'bi-menu-app',
@@ -4199,7 +3875,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    299 => 
     array (
       'name' => 'Menu App Fill',
       'value' => 'bi-menu-app-fill',
@@ -4214,7 +3889,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    300 => 
     array (
       'name' => 'Menu Button',
       'value' => 'bi-menu-button',
@@ -4228,7 +3902,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    301 => 
     array (
       'name' => 'Menu Button Fill',
       'value' => 'bi-menu-button-fill',
@@ -4243,7 +3916,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    302 => 
     array (
       'name' => 'Menu Button Wide',
       'value' => 'bi-menu-button-wide',
@@ -4258,7 +3930,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    303 => 
     array (
       'name' => 'Menu Button Wide Fill',
       'value' => 'bi-menu-button-wide-fill',
@@ -4274,7 +3945,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    304 => 
     array (
       'name' => 'Menu Down',
       'value' => 'bi-menu-down',
@@ -4287,7 +3957,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    305 => 
     array (
       'name' => 'Menu Up',
       'value' => 'bi-menu-up',
@@ -4300,7 +3969,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    306 => 
     array (
       'name' => 'Node Minus',
       'value' => 'bi-node-minus',
@@ -4314,7 +3982,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    307 => 
     array (
       'name' => 'Node Minus Fill',
       'value' => 'bi-node-minus-fill',
@@ -4329,7 +3996,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    308 => 
     array (
       'name' => 'Node Plus',
       'value' => 'bi-node-plus',
@@ -4343,7 +4009,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    309 => 
     array (
       'name' => 'Node Plus Fill',
       'value' => 'bi-node-plus-fill',
@@ -4358,7 +4023,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    310 => 
     array (
       'name' => 'Noise Reduction',
       'value' => 'bi-noise-reduction',
@@ -4371,7 +4035,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    311 => 
     array (
       'name' => 'Octagon',
       'value' => 'bi-octagon',
@@ -4384,7 +4047,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    312 => 
     array (
       'name' => 'Octagon Fill',
       'value' => 'bi-octagon-fill',
@@ -4398,7 +4060,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    313 => 
     array (
       'name' => 'Octagon Half',
       'value' => 'bi-octagon-half',
@@ -4411,7 +4072,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    314 => 
     array (
       'name' => 'Patch Check',
       'value' => 'bi-patch-check',
@@ -4425,7 +4085,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    315 => 
     array (
       'name' => 'Patch Check Fill',
       'value' => 'bi-patch-check-fill',
@@ -4440,7 +4099,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    316 => 
     array (
       'name' => 'Patch Exclamation',
       'value' => 'bi-patch-exclamation',
@@ -4454,7 +4112,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    317 => 
     array (
       'name' => 'Patch Exclamation Fill',
       'value' => 'bi-patch-exclamation-fill',
@@ -4469,7 +4126,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    318 => 
     array (
       'name' => 'Patch Minus',
       'value' => 'bi-patch-minus',
@@ -4483,7 +4139,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    319 => 
     array (
       'name' => 'Patch Minus Fill',
       'value' => 'bi-patch-minus-fill',
@@ -4498,7 +4153,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    320 => 
     array (
       'name' => 'Patch Plus',
       'value' => 'bi-patch-plus',
@@ -4512,7 +4166,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    321 => 
     array (
       'name' => 'Patch Plus Fill',
       'value' => 'bi-patch-plus-fill',
@@ -4527,7 +4180,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    322 => 
     array (
       'name' => 'Patch Question',
       'value' => 'bi-patch-question',
@@ -4541,7 +4193,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    323 => 
     array (
       'name' => 'Patch Question Fill',
       'value' => 'bi-patch-question-fill',
@@ -4556,7 +4207,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    324 => 
     array (
       'name' => 'Pentagon',
       'value' => 'bi-pentagon',
@@ -4569,7 +4219,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    325 => 
     array (
       'name' => 'Pentagon Fill',
       'value' => 'bi-pentagon-fill',
@@ -4583,7 +4232,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    326 => 
     array (
       'name' => 'Pentagon Half',
       'value' => 'bi-pentagon-half',
@@ -4596,7 +4244,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    327 => 
     array (
       'name' => 'Pie Chart',
       'value' => 'bi-pie-chart',
@@ -4610,7 +4257,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    328 => 
     array (
       'name' => 'Pie Chart Fill',
       'value' => 'bi-pie-chart-fill',
@@ -4625,7 +4271,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    329 => 
     array (
       'name' => 'Pip',
       'value' => 'bi-pip',
@@ -4638,7 +4283,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    330 => 
     array (
       'name' => 'Pip Fill',
       'value' => 'bi-pip-fill',
@@ -4652,7 +4296,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    331 => 
     array (
       'name' => 'Segmented Nav',
       'value' => 'bi-segmented-nav',
@@ -4665,7 +4308,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    332 => 
     array (
       'name' => 'Shadows',
       'value' => 'bi-shadows',
@@ -4677,7 +4319,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    333 => 
     array (
       'name' => 'Slash',
       'value' => 'bi-slash',
@@ -4689,7 +4330,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    334 => 
     array (
       'name' => 'Slash Circle',
       'value' => 'bi-slash-circle',
@@ -4703,7 +4343,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    335 => 
     array (
       'name' => 'Slash Circle Fill',
       'value' => 'bi-slash-circle-fill',
@@ -4718,7 +4357,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    336 => 
     array (
       'name' => 'Slash Square',
       'value' => 'bi-slash-square',
@@ -4732,7 +4370,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    337 => 
     array (
       'name' => 'Slash Square Fill',
       'value' => 'bi-slash-square-fill',
@@ -4747,7 +4384,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    338 => 
     array (
       'name' => 'Sliders',
       'value' => 'bi-sliders',
@@ -4759,7 +4395,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    339 => 
     array (
       'name' => 'Sliders2',
       'value' => 'bi-sliders2',
@@ -4771,7 +4406,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    340 => 
     array (
       'name' => 'Sliders2 Vertical',
       'value' => 'bi-sliders2-vertical',
@@ -4784,7 +4418,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    341 => 
     array (
       'name' => 'Sort Alpha Down',
       'value' => 'bi-sort-alpha-down',
@@ -4798,7 +4431,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    342 => 
     array (
       'name' => 'Sort Alpha Down Alt',
       'value' => 'bi-sort-alpha-down-alt',
@@ -4813,7 +4445,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    343 => 
     array (
       'name' => 'Sort Alpha Up',
       'value' => 'bi-sort-alpha-up',
@@ -4827,7 +4458,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    344 => 
     array (
       'name' => 'Sort Alpha Up Alt',
       'value' => 'bi-sort-alpha-up-alt',
@@ -4842,7 +4472,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    345 => 
     array (
       'name' => 'Sort Down',
       'value' => 'bi-sort-down',
@@ -4855,7 +4484,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    346 => 
     array (
       'name' => 'Sort Down Alt',
       'value' => 'bi-sort-down-alt',
@@ -4869,7 +4497,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    347 => 
     array (
       'name' => 'Sort Numeric Down',
       'value' => 'bi-sort-numeric-down',
@@ -4883,7 +4510,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    348 => 
     array (
       'name' => 'Sort Numeric Down Alt',
       'value' => 'bi-sort-numeric-down-alt',
@@ -4898,7 +4524,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    349 => 
     array (
       'name' => 'Sort Numeric Up',
       'value' => 'bi-sort-numeric-up',
@@ -4912,7 +4537,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    350 => 
     array (
       'name' => 'Sort Numeric Up Alt',
       'value' => 'bi-sort-numeric-up-alt',
@@ -4927,7 +4551,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    351 => 
     array (
       'name' => 'Sort Up',
       'value' => 'bi-sort-up',
@@ -4940,7 +4563,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    352 => 
     array (
       'name' => 'Sort Up Alt',
       'value' => 'bi-sort-up-alt',
@@ -4954,7 +4576,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    353 => 
     array (
       'name' => 'Square',
       'value' => 'bi-square',
@@ -4967,7 +4588,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    354 => 
     array (
       'name' => 'Square Fill',
       'value' => 'bi-square-fill',
@@ -4981,7 +4601,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    355 => 
     array (
       'name' => 'Square Half',
       'value' => 'bi-square-half',
@@ -4994,7 +4613,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    356 => 
     array (
       'name' => 'Stack',
       'value' => 'bi-stack',
@@ -5006,7 +4624,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    357 => 
     array (
       'name' => 'Symmetry Horizontal',
       'value' => 'bi-symmetry-horizontal',
@@ -5019,7 +4636,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    358 => 
     array (
       'name' => 'Symmetry Vertical',
       'value' => 'bi-symmetry-vertical',
@@ -5032,7 +4648,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    359 => 
     array (
       'name' => 'Table',
       'value' => 'bi-table',
@@ -5044,7 +4659,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    360 => 
     array (
       'name' => 'Text Center',
       'value' => 'bi-text-center',
@@ -5057,7 +4671,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    361 => 
     array (
       'name' => 'Text Indent Left',
       'value' => 'bi-text-indent-left',
@@ -5071,7 +4684,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    362 => 
     array (
       'name' => 'Text Indent Right',
       'value' => 'bi-text-indent-right',
@@ -5085,7 +4697,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    363 => 
     array (
       'name' => 'Text Left',
       'value' => 'bi-text-left',
@@ -5098,7 +4709,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    364 => 
     array (
       'name' => 'Text Paragraph',
       'value' => 'bi-text-paragraph',
@@ -5111,7 +4721,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    365 => 
     array (
       'name' => 'Text Right',
       'value' => 'bi-text-right',
@@ -5124,7 +4733,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    366 => 
     array (
       'name' => 'Text Wrap',
       'value' => 'bi-text-wrap',
@@ -5137,7 +4745,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    367 => 
     array (
       'name' => 'Textarea',
       'value' => 'bi-textarea',
@@ -5149,7 +4756,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    368 => 
     array (
       'name' => 'Textarea Resize',
       'value' => 'bi-textarea-resize',
@@ -5162,7 +4768,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    369 => 
     array (
       'name' => 'Textarea T',
       'value' => 'bi-textarea-t',
@@ -5175,7 +4780,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    370 => 
     array (
       'name' => 'Three Dots',
       'value' => 'bi-three-dots',
@@ -5188,7 +4792,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    371 => 
     array (
       'name' => 'Three Dots Vertical',
       'value' => 'bi-three-dots-vertical',
@@ -5202,7 +4805,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    372 => 
     array (
       'name' => 'Toggle Off',
       'value' => 'bi-toggle-off',
@@ -5215,7 +4817,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    373 => 
     array (
       'name' => 'Toggle On',
       'value' => 'bi-toggle-on',
@@ -5228,7 +4829,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    374 => 
     array (
       'name' => 'Toggle2 Off',
       'value' => 'bi-toggle2-off',
@@ -5241,7 +4841,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    375 => 
     array (
       'name' => 'Toggle2 On',
       'value' => 'bi-toggle2-on',
@@ -5254,7 +4853,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    376 => 
     array (
       'name' => 'Toggles',
       'value' => 'bi-toggles',
@@ -5266,7 +4864,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    377 => 
     array (
       'name' => 'Toggles2',
       'value' => 'bi-toggles2',
@@ -5278,7 +4875,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    378 => 
     array (
       'name' => 'Transparency',
       'value' => 'bi-transparency',
@@ -5290,7 +4886,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    379 => 
     array (
       'name' => 'Triangle',
       'value' => 'bi-triangle',
@@ -5303,7 +4898,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    380 => 
     array (
       'name' => 'Triangle Fill',
       'value' => 'bi-triangle-fill',
@@ -5317,7 +4911,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    381 => 
     array (
       'name' => 'Triangle Half',
       'value' => 'bi-triangle-half',
@@ -5330,7 +4923,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    382 => 
     array (
       'name' => 'Type H4',
       'value' => 'bi-type-h4',
@@ -5343,7 +4935,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    383 => 
     array (
       'name' => 'Type H5',
       'value' => 'bi-type-h5',
@@ -5356,7 +4947,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    384 => 
     array (
       'name' => 'Type H6',
       'value' => 'bi-type-h6',
@@ -5369,7 +4959,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    385 => 
     array (
       'name' => 'Ui Checks',
       'value' => 'bi-ui-checks',
@@ -5382,7 +4971,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    386 => 
     array (
       'name' => 'Ui Checks Grid',
       'value' => 'bi-ui-checks-grid',
@@ -5396,7 +4984,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    387 => 
     array (
       'name' => 'Ui Radios',
       'value' => 'bi-ui-radios',
@@ -5409,7 +4996,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    388 => 
     array (
       'name' => 'Ui Radios Grid',
       'value' => 'bi-ui-radios-grid',
@@ -5423,7 +5009,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    389 => 
     array (
       'name' => 'Unindent',
       'value' => 'bi-unindent',
@@ -5435,7 +5020,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    390 => 
     array (
       'name' => 'Union',
       'value' => 'bi-union',
@@ -5447,7 +5031,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    391 => 
     array (
       'name' => 'View List',
       'value' => 'bi-view-list',
@@ -5460,7 +5043,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    392 => 
     array (
       'name' => 'View Stacked',
       'value' => 'bi-view-stacked',
@@ -5473,7 +5055,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    393 => 
     array (
       'name' => 'Vignette',
       'value' => 'bi-vignette',
@@ -5485,7 +5066,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    394 => 
     array (
       'name' => 'Window',
       'value' => 'bi-window',
@@ -5497,7 +5077,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    395 => 
     array (
       'name' => 'Window Dash',
       'value' => 'bi-window-dash',
@@ -5510,7 +5089,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    396 => 
     array (
       'name' => 'Window Desktop',
       'value' => 'bi-window-desktop',
@@ -5523,7 +5101,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    397 => 
     array (
       'name' => 'Window Dock',
       'value' => 'bi-window-dock',
@@ -5536,7 +5113,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    398 => 
     array (
       'name' => 'Window Fullscreen',
       'value' => 'bi-window-fullscreen',
@@ -5549,7 +5125,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    399 => 
     array (
       'name' => 'Window Plus',
       'value' => 'bi-window-plus',
@@ -5562,7 +5137,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    400 => 
     array (
       'name' => 'Window Sidebar',
       'value' => 'bi-window-sidebar',
@@ -5575,7 +5149,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    401 => 
     array (
       'name' => 'Window Split',
       'value' => 'bi-window-split',
@@ -5588,7 +5161,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    402 => 
     array (
       'name' => 'Window Stack',
       'value' => 'bi-window-stack',
@@ -5601,7 +5173,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    403 => 
     array (
       'name' => 'Window X',
       'value' => 'bi-window-x',
@@ -5614,7 +5185,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    404 => 
     array (
       'name' => 'Zoom In',
       'value' => 'bi-zoom-in',
@@ -5627,7 +5197,6 @@ return array (
       'category' => 'ui',
       'has_variants' => false,
     ),
-    405 => 
     array (
       'name' => 'Zoom Out',
       'value' => 'bi-zoom-out',

@@ -208,7 +208,7 @@
                     <!-- Emoji 按鈕 -->
                     <button
                       v-else-if="item && item.emoji"
-                      @click.stop="selectIcon(getEmojiWithSkinTone(item), 'emoji')"
+                      @click.stop="selectIcon(getEmojiWithSkinTone(item), 'emoji', item)"
                       :class="selectedIcon === getEmojiWithSkinTone(item) ? 'ring-2 ring-primary-500 bg-primary-50' : 'hover:bg-gray-100'"
                       class="emoji-button p-1 rounded focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
                       :title="item.name"
@@ -798,10 +798,17 @@ export default {
     }
     
     
-    const selectIcon = (icon, type) => {
+    const selectIcon = (icon, type, item = null) => {
       let iconValue = icon
       
-      if (type === 'heroicons') {
+      if (type === 'emoji') {
+        // Emoji 返回物件格式以符合 IconDisplay 組件期待
+        iconValue = {
+          type: 'emoji',
+          emoji: icon,
+          name: item?.name || 'emoji'
+        }
+      } else if (type === 'heroicons') {
         // 在圖標名稱前加上樣式前綴
         iconValue = `${selectedIconStyle.value}:${icon}`
       } else if (type === 'bootstrap') {

@@ -44,8 +44,8 @@ class BootstrapIconService
                 }
             }
             
-            // 按分類分組 - 根據實際圖標的分類來分組
-            $allCategories = ['all', 'general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others'];
+            // 按分類分組 - 根據實際圖標的分類來分組（不包含 'all' 分類）
+            $allCategories = ['general', 'ui', 'communications', 'files', 'media', 'people', 'alphanumeric', 'others'];
             
             // 初始化所有分類
             foreach ($allCategories as $categoryId) {
@@ -72,8 +72,13 @@ class BootstrapIconService
                 }
             }
             
-            // 計算總數
-            $result['meta']['total'] = count($expandedIcons);
+            // 計算總數 - 計算唯一基礎圖標數量而非變體數量
+            $uniqueBaseIcons = [];
+            foreach ($expandedIcons as $icon) {
+                $baseName = str_replace(['-fill', '-solid'], '', $icon['name']);
+                $uniqueBaseIcons[$baseName] = true;
+            }
+            $result['meta']['total'] = count($uniqueBaseIcons);
             
             return $result;
         });

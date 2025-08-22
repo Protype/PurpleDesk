@@ -50,24 +50,26 @@ class BootstrapIconsApiTest extends TestCase
         $icon = $firstCategory[0];
         
         // 檢查必要欄位
-        $this->assertArrayHasKey('id', $icon);
         $this->assertArrayHasKey('name', $icon);
         $this->assertArrayHasKey('value', $icon);
         $this->assertArrayHasKey('type', $icon);
         $this->assertArrayHasKey('keywords', $icon);
         $this->assertArrayHasKey('category', $icon);
         $this->assertArrayHasKey('has_variants', $icon);
-        $this->assertArrayHasKey('variant_type', $icon);
         
         // 檢查欄位類型
-        $this->assertIsString($icon['id']);
         $this->assertIsString($icon['name']);
         $this->assertIsString($icon['value']);
         $this->assertEquals('bootstrap-icons', $icon['type']);
         $this->assertIsArray($icon['keywords']);
         $this->assertIsString($icon['category']);
         $this->assertIsBool($icon['has_variants']);
-        $this->assertContains($icon['variant_type'], ['solid', 'outline']);
+        
+        // 只有有變體的圖標才需要 variant_type 欄位
+        if ($icon['has_variants']) {
+            $this->assertArrayHasKey('variant_type', $icon);
+            $this->assertContains($icon['variant_type'], ['solid', 'outline']);
+        }
     }
 
     /**
@@ -163,46 +165,71 @@ class BootstrapIconsApiTest extends TestCase
     }
 
     /**
-     * 測試 Bootstrap Icon 變體展開
+     * 測試 Bootstrap Icons 變體配對正確性
      */
-    public function test_bootstrap_icons_variants_are_expanded()
+    public function test_bootstrap_icons_variant_pairing()
     {
         $response = $this->getJson('/api/config/icon/bootstrap-icons');
         
         $data = $response->json('data');
         
-        // 收集所有 icon 的基本名稱（移除 -outline, -solid 後綴）
-        $iconGroups = [];
-        
+        // 收集所有圖標
+        $allIcons = [];
         foreach ($data as $categoryIcons) {
             foreach ($categoryIcons as $icon) {
-                // 從 id 中提取基本名稱（移除變體後綴）
-                $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
-                
-                if (!isset($iconGroups[$baseName])) {
-                    $iconGroups[$baseName] = [];
-                }
-                
-                $iconGroups[$baseName][] = $icon;
+                $allIcons[$icon['value']] = $icon;
             }
         }
         
-        // 至少應該有一組有多個變體的 icon
-        $hasMultipleVariants = false;
+        $validatedOutlines = []; // 記錄已驗證的 outline 圖標
         
-        foreach ($iconGroups as $baseName => $variants) {
-            if (count($variants) > 1) {
-                $hasMultipleVariants = true;
+        // 1. 以 solid 圖標為基準進行測試
+        foreach ($allIcons as $icon) {
+            if (isset($icon['variant_type']) && $icon['variant_type'] === 'solid') {
+                // solid 圖標必須有 has_variants: true
+                $this->assertTrue($icon['has_variants'], 
+                    "Solid icon {$icon['value']} should have has_variants: true");
                 
-                // 檢查變體類型
-                $variantTypes = array_column($variants, 'variant_type');
-                $this->assertContains('outline', $variantTypes, "Icon group {$baseName} should have outline variant");
-                $this->assertContains('solid', $variantTypes, "Icon group {$baseName} should have solid variant");
-                break;
+                // 找出對應的 outline 版本：A.replace('-fill', '') -> B
+                $outlineValue = str_replace('-fill', '', $icon['value']);
+                
+                // 測試 B 存在
+                $this->assertArrayHasKey($outlineValue, $allIcons,
+                    "Solid icon {$icon['value']} should have outline variant {$outlineValue}");
+                
+                $outlineIcon = $allIcons[$outlineValue];
+                
+                // 驗證 B 的 has_variant / variant_type 正確
+                $this->assertTrue($outlineIcon['has_variants'],
+                    "Data quality issue: Outline icon {$outlineValue} should have has_variants: true");
+                $this->assertEquals('outline', $outlineIcon['variant_type'],
+                    "Data quality issue: Outline icon {$outlineValue} should have variant_type: outline");
+                
+                // A/B 均驗證成功，標記 B 為已驗證
+                $validatedOutlines[$outlineValue] = true;
             }
         }
         
-        $this->assertTrue($hasMultipleVariants, 'Should have at least one icon with multiple variants');
+        // 2. 檢查剩餘未標記 pass 的 has_variants=true, variant_type=outline
+        $unpairedOutlines = [];
+        foreach ($allIcons as $icon) {
+            if ($icon['has_variants'] && 
+                isset($icon['variant_type']) && 
+                $icon['variant_type'] === 'outline' && 
+                !isset($validatedOutlines[$icon['value']])) {
+                $unpairedOutlines[] = $icon['value'];
+            }
+        }
+        
+        // 如果有未配對的 outline 圖標，回報資料錯誤
+        if (!empty($unpairedOutlines)) {
+            $this->fail("Data quality issue: Unpaired outline icons with has_variants=true missing solid variants:\n" . 
+                       implode("\n", array_slice($unpairedOutlines, 0, 10)));
+        }
+        
+        // 確保至少測試了一些配對
+        $this->assertGreaterThan(0, count($validatedOutlines), 
+            'Should have validated at least some variant pairs');
     }
 
     /**

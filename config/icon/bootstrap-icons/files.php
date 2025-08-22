@@ -6,7 +6,6 @@ return array (
   'description' => '檔案、文件相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Archive',
       'value' => 'bi-archive',
@@ -19,7 +18,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    1 => 
     array (
       'name' => 'Archive Fill',
       'value' => 'bi-archive-fill',
@@ -33,7 +31,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    2 => 
     array (
       'name' => 'Back',
       'value' => 'bi-back',
@@ -45,7 +42,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    3 => 
     array (
       'name' => 'Book',
       'value' => 'bi-book',
@@ -58,7 +54,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    4 => 
     array (
       'name' => 'Book Fill',
       'value' => 'bi-book-fill',
@@ -72,7 +67,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    5 => 
     array (
       'name' => 'Book Half',
       'value' => 'bi-book-half',
@@ -85,7 +79,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    6 => 
     array (
       'name' => 'Bookshelf',
       'value' => 'bi-bookshelf',
@@ -97,7 +90,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    7 => 
     array (
       'name' => 'Clipboard',
       'value' => 'bi-clipboard',
@@ -110,7 +102,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    8 => 
     array (
       'name' => 'Clipboard Check',
       'value' => 'bi-clipboard-check',
@@ -124,7 +115,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    9 => 
     array (
       'name' => 'Clipboard Check Fill',
       'value' => 'bi-clipboard-check-fill',
@@ -139,7 +129,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    10 => 
     array (
       'name' => 'Clipboard Data',
       'value' => 'bi-clipboard-data',
@@ -153,7 +142,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    11 => 
     array (
       'name' => 'Clipboard Data Fill',
       'value' => 'bi-clipboard-data-fill',
@@ -168,7 +156,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    12 => 
     array (
       'name' => 'Clipboard Fill',
       'value' => 'bi-clipboard-fill',
@@ -182,7 +169,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    13 => 
     array (
       'name' => 'Clipboard Heart',
       'value' => 'bi-clipboard-heart',
@@ -196,7 +182,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    14 => 
     array (
       'name' => 'Clipboard Heart Fill',
       'value' => 'bi-clipboard-heart-fill',
@@ -211,7 +196,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    15 => 
     array (
       'name' => 'Clipboard Minus',
       'value' => 'bi-clipboard-minus',
@@ -225,7 +209,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    16 => 
     array (
       'name' => 'Clipboard Minus Fill',
       'value' => 'bi-clipboard-minus-fill',
@@ -240,7 +223,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    17 => 
     array (
       'name' => 'Clipboard Plus',
       'value' => 'bi-clipboard-plus',
@@ -254,7 +236,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    18 => 
     array (
       'name' => 'Clipboard Plus Fill',
       'value' => 'bi-clipboard-plus-fill',
@@ -269,7 +250,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    19 => 
     array (
       'name' => 'Clipboard Pulse',
       'value' => 'bi-clipboard-pulse',
@@ -282,7 +262,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    20 => 
     array (
       'name' => 'Clipboard X',
       'value' => 'bi-clipboard-x',
@@ -296,7 +275,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    21 => 
     array (
       'name' => 'Clipboard X Fill',
       'value' => 'bi-clipboard-x-fill',
@@ -311,7 +289,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    22 => 
     array (
       'name' => 'Clipboard2',
       'value' => 'bi-clipboard2',
@@ -324,7 +301,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    23 => 
     array (
       'name' => 'Clipboard2 Check',
       'value' => 'bi-clipboard2-check',
@@ -338,7 +314,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    24 => 
     array (
       'name' => 'Clipboard2 Check Fill',
       'value' => 'bi-clipboard2-check-fill',
@@ -353,7 +328,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    25 => 
     array (
       'name' => 'Clipboard2 Data',
       'value' => 'bi-clipboard2-data',
@@ -367,7 +341,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    26 => 
     array (
       'name' => 'Clipboard2 Data Fill',
       'value' => 'bi-clipboard2-data-fill',
@@ -382,7 +355,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    27 => 
     array (
       'name' => 'Clipboard2 Fill',
       'value' => 'bi-clipboard2-fill',
@@ -396,7 +368,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    28 => 
     array (
       'name' => 'Clipboard2 Heart',
       'value' => 'bi-clipboard2-heart',
@@ -410,7 +381,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    29 => 
     array (
       'name' => 'Clipboard2 Heart Fill',
       'value' => 'bi-clipboard2-heart-fill',
@@ -425,7 +395,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    30 => 
     array (
       'name' => 'Clipboard2 Minus',
       'value' => 'bi-clipboard2-minus',
@@ -439,7 +408,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    31 => 
     array (
       'name' => 'Clipboard2 Minus Fill',
       'value' => 'bi-clipboard2-minus-fill',
@@ -454,7 +422,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    32 => 
     array (
       'name' => 'Clipboard2 Plus',
       'value' => 'bi-clipboard2-plus',
@@ -468,7 +435,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    33 => 
     array (
       'name' => 'Clipboard2 Plus Fill',
       'value' => 'bi-clipboard2-plus-fill',
@@ -483,7 +449,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    34 => 
     array (
       'name' => 'Clipboard2 Pulse',
       'value' => 'bi-clipboard2-pulse',
@@ -497,7 +462,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    35 => 
     array (
       'name' => 'Clipboard2 Pulse Fill',
       'value' => 'bi-clipboard2-pulse-fill',
@@ -512,7 +476,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    36 => 
     array (
       'name' => 'Clipboard2 X',
       'value' => 'bi-clipboard2-x',
@@ -526,7 +489,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    37 => 
     array (
       'name' => 'Clipboard2 X Fill',
       'value' => 'bi-clipboard2-x-fill',
@@ -541,7 +503,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    38 => 
     array (
       'name' => 'Download',
       'value' => 'bi-download',
@@ -553,7 +514,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    39 => 
     array (
       'name' => 'File',
       'value' => 'bi-file',
@@ -566,7 +526,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    40 => 
     array (
       'name' => 'File Arrow Down',
       'value' => 'bi-file-arrow-down',
@@ -581,7 +540,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    41 => 
     array (
       'name' => 'File Arrow Down Fill',
       'value' => 'bi-file-arrow-down-fill',
@@ -597,7 +555,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    42 => 
     array (
       'name' => 'File Arrow Up',
       'value' => 'bi-file-arrow-up',
@@ -612,7 +569,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    43 => 
     array (
       'name' => 'File Arrow Up Fill',
       'value' => 'bi-file-arrow-up-fill',
@@ -628,7 +584,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    44 => 
     array (
       'name' => 'File Bar Graph',
       'value' => 'bi-file-bar-graph',
@@ -643,7 +598,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    45 => 
     array (
       'name' => 'File Bar Graph Fill',
       'value' => 'bi-file-bar-graph-fill',
@@ -659,7 +613,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    46 => 
     array (
       'name' => 'File Binary',
       'value' => 'bi-file-binary',
@@ -673,7 +626,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    47 => 
     array (
       'name' => 'File Binary Fill',
       'value' => 'bi-file-binary-fill',
@@ -688,7 +640,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    48 => 
     array (
       'name' => 'File Break',
       'value' => 'bi-file-break',
@@ -702,7 +653,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
     array (
       'name' => 'File Break Fill',
       'value' => 'bi-file-break-fill',
@@ -717,7 +667,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    50 => 
     array (
       'name' => 'File Check',
       'value' => 'bi-file-check',
@@ -731,7 +680,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    51 => 
     array (
       'name' => 'File Check Fill',
       'value' => 'bi-file-check-fill',
@@ -746,7 +694,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    52 => 
     array (
       'name' => 'File Code',
       'value' => 'bi-file-code',
@@ -760,7 +707,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    53 => 
     array (
       'name' => 'File Code Fill',
       'value' => 'bi-file-code-fill',
@@ -775,7 +721,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    54 => 
     array (
       'name' => 'File Diff',
       'value' => 'bi-file-diff',
@@ -789,7 +734,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    55 => 
     array (
       'name' => 'File Diff Fill',
       'value' => 'bi-file-diff-fill',
@@ -804,7 +748,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    56 => 
     array (
       'name' => 'File Earmark',
       'value' => 'bi-file-earmark',
@@ -818,7 +761,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    57 => 
     array (
       'name' => 'File Earmark Arrow Down',
       'value' => 'bi-file-earmark-arrow-down',
@@ -834,7 +776,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    58 => 
     array (
       'name' => 'File Earmark Arrow Down Fill',
       'value' => 'bi-file-earmark-arrow-down-fill',
@@ -851,7 +792,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    59 => 
     array (
       'name' => 'File Earmark Arrow Up',
       'value' => 'bi-file-earmark-arrow-up',
@@ -867,7 +807,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    60 => 
     array (
       'name' => 'File Earmark Arrow Up Fill',
       'value' => 'bi-file-earmark-arrow-up-fill',
@@ -884,7 +823,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    61 => 
     array (
       'name' => 'File Earmark Bar Graph',
       'value' => 'bi-file-earmark-bar-graph',
@@ -900,7 +838,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    62 => 
     array (
       'name' => 'File Earmark Bar Graph Fill',
       'value' => 'bi-file-earmark-bar-graph-fill',
@@ -917,7 +854,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    63 => 
     array (
       'name' => 'File Earmark Binary',
       'value' => 'bi-file-earmark-binary',
@@ -932,7 +868,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    64 => 
     array (
       'name' => 'File Earmark Binary Fill',
       'value' => 'bi-file-earmark-binary-fill',
@@ -948,7 +883,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    65 => 
     array (
       'name' => 'File Earmark Break',
       'value' => 'bi-file-earmark-break',
@@ -963,7 +897,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    66 => 
     array (
       'name' => 'File Earmark Break Fill',
       'value' => 'bi-file-earmark-break-fill',
@@ -979,7 +912,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    67 => 
     array (
       'name' => 'File Earmark Check',
       'value' => 'bi-file-earmark-check',
@@ -994,7 +926,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    68 => 
     array (
       'name' => 'File Earmark Check Fill',
       'value' => 'bi-file-earmark-check-fill',
@@ -1010,7 +941,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    69 => 
     array (
       'name' => 'File Earmark Code',
       'value' => 'bi-file-earmark-code',
@@ -1025,7 +955,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    70 => 
     array (
       'name' => 'File Earmark Code Fill',
       'value' => 'bi-file-earmark-code-fill',
@@ -1041,7 +970,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    71 => 
     array (
       'name' => 'File Earmark Diff',
       'value' => 'bi-file-earmark-diff',
@@ -1056,7 +984,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    72 => 
     array (
       'name' => 'File Earmark Diff Fill',
       'value' => 'bi-file-earmark-diff-fill',
@@ -1072,7 +999,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    73 => 
     array (
       'name' => 'File Earmark Easel',
       'value' => 'bi-file-earmark-easel',
@@ -1087,7 +1013,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    74 => 
     array (
       'name' => 'File Earmark Easel Fill',
       'value' => 'bi-file-earmark-easel-fill',
@@ -1103,7 +1028,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    75 => 
     array (
       'name' => 'File Earmark Excel',
       'value' => 'bi-file-earmark-excel',
@@ -1118,7 +1042,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    76 => 
     array (
       'name' => 'File Earmark Excel Fill',
       'value' => 'bi-file-earmark-excel-fill',
@@ -1134,7 +1057,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    77 => 
     array (
       'name' => 'File Earmark Fill',
       'value' => 'bi-file-earmark-fill',
@@ -1149,7 +1071,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    78 => 
     array (
       'name' => 'File Earmark Font',
       'value' => 'bi-file-earmark-font',
@@ -1164,7 +1085,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    79 => 
     array (
       'name' => 'File Earmark Font Fill',
       'value' => 'bi-file-earmark-font-fill',
@@ -1180,7 +1100,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    80 => 
     array (
       'name' => 'File Earmark Image',
       'value' => 'bi-file-earmark-image',
@@ -1195,7 +1114,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    81 => 
     array (
       'name' => 'File Earmark Image Fill',
       'value' => 'bi-file-earmark-image-fill',
@@ -1211,7 +1129,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    82 => 
     array (
       'name' => 'File Earmark Lock',
       'value' => 'bi-file-earmark-lock',
@@ -1226,7 +1143,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    83 => 
     array (
       'name' => 'File Earmark Lock Fill',
       'value' => 'bi-file-earmark-lock-fill',
@@ -1242,7 +1158,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    84 => 
     array (
       'name' => 'File Earmark Lock2',
       'value' => 'bi-file-earmark-lock2',
@@ -1257,7 +1172,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    85 => 
     array (
       'name' => 'File Earmark Lock2 Fill',
       'value' => 'bi-file-earmark-lock2-fill',
@@ -1273,7 +1187,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    86 => 
     array (
       'name' => 'File Earmark Medical',
       'value' => 'bi-file-earmark-medical',
@@ -1288,7 +1201,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    87 => 
     array (
       'name' => 'File Earmark Medical Fill',
       'value' => 'bi-file-earmark-medical-fill',
@@ -1304,7 +1216,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    88 => 
     array (
       'name' => 'File Earmark Minus',
       'value' => 'bi-file-earmark-minus',
@@ -1319,7 +1230,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    89 => 
     array (
       'name' => 'File Earmark Minus Fill',
       'value' => 'bi-file-earmark-minus-fill',
@@ -1335,7 +1245,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    90 => 
     array (
       'name' => 'File Earmark Music',
       'value' => 'bi-file-earmark-music',
@@ -1350,7 +1259,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    91 => 
     array (
       'name' => 'File Earmark Music Fill',
       'value' => 'bi-file-earmark-music-fill',
@@ -1366,7 +1274,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    92 => 
     array (
       'name' => 'File Earmark Pdf',
       'value' => 'bi-file-earmark-pdf',
@@ -1381,7 +1288,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    93 => 
     array (
       'name' => 'File Earmark Pdf Fill',
       'value' => 'bi-file-earmark-pdf-fill',
@@ -1397,7 +1303,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    94 => 
     array (
       'name' => 'File Earmark Person',
       'value' => 'bi-file-earmark-person',
@@ -1412,7 +1317,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    95 => 
     array (
       'name' => 'File Earmark Person Fill',
       'value' => 'bi-file-earmark-person-fill',
@@ -1428,7 +1332,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    96 => 
     array (
       'name' => 'File Earmark Play',
       'value' => 'bi-file-earmark-play',
@@ -1443,7 +1346,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    97 => 
     array (
       'name' => 'File Earmark Play Fill',
       'value' => 'bi-file-earmark-play-fill',
@@ -1459,7 +1361,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    98 => 
     array (
       'name' => 'File Earmark Plus',
       'value' => 'bi-file-earmark-plus',
@@ -1474,7 +1375,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    99 => 
     array (
       'name' => 'File Earmark Plus Fill',
       'value' => 'bi-file-earmark-plus-fill',
@@ -1490,7 +1390,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    100 => 
     array (
       'name' => 'File Earmark Post',
       'value' => 'bi-file-earmark-post',
@@ -1505,7 +1404,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    101 => 
     array (
       'name' => 'File Earmark Post Fill',
       'value' => 'bi-file-earmark-post-fill',
@@ -1521,7 +1419,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    102 => 
     array (
       'name' => 'File Earmark Ppt',
       'value' => 'bi-file-earmark-ppt',
@@ -1536,7 +1433,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    103 => 
     array (
       'name' => 'File Earmark Ppt Fill',
       'value' => 'bi-file-earmark-ppt-fill',
@@ -1552,7 +1448,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    104 => 
     array (
       'name' => 'File Earmark Richtext',
       'value' => 'bi-file-earmark-richtext',
@@ -1567,7 +1462,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    105 => 
     array (
       'name' => 'File Earmark Richtext Fill',
       'value' => 'bi-file-earmark-richtext-fill',
@@ -1583,7 +1477,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    106 => 
     array (
       'name' => 'File Earmark Ruled',
       'value' => 'bi-file-earmark-ruled',
@@ -1598,7 +1491,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    107 => 
     array (
       'name' => 'File Earmark Ruled Fill',
       'value' => 'bi-file-earmark-ruled-fill',
@@ -1614,7 +1506,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    108 => 
     array (
       'name' => 'File Earmark Slides',
       'value' => 'bi-file-earmark-slides',
@@ -1629,7 +1520,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    109 => 
     array (
       'name' => 'File Earmark Slides Fill',
       'value' => 'bi-file-earmark-slides-fill',
@@ -1645,7 +1535,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    110 => 
     array (
       'name' => 'File Earmark Spreadsheet',
       'value' => 'bi-file-earmark-spreadsheet',
@@ -1660,7 +1549,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    111 => 
     array (
       'name' => 'File Earmark Spreadsheet Fill',
       'value' => 'bi-file-earmark-spreadsheet-fill',
@@ -1676,7 +1564,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    112 => 
     array (
       'name' => 'File Earmark Text',
       'value' => 'bi-file-earmark-text',
@@ -1691,7 +1578,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    113 => 
     array (
       'name' => 'File Earmark Text Fill',
       'value' => 'bi-file-earmark-text-fill',
@@ -1707,7 +1593,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    114 => 
     array (
       'name' => 'File Earmark Word',
       'value' => 'bi-file-earmark-word',
@@ -1722,7 +1607,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    115 => 
     array (
       'name' => 'File Earmark Word Fill',
       'value' => 'bi-file-earmark-word-fill',
@@ -1738,7 +1622,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    116 => 
     array (
       'name' => 'File Earmark X',
       'value' => 'bi-file-earmark-x',
@@ -1753,7 +1636,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    117 => 
     array (
       'name' => 'File Earmark X Fill',
       'value' => 'bi-file-earmark-x-fill',
@@ -1769,7 +1651,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    118 => 
     array (
       'name' => 'File Earmark Zip',
       'value' => 'bi-file-earmark-zip',
@@ -1784,7 +1665,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    119 => 
     array (
       'name' => 'File Earmark Zip Fill',
       'value' => 'bi-file-earmark-zip-fill',
@@ -1800,7 +1680,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    120 => 
     array (
       'name' => 'File Easel',
       'value' => 'bi-file-easel',
@@ -1814,7 +1693,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    121 => 
     array (
       'name' => 'File Easel Fill',
       'value' => 'bi-file-easel-fill',
@@ -1829,7 +1707,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    122 => 
     array (
       'name' => 'File Excel',
       'value' => 'bi-file-excel',
@@ -1843,7 +1720,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    123 => 
     array (
       'name' => 'File Excel Fill',
       'value' => 'bi-file-excel-fill',
@@ -1858,7 +1734,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    124 => 
     array (
       'name' => 'File Fill',
       'value' => 'bi-file-fill',
@@ -1872,7 +1747,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    125 => 
     array (
       'name' => 'File Font',
       'value' => 'bi-file-font',
@@ -1886,7 +1760,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    126 => 
     array (
       'name' => 'File Font Fill',
       'value' => 'bi-file-font-fill',
@@ -1901,7 +1774,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    127 => 
     array (
       'name' => 'File Image',
       'value' => 'bi-file-image',
@@ -1915,7 +1787,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    128 => 
     array (
       'name' => 'File Image Fill',
       'value' => 'bi-file-image-fill',
@@ -1930,7 +1801,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    129 => 
     array (
       'name' => 'File Lock',
       'value' => 'bi-file-lock',
@@ -1944,7 +1814,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    130 => 
     array (
       'name' => 'File Lock Fill',
       'value' => 'bi-file-lock-fill',
@@ -1959,7 +1828,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    131 => 
     array (
       'name' => 'File Lock2',
       'value' => 'bi-file-lock2',
@@ -1973,7 +1841,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    132 => 
     array (
       'name' => 'File Lock2 Fill',
       'value' => 'bi-file-lock2-fill',
@@ -1988,7 +1855,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    133 => 
     array (
       'name' => 'File Medical',
       'value' => 'bi-file-medical',
@@ -2002,7 +1868,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    134 => 
     array (
       'name' => 'File Medical Fill',
       'value' => 'bi-file-medical-fill',
@@ -2017,7 +1882,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    135 => 
     array (
       'name' => 'File Minus',
       'value' => 'bi-file-minus',
@@ -2031,7 +1895,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    136 => 
     array (
       'name' => 'File Minus Fill',
       'value' => 'bi-file-minus-fill',
@@ -2046,7 +1909,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    137 => 
     array (
       'name' => 'File Music',
       'value' => 'bi-file-music',
@@ -2060,7 +1922,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    138 => 
     array (
       'name' => 'File Music Fill',
       'value' => 'bi-file-music-fill',
@@ -2075,7 +1936,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    139 => 
     array (
       'name' => 'File Pdf',
       'value' => 'bi-file-pdf',
@@ -2089,7 +1949,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    140 => 
     array (
       'name' => 'File Pdf Fill',
       'value' => 'bi-file-pdf-fill',
@@ -2104,7 +1963,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    141 => 
     array (
       'name' => 'File Person',
       'value' => 'bi-file-person',
@@ -2118,7 +1976,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    142 => 
     array (
       'name' => 'File Person Fill',
       'value' => 'bi-file-person-fill',
@@ -2133,7 +1990,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    143 => 
     array (
       'name' => 'File Play',
       'value' => 'bi-file-play',
@@ -2147,7 +2003,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    144 => 
     array (
       'name' => 'File Play Fill',
       'value' => 'bi-file-play-fill',
@@ -2162,7 +2017,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    145 => 
     array (
       'name' => 'File Plus',
       'value' => 'bi-file-plus',
@@ -2176,7 +2030,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    146 => 
     array (
       'name' => 'File Plus Fill',
       'value' => 'bi-file-plus-fill',
@@ -2191,7 +2044,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    147 => 
     array (
       'name' => 'File Post',
       'value' => 'bi-file-post',
@@ -2205,7 +2057,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    148 => 
     array (
       'name' => 'File Post Fill',
       'value' => 'bi-file-post-fill',
@@ -2220,7 +2071,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    149 => 
     array (
       'name' => 'File Ppt',
       'value' => 'bi-file-ppt',
@@ -2234,7 +2084,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    150 => 
     array (
       'name' => 'File Ppt Fill',
       'value' => 'bi-file-ppt-fill',
@@ -2249,7 +2098,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    151 => 
     array (
       'name' => 'File Richtext',
       'value' => 'bi-file-richtext',
@@ -2263,7 +2111,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    152 => 
     array (
       'name' => 'File Richtext Fill',
       'value' => 'bi-file-richtext-fill',
@@ -2278,7 +2125,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    153 => 
     array (
       'name' => 'File Ruled',
       'value' => 'bi-file-ruled',
@@ -2292,7 +2138,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    154 => 
     array (
       'name' => 'File Ruled Fill',
       'value' => 'bi-file-ruled-fill',
@@ -2307,7 +2152,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    155 => 
     array (
       'name' => 'File Slides',
       'value' => 'bi-file-slides',
@@ -2321,7 +2165,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    156 => 
     array (
       'name' => 'File Slides Fill',
       'value' => 'bi-file-slides-fill',
@@ -2336,7 +2179,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    157 => 
     array (
       'name' => 'File Spreadsheet',
       'value' => 'bi-file-spreadsheet',
@@ -2350,7 +2192,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    158 => 
     array (
       'name' => 'File Spreadsheet Fill',
       'value' => 'bi-file-spreadsheet-fill',
@@ -2365,7 +2206,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    159 => 
     array (
       'name' => 'File Text',
       'value' => 'bi-file-text',
@@ -2379,7 +2219,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    160 => 
     array (
       'name' => 'File Text Fill',
       'value' => 'bi-file-text-fill',
@@ -2394,7 +2233,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    161 => 
     array (
       'name' => 'File Word',
       'value' => 'bi-file-word',
@@ -2408,7 +2246,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    162 => 
     array (
       'name' => 'File Word Fill',
       'value' => 'bi-file-word-fill',
@@ -2423,7 +2260,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    163 => 
     array (
       'name' => 'File X',
       'value' => 'bi-file-x',
@@ -2437,7 +2273,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    164 => 
     array (
       'name' => 'File X Fill',
       'value' => 'bi-file-x-fill',
@@ -2452,7 +2287,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    165 => 
     array (
       'name' => 'File Zip',
       'value' => 'bi-file-zip',
@@ -2466,7 +2300,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    166 => 
     array (
       'name' => 'File Zip Fill',
       'value' => 'bi-file-zip-fill',
@@ -2481,7 +2314,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    167 => 
     array (
       'name' => 'Files',
       'value' => 'bi-files',
@@ -2493,7 +2325,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    168 => 
     array (
       'name' => 'Files Alt',
       'value' => 'bi-files-alt',
@@ -2506,7 +2337,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    169 => 
     array (
       'name' => 'Filetype Aac',
       'value' => 'bi-filetype-aac',
@@ -2519,7 +2349,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    170 => 
     array (
       'name' => 'Filetype Ai',
       'value' => 'bi-filetype-ai',
@@ -2532,7 +2361,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    171 => 
     array (
       'name' => 'Filetype Bmp',
       'value' => 'bi-filetype-bmp',
@@ -2545,7 +2373,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    172 => 
     array (
       'name' => 'Filetype Cs',
       'value' => 'bi-filetype-cs',
@@ -2558,7 +2385,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    173 => 
     array (
       'name' => 'Filetype Css',
       'value' => 'bi-filetype-css',
@@ -2571,7 +2397,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    174 => 
     array (
       'name' => 'Filetype Csv',
       'value' => 'bi-filetype-csv',
@@ -2584,7 +2409,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    175 => 
     array (
       'name' => 'Filetype Doc',
       'value' => 'bi-filetype-doc',
@@ -2597,7 +2421,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    176 => 
     array (
       'name' => 'Filetype Docx',
       'value' => 'bi-filetype-docx',
@@ -2610,7 +2433,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    177 => 
     array (
       'name' => 'Filetype Exe',
       'value' => 'bi-filetype-exe',
@@ -2623,7 +2445,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    178 => 
     array (
       'name' => 'Filetype Gif',
       'value' => 'bi-filetype-gif',
@@ -2636,7 +2457,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    179 => 
     array (
       'name' => 'Filetype Heic',
       'value' => 'bi-filetype-heic',
@@ -2649,7 +2469,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    180 => 
     array (
       'name' => 'Filetype Html',
       'value' => 'bi-filetype-html',
@@ -2662,7 +2481,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    181 => 
     array (
       'name' => 'Filetype Java',
       'value' => 'bi-filetype-java',
@@ -2675,7 +2493,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    182 => 
     array (
       'name' => 'Filetype Jpg',
       'value' => 'bi-filetype-jpg',
@@ -2688,7 +2505,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    183 => 
     array (
       'name' => 'Filetype Js',
       'value' => 'bi-filetype-js',
@@ -2701,7 +2517,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    184 => 
     array (
       'name' => 'Filetype Json',
       'value' => 'bi-filetype-json',
@@ -2714,7 +2529,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    185 => 
     array (
       'name' => 'Filetype Jsx',
       'value' => 'bi-filetype-jsx',
@@ -2727,7 +2541,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    186 => 
     array (
       'name' => 'Filetype Key',
       'value' => 'bi-filetype-key',
@@ -2740,7 +2553,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    187 => 
     array (
       'name' => 'Filetype M4p',
       'value' => 'bi-filetype-m4p',
@@ -2753,7 +2565,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    188 => 
     array (
       'name' => 'Filetype Md',
       'value' => 'bi-filetype-md',
@@ -2766,7 +2577,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    189 => 
     array (
       'name' => 'Filetype Mdx',
       'value' => 'bi-filetype-mdx',
@@ -2779,7 +2589,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    190 => 
     array (
       'name' => 'Filetype Mov',
       'value' => 'bi-filetype-mov',
@@ -2792,7 +2601,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    191 => 
     array (
       'name' => 'Filetype Mp3',
       'value' => 'bi-filetype-mp3',
@@ -2805,7 +2613,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    192 => 
     array (
       'name' => 'Filetype Mp4',
       'value' => 'bi-filetype-mp4',
@@ -2818,7 +2625,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    193 => 
     array (
       'name' => 'Filetype Otf',
       'value' => 'bi-filetype-otf',
@@ -2831,7 +2637,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    194 => 
     array (
       'name' => 'Filetype Pdf',
       'value' => 'bi-filetype-pdf',
@@ -2844,7 +2649,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    195 => 
     array (
       'name' => 'Filetype Php',
       'value' => 'bi-filetype-php',
@@ -2857,7 +2661,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    196 => 
     array (
       'name' => 'Filetype Png',
       'value' => 'bi-filetype-png',
@@ -2870,7 +2673,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    197 => 
     array (
       'name' => 'Filetype Ppt',
       'value' => 'bi-filetype-ppt',
@@ -2883,7 +2685,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    198 => 
     array (
       'name' => 'Filetype Pptx',
       'value' => 'bi-filetype-pptx',
@@ -2896,7 +2697,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    199 => 
     array (
       'name' => 'Filetype Psd',
       'value' => 'bi-filetype-psd',
@@ -2909,7 +2709,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    200 => 
     array (
       'name' => 'Filetype Py',
       'value' => 'bi-filetype-py',
@@ -2922,7 +2721,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    201 => 
     array (
       'name' => 'Filetype Raw',
       'value' => 'bi-filetype-raw',
@@ -2935,7 +2733,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    202 => 
     array (
       'name' => 'Filetype Rb',
       'value' => 'bi-filetype-rb',
@@ -2948,7 +2745,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    203 => 
     array (
       'name' => 'Filetype Sass',
       'value' => 'bi-filetype-sass',
@@ -2961,7 +2757,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    204 => 
     array (
       'name' => 'Filetype Scss',
       'value' => 'bi-filetype-scss',
@@ -2974,7 +2769,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    205 => 
     array (
       'name' => 'Filetype Sh',
       'value' => 'bi-filetype-sh',
@@ -2987,7 +2781,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    206 => 
     array (
       'name' => 'Filetype Sql',
       'value' => 'bi-filetype-sql',
@@ -3000,7 +2793,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    207 => 
     array (
       'name' => 'Filetype Svg',
       'value' => 'bi-filetype-svg',
@@ -3013,7 +2805,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    208 => 
     array (
       'name' => 'Filetype Tiff',
       'value' => 'bi-filetype-tiff',
@@ -3026,7 +2817,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    209 => 
     array (
       'name' => 'Filetype Tsx',
       'value' => 'bi-filetype-tsx',
@@ -3039,7 +2829,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    210 => 
     array (
       'name' => 'Filetype Ttf',
       'value' => 'bi-filetype-ttf',
@@ -3052,7 +2841,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    211 => 
     array (
       'name' => 'Filetype Txt',
       'value' => 'bi-filetype-txt',
@@ -3065,7 +2853,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    212 => 
     array (
       'name' => 'Filetype Wav',
       'value' => 'bi-filetype-wav',
@@ -3078,7 +2865,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    213 => 
     array (
       'name' => 'Filetype Woff',
       'value' => 'bi-filetype-woff',
@@ -3091,7 +2877,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    214 => 
     array (
       'name' => 'Filetype Xls',
       'value' => 'bi-filetype-xls',
@@ -3104,7 +2889,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    215 => 
     array (
       'name' => 'Filetype Xlsx',
       'value' => 'bi-filetype-xlsx',
@@ -3117,7 +2901,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    216 => 
     array (
       'name' => 'Filetype Xml',
       'value' => 'bi-filetype-xml',
@@ -3130,7 +2913,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    217 => 
     array (
       'name' => 'Filetype Yml',
       'value' => 'bi-filetype-yml',
@@ -3143,7 +2925,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    218 => 
     array (
       'name' => 'Floppy',
       'value' => 'bi-floppy',
@@ -3156,7 +2937,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    219 => 
     array (
       'name' => 'Floppy Fill',
       'value' => 'bi-floppy-fill',
@@ -3170,7 +2950,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    220 => 
     array (
       'name' => 'Floppy2',
       'value' => 'bi-floppy2',
@@ -3183,7 +2962,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    221 => 
     array (
       'name' => 'Floppy2 Fill',
       'value' => 'bi-floppy2-fill',
@@ -3197,7 +2975,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    222 => 
     array (
       'name' => 'Folder',
       'value' => 'bi-folder',
@@ -3210,7 +2987,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    223 => 
     array (
       'name' => 'Folder Check',
       'value' => 'bi-folder-check',
@@ -3223,7 +2999,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    224 => 
     array (
       'name' => 'Folder Fill',
       'value' => 'bi-folder-fill',
@@ -3237,7 +3012,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    225 => 
     array (
       'name' => 'Folder Minus',
       'value' => 'bi-folder-minus',
@@ -3250,7 +3024,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    226 => 
     array (
       'name' => 'Folder Plus',
       'value' => 'bi-folder-plus',
@@ -3263,7 +3036,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    227 => 
     array (
       'name' => 'Folder Symlink',
       'value' => 'bi-folder-symlink',
@@ -3277,7 +3049,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    228 => 
     array (
       'name' => 'Folder Symlink Fill',
       'value' => 'bi-folder-symlink-fill',
@@ -3292,7 +3063,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    229 => 
     array (
       'name' => 'Folder X',
       'value' => 'bi-folder-x',
@@ -3305,7 +3075,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    230 => 
     array (
       'name' => 'Folder2',
       'value' => 'bi-folder2',
@@ -3317,7 +3086,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    231 => 
     array (
       'name' => 'Folder2 Open',
       'value' => 'bi-folder2-open',
@@ -3330,7 +3098,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    232 => 
     array (
       'name' => 'Journal',
       'value' => 'bi-journal',
@@ -3342,7 +3109,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    233 => 
     array (
       'name' => 'Journal Album',
       'value' => 'bi-journal-album',
@@ -3355,7 +3121,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    234 => 
     array (
       'name' => 'Journal Arrow Down',
       'value' => 'bi-journal-arrow-down',
@@ -3369,7 +3134,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    235 => 
     array (
       'name' => 'Journal Arrow Up',
       'value' => 'bi-journal-arrow-up',
@@ -3383,7 +3147,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    236 => 
     array (
       'name' => 'Journal Bookmark',
       'value' => 'bi-journal-bookmark',
@@ -3397,7 +3160,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    237 => 
     array (
       'name' => 'Journal Bookmark Fill',
       'value' => 'bi-journal-bookmark-fill',
@@ -3412,7 +3174,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    238 => 
     array (
       'name' => 'Journal Check',
       'value' => 'bi-journal-check',
@@ -3425,7 +3186,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    239 => 
     array (
       'name' => 'Journal Code',
       'value' => 'bi-journal-code',
@@ -3438,7 +3198,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    240 => 
     array (
       'name' => 'Journal Medical',
       'value' => 'bi-journal-medical',
@@ -3451,7 +3210,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    241 => 
     array (
       'name' => 'Journal Minus',
       'value' => 'bi-journal-minus',
@@ -3464,7 +3222,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    242 => 
     array (
       'name' => 'Journal Plus',
       'value' => 'bi-journal-plus',
@@ -3477,7 +3234,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    243 => 
     array (
       'name' => 'Journal Richtext',
       'value' => 'bi-journal-richtext',
@@ -3490,7 +3246,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    244 => 
     array (
       'name' => 'Journal Text',
       'value' => 'bi-journal-text',
@@ -3503,7 +3258,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    245 => 
     array (
       'name' => 'Journal X',
       'value' => 'bi-journal-x',
@@ -3516,7 +3270,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    246 => 
     array (
       'name' => 'Journals',
       'value' => 'bi-journals',
@@ -3528,7 +3281,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    247 => 
     array (
       'name' => 'Receipt',
       'value' => 'bi-receipt',
@@ -3540,7 +3292,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    248 => 
     array (
       'name' => 'Receipt Cutoff',
       'value' => 'bi-receipt-cutoff',
@@ -3553,7 +3304,6 @@ return array (
       'category' => 'files',
       'has_variants' => false,
     ),
-    249 => 
     array (
       'name' => 'Save',
       'value' => 'bi-save',
@@ -3566,7 +3316,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    250 => 
     array (
       'name' => 'Save Fill',
       'value' => 'bi-save-fill',
@@ -3580,7 +3329,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    251 => 
     array (
       'name' => 'Save2',
       'value' => 'bi-save2',
@@ -3593,7 +3341,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    252 => 
     array (
       'name' => 'Save2 Fill',
       'value' => 'bi-save2-fill',
@@ -3607,7 +3354,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    253 => 
     array (
       'name' => 'Upload',
       'value' => 'bi-upload',

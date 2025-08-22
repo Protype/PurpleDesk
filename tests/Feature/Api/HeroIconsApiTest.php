@@ -50,7 +50,6 @@ class HeroIconsApiTest extends TestCase
         $icon = $firstCategory[0];
         
         // 檢查必要欄位
-        $this->assertArrayHasKey('id', $icon);
         $this->assertArrayHasKey('name', $icon);
         $this->assertArrayHasKey('value', $icon);
         $this->assertArrayHasKey('type', $icon);
@@ -60,7 +59,6 @@ class HeroIconsApiTest extends TestCase
         $this->assertArrayHasKey('variant_type', $icon);
         
         // 檢查欄位類型
-        $this->assertIsString($icon['id']);
         $this->assertIsString($icon['name']);
         $this->assertIsString($icon['value']);
         $this->assertEquals('heroicons', $icon['type']);
@@ -163,46 +161,38 @@ class HeroIconsApiTest extends TestCase
     }
 
     /**
-     * 測試 HeroIcon 變體展開
+     * 測試 HeroIcons 變體配對正確性
      */
-    public function test_heroicons_variants_are_expanded()
+    public function test_heroicons_variant_pairing()
     {
         $response = $this->getJson('/api/config/icon/heroicons');
         
         $data = $response->json('data');
         
-        // 收集所有 icon 的基本名稱（移除 -outline, -solid 後綴）
+        // 收集所有有變體的圖標，按 value 分組
         $iconGroups = [];
-        
         foreach ($data as $categoryIcons) {
             foreach ($categoryIcons as $icon) {
-                // 從 id 中提取基本名稱
-                $baseName = preg_replace('/-outline$|-solid$/', '', $icon['id']);
-                
-                if (!isset($iconGroups[$baseName])) {
-                    $iconGroups[$baseName] = [];
+                if ($icon['has_variants']) {
+                    $iconGroups[$icon['value']][] = $icon['variant_type'];
                 }
-                
-                $iconGroups[$baseName][] = $icon;
             }
         }
         
-        // 至少應該有一組有多個變體的 icon
-        $hasMultipleVariants = false;
-        
-        foreach ($iconGroups as $baseName => $variants) {
-            if (count($variants) > 1) {
-                $hasMultipleVariants = true;
-                
-                // 檢查變體類型
-                $variantTypes = array_column($variants, 'variant_type');
-                $this->assertContains('outline', $variantTypes, "Icon group {$baseName} should have outline variant");
-                $this->assertContains('solid', $variantTypes, "Icon group {$baseName} should have solid variant");
-                break;
-            }
+        // 驗證每個組都有完整的變體配對
+        $testedCount = 0;
+        foreach ($iconGroups as $value => $types) {
+            $this->assertContains('outline', $types, 
+                "Icon {$value} should have outline variant");
+            $this->assertContains('solid', $types,
+                "Icon {$value} should have solid variant");
+            $this->assertCount(2, $types,
+                "Icon {$value} should have exactly 2 variants (outline and solid)");
+            $testedCount++;
         }
         
-        $this->assertTrue($hasMultipleVariants, 'Should have at least one icon with multiple variants');
+        // 確保至少測試了一些圖標
+        $this->assertGreaterThan(0, $testedCount, 'Should have tested at least some icon variants');
     }
 
     /**
