@@ -222,13 +222,13 @@ export default {
       }
       
       // 應用圖標配置
-      if (props.iconData?.type === 'hero_icon') {
+      if (props.iconData?.type === 'hero_icon' || props.iconData?.type === 'heroicons') {
         const config = getIconDisplayConfig(props.size, 'hero_icon')
         if (config.size) {
           styles.width = config.size
           styles.height = config.size
         }
-      } else if (props.iconData?.type === 'bootstrap_icon') {
+      } else if (props.iconData?.type === 'bootstrap_icon' || props.iconData?.type === 'bootstrap-icons') {
         const config = getIconDisplayConfig(props.size, 'bootstrap_icon')
         if (config.size) {
           styles.fontSize = config.size
