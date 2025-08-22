@@ -1,10 +1,11 @@
 # ST-014-4-FIX: IconLibraryPanel 簡化架構重構
 
 **建立日期**：2025-08-19  
-**狀態**：In Progress  
+**更新日期**：2025-08-22
+**狀態**：Mostly Complete (85% 完成)  
 **優先級**：P0 (修正問題)  
-**預估工時**：6小時  
-**開發方法**：TDD
+**實際工時**：4.5小時 (預估 6小時)  
+**開發方法**：TDD + 漸進式重構
 
 ## 📋 Story 概述
 
@@ -30,39 +31,49 @@ ST-014-4 實作的 IconLibraryPanel 過度複雜化，基於架構師分析決�
 
 ## 🎯 驗收條件
 
-### 核心架構簡化
-- [ ] 移除所有標籤切換邏輯 (activeLibrary)
-- [ ] 實作 `isSolid` 標記系統
-- [ ] 使用簡單篩選邏輯替代複雜變體系統
-- [ ] 圖標按名稱統一排序
-- [ ] 保持分類結構顯示
+### ✅ 已完成項目 (85%)
 
-### 篩選功能
-- [ ] 實作三種顯示模式：全部/線條/填充
-- [ ] `outline` 模式篩選 `!isSolid` 圖標
-- [ ] `solid` 模式篩選 `isSolid` 圖標
-- [ ] 篩選時保持圖標相對位置穩定
+#### 核心架構簡化
+- [x] 移除所有標籤切換邏輯 (activeLibrary) - **已完成**
+- [x] 扁平化 API 格式適配 - **已完成**
+- [x] 保持分類結構顯示 - **已完成**
+- [ ] 實作 `isSolid` 標記系統 - **待完成**
+- [ ] 圖標按名稱統一排序 - **部分完成，需調整**
 
-### 技術實作
-- [ ] 使用 IconStyleSelector 替代 VariantSelector
-- [ ] 實作 `processedIcons` computed (標記 + 排序)
-- [ ] 實作 `filteredIcons` computed (簡單篩選)
-- [ ] 保持 VirtualScrollGrid fullRow 架構
-- [ ] 搜尋時返回扁平化結果
+#### 篩選功能  
+- [x] `outline` 和 `solid` 模式篩選 - **已完成**
+- [x] 篩選時保持圖標相對位置穩定 - **已完成**
+- [ ] 實作三種顯示模式：全部/線條/填充 - **缺少 all 模式**
 
-### 介面保持
-- [ ] 搜尋欄位在頂部
-- [ ] IconStyleSelector 在搜尋欄旁邊
-- [ ] 分類標題使用 fullRow 顯示
-- [ ] 圖標選中狀態視覺反饋
-- [ ] 載入/錯誤/空狀態處理
+#### 技術實作
+- [x] 使用 IconStyleSelector 替代 VariantSelector - **已完成**
+- [x] 實作 `processedIcons` computed - **已完成**
+- [x] 實作 `filteredIcons` computed - **已完成**
+- [x] 保持 VirtualScrollGrid fullRow 架構 - **已完成**
+- [x] 搜尋時返回扁平化結果 - **已完成**
+
+#### 介面保持
+- [x] 搜尋欄位在頂部 - **已完成**
+- [x] IconStyleSelector 在搜尋欄旁邊 - **已完成**
+- [x] 分類標題使用 fullRow 顯示 - **已完成**
+- [x] 圖標選中狀態視覺反饋 - **已完成**
+- [x] 載入/錯誤/空狀態處理 - **已完成**
+
+### 🚧 剩餘工作項目 (15%)
+
+#### 需要調整的項目
+- [ ] 加入 `isSolid` 標記系統取代複雜的 `has_variants` + `variant_type` 判斷
+- [ ] IconStyleSelector 加入 "all" 選項
+- [ ] 簡化篩選邏輯，使用 isSolid 布林值
+- [ ] 調整排序邏輯，改為按名稱統一排序（不分類型）
 
 ## 🔧 簡化架構技術規格
 
-### 1. 圖標資料處理 - 標記 + 排序
+### 🎯 目標架構 vs 🏗️ 現況實作
 
+#### 📋 目標架構：簡化的 isSolid 標記系統
 ```javascript
-// 處理所有圖標：標記 isSolid + 統一排序
+// 【目標】處理所有圖標：標記 isSolid + 統一排序
 const processedIcons = computed(() => {
   const allIcons = [...heroicons, ...bootstrapIcons]
   
@@ -82,10 +93,28 @@ const processedIcons = computed(() => {
 })
 ```
 
-### 2. 簡單篩選邏輯
+#### 🏗️ 現況實作：基於 API 欄位的複雜判斷
+```javascript  
+// 【現況】使用 has_variants 和 variant_type 的複雜判斷
+const styleFilteredIcons = computed(() => {
+  return processedIconsData.value.filter(icon => {
+    if (icon.type === 'heroicons') {
+      if (style === 'outline') {
+        return (icon.has_variants === true && icon.variant_type === 'outline') ||
+               (icon.has_variants === false)
+      } else if (style === 'solid') {
+        return (icon.has_variants === true && icon.variant_type === 'solid') ||
+               (icon.has_variants === false)
+      }
+    }
+    // Bootstrap Icons 類似邏輯...
+  })
+})
+```
 
+#### 📋 目標篩選邏輯：基於 isSolid 的簡單判斷
 ```javascript
-// 純篩選，無複雜邏輯
+// 【目標】純篩選，無複雜邏輯
 const filteredIcons = computed(() => {
   const style = selectedStyle.value
   
@@ -104,6 +133,22 @@ const filteredIcons = computed(() => {
   return processedIcons.value
 })
 ```
+
+### 📊 重構進度總結
+
+#### ✅ 已實作功能 (目前版本)
+1. **扁平化 API 格式** - 完全實作
+2. **IconStyleSelector** - 已整合 (僅 outline/solid)
+3. **VirtualScrollGrid 架構** - 完全保持
+4. **分類標題顯示** - 完全實作  
+5. **搜尋功能** - 完全實作
+6. **18 個測試案例** - 全部通過
+
+#### 🚧 待調整項目 (剩餘 15%)
+1. **isSolid 標記系統** - 需加入
+2. **IconStyleSelector all 選項** - 需新增
+3. **簡化篩選邏輯** - 需重構
+4. **統一排序** - 需調整
 
 ### 3. 分類結構組織
 
