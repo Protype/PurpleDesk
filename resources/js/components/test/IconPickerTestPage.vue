@@ -257,9 +257,9 @@
 
     <!-- 舊版 IconPickerOri (隱藏預覽按鈕) -->
     <IconPickerOri 
+      ref="iconPickerOldRef"
       v-model="selectedIconOld"
       v-model:iconType="iconTypeOld"
-      :is-open="isPickerOpenOld"
       :hide-preview="true"
       @close="closeIconPickerOld"
       @update:modelValue="handleIconSelectedOld"
@@ -360,7 +360,7 @@ export default {
     // 舊版 IconPicker 狀態
     const selectedIconOld = ref('')
     const iconTypeOld = ref('')
-    const isPickerOpenOld = ref(false)
+    const iconPickerOldRef = ref(null)
     
     // 動態載入測試
     const dynamicIconComponent = ref(null)
@@ -444,11 +444,13 @@ export default {
     
     // 舊版 IconPicker 事件處理
     const openIconPickerOld = () => {
-      isPickerOpenOld.value = true
+      if (iconPickerOldRef.value) {
+        iconPickerOldRef.value.togglePicker()
+      }
     }
     
     const closeIconPickerOld = () => {
-      isPickerOpenOld.value = false
+      // IconPickerOri 會自動關閉，不需要手動處理
     }
     
     const handleIconSelectedOld = (icon) => {
@@ -592,7 +594,7 @@ export default {
       // 舊版 IconPicker 相關
       selectedIconOld,
       iconTypeOld,
-      isPickerOpenOld,
+      iconPickerOldRef,
       convertOldIconData,
       openIconPickerOld,
       closeIconPickerOld,
