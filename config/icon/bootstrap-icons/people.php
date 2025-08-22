@@ -6,7 +6,6 @@ return array (
   'description' => '人物、角色相關的圖標',
   'icons' => 
   array (
-    0 => 
     array (
       'name' => 'Ear',
       'value' => 'bi-ear',
@@ -19,7 +18,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    1 => 
     array (
       'name' => 'Ear Fill',
       'value' => 'bi-ear-fill',
@@ -33,7 +31,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    2 => 
     array (
       'name' => 'Emoji Angry',
       'value' => 'bi-emoji-angry',
@@ -47,7 +44,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    3 => 
     array (
       'name' => 'Emoji Angry Fill',
       'value' => 'bi-emoji-angry-fill',
@@ -62,7 +58,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    4 => 
     array (
       'name' => 'Emoji Dizzy',
       'value' => 'bi-emoji-dizzy',
@@ -76,7 +71,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    5 => 
     array (
       'name' => 'Emoji Dizzy Fill',
       'value' => 'bi-emoji-dizzy-fill',
@@ -91,7 +85,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    6 => 
     array (
       'name' => 'Emoji Expressionless',
       'value' => 'bi-emoji-expressionless',
@@ -105,7 +98,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    7 => 
     array (
       'name' => 'Emoji Expressionless Fill',
       'value' => 'bi-emoji-expressionless-fill',
@@ -120,7 +112,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    8 => 
     array (
       'name' => 'Emoji Frown',
       'value' => 'bi-emoji-frown',
@@ -134,7 +125,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    9 => 
     array (
       'name' => 'Emoji Frown Fill',
       'value' => 'bi-emoji-frown-fill',
@@ -149,7 +139,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    10 => 
     array (
       'name' => 'Emoji Heart Eyes',
       'value' => 'bi-emoji-heart-eyes',
@@ -164,7 +153,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    11 => 
     array (
       'name' => 'Emoji Heart Eyes Fill',
       'value' => 'bi-emoji-heart-eyes-fill',
@@ -180,7 +168,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    12 => 
     array (
       'name' => 'Emoji Kiss',
       'value' => 'bi-emoji-kiss',
@@ -194,7 +181,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    13 => 
     array (
       'name' => 'Emoji Kiss Fill',
       'value' => 'bi-emoji-kiss-fill',
@@ -209,7 +195,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    14 => 
     array (
       'name' => 'Emoji Laughing',
       'value' => 'bi-emoji-laughing',
@@ -223,7 +208,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    15 => 
     array (
       'name' => 'Emoji Laughing Fill',
       'value' => 'bi-emoji-laughing-fill',
@@ -238,7 +222,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    16 => 
     array (
       'name' => 'Emoji Neutral',
       'value' => 'bi-emoji-neutral',
@@ -252,7 +235,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    17 => 
     array (
       'name' => 'Emoji Neutral Fill',
       'value' => 'bi-emoji-neutral-fill',
@@ -267,7 +249,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    18 => 
     array (
       'name' => 'Emoji Smile',
       'value' => 'bi-emoji-smile',
@@ -281,7 +262,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    19 => 
     array (
       'name' => 'Emoji Smile Fill',
       'value' => 'bi-emoji-smile-fill',
@@ -296,7 +276,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    20 => 
     array (
       'name' => 'Emoji Smile Upside Down',
       'value' => 'bi-emoji-smile-upside-down',
@@ -312,7 +291,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    21 => 
     array (
       'name' => 'Emoji Smile Upside Down Fill',
       'value' => 'bi-emoji-smile-upside-down-fill',
@@ -329,7 +307,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    22 => 
     array (
       'name' => 'Emoji Sunglasses',
       'value' => 'bi-emoji-sunglasses',
@@ -343,7 +320,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    23 => 
     array (
       'name' => 'Emoji Sunglasses Fill',
       'value' => 'bi-emoji-sunglasses-fill',
@@ -358,7 +334,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    24 => 
     array (
       'name' => 'Emoji Wink',
       'value' => 'bi-emoji-wink',
@@ -372,7 +347,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    25 => 
     array (
       'name' => 'Emoji Wink Fill',
       'value' => 'bi-emoji-wink-fill',
@@ -387,7 +361,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    26 => 
     array (
       'name' => 'Eyeglasses',
       'value' => 'bi-eyeglasses',
@@ -399,7 +372,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    27 => 
     array (
       'name' => 'Gender Ambiguous',
       'value' => 'bi-gender-ambiguous',
@@ -412,7 +384,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    28 => 
     array (
       'name' => 'Gender Female',
       'value' => 'bi-gender-female',
@@ -425,7 +396,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    29 => 
     array (
       'name' => 'Gender Male',
       'value' => 'bi-gender-male',
@@ -438,7 +408,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    30 => 
     array (
       'name' => 'Gender Neuter',
       'value' => 'bi-gender-neuter',
@@ -451,7 +420,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    31 => 
     array (
       'name' => 'Gender Trans',
       'value' => 'bi-gender-trans',
@@ -464,7 +432,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    32 => 
     array (
       'name' => 'Hand Index',
       'value' => 'bi-hand-index',
@@ -478,7 +445,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    33 => 
     array (
       'name' => 'Hand Index Fill',
       'value' => 'bi-hand-index-fill',
@@ -493,7 +459,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    34 => 
     array (
       'name' => 'Hand Index Thumb',
       'value' => 'bi-hand-index-thumb',
@@ -508,7 +473,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    35 => 
     array (
       'name' => 'Hand Index Thumb Fill',
       'value' => 'bi-hand-index-thumb-fill',
@@ -524,7 +488,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    36 => 
     array (
       'name' => 'Hand Thumbs Down',
       'value' => 'bi-hand-thumbs-down',
@@ -539,7 +502,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    37 => 
     array (
       'name' => 'Hand Thumbs Down Fill',
       'value' => 'bi-hand-thumbs-down-fill',
@@ -555,7 +517,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    38 => 
     array (
       'name' => 'Hand Thumbs Up',
       'value' => 'bi-hand-thumbs-up',
@@ -570,7 +531,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    39 => 
     array (
       'name' => 'Hand Thumbs Up Fill',
       'value' => 'bi-hand-thumbs-up-fill',
@@ -586,7 +546,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    40 => 
     array (
       'name' => 'People',
       'value' => 'bi-people',
@@ -599,7 +558,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    41 => 
     array (
       'name' => 'People Fill',
       'value' => 'bi-people-fill',
@@ -613,7 +571,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    42 => 
     array (
       'name' => 'Person',
       'value' => 'bi-person',
@@ -626,7 +583,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    43 => 
     array (
       'name' => 'Person Add',
       'value' => 'bi-person-add',
@@ -640,7 +596,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    44 => 
     array (
       'name' => 'Person Arms Up',
       'value' => 'bi-person-arms-up',
@@ -654,7 +609,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    45 => 
     array (
       'name' => 'Person Badge',
       'value' => 'bi-person-badge',
@@ -668,7 +622,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    46 => 
     array (
       'name' => 'Person Badge Fill',
       'value' => 'bi-person-badge-fill',
@@ -683,7 +636,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    47 => 
     array (
       'name' => 'Person Bounding Box',
       'value' => 'bi-person-bounding-box',
@@ -697,7 +649,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    48 => 
     array (
       'name' => 'Person Check',
       'value' => 'bi-person-check',
@@ -711,22 +662,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    49 => 
-    array (
-      'name' => 'Person Check Fill',
-      'value' => 'bi-person-check-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'person',
-        1 => 'check',
-        2 => 'fill',
-      ),
-      'category' => 'people',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    50 => 
     array (
       'name' => 'Person Circle',
       'value' => 'bi-person-circle',
@@ -739,7 +674,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    51 => 
     array (
       'name' => 'Person Dash',
       'value' => 'bi-person-dash',
@@ -753,22 +687,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    52 => 
-    array (
-      'name' => 'Person Dash Fill',
-      'value' => 'bi-person-dash-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'person',
-        1 => 'dash',
-        2 => 'fill',
-      ),
-      'category' => 'people',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    53 => 
     array (
       'name' => 'Person Down',
       'value' => 'bi-person-down',
@@ -782,7 +700,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    54 => 
     array (
       'name' => 'Person Exclamation',
       'value' => 'bi-person-exclamation',
@@ -796,7 +713,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    55 => 
     array (
       'name' => 'Person Fill',
       'value' => 'bi-person-fill',
@@ -810,7 +726,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    56 => 
     array (
       'name' => 'Person Fill Add',
       'value' => 'bi-person-fill-add',
@@ -825,7 +740,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    57 => 
     array (
       'name' => 'Person Fill Check',
       'value' => 'bi-person-fill-check',
@@ -840,7 +754,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    58 => 
     array (
       'name' => 'Person Fill Dash',
       'value' => 'bi-person-fill-dash',
@@ -855,7 +768,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    59 => 
     array (
       'name' => 'Person Fill Down',
       'value' => 'bi-person-fill-down',
@@ -870,7 +782,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    60 => 
     array (
       'name' => 'Person Fill Exclamation',
       'value' => 'bi-person-fill-exclamation',
@@ -885,7 +796,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    61 => 
     array (
       'name' => 'Person Fill Gear',
       'value' => 'bi-person-fill-gear',
@@ -900,7 +810,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    62 => 
     array (
       'name' => 'Person Fill Lock',
       'value' => 'bi-person-fill-lock',
@@ -915,7 +824,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    63 => 
     array (
       'name' => 'Person Fill Slash',
       'value' => 'bi-person-fill-slash',
@@ -930,7 +838,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    64 => 
     array (
       'name' => 'Person Fill Up',
       'value' => 'bi-person-fill-up',
@@ -945,7 +852,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    65 => 
     array (
       'name' => 'Person Fill X',
       'value' => 'bi-person-fill-x',
@@ -960,7 +866,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    66 => 
     array (
       'name' => 'Person Gear',
       'value' => 'bi-person-gear',
@@ -974,7 +879,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    67 => 
     array (
       'name' => 'Person Heart',
       'value' => 'bi-person-heart',
@@ -987,7 +891,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    68 => 
     array (
       'name' => 'Person Hearts',
       'value' => 'bi-person-hearts',
@@ -1000,7 +903,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    69 => 
     array (
       'name' => 'Person Lines Fill',
       'value' => 'bi-person-lines-fill',
@@ -1014,7 +916,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    70 => 
     array (
       'name' => 'Person Lock',
       'value' => 'bi-person-lock',
@@ -1028,7 +929,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    71 => 
     array (
       'name' => 'Person Plus',
       'value' => 'bi-person-plus',
@@ -1042,7 +942,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    72 => 
     array (
       'name' => 'Person Plus Fill',
       'value' => 'bi-person-plus-fill',
@@ -1057,7 +956,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    73 => 
     array (
       'name' => 'Person Raised Hand',
       'value' => 'bi-person-raised-hand',
@@ -1071,7 +969,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    74 => 
     array (
       'name' => 'Person Rolodex',
       'value' => 'bi-person-rolodex',
@@ -1084,7 +981,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    75 => 
     array (
       'name' => 'Person Slash',
       'value' => 'bi-person-slash',
@@ -1098,7 +994,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    76 => 
     array (
       'name' => 'Person Square',
       'value' => 'bi-person-square',
@@ -1111,7 +1006,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    77 => 
     array (
       'name' => 'Person Standing',
       'value' => 'bi-person-standing',
@@ -1124,7 +1018,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    78 => 
     array (
       'name' => 'Person Standing Dress',
       'value' => 'bi-person-standing-dress',
@@ -1138,7 +1031,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    79 => 
     array (
       'name' => 'Person Up',
       'value' => 'bi-person-up',
@@ -1152,7 +1044,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    80 => 
     array (
       'name' => 'Person Vcard',
       'value' => 'bi-person-vcard',
@@ -1166,7 +1057,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    81 => 
     array (
       'name' => 'Person Vcard Fill',
       'value' => 'bi-person-vcard-fill',
@@ -1181,7 +1071,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'solid',
     ),
-    82 => 
     array (
       'name' => 'Person Video',
       'value' => 'bi-person-video',
@@ -1194,7 +1083,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    83 => 
     array (
       'name' => 'Person Video2',
       'value' => 'bi-person-video2',
@@ -1207,7 +1095,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    84 => 
     array (
       'name' => 'Person Video3',
       'value' => 'bi-person-video3',
@@ -1220,7 +1107,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    85 => 
     array (
       'name' => 'Person Walking',
       'value' => 'bi-person-walking',
@@ -1233,7 +1119,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    86 => 
     array (
       'name' => 'Person Wheelchair',
       'value' => 'bi-person-wheelchair',
@@ -1246,7 +1131,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    87 => 
     array (
       'name' => 'Person Workspace',
       'value' => 'bi-person-workspace',
@@ -1259,7 +1143,6 @@ return array (
       'category' => 'people',
       'has_variants' => false,
     ),
-    88 => 
     array (
       'name' => 'Person X',
       'value' => 'bi-person-x',
@@ -1273,22 +1156,6 @@ return array (
       'has_variants' => true,
       'variant_type' => 'outline',
     ),
-    89 => 
-    array (
-      'name' => 'Person X Fill',
-      'value' => 'bi-person-x-fill',
-      'type' => 'bootstrap-icons',
-      'keywords' => 
-      array (
-        0 => 'person',
-        1 => 'x',
-        2 => 'fill',
-      ),
-      'category' => 'people',
-      'has_variants' => true,
-      'variant_type' => 'solid',
-    ),
-    90 => 
     array (
       'name' => 'Sunglasses',
       'value' => 'bi-sunglasses',
