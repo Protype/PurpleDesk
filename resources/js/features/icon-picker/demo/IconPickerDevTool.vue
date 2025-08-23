@@ -89,7 +89,7 @@ export default {
       if (urlParams.get('iconpicker') === 'original') return true
       if (urlParams.get('iconpicker') === 'new') return false
       
-      return true // 預設原版
+      return false // 預設新版
     })
     
     const currentVersion = computed(() => {
