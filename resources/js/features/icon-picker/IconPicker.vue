@@ -131,13 +131,13 @@
               />
             </div>
 
-            <!-- Upload 標籤頁 - 開發中狀態 -->
-            <div v-show="activeTab === 'upload'" class="text-center py-8">
-              <div class="text-4xl mb-4">🚧</div>
-              <div class="text-gray-600 text-sm">
-                <div class="font-medium mb-2">Image Upload Panel 開發中</div>
-                <div class="text-xs text-gray-500">將實作圖片上傳和預覽功能</div>
-              </div>
+            <!-- Upload 標籤頁 - 使用 ImageUploadPanel -->
+            <div v-show="activeTab === 'upload'">
+              <ImageUploadPanel
+                :selected-icon="iconType === 'upload' ? selectedIcon : null"
+                @icon-select="handleImageUpload"
+                @file-selected="handleFileSelected"
+              />
             </div>
           </div>
 
@@ -178,6 +178,7 @@ import { ref, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import TextIconPanel from './components/TextIconPanel.vue'
 import EmojiPanel from './components/EmojiPanel.vue'
 import IconLibraryPanel from './components/IconLibraryPanel.vue'
+import ImageUploadPanel from './components/ImageUploadPanel.vue'
 import IconPickerSearch from './components/IconPickerSearch.vue'
 import SkinToneSelector from '@/components/common/SkinToneSelector.vue'
 import { usePreloadedDataProvider } from './composables/usePreloadedData.js'
@@ -423,6 +424,22 @@ const handleIconSelection = (icon) => {
   emit('update:iconType', icon.type)
   
   closePicker()
+}
+
+// 處理圖片上傳選擇
+const handleImageUpload = (iconData) => {
+  selectedIcon.value = iconData
+  iconType.value = iconData.iconType || 'upload'
+  
+  emit('update:modelValue', iconData)
+  emit('update:iconType', iconData.iconType || 'upload')
+  
+  closePicker()
+}
+
+// 處理檔案選擇事件
+const handleFileSelected = (file) => {
+  emit('file-selected', file)
 }
 
 // 鍵盤事件處理
