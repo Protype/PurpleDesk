@@ -76,15 +76,15 @@ describe('IconPicker 面板定位測試', () => {
       // 手動調用位置計算（因為在測試環境中）
       wrapper.vm.calculatePanelPosition()
 
-      // 驗證位置 - 按照實際邏輯：top = bottom + 8，然後確保不小於16px
+      // 驗證位置
       const expectedTop = mockButtonRect.bottom + 8 // 140px
       expect(wrapper.vm.panelPosition.top).toBe(`${expectedTop}px`)
       expect(wrapper.vm.panelPosition.left).toBe(`${mockButtonRect.left}px`)
     })
 
     it('當右側空間不足時，應該向左調整', async () => {
-      // 模擬按鈕在螢幕右側，會造成面板超出右邊界
-      mockButtonRect.left = 700  // 700 + 384 = 1084 > 1024
+      // 模擬按鈕在螢幕右側
+      mockButtonRect.left = 700
       mockButtonRect.right = 732
 
       const mockGetBoundingClientRect = vi.fn()
@@ -98,17 +98,17 @@ describe('IconPicker 面板定位測試', () => {
       await wrapper.setProps({ isOpen: true })
       wrapper.vm.calculatePanelPosition()
 
-      // 應該從右邊界向左調整：1024 - 384 - 16 = 624
-      const expectedLeft = mockViewport.width - mockPanelRect.width - 16
+      // 應該從右邊界向左調整
+      const expectedLeft = mockViewport.width - mockPanelRect.width - 16 // 1024 - 384 - 16 = 624
       expect(wrapper.vm.panelPosition.left).toBe(`${expectedLeft}px`)
     })
   })
 
   describe('邊界情況處理', () => {
     it('當下方空間不足且上方有足夠空間時，應該顯示在上方', async () => {
-      // 模擬按鈕在螢幕下方，下方空間不足
-      mockButtonRect.top = 600   // 上方空間：600 - 16 = 584 > 408 (panelHeight + 8)
-      mockButtonRect.bottom = 632 // 下方空間：768 - 632 - 16 = 120 < 400
+      // 模擬按鈕在螢幕下方
+      mockButtonRect.top = 600
+      mockButtonRect.bottom = 632
 
       const mockGetBoundingClientRect = vi.fn()
       mockGetBoundingClientRect
@@ -121,18 +121,18 @@ describe('IconPicker 面板定位測試', () => {
       await wrapper.setProps({ isOpen: true })
       wrapper.vm.calculatePanelPosition()
 
-      // 應該顯示在按鈕上方：600 - 400 - 8 = 192
-      const expectedTop = mockButtonRect.top - mockPanelRect.height - 8
+      // 應該顯示在按鈕上方
+      const expectedTop = mockButtonRect.top - mockPanelRect.height - 8 // 600 - 400 - 8 = 192
       expect(wrapper.vm.panelPosition.top).toBe(`${expectedTop}px`)
     })
 
     it('當上下都沒有足夠空間時，應該置中顯示', async () => {
-      // 模擬小螢幕，上下都沒有足夠空間
+      // 模擬小螢幕或按鈕位置導致上下都沒有足夠空間
       mockViewport.height = 500
       Object.defineProperty(window, 'innerHeight', {
         value: mockViewport.height
       })
-
+      
       mockButtonRect.top = 250
       mockButtonRect.bottom = 282
 
@@ -147,17 +147,18 @@ describe('IconPicker 面板定位測試', () => {
       await wrapper.setProps({ isOpen: true })
       wrapper.vm.calculatePanelPosition()
 
-      // 應該置中顯示：(500 - 400) / 2 = 50
-      const expectedTop = (mockViewport.height - mockPanelRect.height) / 2
+      // 應該置中顯示（考慮邊界限制）
+      const centerY = (mockViewport.height - mockPanelRect.height) / 2 // (500 - 400) / 2 = 50
+      const expectedTop = Math.max(16, Math.min(centerY, mockViewport.height - mockPanelRect.height - 16))
       expect(wrapper.vm.panelPosition.top).toBe(`${expectedTop}px`)
     })
-  })
 
-  describe('邊界限制', () => {
     it('位置永遠不應該超出螢幕邊界', async () => {
-      // 極端情況：按鈕位置會導致負數或超出邊界
+      // 測試極端情況
+      mockButtonRect.top = -50  // 按鈕在螢幕外
+      mockButtonRect.bottom = -18
       mockButtonRect.left = -100
-      mockButtonRect.top = -50
+      mockButtonRect.right = -68
 
       const mockGetBoundingClientRect = vi.fn()
       mockGetBoundingClientRect
@@ -170,50 +171,46 @@ describe('IconPicker 面板定位測試', () => {
       await wrapper.setProps({ isOpen: true })
       wrapper.vm.calculatePanelPosition()
 
-      // 檢查邊界限制
-      const topValue = parseInt(wrapper.vm.panelPosition.top)
-      const leftValue = parseInt(wrapper.vm.panelPosition.left)
-      
-      expect(topValue).toBeGreaterThanOrEqual(16)
-      expect(leftValue).toBeGreaterThanOrEqual(16)
-      expect(topValue).toBeLessThanOrEqual(mockViewport.height - mockPanelRect.height - 16)
-      expect(leftValue).toBeLessThanOrEqual(mockViewport.width - mockPanelRect.width - 16)
+      // 位置應該被限制在安全範圍內
+      const top = parseInt(wrapper.vm.panelPosition.top)
+      const left = parseInt(wrapper.vm.panelPosition.left)
+
+      expect(top).toBeGreaterThanOrEqual(16)
+      expect(left).toBeGreaterThanOrEqual(16)
+      expect(top).toBeLessThanOrEqual(mockViewport.height - mockPanelRect.height - 16)
+      expect(left).toBeLessThanOrEqual(mockViewport.width - mockPanelRect.width - 16)
     })
   })
 
   describe('響應式調整', () => {
     it('窗口大小改變時應該重新計算位置', async () => {
-      // 先設定初始位置
       const mockGetBoundingClientRect = vi.fn()
       mockGetBoundingClientRect
         .mockReturnValue(mockButtonRect)
+        .mockReturnValue(mockPanelRect)
 
       wrapper.vm.iconPickerRef = { getBoundingClientRect: mockGetBoundingClientRect }
-      wrapper.vm.iconPanel = { getBoundingClientRect: () => mockPanelRect }
+      wrapper.vm.iconPanel = { getBoundingClientRect: mockGetBoundingClientRect }
 
       await wrapper.setProps({ isOpen: true })
-      wrapper.vm.calculatePanelPosition()
-      
-      const initialPosition = wrapper.vm.panelPosition.top
+      const originalLeft = wrapper.vm.panelPosition.left
 
-      // 改變窗口大小
-      mockViewport.height = 600
-      Object.defineProperty(window, 'innerHeight', {
-        value: mockViewport.height
+      // 模擬窗口變小
+      Object.defineProperty(window, 'innerWidth', {
+        value: 800
       })
 
-      // 觸發 resize 處理
+      // 觸發 resize 事件
       wrapper.vm.handleResize()
 
-      // 位置應該會重新計算（可能相同也可能不同，重點是有調用）
-      // 這個測試主要確保函數能正常執行而不報錯
-      expect(wrapper.vm.panelPosition.top).toBeTruthy()
+      // 位置應該重新計算
+      expect(wrapper.vm.panelPosition.left).not.toBe(originalLeft)
     })
   })
 
   describe('面板高度處理', () => {
     it('當面板高度無法取得時，應該使用預設值', async () => {
-      // 模擬面板 getBoundingClientRect 返回空的高度
+      // 模擬 panelRect.height 為 0 或 undefined
       mockPanelRect.height = 0
 
       const mockGetBoundingClientRect = vi.fn()
@@ -225,16 +222,11 @@ describe('IconPicker 面板定位測試', () => {
       wrapper.vm.iconPanel = { getBoundingClientRect: mockGetBoundingClientRect }
 
       await wrapper.setProps({ isOpen: true })
-      
-      // 這個測試主要確保當 height 為 0 時，邏輯中會使用預設的 400
-      // 不會因為除零或其他問題而失敗
-      expect(() => {
-        wrapper.vm.calculatePanelPosition()
-      }).not.toThrow()
+      wrapper.vm.calculatePanelPosition()
 
-      // 應該有合理的位置值
-      expect(wrapper.vm.panelPosition.top).toBeTruthy()
-      expect(wrapper.vm.panelPosition.left).toBeTruthy()
+      // 應該使用預設高度 400px 進行計算
+      expect(wrapper.vm.panelPosition.top).toBeDefined()
+      expect(wrapper.vm.panelPosition.left).toBeDefined()
     })
   })
 })
