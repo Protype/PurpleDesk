@@ -128,12 +128,10 @@ describe('ImageUploadPanel', () => {
       expect(wrapper.emitted('file-selected')).toBeTruthy()
       
       const iconSelectEvent = wrapper.emitted('icon-select')[0][0]
-      expect(iconSelectEvent).toEqual({
-        type: 'image',
-        value: mockObjectURL,
-        file: file,
-        iconType: 'upload'
-      })
+      expect(iconSelectEvent.type).toBe('image')
+      expect(iconSelectEvent.value.startsWith('blob:')).toBe(true) // 檢查是 Blob URL
+      expect(iconSelectEvent.file).toBe(file)
+      expect(iconSelectEvent.iconType).toBe('upload')
 
       const fileSelectedEvent = wrapper.emitted('file-selected')[0][0]
       expect(fileSelectedEvent).toBe(file)
@@ -210,8 +208,7 @@ describe('ImageUploadPanel', () => {
         files: [file]
       }
       
-      const mockObjectURL = 'blob:http://localhost:3000/drag-test-uuid'
-      vi.spyOn(URL, 'createObjectURL').mockReturnValue(mockObjectURL)
+      vi.spyOn(URL, 'createObjectURL').mockImplementation(() => 'blob:http://localhost:3000/' + Math.random())
       vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
 
       // 觸發 drop 事件

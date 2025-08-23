@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File 物件預覽方式比較</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .method { border: 1px solid #ddd; margin: 20px 0; padding: 20px; border-radius: 8px; }
+        .preview-area { display: flex; gap: 20px; align-items: flex-start; margin-top: 15px; }
+        .preview-box { border: 2px dashed #ccc; padding: 20px; min-height: 200px; flex: 1; text-align: center; }
+        .preview-image { max-width: 100%; max-height: 200px; }
+        .info { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 4px; font-size: 14px; }
+        .performance { color: #666; font-size: 12px; margin-top: 10px; }
+        button { background: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>🔍 File 物件預覽方式實作比較</h1>
+    
+    <div>
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="clearAll()">清除所有預覽</button>
+    </div>
+
+    <!-- 方式 1: 直接使用 File 物件 (失敗示範) -->
+    <div class="method">
+        <h3>❌ 方式 1: 直接使用 File 物件 (無法預覽)</h3>
+        <div class="info">
+            直接將 File 物件設定為 img.src 是<strong>無法顯示</strong>的，因為瀏覽器不知道如何渲染 File 物件。
+        </div>
+        <button onclick="previewMethod1()">嘗試直接預覽</button>
+        <div class="preview-area">
+            <div class="preview-box">
+                <div id="method1-info">選擇圖片後點擊按鈕</div>
+                <img id="method1-img" class="preview-image" style="display: none;">
+                <div id="method1-performance" class="performance"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 方式 2: File → URL.createObjectURL -->
+    <div class="method">
+        <h3>✅ 方式 2: File → URL.createObjectURL (推薦)</h3>
+        <div class="info">
+            將 File 物件轉換為 Blob URL，高效能且適合大檔案。
+        </div>
+        <button onclick="previewMethod2()">URL.createObjectURL 預覽</button>
+        <div class="preview-area">
+            <div class="preview-box">
+                <div id="method2-info">選擇圖片後點擊按鈕</div>
+                <img id="method2-img" class="preview-image" style="display: none;">
+                <div id="method2-url" class="info" style="display: none;"></div>
+                <div id="method2-performance" class="performance"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 方式 3: File → FileReader → Base64 -->
+    <div class="method">
+        <h3>✅ 方式 3: File → FileReader → Base64</h3>
+        <div class="info">
+            將 File 物件讀取為 Base64 格式，適合小檔案或需要存儲的情況。
+        </div>
+        <button onclick="previewMethod3()">FileReader Base64 預覽</button>
+        <div class="preview-area">
+            <div class="preview-box">
+                <div id="method3-info">選擇圖片後點擊按鈕</div>
+                <img id="method3-img" class="preview-image" style="display: none;">
+                <div id="method3-base64" class="info" style="display: none;"></div>
+                <div id="method3-performance" class="performance"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 方式 4: File → Canvas -->
+    <div class="method">
+        <h3>✅ 方式 4: File → Canvas (可處理)</h3>
+        <div class="info">
+            先轉為 Blob URL 載入圖片，再繪製到 Canvas，適合需要圖片處理的場景。
+        </div>
+        <button onclick="previewMethod4()">Canvas 預覽</button>
+        <div class="preview-area">
+            <div class="preview-box">
+                <div id="method4-info">選擇圖片後點擊按鈕</div>
+                <canvas id="method4-canvas" class="preview-image" style="display: none;"></canvas>
+                <div id="method4-performance" class="performance"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 方式 5: 混合方式 (實用) -->
+    <div class="method">
+        <h3>🎯 方式 5: 混合方式 (實際專案建議)</h3>
+        <div class="info">
+            結合多種方式：立即預覽用 createObjectURL，需要上傳時轉 Base64 或直接傳 File。
+        </div>
+        <button onclick="previewMethod5()">混合方式預覽</button>
+        <div class="preview-area">
+            <div class="preview-box">
+                <div id="method5-info">選擇圖片後點擊按鈕</div>
+                <img id="method5-img" class="preview-image" style="display: none;">
+                <div id="method5-details" class="info" style="display: none;"></div>
+                <div id="method5-performance" class="performance"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentFile = null;
+        let blobUrls = []; // 追蹤所有建立的 Blob URL
+
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            currentFile = e.target.files[0];
+            if (currentFile) {
+                document.querySelectorAll('[id$="-info"]').forEach(el => {
+                    el.textContent = `已選擇: ${currentFile.name} (${(currentFile.size / 1024 / 1024).toFixed(2)} MB)`;
+                    el.className = 'success';
+                });
+            }
+        });
+
+        // 方式 1: 直接使用 File 物件 (失敗示範)
+        function previewMethod1() {
+            if (!currentFile) {
+                alert('請先選擇檔案');
+                return;
+            }
+
+            const start = performance.now();
+            const img = document.getElementById('method1-img');
+            const info = document.getElementById('method1-info');
+            
+            try {
+                // 嘗試直接設定 File 物件
+                img.src = currentFile; // 這不會工作
+                img.style.display = 'block';
+                
+                img.onload = () => {
+                    const end = performance.now();
+                    document.getElementById('method1-performance').textContent = 
+                        `處理時間: ${(end - start).toFixed(2)}ms`;
+                };
+
+                img.onerror = () => {
+                    const end = performance.now();
+                    info.textContent = '❌ 無法預覽：File 物件不能直接作為圖片 src';
+                    info.className = 'error';
+                    img.style.display = 'none';
+                    document.getElementById('method1-performance').textContent = 
+                        `失敗時間: ${(end - start).toFixed(2)}ms`;
+                };
+
+            } catch (error) {
+                info.textContent = `❌ 錯誤: ${error.message}`;
+                info.className = 'error';
+            }
+        }
+
+        // 方式 2: URL.createObjectURL
+        function previewMethod2() {
+            if (!currentFile) {
+                alert('請先選擇檔案');
+                return;
+            }
+
+            const start = performance.now();
+            const img = document.getElementById('method2-img');
+            const info = document.getElementById('method2-info');
+            const urlDiv = document.getElementById('method2-url');
+            
+            try {
+                const blobUrl = URL.createObjectURL(currentFile);
+                blobUrls.push(blobUrl);
+                
+                img.src = blobUrl;
+                img.style.display = 'block';
+                
+                urlDiv.textContent = `生成的 Blob URL: ${blobUrl}`;
+                urlDiv.style.display = 'block';
+                
+                img.onload = () => {
+                    const end = performance.now();
+                    info.textContent = `✅ 成功載入 ${currentFile.name}`;
+                    info.className = 'success';
+                    document.getElementById('method2-performance').textContent = 
+                        `處理時間: ${(end - start).toFixed(2)}ms (極快)`;
+                };
+
+            } catch (error) {
+                info.textContent = `❌ 錯誤: ${error.message}`;
+                info.className = 'error';
+            }
+        }
+
+        // 方式 3: FileReader Base64
+        function previewMethod3() {
+            if (!currentFile) {
+                alert('請先選擇檔案');
+                return;
+            }
+
+            const start = performance.now();
+            const img = document.getElementById('method3-img');
+            const info = document.getElementById('method3-info');
+            const base64Div = document.getElementById('method3-base64');
+            
+            const reader = new FileReader();
+            
+            reader.onload = (e) => {
+                const end = performance.now();
+                const base64 = e.target.result;
+                
+                img.src = base64;
+                img.style.display = 'block';
+                
+                info.textContent = `✅ 成功轉換 ${currentFile.name}`;
+                info.className = 'success';
+                
+                base64Div.textContent = `Base64 長度: ${base64.length} 字符 (前50字符: ${base64.substring(0, 50)}...)`;
+                base64Div.style.display = 'block';
+                
+                document.getElementById('method3-performance').textContent = 
+                    `處理時間: ${(end - start).toFixed(2)}ms (較慢，需編碼)`;
+            };
+
+            reader.onerror = () => {
+                const end = performance.now();
+                info.textContent = '❌ FileReader 讀取失敗';
+                info.className = 'error';
+                document.getElementById('method3-performance').textContent = 
+                    `失敗時間: ${(end - start).toFixed(2)}ms`;
+            };
+
+            reader.readAsDataURL(currentFile);
+        }
+
+        // 方式 4: Canvas
+        function previewMethod4() {
+            if (!currentFile) {
+                alert('請先選擇檔案');
+                return;
+            }
+
+            const start = performance.now();
+            const canvas = document.getElementById('method4-canvas');
+            const ctx = canvas.getContext('2d');
+            const info = document.getElementById('method4-info');
+            
+            // 先用 createObjectURL 載入圖片
+            const blobUrl = URL.createObjectURL(currentFile);
+            blobUrls.push(blobUrl);
+            
+            const img = new Image();
+            
+            img.onload = () => {
+                const end = performance.now();
+                
+                // 設定 canvas 尺寸
+                canvas.width = Math.min(img.width, 400);
+                canvas.height = Math.min(img.height, 300);
+                
+                // 繪製圖片到 canvas
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                canvas.style.display = 'block';
+                info.textContent = `✅ Canvas 渲染完成 ${currentFile.name}`;
+                info.className = 'success';
+                
+                document.getElementById('method4-performance').textContent = 
+                    `處理時間: ${(end - start).toFixed(2)}ms (包含渲染)`;
+                
+                URL.revokeObjectURL(blobUrl);
+            };
+
+            img.onerror = () => {
+                const end = performance.now();
+                info.textContent = '❌ 圖片載入失敗';
+                info.className = 'error';
+                document.getElementById('method4-performance').textContent = 
+                    `失敗時間: ${(end - start).toFixed(2)}ms`;
+            };
+
+            img.src = blobUrl;
+        }
+
+        // 方式 5: 混合方式
+        function previewMethod5() {
+            if (!currentFile) {
+                alert('請先選擇檔案');
+                return;
+            }
+
+            const start = performance.now();
+            const img = document.getElementById('method5-img');
+            const info = document.getElementById('method5-info');
+            const details = document.getElementById('method5-details');
+            
+            // 階段 1: 立即預覽 (createObjectURL)
+            const blobUrl = URL.createObjectURL(currentFile);
+            blobUrls.push(blobUrl);
+            img.src = blobUrl;
+            img.style.display = 'block';
+            
+            const preview1Time = performance.now();
+            
+            info.textContent = `✅ 立即預覽完成 ${currentFile.name}`;
+            info.className = 'success';
+            
+            // 階段 2: 背景處理 (Base64 for upload)
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const end = performance.now();
+                const base64 = e.target.result;
+                
+                details.innerHTML = `
+                    <strong>混合處理結果:</strong><br>
+                    • 立即預覽: ${(preview1Time - start).toFixed(2)}ms (createObjectURL)<br>
+                    • Base64 準備: ${(end - preview1Time).toFixed(2)}ms (背景處理)<br>
+                    • 總處理時間: ${(end - start).toFixed(2)}ms<br>
+                    • File 物件: ${currentFile.name} (${(currentFile.size / 1024).toFixed(1)} KB)<br>
+                    • Base64 大小: ${(base64.length / 1024).toFixed(1)} KB<br>
+                    • 可用於: 立即預覽 + API 上傳
+                `;
+                details.style.display = 'block';
+            };
+            
+            reader.readAsDataURL(currentFile);
+            
+            document.getElementById('method5-performance').textContent = 
+                `立即預覽: ${(preview1Time - start).toFixed(2)}ms，背景處理中...`;
+        }
+
+        // 清除所有預覽
+        function clearAll() {
+            // 清除 Blob URLs
+            blobUrls.forEach(url => URL.revokeObjectURL(url));
+            blobUrls = [];
+            
+            // 清除所有圖片
+            document.querySelectorAll('img').forEach(img => {
+                img.src = '';
+                img.style.display = 'none';
+            });
+            
+            // 清除 canvas
+            const canvas = document.getElementById('method4-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            canvas.style.display = 'none';
+            
+            // 重置所有訊息
+            document.querySelectorAll('[id$="-info"]').forEach(el => {
+                el.textContent = '已清除所有預覽';
+                el.className = '';
+            });
+            
+            document.querySelectorAll('[id$="-performance"]').forEach(el => {
+                el.textContent = '';
+            });
+            
+            document.querySelectorAll('[id$="-url"], [id$="-base64"], [id$="-details"]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            currentFile = null;
+            document.getElementById('fileInput').value = '';
+        }
+
+        // 頁面卸載時清理資源
+        window.addEventListener('beforeunload', () => {
+            blobUrls.forEach(url => URL.revokeObjectURL(url));
+        });
+    </script>
+</body>
+</html>

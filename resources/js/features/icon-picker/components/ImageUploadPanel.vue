@@ -72,7 +72,6 @@ const fileInput = ref(null)
 const isDragging = ref(false)
 const isUploading = ref(false)
 const error = ref('')
-const previewUrl = ref(null)
 
 // 最大檔案大小 (10MB)
 const MAX_FILE_SIZE = 10 * 1024 * 1024
@@ -124,13 +123,8 @@ const processFile = async (file) => {
   error.value = ''
   
   try {
-    // 清理舊的預覽 URL
-    if (previewUrl.value) {
-      URL.revokeObjectURL(previewUrl.value)
-    }
-    
-    // 建立新的預覽 URL
-    previewUrl.value = URL.createObjectURL(file)
+    // 建立預覽 URL（但不保存到內部狀態）
+    const blobUrl = URL.createObjectURL(file)
     
     // 模擬處理時間 (實際上可能是圖片壓縮、上傳等)
     await new Promise(resolve => setTimeout(resolve, 1500))
@@ -138,7 +132,7 @@ const processFile = async (file) => {
     // 發送圖標選擇事件
     emit('icon-select', {
       type: 'image',
-      value: previewUrl.value, // 使用 URL.createObjectURL 而非 base64
+      value: blobUrl, // 傳遞 Blob URL，但由接收方負責管理
       file: file, // 傳遞原始檔案物件供後續處理
       iconType: 'upload'
     })
@@ -186,12 +180,8 @@ const handleDrop = (event) => {
   }
 }
 
-// 清理資源
-onUnmounted(() => {
-  if (previewUrl.value) {
-    URL.revokeObjectURL(previewUrl.value)
-  }
-})
+// 注意：不在這裡清理 Blob URL，因為它們會被傳遞給其他元件使用
+// Blob URL 的生命週期應該由使用它們的元件（如 IconDisplay）管理
 </script>
 
 <style scoped>

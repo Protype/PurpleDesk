@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import { computed, ref, onMounted, watch } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
 import { getIconDisplayConfig } from '@/config/iconDisplayConfig.js'
 
 export default {
@@ -114,6 +114,7 @@ export default {
   setup(props) {
     const imageError = ref(false)
     const heroIconComponent = ref(null)
+    const managedBlobUrls = ref(new Set()) // 追蹤需要清理的 Blob URL
     
     // 大小相關的 CSS 類別
     const sizeClasses = computed(() => {
@@ -272,7 +273,14 @@ export default {
         }
         if (props.iconData.value) {
           // 直接值（支援 blob URL、base64 等）
-          return props.iconData.value
+          const url = props.iconData.value
+          
+          // 如果是 Blob URL，記錄它以便後續清理
+          if (url.startsWith('blob:')) {
+            managedBlobUrls.value.add(url)
+          }
+          
+          return url
         }
       }
       
@@ -329,6 +337,16 @@ export default {
       emojiStyles,
       imageUrl,
       onImageError,
+      managedBlobUrls,
+    }
+  },
+  
+  // 元件銷毀時清理 Blob URL
+  beforeUnmount() {
+    if (this.managedBlobUrls) {
+      this.managedBlobUrls.forEach(url => {
+        URL.revokeObjectURL(url)
+      })
     }
   }
 }
