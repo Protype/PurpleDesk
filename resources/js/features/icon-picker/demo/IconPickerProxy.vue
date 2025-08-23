@@ -41,8 +41,8 @@ export default {
       // 檢查環境變數
       if (import.meta.env.VITE_ICONPICKER_VERSION === 'original') return true
       
-      // 預設使用原版（開發期間）
-      return true
+      // 預設使用新版（展示 ImageUploadPanel）
+      return false
     })
     
     const currentIconPickerComponent = computed(() => {
