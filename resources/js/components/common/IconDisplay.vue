@@ -270,6 +270,10 @@ export default {
           // 外部圖片 URL
           return props.iconData.url
         }
+        if (props.iconData.value) {
+          // 直接值（支援 blob URL、base64 等）
+          return props.iconData.value
+        }
       }
       
       return null
