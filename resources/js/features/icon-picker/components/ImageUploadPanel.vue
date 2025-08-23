@@ -17,10 +17,7 @@
         v-if="isUploading"
         class="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center rounded-md z-10"
       >
-        <div class="text-center space-y-3">
-          <div class="loading-spinner mx-auto"></div>
-          <p class="text-sm font-medium text-gray-700">處理圖片中...</p>
-        </div>
+        <div class="loading-spinner mx-auto"></div>
       </div>
       
       <!-- 正常上傳界面 -->
@@ -127,7 +124,7 @@ const processFile = async (file) => {
     const blobUrl = URL.createObjectURL(file)
     
     // 模擬處理時間 (實際上可能是圖片壓縮、上傳等)
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    await new Promise(resolve => setTimeout(resolve, 500))
     
     // 發送圖標選擇事件
     emit('icon-select', {

@@ -52,10 +52,10 @@ describe('ImageUploadPanel', () => {
 
       // 確認顯示載入狀態
       expect(wrapper.find('.loading-spinner').exists()).toBe(true)
-      expect(wrapper.text()).toContain('處理圖片中...')
+      // 載入動畫沒有文字說明
       
       // 等待載入完成
-      await new Promise(resolve => setTimeout(resolve, 1600))
+      await new Promise(resolve => setTimeout(resolve, 600))
       await nextTick()
       
       // 確認載入狀態消失
@@ -120,8 +120,8 @@ describe('ImageUploadPanel', () => {
 
       await fileInput.trigger('change')
       
-      // 等待處理完成 (模擬的 1500ms + 緩衝)
-      await new Promise(resolve => setTimeout(resolve, 1600))
+      // 等待處理完成 (模擬的 500ms + 緩衝)
+      await new Promise(resolve => setTimeout(resolve, 600))
       await nextTick()
 
       expect(wrapper.emitted('icon-select')).toBeTruthy()
@@ -217,7 +217,7 @@ describe('ImageUploadPanel', () => {
       })
       
       // 等待處理完成
-      await new Promise(resolve => setTimeout(resolve, 1600))
+      await new Promise(resolve => setTimeout(resolve, 600))
       await nextTick()
 
       expect(wrapper.emitted('icon-select')).toBeTruthy()
