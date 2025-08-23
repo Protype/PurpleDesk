@@ -7,11 +7,24 @@
       @dragleave.prevent="handleDragLeave" 
       @drop.prevent="handleDrop"
       :class="[
-        'h-48 flex flex-col items-center justify-center border-2 border-dashed rounded-md transition-colors cursor-pointer',
-        isDragging ? 'border-primary-400 bg-primary-50' : 'border-gray-200 bg-gray-50 hover:bg-gray-100'
+        'h-48 flex flex-col items-center justify-center border-2 border-dashed rounded-md transition-colors cursor-pointer relative',
+        isDragging ? 'border-primary-400 bg-primary-50' : 'border-gray-200 bg-gray-50 hover:bg-gray-100',
+        isUploading ? 'cursor-not-allowed' : 'cursor-pointer'
       ]"
     >
-      <div class="text-center pointer-events-none space-y-3">
+      <!-- 載入狀態遮罩 -->
+      <div 
+        v-if="isUploading"
+        class="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center rounded-md z-10"
+      >
+        <div class="text-center space-y-3">
+          <div class="loading-spinner mx-auto"></div>
+          <p class="text-sm font-medium text-gray-700">處理圖片中...</p>
+        </div>
+      </div>
+      
+      <!-- 正常上傳界面 -->
+      <div class="text-center pointer-events-none space-y-3" :class="{ 'opacity-30': isUploading }">
         <i class="bi bi-cloud-arrow-up-fill text-4xl text-gray-400"></i>
         <div>
           <p class="text-sm font-medium text-gray-700">Upload an image</p>
@@ -41,7 +54,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 
 // Props
 defineProps({
@@ -57,13 +70,19 @@ const emit = defineEmits(['icon-select', 'file-selected'])
 // 響應式狀態
 const fileInput = ref(null)
 const isDragging = ref(false)
+const isUploading = ref(false)
 const error = ref('')
+const previewUrl = ref(null)
 
 // 最大檔案大小 (10MB)
 const MAX_FILE_SIZE = 10 * 1024 * 1024
 
 // 觸發檔案選擇
 const triggerFileUpload = () => {
+  // 如果正在上傳，不允許觸發新的檔案選擇
+  if (isUploading.value) {
+    return
+  }
   fileInput.value?.click()
 }
 
@@ -95,31 +114,45 @@ const validateFile = (file) => {
 }
 
 // 處理檔案
-const processFile = (file) => {
+const processFile = async (file) => {
   if (!validateFile(file)) {
     return
   }
   
-  const reader = new FileReader()
-  reader.onload = (e) => {
-    const imageData = e.target.result
+  // 開始載入狀態
+  isUploading.value = true
+  error.value = ''
+  
+  try {
+    // 清理舊的預覽 URL
+    if (previewUrl.value) {
+      URL.revokeObjectURL(previewUrl.value)
+    }
+    
+    // 建立新的預覽 URL
+    previewUrl.value = URL.createObjectURL(file)
+    
+    // 模擬處理時間 (實際上可能是圖片壓縮、上傳等)
+    await new Promise(resolve => setTimeout(resolve, 1500))
     
     // 發送圖標選擇事件
     emit('icon-select', {
       type: 'image',
-      value: imageData,
+      value: previewUrl.value, // 使用 URL.createObjectURL 而非 base64
+      file: file, // 傳遞原始檔案物件供後續處理
       iconType: 'upload'
     })
     
     // 發送檔案選擇事件
     emit('file-selected', file)
+    
+  } catch (err) {
+    error.value = '圖片處理失敗，請重試'
+    console.error('Image processing error:', err)
+  } finally {
+    // 結束載入狀態
+    isUploading.value = false
   }
-  
-  reader.onerror = () => {
-    error.value = '檔案讀取失敗，請重試'
-  }
-  
-  reader.readAsDataURL(file)
   
   // 清空檔案輸入以便重複選擇
   if (fileInput.value) {
@@ -142,11 +175,23 @@ const handleDrop = (event) => {
   event.preventDefault()
   isDragging.value = false
   
+  // 如果正在上傳，忽略新的拖放
+  if (isUploading.value) {
+    return
+  }
+  
   const files = event.dataTransfer?.files
   if (files && files.length > 0) {
     processFile(files[0])
   }
 }
+
+// 清理資源
+onUnmounted(() => {
+  if (previewUrl.value) {
+    URL.revokeObjectURL(previewUrl.value)
+  }
+})
 </script>
 
 <style scoped>
@@ -157,5 +202,25 @@ const handleDrop = (event) => {
 /* 拖拉狀態動畫 */
 .border-primary-400 {
   transition: all 0.2s ease-in-out;
+}
+
+/* 轉圈載入動畫 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 上傳區域過場動畫 */
+.image-upload-panel > div {
+  transition: opacity 0.3s ease-in-out;
 }
 </style>

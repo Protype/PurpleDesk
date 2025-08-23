@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
 import ImageUploadPanel from '../../components/ImageUploadPanel.vue'
@@ -34,6 +34,65 @@ describe('ImageUploadPanel', () => {
     })
   })
 
+  describe('載入狀態測試', () => {
+    it('上傳時應該顯示載入動畫', async () => {
+      const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' })
+      const fileInput = wrapper.find('input[type="file"]')
+
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:test')
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
+
+      Object.defineProperty(fileInput.element, 'files', {
+        value: [file],
+        configurable: true
+      })
+
+      await fileInput.trigger('change')
+      await nextTick()
+
+      // 確認顯示載入狀態
+      expect(wrapper.find('.loading-spinner').exists()).toBe(true)
+      expect(wrapper.text()).toContain('處理圖片中...')
+      
+      // 等待載入完成
+      await new Promise(resolve => setTimeout(resolve, 1600))
+      await nextTick()
+      
+      // 確認載入狀態消失
+      expect(wrapper.find('.loading-spinner').exists()).toBe(false)
+      
+      URL.createObjectURL.mockRestore()
+      URL.revokeObjectURL.mockRestore()
+    })
+    
+    it('載入時應該阻止新的上傳', async () => {
+      const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' })
+      const fileInput = wrapper.find('input[type="file"]')
+      const uploadArea = wrapper.find('.image-upload-panel > div')
+
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:test')
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
+
+      // 開始第一次上傳
+      Object.defineProperty(fileInput.element, 'files', {
+        value: [file],
+        configurable: true
+      })
+      await fileInput.trigger('change')
+      await nextTick()
+      
+      // 在載入時嘗試再次上傳
+      const clickSpy = vi.spyOn(fileInput.element, 'click')
+      await uploadArea.trigger('click')
+      
+      // 應該不會觸發新的檔案選擇
+      expect(clickSpy).not.toHaveBeenCalled()
+      
+      URL.createObjectURL.mockRestore()
+      URL.revokeObjectURL.mockRestore()
+    })
+  })
+
   describe('檔案上傳功能', () => {
     it('點擊上傳區域應該觸發檔案選擇', async () => {
       const fileInput = wrapper.find('input[type="file"]')
@@ -48,15 +107,10 @@ describe('ImageUploadPanel', () => {
       const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' })
       const fileInput = wrapper.find('input[type="file"]')
 
-      // Mock FileReader
-      const mockFileReader = {
-        readAsDataURL: vi.fn(),
-        onload: null,
-        onerror: null,
-        result: 'data:image/jpeg;base64,test'
-      }
-
-      vi.spyOn(window, 'FileReader').mockImplementation(() => mockFileReader)
+      // Mock URL.createObjectURL
+      const mockObjectURL = 'blob:http://localhost:3000/test-uuid'
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue(mockObjectURL)
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
 
       // 觸發檔案選擇
       Object.defineProperty(fileInput.element, 'files', {
@@ -65,9 +119,10 @@ describe('ImageUploadPanel', () => {
       })
 
       await fileInput.trigger('change')
-
-      // 觸發 FileReader onload
-      mockFileReader.onload({ target: { result: 'data:image/jpeg;base64,test' } })
+      
+      // 等待處理完成 (模擬的 1500ms + 緩衝)
+      await new Promise(resolve => setTimeout(resolve, 1600))
+      await nextTick()
 
       expect(wrapper.emitted('icon-select')).toBeTruthy()
       expect(wrapper.emitted('file-selected')).toBeTruthy()
@@ -75,12 +130,17 @@ describe('ImageUploadPanel', () => {
       const iconSelectEvent = wrapper.emitted('icon-select')[0][0]
       expect(iconSelectEvent).toEqual({
         type: 'image',
-        value: 'data:image/jpeg;base64,test',
+        value: mockObjectURL,
+        file: file,
         iconType: 'upload'
       })
 
       const fileSelectedEvent = wrapper.emitted('file-selected')[0][0]
       expect(fileSelectedEvent).toBe(file)
+      
+      // 清理 mock
+      URL.createObjectURL.mockRestore()
+      URL.revokeObjectURL.mockRestore()
     })
 
     it('選擇非圖片檔案應該顯示錯誤', async () => {
@@ -145,44 +205,43 @@ describe('ImageUploadPanel', () => {
       const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' })
       const uploadArea = wrapper.find('.image-upload-panel > div')
 
-      // Mock DataTransfer 和 FileReader
+      // Mock DataTransfer 和 URL.createObjectURL
       const mockDataTransfer = {
         files: [file]
       }
-
-      const mockFileReader = {
-        readAsDataURL: vi.fn(),
-        onload: null,
-        onerror: null
-      }
-
-      vi.spyOn(window, 'FileReader').mockImplementation(() => mockFileReader)
+      
+      const mockObjectURL = 'blob:http://localhost:3000/drag-test-uuid'
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue(mockObjectURL)
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
 
       // 觸發 drop 事件
       await uploadArea.trigger('drop', {
         dataTransfer: mockDataTransfer
       })
-
-      // 觸發 FileReader onload
-      mockFileReader.onload({ target: { result: 'data:image/jpeg;base64,test' } })
+      
+      // 等待處理完成
+      await new Promise(resolve => setTimeout(resolve, 1600))
+      await nextTick()
 
       expect(wrapper.emitted('icon-select')).toBeTruthy()
       expect(wrapper.emitted('file-selected')).toBeTruthy()
+      
+      // 清理 mock
+      URL.createObjectURL.mockRestore()
+      URL.revokeObjectURL.mockRestore()
     })
   })
 
   describe('錯誤處理', () => {
-    it('FileReader 錯誤應該顯示錯誤訊息', async () => {
+    it('圖片處理錯誤應該顯示錯誤訊息', async () => {
       const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' })
       const fileInput = wrapper.find('input[type="file"]')
 
-      const mockFileReader = {
-        readAsDataURL: vi.fn(),
-        onload: null,
-        onerror: null
-      }
-
-      vi.spyOn(window, 'FileReader').mockImplementation(() => mockFileReader)
+      // Mock URL.createObjectURL 択出錯誤
+      vi.spyOn(URL, 'createObjectURL').mockImplementation(() => {
+        throw new Error('Mock error')
+      })
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => {})
 
       Object.defineProperty(fileInput.element, 'files', {
         value: [file],
@@ -190,14 +249,17 @@ describe('ImageUploadPanel', () => {
       })
 
       await fileInput.trigger('change')
-
-      // 觸發 FileReader onerror
-      mockFileReader.onerror()
-
+      
+      // 等待錯誤處理完成
+      await new Promise(resolve => setTimeout(resolve, 1600))
       await nextTick()
 
       expect(wrapper.find('.bg-red-50').exists()).toBe(true)
-      expect(wrapper.text()).toContain('檔案讀取失敗，請重試')
+      expect(wrapper.text()).toContain('圖片處理失敗，請重試')
+      
+      // 清理 mock
+      URL.createObjectURL.mockRestore()
+      URL.revokeObjectURL.mockRestore()
     })
   })
 })
