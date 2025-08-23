@@ -13,13 +13,11 @@
 <script>
 import { computed } from 'vue'
 import IconPicker from '../IconPicker.vue'
-import IconPickerOri from '@/components/common/IconPickerOri.vue'
 
 export default {
   name: 'IconPickerProxy',
   components: {
-    IconPicker,
-    IconPickerOri
+    IconPicker
   },
   emits: ['update:modelValue', 'update:iconType', 'file-selected', 'close', 'background-color-change'],
   setup() {
@@ -46,7 +44,8 @@ export default {
     })
     
     const currentIconPickerComponent = computed(() => {
-      return useOriginalVersion.value ? 'IconPickerOri' : 'IconPicker'
+      // 原版已移除，統一使用新版 IconPicker
+      return 'IconPicker'
     })
     
     // 提供全域方法供開發者工具使用
@@ -58,14 +57,11 @@ export default {
         }
       }
       
-      // 在 console 顯示切換說明
+      // 在 console 顯示版本資訊
       if (!window._iconPickerProxyInit) {
-        console.log('%c🎛️ IconPicker 版本控制', 'color: #6366f1; font-weight: bold;')
-        console.log('💡 切換版本：')
-        console.log('   • switchIconPicker("original") - 切換到原版')
-        console.log('   • switchIconPicker("new") - 切換到新版')
-        console.log('   • 或在 URL 加上 ?iconpicker=original 或 ?iconpicker=new')
-        console.log(`📍 當前使用版本：${useOriginalVersion.value ? '原版 (IconPickerOri)' : '新版 (IconPicker)'}`)
+        console.log('%c🎛️ IconPicker 版本資訊', 'color: #6366f1; font-weight: bold;')
+        console.log('📍 目前統一使用新版 IconPicker')
+        console.log('💡 原版 IconPickerOri 已移除，可通過 git tag backup/icon-picker-ori-v1.0 回溯')
         window._iconPickerProxyInit = true
       }
     }
