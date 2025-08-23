@@ -104,7 +104,7 @@
 
 
           <!-- 內容區域 -->
-          <div class="flex-1 overflow-y-auto min-h-0">
+          <div class="flex-1 overflow-y-auto min-h-0 mb-1">
             <!-- 文字圖標標籤頁 - 使用 TextIconPanel -->
             <div v-show="activeTab === 'initials'" class="space-y-4">
               <TextIconPanel
