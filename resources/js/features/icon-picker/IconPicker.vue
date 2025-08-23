@@ -117,7 +117,7 @@
             <!-- Emoji 標籤頁 - 使用 EmojiPanel -->
             <div v-show="activeTab === 'emoji'">
               <EmojiPanel
-                :selected-emoji="iconType === 'emoji' ? selectedIcon : ''"
+                :selected-emoji="iconType === 'emoji' ? selectedIcon?.emoji : ''"
                 @emoji-selected="handleEmojiSelection"
               />
             </div>
